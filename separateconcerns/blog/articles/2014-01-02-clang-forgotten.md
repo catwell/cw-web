@@ -1,0 +1,39 @@
+% C: what I had forgotten
+% Pierre Chapuis
+% 2014-01-02 22:10:00
+
+    ::description::
+    I read up on C and rediscovered some weird parts of the standard.
+
+Thanks to my [new job](http://blog.separateconcerns.com/2013-12-12-infinity-beyond.html) I will have the opportunity to write a lot more C than in the last three years. To prepare for this, I decided to read some old C89 books again and see what I remembered. Here are some of the quirks I had forgotten (or never known about).
+
+- Declarations cannot be interleaved with other statements in ANSI C. They have to happen at the beginning of a bloc.
+
+- The default type of functions is `int`, i.e. `f(void) {};` is valid and equivalent to `int f(void) {};`.
+
+- The C89 standards allows implementations to only consider the first 31 characters of identifiers. It is possible to use longer identifiers but they must differ in their first 31 characters to avoid collisions. External identifiers (seen by the linker) are even worse: the implementation can be case-insensitive and only take the first 6 (!) characters into account.
+
+- Using the wrong type on an union is usually undefined. However, if some members of the union start with the same attributes, that common initial part can be used interchangeably.
+
+- This:
+
+        const struct stuff_s {
+          /* stuff */
+        } stuff_t;
+
+    means the same thing as:
+
+        struct stuff_s {
+          /* stuff */
+        } const stuff_t;
+
+    but if you wrote it you probably meant this instead:
+
+        struct stuff_s {
+          /* stuff */
+        };
+        typedef const struct stuff_s stuff_t;
+
+- I already knew sequence points can be tricky, but this bit of code tricked me anyway: `a[i] = i++;`. There is no sequence point so the result is undefined.
+
+- The standard allows the *representation* of `NULL` to be different from `0`, but its *value* has to be `0` so you can almost always write code that assumes `NULL == 0` and be right provided you do not *actually test* `NULL == 0`.

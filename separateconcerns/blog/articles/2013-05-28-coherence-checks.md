@@ -1,0 +1,59 @@
+% Coherence checks in SOA
+% Pierre 'catwell' Chapuis
+% 2013-05-28 23:10:00
+
+    ::description::
+    My tools to detect and fix bugs in SOA: coherence checks verifying
+    invariants, exhaustive logs, reconciliation scripts.
+
+Recently I found a rare, ugly bug in a piece of software that had been in production at Moodstocks for 6 months. The bug itself is not that interesting, but the way I found and fixed it is.
+
+## Story of a bug
+
+Imagine you have a database where you can index some documents in a full text search engine. Indexing can be turned on and off on a per document basis.
+
+As the size of your dataset increases, you outgrow it and decide to use a separate service for search. So you change your code such that documents which must be indexed are sent to that service, and you add a boolean field in your main datastore to indicate whether the document is indexed or not.
+
+All is fine until one day you refactor this code a bit too fast and part of the logic for document updates becomes something like this:
+
+    lang: lua
+    if document.indexed then
+      search_engine:index(document)
+      document.indexed = false -- <-- WAT?
+    end
+
+Of course, in practice, it is less trivial and only happens in rare corner cases, so your tests don't catch it...
+
+## This ain't normal(ized)
+
+This kind of bug in a system can be very nasty. What happens when it is triggered is that the worldviews of two subsystems (here the datastore and the index) are not coherent anymore.
+
+If you are a programmer not used to distributed systems, you may think that the problem is that the information "the document is indexed" is duplicated. State is bad, but duplicate state is plain wrong, just always ask the index for that information and drop that "indexed" field!
+
+In a normal application setting you would be right, but this is one of the main differences between SOA and OOP. There are two reasons why you do not want to do that. The first one is performance: this may generate more internal network requests. Its importance could be discussed at length ("Is it some form of premature optimization?").
+
+The second reason is much more important though: if you do that, your index becomes a data-critical service. That means you cannot lose its state without losing information, so you have to back it up seriously. This simple boolean field in the datastore is enough to rebuild the whole index, making it non-critical.
+
+So that leaves us with denormalized data and its own problems. How do we mitigate them?
+
+## Invariants are sexy
+
+Once you have denormalized data, your problem is to keep it coherent. That means that there are invariants that must be verified at all times by the various states of the subsystems. Or rather, because of asynchronous jobs, invariants that shouldn't remain unverified for too long.
+
+Those invariants are almost always properties on sets. For instance, if you have a forum where only registered users can comment, users who have commented must be a subset of users who have confirmed their email. In my case, the set of documents indexed in the search engine must be equal to the set of documents flagged as indexed in the main datastore.
+
+The big idea is that every time you denormalize data you should write invariants that ensure coherence. These invariants are checked by scripts that can be run at every transaction in some cases, but are more usually cronned. You should also have procedures to reconcile (repair) the data in case of incoherence. I am not a huge fan of having them run automatically: incoherence often reveals bugs, so humans should check where it comes from and fix it.
+
+In our case, the script responsible for coherence checks warned me that a few documents belonging to the same user were present in the search engine but not flagged as indexed. I asked the application logs what had happened to these documents around the time when the incoherence occurred, and saw they had all been updated. I looked up the relevant code path in application code... and facepalm-ed. I had pushed that code to production half a year ago, and it was obviously wrong.
+
+## Conclusion
+
+The moral of it all is not, as I already discussed, that you should not denormalize data. It is not that we should write more tests, either. At least it is not what I want the takeaway to be (we do test these things more carefully now, but edge cases can always slip through).
+
+What I think this story shows is that, if you write distributed systems that handle denormalized data, you should have:
+
+- something to check invariants to detect issues;
+- exhaustive logs and tools to diagnose them;
+- reconciliation scripts to fix them.
+
+I cannot imagine releasing a distributed system that does not have those things. They are even more important than a comprehensive test suite to me. Moreover, the coherence checks can also be run in the test suite itself (on mocks for instance) so writing them is always a win-win.

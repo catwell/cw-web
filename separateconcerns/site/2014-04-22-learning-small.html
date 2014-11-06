@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="I just wrote a Lisp to improve my C. I will learn Go next.">
+    <link href="css/theme.css" rel="stylesheet" type="text/css">
+    
+    <link
+      rel="alternate" type="application/atom+xml"
+      href="http://blog.separateconcerns.com/feed.atom"
+    />
+    <title>Learning in the small</title>
+  </head>
+  <body>
+    <div id="container">
+    <hgroup>
+      <h1>Learning in the small</h1>
+      <h4>published 2014-04-22</h4>
+    </hgroup>
+    
+
+<h2>Writing a Lisp</h2>
+
+<p>I like to learn new tools and concepts by experimenting with small projects whose sole purpose is to help me grasp something better. Working on a larger project in a team with other people is invaluable, but doing things on a smaller scale on my own offers a different perspective.</p>
+
+<p>Having recently started to write a lot more C at work than I used to, I felt that it was a good idea to do a smaller project in the language. It turned out <a href="http://www.buildyourownlisp.com/">Build Your Own Lisp</a> came out just when I needed it, so I <a href="https://github.com/catwell/ownlisp">had a go at it</a>.</p>
+
+<p>I cannot recommend this book enough if you feel like you would enjoy building a dynamic language in C from scratch (using just a parser library). It is one of the best tutorial-style books I have ever read. It achieves a perfect balance between being didactic and leaving freedom to the user.</p>
+
+<p>My Lisp ended up being different from the one described in the book in several minor ways. For instance: it has more types, builtins take expressions instead of values, values are based on a union (which saves memory), memory management works differently, the source more organized... In that respect the book delivers exactly what it promised: the reader is encouraged to build &quot;his own&quot; Lisp.</p>
+
+<p>In the end I got just what I wanted from this experience: I clearly improved my C and had the satisfaction to write a working programming language in a few hours scattered over three weekends.</p>
+
+<p>Oh, just in case you were wondering, nobody paid me to write that blog post!</p>
+
+<h2>Moving on to Go</h2>
+
+<p>Next, I will probably be <a href="https://gobyexample.com/">learning Go</a>. Go is a weird language in that about half of the technical people I follow and look up to like it a lot, and the other half hates it. The latter tend to be users of languages with stricter type systems...</p>
+
+<p>I have to admit that, if I had looked solely at the technical merits of both languages, I would probably have learned more <a href="http://www.rust-lang.org/">Rust</a> instead. I already know some Rust, but not enough to use it productively. Its main advantages are its (arguably) better type system and the fact that it can run without a GC or a frontend, making it suitable to write dynamic libraries.</p>
+
+<p>However, Rust doesn&#39;t look completely stable yet, whereas Go is already used in production by several serious companies. Also, I am a distributed systems programmer, and <a href="http://camlistore.org/">most</a> <a href="https://github.com/coreos/etcd">of</a> <a href="https://github.com/ha/doozerd">the</a> <a href="https://github.com/bitly/nsq">interesting</a> <a href="http://iris.karalabe.com/">codebases</a> I see popping up around in that field are written in Go.</p>
+
+Moreover, Go appears to be a simpler language than Rust. I suspect I can learn enough of it to read code &quot;fluently&quot; and write some much faster. So Go it is, and Rust will probably be next.
+    </div>
+    <div id="footer">
+      [ <a href="index.html">home</a> ]
+    </div>
+    
+  </body>
+</html>

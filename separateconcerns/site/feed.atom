@@ -1,0 +1,1584 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Separate Concerns</title>
+  <link
+    href="http://blog.separateconcerns.com/feed.atom"
+    rel="self" type="application/atom+xml"
+  />
+  <link
+    href="http://blog.separateconcerns.com"
+    rel="alternate" type="application/xhtml+xml"
+  />
+  <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
+  <updated>2014-11-06T21:16:39Z</updated>
+  <author>
+    <name>Pierre 'catwell' Chapuis</name>
+    <uri>http://catwell.info/</uri>
+  </author>
+  
+  <entry>
+    <title>Disabling graphical password prompts</title>
+    <link
+      rel="alternate" type="text/html"
+      href="http://blog.separateconcerns.com/2014-10-24-cli-passwords.html"
+    />
+    <id>tag:blog.separateconcerns.com,2014-10-24:cli-passwords</id>
+    <published>2014-10-24T21:30:00Z</published>
+    <updated>2014-10-24T21:30:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        
+
+<p>These days Linux systems tend to open graphical password prompts when a CLI application needs user authentication. I don&#39;t know about you but I really don&#39;t like that.</p>
+
+<p>The first offender is git, which uses x11-ssh-askpass if installed. The simplest solution would be not to install it but it is a dependency of virt-manager on Arch Linux... Thankfully you can tell git not to use it:</p>
+
+<pre><code>git config --global core.askpass &quot;&quot;
+</code></pre>
+
+<p>The second one, in my case, was <a href="http://www.passwordstore.org/">pass</a>. If you try to use it in Gnome, the keyring hijacks the GPG agent and you get that message (plus a graphical prompt):</p>
+
+<pre><code>gpg: WARNING: The GNOME keyring manager hijacked the GnuPG agent.
+gpg: WARNING: GnuPG will not work properly - please configure
+that tool to not interfere with the GnuPG system!
+</code></pre>
+
+<p>You can solve that this way:</p>
+
+<pre><code>ln -sf /dev/null /etc/xdg/autostart/gnome-keyring-gpg.desktop
+</code></pre>
+
+<p>... but then it will use another graphical prompt! To stay in your terminal, create the file <code>~/.gnupg/gpg-agent.conf</code> with the following content:</p>
+
+<pre><code>pinentry-program /usr/bin/pinentry-curses
+</code></pre>
+      </div>
+    </content>
+  </entry>
+  
+  <entry>
+    <title>Microservices</title>
+    <link
+      rel="alternate" type="text/html"
+      href="http://blog.separateconcerns.com/2014-09-25-microservices.html"
+    />
+    <id>tag:blog.separateconcerns.com,2014-09-25:microservices</id>
+    <published>2014-09-25T23:00:00Z</published>
+    <updated>2014-09-25T23:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        
+
+<p>Several people have asked me what I think about microservices. The tl;dr is: I like small services, but I don&#39;t like what some call microservices, which is isolating every single feature within its own service and aiming at services at small as possible (I heard about a target of &quot;a few hundred lines of code&quot; per service and a hard limit at 5000 LOC).</p>
+
+<p>I <a href="http://blog.separateconcerns.com/2013-01-02-startups-soa.html">see SOA</a> (and modularization in general) as a technique to design a system so that it scales with the number of people on a team. The way it works is by dividing complexity between people. The following will be terribly simplified, but bear with me.</p>
+
+<p>Imagine a team working on a monolithic application. It is becoming too large and complicated to understand, so they split it into three parts, A, B and C. A third of the team will be responsible for each part. Each team is tasked with exposing an interface to the others, so that team A only has to worry about the internals of A and the interfaces of B and C. For each team, complexity has gone from the complexity of the monolithic application to half that complexity plus the complexity of communicating with the other parts of the system, or at least just knowing they exist, so given <code>N</code> the number of parts in the system and <code>M</code> the total complexity of the system, complexity seen from a service is: <code>M/N + k*N</code>.</p>
+
+<p>Now assuming the complexity of the system increases linearly with team size <code>S</code> (it probably increases faster in practice but let&#39;s approximate), complexity seen from a service is <code>l*S/N + k*N</code>. With everything else constant, the function <code>N(S)</code> to minimize that looks like a square root.</p>
+
+<p>In practice, this is not entirely true: as the system grows, not every service talks to other services and not every developer needs to know about every service. But because system architects and, more importantly, operations people do, my argument still holds.</p>
+
+<p>So here is my point: the number of services you have should look like a constant times the square root of the size of your team. Meaning, with a constant of three:</p>
+
+<p><img src="img/microservices.jpg" alt="graph" /></p>
+
+<p>This is the problem I have with the idea to bound the size of single services while ignoring the complexity of inter-service communication. SOA is a practice which can help you curb local complexity as you scale but there is <em>no way</em> it can make it constant without making a mess of the whole system.</p>
+
+<p>That being said, the value of the constant can be discussed. Some people think it should be lower than one, others think it should be very large.</p>
+
+<p>I am not a huge fan of small constants when they result in services that do too many things and require too many people. They end up looking like a few monoliths, with the same issues as a single monolith. Moreover, if you are going to do services, inter-service calls should be the norm and not an exception. Very large constants, on the other hand, result in too much accidental complexity, harder debugging and operational nightmares.</p>
+
+<p>I guess mileages vary but I like numbers around three. If you look at the curve above you may (or may not) agree that it looks reasonable; I think it does.</p>
+
+<p>Note that the title of this blog is still &quot;Separate Concerns&quot;: you should still draw clear lines between services, and you should still modularize as much as possible <em>within</em> services. But not every function call needs to be turned into a message sent over a network, and not every data structure needs its own process and source control repository.</p>
+
+And finally, just to be clear: do not look too much at the left part of the curve if you are a very early stage startup looking for product-market fit. You can still - and probably should - start with a monolith as long as you choose an architecture or framework with good modularization capabilities (like <a href="http://flask.pocoo.org/docs/0.10/blueprints/">Flask Blueprints</a>). Only consider SOA when you start to have a good rough idea of what the product will look like.
+      </div>
+    </content>
+  </entry>
+  
+  <entry>
+    <title>Iris</title>
+    <link
+      rel="alternate" type="text/html"
+      href="http://blog.separateconcerns.com/2014-09-20-iris.html"
+    />
+    <id>tag:blog.separateconcerns.com,2014-09-20:iris</id>
+    <published>2014-09-20T15:00:00Z</published>
+    <updated>2014-09-20T15:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        
+
+<p><a href="http://iris.karalabe.com/">Iris</a> is a &quot;decentralized Cloud messaging&quot; middleware that I have really started looking into with the recent <a href="http://iris.karalabe.com/archive/2014/version_v0_3_0_shiny_stable_apis">release of version 0.3.0</a>. It had struck me as interesting when I first heard of it <a href="https://www.youtube.com/watch?v=WTRORimPvHE">at FOSDEM 2014</a>. The reason for that, beyond the great presentation skills of its author, is that it implements principles I think are sound to build SOA upon.</p>
+
+<p>In Iris, the logical and physical layers of services are cleanly separated. Each box in the system runs a local instance of the Iris broker (&quot;Iris node&quot;). The broker is written in Go, and all broker instances in the system converse in a proprietary protocol.</p>
+
+<p>To provide or consume a service, you never have to open a connection to a remote machine: you just talk to your local broker using the <a href="https://dl.dropboxusercontent.com/u/10435909/Iris/relay.pdf">Iris relay protocol</a>. This means you can use any programming language you want as long as you implement this protocol, which is much simpler than the protocol used between brokers. There are official clients for the relay protocol (Iris calls them &quot;bindings&quot;, but I think that name is confusing) in Go, Erlang and Java. I have <a href="https://github.com/catwell/iris-lua">written one in Lua</a> that I will use for examples in the rest of this post (if you prefer, you will find corresponding code in Go for most examples <a href="https://github.com/catwell/iris-lua/tree/master/eFxamples">here</a>).</p>
+
+<p>In Iris, services are represented by names. To provide a service you register with its name, to consume one you address it by its name. That means you never dial into a specific instance of a service explicitly. From the consumer&#39;s point of view, the service could be provided by a single box as well as hundreds across different datacenters. Boxes can go up or down, and you will almost never have to care about it when writing code: it is an operational concern. The way Iris&#39; author puts it is that in Iris the smallest logical entity is a cluster, there is no concept of individual machine or process.</p>
+
+<p>Iris supports three usual basic patterns for communication: Request/Response, Publish/Subscribe and Broadcast. A fourth one, Tunnel, is slightly more complicated.</p>
+
+<h1>Request/Response</h1>
+
+<p>This is the pattern everybody knows about from HTTP, and probably the workhorse of most SOAs. A client sends a request to a cluster, and a single node of the cluster answers it. Iris just does the messaging here: the request and the response are binary blobs, there is no notion of headers.</p>
+
+<p>Here is how it looks in Lua on the client side:</p>
+
+<pre><code data-language="lua">local iris = require &quot;iris&quot;
+
+local c = iris.new()
+assert(c:handshake(&quot;&quot;))
+
+local req = c:request(&quot;echo&quot;, &quot;hello&quot;, 1000)
+c:process_one()
+local r = assert(req:response())
+
+c:teardown()
+
+print(&quot;reply arrived: &quot; .. r)
+</code></pre>
+
+<p>and on the service side:</p>
+
+<pre><code data-language="lua">local iris = require &quot;iris&quot;
+
+local c = iris.new()
+assert(c:handshake(&quot;echo&quot;))
+
+c.handlers.request = function(req)
+    print(&quot;request arrived: &quot; .. req)
+    return req
+end
+
+for i=1,5 do c:process_one() end
+
+c:teardown()
+</code></pre>
+
+<h1>Publish/Subscribe</h1>
+
+<p>Another well-known pattern. Consumers subscribe to a channel identified by a name, producers send messages into the channel and all subscribers receive them. There is no response from the subscriber. Channels are completely independent from clusters, i.e. channel &quot;X&quot; and cluster &quot;X&quot; can coexist and have nothing in common, and there is no restriction that a channel only works within a given cluster (any entity on the same Iris network can access it).</p>
+
+<p>Here is a publisher to channel &quot;somechan&quot; in Lua:</p>
+
+<pre><code data-language="lua">local iris = require &quot;iris&quot;
+local socket = require &quot;socket&quot;
+
+local c = iris.new()
+assert(c:handshake(&quot;&quot;))
+
+for i=1,5 do
+    c:publish(&quot;somechan&quot;, &quot;message &quot; .. i)
+    socket.sleep(1)
+end
+
+c:teardown()
+</code></pre>
+
+<p>and a consumer:</p>
+
+<pre><code data-language="lua">local iris = require &quot;iris&quot;
+local socket = require &quot;socket&quot;
+
+local c = iris.new()
+assert(c:handshake(&quot;&quot;))
+
+c.handlers.pubsub.somechan = function(msg)
+    print(&quot;message arrived: &quot; .. msg)
+end
+
+c:subscribe(&quot;somechan&quot;)
+
+for i=1,5 do c:process_one() end
+
+c:teardown()
+</code></pre>
+
+<h1>Broadcast</h1>
+
+<p>We have seen that requests are sent to a single instance of a cluster. What if you want to notify <em>all</em> members of a cluster of some event? This is what Broadcast is for. It is kind of redundant with Publish/Subscribe (you could have all members of each cluster subscribe to a channel) but it is somehow cleaner to have a separate message type for this. You could use it to build more complicated things on top, for instance a full-fledged service bus.</p>
+
+<p>Here is how to send a broadcast message in Lua:</p>
+
+<pre><code data-language="lua">local iris = require &quot;iris&quot;
+
+local c = iris.new()
+assert(c:handshake(&quot;&quot;))
+
+c:broadcast(&quot;bcst&quot;, &quot;hello&quot;)
+c:teardown()
+</code></pre>
+
+<p>and how to handle them:</p>
+
+<pre><code data-language="lua">local iris = require &quot;iris&quot;
+
+local c = iris.new()
+assert(c:handshake(&quot;bcst&quot;))
+
+c.handlers.broadcast = function(msg)
+    print(&quot;message arrived: &quot; .. msg)
+end
+
+for i=1,5 do c:process_one() end
+
+c:teardown()
+</code></pre>
+
+<h1>Tunnel</h1>
+
+<p>Tunnels are the last and most complicated way to communicate provided by Iris. To understand why we need them, remember how requests work.</p>
+
+<p>The fact that any member of a cluster can answer a request prevents you from doing anything stateful, because you cannot know if you are talking to the same instance or not in two separate requests. Moreover, the nature of the request and response does not allow any of them to be composed of multiple parts sent in separate messages. A request cannot trigger multiple responses.</p>
+
+<p>Tunnels are a solution to all that. When you open a tunnel, you address a cluster, but what you obtain is a persistent, bidirectional, ordered pipe to a specific instance of that cluster. You can think of it as a TCP socket or a circuit if you come from a telecom background (although there are no latency guarantees). Tunnels implement a throttling algorithm so that both ends of the tunnel can specify a maximum size for their input buffer.</p>
+
+<p>For now, here is what I think of tunnels in the context of a SOA: they are very powerful but tricky to use. If you can avoid them, you should. If not, you should not use raw tunnels anyway: you should define your protocol, write an abstraction for it and never expose the tunnel itself to the application.</p>
+
+<p>One valid use case I can see for tunnels, and which is used in Iris examples, is streaming. But this can go much further. Like the name indicates, you could tunnel most protocols into them, so they could serve as the foundation for some kind of VPN.</p>
+
+<p>Anyway, here is an example client with multiple responses and state:</p>
+
+<pre><code data-language="lua">local iris = require &quot;iris&quot;
+
+local c = iris.new()
+assert(c:handshake(&quot;&quot;))
+
+local tun = c:tunnel(&quot;tunnel&quot;, 1000)
+tun:confirm()
+tun:allow(1024)
+
+tun.handlers.message = function(msg)
+    if msg == &quot;data&quot; then
+        print(&quot;got data&quot;)
+    elseif msg == &quot;continue&quot; then
+        print(&quot;got continue, sending request&quot;)
+        tun:cosend(&quot;request&quot;)
+    elseif msg == &quot;bye&quot; then
+        print(&quot;got bye, quitting&quot;)
+        tun:close()
+    else
+        print(&quot;got invalid message: &quot; .. msg)
+        tun:close()
+    end
+end
+
+local xfer = tun:transfer(&quot;request&quot;)
+while not xfer:run() do c:process_one() end
+
+local op
+while op ~= iris.OP.TUN_CLOSE do op = c:process_one() end
+
+c:teardown()
+</code></pre>
+
+<p>and the server on the other end:</p>
+
+<pre><code data-language="lua">local iris = require &quot;iris&quot;
+
+local c = iris.new()
+assert(c:handshake(&quot;tunnel&quot;))
+
+local MAX_COUNT = 3
+local count = 0
+
+c.handlers.tunnel = function(tun)
+    tun:allow(1024)
+    tun.handlers.message = function(msg)
+        if msg == &quot;request&quot; then
+            if count &lt; MAX_COUNT then
+                count = count + 1
+                print(string.format(
+                    &quot;got request, sending %dx data + continue&quot;,
+                    count
+                ))
+                for i=1,count do tun:cosend(&quot;data&quot;) end
+                tun:cosend(&quot;continue&quot;)
+            else
+                print(&quot;got request, sending bye&quot;)
+                tun:cosend(&quot;bye&quot;)
+            end
+        else
+            print(&quot;got invalid message: &quot; .. msg)
+            tun:close()
+        end
+    end
+end
+
+local op
+while op ~= iris.OP.TUN_CLOSE do op = c:process_one() end
+
+c:teardown()
+</code></pre>
+
+<h1>Conclusion</h1>
+
+<p>Iris is a very interesting piece of software which implements a vision of systems that I like and cannot find in any other product out of the box. It is still very young and probably not ready for serious production yet, although I have found it stable during the (limited) testing I have done. Even though my current job does not involve SOA I will probably come back to it someday, so Iris will join the list of tools whose progress I follow attentively.</p>
+
+<p>On a side note, Iris was built for its authors&#39; thesis, and he is now <a href="http://iris.karalabe.com/archive/2014/core_concepts_at_dotscale">looking for a sponsor</a> to allow him to continue working on it. If you have the power to make that happen, give it a look. Think how VMWare / Pivotal must be happy of the deal they did with <a href="http://invece.org/">Antirez</a> :)</p>
+
+Finally, if you try <a href="https://github.com/catwell/iris-lua">my Iris client</a> and find bugs, do not hesitate to report them on Github! I have no real world Iris system to try it on so there are certainly plenty.
+      </div>
+    </content>
+  </entry>
+  
+  <entry>
+    <title>Hacker Founders</title>
+    <link
+      rel="alternate" type="text/html"
+      href="http://blog.separateconcerns.com/2014-05-28-hacker-founders.html"
+    />
+    <id>tag:blog.separateconcerns.com,2014-05-28:hacker-founders</id>
+    <published>2014-05-28T00:00:01Z</published>
+    <updated>2014-05-28T00:00:01Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        
+
+<p>Note: I posted what follows <a href="https://gist.github.com/catwell/5387617">as a Gist</a> over a year ago. Recently I was looking for it and couldn&#39;t find it, so I am re-posting it here for the next time.</p>
+
+<p>At the last Human Talks Paris meetup, Fabien Charbit (founder of <a href="http://sush.io">sush.io</a>) gave <a href="http://humantalks.com/talks/131-developpeurs-montez-votre-boite">a talk</a> in French whose title could be translated as: &quot;Programmers, create your company!&quot;</p>
+
+<p>Of course I agree with the idea, but at the end of it <a href="http://www.youtube.com/watch?v=0nxDKTJ5Ovc#t=641s">I said</a> I was disappointed because <a href="http://www.youtube.com/watch?v=0nxDKTJ5Ovc#t=439s">he said</a> you should find a marketing / commercial-minded CEO and be CTO. This is a commonplace, and I thought his message would be bolder than that. You can always discuss whether this is right or wrong but I think a tech startup where <em>all</em> the founders are tech-minded makes a lot of sense.</p>
+
+<p>It turns out, Paul Graham <a href="http://www.youtube.com/watch?v=BDA0t49AaZ4#t=1383s">said exactly that</a> in a video interview back in 2005. He is is much more credible than me on the topic, so I reproduced what he has to say about it below.</p>
+
+<p>Note that Fabien later clarified that this was not an issue of degree or even competence, but rather that one of the founders should have the motivation to deal with the softer aspects of the company, so we agree after all. But it is still way too common in France to assume every startup&#39;s CEO should have a business degree...</p>
+
+<p>Anyway, the question was: &quot;What is the relationship in startups between programmers and the business types?&quot;, and PG answered:</p>
+
+<blockquote>
+The relationship between the programmers and the business types? Well... I believe, and Y Combinator is kind of an experiment to test this... I believe that programmers can become business types. I think that business is kind of like chess, in the sense that the hard part is not knowing the rules about how the pieces move, the hard part is actually being able to, like... look ahead and make strategies and stuff like that, right. The hard part about playing chess well is being smart, right, not knowing how to play the rules of chess. And I think business is like that, that there&#39;s a few rules of business and that hackers are capable of learning them, most hackers, and that... once they learn them, they&#39;ll be as good at it as business guys, you know? So... I think hackers can <em>be</em> business guys. Hackers are perfectly capable of being business guys. Look at Bill Gates, right! He didn&#39;t go to business school. I mean... you might wonder, why would <em>anyone</em> want to go to business school? You know, when you look at the example of Bill Gates, he seems to be doing fine at business, right? He sort of picked it up as he went along, and that did not seem to hurt him at all. Larry and Serguey, they didn&#39;t go to business school either, right, they&#39;re just hackers, and they seem to be doing fine too. So I think the relationship between hackers and business guys, at least in the beginning, is that you need hackers and you don&#39;t need business guys.
+</blockquote>
+      </div>
+    </content>
+  </entry>
+  
+  <entry>
+    <title>Indistinguishable from Magic</title>
+    <link
+      rel="alternate" type="text/html"
+      href="http://blog.separateconcerns.com/2014-05-27-magic.html"
+    />
+    <id>tag:blog.separateconcerns.com,2014-05-27:magic</id>
+    <published>2014-05-27T23:30:00Z</published>
+    <updated>2014-05-27T23:30:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        
+
+<p>I have just watched a small <a href="https://www.youtube.com/watch?v=Ia55clAtdMs">TEDx talk by Simon Peyton Jones</a> (of Haskell fame) on CS education. Something he said struck me as relevant to what I was saying in <a href="/2014-04-25-design-alan-kay.html">my last post</a>:</p>
+
+<blockquote>
+<p>Arthur C. Clarke once famously remarked that &quot;any sufficiently advanced technology is indistinguishable from magic&quot;. And I think it is very damaging if our children come to believe that the computer systems they use are essentially magic. That is: not under their control.</p>
+</blockquote>
+
+<p>If you have a programming background, you may experience a feeling close to disgust when you hear the word &quot;magic&quot;. But I have heard &quot;product people&quot; use it as if it was a <em>good</em> thing way too many times. Short term, maybe. But eventually I want to master my tools, to understand them inside out. I want to be able to rely on them, and for that I expect them <em>not</em> to surprise me.</p>
+
+I think it is time for the pendulum to swing back to products that optimize for how high the asymptote of the learning curve is, not the time it takes to reach it. The kind of products that come with manuals and teach you things instead of trying very hard not to make you feel stupid, or in other words: not to make you think.
+      </div>
+    </content>
+  </entry>
+  
+  <entry>
+    <title>Modern design and Alan Kay</title>
+    <link
+      rel="alternate" type="text/html"
+      href="http://blog.separateconcerns.com/2014-04-25-design-alan-kay.html"
+    />
+    <id>tag:blog.separateconcerns.com,2014-04-25:design-alan-kay</id>
+    <published>2014-04-25T00:30:00Z</published>
+    <updated>2014-04-25T00:30:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        
+
+<p>I have long been thinking that there is something wrong with modern product design thinking. I see designs that trade off almost all power, flexibility and composability for a smoother learning curve. I see designs that remove explicit controls and replace them by magic, choosing to hide essential complexity instead of reducing accidental complexity. I see designs optimized for new users and prospects instead of regular users, and designers who apparently consider documentation as something evil.</p>
+
+<p>I do not like that trend. Learning from a community where <a href="http://en.wikipedia.org/wiki/RTFM">RTFM</a> was often the right answer has been very beneficial to me when I was a child. I am also a proponent of simplicity and <a href="https://wiki.archlinux.org/index.php/The_Arch_Way#Simplicity">complexity without complication</a>, as should be obvious from <a href="http://files.catwell.info/notes/quotes.txt">the quotes</a> I have been collecting over the last years.</p>
+
+<p>The name of Alan Kay can be found a few times in this file, and so I was very pleased to find out that he recently gave a talk where <a href="https://www.youtube.com/watch?feature=player_detailpage&amp;v=gTAghAJcO1o#t=765">he puts words</a> on that hard-to-describe feeling: that this design school, which postulates that educating users is a bad idea and that everything should be natural, is hindering progress.</p>
+
+<p>I found it so spot on that I decided to transcribe part of it below. I encourage you to read, and then watch the whole video if you can!</p>
+
+<blockquote>
+<p>Human beings tend to hate learning curves, [...] and marketing people really hate learning curves. [...]</p>
+
+<p>Any product today that requires a substantial learning curve is not what marketing people are looking for. As the joke goes, they want a brand new idea that has been perfectly tested. They would like something that people instantly recognize, but you&#39;re the only person who has it. So they want something, essentially, that would have appealed to any cave person 100000 years ago, something that fits into what our genes set us up to be interested in.</p>
+
+<p>An interesting question is: if the bicycle were invented tomorrow, would it actually be carried through? Think of how dangerous a bicycle is, think of the lawsuits! The bicycle is only tolerated today because it has been around for a long time, when people didn&#39;t sue when a kid got danked.</p>
+
+<p>Another way to look at it is that the larger world out there is kind of a low pass filter. And this is still going on: the iPad has a much more brain-dead interface than the Mac. [...] If you think of the iPad as a gesture device, a gesture is inherently something that gives you not just naturalness but efficiency. And so when you&#39;re doing gestures-oriented computing, and the origin of that goes back into the 60s - there were some really wonderful systems back then, what you really want to do is to learn a bunch of gestures to make you fluent and efficient on the thing. And the iPad doesn&#39;t have any particular way of teaching you those gestures. They don&#39;t force the developers to put a teaching thing for those gestures in there. And so basically everything is devolved down to the few simple gestures that are generic to the iPad.</p>
+
+<p>This is kind of a dumb-down-ism that has been incredibly successful for people who are only interested in making money. It has not been good for personal computing. [...]</p>
+
+<p>If we look at human psychometrics, [...] when a new idea or tool appears, about 95% of us are what are called instrumental reasoners. [...] And an instrumental reasoner is a person who judges the new idea or tool on whether it will advance their current goals. [...] They are very conservative about shifting their goals. 5% of us are interested in the new idea or tool just because we&#39;re interested in new ideas and tools, and many of these people actually change their goals when a new idea or tool appears.</p>
+
+<p>If we look at the other axis, about 85% of us do things primarily for social approval. That&#39;s what extroversion actually means: it doesn&#39;t mean you&#39;re a performer, it means you are actually interested in the opinions of others. About 15% of us are inner-directed.</p>
+</blockquote>
+
+<p><img src="img/kay-change-groups.png" alt="change in groups" /></p>
+
+<blockquote>
+<p>If you combine these two (and I realize that they might not be completely independent dimensions, but they are independent enough for this talk) you get this interesting thing: 1% of us is inner-directed, not so interested in the approval of others, and intrinsically interested in new ideas and tools.</p>
+
+<p>And 80% of us are goal-conservative, instrumental and directed by what our society thinks of us. This group requires almost everybody to agree on something before anybody agrees on something. [...] So this group generally cannot do something just because it is a good idea. This is just not a concept that this group has, the majority of human beings. They&#39;ll do something if it is actually part of a sanction. And so this group is capable of doing things that are terrible ideas [...] if they&#39;re sanctioned by the group. [...]</p>
+
+And it turns out of you want to make a change in the larger world, you have to do something with the 80%. The 1% are more or less always with us and doing things. Some eras they get burnt at the stake, some eras they get rejected. In the 60s they actually got funded for a while. Xerox PARC came out of the funding of those people in the 60s, but they&#39;re always with us.
+</blockquote>
+      </div>
+    </content>
+  </entry>
+  
+  <entry>
+    <title>Learning in the small</title>
+    <link
+      rel="alternate" type="text/html"
+      href="http://blog.separateconcerns.com/2014-04-22-learning-small.html"
+    />
+    <id>tag:blog.separateconcerns.com,2014-04-22:learning-small</id>
+    <published>2014-04-22T23:59:00Z</published>
+    <updated>2014-04-22T23:59:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        
+
+<h2>Writing a Lisp</h2>
+
+<p>I like to learn new tools and concepts by experimenting with small projects whose sole purpose is to help me grasp something better. Working on a larger project in a team with other people is invaluable, but doing things on a smaller scale on my own offers a different perspective.</p>
+
+<p>Having recently started to write a lot more C at work than I used to, I felt that it was a good idea to do a smaller project in the language. It turned out <a href="http://www.buildyourownlisp.com/">Build Your Own Lisp</a> came out just when I needed it, so I <a href="https://github.com/catwell/ownlisp">had a go at it</a>.</p>
+
+<p>I cannot recommend this book enough if you feel like you would enjoy building a dynamic language in C from scratch (using just a parser library). It is one of the best tutorial-style books I have ever read. It achieves a perfect balance between being didactic and leaving freedom to the user.</p>
+
+<p>My Lisp ended up being different from the one described in the book in several minor ways. For instance: it has more types, builtins take expressions instead of values, values are based on a union (which saves memory), memory management works differently, the source more organized... In that respect the book delivers exactly what it promised: the reader is encouraged to build &quot;his own&quot; Lisp.</p>
+
+<p>In the end I got just what I wanted from this experience: I clearly improved my C and had the satisfaction to write a working programming language in a few hours scattered over three weekends.</p>
+
+<p>Oh, just in case you were wondering, nobody paid me to write that blog post!</p>
+
+<h2>Moving on to Go</h2>
+
+<p>Next, I will probably be <a href="https://gobyexample.com/">learning Go</a>. Go is a weird language in that about half of the technical people I follow and look up to like it a lot, and the other half hates it. The latter tend to be users of languages with stricter type systems...</p>
+
+<p>I have to admit that, if I had looked solely at the technical merits of both languages, I would probably have learned more <a href="http://www.rust-lang.org/">Rust</a> instead. I already know some Rust, but not enough to use it productively. Its main advantages are its (arguably) better type system and the fact that it can run without a GC or a frontend, making it suitable to write dynamic libraries.</p>
+
+<p>However, Rust doesn&#39;t look completely stable yet, whereas Go is already used in production by several serious companies. Also, I am a distributed systems programmer, and <a href="http://camlistore.org/">most</a> <a href="https://github.com/coreos/etcd">of</a> <a href="https://github.com/ha/doozerd">the</a> <a href="https://github.com/bitly/nsq">interesting</a> <a href="http://iris.karalabe.com/">codebases</a> I see popping up around in that field are written in Go.</p>
+
+Moreover, Go appears to be a simpler language than Rust. I suspect I can learn enough of it to read code &quot;fluently&quot; and write some much faster. So Go it is, and Rust will probably be next.
+      </div>
+    </content>
+  </entry>
+  
+  <entry>
+    <title>Editing Sublime Text packages</title>
+    <link
+      rel="alternate" type="text/html"
+      href="http://blog.separateconcerns.com/2014-03-03-sublime-packages.html"
+    />
+    <id>tag:blog.separateconcerns.com,2014-03-03:sublime-packages</id>
+    <published>2014-03-03T21:30:00Z</published>
+    <updated>2014-03-03T21:30:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        
+
+<p>I have finally decided to configure Sublime Text 2 to have it autocomplete Lua code the way I want it to.</p>
+
+<p>For instance, by default, when you start typing <code>function</code> and hit TAB, you get the following result:</p>
+
+<pre><code data-language="lua">function function_name( ... )
+  -- body
+end
+</code></pre>
+
+<p>Instead I wanted this:</p>
+
+<pre><code data-language="lua">function(self)
+  error(&quot;unimplemented&quot;)
+end
+</code></pre>
+
+<p>It turns out this is very simple. Go to <code>Preferences -&gt; Browse Packages...</code> and open the Lua directory. There are several files there, including two named <em>function-(fun).sublime-snippet</em> and <em>function-(function).sublime-snippet</em> which do almost the same thing.</p>
+
+<p>Remove the first one and open the second one in a text editor. Its content should be something like:</p>
+
+<pre><code>&lt;snippet&gt;
+    &lt;content&gt;&lt;![CDATA[function ${1:function_name}( ${2:...} )
+    ${0:-- body}
+end]]&gt;&lt;/content&gt;
+    &lt;tabTrigger&gt;function&lt;/tabTrigger&gt;
+    &lt;scope&gt;source.lua&lt;/scope&gt;
+    &lt;description&gt;function&lt;/description&gt;
+&lt;/snippet&gt;
+</code></pre>
+
+<p>Replace it by:</p>
+
+<pre><code>&lt;snippet&gt;
+    &lt;content&gt;&lt;![CDATA[function(${1:self})
+    ${0:error(&quot;unimplemented&quot;)}
+end]]&gt;&lt;/content&gt;
+    &lt;tabTrigger&gt;function&lt;/tabTrigger&gt;
+    &lt;scope&gt;source.lua&lt;/scope&gt;
+    &lt;description&gt;function&lt;/description&gt;
+&lt;/snippet&gt;
+</code></pre>
+
+... and that is all, the deed is done!
+      </div>
+    </content>
+  </entry>
+  
+  <entry>
+    <title>FOSDEM 2014</title>
+    <link
+      rel="alternate" type="text/html"
+      href="http://blog.separateconcerns.com/2014-02-09-fosdem-2014.html"
+    />
+    <id>tag:blog.separateconcerns.com,2014-02-09:fosdem-2014</id>
+    <published>2014-02-09T19:30:00Z</published>
+    <updated>2014-02-09T19:30:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        
+
+<p>Last weekend I attended <a href="https://fosdem.org/2014/">FOSDEM</a>, the largest Open Source conference in Europe that takes place every year in Brussels. This was my fourth year in a row. Not much Lua this year, although I saw some <a href="https://github.com/ladc">familiar</a> <a href="http://specfun.inria.fr/tassi/">faces</a>. But I did listen to lots of interesting talks which I will try to summarize briefly.</p>
+
+<h2><a href="https://fosdem.org/2014/schedule/event/reproducibledebian/">Reproducible Builds for Debian</a> (Jérémy Bobbio)</h2>
+
+<p>Debian developers want to provide their users a way to verify that the binary packages they distribute correspond to the source. To achieve reproducible builds they have to patch code that depends on things such as timestamps at build time. To make things worse, using a standard VM for builds would help but they refuse to do it &quot;because they&#39;re Debian.&quot;</p>
+
+<h2><a href="https://fosdem.org/2014/schedule/event/obsolete/">Is distribution-level package management obsolete?</a> (Donnie Berkholz)</h2>
+
+<p>The Gentoo leader thinks distribution are doing a poor job of meeting the needs of users - especially developers and system administrators - in terms of package management. They are increasingly relying on configuration management tools (CFEngine, Puppet, Chef, Ansible...), language-specific package managers (RubyGems, NPM, LuaRocks...) and tools like Docker; however, distribution package managers do not integrate well with those.</p>
+
+<p>This is a topic that interests me, following all the discussion that occurred at <a href="http://www.lua.org/wshop13.html">the last Lua Workshop</a>. After the talk I asked Donnie whether there was a discussion list somewhere dedicated to those issues. He told me that, to his knowledge, there was not. It may be a good idea to start one.</p>
+
+<h2><a href="https://fosdem.org/2014/schedule/event/minix_3_on_arm/">Minix 3 on ARM</a> (Kees Jongenburger)</h2>
+
+<p>Kees talked about the <a href="http://www.minix3.org/">Minix 3</a> architecture, how it was ported to ARM (with the BeagleBoard and BeagleBone devices as first targets) and plans for the future.</p>
+
+<p>The main priority of the project is porting the NetBSD userland. As a former user I think this is an excellent idea. I may try the OS again someday if it becomes more &quot;usable&quot;, I really like some of the ideas behind it.</p>
+
+<h2><a href="https://fosdem.org/2014/schedule/event/technical_introduction_to_the_deeper_parts_of_sailfishos,_a_qt5_wayland_based_mobile_os/">Technical introduction to the deeper parts of Sailfish OS</a> (Carsten Munk)</h2>
+
+<p>Sailfish is probably the most interesting mobile OS project today, go <a href="https://sailfishos.org/">check it out</a> if you don&#39;t know it yet. Carsten gave us an overview of the main parts of the OS and explained some funny things they did, such as making glibc and the Bionic libc co-exist within the same process. He also provided the audience an SSH access to an actual terminal. I <a href="https://twitter.com/pchapuis/status/429619422592905217">found liblua 5.1</a> on it :)</p>
+
+<h2><a href="https://fosdem.org/2014/schedule/event/postfix_lessons_learned_and_recent_developments/">Postfix: lessons learned and recent developments</a> (Wietse Venema)</h2>
+
+<p>This talk introduced the Postfix least-privilege architecture, and then went on to explain recent improvements. Most of them revolve around fighting spam more efficiently. Postfix also migrated from Berkley DB to LMDB (see later), mostly for licensing reasons.</p>
+
+<h2><a href="https://fosdem.org/2014/schedule/event/nixos_declarative_configuration_linux_distribution/">NixOS: declarative configuration Linux distribution</a> (Domen Kožar)</h2>
+
+<p><a href="http://nixos.org/">Nix OS</a> is a Linux distribution built around the Nix package manager. It is one of those few distributions that completely disrupt the FHS, another one being <a href="http://www.gobolinux.org/">GoboLinux</a>.</p>
+
+<p>The idea of Nix is that a package is the output of a function provided with some arguments and without side effects. There are a lot of interesting ideas there, such as atomic updates based on symlinks. However, doing this involves some heavy patching and that makes me uncomfortable.</p>
+
+<h2><a href="https://fosdem.org/2014/schedule/event/iris_decentralized_messaging/">Iris Decentralized Messaging</a> (Péter Szilágyi)</h2>
+
+<p><a href="http://iris.karalabe.com/">Iris</a> is a messaging backend written in Go but with a language-agnostic interface. It is somehow similar 0MQ but goes further by removing the notion of a specific instance or process in favor of sets of those. Each machine runs a single daemon that does all the heavy lifting, and each client connects to it locally to interact with the system.</p>
+
+<p>This is a very interesting project and I was a bit surprised I had never heard about it until now. The slides and live demos were also really good, with multiple Go code snippets running concurrently in a browser. Oh, and Gopher drawings!</p>
+
+<h2><a href="https://fosdem.org/2014/schedule/event/camlistore/">Camlistore</a> (Brad Fitzpatrick and Mathieu Lonjaret)</h2>
+
+<p>The speakers showed off what the latest release of <a href="http://camlistore.org/">Camlistore</a>, a personal file storage system, can do. I already knew and liked the technical design of the project, but I was impressed by the progress made on usability since Brad&#39;s talk at dotScale 2013. They have a new Web UI which is not complete yet but looks very promising. I really have to install my own node someday.</p>
+
+<h2><a href="https://fosdem.org/2014/schedule/event/llvmruby/">Statically compiling Ruby with LLVM</a> (Laurent Sansonetti)</h2>
+
+<p>A very interesting talk on LLVM and how it helps when statically compiling a (very) dynamic language such as Ruby. Among other things, the optimization passes do an incredible job. However, it looks like JIT compilation is not as good as static compilation yet.</p>
+
+<h2><a href="https://fosdem.org/2014/schedule/event/whats_new_in_openldap/">What&#39;s new in OpenLDAP</a> (Howard Chu)</h2>
+
+<p>This was, as I had hoped, mostly a talk about <a href="http://symas.com/mdb/">LMDB</a>. It confirmed what I already suspected: at least according to its author&#39;s benchmarks, it outperforms any kind of competition in this space (embedded key-value stores). It is also one of the rare NoSQL DBs to implement MVCC transactions, in less than 10000 lines of C code and 32 kB of object code. If there is a piece of Open Source software I think you should not have missed in 2013, it is this one.</p>
+
+<h2><a href="https://fosdem.org/2014/schedule/event/persistent_memory/">Persistent Memory: Changing the way we store data</a> (Ric Wheeler)</h2>
+
+<p>An interesting talk about how the shift away from rotating disk towards persistent memory storage affects the way we develop filesystems, kernels and any code that does I/O. This is not only about SSDs, but also about new kinds of devices that will come out soon and be an order of magnitude faster according to Ric.</p>
+
+<h2><a href="https://fosdem.org/2014/schedule/event/concurrent_programming_with_python/">Concurrent programming with Python and my little experiment</a> (Benoit Chesneau)</h2>
+
+<p>Benoit explained how he ported the Go concurrency model (Goroutines and Channels) to Python. I know Benoit and his <a href="https://github.com/benoitc/offset">offset</a> project so this was not foreign to me, but there are two pieces of interesting news: first, the next version will support multiple processes, freeing users from the GIL (yay!), and second he is thinking about changing the API to make it more like <a href="http://julialang.org/">Julia</a> and less like Go, because Julia is more similar to Python.</p>
+
+<h2><a href="https://fosdem.org/2014/schedule/event/nsa_operation_orchestra/">NSA operation ORCHESTRA: Annual Status Report</a> (Poul-Henning Kamp)</h2>
+
+<p>This was a fun talk where <a href="http://phk.freebsd.dk/">phk</a> endorsed the role of a NSA agent who mistakes the FOSDEM amphitheater for the European Commission and explains how they sabotage attempts to give the general public more privacy. Lots of conspiracy theory in there obviously, but given the recent events, is this really so absurd? phk argued at the end of the talk that the solution should be political and not technical.</p>
+
+<p>The format of the talk was a very good idea that worked really well on my brain tired by two days of conference, but also by two consecutive nights out filled with Belgian beer and other strong drinks. :)</p>
+
+<h2>Conclusion</h2>
+
+FOSDEM is still a very good event which you should consider attending next year. Besides the talks, you will enjoy the parties and meeting people you only knew online. I hopefully will see you there.
+      </div>
+    </content>
+  </entry>
+  
+  <entry>
+    <title>How I write Lua modules</title>
+    <link
+      rel="alternate" type="text/html"
+      href="http://blog.separateconcerns.com/2014-01-03-lua-module-policy.html"
+    />
+    <id>tag:blog.separateconcerns.com,2014-01-03:lua-module-policy</id>
+    <published>2014-01-03T00:00:01Z</published>
+    <updated>2014-01-03T00:00:01Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        
+
+<p>Hisham just published an article about his personal <a href="http://hisham.hm/2014/01/02/how-to-write-lua-modules-in-a-post-module-world/">guidelines for writing Lua modules</a>. Interestingly, I do a lot of things differently. Let us see how.</p>
+
+<blockquote>
+<p>Policy Bit #1: always require a module into a local named after the last component of the module’s full name.</p>
+</blockquote>
+
+<p>I tend to do that, but not always. Exceptions include:</p>
+
+<ul>
+<li>modules with names that are too generic such as<code>path</code>, <code>utils</code> or <code>types</code> from Penlight, where I add an <code>x</code> at the end of the name (e.g. <code>pathx</code>);</li>
+<li>modules which I use as alternatives for others, for instance <code>cjson</code> which I call <code>json</code>;</li>
+<li>modules with names that are too long such as my own <code>multipart-post</code> which I call <code>mp</code> (it is not a valid identifier anyway, I would have to replace the dash by an underscore).</li>
+</ul>
+
+<blockquote>
+<p>Policy Bit #2: start a module by declaring its table using the same all-lowercase local name that will be used to require it.</p>
+
+<p>Policy Bit #3: Use local function to declare local functions only: that is, functions that won’t be accessible from outside the module.</p>
+
+<p>Policy Bit #4: public functions are declared in the module table, with dot syntax.</p>
+</blockquote>
+
+<p>I do something entirely different. First, I <em>never</em> use the function sugar in Lua, so instead of writing <code>local function f()</code> I write <code>local f = function()</code>.</p>
+
+<p>I also do not declare the module table at the top of the module, I return it at the end, listing public functions explicitly. That means public functions are declared as locals. Arguably, they could be confused with private functions but that doesn&#39;t bother me: if you are editing the code of the module, you probably know its interface. My public functions are also usually located at the end of the module.</p>
+
+<p>To illustrate, Hisham&#39;s module example is:</p>
+
+<pre><code data-language="lua">local bar = {}
+
+local function happy_greet(greeting)
+   print(greeting .. &quot;!!!! :-D&quot;)
+end
+
+function bar.say(greeting)
+   happy_greet(greeting)
+end
+
+return bar
+</code></pre>
+
+<p>I would write instead:</p>
+
+<pre><code data-language="lua">local happy_greet = function(greeting)
+   print(greeting .. &quot;!!!! :-D&quot;)
+end
+
+local say = function(greeting)
+  happy_greet(greeting)
+end
+
+return {
+  say = say,
+}
+</code></pre>
+
+<p>One advantage of doing this is that when you call a public function in the module itself it is a local. That means that you avoid a table lookup, but also that <em>it acts as a private function from the point of view of other functions in your module</em>.</p>
+
+<p>To understand what I mean, imagine that we change our mind and now want to expose <code>happy_greet</code> as well.</p>
+
+<p>Hisham&#39;s module becomes:</p>
+
+<pre><code data-language="lua">local bar = {}
+
+function bar.happy_greet(greeting)
+   print(greeting .. &quot;!!!! :-D&quot;)
+end
+
+function bar.say(greeting)
+   bar.happy_greet(greeting)
+end
+
+return bar
+</code></pre>
+
+<p>Mine becomes:</p>
+
+<pre><code data-language="lua">local happy_greet = function(greeting)
+   print(greeting .. &quot;!!!! :-D&quot;)
+end
+
+local say = function(greeting)
+  happy_greet(greeting)
+end
+
+return {
+  say = say,
+  happy_greet = happy_greet,
+}
+</code></pre>
+
+<p>The first thing we can notice is that we had to modify <code>say</code> in Hisham&#39;s module and not in mine. But now imagine a &quot;malicious&quot; user does this:</p>
+
+<pre><code data-language="lua">local bar = require &quot;bar&quot;
+
+local fishy_greet = function(greeting)
+  print(greeting .. &quot; &gt;&lt;&gt;&quot;)
+end
+
+bar.happy_greet = fishy_greet
+
+bar.say(&quot;yay&quot;)
+</code></pre>
+
+<p>With my module, the output would be <code>yay!!!! :-D</code>. With Hisham&#39;s, the output would be <code>yay &gt;&lt;&gt;</code>: the user is allowed to monkey patch their module in a way that has an effect on functions they do not explicitly touch.</p>
+
+<blockquote>
+<p>Policy Bit #5: construct a table for your class and name it LikeThis so we know your table is a class.</p>
+
+<p>Policy Bit #6: functions that are supposed to be used as object methods should be clearly marked as such, and the colon syntax is a great way to do it.</p>
+</blockquote>
+
+<p>Again, not how I do it :) Using CamelCase is a good idea but in the wild I see it more often for the actual module table, not for what Hisham calls the &quot;class&quot; table that is associated to <code>__index</code> in the metatable (I call it &quot;methods&quot;). Usually, it means (to me) that the constructor is <code>MyClass()</code>, whereas with a lowercase module name it would be <code>myclass.new()</code>. I use the latter and Penlight is an example of the former.</p>
+
+<p>Just like I do not use the <code>function</code> sugar, I do not use the colon syntax to define functions. Moreover, <em>I often call methods with explicit self in the module itself</em>. Any idea why? Yeah, same as above, resistance to monkey patches. I agree that this is not a very convincing argument given that I often skip the little <code>local print = print</code> dance.</p>
+
+<p>Other advantages include, again, less call overhead and the ability to call methods consistently on objects before they have their metatable. This is sometimes useful in constructors.</p>
+
+<p>So where Hisham&#39;s class example is:</p>
+
+<pre><code data-language="lua">local myclass = {}
+
+local MyClass = {}
+
+function MyClass:some_method()
+   -- code
+end
+
+function MyClass:another_one()
+   self:some_method()
+   -- more code
+end
+
+function myclass.new()
+   local self = {}
+   setmetatable(self, { __index = MyClass })
+   return self
+end
+
+return myclass
+</code></pre>
+
+<p>I would write:</p>
+
+<pre><code data-language="lua">local some_method = function(self)
+  -- code
+end
+
+local another_one = function(self)
+  some_method(self)
+  -- more code
+end
+
+local methods = {
+  some_method = some_method,
+  another_one = another_one,
+}
+
+local new = function()
+  return setmetatable({}, {__index = methods})
+end
+
+return {new = new}
+</code></pre>
+
+<p>Of course sometimes I do <em>not</em> want to resist monkey patches, and in that case I use colon syntax for calls, but never for definitions.</p>
+
+<blockquote>
+<p>Policy Bit #7: do not set any globals in your module and always return a table in the end.</p>
+</blockquote>
+
+<p>This one I cannot disagree with. It is the only rule that has an obvious externally visible effect. Do this or you will annoy all your users.</p>
+
+I think this is what matters the most in the end: modules always return tables and never create globals. The rest is mostly implementation details!
+      </div>
+    </content>
+  </entry>
+  
+  <entry>
+    <title>C: what I had forgotten</title>
+    <link
+      rel="alternate" type="text/html"
+      href="http://blog.separateconcerns.com/2014-01-02-clang-forgotten.html"
+    />
+    <id>tag:blog.separateconcerns.com,2014-01-02:clang-forgotten</id>
+    <published>2014-01-02T22:10:00Z</published>
+    <updated>2014-01-02T22:10:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        
+
+<p>Thanks to my <a href="http://blog.separateconcerns.com/2013-12-12-infinity-beyond.html">new job</a> I will have the opportunity to write a lot more C than in the last three years. To prepare for this, I decided to read some old C89 books again and see what I remembered. Here are some of the quirks I had forgotten (or never known about).</p>
+
+<ul>
+<li><p>Declarations cannot be interleaved with other statements in ANSI C. They have to happen at the beginning of a bloc.</p></li>
+<li><p>The default type of functions is <code>int</code>, i.e. <code>f(void) {};</code> is valid and equivalent to <code>int f(void) {};</code>.</p></li>
+<li><p>The C89 standards allows implementations to only consider the first 31 characters of identifiers. It is possible to use longer identifiers but they must differ in their first 31 characters to avoid collisions. External identifiers (seen by the linker) are even worse: the implementation can be case-insensitive and only take the first 6 (!) characters into account.</p></li>
+<li><p>Using the wrong type on an union is usually undefined. However, if some members of the union start with the same attributes, that common initial part can be used interchangeably.</p></li>
+<li><p>This:</p>
+
+<pre><code>const struct stuff_s {
+  /* stuff */
+} stuff_t;
+</code></pre>
+
+<p>means the same thing as:</p>
+
+<pre><code>struct stuff_s {
+  /* stuff */
+} const stuff_t;
+</code></pre>
+
+<p>but if you wrote it you probably meant this instead:</p>
+
+<pre><code>struct stuff_s {
+  /* stuff */
+};
+typedef const struct stuff_s stuff_t;
+</code></pre></li>
+<li><p>I already knew sequence points can be tricky, but this bit of code tricked me anyway: <code>a[i] = i++;</code>. There is no sequence point so the result is undefined.</p></li>
+<li><p>The standard allows the <em>representation</em> of <code>NULL</code> to be different from <code>0</code>, but its <em>value</em> has to be <code>0</code> so you can almost always write code that assumes <code>NULL == 0</code> and be right provided you do not <em>actually test</em> <code>NULL == 0</code>.</p></li>
+</ul>
+      </div>
+    </content>
+  </entry>
+  
+  <entry>
+    <title>To Infinity and Beyond</title>
+    <link
+      rel="alternate" type="text/html"
+      href="http://blog.separateconcerns.com/2013-12-12-infinity-beyond.html"
+    />
+    <id>tag:blog.separateconcerns.com,2013-12-12:infinity-beyond</id>
+    <published>2013-12-12T21:30:00Z</published>
+    <updated>2013-12-12T21:30:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        
+
+<h2>Goodbye Moodstocks</h2>
+
+<p>Friday 20th will be my last day at Moodstocks. I am leaving a company where, after three years and a half, I was the most senior employee. As you may imagine, it was not an easy decision.</p>
+
+<p>Moodstocks has grown up since I joined it. After several pivots, the founders have assembled a <a href="https://moodstocks.com/humans.txt">great team</a> I will miss, and together I dare say we have advanced the state of mobile image recognition. Recently, we have also been looking at other technologies related to mobile.</p>
+
+<p>We have released two new products. The first one is what <a href="http://blog.separateconcerns.com/2013-06-20-three-years-proprietary-projects.html">was known as Physalis</a> and took the commercial name <a href="https://winch.io/">Winch</a>. This is what I have been mostly involved with for the last few months. I believe it has the potential to become the reference solution to write native mobile applications that react quickly and work offline.</p>
+
+<p>The second product is <a href="http://overlay.ms/">Overlay</a>, a mobile application that lets you buy products from paper catalogs online. Years after Pikadeo and Notes, it is finally time for a real application available in the stores, leveraging Moodstocks&#39; <a href="https://moodstocks.com/">image recognition SDK</a> and Winch, showcasing the best of both technologies. But beyond pure tech, it is also a demonstration of Augmented Reality as we like it: fast, predictable, purposeful. No need for 3D models.</p>
+
+<p>With those two products in the pipes, choosing to leave was incredibly difficult. But I did nevertheless, because of an opportunity I could not turn down.</p>
+
+<h2>Hello Lima</h2>
+
+<p>So, what next for me? After two weeks to see my family, eat too much and have some welcome rest, I <a href="http://www.kickstarter.com/projects/cloud-guys/plug-the-brain-of-your-devices/posts/691351">will be joining</a> the team developing <a href="http://meetlima.com">the Lima</a> as a core developer.</p>
+
+<p>The Lima, which promises no less than to solve the personal data storage problem, is the first hardware product I backed on Kickstarter. I was thinking: &quot;this won&#39;t be easy, but if those guys can do it, I want that device.&quot;</p>
+
+<p>The Kickstarter went (very) well, so they started looking for help and got in touch. I was curious and decided to meet the founders. After a Saturday morning spent discussing the project at Starbucks, I was convinced: they are the right people to do this.</p>
+
+<p>For years I have been convinced that ubiquitous computing is one of the next big things in technology and wanted to be part of it. As I see it, Lima gives me this opportunity today.</p>
+
+So it looks like my short-term future holds some Unix development and a good dusting of my rusty C. I may try to sneak a Lua interpreter in that box at some point, but please don&#39;t tell the others! ;) Severin and Gawen have high expectations and I do not expect much relaxing but hey, it should be fun to live the adventure of Early Stage again.
+      </div>
+    </content>
+  </entry>
+  
+  <entry>
+    <title>Lapis: Lua for the Web</title>
+    <link
+      rel="alternate" type="text/html"
+      href="http://blog.separateconcerns.com/2013-09-01-lapis.html"
+    />
+    <id>tag:blog.separateconcerns.com,2013-09-01:lapis</id>
+    <published>2013-09-01T16:00:00Z</published>
+    <updated>2013-09-01T16:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        
+
+<p>I use different programming languages for different tasks, but the one I prefer is <a href="http://www.lua.org/">Lua</a>. I have always wanted to use it for the Web, and in a way I already do: this blog is a static website generated by a custom Lua program. I have also written several services that can speak HTTP+JSON in Lua. For larger, HTML-based Web applications however, I have never found the framework I wanted. I have tried <a href="http://www.keplerproject.org/en/Orbit">several</a> <a href="https://github.com/zedshaw/Tir">of</a> <a href="https://github.com/nrk/mercury">them</a>, but kept coming back to <a href="http://flask.pocoo.org/">more dependable platforms</a>.</p>
+
+<p>Last March, I gave <a href="http://leafo.net/lapis/">Lapis</a> a try. It is a relatively new framework written by <a href="http://leafo.net/">Leaf Corcoran</a>, the author of <a href="http://moonscript.org/">MoonScript</a>, a programming language that compiles to Lua (like CoffeeScript for JavaScript). Lapis is powered by <a href="http://openresty.org/">OpenResty</a>, an <a href="http://www.techempower.com/benchmarks/">incredibly fast</a> web application server that run <em>inside</em> the <a href="http://nginx.org/">nginx</a> Web server and is already used by large websites like <a href="http://en.wikipedia.org/wiki/Taobao">Taobao</a> and <a href="https://www.cloudflare.com/">CloudFlare</a>.</p>
+
+<p>Lapis was built with MoonScript in mind, so I had to hack around it to make it work with plain Lua. It worked but was too verbose, so I eventually <a href="https://github.com/catwell/fun-with-lapis/commit/42af204c6974f124c2b4856102e260d8ad7baca6">gave up</a> on that and on Lapis altogether. But that was Lapis version 0.0.1! Leaf continues to improve it and recently released version 0.0.4. Last Friday evening, on a train to Bordeaux, I decided to give it another try.</p>
+
+<p>Lapis now <a href="http://leafo.net/lapis/reference.html#lapis-in-lua">natively supports Lua</a> and has improved in various aspects. I have found it comfortable to write the views and the configuration file with the MoonScript DSLs provided by the framework. For logic (models and controllers) I used Lua directly since I prefer its syntax to MoonScript for regular code.</p>
+
+<p>I have published <a href="https://github.com/catwell/badakhshan">a small skeleton application</a> which demonstrates this dual languages style to GitHub. I chose to use Redis for the datastore because I know it well and had it running on my laptop, so I did not use the database integration layer of MoonScript which is designed primarily for PostgreSQL (but it looks nice as well). This application is a kind of Hello World but it demonstrates most features of the framework, including <a href="http://leafo.net/lapis/reference.html#lapis-applications-sub-applications">sub-applications</a>, <a href="http://leafo.net/lapis/reference.html#html-generation-html-widgets">widgets</a>, <a href="http://leafo.net/lapis/reference.html#html-generation-layouts">layouts</a>, <a href="http://leafo.net/lapis/reference.html#exception-handling">exception-handling</a> and <a href="http://leafo.net/lapis/reference.html#input-validation">input validation</a>.</p>
+
+<p>If you want an example of a larger Lapis codebase with a different style, <a href="http://rocks.moonscript.org/">MoonRocks</a> is written in Lapis and <a href="https://github.com/leafo/moonrocks-site">its code is on GitHub</a>.</p>
+
+So, what did I think of it? Well, finally I could see myself write a serious Web application in Lua! I will still choose Python and Flask in a professional setting because it is is a more stable, more feature-complete stack, and because I would not want to ask a whole team to learn both Lua <em>and</em> MoonScript to work on the project. But if I make a Web application as a personal side project, I will certainly try to use Lapis for that.
+      </div>
+    </content>
+  </entry>
+  
+  <entry>
+    <title>Three years of (proprietary) projects</title>
+    <link
+      rel="alternate" type="text/html"
+      href="http://blog.separateconcerns.com/2013-06-20-three-years-proprietary-projects.html"
+    />
+    <id>tag:blog.separateconcerns.com,2013-06-20:three-years-proprietary-projects</id>
+    <published>2013-06-20T00:40:00Z</published>
+    <updated>2013-06-20T00:40:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        
+
+<p>Some of the code I write is Open Source, but these days most of it is closed source and property of <a href="http://www.moodstocks.com/">Moodstocks</a>, the startup I work for. For the last three years I have had the chance to work on a lot of really interesting projects, the most significant of which I will talk about now. If you are still a student, maybe that can inspire you to join a startup. Maybe you will even decide to join us in our quest to advance mobile image recognition and applications in general.</p>
+
+<h2>Harvest, the Pikadeo crawler</h2>
+
+<p>When I joined Moodstocks in April 2010 the team was working on a mobile price comparison application called Pikadeo. The pitch was that you could take a picture of any cultural product (CD, DVD, book...) and it would give you a list of places where you could buy it, sorted by price.</p>
+
+<p>The iOS application itself, largely designed by <a href="https://twitter.com/Arcank">Louis Romero</a> who had interned at Moodstocks and left just as I arrived, was working. The image recognition technology was working too, although it was purely server-side. The team was already researching how to leverage client-side processing but it was really just a crazy idea at that point, so Pikadeo was doing what most &quot;mobile&quot; image recognition software still does: send JPEG frames to the server.</p>
+
+<p>What was missing was the data. We needed to crawl several large e-commerce websites, extract product images and metadata, send the former to the image recognition engine and the store the latter in a database. So I set out to write a crawler in Ruby, which was the dynamic language of choice of the team at the time. Moodstocks was a Ruby / C++ shop due to the background of the founders. Obviously things have changed a lot since then.</p>
+
+<p>I tried to use Hadoop for the job, mostly because it was trending at that time and I had access to Amazon&#39;s Elastic MapReduce. I soon understood that 1) the Hadoop Streaming interface was not quite there yet so I would have to switch to Java and 2) the Map/Reduce paradigm was not the best for the job anyway.</p>
+
+<p>After reading a few papers on crawling (I had to anyway, since that project would be the basis of my MSc thesis, but it actually helped a lot) I ended up writing a kind of Master/Worker system, with work queues in <a href="http://kr.github.io/beanstalkd/">Beanstalkd</a> and metadata storage in Amazon&#39;s SimpleDB, which did the job. It did the job a little too well, actually, since it ended up DDoSing an e-commerce website for a few seconds during a performance test for my thesis. Fortunately I was monitoring it and hit the stop button...</p>
+
+<p>After setting reasonable speed limits and balancing the requests between various websites, Harvest was fast enough for our needs. The bottleneck became the image search engine itself, I will expand on that later.</p>
+
+<p>Due to the deprecation of the Pikadeo product, Harvest is no longer used today. It is probably a good thing: it was my first Ruby program so the code was awful, it was way too complex and too tied to AWS (the master instance would run and kill worker instances, it relied a lot on SimpleDB...). That being said, the crawling model was sound.</p>
+
+<h2>Acorn</h2>
+
+<p>Once we got crawling sorted out, the image recognition engine itself became the problem. Oak (it has become a tradition to use plant-related names for our projects internally) had been almost entirely written by <a href="https://twitter.com/deltheil">Cédric</a>, Moodstocks&#39; CTO. It was a piece of C++ software, with the image recognition parts isolated in dynamic libraries and a <a href="http://thrift.apache.org/">Thrift</a> layer to interface with the core Ruby on Rails Web application. It was multithreaded, designed to run on a single multicore EC2 instance.</p>
+
+<p>The scalability pain point, it turned out, was not CPU load. The index was stored in a B+ Tree in <a href="http://fallabs.com/tokyocabinet/">Tokyo Cabinet</a>, a tool we like a lot and still use today in other parts of our system. The problem was that when we indexed millions of images the dataset would inevitably become very large, larger than the available memory. The system would still be very responsive on most reads, but writes would invalidate large chunks of the in-memory cache and result in long pauses.</p>
+
+<p>Latency is the enemy when you write image recognition software, so we decided not to sacrifice it: all the index had to fit in RAM. We decided to consider RAM as our primary datastore. That decision would bring about our later choices.</p>
+
+<p>Since rebuilding an index can be <em>very</em> long we wanted something that could persist even if the engine crashed or had to be restarted for an update. Soon it became obvious that Redis could be the answer. However it was missing some commands that we needed, especially one that would insert the same key with different values in different maps (if you have already written inverted indices you may understand why, otherwise have a look at <a href="http://files.catwell.info/presentations/2011-osdcfr-redis-iidx/">that presentation</a>). Lua scripting was what we needed, but it wasn&#39;t there yet so I ended up forking Redis to develop it in C while <a href="http://files.catwell.info/presentations/2011-osdcfr-redis-iidx/img03.png">lobbying for scripting support</a>. Acorn was, to my knowledge, the first application to run Redis 2.5 in production, and the first one to use Redis scripting too. We never encountered any Redis-related crash.</p>
+
+<p>Now, to have the index fit entirely in RAM, we would have to distribute it across different machines, so Acorn would have to be a distributed system. Knowing that, I chose to make Acorn nodes single-threaded: they would communicate by message passing and we would have several of them per instance.</p>
+
+<p>We chose <a href="http://msgpack.org/">MessagePack</a> for serialization of Redis values, and I started looking at <a href="https://github.com/msgpack/msgpack-rpc">MessagePack-RPC</a>. It had a lot of the pieces that I wanted for the distribution part, and one major problem: it was only usable in Ruby. But we were not CPU-bound... Would it be sensible to write the engine in a dynamic language? I started investigating that possibility. Our C++ libraries already had Ruby bindings that we used for vision R&amp;D, and the little number crunching Oak Core did (mostly different scoring algorithms) turned out to be fast enough in Ruby.</p>
+
+<p>So Acorn ended up as a distributed system written in Ruby, with MessagePack-RPC for communication and a fork of the development branch of Redis at its heart. It used MessagePack-RPC for communication with our Rails stack too.</p>
+
+<p>In retrospect, relying on two unstable pieces of software was risky. It turned out well, and Redis was definitely the right choice, especially since Lua Scripting now allows us to use a regular, stable 2.6 version. <a href="http://www.zeromq.org/">0MQ</a> would probably have been a better technical choice than MessagePack-RPC, and plain C better than Ruby, but I believe those choices saved us development time, and time to market was important. Acorn is still in production today, doing its job for legacy clients who use online recognition.</p>
+
+<h2>Moodstocks Notes</h2>
+
+<p>You now know that when I joined Moodstocks it was trying to be a B2C company. However we were seeing interest in licensing our technology, and began to envision a B2B product: Moodstocks API.</p>
+
+<p>When you write an API, especially as a product, you must write applications for it simultaneously. They serve two purposes: demonstrate what your API can do, and help you figure out how it should be improved. We set out to do that with two mobile applications, one of which was Notes.</p>
+
+<p>The original idea I proposed was, I think, simple: <a href="http://www.google.com/sidewiki/">Google SideWiki</a> (RIP) for the real world. That is: you walk in the street, you see something interesting, you take a picture of it, you get a comments thread. If you are the first to do so, you get to leave the first comment (yay, first!!1).</p>
+
+<p>As we were looking to add virality to it, that idea developed into a kind of mostly mobile social network where both people and objects could be followed. Objects actually had their own timeline with an associated Atom feed, which you could reach by browsing or, of course, as the result of an image search.</p>
+
+<p>Technically the server-side part of Notes was a rather classic Sinatra application. The most interesting part of it was that it used some kind of CQRS architecture with all reads coming from Redis and all writes going to log-structured storage. The very nice thing about it was that any part of it could be replayed so it was almost trivial to reproduce bugs or replicate production incrementally to a development setup.</p>
+
+<p>The iPhone application, on the other hand, was one of the nicest and most complex ones we have ever written. I wasn&#39;t responsible for it so I won&#39;t get into details here but the latest internal version we never actually released was IMO a thing of beauty.</p>
+
+<p>As it turned out, Notes got a reasonable amount of <a href="http://techcrunch.com/2010/12/10/moodstocks-notes-is-stickybits-without-the-barcodes/">online</a> <a href="http://mashable.com/2010/12/18/moodstocks/">press</a> after our CEO showed it to Michael Arrington at the Le Web conference. This got us a few users and we briefly thought about making it a product in its own right. I wrote a wxPython GUI to analyze logs, trying my hand for the first time at techniques like cohort analysis.</p>
+
+<p>Eventually we took the decision not to invest more time in the idea: we were a small team and our now core B2B business needed our attention. Notes&#39; success was a long shot and would have required significant time and money investment so I guess it was the right decision, although I would love to see someone revisit the idea.</p>
+
+<h2>Moodstocks API v2</h2>
+
+<p>As I said, Notes was written to help us design our API. Using its feedback and that from the few users of our v1 API, which was more some kind of beta, I set out to write version two.</p>
+
+<p>I will not expand too much on all its aspects here, REST-ish API design being well covered in the literature and online (start <a href="http://amzn.to/17nHJmF">here</a>).</p>
+
+<p>The main differences with API v1 were the use of JSON instead of XML, and the ability to index a single image by uploading it to the API using multipart post. Previously, users would upload a XML list of image URLs and associated IDs; we would download them and tell you when indexing was over. Now users index single images and changes are taken into account instantly. The necessity for that was a lesson from Notes and user feedback, and it was made possible by Acorn.</p>
+
+<p>Another interesting choice was the authentication method, HTTP Digest, which we kept from version one. Theoretically, it had all the right properties and was a standard, so it was the best choice. What we had not realized is how many <a href="http://devblog.avdi.org/2013/02/04/the-trouble-with-http-digest-authentication/">implementations were broken</a> or incomplete (i.e. not supporting nonce reuse, which is a necessity on mobile to reduce the number of HTTP requests). I ended up having to submit patches to a lot of them, and I am not even mentioning .NET land... If I had to do it again today I would probably go with Basic Auth and SSL.</p>
+
+<h2>Acorn Quantizer</h2>
+
+<p>Earlier, I wrote about how I had made Acorn processes single-threaded. This had some advantages, but also a big inconvenient.</p>
+
+<p>Part of the image search process involves quantizing features, which means associating vectors in a many-dimensional space to integers. To do this the <a href="http://en.wikipedia.org/wiki/Curse_of_dimensionality">curse of dimensionality</a> forces you to use an approximate nearest-neighbor search algorithm.</p>
+
+<p>The way it works is: take a large number of features from a representative dataset and use some kind of clustering algorithm (e.g. k-means) on them to obtain a bunch of centroids (a &quot;vocabulary&quot;), then process these centroids to obtain a datastructure called kd-forest which will be used to perform nearest-neighbor search (a &quot;dictionary&quot;).</p>
+
+<p>Vocabulary generation is clearly an offline task that requires a lot of number crunching and is done as little as possible. Generating the kd-forest, on the other hand, takes from a handful of seconds to a few minutes depending on the size of the vocabulary, so it is frequently done on engine startup. The kd-tree itself only exists in RAM.</p>
+
+<p>The problem with that was that a kd-forest is a rather large datastructure. In our case it occupied hundreds of MB of RAM and took about one minute to generate. That was OK with Oak, where it was shared between threads, but with Acorn that overhead had to be paid for every process, both in space and time. We had to find a way to share the kd-forest across Acorn nodes on the same machine, and if possible to make startup faster.</p>
+
+<p>The solution I opted for was to rewrite the whole quantizer. Previously we had been using popular Open Source libraries for this, but they didn&#39;t do what I wanted.</p>
+
+<p>I wrote the kd-forest generation algorithm as a <a href="http://luajit.org/">LuaJIT</a> program. It was the first Lua program officially used in production at Moodstocks, although as you will see it was only run offline. What it does is take centroids as input, generate a kd-forest and serialize it in a way easily readable in C thanks to the FFI. It can also actually perform nearest-neighbor searches but this is only used for test purpose.</p>
+
+<p>Once the kd-forest is serialized, it can be loaded into <a href="http://beej.us/guide/bgipc/output/html/multipage/shm.html">system shared memory</a> quite fast. A C library can then be used in every Acorn process to access this shared memory read-only and perform nearest-neighbor searches.</p>
+
+<p>The idea is simple once you stop under-estimating the capabilities of SHM on Linux. By default it usually limited to a few MB so you have to increase it a lot for this to work (it can be done with <a href="http://linux.die.net/man/8/sysctl">sysctl</a>). The implementation, on the other hand, is far from trivial. My code uses a <em>lot</em> of pointer arithmetics, I should probably clean it up someday, but in the meantime it does its job perfectly.</p>
+
+<h2>Seed</h2>
+
+<p>The Acorn Quantizer was the last major improvement to our online search stack. Around that time, we resolved on a major technological shift: we would perform image recognition on mobile devices directly instead of doing it on the server. Of course, initially, we would have an hybrid approach where on-device recognition would work as a kind of cache, but the mobile was where we would focus our efforts.</p>
+
+<p>Doing on-device image recognition, though, almost meant starting from scratch: we had to make different technological trade-offs, use very different algorithms, and that meant writing an almost entirely new image recognition stack. We named that project Seed.</p>
+
+<p>Seed encompasses a lot of things now, but at its core are proprietary Computer Vision algorithms that we set out to develop with Cédric and <a href="https://twitter.com/mbrenon">Maxime</a>, who had joined us by then. We would discuss them as a team, then Maxime and Cédric would implement them in C while I would work on a Lua version.</p>
+
+<p>The big picture is that some processing is done on the server at indexing time to generate signatures which are then sent to the client. Server-side software used to be entirely Lua, client-side software entirely C, but we decided to implement the whole stack in both languages. I think that was one of the best ideas we ever had. Being able to compare results avoided errors on both sides (tricky things like off-by-ones were always noticed thanks to the fact that Lua is 1-based, floating-point math issues were found...). Lua allowed faster prototyping on some parts and it was interesting to compare the different architectural choices we were making.</p>
+
+<p>With the current (second) generation of the Seed algorithms, we are actually mostly using the C implementation through the LuaJIT FFI on the server side now. That is because I have been working on other projects while the rest of the team (which is not as comfortable with Lua) was developing them, so I would have been a bottleneck if we had kept the dual stack approach. I may well bring the Lua branch up to date someday though, who knows?</p>
+
+<h2>chksrv and chkcoherence</h2>
+
+<p>Moodstocks&#39; server-side architecture is <a href="/2013-01-02-startups-soa.html">some kind of SOA</a>. That means we have a lot of different services that run as daemons and need to stay up. chksrv is a medium-sized program in Bash that takes care of this. It is deployed on every instance with a configuration file that indicates which services should be running on that instance, and it makes sure that they are (correctly). It also checks if other instances are up. If something goes wrongs, it warns the &quot;ops team&quot;, who is basically me and Cédric as a backup in case I am not available.</p>
+
+<p>chksrv is a very useful piece of software but I was a bit worried by its growth as we added services. Standardizing the way we deamonize processes helped a lot with that by increasing code reuse (thank you <a href="http://libslack.org/">libslack</a>).</p>
+
+<p>chkcoherence is the ideal complement to chksrv: where the latter checks if services are running, the former verifies that they are doing things right. It is also written in Bash at the top level. I have already written about its concept <a href="/2013-05-28-coherence-checks.html">here</a>.</p>
+
+<h2>Anemone</h2>
+
+<p>Anemone is the project that deals with everything related to metrics and measurements at Moodstocks. It is written in Lua and has quite a few different roles:</p>
+
+<ul>
+<li>collect logs and data from production instances;</li>
+<li>generate internal daily and weekly reports with business metrics for the platforms and email them to the team;</li>
+<li>generate technical reports for operations (e.g. growth of different datasets);</li>
+<li>generate weekly reports per application and email them to our platform customers;</li>
+<li>generate custom reports tailored to the needs of our enterprise customers.</li>
+</ul>
+
+<p>It also has a web-based dashboard for the team with high-level KPI, written in JavaScript and <a href="http://code.google.com/p/flot/">flot</a>. Someday I might integrate Brett Slatkin&#39;s <a href="http://bslatkin.github.com/cohorts/">Cohort Visualizer</a> into it.</p>
+
+<h2>Dandelion</h2>
+
+<p>I said earlier that with Seed we generate image signatures on the server and send them to the mobile clients where they are used for recognition. Dandelion is the code name of the service responsible for that.</p>
+
+<p>It turns out efficiently sending millions of image signatures per day, over slow and unreliable networks, to devices everywhere in the world, is not trivial. So Dandelion, more than software, is a synchronization protocol and its implementation; a range of tricks to make the best of mobile networks packaged as software. It is one of the reasons (along with all the innovation on CV algorithms and their optimized client-side implementation) why we can propose client-side recognition with databases of thousands of images or even videos, an order of magnitude more than our competitors.</p>
+
+<p>The server part of Dandelion is written in Lua and depends on pieces like Redis and Beanstalkd, which is why I wrote <a href="https://github.com/catwell/haricot">haricot</a>.</p>
+
+<h2>Physalis</h2>
+
+<p>Finally, Physalis is the project I am currently working on. It has not been released yet so I won&#39;t get into the details, but I can explain the reasoning behind it.</p>
+
+<p>While we were building Dandelion and through our experience with our clients, we learned the following things:</p>
+
+<ul>
+<li>writing mobile applications that work offline but keep their data up to date is tricky;</li>
+<li>most developers who attempt to implement it from scratch end up with a broken solution or just give up;</li>
+<li>when you succeed it makes your applications a <em>lot</em> better.</li>
+</ul>
+
+<p>So we thought: we have done it, why not make it accessible to everybody? This is what Physalis is: Moodstocks&#39; image signature distribution system generalized so that you can leverage it for your own mobile application.</p>
+
+<p>Physalis will be available in private alpha for selected users soon, under its real brand name (Physalis is only its &quot;internal plant-themed name&quot;). If you are interested in trying it out, <a href="https://twitter.com/pchapuis">get in touch</a>. The requirements are that you should be making a mobile application and ready to communicate on a regular basis with us: we are doing this alpha to collect useful feedback.</p>
+      </div>
+    </content>
+  </entry>
+  
+  <entry>
+    <title>Coherence checks in SOA</title>
+    <link
+      rel="alternate" type="text/html"
+      href="http://blog.separateconcerns.com/2013-05-28-coherence-checks.html"
+    />
+    <id>tag:blog.separateconcerns.com,2013-05-28:coherence-checks</id>
+    <published>2013-05-28T23:10:00Z</published>
+    <updated>2013-05-28T23:10:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        
+
+<p>Recently I found a rare, ugly bug in a piece of software that had been in production at Moodstocks for 6 months. The bug itself is not that interesting, but the way I found and fixed it is.</p>
+
+<h2>Story of a bug</h2>
+
+<p>Imagine you have a database where you can index some documents in a full text search engine. Indexing can be turned on and off on a per document basis.</p>
+
+<p>As the size of your dataset increases, you outgrow it and decide to use a separate service for search. So you change your code such that documents which must be indexed are sent to that service, and you add a boolean field in your main datastore to indicate whether the document is indexed or not.</p>
+
+<p>All is fine until one day you refactor this code a bit too fast and part of the logic for document updates becomes something like this:</p>
+
+<pre><code data-language="lua">if document.indexed then
+  search_engine:index(document)
+  document.indexed = false -- &lt;-- WAT?
+end
+</code></pre>
+
+<p>Of course, in practice, it is less trivial and only happens in rare corner cases, so your tests don&#39;t catch it...</p>
+
+<h2>This ain&#39;t normal(ized)</h2>
+
+<p>This kind of bug in a system can be very nasty. What happens when it is triggered is that the worldviews of two subsystems (here the datastore and the index) are not coherent anymore.</p>
+
+<p>If you are a programmer not used to distributed systems, you may think that the problem is that the information &quot;the document is indexed&quot; is duplicated. State is bad, but duplicate state is plain wrong, just always ask the index for that information and drop that &quot;indexed&quot; field!</p>
+
+<p>In a normal application setting you would be right, but this is one of the main differences between SOA and OOP. There are two reasons why you do not want to do that. The first one is performance: this may generate more internal network requests. Its importance could be discussed at length (&quot;Is it some form of premature optimization?&quot;).</p>
+
+<p>The second reason is much more important though: if you do that, your index becomes a data-critical service. That means you cannot lose its state without losing information, so you have to back it up seriously. This simple boolean field in the datastore is enough to rebuild the whole index, making it non-critical.</p>
+
+<p>So that leaves us with denormalized data and its own problems. How do we mitigate them?</p>
+
+<h2>Invariants are sexy</h2>
+
+<p>Once you have denormalized data, your problem is to keep it coherent. That means that there are invariants that must be verified at all times by the various states of the subsystems. Or rather, because of asynchronous jobs, invariants that shouldn&#39;t remain unverified for too long.</p>
+
+<p>Those invariants are almost always properties on sets. For instance, if you have a forum where only registered users can comment, users who have commented must be a subset of users who have confirmed their email. In my case, the set of documents indexed in the search engine must be equal to the set of documents flagged as indexed in the main datastore.</p>
+
+<p>The big idea is that every time you denormalize data you should write invariants that ensure coherence. These invariants are checked by scripts that can be run at every transaction in some cases, but are more usually cronned. You should also have procedures to reconcile (repair) the data in case of incoherence. I am not a huge fan of having them run automatically: incoherence often reveals bugs, so humans should check where it comes from and fix it.</p>
+
+<p>In our case, the script responsible for coherence checks warned me that a few documents belonging to the same user were present in the search engine but not flagged as indexed. I asked the application logs what had happened to these documents around the time when the incoherence occurred, and saw they had all been updated. I looked up the relevant code path in application code... and facepalm-ed. I had pushed that code to production half a year ago, and it was obviously wrong.</p>
+
+<h2>Conclusion</h2>
+
+<p>The moral of it all is not, as I already discussed, that you should not denormalize data. It is not that we should write more tests, either. At least it is not what I want the takeaway to be (we do test these things more carefully now, but edge cases can always slip through).</p>
+
+<p>What I think this story shows is that, if you write distributed systems that handle denormalized data, you should have:</p>
+
+<ul>
+<li>something to check invariants to detect issues;</li>
+<li>exhaustive logs and tools to diagnose them;</li>
+<li>reconciliation scripts to fix them.</li>
+</ul>
+
+I cannot imagine releasing a distributed system that does not have those things. They are even more important than a comprehensive test suite to me. Moreover, the coherence checks can also be run in the test suite itself (on mocks for instance) so writing them is always a win-win.
+      </div>
+    </content>
+  </entry>
+  
+  <entry>
+    <title>Werner Vogels on Skills</title>
+    <link
+      rel="alternate" type="text/html"
+      href="http://blog.separateconcerns.com/2013-03-24-vogels-skills.html"
+    />
+    <id>tag:blog.separateconcerns.com,2013-03-24:vogels-skills</id>
+    <published>2013-03-24T19:30:00Z</published>
+    <updated>2013-03-24T19:30:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        
+
+<p>I found a talk by Werner Vogels, the CTO of Amazon <a href="http://blog.separateconcerns.com/2013-01-02-startups-soa.html">who is a role model of mine</a>, on <a href="http://skillsmatter.com/podcast/design-architecture/21st-century-application-architectures">21st century application architectures</a>.</p>
+
+<p>After his presentation, someone from the audience asks him what skills he is looking for to run these services. His answer (starting at about 40:45 in the video) is so interesting that I thought it would be worth it to write it down. Here it is:</p>
+
+<blockquote>
+<p>What kind of skillset am I looking for for people to build these [infrastructure services] and manage them? I think I&#39;m looking for a set of standard things that we look for in every Amazonian PM, which is...</p>
+
+<p>A very strong sense of ownership. This is: the stuff that you&#39;re building is not something that your boss tells you to build. You have to take pride in what you do, and you have to be someone [who] &quot;does not like his or her own smell&quot;. You have to be [highly] self-critical.</p>
+
+<p>[You] have to be able to disagree but be able to commit to actual decisions being made, things like that. There&#39;s this set of what we call Amazon leadership skills that I would be looking for in any engineer that we hire.</p>
+
+<p>[In many] of these services we&#39;re looking for people with very good distributed systems skills, or at least with very good fundamental distributed systems skills which they have learned in school. Actually, it isn&#39;t that you have to have built a distributed system when you were in school. Remember: no professor ever had a real job in their life, right? And so they didn&#39;t teach you how to build systems. But to have a truly fundamental understanding of how to read fault-tolerant algorithms, of how to think in a fundamental way about scaling... and those kind of things, is something that we are absolutely looking for.</p>
+
+<p>Some demonstration, if you&#39;re just out of school, [that] you&#39;ve been involved with some practicals. Have you contributed to an Open Source project? Are you involved with programming groups? We&#39;re looking for someone that is actually capable of doing hands-on work. [...]</p>
+
+<p>If you&#39;re really more experienced, what we will be looking for... Do we look for particular programming skills, languages? Not really. Most people are able to program in Java, C++... I don&#39;t think I&#39;ve actually met people who are not able to do that. We are in an environment that is pretty unique in that sense.</p>
+
+<p>We don&#39;t mandate the use of particular programming languages, we don&#39;t mandate the use of particular middleware pieces or things like that. We believe that our systems, our team should be moving as fast as possible, which means that if we hire the absolute best people they should be able to make the decisions, what the right tools are for them to use in their particular project.</p>
+
+<p>It doesn&#39;t always go well. I think we&#39;ve had a few choices around Erlang which did not necessarily work out that well, not because of Erlang, but because it is actually really hard to hire Erlang programmers after that. So we expect our engineers to have some level of business sense.</p>
+
+<p>I think the willingness to do operational work... We live and breathe the DevOps mentality, where our engineers are responsible for the software that they run at some level, whether that is part time or whether that is actually in full site with some of our other engineers. We strongly believe that there&#39;s no bigger motivator to fix your software than beepers going off at 4 A.M. And we give you time to actually fix your services if that&#39;s the case.</p>
+
+These are the first few things that come to mind.
+</blockquote>
+      </div>
+    </content>
+  </entry>
+  
+  <entry>
+    <title>Viterbi, my favorite algorithm</title>
+    <link
+      rel="alternate" type="text/html"
+      href="http://blog.separateconcerns.com/2013-03-03-viterbi-algorithm.html"
+    />
+    <id>tag:blog.separateconcerns.com,2013-03-03:viterbi-algorithm</id>
+    <published>2013-03-03T18:00:01Z</published>
+    <updated>2013-03-03T18:00:01Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        
+
+<h2>The State Machine</h2>
+
+<p>Let us consider a system that can take a finite number of states <code>S[1]</code> to <code>S[n]</code> over time.</p>
+
+<p>We can represent the system as a N-node directed graph, where nodes are the states. An arc exists between node <code>S[i]</code> and <code>S[j]</code> if the system can transition from <code>S[i]</code> to <code>S[j]</code>. You probably already know that.</p>
+
+<h2>In Chains</h2>
+
+<p>We will now observe the evolution of the system over time. We will model time discretely. That does not mean that time itself is discrete, but we will observe the system at fixed-interval &quot;ticks&quot;. We call <code>S(t)</code> the state of the system at tick <code>t</code>.</p>
+
+<p>If the system is known to be in <code>S[i]</code> at tick <code>t</code> (i.e. <code>S(t) = S[i]</code>) we call <code>P(i-&gt;j)</code> the probability that it will be in <code>S[j]</code> at tick <code>t+1</code>. Here is a definition for the mathematically inclined: <code>P(i-&gt;j) = P(S(t+1) = S[j] | S(t) = S[i])</code>.</p>
+
+<p>A few remarks:</p>
+
+<ul>
+<li><code>P(i-&gt;j)</code> is considered independent of <code>t</code>;</li>
+<li><code>P(i-&gt;i)</code> exists;</li>
+<li>the sum of outbound probabilities is 1: <code>∀i, ∑[j=1,N]{P(i-&gt;j)} = 1</code>.</li>
+</ul>
+
+<p>By the way, this is called a Markov Chain.</p>
+
+<h2>Blurry Sights</h2>
+
+<p>Now let&#39;s complicate things a little by introducing a separate system that can take states <code>V[1]</code> to <code>V[M]</code>. This second system <code>V</code> is tied to <code>S</code>: at every tick <code>t</code>, the probability distribution of <code>V(t)</code> only depends on <code>S(t)</code>. We will note: <code>O(i,j) = P(V(j) | S[i])</code>.</p>
+
+<p>You can think of <code>V</code> as something that observes <code>S</code> and reports on its state in an incomplete and probabilistic manner.</p>
+
+<p>If you have understood everything up to now, you should easily get what this means: <code>∀i, ∑[j=1,M]{O(i,j)} = 1</code>.</p>
+
+<p>If you have not, let&#39;s take a really simple example with <code>N = M = 2</code>. You can imagine that both <code>S</code> and <code>V</code> are lights that can be either red or blue. The relationship between <code>S</code> and <code>V</code> can be expressed by something like this: &quot;If light <code>S</code> is red, then there is 90% chance that <code>V</code> is red too. If light <code>S</code> is blue, then there is only 40% chance that <code>V</code> is red.&quot;</p>
+
+<p>Now, add more possible colors to <code>S</code> and <code>V</code>, not necessarily the same number for both, to generalize the system.</p>
+
+<h2>The Black Box</h2>
+
+<p>Now, here is our problem: imagine that you know how system <code>S</code> works (the probabilities of transition between the states) but that it is hidden in a black box such that you cannot observe it. What you <em>can</em> observe is system <code>V</code>. Is there any way to guess what system <code>S</code> is doing at any time in this setting? If yes, how?</p>
+
+<p>The answer to the first question is: &quot;sometimes, yes&quot;. &quot;Sometimes&quot; means &quot;if the probability distributions help us&quot;.</p>
+
+<p>The second question is the one my favorite algorithm, the Viterbi algorithm, answers. Let&#39;s see how it works.</p>
+
+<h2>Make it Code</h2>
+
+<p>First we need to represent the problem in a way that can be understood by a computer. I will use the Lua programming language for that.</p>
+
+<p>We start by defining a few parameters. We will choose <code>N = 3</code> and <code>M = 2</code> for simplicity. We will observe the system over 1000 ticks.</p>
+
+<pre><code data-language="lua">local N = 3
+local M = 2
+local L = 1000
+</code></pre>
+
+<p>The probabilities of transitions in <code>S</code> will be represented by a NxN matrix, with <code>P(i-&gt;j)</code> as <code>T[i][j]</code>. We use percentages because they are easier to read and avoid some floating point calculation issues.</p>
+
+<pre><code data-language="lua">local T = {
+  {  60, 20, 20 },
+  {   0, 70, 30 },
+  {  70, 10, 20 },
+}
+</code></pre>
+
+<p>For instance, there is a 70% chance to transition from <code>S[3]</code> to <code>S[1]</code>.</p>
+
+<p>The probablitities of observations will be represented by a NxM matrix, with <code>O(i,j)</code> as <code>O[i][j]</code>.</p>
+
+<pre><code data-language="lua">local O = {
+  { 5, 95 },
+  { 55, 45 },
+  { 90, 10 },
+}
+</code></pre>
+
+<p>Let us make sure we didn&#39;t make too many mistakes thanks to our two probability equations from earlier:</p>
+
+<pre><code data-language="lua">local sum = function(t)
+  local s = 0
+  for i=1,#t do s = s + t[i] end
+  return s
+end
+
+for i=1,N do
+  assert(sum(T[i]) == 100)
+  assert(sum(O[i]) == 100)
+end
+</code></pre>
+
+<p>This is what our example system looks like in graph form:</p>
+
+<p><img src="img/viterbi.png" alt="graph" /></p>
+
+<p>The green part is the Markov chain itself, the blue part corresponds to the observation device. Arcs are labeled with probabilities of transition or observation.</p>
+
+<h2>Stepping Forward</h2>
+
+<p>Now we can simulate the behavior of the system.</p>
+
+<pre><code data-language="lua">local proba_pick = function(v)
+  local p,s = math.random(1,100),0
+  for i=1,#v do
+    s = s + v[i]
+    if p &lt;= s then
+      return i
+    end
+  end
+  assert(false)
+end
+
+local S,V = {},{}
+
+local transition = function(t)
+  assert(S[t-1] and not S[t])
+  S[t] = proba_pick(P[S[t-1]])
+end
+
+local observe = function(t)
+  assert(S[t] and not V[t])
+  V[t] = proba_pick(O[S[t]])
+end
+
+S[1] = math.random(1,N)
+observe(1)
+
+for t=2,L do
+  transition(t)
+  observe(t)
+end
+</code></pre>
+
+<p>This code is slightly more complicated, but what you should understand is that, at the end of it, <code>S</code> is a vector of <code>L</code> states of the system and <code>V</code> is the corresponding vector of observations. The initial state <code>S[1]</code> is chosen randomly with uniform probabilities.</p>
+
+<h2>Seeing Through the Box</h2>
+
+<p>Now, let us proceed to guess what happens inside the black box. We do so iteratively: at each tick <code>t</code>, we calculate the most plausible sequence of events that could have led to each possible state of the system, given the observation at <code>t</code> and the results for <code>t-1</code>.</p>
+
+<pre><code data-language="lua">local trellis = {{}}
+
+local prb = function(x)
+  return math.log(x/100)
+end
+
+local viterbi_node = function(t,i)
+  local prev = assert(trellis[t-1])
+  local idx,proba = 0,-math.huge
+  local p
+  for j=1,N do
+    p = prev[j].proba + prb(T[j][i]) + prb(1/N*O[i][V[t]])
+    if p &gt; proba then proba,idx = p,j end
+  end
+  return {
+    state = i,
+    proba = proba,
+    prev = prev[idx],
+  }
+end
+
+local viterbi_step = function(t)
+  assert(not trellis[t])
+  trellis[t] = {}
+  for i=1,N do
+    trellis[t][i] = viterbi_node(t,i)
+  end
+end
+
+-- initialize the trellis
+for i=1,N do
+  trellis[1][i] = {
+    state = i,
+    proba = prb(1/N*O[i][V[1]])
+  }
+end
+
+-- run the algorithm
+for t=2,L do
+  viterbi_step(t)
+end
+</code></pre>
+
+<p>Again, not trivial code, but this is the Viterbi algorithm itself. Moreover we use logarithmic sums for probabilities to avoid numerical problems.</p>
+
+<p>What the algorithm does is build a trellis, a special kind of graph. For every step <code>t</code> we calculate the most plausible sequence of events (a path through the trellis) which ends up with the system in each of the possible states. When we reach the end of the simulation, we take the most plausible state of the system and take the path that led to it as our estimate of what happened.</p>
+
+<p>To avoid memory usage explosion, we do not actually store the paths themselves in the nodes of the trellis. Instead, in a node at tick <code>t</code>, we store a pointer to the previous node (at <code>t-1</code>) that led there. This is why we have to backtrack through the trellis to find the actual path:</p>
+
+<pre><code data-language="lua">local getpath = function(node)
+  local r = {}
+  repeat
+    table.insert(r,1,node.state)
+    node = node.prev
+  until (not node)
+  return r
+end
+
+local best_node = function(nodes)
+  local r = {proba = -math.huge}
+  for i=1,#nodes do
+    if nodes[i].proba &gt; r.proba then
+      r = nodes[i]
+    end
+  end
+  return r
+end
+
+local bestpath = getpath(best_node(trellis[L]))
+</code></pre>
+
+<h2>Does this thing really work?</h2>
+
+<p>To check if this work, let&#39;s take the actual system out of the box and calculate how much it looks like our estimate:</p>
+
+<pre><code data-language="lua">local ok = 0
+for i=1,L do
+  if S[i] == bestpath[i] then
+    ok = ok + 1
+  end
+end
+
+print(100*ok/L)
+</code></pre>
+
+<p>The result I got with those parameters is 72% accuracy, to compare to what a naive random process would get (33%).</p>
+
+<h2>Why I love it</h2>
+
+<p>Let&#39;s go back to the title of this post: now that you know what it does, <em>why</em> is Viterbi&#39;s algorithm my favorite?</p>
+
+<p>I admit that the elegance of the representation of the problem as a trellis is part of the reason, but mainly it&#39;s because of its implications. Think about it: fundamentally it is an algorithm that allows a machine to <em>explain what it observes</em>. Isn&#39;t that crazy?</p>
+
+Yes, it is. And because of that it has a whole range of applications, from advanced orthographic correction and speech-to-text to the decoding of convolutional codes used in voice codecs. And I suspect its potential has not been fully exploited yet.
+      </div>
+    </content>
+  </entry>
+  
+  <entry>
+    <title>Algorithms, Data Structures &amp; Protocols</title>
+    <link
+      rel="alternate" type="text/html"
+      href="http://blog.separateconcerns.com/2013-01-28-algorithms-data-structures-protocols.html"
+    />
+    <id>tag:blog.separateconcerns.com,2013-01-28:algorithms-data-structures-protocols</id>
+    <published>2013-01-28T22:00:00Z</published>
+    <updated>2013-01-28T22:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        
+
+<h2>Algorithms &amp; Data Structures</h2>
+
+<p>For a long time I have thought that there were only two fundamental parts to Computer Science: Algorithms and Data Structures. This is how it used to be taught, and how I think it should still be taught to beginners.</p>
+
+<p>There are two main categories of parts in a computer: processing units (CPUs, GPUs...) and data storage units (caches, RAM, disk...). Your typical information processing program takes data from a durable storage unit, moves it to a temporary storage unit, modifies it thanks to a processing unit and stores the result in a permanent storage unit. Of course there are variations around this theme, and some programs do a bit of extra work such as handling user input, but that is the idea.</p>
+
+<p>We call &quot;algorithms&quot; the different ways we instruct the processing units to act on the data and &quot;data structures&quot; the different layouts we use to store data in the storage units.</p>
+
+<p>A very simple view of fundamental CS could be summed up to these two disciplines. You may argue that other things are indispensable, for instance theoretical aspects like lambda calculus or Turing machines, or maybe paradigms. You would be right, these things are important, but if you <em>really</em> want the baseline, it all comes down to algorithms and data structures.</p>
+
+<p>Or so I thought.</p>
+
+<h2>Protocols</h2>
+
+<p>It turns out looking at the aforementioned parts of the computer is not enough. We need to look at the negative space too: how does the data move around? Inside the computer, data mostly circulates in buses. Between computers, data may circulate in networks, on detachable storage units...</p>
+
+<p>With computers becoming increasingly parallel, the Internet reaching ubiquity and programs turning into complex distributed systems, understanding the interactions between computer parts, software parts or entirely different systems has become a necessity. This reveals a third fundamental side of CS, on equal footing with algorithms and data structures: protocols.</p>
+
+<p>Protocols are more present in CS than you may think. Even the original vision of OOP by Alan Kay was mostly about protocols. Joe Armstrong, a father of Erlang, <a href="http://erlang.org/pipermail/erlang-questions/2013-January/071944.html">recently insisted</a> on the necessity to teach protocols (and algorithms - if he had added data structures this post would look like plagiarism ;p).</p>
+
+<p>CS classes at engineering school did not teach me much or influence the way I write programs, but majoring in network engineering did. It made me start to think in terms of independent blocks and the protocols they use to communicate. I cultivated that vision during my MSc in distributed systems (it used to be called &quot;grid computing&quot;) and I still have it today.</p>
+
+<p>So when I see people arguing endlessly about static versus dynamic typing or such matters, I think: OK, that may be important, but do not forget CS is, at heart, about algorithms, data structures and protocols.</p>
+      </div>
+    </content>
+  </entry>
+  
+  <entry>
+    <title>Startups, think about SOA</title>
+    <link
+      rel="alternate" type="text/html"
+      href="http://blog.separateconcerns.com/2013-01-02-startups-soa.html"
+    />
+    <id>tag:blog.separateconcerns.com,2013-01-02:startups-soa</id>
+    <published>2013-01-02T14:00:01Z</published>
+    <updated>2013-01-02T14:00:01Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        
+
+<h2>What is SOA?</h2>
+
+<p>When people say SOA (Service Oriented Architecture) they often mean different things. My personal definition of SOA is rather loose and, like all the quotes in this article, <a href="http://queue.acm.org/detail.cfm?id=1142065">comes from Werner Vogels</a>, the CTO of Amazon:</p>
+
+<blockquote>
+<p>For us service orientation means encapsulating data with the business logic that operates on the data, with the only access through a published service interface.</p>
+</blockquote>
+
+<p>If you are an Object Oriented Programming person this should ring a bell. Indeed, SOA is essentially encapsulation at the system level. Actually, I strongly believe OOP is a good idea (encapsulation) applied at the wrong layer.</p>
+
+<p>The opposite of SOA in the context of the Web is monolithic applications. Think textbook Ruby on Rails or Django, for instance. Monolithic applications are fine as long as they are small, but I think SOA is a better fit for larger projects. If you are a technological startup, that means you should at least start thinking about what SOA could bring you if you are starting to have a clear idea of what your product is. Monolithic applications are great for prototypes and MVPs.</p>
+
+<p>If you are wondering if what you are currently doing is closer to SOA than to monolithic applications, ask yourself these questions:</p>
+
+<ul>
+<li><p>How many different repositories does our code live in? (If you do <em>not</em> use source control you have more urgent problems to think about than SOA.)</p></li>
+<li><p>How many different databases do we have? How many database instances do we have? How many connections? How many schemas? (SOA and NoSQL tend to mix well.)</p></li>
+<li><p>Do we have a Web application that does significantly more than rendering templates? Is it stateful? What parts of that state could we also use in a mobile application? Does the same application render JSON and HTML?</p></li>
+</ul>
+
+<h2>Advantages of SOA</h2>
+
+<p>One of the most obvious benefits of SOA is that services are easier to scale than monolithic applications. Maybe you want to migrate user authentication data to Redis and keep other data in whatever DB you already have? SOA makes it trivial. Maybe some part of your product would benefit from running on an AWS instance that has lots of RAM while another one is CPU-intensive? Just deploy the corresponding services where they run best.</p>
+
+<p>SOA will also help you achieve resilience. You can program user-facing or aggregate services defensively so that they detect the unavailability of backend services and degrade gracefully. You can even use a <a href="http://www.codinghorror.com/blog/2011/04/working-with-the-chaos-monkey.html">chaos monkey</a> to ensure this.</p>
+
+<p>However in my opinion the main advantages of SOA are not technical, they are organizational.</p>
+
+<p>As the number of your employees increases you will have to separate them into teams. The classical way to do this is by specialty: first developers and operations, then spin off DBAs... The main problem with that organization is that it hinders innovation. To create a new feature you need to coordinate all these people, and it results in endless meetings and sterile debates (not to mention clan wars).</p>
+
+<p>This is not a fatality. You have probably heard of DevOps, and maybe dismissed it as Yet Another Buzzword. Well SOA is the easiest way to implement True DevOps (TM?), meaning that developers and operations really work together all the time. The trick is that there are no &quot;devs&quot; and &quot;ops&quot;, because you create teams along another dimension: services. In Werner Vogel&#39;s words:</p>
+
+<blockquote>
+<p>The traditional model is that you take your software to the wall that separates development and operations, and throw it over and then forget about it. Not at Amazon. You build it, you run it. This brings developers into contact with the day-to-day operation of their software.</p>
+</blockquote>
+
+<p>These teams are like smaller startups within your growing startup: they have all they need to build new features or even whole products by themselves. And they will keep you nimble if you give them enough leeway:</p>
+
+<blockquote>
+<p>We allow teams to function as independently as possible. Developers are like artists; they produce their best work if they have the freedom to do so, but they need good tools.</p>
+</blockquote>
+
+<p>SOA also gives you language agnosticism almost for free. Not much prevents different services from being written in different programming languages. Why would you want to do that? Well, beyond the fact that different problems are better solved in Python, Haskell or C, there is lot of talent out there not using Ruby, Python, PHP, Scala, JavaScript or whatever language you have chosen for your monolithic application. Some of those Scheme, Io, Factor, Lua or F# hackers can be real assets for those clever enough to give them a job.</p>
+
+<p>Finally, I can see a (perhaps more abstract) last advantage to SOA which is related to the rise of the Programmable Web. After all, there is little difference between a Web API and a service, except that you wrote the latter and not the former. Embracing SOA will prepare you to work with external APIs, and more importantly to publish your own. For instance, lots of AWS services have started their life as internal services at Amazon.</p>
+
+<h2>Conclusion</h2>
+
+<p>I am not saying SOA <em>only</em> has advantages. Such an architecture can be fragile if you do not code with service unavailability in mind. Testing complex operations involving lots of services can be hard, and debugging them even harder. Correctly defining the boundaries and interfaces of services requires a significant amount of reflection and may not be a good idea when you do not know what exactly you are building.</p>
+
+That being said I still think more technological and/or Web startups should consider SOA instead of the &quot;everything within the Framework&quot; approach, not really for future scalability reasons, but because they risk limiting their flexibility, speed of iteration and capacity to hire short term if it is not already the case.
+      </div>
+    </content>
+  </entry>
+  
+  <entry>
+    <title>Hello again, World!</title>
+    <link
+      rel="alternate" type="text/html"
+      href="http://blog.separateconcerns.com/2013-01-02-hello-world.html"
+    />
+    <id>tag:blog.separateconcerns.com,2013-01-02:hello-world</id>
+    <published>2013-01-02T14:00:00Z</published>
+    <updated>2013-01-02T14:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        
+
+<p><a href="http://catwell.info">I</a> have not had a blog for over two years. The main reason for that is that writing is hard, so I went shopping on Twitter instead.</p>
+
+<p>This was a bit hypocrite since I am an advocate for the Open Web and a huge consumer of information feeds, with several hundreds of them in my news reader. So for this New Year I have decided to put an end to this situation, thrown together a few lines of Lua code that act as a static blog generator (because reinventing the wheel is fun), and here it is: my new online journal.</p>
+
+<p>I do not know with what frequency I will publish but expect articles about working at startups, distributed systems, programming in Lua, dealing with mobile networks, and whatever I happen to read and find interesting. Oh, and also the occasional rant, I guess.</p>
+
+<p>Now here&#39;s to the tradition:</p>
+
+<pre><code data-language="lua">local greet = function(name)
+  print(string.format(&quot;Hello, %s!&quot;,name))
+end
+
+greet(&quot;World&quot;)
+</code></pre>
+      </div>
+    </content>
+  </entry>
+  
+</feed>

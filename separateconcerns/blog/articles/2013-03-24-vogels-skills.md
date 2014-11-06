@@ -1,0 +1,31 @@
+% Werner Vogels on Skills
+% Pierre 'catwell' Chapuis
+% 2013-03-24 19:30:00
+
+    ::description::
+    Werner Vogels, CTO of Amazon, explains what skills he is looking for
+    to run 21st century application architectures.
+
+I found a talk by Werner Vogels, the CTO of Amazon [who is a role model of mine](http://blog.separateconcerns.com/2013-01-02-startups-soa.html), on [21st century application architectures](http://skillsmatter.com/podcast/design-architecture/21st-century-application-architectures).
+
+After his presentation, someone from the audience asks him what skills he is looking for to run these services. His answer (starting at about 40:45 in the video) is so interesting that I thought it would be worth it to write it down. Here it is:
+
+> What kind of skillset am I looking for for people to build these [infrastructure services] and manage them? I think I'm looking for a set of standard things that we look for in every Amazonian PM, which is...
+>
+> A very strong sense of ownership. This is: the stuff that you're building is not something that your boss tells you to build. You have to take pride in what you do, and you have to be someone [who] "does not like his or her own smell". You have to be [highly] self-critical.
+>
+> [You] have to be able to disagree but be able to commit to actual decisions being made, things like that. There's this set of what we call Amazon leadership skills that I would be looking for in any engineer that we hire.
+>
+> [In many] of these services we're looking for people with very good distributed systems skills, or at least with very good fundamental distributed systems skills which they have learned in school. Actually, it isn't that you have to have built a distributed system when you were in school. Remember: no professor ever had a real job in their life, right? And so they didn't teach you how to build systems. But to have a truly fundamental understanding of how to read fault-tolerant algorithms, of how to think in a fundamental way about scaling... and those kind of things, is something that we are absolutely looking for.
+>
+> Some demonstration, if you're just out of school, [that] you've been involved with some practicals. Have you contributed to an Open Source project? Are you involved with programming groups? We're looking for someone that is actually capable of doing hands-on work. [...]
+>
+> If you're really more experienced, what we will be looking for... Do we look for particular programming skills, languages? Not really. Most people are able to program in Java, C++... I don't think I've actually met people who are not able to do that. We are in an environment that is pretty unique in that sense.
+>
+> We don't mandate the use of particular programming languages, we don't mandate the use of particular middleware pieces or things like that. We believe that our systems, our team should be moving as fast as possible, which means that if we hire the absolute best people they should be able to make the decisions, what the right tools are for them to use in their particular project.
+>
+> It doesn't always go well. I think we've had a few choices around Erlang which did not necessarily work out that well, not because of Erlang, but because it is actually really hard to hire Erlang programmers after that. So we expect our engineers to have some level of business sense.
+>
+> I think the willingness to do operational work... We live and breathe the DevOps mentality, where our engineers are responsible for the software that they run at some level, whether that is part time or whether that is actually in full site with some of our other engineers. We strongly believe that there's no bigger motivator to fix your software than beepers going off at 4 A.M. And we give you time to actually fix your services if that's the case.
+>
+> These are the first few things that come to mind.

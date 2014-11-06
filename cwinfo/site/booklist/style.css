@@ -1,0 +1,33 @@
+#container {
+  width: 60%;
+  margin: 1em auto;
+}
+
+.book {
+  width: 100%;
+  margin: 1em;
+  padding: 1em;
+  border-top: 1px solid #c0c0c0;
+  float: left;
+}
+
+.book ul {
+  float: left;
+  width: 70%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.cover {
+  float: left;
+  width: 160px;
+}
+
+h2 {
+  clear: both;
+}

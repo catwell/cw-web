@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Projects I have worked on at Moodstocks over the last three years.">
+    <link href="css/theme.css" rel="stylesheet" type="text/css">
+    
+    <link
+      rel="alternate" type="application/atom+xml"
+      href="http://blog.separateconcerns.com/feed.atom"
+    />
+    <title>Three years of (proprietary) projects</title>
+  </head>
+  <body>
+    <div id="container">
+    <hgroup>
+      <h1>Three years of (proprietary) projects</h1>
+      <h4>published 2013-06-20</h4>
+    </hgroup>
+    
+
+<p>Some of the code I write is Open Source, but these days most of it is closed source and property of <a href="http://www.moodstocks.com/">Moodstocks</a>, the startup I work for. For the last three years I have had the chance to work on a lot of really interesting projects, the most significant of which I will talk about now. If you are still a student, maybe that can inspire you to join a startup. Maybe you will even decide to join us in our quest to advance mobile image recognition and applications in general.</p>
+
+<h2>Harvest, the Pikadeo crawler</h2>
+
+<p>When I joined Moodstocks in April 2010 the team was working on a mobile price comparison application called Pikadeo. The pitch was that you could take a picture of any cultural product (CD, DVD, book...) and it would give you a list of places where you could buy it, sorted by price.</p>
+
+<p>The iOS application itself, largely designed by <a href="https://twitter.com/Arcank">Louis Romero</a> who had interned at Moodstocks and left just as I arrived, was working. The image recognition technology was working too, although it was purely server-side. The team was already researching how to leverage client-side processing but it was really just a crazy idea at that point, so Pikadeo was doing what most &quot;mobile&quot; image recognition software still does: send JPEG frames to the server.</p>
+
+<p>What was missing was the data. We needed to crawl several large e-commerce websites, extract product images and metadata, send the former to the image recognition engine and the store the latter in a database. So I set out to write a crawler in Ruby, which was the dynamic language of choice of the team at the time. Moodstocks was a Ruby / C++ shop due to the background of the founders. Obviously things have changed a lot since then.</p>
+
+<p>I tried to use Hadoop for the job, mostly because it was trending at that time and I had access to Amazon&#39;s Elastic MapReduce. I soon understood that 1) the Hadoop Streaming interface was not quite there yet so I would have to switch to Java and 2) the Map/Reduce paradigm was not the best for the job anyway.</p>
+
+<p>After reading a few papers on crawling (I had to anyway, since that project would be the basis of my MSc thesis, but it actually helped a lot) I ended up writing a kind of Master/Worker system, with work queues in <a href="http://kr.github.io/beanstalkd/">Beanstalkd</a> and metadata storage in Amazon&#39;s SimpleDB, which did the job. It did the job a little too well, actually, since it ended up DDoSing an e-commerce website for a few seconds during a performance test for my thesis. Fortunately I was monitoring it and hit the stop button...</p>
+
+<p>After setting reasonable speed limits and balancing the requests between various websites, Harvest was fast enough for our needs. The bottleneck became the image search engine itself, I will expand on that later.</p>
+
+<p>Due to the deprecation of the Pikadeo product, Harvest is no longer used today. It is probably a good thing: it was my first Ruby program so the code was awful, it was way too complex and too tied to AWS (the master instance would run and kill worker instances, it relied a lot on SimpleDB...). That being said, the crawling model was sound.</p>
+
+<h2>Acorn</h2>
+
+<p>Once we got crawling sorted out, the image recognition engine itself became the problem. Oak (it has become a tradition to use plant-related names for our projects internally) had been almost entirely written by <a href="https://twitter.com/deltheil">Cédric</a>, Moodstocks&#39; CTO. It was a piece of C++ software, with the image recognition parts isolated in dynamic libraries and a <a href="http://thrift.apache.org/">Thrift</a> layer to interface with the core Ruby on Rails Web application. It was multithreaded, designed to run on a single multicore EC2 instance.</p>
+
+<p>The scalability pain point, it turned out, was not CPU load. The index was stored in a B+ Tree in <a href="http://fallabs.com/tokyocabinet/">Tokyo Cabinet</a>, a tool we like a lot and still use today in other parts of our system. The problem was that when we indexed millions of images the dataset would inevitably become very large, larger than the available memory. The system would still be very responsive on most reads, but writes would invalidate large chunks of the in-memory cache and result in long pauses.</p>
+
+<p>Latency is the enemy when you write image recognition software, so we decided not to sacrifice it: all the index had to fit in RAM. We decided to consider RAM as our primary datastore. That decision would bring about our later choices.</p>
+
+<p>Since rebuilding an index can be <em>very</em> long we wanted something that could persist even if the engine crashed or had to be restarted for an update. Soon it became obvious that Redis could be the answer. However it was missing some commands that we needed, especially one that would insert the same key with different values in different maps (if you have already written inverted indices you may understand why, otherwise have a look at <a href="http://files.catwell.info/presentations/2011-osdcfr-redis-iidx/">that presentation</a>). Lua scripting was what we needed, but it wasn&#39;t there yet so I ended up forking Redis to develop it in C while <a href="http://files.catwell.info/presentations/2011-osdcfr-redis-iidx/img03.png">lobbying for scripting support</a>. Acorn was, to my knowledge, the first application to run Redis 2.5 in production, and the first one to use Redis scripting too. We never encountered any Redis-related crash.</p>
+
+<p>Now, to have the index fit entirely in RAM, we would have to distribute it across different machines, so Acorn would have to be a distributed system. Knowing that, I chose to make Acorn nodes single-threaded: they would communicate by message passing and we would have several of them per instance.</p>
+
+<p>We chose <a href="http://msgpack.org/">MessagePack</a> for serialization of Redis values, and I started looking at <a href="https://github.com/msgpack/msgpack-rpc">MessagePack-RPC</a>. It had a lot of the pieces that I wanted for the distribution part, and one major problem: it was only usable in Ruby. But we were not CPU-bound... Would it be sensible to write the engine in a dynamic language? I started investigating that possibility. Our C++ libraries already had Ruby bindings that we used for vision R&amp;D, and the little number crunching Oak Core did (mostly different scoring algorithms) turned out to be fast enough in Ruby.</p>
+
+<p>So Acorn ended up as a distributed system written in Ruby, with MessagePack-RPC for communication and a fork of the development branch of Redis at its heart. It used MessagePack-RPC for communication with our Rails stack too.</p>
+
+<p>In retrospect, relying on two unstable pieces of software was risky. It turned out well, and Redis was definitely the right choice, especially since Lua Scripting now allows us to use a regular, stable 2.6 version. <a href="http://www.zeromq.org/">0MQ</a> would probably have been a better technical choice than MessagePack-RPC, and plain C better than Ruby, but I believe those choices saved us development time, and time to market was important. Acorn is still in production today, doing its job for legacy clients who use online recognition.</p>
+
+<h2>Moodstocks Notes</h2>
+
+<p>You now know that when I joined Moodstocks it was trying to be a B2C company. However we were seeing interest in licensing our technology, and began to envision a B2B product: Moodstocks API.</p>
+
+<p>When you write an API, especially as a product, you must write applications for it simultaneously. They serve two purposes: demonstrate what your API can do, and help you figure out how it should be improved. We set out to do that with two mobile applications, one of which was Notes.</p>
+
+<p>The original idea I proposed was, I think, simple: <a href="http://www.google.com/sidewiki/">Google SideWiki</a> (RIP) for the real world. That is: you walk in the street, you see something interesting, you take a picture of it, you get a comments thread. If you are the first to do so, you get to leave the first comment (yay, first!!1).</p>
+
+<p>As we were looking to add virality to it, that idea developed into a kind of mostly mobile social network where both people and objects could be followed. Objects actually had their own timeline with an associated Atom feed, which you could reach by browsing or, of course, as the result of an image search.</p>
+
+<p>Technically the server-side part of Notes was a rather classic Sinatra application. The most interesting part of it was that it used some kind of CQRS architecture with all reads coming from Redis and all writes going to log-structured storage. The very nice thing about it was that any part of it could be replayed so it was almost trivial to reproduce bugs or replicate production incrementally to a development setup.</p>
+
+<p>The iPhone application, on the other hand, was one of the nicest and most complex ones we have ever written. I wasn&#39;t responsible for it so I won&#39;t get into details here but the latest internal version we never actually released was IMO a thing of beauty.</p>
+
+<p>As it turned out, Notes got a reasonable amount of <a href="http://techcrunch.com/2010/12/10/moodstocks-notes-is-stickybits-without-the-barcodes/">online</a> <a href="http://mashable.com/2010/12/18/moodstocks/">press</a> after our CEO showed it to Michael Arrington at the Le Web conference. This got us a few users and we briefly thought about making it a product in its own right. I wrote a wxPython GUI to analyze logs, trying my hand for the first time at techniques like cohort analysis.</p>
+
+<p>Eventually we took the decision not to invest more time in the idea: we were a small team and our now core B2B business needed our attention. Notes&#39; success was a long shot and would have required significant time and money investment so I guess it was the right decision, although I would love to see someone revisit the idea.</p>
+
+<h2>Moodstocks API v2</h2>
+
+<p>As I said, Notes was written to help us design our API. Using its feedback and that from the few users of our v1 API, which was more some kind of beta, I set out to write version two.</p>
+
+<p>I will not expand too much on all its aspects here, REST-ish API design being well covered in the literature and online (start <a href="http://amzn.to/17nHJmF">here</a>).</p>
+
+<p>The main differences with API v1 were the use of JSON instead of XML, and the ability to index a single image by uploading it to the API using multipart post. Previously, users would upload a XML list of image URLs and associated IDs; we would download them and tell you when indexing was over. Now users index single images and changes are taken into account instantly. The necessity for that was a lesson from Notes and user feedback, and it was made possible by Acorn.</p>
+
+<p>Another interesting choice was the authentication method, HTTP Digest, which we kept from version one. Theoretically, it had all the right properties and was a standard, so it was the best choice. What we had not realized is how many <a href="http://devblog.avdi.org/2013/02/04/the-trouble-with-http-digest-authentication/">implementations were broken</a> or incomplete (i.e. not supporting nonce reuse, which is a necessity on mobile to reduce the number of HTTP requests). I ended up having to submit patches to a lot of them, and I am not even mentioning .NET land... If I had to do it again today I would probably go with Basic Auth and SSL.</p>
+
+<h2>Acorn Quantizer</h2>
+
+<p>Earlier, I wrote about how I had made Acorn processes single-threaded. This had some advantages, but also a big inconvenient.</p>
+
+<p>Part of the image search process involves quantizing features, which means associating vectors in a many-dimensional space to integers. To do this the <a href="http://en.wikipedia.org/wiki/Curse_of_dimensionality">curse of dimensionality</a> forces you to use an approximate nearest-neighbor search algorithm.</p>
+
+<p>The way it works is: take a large number of features from a representative dataset and use some kind of clustering algorithm (e.g. k-means) on them to obtain a bunch of centroids (a &quot;vocabulary&quot;), then process these centroids to obtain a datastructure called kd-forest which will be used to perform nearest-neighbor search (a &quot;dictionary&quot;).</p>
+
+<p>Vocabulary generation is clearly an offline task that requires a lot of number crunching and is done as little as possible. Generating the kd-forest, on the other hand, takes from a handful of seconds to a few minutes depending on the size of the vocabulary, so it is frequently done on engine startup. The kd-tree itself only exists in RAM.</p>
+
+<p>The problem with that was that a kd-forest is a rather large datastructure. In our case it occupied hundreds of MB of RAM and took about one minute to generate. That was OK with Oak, where it was shared between threads, but with Acorn that overhead had to be paid for every process, both in space and time. We had to find a way to share the kd-forest across Acorn nodes on the same machine, and if possible to make startup faster.</p>
+
+<p>The solution I opted for was to rewrite the whole quantizer. Previously we had been using popular Open Source libraries for this, but they didn&#39;t do what I wanted.</p>
+
+<p>I wrote the kd-forest generation algorithm as a <a href="http://luajit.org/">LuaJIT</a> program. It was the first Lua program officially used in production at Moodstocks, although as you will see it was only run offline. What it does is take centroids as input, generate a kd-forest and serialize it in a way easily readable in C thanks to the FFI. It can also actually perform nearest-neighbor searches but this is only used for test purpose.</p>
+
+<p>Once the kd-forest is serialized, it can be loaded into <a href="http://beej.us/guide/bgipc/output/html/multipage/shm.html">system shared memory</a> quite fast. A C library can then be used in every Acorn process to access this shared memory read-only and perform nearest-neighbor searches.</p>
+
+<p>The idea is simple once you stop under-estimating the capabilities of SHM on Linux. By default it usually limited to a few MB so you have to increase it a lot for this to work (it can be done with <a href="http://linux.die.net/man/8/sysctl">sysctl</a>). The implementation, on the other hand, is far from trivial. My code uses a <em>lot</em> of pointer arithmetics, I should probably clean it up someday, but in the meantime it does its job perfectly.</p>
+
+<h2>Seed</h2>
+
+<p>The Acorn Quantizer was the last major improvement to our online search stack. Around that time, we resolved on a major technological shift: we would perform image recognition on mobile devices directly instead of doing it on the server. Of course, initially, we would have an hybrid approach where on-device recognition would work as a kind of cache, but the mobile was where we would focus our efforts.</p>
+
+<p>Doing on-device image recognition, though, almost meant starting from scratch: we had to make different technological trade-offs, use very different algorithms, and that meant writing an almost entirely new image recognition stack. We named that project Seed.</p>
+
+<p>Seed encompasses a lot of things now, but at its core are proprietary Computer Vision algorithms that we set out to develop with Cédric and <a href="https://twitter.com/mbrenon">Maxime</a>, who had joined us by then. We would discuss them as a team, then Maxime and Cédric would implement them in C while I would work on a Lua version.</p>
+
+<p>The big picture is that some processing is done on the server at indexing time to generate signatures which are then sent to the client. Server-side software used to be entirely Lua, client-side software entirely C, but we decided to implement the whole stack in both languages. I think that was one of the best ideas we ever had. Being able to compare results avoided errors on both sides (tricky things like off-by-ones were always noticed thanks to the fact that Lua is 1-based, floating-point math issues were found...). Lua allowed faster prototyping on some parts and it was interesting to compare the different architectural choices we were making.</p>
+
+<p>With the current (second) generation of the Seed algorithms, we are actually mostly using the C implementation through the LuaJIT FFI on the server side now. That is because I have been working on other projects while the rest of the team (which is not as comfortable with Lua) was developing them, so I would have been a bottleneck if we had kept the dual stack approach. I may well bring the Lua branch up to date someday though, who knows?</p>
+
+<h2>chksrv and chkcoherence</h2>
+
+<p>Moodstocks&#39; server-side architecture is <a href="/2013-01-02-startups-soa.html">some kind of SOA</a>. That means we have a lot of different services that run as daemons and need to stay up. chksrv is a medium-sized program in Bash that takes care of this. It is deployed on every instance with a configuration file that indicates which services should be running on that instance, and it makes sure that they are (correctly). It also checks if other instances are up. If something goes wrongs, it warns the &quot;ops team&quot;, who is basically me and Cédric as a backup in case I am not available.</p>
+
+<p>chksrv is a very useful piece of software but I was a bit worried by its growth as we added services. Standardizing the way we deamonize processes helped a lot with that by increasing code reuse (thank you <a href="http://libslack.org/">libslack</a>).</p>
+
+<p>chkcoherence is the ideal complement to chksrv: where the latter checks if services are running, the former verifies that they are doing things right. It is also written in Bash at the top level. I have already written about its concept <a href="/2013-05-28-coherence-checks.html">here</a>.</p>
+
+<h2>Anemone</h2>
+
+<p>Anemone is the project that deals with everything related to metrics and measurements at Moodstocks. It is written in Lua and has quite a few different roles:</p>
+
+<ul>
+<li>collect logs and data from production instances;</li>
+<li>generate internal daily and weekly reports with business metrics for the platforms and email them to the team;</li>
+<li>generate technical reports for operations (e.g. growth of different datasets);</li>
+<li>generate weekly reports per application and email them to our platform customers;</li>
+<li>generate custom reports tailored to the needs of our enterprise customers.</li>
+</ul>
+
+<p>It also has a web-based dashboard for the team with high-level KPI, written in JavaScript and <a href="http://code.google.com/p/flot/">flot</a>. Someday I might integrate Brett Slatkin&#39;s <a href="http://bslatkin.github.com/cohorts/">Cohort Visualizer</a> into it.</p>
+
+<h2>Dandelion</h2>
+
+<p>I said earlier that with Seed we generate image signatures on the server and send them to the mobile clients where they are used for recognition. Dandelion is the code name of the service responsible for that.</p>
+
+<p>It turns out efficiently sending millions of image signatures per day, over slow and unreliable networks, to devices everywhere in the world, is not trivial. So Dandelion, more than software, is a synchronization protocol and its implementation; a range of tricks to make the best of mobile networks packaged as software. It is one of the reasons (along with all the innovation on CV algorithms and their optimized client-side implementation) why we can propose client-side recognition with databases of thousands of images or even videos, an order of magnitude more than our competitors.</p>
+
+<p>The server part of Dandelion is written in Lua and depends on pieces like Redis and Beanstalkd, which is why I wrote <a href="https://github.com/catwell/haricot">haricot</a>.</p>
+
+<h2>Physalis</h2>
+
+<p>Finally, Physalis is the project I am currently working on. It has not been released yet so I won&#39;t get into the details, but I can explain the reasoning behind it.</p>
+
+<p>While we were building Dandelion and through our experience with our clients, we learned the following things:</p>
+
+<ul>
+<li>writing mobile applications that work offline but keep their data up to date is tricky;</li>
+<li>most developers who attempt to implement it from scratch end up with a broken solution or just give up;</li>
+<li>when you succeed it makes your applications a <em>lot</em> better.</li>
+</ul>
+
+<p>So we thought: we have done it, why not make it accessible to everybody? This is what Physalis is: Moodstocks&#39; image signature distribution system generalized so that you can leverage it for your own mobile application.</p>
+
+<p>Physalis will be available in private alpha for selected users soon, under its real brand name (Physalis is only its &quot;internal plant-themed name&quot;). If you are interested in trying it out, <a href="https://twitter.com/pchapuis">get in touch</a>. The requirements are that you should be making a mobile application and ready to communicate on a regular basis with us: we are doing this alpha to collect useful feedback.</p>
+    </div>
+    <div id="footer">
+      [ <a href="index.html">home</a> ]
+    </div>
+    
+  </body>
+</html>

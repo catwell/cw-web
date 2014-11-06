@@ -1,0 +1,55 @@
+/* CSS for catwell.info v9 */
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background: #d0d0d0;
+  height: 100%;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+a {
+  text-decoration: none;
+  color: #ff4100;
+}
+
+a:hover {
+  border-bottom: 1px dotted #ff4100;
+}
+
+#head {
+  margin-top: 60px;
+  margin-bottom: 30px;
+  height: 60px;
+  background: #d0d0d0 url('head.png') no-repeat center;
+}
+
+#container {
+  margin: auto;
+  margin-bottom: 1em;
+  padding-top: 1em;
+  padding-left: 3ex;
+  padding-right: 3ex;
+  padding-bottom: 1em;
+  max-width: 80ex;
+  font-size: 18px;
+  font-family: "Courier New", Courier, monospace;
+  background: #f9f9f9;
+  color: #000000;
+  overflow: hidden;
+}
+
+div.center {
+  text-align: center;
+}

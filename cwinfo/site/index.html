@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+ "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <title>catwell.info</title>
+  <meta name="description" content="catwell.info"/>
+  <link rel="icon" type="image/png" href="assets/fav.png"/>
+  <link href="assets/style.css" rel="stylesheet" type="text/css"
+   media="screen"/>
+  <link rel="openid2.provider"
+   href="https://openid.stackexchange.com/openid/provider">
+  <link rel="openid2.local_id"
+   href="https://openid.stackexchange.com/user/b39316dc-2892-44f4-8231-9a7221118596">
+</head>
+
+<body>
+
+  <script type="text/javascript" language="javascript">
+    // Email obfuscator script 2.1 by Tim Williams, University of Arizona
+    // Random encryption key feature by Andrew Moulden, Site Engineering Ltd
+    // This code is freeware provided these four comment lines remain intact
+    // A wizard to generate this code is at http://www.jottings.com/obfuscator/
+    // Adapted by Pierre Chapuis.
+    function cw_email() {
+      var coded = "GK3Ytkk@KEGlkIV7w.7n"
+      var key = "ZaPqUc5Vhj438WDmMY1zOKrJBGivlsudCeNHTRSx92Eyg0Ibkn7LFtpfAQXwo6"
+      var shift = coded.length
+      var link = ""
+      var ltr
+      for (i=0; i<coded.length; i++) {
+        if (key.indexOf(coded.charAt(i))==-1) {
+          ltr = coded.charAt(i);
+          link += (ltr);
+        }
+        else {
+          ltr = (key.indexOf(coded.charAt(i))-shift+key.length) % key.length;
+          link += (key.charAt(ltr));
+        }
+      }
+      return link;
+    }
+  </script>
+
+  <div id="head"></div>
+  <div id="container">
+    <div class="center"><p>
+      Hi, I'm Pierre 'catwell' Chapuis.<br/>
+      I live in Paris and work on the
+      <a href="http://meetlima.com/">Lima</a>.<br/>
+    </p><p>
+      You may be here for
+      <a href="http://blog.separateconcerns.com">my blog</a>,
+      <a href="http://pinboard.in/u:catwell">my Web bookmarks</a>,<br/>
+      <a href="http://github.com/catwell">my Open Source code</a>,
+      <a href="http://files.catwell.info/presentations/">my talks</a>,
+      <a href="booklist">the books I read</a>,<br/>
+      <a href="http://zerply.com/catwell">my resume</a>
+      or maybe just
+      <a href="https://twitter.com/pchapuis">my Twitter account</a>.
+    </p><p>
+      If you want, you can also
+      <script type="text/javascript" language="javascript">
+        document.write("<a href='mailto:"+cw_email()+"'>"+"email me"+"</a>")
+      </script><noscript>[enable JavaScript]</noscript>.
+    </p></div>
+  </div>
+
+</body>
+
+</html>

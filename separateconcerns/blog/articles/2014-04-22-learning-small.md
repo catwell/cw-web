@@ -1,0 +1,30 @@
+% Learning in the small
+% Pierre Chapuis
+% 2014-04-22 23:59:00
+
+    ::description::
+    I just wrote a Lisp to improve my C. I will learn Go next.
+
+## Writing a Lisp
+
+I like to learn new tools and concepts by experimenting with small projects whose sole purpose is to help me grasp something better. Working on a larger project in a team with other people is invaluable, but doing things on a smaller scale on my own offers a different perspective.
+
+Having recently started to write a lot more C at work than I used to, I felt that it was a good idea to do a smaller project in the language. It turned out [Build Your Own Lisp](http://www.buildyourownlisp.com/) came out just when I needed it, so I [had a go at it](https://github.com/catwell/ownlisp).
+
+I cannot recommend this book enough if you feel like you would enjoy building a dynamic language in C from scratch (using just a parser library). It is one of the best tutorial-style books I have ever read. It achieves a perfect balance between being didactic and leaving freedom to the user.
+
+My Lisp ended up being different from the one described in the book in several minor ways. For instance: it has more types, builtins take expressions instead of values, values are based on a union (which saves memory), memory management works differently, the source more organized... In that respect the book delivers exactly what it promised: the reader is encouraged to build "his own" Lisp.
+
+In the end I got just what I wanted from this experience: I clearly improved my C and had the satisfaction to write a working programming language in a few hours scattered over three weekends.
+
+Oh, just in case you were wondering, nobody paid me to write that blog post!
+
+## Moving on to Go
+
+Next, I will probably be [learning Go](https://gobyexample.com/). Go is a weird language in that about half of the technical people I follow and look up to like it a lot, and the other half hates it. The latter tend to be users of languages with stricter type systems...
+
+I have to admit that, if I had looked solely at the technical merits of both languages, I would probably have learned more [Rust](http://www.rust-lang.org/) instead. I already know some Rust, but not enough to use it productively. Its main advantages are its (arguably) better type system and the fact that it can run without a GC or a frontend, making it suitable to write dynamic libraries.
+
+However, Rust doesn't look completely stable yet, whereas Go is already used in production by several serious companies. Also, I am a distributed systems programmer, and [most](http://camlistore.org/) [of](https://github.com/coreos/etcd) [the](https://github.com/ha/doozerd) [interesting](https://github.com/bitly/nsq) [codebases](http://iris.karalabe.com/) I see popping up around in that field are written in Go.
+
+Moreover, Go appears to be a simpler language than Rust. I suspect I can learn enough of it to read code "fluently" and write some much faster. So Go it is, and Rust will probably be next.

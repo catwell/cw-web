@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="The Viterbi algorithm is used to solve Hidden Markov Models. It has many practical applications.">
+    <link href="css/theme.css" rel="stylesheet" type="text/css">
+    
+      <link href="css/rainbow-github.css" rel="stylesheet" type="text/css">
+    
+    <link
+      rel="alternate" type="application/atom+xml"
+      href="http://blog.separateconcerns.com/feed.atom"
+    />
+    <title>Viterbi, my favorite algorithm</title>
+  </head>
+  <body>
+    <div id="container">
+    <hgroup>
+      <h1>Viterbi, my favorite algorithm</h1>
+      <h4>published 2013-03-03</h4>
+    </hgroup>
+    
+
+<h2>The State Machine</h2>
+
+<p>Let us consider a system that can take a finite number of states <code>S[1]</code> to <code>S[n]</code> over time.</p>
+
+<p>We can represent the system as a N-node directed graph, where nodes are the states. An arc exists between node <code>S[i]</code> and <code>S[j]</code> if the system can transition from <code>S[i]</code> to <code>S[j]</code>. You probably already know that.</p>
+
+<h2>In Chains</h2>
+
+<p>We will now observe the evolution of the system over time. We will model time discretely. That does not mean that time itself is discrete, but we will observe the system at fixed-interval &quot;ticks&quot;. We call <code>S(t)</code> the state of the system at tick <code>t</code>.</p>
+
+<p>If the system is known to be in <code>S[i]</code> at tick <code>t</code> (i.e. <code>S(t) = S[i]</code>) we call <code>P(i-&gt;j)</code> the probability that it will be in <code>S[j]</code> at tick <code>t+1</code>. Here is a definition for the mathematically inclined: <code>P(i-&gt;j) = P(S(t+1) = S[j] | S(t) = S[i])</code>.</p>
+
+<p>A few remarks:</p>
+
+<ul>
+<li><code>P(i-&gt;j)</code> is considered independent of <code>t</code>;</li>
+<li><code>P(i-&gt;i)</code> exists;</li>
+<li>the sum of outbound probabilities is 1: <code>∀i, ∑[j=1,N]{P(i-&gt;j)} = 1</code>.</li>
+</ul>
+
+<p>By the way, this is called a Markov Chain.</p>
+
+<h2>Blurry Sights</h2>
+
+<p>Now let&#39;s complicate things a little by introducing a separate system that can take states <code>V[1]</code> to <code>V[M]</code>. This second system <code>V</code> is tied to <code>S</code>: at every tick <code>t</code>, the probability distribution of <code>V(t)</code> only depends on <code>S(t)</code>. We will note: <code>O(i,j) = P(V(j) | S[i])</code>.</p>
+
+<p>You can think of <code>V</code> as something that observes <code>S</code> and reports on its state in an incomplete and probabilistic manner.</p>
+
+<p>If you have understood everything up to now, you should easily get what this means: <code>∀i, ∑[j=1,M]{O(i,j)} = 1</code>.</p>
+
+<p>If you have not, let&#39;s take a really simple example with <code>N = M = 2</code>. You can imagine that both <code>S</code> and <code>V</code> are lights that can be either red or blue. The relationship between <code>S</code> and <code>V</code> can be expressed by something like this: &quot;If light <code>S</code> is red, then there is 90% chance that <code>V</code> is red too. If light <code>S</code> is blue, then there is only 40% chance that <code>V</code> is red.&quot;</p>
+
+<p>Now, add more possible colors to <code>S</code> and <code>V</code>, not necessarily the same number for both, to generalize the system.</p>
+
+<h2>The Black Box</h2>
+
+<p>Now, here is our problem: imagine that you know how system <code>S</code> works (the probabilities of transition between the states) but that it is hidden in a black box such that you cannot observe it. What you <em>can</em> observe is system <code>V</code>. Is there any way to guess what system <code>S</code> is doing at any time in this setting? If yes, how?</p>
+
+<p>The answer to the first question is: &quot;sometimes, yes&quot;. &quot;Sometimes&quot; means &quot;if the probability distributions help us&quot;.</p>
+
+<p>The second question is the one my favorite algorithm, the Viterbi algorithm, answers. Let&#39;s see how it works.</p>
+
+<h2>Make it Code</h2>
+
+<p>First we need to represent the problem in a way that can be understood by a computer. I will use the Lua programming language for that.</p>
+
+<p>We start by defining a few parameters. We will choose <code>N = 3</code> and <code>M = 2</code> for simplicity. We will observe the system over 1000 ticks.</p>
+
+<pre><code data-language="lua">local N = 3
+local M = 2
+local L = 1000
+</code></pre>
+
+<p>The probabilities of transitions in <code>S</code> will be represented by a NxN matrix, with <code>P(i-&gt;j)</code> as <code>T[i][j]</code>. We use percentages because they are easier to read and avoid some floating point calculation issues.</p>
+
+<pre><code data-language="lua">local T = {
+  {  60, 20, 20 },
+  {   0, 70, 30 },
+  {  70, 10, 20 },
+}
+</code></pre>
+
+<p>For instance, there is a 70% chance to transition from <code>S[3]</code> to <code>S[1]</code>.</p>
+
+<p>The probablitities of observations will be represented by a NxM matrix, with <code>O(i,j)</code> as <code>O[i][j]</code>.</p>
+
+<pre><code data-language="lua">local O = {
+  { 5, 95 },
+  { 55, 45 },
+  { 90, 10 },
+}
+</code></pre>
+
+<p>Let us make sure we didn&#39;t make too many mistakes thanks to our two probability equations from earlier:</p>
+
+<pre><code data-language="lua">local sum = function(t)
+  local s = 0
+  for i=1,#t do s = s + t[i] end
+  return s
+end
+
+for i=1,N do
+  assert(sum(T[i]) == 100)
+  assert(sum(O[i]) == 100)
+end
+</code></pre>
+
+<p>This is what our example system looks like in graph form:</p>
+
+<p><img src="img/viterbi.png" alt="graph" /></p>
+
+<p>The green part is the Markov chain itself, the blue part corresponds to the observation device. Arcs are labeled with probabilities of transition or observation.</p>
+
+<h2>Stepping Forward</h2>
+
+<p>Now we can simulate the behavior of the system.</p>
+
+<pre><code data-language="lua">local proba_pick = function(v)
+  local p,s = math.random(1,100),0
+  for i=1,#v do
+    s = s + v[i]
+    if p &lt;= s then
+      return i
+    end
+  end
+  assert(false)
+end
+
+local S,V = {},{}
+
+local transition = function(t)
+  assert(S[t-1] and not S[t])
+  S[t] = proba_pick(P[S[t-1]])
+end
+
+local observe = function(t)
+  assert(S[t] and not V[t])
+  V[t] = proba_pick(O[S[t]])
+end
+
+S[1] = math.random(1,N)
+observe(1)
+
+for t=2,L do
+  transition(t)
+  observe(t)
+end
+</code></pre>
+
+<p>This code is slightly more complicated, but what you should understand is that, at the end of it, <code>S</code> is a vector of <code>L</code> states of the system and <code>V</code> is the corresponding vector of observations. The initial state <code>S[1]</code> is chosen randomly with uniform probabilities.</p>
+
+<h2>Seeing Through the Box</h2>
+
+<p>Now, let us proceed to guess what happens inside the black box. We do so iteratively: at each tick <code>t</code>, we calculate the most plausible sequence of events that could have led to each possible state of the system, given the observation at <code>t</code> and the results for <code>t-1</code>.</p>
+
+<pre><code data-language="lua">local trellis = {{}}
+
+local prb = function(x)
+  return math.log(x/100)
+end
+
+local viterbi_node = function(t,i)
+  local prev = assert(trellis[t-1])
+  local idx,proba = 0,-math.huge
+  local p
+  for j=1,N do
+    p = prev[j].proba + prb(T[j][i]) + prb(1/N*O[i][V[t]])
+    if p &gt; proba then proba,idx = p,j end
+  end
+  return {
+    state = i,
+    proba = proba,
+    prev = prev[idx],
+  }
+end
+
+local viterbi_step = function(t)
+  assert(not trellis[t])
+  trellis[t] = {}
+  for i=1,N do
+    trellis[t][i] = viterbi_node(t,i)
+  end
+end
+
+-- initialize the trellis
+for i=1,N do
+  trellis[1][i] = {
+    state = i,
+    proba = prb(1/N*O[i][V[1]])
+  }
+end
+
+-- run the algorithm
+for t=2,L do
+  viterbi_step(t)
+end
+</code></pre>
+
+<p>Again, not trivial code, but this is the Viterbi algorithm itself. Moreover we use logarithmic sums for probabilities to avoid numerical problems.</p>
+
+<p>What the algorithm does is build a trellis, a special kind of graph. For every step <code>t</code> we calculate the most plausible sequence of events (a path through the trellis) which ends up with the system in each of the possible states. When we reach the end of the simulation, we take the most plausible state of the system and take the path that led to it as our estimate of what happened.</p>
+
+<p>To avoid memory usage explosion, we do not actually store the paths themselves in the nodes of the trellis. Instead, in a node at tick <code>t</code>, we store a pointer to the previous node (at <code>t-1</code>) that led there. This is why we have to backtrack through the trellis to find the actual path:</p>
+
+<pre><code data-language="lua">local getpath = function(node)
+  local r = {}
+  repeat
+    table.insert(r,1,node.state)
+    node = node.prev
+  until (not node)
+  return r
+end
+
+local best_node = function(nodes)
+  local r = {proba = -math.huge}
+  for i=1,#nodes do
+    if nodes[i].proba &gt; r.proba then
+      r = nodes[i]
+    end
+  end
+  return r
+end
+
+local bestpath = getpath(best_node(trellis[L]))
+</code></pre>
+
+<h2>Does this thing really work?</h2>
+
+<p>To check if this work, let&#39;s take the actual system out of the box and calculate how much it looks like our estimate:</p>
+
+<pre><code data-language="lua">local ok = 0
+for i=1,L do
+  if S[i] == bestpath[i] then
+    ok = ok + 1
+  end
+end
+
+print(100*ok/L)
+</code></pre>
+
+<p>The result I got with those parameters is 72% accuracy, to compare to what a naive random process would get (33%).</p>
+
+<h2>Why I love it</h2>
+
+<p>Let&#39;s go back to the title of this post: now that you know what it does, <em>why</em> is Viterbi&#39;s algorithm my favorite?</p>
+
+<p>I admit that the elegance of the representation of the problem as a trellis is part of the reason, but mainly it&#39;s because of its implications. Think about it: fundamentally it is an algorithm that allows a machine to <em>explain what it observes</em>. Isn&#39;t that crazy?</p>
+
+Yes, it is. And because of that it has a whole range of applications, from advanced orthographic correction and speech-to-text to the decoding of convolutional codes used in voice codecs. And I suspect its potential has not been fully exploited yet.
+    </div>
+    <div id="footer">
+      [ <a href="index.html">home</a> ]
+    </div>
+    <script src="js/rainbow.min.js"></script>
+  </body>
+</html>
