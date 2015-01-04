@@ -18,10 +18,10 @@ TPL.html_post = [[
   </head>
   <body>
     <div id="container">
-    <p>
+    <header>
       <h1>{{{title}}}</h1>
       <h4>published {{shortdate}}</h4>
-    </p>
+    </header>
     {{{content}}}
     </div>
     <div id="footer">
@@ -50,14 +50,14 @@ TPL.html_index = [[
   </head>
   <body>
     <div id="container">
-    <p>
+    <header>
       <h1>Separate Concerns</h1>
       <h4>
         <a href="http://catwell.info" rel="me">catwell</a>'s
         journal on system architecture
         [<a href="feed.atom">subscribe</a>]
       </h4>
-    </p>
+    </header>
     <ol class="index">
       {{#entries}}
       <li>
