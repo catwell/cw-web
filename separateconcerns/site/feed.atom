@@ -10,11 +10,43 @@
     rel="alternate" type="application/xhtml+xml"
   />
   <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
-  <updated>2015-01-04T19:14:02Z</updated>
+  <updated>2015-03-08T10:53:43Z</updated>
   <author>
     <name>Pierre 'catwell' Chapuis</name>
     <uri>http://catwell.info/</uri>
   </author>
+  
+  <entry>
+    <title>Continuous Integration for Lua with Travis</title>
+    <link
+      rel="alternate" type="text/html"
+      href="http://blog.separateconcerns.com/2015-03-08-travis-lua.html"
+    />
+    <id>tag:blog.separateconcerns.com,2015-03-08:travis-lua</id>
+    <published>2015-03-08T12:00:00Z</published>
+    <updated>2015-03-08T12:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        
+
+<p><a href="https://travis-ci.org">Travis</a> is a Continuous Integration service which is free for Open Source projects and has very good GitHub integration. We will see how to use it for your Lua projects.</p>
+
+<p>Your test suite will work well with Travis as long as executing it returns 0 on success and nonzero on failure. If you use plain Lua assertions, it is already the case. If you use a test framework, ensure that it works that way. I have added <a href="https://github.com/catwell/cwtest#exit">a helper</a> to cwtest for that purpose.</p>
+
+<p>Travis does not support Lua out of the box, but using it with Lua projects is not hard because <a href="https://github.com/moteus">moteus</a> has done all the hard work for you. You just have to clone <a href="https://github.com/moteus/lua-travis-example">this repository</a> and copy the <code>.travis</code> directory to yours.</p>
+
+<p>After that, you only have to write a single YAML file, <code>.travis.yml</code>. For example, here is <a href="https://github.com/catwell/haricot/blob/b2f2e59ddf4df7d4d12b1cc72216ad2444e7d270/.travis.yml">the one I wrote for Haricot</a>.</p>
+
+<p>Most sections should be self-explanatory. <code>install</code> is where you set up your dependencies. The first line calls moteus&#39; script which lets you use Lua and LuaRocks. A separate build and test run will occur for every Lua version declared in <code>matrix</code>; you can comment some lines there if you do not want to test some Lua versions. For Haricot I need <a href="http://kr.github.io/beanstalkd/">Beanstalk</a> running in the background so I start it in <code>before_script</code>. <code>script</code> is where you run your actual tests.</p>
+
+<p>To enable Travis, sign up, allow Travis to access your GitHub account, then go to <a href="https://travis-ci.org/profile">your profile</a> and flip the switch for your repository:</p>
+
+<p><img src="img/travis.png" alt="travis" /></p>
+
+After that, commit <code>.travis</code> and <code>.travis.yml</code> and push to GitHub. It will trigger a test build, and so will every subsequent commit. If you want, you can now add <a href="https://travis-ci.org/catwell/haricot.png?branch=master">a badge</a> with the status of your build to your README or your project&#39;s home page.
+      </div>
+    </content>
+  </entry>
   
   <entry>
     <title>Indie Web</title>
