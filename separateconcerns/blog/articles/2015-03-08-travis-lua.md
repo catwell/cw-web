@@ -7,7 +7,7 @@
 
 [Travis](https://travis-ci.org) is a Continuous Integration service which is free for Open Source projects and has very good GitHub integration. We will see how to use it for your Lua projects.
 
-Your test suite will work well with Travis as long as executing it returns 0 on success and nonzero on failure. If you use plain Lua assertions, it is already the case. If you use a test framework, ensure that it works that way. I have added [a helper](https://github.com/catwell/cwtest#exit) to cwtest for that purpose.
+Your test suite will work well with Travis as long as executing it returns 0 on success and nonzero on failure. If you use plain Lua assertions, it is already the case. If you use a test framework, make sure that it works that way. I have added [a helper](https://github.com/catwell/cwtest#exit) to cwtest for that purpose.
 
 Travis does not support Lua out of the box, but using it with Lua projects is not hard because [moteus](https://github.com/moteus) has done all the hard work for you. You just have to clone [this repository](https://github.com/moteus/lua-travis-example) and copy the `.travis` directory to yours.
 
