@@ -1,4 +1,4 @@
-local cs = {
+return {
   {
     title = "The Art of Computer Programming, Volumes 1-3",
     url = "http://amzn.to/YEZhFV",
@@ -143,9 +143,6 @@ local cs = {
     cover = {amazon = "41gI2CnLIwL"},
     authors = {"Thomas H. Cormen"},
   },
-}
-
-local pl = {
   {
     title = "Lua 5.1 Reference Manual",
     url = "http://amzn.to/10UUFIS",
@@ -236,9 +233,6 @@ local pl = {
     cover = {amazon = "41xRZwJBsiL"},
     authors = {"Julien Danjou"},
   },
-}
-
-local design = {
   {
     title = "The Inmates Are Running the Asylum",
     url = "http://amzn.to/Zqb0nq",
@@ -299,9 +293,6 @@ local design = {
     cover = {amazon = "41PPjX4dA-L"},
     authors = {"Marc Stickdorn"},
   },
-}
-
-local startup = {
   {
     title = "Founders at Work",
     url = "http://amzn.to/Yn4oWW",
@@ -572,9 +563,12 @@ local startup = {
     cover = {amazon = "41NZwcdz2TL"},
     authors = {"Michael Lewis"},
   },
-}
-
-local brain = {
+  {
+    title = "Traction: A Startup Guide to Getting Customers",
+    url = "http://amzn.to/1O4yAzj",
+    cover = {amazon = "51E39T7ITjL"},
+    authors = {"Gabriel Weinberg", "Justin Mares"},
+  },
   {
     title = "Mainstream",
     url = "http://www.amazon.fr/Mainstream-Frédéric-Martel/dp/2081236176",
@@ -677,9 +671,6 @@ local brain = {
     cover = {amazon = "51B0l-Nu13L"},
     authors = {"Robert J. Shiller"},
   },
-}
-
-local history = {
   {
     title = "La France en Réseaux, tome 1",
     url = "http://www.amazon.fr/réseaux-rencontre-télécommunications-informatique-1960-1980/dp/2363670124",
@@ -806,9 +797,6 @@ local history = {
     cover = {amazon = "51O8T-shCgL"},
     authors = {"Carlota Perez"},
   },
-}
-
-local fiction = {
   {
     title = "Manna: Two Visions of Humanity's Future",
     url = "http://amzn.to/ZZFNh4",
@@ -892,43 +880,5 @@ local fiction = {
     url = "http://amzn.to/1lxGkuQ",
     cover = {amazon = "51NFhTaIdnL"},
     authors = {"Daniel Suarez"}
-  },
-}
-
-return {
-  {
-    name = "Computer Science, Software Design & Engineering",
-    books = cs,
-    short = "cs",
-  },
-  {
-    name = "Programming Languages, Software",
-    books = pl,
-    short = "pl",
-  },
-  {
-    name = "General Design",
-    books = design,
-    short = "design",
-  },
-  {
-    name = " Startups, Business Strategy, Management",
-    books = startup,
-    short = "startup",
-  },
-  {
-    name = "Sociology, Psychology, Science",
-    books = brain,
-    short = "brain",
-  },
-  {
-    name = "History, Essays, Biographies, Economy",
-    books = history,
-    short = "history",
-  },
-  {
-    name = "(Science-)Fiction",
-    books = fiction,
-    short = "fiction",
   },
 }
