@@ -35,6 +35,7 @@ local template = [[
 </html>
 ]]
 
+local titles = {}
 local book
 for j=1,#books do
   book = books[j]
@@ -50,6 +51,8 @@ for j=1,#books do
     book.author = book.authors[1]
     book.authors = nil
   end
+  assert(not titles[book.title], book.title)
+  titles[book.title] = true
 end
 
 table.sort(books, function(a, b) return a.title:lower() < b.title:lower() end)
