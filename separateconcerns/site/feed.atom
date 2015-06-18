@@ -10,7 +10,7 @@
     rel="alternate" type="application/xhtml+xml"
   />
   <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
-  <updated>2015-06-18T00:06:11Z</updated>
+  <updated>2015-06-18T00:18:53Z</updated>
   <author>
     <name>Pierre 'catwell' Chapuis</name>
     <uri>http://catwell.info/</uri>
@@ -28,6 +28,10 @@
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         
+
+<blockquote>
+<p>Clarification: The title is exaggerated. I have never hated LuaJIT, I just went back to using PUC Lua primarily.</p>
+</blockquote>
 
 <p>I started using Lua in early 2007. I had already been programming for years, but I had reached a point where I had decided that I wanted to know exactly what was going on when my computer executed dynamic code. That meant understanding two critical pieces of the software stack: the OS and the interpreter.</p>
 

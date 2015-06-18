@@ -5,6 +5,8 @@
     ::description::
     I love LuaJIT for its performance, but its complexity sometimes puts me off.
 
+> Clarification: The title is exaggerated. I have never hated LuaJIT, I just went back to using PUC Lua primarily.
+
 I started using Lua in early 2007. I had already been programming for years, but I had reached a point where I had decided that I wanted to know exactly what was going on when my computer executed dynamic code. That meant understanding two critical pieces of the software stack: the OS and the interpreter.
 
 I already had notions of how an interpreter works and I could tell the main functions of a Unix kernel, but really understanding software, for me, implied reading its source code. I quickly realized that I would not succeed if I started with Perl or Python and Linux, which were what I was using at the time, so I set my sights on Lua and Minix3.
