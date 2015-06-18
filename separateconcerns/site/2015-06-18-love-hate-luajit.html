@@ -21,9 +21,9 @@
     </header>
     
 
-<p>I started using Lua in early 2007. I had already been programming for years, but I had reached a point where I had decided that I wanted to know exactly what was going on when my computer executed dynamic code. That meant deeply understanding two critical pieces of the software stack: the OS and the interpreter.</p>
+<p>I started using Lua in early 2007. I had already been programming for years, but I had reached a point where I had decided that I wanted to know exactly what was going on when my computer executed dynamic code. That meant understanding two critical pieces of the software stack: the OS and the interpreter.</p>
 
-<p>I already had notions of how an interpreter works and I could tell how a Unix worked in broad strokes, but really understanding software, for me, implied reading its source code. I quickly realized that I would not succeed if I started with Perl or Python and Linux, which were what I was using at the time, so I set my sights on Lua and Minix3.</p>
+<p>I already had notions of how an interpreter works and I could tell the main functions of a Unix kernel, but really understanding software, for me, implied reading its source code. I quickly realized that I would not succeed if I started with Perl or Python and Linux, which were what I was using at the time, so I set my sights on Lua and Minix3.</p>
 
 <p>Knowing software also implies using it, so Minix3 and Lua became my main OS and language for several months. To be honest, I was running Minix3 in a VM due to the lack of drivers for my hardware. I started to study their code, with the help of <a href="http://www.minix3.org/doc/#book">the book</a> for Minix3 and resources found online for Lua. I learnt a lot during that period.</p>
 
@@ -43,7 +43,7 @@
 
 <p>These days, the purist, simplicity-loving part of me tends to win over the pragmatist in my (rare) non-work code, and my current target of choice is PUC Lua. At work, I write almost exclusively C and almost no Lua, and the little I do write runs on <a href="https://meetlima.com/">a machine</a> which does not support LuaJIT. The only reasons I still use LuaJIT are maintenance of luajit-msgpack-pure and my use of OpenResty, which for my purposes could as well be built with PUC Lua instead.</p>
 
-<p>That being said, I like knowing that I could take my Lua code and, with a few tweaks and a change of interpreter, get a serious performance boost. So I still hope someone (if not Mike Pall) will make a version of LuaJIT that supports the Lua 5.3 interface. Otherwise, I guess I can still decide learning more about JIT compilation is worth it and spend a few months diving into that LuaJIT codebase!</p>
+<p>That being said, I like knowing that I could take my Lua code and, with a few tweaks and a change of interpreter, get a serious performance boost. So I still hope someone (if not Mike Pall) will make a version of LuaJIT that supports the Lua 5.3 interface. Otherwise, I guess I can still decide that learning more about JIT compilation is worth it and spend a few months diving into that LuaJIT codebase!</p>
 
 Oh, and by the way, with this whole systemd thing, I am semi-seriously considering giving Minix3 a second chance :)
     </div>
