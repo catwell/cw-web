@@ -10,11 +10,55 @@
     rel="alternate" type="application/xhtml+xml"
   />
   <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
-  <updated>2015-06-18T00:18:53Z</updated>
+  <updated>2015-07-07T06:55:30Z</updated>
   <author>
     <name>Pierre 'catwell' Chapuis</name>
     <uri>http://catwell.info/</uri>
   </author>
+  
+  <entry>
+    <title>Four easy reads to understand distributed systems issues</title>
+    <link
+      rel="alternate" type="text/html"
+      href="http://blog.separateconcerns.com/2015-07-07-four-easy-reads-distsys.html"
+    />
+    <id>tag:blog.separateconcerns.com,2015-07-07:four-easy-reads-distsys</id>
+    <published>2015-07-07T09:00:00Z</published>
+    <updated>2015-07-07T09:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        
+
+<p>Even among software people, those of us who work with distributed systems and algorithms are sometimes seen as mad scientists. We use words like like consistency, causality, consensus, commutativity, idempotence, immutability and &quot;impossibility theorems&quot;. How come we have to read papers and tear our hair out just to make software run correctly on a few machines? Are we all failed academics incapable of pragmatism?</p>
+
+<p>I have selected four documents to help you understand the kind of things we spend our days thinking about, the physical limits we work with and the trade-offs we make. You may want to read them, because distribution is becoming the norm rather than the exception, so you may have to think about at least some of those issues sooner than you expected. Those are simple documents that any programmer should be able to read. Only the last one is an actual paper, and it is a simple position paper with no math, I promise.</p>
+
+<h2><a href="https://queue.acm.org/detail.cfm?id=2745385">There is No Now</a></h2>
+
+<p>Most distributed systems are <em>asynchronous</em>, which means that the usual notion of time does not make sense within them. This article by Justin Sheehy, former Basho CTO (now at VMWare), published in ACM Queue in March 2015, is about that fact and its consequences. It inspired me to make this list, because as soon as I read it my first thought was that I should share it with all of my colleagues and every single person I will ever work with. It introduces two important impossibility theorems (FLP and CAP) and adversarial models, discusses the existence of &quot;reliable&quot; clocks and networks, and touches on some solutions such as consensus protocols and CRDT.</p>
+
+<h2><a href="http://www.allthingsdistributed.com/2008/12/eventually_consistent.html">Eventually Consistent - Revisited</a></h2>
+
+<p>This 2008 blog post by Werner Vogel (Amazon CTO) explains the trade-off between availability and consistency, introduces consistency models, and hints at the relationship between the replication factor of data and the level of consistency that can be achieved. If you want to go further after that, you can read the famous Dynamo paper (which is not too complicated), preferably in <a href="http://docs.basho.com/riak/2.0.1/theory/dynamo/">its version annotated by Basho</a>.</p>
+
+<h2><a href="http://book.mixu.net/distsys/">Distributed systems for fun and profit</a></h2>
+
+<p>This document, by Mikito Takada (Trifacta), is longer than the others. It is the best short (meaning: not a whole course or book) introduction to distributed systems I know. In a nutshell, it expands on the ideas presented in the first two documents and gives you most of the necessary concepts and vocabulary to understand actual distributed systems papers, should you want to read them.</p>
+
+<h2><a href="http://www-db.cs.wisc.edu/cidr/cidr2009/Paper_133.pdf">Building on quicksand</a></h2>
+
+<p>I could hardly leave that 2009 paper by Pat Helland and Dave Campbell out of this list. It starts with the idea that, as the distribution of systems increases, latency makes synchronicity intractable and pushes us towards asynchronous designs. The rest of the paper is a discussion of the trade-offs involved. The very interesting idea in that paper (also found in other papers by Pat Helland) is that it all comes down to a problem of risk management and reconciliation. If asynchronous software can not ensure something will happen, it may make a guess and fix the result later if it was wrong. That may include having to make excuses to an actual human being. An important corollary is that the distributed nature of software permeates <a href="http://bravenewgeek.com/distributed-systems-are-a-ux-problem/">all the way to the user interface</a> (which is why you may have seen me ranting about how we need to start forming cross-functional teams, with developers who understand UX and designers who get distributed systems).</p>
+
+<h2>Conclusion</h2>
+
+<p>When I started programming as a child, I was hooked by the idea that the computer was a perfect machine that, unlike a teacher, would never be unjust: it would work if I got the code right, and if I did not I just had to fix it and try again. Once it worked, it would always work! Everything was reproducible, and all issues could be diagnosed and understood.</p>
+
+<p>Of course, I grew up and the messy reality caught up with me. I went into distributed systems, which are a lot more like physics than maths. There are laws that govern the world out there, and they are always coming in your way. Everything works as expected, until something unexpected happens. And sometimes, you will not even be able to explain what it was after the fact.</p>
+
+Distributed systems work is about that adversarial world out there, and how we write programs to cope with it. It is about dealing with the unreliability of clocks, communications, hardware and, sometimes, people. It is about reading papers, drawing diagrams, writing proofs sometimes, and finding solutions to obtain the guarantees we want. More than anything else, distributed systems is the science (or art? or game?) of trade-offs. It is hard, error-prone and <a href="https://aphyr.com/tags/jepsen">usually broken</a>, <a href="https://en.wikipedia.org/wiki/Paxos_%28computer_science%29">terribly</a> <a href="https://en.wikipedia.org/wiki/Byzantine_fault_tolerance">complicated</a> sometimes, but it is my field, and so far I like it.
+      </div>
+    </content>
+  </entry>
   
   <entry>
     <title>My love-hate relationship with LuaJIT</title>
