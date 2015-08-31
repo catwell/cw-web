@@ -2,6 +2,10 @@
 % Pierre Chapuis
 % 2014-10-24 21:30:00
 
+<!--@
+  updated = "2015-08-31 21:30:00"
+-->
+
     ::description::
     Some command-line programs open graphical password prompts.
     Here is how to disable them.
@@ -24,11 +28,15 @@ and you get that message (plus a graphical prompt):
     gpg: WARNING: GnuPG will not work properly - please configure
     that tool to not interfere with the GnuPG system!
 
-You can solve that this way:
+The Gnome keyring is an annoying piece of software that replaces password
+prompts for several tools including SSH and GPG. you can disable it this way:
 
-    ln -sf /dev/null /etc/xdg/autostart/gnome-keyring-gpg.desktop
+    mkdir -p ~/.config/autostart
+    cd !$
+    cp /etc/xdg/autostart/gnome-keyring-* .
+    for i in *; do echo "Hidden=true" >> $i; done
 
-... but then it will use another graphical prompt! To stay in your terminal,
-create the file `~/.gnupg/gpg-agent.conf` with the following content:
+... but then GPG will use yet another graphical prompt! To finally stay in your
+terminal, create the file `~/.gnupg/gpg-agent.conf` with the following content:
 
     pinentry-program /usr/bin/pinentry-curses

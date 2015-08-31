@@ -10,7 +10,7 @@
     rel="alternate" type="application/xhtml+xml"
   />
   <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
-  <updated>2015-07-07T06:55:30Z</updated>
+  <updated>2015-08-31T19:30:29Z</updated>
   <author>
     <name>Pierre 'catwell' Chapuis</name>
     <uri>http://catwell.info/</uri>
@@ -212,7 +212,7 @@ Eventually, this is a matter of choice. Avdi is right: fat tools usually exist f
     />
     <id>tag:blog.separateconcerns.com,2014-10-24:cli-passwords</id>
     <published>2014-10-24T21:30:00Z</published>
-    <updated>2014-10-24T21:30:00Z</updated>
+    <updated>2015-08-31T21:30:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         
@@ -231,12 +231,15 @@ gpg: WARNING: GnuPG will not work properly - please configure
 that tool to not interfere with the GnuPG system!
 </code></pre>
 
-<p>You can solve that this way:</p>
+<p>The Gnome keyring is an annoying piece of software that replaces password prompts for several tools including SSH and GPG. you can disable it this way:</p>
 
-<pre><code>ln -sf /dev/null /etc/xdg/autostart/gnome-keyring-gpg.desktop
+<pre><code>mkdir -p ~/.config/autostart
+cd !$
+cp /etc/xdg/autostart/gnome-keyring-* .
+for i in *; do echo &quot;Hidden=true&quot; &gt;&gt; $i; done
 </code></pre>
 
-<p>... but then it will use another graphical prompt! To stay in your terminal, create the file <code>~/.gnupg/gpg-agent.conf</code> with the following content:</p>
+<p>... but then GPG will use yet another graphical prompt! To finally stay in your terminal, create the file <code>~/.gnupg/gpg-agent.conf</code> with the following content:</p>
 
 <pre><code>pinentry-program /usr/bin/pinentry-curses
 </code></pre>

@@ -20,7 +20,7 @@ TPL.html_post = [[
     <div id="container">
     <header>
       <h1>{{{title}}}</h1>
-      <h4>published {{shortdate}}</h4>
+      <h4>published {{shortdate}}{{#updated}}, updated {{updated}}{{/updated}}</h4>
     </header>
     {{{content}}}
     </div>

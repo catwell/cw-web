@@ -116,6 +116,12 @@ local process_all = function()
                 fragment = fragment,
             }
         }
+        if metadata.updated then
+            sdate = Date.Format("yyyy-mm-dd"):tostring(udate)
+            if sdate ~= entries[i].shortdate then
+                entries[i].updated = sdate
+            end
+        end
     end
     local entry
     for i=1,#entries do
