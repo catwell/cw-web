@@ -2,6 +2,10 @@
 % Pierre Chapuis
 % 2015-03-08 12:00:00
 
+<!--@
+  updated = "2015-10-16 16:30:00"
+-->
+
     ::description::
     Add automated testing to your Lua open source projects for free.
 
@@ -11,7 +15,7 @@ Your test suite will work well with Travis as long as executing it returns 0 on 
 
 Travis does not support Lua out of the box, but using it with Lua projects is not hard because [moteus](https://github.com/moteus) has done all the hard work for you. You just have to clone [this repository](https://github.com/moteus/lua-travis-example) and copy the `.travis` directory to yours.
 
-After that, you only have to write a single YAML file, `.travis.yml`. For example, here is [the one I wrote for Haricot](https://github.com/catwell/haricot/blob/b2f2e59ddf4df7d4d12b1cc72216ad2444e7d270/.travis.yml).
+After that, you only have to write a single YAML file, `.travis.yml`. For example, here is [the one I wrote for Haricot](https://github.com/catwell/haricot/blob/master/.travis.yml).
 
 Most sections should be self-explanatory. `install` is where you set up your dependencies. The first line calls moteus' script which lets you use Lua and LuaRocks. A separate build and test run will occur for every Lua version declared in `matrix`; you can comment some lines there if you do not want to test some Lua versions. For Haricot I need [Beanstalk](http://kr.github.io/beanstalkd/) running in the background so I start it in `before_script`. `script` is where you run your actual tests.
 

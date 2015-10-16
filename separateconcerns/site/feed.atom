@@ -10,7 +10,7 @@
     rel="alternate" type="application/xhtml+xml"
   />
   <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
-  <updated>2015-08-31T19:30:29Z</updated>
+  <updated>2015-10-16T14:26:50Z</updated>
   <author>
     <name>Pierre 'catwell' Chapuis</name>
     <uri>http://catwell.info/</uri>
@@ -114,7 +114,7 @@ Oh, and by the way, with this whole systemd thing, I am semi-seriously consideri
     />
     <id>tag:blog.separateconcerns.com,2015-03-08:travis-lua</id>
     <published>2015-03-08T12:00:00Z</published>
-    <updated>2015-03-08T12:00:00Z</updated>
+    <updated>2015-10-16T16:30:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         
@@ -125,7 +125,7 @@ Oh, and by the way, with this whole systemd thing, I am semi-seriously consideri
 
 <p>Travis does not support Lua out of the box, but using it with Lua projects is not hard because <a href="https://github.com/moteus">moteus</a> has done all the hard work for you. You just have to clone <a href="https://github.com/moteus/lua-travis-example">this repository</a> and copy the <code>.travis</code> directory to yours.</p>
 
-<p>After that, you only have to write a single YAML file, <code>.travis.yml</code>. For example, here is <a href="https://github.com/catwell/haricot/blob/b2f2e59ddf4df7d4d12b1cc72216ad2444e7d270/.travis.yml">the one I wrote for Haricot</a>.</p>
+<p>After that, you only have to write a single YAML file, <code>.travis.yml</code>. For example, here is <a href="https://github.com/catwell/haricot/blob/master/.travis.yml">the one I wrote for Haricot</a>.</p>
 
 <p>Most sections should be self-explanatory. <code>install</code> is where you set up your dependencies. The first line calls moteus&#39; script which lets you use Lua and LuaRocks. A separate build and test run will occur for every Lua version declared in <code>matrix</code>; you can comment some lines there if you do not want to test some Lua versions. For Haricot I need <a href="http://kr.github.io/beanstalkd/">Beanstalk</a> running in the background so I start it in <code>before_script</code>. <code>script</code> is where you run your actual tests.</p>
 
