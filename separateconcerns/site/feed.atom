@@ -10,7 +10,7 @@
     rel="alternate" type="application/xhtml+xml"
   />
   <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
-  <updated>2015-11-06T22:21:30Z</updated>
+  <updated>2015-11-11T20:13:13Z</updated>
   <author>
     <name>Pierre 'catwell' Chapuis</name>
     <uri>http://catwell.info/</uri>
@@ -1155,7 +1155,7 @@ So, what did I think of it? Well, finally I could see myself write a serious Web
     />
     <id>tag:blog.separateconcerns.com,2013-06-20:three-years-proprietary-projects</id>
     <published>2013-06-20T00:40:00Z</published>
-    <updated>2013-06-20T00:40:00Z</updated>
+    <updated>2015-11-11T21:15:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         
@@ -1301,6 +1301,8 @@ So, what did I think of it? Well, finally I could see myself write a serious Web
 <p>So we thought: we have done it, why not make it accessible to everybody? This is what Physalis is: Moodstocks&#39; image signature distribution system generalized so that you can leverage it for your own mobile application.</p>
 
 <p>Physalis will be available in private alpha for selected users soon, under its real brand name (Physalis is only its &quot;internal plant-themed name&quot;). If you are interested in trying it out, <a href="https://twitter.com/pchapuis">get in touch</a>. The requirements are that you should be making a mobile application and ready to communicate on a regular basis with us: we are doing this alpha to collect useful feedback.</p>
+
+<em>EDIT: Physalis was eventually released in August 2013 as <a href="https://winch.io/">Winch</a>.</em>
       </div>
     </content>
   </entry>

@@ -2,6 +2,10 @@
 % Pierre 'catwell' Chapuis
 % 2013-06-20 00:40:00
 
+<!--@
+  updated = "2015-11-11 21:15:00"
+-->
+
     ::description::
     Projects I have worked on at Moodstocks over the last three years.
 
@@ -143,3 +147,4 @@ While we were building Dandelion and through our experience with our clients, we
 
 Physalis will be available in private alpha for selected users soon, under its real brand name (Physalis is only its "internal plant-themed name"). If you are interested in trying it out, [get in touch](https://twitter.com/pchapuis). The requirements are that you should be making a mobile application and ready to communicate on a regular basis with us: we are doing this alpha to collect useful feedback.
 
+*EDIT: Physalis was eventually released in August 2013 as [Winch](https://winch.io/).*
