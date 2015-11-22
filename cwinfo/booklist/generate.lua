@@ -41,7 +41,7 @@ for j=1,#books do
   book = books[j]
   if type(book.cover) == "table" then
     book.cover = string.format(
-      "http://ecx.images-amazon.com/images/I/%s._SL160_.jpg",
+      "https://images-na.ssl-images-amazon.com/images/I/%s._SL160_.jpg",
       book.cover.amazon
     )
   end
