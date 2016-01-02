@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+ "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <title>catwell.info - Open Source</title>
+  <meta name="description" content="catwell.info - Open Source"/>
+  <link rel="icon" type="image/png" href="..assets/fav.png"/>
+  <link href="../assets/style.css" rel="stylesheet" type="text/css"
+   media="screen"/>
+</head>
+
+<body>
+
+  <script type="text/javascript">
+    // <![CDATA[
+    // Email obfuscator script 2.1 by Tim Williams, University of Arizona
+    // Random encryption key feature by Andrew Moulden, Site Engineering Ltd
+    // This code is freeware provided these four comment lines remain intact
+    // A wizard to generate this code is at http://www.jottings.com/obfuscator/
+    // Adapted by Pierre Chapuis.
+    function cw_email() {
+      var coded = "GK3Ytkk@KEGlkIV7w.7n"
+      var key = "ZaPqUc5Vhj438WDmMY1zOKrJBGivlsudCeNHTRSx92Eyg0Ibkn7LFtpfAQXwo6"
+      var shift = coded.length
+      var link = ""
+      var ltr
+      for (i=0; i<coded.length; i++) {
+        if (key.indexOf(coded.charAt(i))==-1) {
+          ltr = coded.charAt(i);
+          link += (ltr);
+        }
+        else {
+          ltr = (key.indexOf(coded.charAt(i))-shift+key.length) % key.length;
+          link += (key.charAt(ltr));
+        }
+      }
+      return link;
+    }
+    // ]]>
+  </script>
+
+  <div id="head"></div>
+  <div id="container">
+    <p>
+      I maintain the following Open Source projects. Most of them are written in <a href="http://www.lua.org/">Lua</a> and MIT licensed.
+    </p>
+    <p>
+      If you report an issue with one of them, I will do my best to fix it. If you use them in production, I would certainly appreciate if you <script type="text/javascript">
+        // <![CDATA[
+        document.write("<a href='mailto:"+cw_email()+"'>"+"told me"+"</a>")
+        // ]]>
+      </script><noscript>told me</noscript>.
+    </p>
+    <ul>
+      <li>
+        <a href="https://lua-toolbox.com/">Lua Toolbox</a>: website to discover, choose and recommend Lua modules
+      </li>
+      <li>
+        <a href="https://github.com/catwell/fakeredis">fakeredis</a>: <a href="http://redis.io/">Redis</a> mock for Lua with the same interface as <a href="https://github.com/nrk/redis-lua">redis-lua</a>
+      </li>
+      <li>
+        <a href="https://github.com/catwell/haricot">Haricot</a>: <a href="http://kr.github.io/beanstalkd/">Beanstalk</a> client for Lua
+      </li>
+      <li>
+        <a href="https://github.com/catwell/cwtest">cwtest</a>: my reinvention of the "test helper" wheel
+      </li>
+      <li>
+        <a href="https://github.com/catwell/lua-mirrorfs">lua-mirrorfs</a>: Lua module that implements a FUSE mirroring a directory, and a starting point to write other FUSE filesystems in Lua
+      </li>
+      <li>
+        <a href="https://github.com/catwell/luajit-msgpack-pure">luajit-msgpack-pure</a>: <a href="http://msgpack.org/">MessagePack</a> implemented in pure LuaJIT
+      </li>
+      <li>
+        <a href="https://github.com/catwell/lua-chacha">lua-chacha</a>: Lua C module implementing the ChaCha stream cipher
+      </li>
+      <li>
+        <a href="https://github.com/catwell/lua-http-digest">lua-http-digest</a>: client-side HTTP Digest Authentication for LuaSocket
+      </li>
+      <li>
+        <a href="https://github.com/catwell/lua-multipart-post">lua-multipart-post</a>: Lua HTTP Multipart Post helper that does just that
+      </li>
+      <li>
+        <a href="https://github.com/catwell/tolog">tolog</a>: simple C program to make software that logs to standard output play nice with logrotate
+      </li>
+    </ul>
+
+    <p>
+      For more, see my <a href="https://github.com/catwell">GitHub account</a>.
+    </p>
+
+    <div class="center h-card"><p>[ <a href="..">home</a> ]</p></div>
+
+  </div>
+
+</body>
+
+</html>
