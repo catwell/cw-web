@@ -1169,4 +1169,22 @@ return {
     cover = "imgs/placeholder.jpg",
     authors = {"Justin Jackson"},
   },
+  {
+    title = "Digital Wars: Apple, Google, Microsoft and the Battle for the Internet",
+    url = "http://amzn.to/1JQghfN",
+    cover = {amazon = "41BcuVE5XYL"},
+    authors = {"Charles Arthur"},
+  },
+  {
+    title = "High Output Management",
+    url = "http://amzn.to/1JQgkYS",
+    cover = {amazon = "512wwO4mkOL"},
+    authors = {"Andrew S. Grove"},
+  },
+  {
+    title = "Keynes, Hayek: The Clash that Defined Modern Economics",
+    url = "http://amzn.to/1Vxq7dh",
+    cover = {amazon = "51mW%2BaP4b4L"},
+    authors = {"Nicholas Wapshott"},
+  },
 }
