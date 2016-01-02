@@ -1140,12 +1140,6 @@ return {
     authors = {"Mikkel Svane"},
   },
   {
-    title = "Digital Wars",
-    url = "http://amzn.to/1Nku66M",
-    cover = {amazon = "41BcuVE5XYL"},
-    authors = {"Charles Arthur"},
-  },
-  {
     title = "The success of Open Source",
     url = "http://amzn.to/1NkubHy",
     cover = {amazon = "518YNMNVJQL"},
