@@ -92,7 +92,7 @@ local process_all = function()
         fname = fmt("articles/%s.md", fnpart)
         url = fmt("%s.html", fnpart)
         content, metadata = process_one(fname)
-        pdate = parse_date(metadata.date)
+        pdate = assert(parse_date(metadata.date))
         sdate = Date.Format("yyyy-mm-dd"):tostring(pdate)
         pdate:toUTC()
         udate = pdate
