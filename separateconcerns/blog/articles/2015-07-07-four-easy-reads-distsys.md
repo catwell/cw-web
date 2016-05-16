@@ -2,6 +2,10 @@
 % Pierre Chapuis
 % 2015-07-07 09:00:00
 
+<!--@
+  updated = "2016-05-16 17:20:00"
+-->
+
     ::description::
     A few links to documents that help understanding why and how trade-offs
     must be made in distributed systems.
@@ -25,6 +29,12 @@ This document, by Mikito Takada (Trifacta), is longer than the others. It is the
 ## [Building on quicksand](http://www-db.cs.wisc.edu/cidr/cidr2009/Paper_133.pdf)
 
 I could hardly leave that 2009 paper by Pat Helland and Dave Campbell out of this list. It starts with the idea that, as the distribution of systems increases, latency makes synchronicity intractable and pushes us towards asynchronous designs. The rest of the paper is a discussion of the trade-offs involved. The very interesting idea in that paper (also found in other papers by Pat Helland) is that it all comes down to a problem of risk management and reconciliation. If asynchronous software can not ensure something will happen, it may make a guess and fix the result later if it was wrong. That may include having to make excuses to an actual human being. An important corollary is that the distributed nature of software permeates [all the way to the user interface](http://bravenewgeek.com/distributed-systems-are-a-ux-problem/) (which is why you may have seen me ranting about how we need to start forming cross-functional teams, with developers who understand UX and designers who get distributed systems).
+
+## Bonus: [Why Logical Clocks are Easy](http://queue.acm.org/detail.cfm?id=2917756)
+
+I said on Hacker News that, if I wrote that article today (in May 2016), I would add this article to the list. I [was advised](https://news.ycombinator.com/item?id=11690113) to edit the original blog post, so I did.
+
+Published in April 2016 in ACM Queue, this article by Carlos Baquero and Nuno Preguiça may be the best introduction to causality I know. Causality is a very important concept in distributed systems. In a nutshell, the idea is to answer the question: given two events, could one have influenced the other? In other words: when the entity performing the second event did, dit it have any knowledge that the first happened? This article introduces causality and gives usual ways to represent it in theory, with causal histories, and in practice, with vector clocks and version vectors as well as their dotted variants.
 
 ## Conclusion
 

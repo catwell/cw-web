@@ -10,7 +10,7 @@
     rel="alternate" type="application/xhtml+xml"
   />
   <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
-  <updated>2016-04-03T21:00:12Z</updated>
+  <updated>2016-05-16T15:23:21Z</updated>
   <author>
     <name>Pierre 'catwell' Chapuis</name>
     <uri>http://catwell.info/</uri>
@@ -196,7 +196,7 @@ I have long thought that the financial world used HFT as a scapegoat (especially
     />
     <id>tag:blog.separateconcerns.com,2015-07-07:four-easy-reads-distsys</id>
     <published>2015-07-07T09:00:00Z</published>
-    <updated>2015-07-07T09:00:00Z</updated>
+    <updated>2016-05-16T17:20:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         
@@ -220,6 +220,12 @@ I have long thought that the financial world used HFT as a scapegoat (especially
 <h2><a href="http://www-db.cs.wisc.edu/cidr/cidr2009/Paper_133.pdf">Building on quicksand</a></h2>
 
 <p>I could hardly leave that 2009 paper by Pat Helland and Dave Campbell out of this list. It starts with the idea that, as the distribution of systems increases, latency makes synchronicity intractable and pushes us towards asynchronous designs. The rest of the paper is a discussion of the trade-offs involved. The very interesting idea in that paper (also found in other papers by Pat Helland) is that it all comes down to a problem of risk management and reconciliation. If asynchronous software can not ensure something will happen, it may make a guess and fix the result later if it was wrong. That may include having to make excuses to an actual human being. An important corollary is that the distributed nature of software permeates <a href="http://bravenewgeek.com/distributed-systems-are-a-ux-problem/">all the way to the user interface</a> (which is why you may have seen me ranting about how we need to start forming cross-functional teams, with developers who understand UX and designers who get distributed systems).</p>
+
+<h2>Bonus: <a href="http://queue.acm.org/detail.cfm?id=2917756">Why Logical Clocks are Easy</a></h2>
+
+<p>I said on Hacker News that, if I wrote that article today (in May 2016), I would add this article to the list. I <a href="https://news.ycombinator.com/item?id=11690113">was advised</a> to edit the original blog post, so I did.</p>
+
+<p>Published in April 2016 in ACM Queue, this article by Carlos Baquero and Nuno Preguiça may be the best introduction to causality I know. Causality is a very important concept in distributed systems. In a nutshell, the idea is to answer the question: given two events, could one have influenced the other? In other words: when the entity performing the second event did, dit it have any knowledge that the first happened? This article introduces causality and gives usual ways to represent it in theory, with causal histories, and in practice, with vector clocks and version vectors as well as their dotted variants.</p>
 
 <h2>Conclusion</h2>
 
