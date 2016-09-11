@@ -54,7 +54,7 @@ TPL.html_index = [[
       <h1>Separate Concerns</h1>
       <h4>
         <a href="http://catwell.info" rel="me">catwell</a>'s
-        journal on system architecture
+        online journal
         [<a href="feed.atom">subscribe</a>]
       </h4>
     </header>

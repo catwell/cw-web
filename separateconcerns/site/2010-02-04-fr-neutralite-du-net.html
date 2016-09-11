@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Un point sur ce qu&#39;est la neutralité du Net.">
+    <link href="css/theme.css" rel="stylesheet" type="text/css">
+    
+    <link
+      rel="alternate" type="application/atom+xml"
+      href="http://blog.separateconcerns.com/feed.atom"
+    />
+    <title>(French) Neutralité du Net</title>
+  </head>
+  <body>
+    <div id="container">
+    <header>
+      <h1>(French) Neutralité du Net</h1>
+      <h4>published 2010-02-04</h4>
+    </header>
+    
+
+<p>Tout le monde parle de neutralité du Net en ce moment. J&#39;ai pensé que ça pourrait être une bonne idée de faire un point là-dessus, parce que j&#39;entends et je lis tout et n&#39;importe quoi, en particulier dans la presse française.</p>
+
+<p>La première étape pour appréhender le problème de la neutralité du Net, c&#39;est de la définir. Benjamin Bayart <a href="http://blog.fdn.fr/post/2010/01/12/Rencontre-avec-l-ARCEP-sur-la-neutralit%C3%A9-du-r%C3%A9seau">s&#39;y est essayé devant l&#39;ARCEP</a> et je suis d&#39;accord avec lui pour l&#39;essentiel, même si nos points de vue divergent probablement sur certains points de détail.</p>
+
+<p>D&#39;abord, il faut comprendre que la neutralité du Net est une qualité essentielle. J&#39;entends par là qu&#39;Internet est par définition neutre, et donc qu&#39;un réseau non-neutre n&#39;est pas Internet</p>
+
+<p>Qu&#39;est-ce qu&#39;Internet ? Comme son nom l&#39;indique, c&#39;est un ensemble de réseaux qui se sont mis d&#39;accord pour se regrouper et permettre aux entités qui les composent de discuter entre elles. Que les puristes me pardonnent les raccourcis techniques qui vont suivre.</p>
+
+<p>Les réseaux qui composent Internet sont appelés systèmes autonomes (AS), parce que leurs dirigeants sont libres de définir la manière dont les messages sont transportés en leur sein ainsi que les règles utilisées pour que ces messages arrivent à bonne destination. Pour faire une analogie fréquente : peu importe si les facteurs du bureau de poste de Trifouilly-les-oies distribuent le courrier à bicyclette ou en scooter, et peu importe s&#39;ils utilisent un plan du quartier ou leur GPS pour trouver le 47 rue des Lilas, pourvu que Mme Michu, son occupante, reçoive son courrier en bon état.</p>
+
+<p>Par contre, il est indispensable que le courrier soit distribué dans des enveloppes à un format standard sur lesquelles figure une adresse. Sur Internet, les lettres sont des paquets, composés d&#39;un message (<em>Protocol Data Unit</em>) enveloppé dans des en-têtes au format <em>Internet Protocol</em>, parmi lesquels figure l&#39;adresse du destinataire. Ces en-têtes (enveloppes) sont les mêmes dans tous les AS (bureaux de poste) du monde et les adresses sont uniques. C&#39;est ce qui fait que Mme Michu peut correspondre avec son amant chinois, M. Chang.</p>
+
+<p>Chaque bureau de poste est, je l&#39;ai dit, libre de répertorier les adresses qui en dépendent comme il veut, mais il faut que le bureau de Trifouilly-les-oies sache quoi faire des lettres destinées à M. Chang. Sur Internet, chaque AS est identifié par un numéro unique, un peu comme un code postal à l&#39;échelle mondiale, et maintient des tables permettant de savoir de quel AS dépend chaque adresse IP. Comme la structure d&#39;Internet est dynamique (de nouveaux AS peuvent apparaitre, d&#39;autres disparaitre, les associations IP - AS peuvent changer...), les AS s&#39;échangent ces informations en permanence suivant le <em>Border Gateway Protocol</em>, le protocole de routage dans l&#39;Internet.</p>
+
+<p>La règle fondamentale de neutralité dans tout ça est très simple à comprendre avec mon analogie : la poste (les FAI) transporte le courrier (les paquets) de son point de départ à son point d&#39;arrivée, et elle ne fait que ça. Le facteur n&#39;ouvre pas les lettres pour lire les déclarations enflammées de M. Chang à Mme Michu, et il ne glisse pas de publicité dans les enveloppes. Sur Internet, il n&#39;y a pas non plus de service de type Chronopost : un AS peut passer un accord avec ses voisins pour qu&#39;ils transportent certains paquets plus vite, mais il ne l&#39;écrit pas dans les en-têtes IP, et même s&#39;il le fait personne n&#39;a l&#39;obligation de respecter ces instructions. On dit qu&#39;un réseau IP, et en particulier Internet, ne gère pas les règles de qualité de service (QoS) mais fait simplement de son mieux (<em>Best Effort</em>).</p>
+
+<p>Maintenant, on peut essayer de voir ce qui n&#39;est pas neutre, et donc pas Internet. Un réseau où les machines n&#39;ont pas d&#39;adresses IP publiques n&#39;est pas Internet. Elles ont des adresses IP, certes, mais une machine sur Internet ne peut pas leur envoyer de paquets directement. Bayart donne l&#39;exemple des opérateurs mobiles, je vais en prendre un autre : si vous êtes connecté au <a href="http://resel.fr/">ResEl</a>, vous n&#39;êtes pas sur Internet, parce que l&#39;adresse attribuée à votre interface réseau n&#39;est pas accessible de l&#39;extérieur. C&#39;est ce qui fait que vous ne pouvez pas héberger votre serveur web, par exemple. C&#39;est une bonne occasion d&#39;enfoncer une porte ouverte : Internet a un coût. Je ne connais pas de vrai Fournisseur d&#39;Accès à Internet pour 10 € par an.</p>
+
+<p>Un FAI ne devrait pas non plus empêcher certains paquets de passer. Si le votre bloque le peer-to-peer, il viole le principe de neutralité. En fait, le simple fait qu&#39;il sache que vous faites du peer-to-peer suffit : il a regardé dans l&#39;enveloppe. Si votre FAI traite les paquets d&#39;un fournisseur de service (disons Dailymotion) plus vite que ceux d&#39;un autre (disons Youtube), il y a aussi de fortes chances qu&#39;il viole la neutralité du Net, sans parler de la législation sur la concurrence. Si quand vous consultez le web un bandeau s&#39;affiche en haut de chaque page et vous rappelle que votre connexion est fournie par Machin, vous n&#39;êtes pas sur Internet. Si vous ne pouvez pas installer un serveur SMTP sur le port 25 de votre machine... vous avez compris l&#39;idée.</p>
+
+<p>Un point tendancieux : je considère personnellement qu&#39;Internet se limite à ce que j&#39;ai décrit plus haut, ce qui veut dire qu&#39;un filtrage BGP ou sur les IP est contraire à la neutralité du Net mais un filtrage au niveau des noms de domaine (DNS) pas forcément, dans le sens où vous bannir des pages blanches n&#39;empêche pas de vous écrire. Je ne dis pas que j&#39;y suis favorable, juste que c&#39;est moins grave.</p>
+
+<p>Maintenant, pourquoi la neutralité du Net est-elle si importante ? Parce que c&#39;est ce qui lui permet de garantir des droits fondamentaux tels que la liberté d&#39;expression (c&#39;est pas moi qui le dit, <a href="http://www.conseil-constitutionnel.fr/conseil-constitutionnel/francais/les-decisions/acces-par-date/decisions-depuis-1959/2009/2009-580-dc/decision-n-2009-580-dc-du-10-juin-2009.42666.html">c&#39;est le Conseil Constitutionnel</a>) ou la libre concurrence, et aussi parce que c&#39;est parce qu&#39;Internet est neutre qu&#39;il peut fonctionner, techniquement et d&#39;un point de vue diplomatique. Simplement parce que si on commence à dire qu&#39;Internet n&#39;est plus neutre (ou ouvert, c&#39;est à peu près équivalent), alors c&#39;est qu&#39;<a href="http://twitter.com/timoreilly/status/7924286619">on en laisse le contrôle à quelqu&#39;un</a>, et les autres ne risquent pas d&#39;être d&#39;accord.</p>
+
+<p>Alors évidemment, il y en a que ça tenterait bien de contrôler Internet. On l&#39;a vu, la neutralité va plus loin que l&#39;absence de censure, mais elle l&#39;inclut, et c&#39;est bien de cela qu&#39;il est question quand on vous parle de <a href="http://www.generation-nt.com/loppsi-filtrage-net-juge-tardy-actualite-951391.html">filtrage</a>. Bien entendu, le gouvernement et leurs amis des médias vous diront qu&#39;ils cherchent à empêcher les méchants terroristes et leurs comparses pédophiles de nuire, parce qu&#39;ils ne vont pas vous dire ouvertement qu&#39;ils veulent juste reprendre le contrôle de l&#39;information. Demandez donc à M. Chang ce qu&#39;il en pense !</p>
+
+<p>Donc non, la neutralité du Net n&#39;est <a href="http://www.youtube.com/watch?v=mP01t0Z4Hr8">pas une obsession de libristes illuminés</a>, et les artistes qui la comprennent <a href="http://futureofmusic.org/files/FCCopeninternet2010.rem.pdf">n&#39;en pensent pas ce qu&#39;on voudrait bien nous faire croire</a>. La France, en la matière, est en train de nager à contre-courant ; elle finira par s&#39;épuiser et couler si elle persiste.</p>
+
+Pour conclure, un conseil : si vous voulez vous faire une idée sur le sujet, éteignez votre télévision, débranchez votre radio et oubliez les journaux. On ne juge pas les abus d&#39;un état en prenant pour argent comptant sa propagande. Le seul endroit où l&#39;on peut s&#39;informer objectivement sur Internet en France, c&#39;est le Net lui-même. Du moins, tant qu&#39;il lui reste un semblant de liberté...
+    </div>
+    <div id="footer">
+      [ <a href="index.html">home</a> ]
+    </div>
+    
+  </body>
+</html>
