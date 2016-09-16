@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Thoughts on various things: msys2, sailfish, distributed systems, palm.">
+    <link href="css/theme.css" rel="stylesheet" type="text/css">
+    
+    <link
+      rel="alternate" type="application/atom+xml"
+      href="http://blog.separateconcerns.com/feed.atom"
+    />
+    <title>Thoughts 1</title>
+  </head>
+  <body>
+    <div id="container">
+    <header>
+      <h1>Thoughts 1</h1>
+      <h4>published 2016-09-16</h4>
+    </header>
+    
+
+<h2>Thoughts</h2>
+
+<p>I have not found the motivation to write here for a while, so I will be trying something new. This is the first of a series of posts which will be composed of a few smaller unrelated snippets, mostly things I would usually post in a smaller form on Twitter. They will relate to anything I will have found interesting recently. Some will be practical and some will just be reflections about a give topic.</p>
+
+<h2>MSYS2</h2>
+
+<p>If, like me, you are mostly a Linux user but sometimes have to work on a Windows machine, have a look at <a href="https://msys2.github.io/">MSYS2</a>. It allows you to quickly get a decent environment set up, with Bash and a package manager, (<a href="https://www.archlinux.org/pacman/">pacman</a>), which you can use to install things like Git.</p>
+
+<h2>Sailfish</h2>
+
+<p>I have had my <a href="https://jolla.com/jollac/">Jolla C</a> for two months now. I have not spent as much time as I would like playing with it, but so far I am pretty happy with Sailfish. Like <a href="https://en.wikipedia.org/wiki/WebOS">WebOS</a>, it relies heavily on gestures, which makes most of the features of the phone usable with the thumb of a single hand. There are not many applications in the store so far but the default applications are good in general and most Android applications work well, I could run <a href="https://meetlima.com">Lima</a> on it without any problem for instance.</p>
+
+<p>From a programmer&#39;s point of view, it is all I hoped for. I went from zero to Hello World on the device in less than an hour. Coding happens in QT Creator and the UI of the application is described with <a href="https://en.wikipedia.org/wiki/QML">QML</a>. The SDK ships with an emulator that runs in VirtualBox, but also with a second virtual machine which is used to compile code, which means you don&#39;t have to install a cross-compiler on your local machine. Applications, which are technically RPM packages, can be deployed to hardware devices via USB or SSH over WiFi.</p>
+
+<p>It also has to be noted that the native terminal application is very good, much better than anything I saw on Android. A SSH client is included so it can occasionally be used to log into a server.</p>
+
+<p>The main reason I have not made that device my main phone yet is that its battery life is much worse than that of my Android phone, but hopefully that is something that can be solved.</p>
+
+<h2>The fractal dimension of software</h2>
+
+<p>I stumbled upon <a href="https://twitter.com/jtolds/status/758716505320075266">an insightful tweet</a> about software development time estimation. The larger the tasks we try to estimate, the more wrong we will be. Maybe an estimate as a single number representing time is not enough; maybe we should also try to figure out the <a href="https://en.wikipedia.org/wiki/Fractal_dimension">fractal dimension</a> of the job to be done.</p>
+
+<h2>Distributed systems are a UX problem</h2>
+
+<p>Everyday I grow more convinced that <a href="http://bravenewgeek.com/distributed-systems-are-a-ux-problem/">this is true</a>. Not only of failure conditions, but even more so of things like reconciliation strategies in case of causally concurrent events, for instance how to represent data with <a href="https://en.wikipedia.org/wiki/Conflict-free_replicated_data_type">CRDTs</a>.</p>
+
+<p>It is a problem, because people doing distributed systems often either do not want to do UX, do not have the competence to do it, or just do not have the permission. We tend to be at the bottom of the stack, and some people think it would be a disaster to let us work on anything user-facing. On the other hand, most people actively doing UX do not understand or care for distributed systems issues.</p>
+
+<p>The result of this is that, if we design without taking technical constraints into account, we end up with systems that cannot be implemented without relying on central authority. Add to that the fact that it is almost always much easier to implement something in a centralized way, and you have one reason why the Cloud is winning and distributed alternatives to popular services never seem to take off.</p>
+
+<h2>Palm</h2>
+
+<p>I stumbled upon two fantastic documents related to Palm recently. The first is a series of blog posts called <a href="http://lowendmac.com/2016/a-history-of-palm-part-1-before-the-palmpilot/">A History of Palm</a>. Very interesting, even though I disagree with the conclusion of the fifth post. What killed the Pre line at HP was not that WebOS did not take off; they never let it a chance to. I have been using a Pre 3 for a long time (I had pre-ordered it so I was one of the lucky few to have it in France) and it was a fantastic device, extremely influential on future evolutions of both iOS and Android (after all, the interface was the brainchild of <a href="https://en.wikipedia.org/wiki/Mat%C3%ADas_Duarte">Mathias Duarte</a>). What ended Palm&#39;s legacy was the <a href="https://en.wikipedia.org/wiki/Mark_Hurd#Resignation">eviction of Mark Hurd</a> and his replacement with <a href="https://en.wikipedia.org/wiki/L%C3%A9o_Apotheker">Léo Apotheker</a>, who hates hardware. Probably one of the worst mistakes the HP board ever made.</p>
+
+<p>The second document is the <a href="designingmlearning.com/resources/ZenOfPalm.pdf">Zen of Palm</a>, a design guide for Palm OS from 2003 which is still pretty relevant today in some ways.</p>
+
+<h2>Is preemption the root of all evil?</h2>
+
+<p>Two decades years ago <a href="https://en.wikipedia.org/wiki/Computer_multitasking#Cooperative_multitasking">cooperative scheduling</a> was more frequent than preemptive scheduling. Windows 3.1 was completely cooperatively scheduled, which means that all applications had to yield to the system scheduler, or they would block the whole system. In Mac OS 9, the threading API was cooperative as well within a process, even though different applications would be scheduled preemptively by the kernel.</p>
+
+Modern OSs do not make much distinction between a thread and a process anymore, threads are basically processes which share memory, and they are scheduled preemptively. I have come to think that this design results in code of lower quality, and which is harder to reason about. Of course, it is still possible to use event loops or programming languages which do their own preemptive scheduling (like Lua)...
+    </div>
+    <div id="footer">
+      [ <a href="index.html">home</a> ]
+    </div>
+    
+  </body>
+</html>
