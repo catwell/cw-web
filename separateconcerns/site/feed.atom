@@ -10,7 +10,7 @@
     rel="alternate" type="application/xhtml+xml"
   />
   <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
-  <updated>2016-12-07T21:44:37Z</updated>
+  <updated>2016-12-07T21:55:22Z</updated>
   <author>
     <name>Pierre 'catwell' Chapuis</name>
     <uri>http://catwell.info/</uri>
@@ -31,7 +31,7 @@
 
 <h2 id="on-call">On Call</h2>
 
-<p><a href="https://twitter.com/alicegoldfuss">Alice Goldfuss</a> started <a href="https://dbsmasher.com/2016/12/07/on-being-on-call/">a debate</a> about having developers on call. I am firmly in the camp of those who think it is a good thing, probably because I was a sysadmin before being a professional software engineer. But this means those developers must have the power to refuse to ship broken code that may make the pager go off as well.</p>
+<p><a href="https://twitter.com/alicegoldfuss">Alice Goldfuss</a> started <a href="https://dbsmasher.com/2016/12/07/on-being-on-call/">a debate</a> about having developers on call. I am firmly in the camp of those who think it is a good thing, probably because I was a sysadmin before being a software engineer. But this means those developers must have the power to refuse to ship broken code that may make the pager go off as well.</p>
 
 <p>In fact, it is all about fostering the sense of ownership, which is the N.1 trait I look for in developers. And this won&#39;t be the first time I have <a href="https://twitter.com/pchapuis/status/222690433308966913">quoted great people</a> <a href="https://blog.separateconcerns.com/2013-03-24-vogels-skills.html">saying similar things</a>!</p>
 
@@ -48,6 +48,12 @@
 <h2 id="can39t-you-just">Can&#39;t you just...?</h2>
 
 <p>Someone made <a href="http://cantyoujust.no/">a nice web page</a> to answer a question we hear pretty often. :)</p>
+
+<h2 id="applications-and-data">Applications and Data</h2>
+
+<p>Here is something I have been believing in for a long time: there is no good technical reason why most Web-based application vendors force you to store your data on <em>their</em> servers. It should be possible to use, say, a presentation application from Google to edit slides stored on Microsoft&#39;s servers.</p>
+
+Sadly, for reasons that probably have a lot to do with business models, things like <a href="https://unhosted.org/adventures/7/Adding-remote-storage-to-unhosted-web-apps.html">remoteStorage</a> did not really take off. But I hope someone will revisit that idea someday, and find a way to make it take off.
       </div>
     </content>
   </entry>
