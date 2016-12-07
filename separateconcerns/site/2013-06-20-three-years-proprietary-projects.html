@@ -21,7 +21,7 @@
 
 <p>Some of the code I write is Open Source, but these days most of it is closed source and property of <a href="http://www.moodstocks.com/">Moodstocks</a>, the startup I work for. For the last three years I have had the chance to work on a lot of really interesting projects, the most significant of which I will talk about now. If you are still a student, maybe that can inspire you to join a startup. Maybe you will even decide to join us in our quest to advance mobile image recognition and applications in general.</p>
 
-<h2>Harvest, the Pikadeo crawler</h2>
+<h2 id="harvest-the-pikadeo-crawler">Harvest, the Pikadeo crawler</h2>
 
 <p>When I joined Moodstocks in April 2010 the team was working on a mobile price comparison application called Pikadeo. The pitch was that you could take a picture of any cultural product (CD, DVD, book...) and it would give you a list of places where you could buy it, sorted by price.</p>
 
@@ -37,7 +37,7 @@
 
 <p>Due to the deprecation of the Pikadeo product, Harvest is no longer used today. It is probably a good thing: it was my first Ruby program so the code was awful, it was way too complex and too tied to AWS (the master instance would run and kill worker instances, it relied a lot on SimpleDB...). That being said, the crawling model was sound.</p>
 
-<h2>Acorn</h2>
+<h2 id="acorn">Acorn</h2>
 
 <p>Once we got crawling sorted out, the image recognition engine itself became the problem. Oak (it has become a tradition to use plant-related names for our projects internally) had been almost entirely written by <a href="https://twitter.com/deltheil">Cédric</a>, Moodstocks&#39; CTO. It was a piece of C++ software, with the image recognition parts isolated in dynamic libraries and a <a href="http://thrift.apache.org/">Thrift</a> layer to interface with the core Ruby on Rails Web application. It was multithreaded, designed to run on a single multicore EC2 instance.</p>
 
@@ -55,7 +55,7 @@
 
 <p>In retrospect, relying on two unstable pieces of software was risky. It turned out well, and Redis was definitely the right choice, especially since Lua Scripting now allows us to use a regular, stable 2.6 version. <a href="http://www.zeromq.org/">0MQ</a> would probably have been a better technical choice than MessagePack-RPC, and plain C better than Ruby, but I believe those choices saved us development time, and time to market was important. Acorn is still in production today, doing its job for legacy clients who use online recognition.</p>
 
-<h2>Moodstocks Notes</h2>
+<h2 id="moodstocks-notes">Moodstocks Notes</h2>
 
 <p>You now know that when I joined Moodstocks it was trying to be a B2C company. However we were seeing interest in licensing our technology, and began to envision a B2B product: Moodstocks API.</p>
 
@@ -73,7 +73,7 @@
 
 <p>Eventually we took the decision not to invest more time in the idea: we were a small team and our now core B2B business needed our attention. Notes&#39; success was a long shot and would have required significant time and money investment so I guess it was the right decision, although I would love to see someone revisit the idea.</p>
 
-<h2>Moodstocks API v2</h2>
+<h2 id="moodstocks-api-v2">Moodstocks API v2</h2>
 
 <p>As I said, Notes was written to help us design our API. Using its feedback and that from the few users of our v1 API, which was more some kind of beta, I set out to write version two.</p>
 
@@ -83,7 +83,7 @@
 
 <p>Another interesting choice was the authentication method, HTTP Digest, which we kept from version one. Theoretically, it had all the right properties and was a standard, so it was the best choice. What we had not realized is how many <a href="http://devblog.avdi.org/2013/02/04/the-trouble-with-http-digest-authentication/">implementations were broken</a> or incomplete (i.e. not supporting nonce reuse, which is a necessity on mobile to reduce the number of HTTP requests). I ended up having to submit patches to a lot of them, and I am not even mentioning .NET land... If I had to do it again today I would probably go with Basic Auth and SSL.</p>
 
-<h2>Acorn Quantizer</h2>
+<h2 id="acorn-quantizer">Acorn Quantizer</h2>
 
 <p>Earlier, I wrote about how I had made Acorn processes single-threaded. This had some advantages, but also a big inconvenient.</p>
 
@@ -103,7 +103,7 @@
 
 <p>The idea is simple once you stop under-estimating the capabilities of SHM on Linux. By default it usually limited to a few MB so you have to increase it a lot for this to work (it can be done with <a href="http://linux.die.net/man/8/sysctl">sysctl</a>). The implementation, on the other hand, is far from trivial. My code uses a <em>lot</em> of pointer arithmetics, I should probably clean it up someday, but in the meantime it does its job perfectly.</p>
 
-<h2>Seed</h2>
+<h2 id="seed">Seed</h2>
 
 <p>The Acorn Quantizer was the last major improvement to our online search stack. Around that time, we resolved on a major technological shift: we would perform image recognition on mobile devices directly instead of doing it on the server. Of course, initially, we would have an hybrid approach where on-device recognition would work as a kind of cache, but the mobile was where we would focus our efforts.</p>
 
@@ -115,7 +115,7 @@
 
 <p>With the current (second) generation of the Seed algorithms, we are actually mostly using the C implementation through the LuaJIT FFI on the server side now. That is because I have been working on other projects while the rest of the team (which is not as comfortable with Lua) was developing them, so I would have been a bottleneck if we had kept the dual stack approach. I may well bring the Lua branch up to date someday though, who knows?</p>
 
-<h2>chksrv and chkcoherence</h2>
+<h2 id="chksrv-and-chkcoherence">chksrv and chkcoherence</h2>
 
 <p>Moodstocks&#39; server-side architecture is <a href="/2013-01-02-startups-soa.html">some kind of SOA</a>. That means we have a lot of different services that run as daemons and need to stay up. chksrv is a medium-sized program in Bash that takes care of this. It is deployed on every instance with a configuration file that indicates which services should be running on that instance, and it makes sure that they are (correctly). It also checks if other instances are up. If something goes wrongs, it warns the &quot;ops team&quot;, who is basically me and Cédric as a backup in case I am not available.</p>
 
@@ -123,7 +123,7 @@
 
 <p>chkcoherence is the ideal complement to chksrv: where the latter checks if services are running, the former verifies that they are doing things right. It is also written in Bash at the top level. I have already written about its concept <a href="/2013-05-28-coherence-checks.html">here</a>.</p>
 
-<h2>Anemone</h2>
+<h2 id="anemone">Anemone</h2>
 
 <p>Anemone is the project that deals with everything related to metrics and measurements at Moodstocks. It is written in Lua and has quite a few different roles:</p>
 
@@ -137,7 +137,7 @@
 
 <p>It also has a web-based dashboard for the team with high-level KPI, written in JavaScript and <a href="http://code.google.com/p/flot/">flot</a>. Someday I might integrate Brett Slatkin&#39;s <a href="http://bslatkin.github.com/cohorts/">Cohort Visualizer</a> into it.</p>
 
-<h2>Dandelion</h2>
+<h2 id="dandelion">Dandelion</h2>
 
 <p>I said earlier that with Seed we generate image signatures on the server and send them to the mobile clients where they are used for recognition. Dandelion is the code name of the service responsible for that.</p>
 
@@ -145,7 +145,7 @@
 
 <p>The server part of Dandelion is written in Lua and depends on pieces like Redis and Beanstalkd, which is why I wrote <a href="https://github.com/catwell/haricot">haricot</a>.</p>
 
-<h2>Physalis</h2>
+<h2 id="physalis">Physalis</h2>
 
 <p>Finally, Physalis is the project I am currently working on. It has not been released yet so I won&#39;t get into the details, but I can explain the reasoning behind it.</p>
 

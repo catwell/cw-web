@@ -21,13 +21,13 @@
     </header>
     
 
-<h2>The State Machine</h2>
+<h2 id="the-state-machine">The State Machine</h2>
 
 <p>Let us consider a system that can take a finite number of states <code>S[1]</code> to <code>S[n]</code> over time.</p>
 
 <p>We can represent the system as a N-node directed graph, where nodes are the states. An arc exists between node <code>S[i]</code> and <code>S[j]</code> if the system can transition from <code>S[i]</code> to <code>S[j]</code>. You probably already know that.</p>
 
-<h2>In Chains</h2>
+<h2 id="in-chains">In Chains</h2>
 
 <p>We will now observe the evolution of the system over time. We will model time discretely. That does not mean that time itself is discrete, but we will observe the system at fixed-interval &quot;ticks&quot;. We call <code>S(t)</code> the state of the system at tick <code>t</code>.</p>
 
@@ -43,7 +43,7 @@
 
 <p>By the way, this is called a Markov Chain.</p>
 
-<h2>Blurry Sights</h2>
+<h2 id="blurry-sights">Blurry Sights</h2>
 
 <p>Now let&#39;s complicate things a little by introducing a separate system that can take states <code>V[1]</code> to <code>V[M]</code>. This second system <code>V</code> is tied to <code>S</code>: at every tick <code>t</code>, the probability distribution of <code>V(t)</code> only depends on <code>S(t)</code>. We will note: <code>O(i,j) = P(V(j) | S[i])</code>.</p>
 
@@ -55,7 +55,7 @@
 
 <p>Now, add more possible colors to <code>S</code> and <code>V</code>, not necessarily the same number for both, to generalize the system.</p>
 
-<h2>The Black Box</h2>
+<h2 id="the-black-box">The Black Box</h2>
 
 <p>Now, here is our problem: imagine that you know how system <code>S</code> works (the probabilities of transition between the states) but that it is hidden in a black box such that you cannot observe it. What you <em>can</em> observe is system <code>V</code>. Is there any way to guess what system <code>S</code> is doing at any time in this setting? If yes, how?</p>
 
@@ -63,7 +63,7 @@
 
 <p>The second question is the one my favorite algorithm, the Viterbi algorithm, answers. Let&#39;s see how it works.</p>
 
-<h2>Make it Code</h2>
+<h2 id="make-it-code">Make it Code</h2>
 
 <p>First we need to represent the problem in a way that can be understood by a computer. I will use the Lua programming language for that.</p>
 
@@ -114,7 +114,7 @@ end
 
 <p>The green part is the Markov chain itself, the blue part corresponds to the observation device. Arcs are labeled with probabilities of transition or observation.</p>
 
-<h2>Stepping Forward</h2>
+<h2 id="stepping-forward">Stepping Forward</h2>
 
 <p>Now we can simulate the behavior of the system.</p>
 
@@ -152,7 +152,7 @@ end
 
 <p>This code is slightly more complicated, but what you should understand is that, at the end of it, <code>S</code> is a vector of <code>L</code> states of the system and <code>V</code> is the corresponding vector of observations. The initial state <code>S[1]</code> is chosen randomly with uniform probabilities.</p>
 
-<h2>Seeing Through the Box</h2>
+<h2 id="seeing-through-the-box">Seeing Through the Box</h2>
 
 <p>Now, let us proceed to guess what happens inside the black box. We do so iteratively: at each tick <code>t</code>, we calculate the most plausible sequence of events that could have led to each possible state of the system, given the observation at <code>t</code> and the results for <code>t-1</code>.</p>
 
@@ -227,7 +227,7 @@ end
 local bestpath = getpath(best_node(trellis[L]))
 </code></pre>
 
-<h2>Does this thing really work?</h2>
+<h2 id="does-this-thing-really-work">Does this thing really work?</h2>
 
 <p>To check if this work, let&#39;s take the actual system out of the box and calculate how much it looks like our estimate:</p>
 
@@ -243,7 +243,7 @@ print(100*ok/L)
 
 <p>The result I got with those parameters is 72% accuracy, to compare to what a naive random process would get (33%).</p>
 
-<h2>Why I love it</h2>
+<h2 id="why-i-love-it">Why I love it</h2>
 
 <p>Let&#39;s go back to the title of this post: now that you know what it does, <em>why</em> is Viterbi&#39;s algorithm my favorite?</p>
 

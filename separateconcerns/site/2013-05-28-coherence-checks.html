@@ -23,7 +23,7 @@
 
 <p>Recently I found a rare, ugly bug in a piece of software that had been in production at Moodstocks for 6 months. The bug itself is not that interesting, but the way I found and fixed it is.</p>
 
-<h2>Story of a bug</h2>
+<h2 id="story-of-a-bug">Story of a bug</h2>
 
 <p>Imagine you have a database where you can index some documents in a full text search engine. Indexing can be turned on and off on a per document basis.</p>
 
@@ -39,7 +39,7 @@ end
 
 <p>Of course, in practice, it is less trivial and only happens in rare corner cases, so your tests don&#39;t catch it...</p>
 
-<h2>This ain&#39;t normal(ized)</h2>
+<h2 id="this-ain39t-normalized">This ain&#39;t normal(ized)</h2>
 
 <p>This kind of bug in a system can be very nasty. What happens when it is triggered is that the worldviews of two subsystems (here the datastore and the index) are not coherent anymore.</p>
 
@@ -51,7 +51,7 @@ end
 
 <p>So that leaves us with denormalized data and its own problems. How do we mitigate them?</p>
 
-<h2>Invariants are sexy</h2>
+<h2 id="invariants-are-sexy">Invariants are sexy</h2>
 
 <p>Once you have denormalized data, your problem is to keep it coherent. That means that there are invariants that must be verified at all times by the various states of the subsystems. Or rather, because of asynchronous jobs, invariants that shouldn&#39;t remain unverified for too long.</p>
 
@@ -61,7 +61,7 @@ end
 
 <p>In our case, the script responsible for coherence checks warned me that a few documents belonging to the same user were present in the search engine but not flagged as indexed. I asked the application logs what had happened to these documents around the time when the incoherence occurred, and saw they had all been updated. I looked up the relevant code path in application code... and facepalm-ed. I had pushed that code to production half a year ago, and it was obviously wrong.</p>
 
-<h2>Conclusion</h2>
+<h2 id="conclusion">Conclusion</h2>
 
 <p>The moral of it all is not, as I already discussed, that you should not denormalize data. It is not that we should write more tests, either. At least it is not what I want the takeaway to be (we do test these things more carefully now, but edge cases can always slip through).</p>
 

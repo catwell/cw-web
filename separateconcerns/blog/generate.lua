@@ -1,6 +1,5 @@
 local lunamark = require "lunamark"
 local lustache = require "lustache"
-local pretty = require "pl.pretty"
 local pathx = require "pl.path"
 local dirx = require "pl.dir"
 local Date = require "pl.Date"
@@ -34,6 +33,36 @@ local date_to_atom = function(date)
     return Date.Format("yyyy-mm-ddTHH:MM:SSZ"):tostring(date) .. "Z"
 end
 
+local linearize; linearize = function(t)
+    if type(t) == "string" then
+        return t
+    else
+        assert(type(t) == "table")
+        local r = {}; for i = 1, #t do r[i] = linearize(t[i]) end
+        -- remove everything in < >, e.g. links in titles
+        local loop = true
+        while loop do
+            loop = false
+            for i = 1, #r do
+                if r[i]:sub(1, 1) == "<" then
+                    while r[i]:sub(-1) ~= ">" do
+                        table.remove(r, i)
+                    end
+                    table.remove(r, i)
+                    loop = true; break
+                end
+            end
+        end
+        return table.concat(r)
+    end
+end
+
+local as_slug = function(s)
+    s = linearize(s)
+    s = string.gsub(s, "[^A-Za-z0-9 /_%-]", "")
+    return string.gsub(s, "[ /_]+", "-"):lower()
+end
+
 ---
 
 local md_to_html_chunk = function(md)
@@ -61,6 +90,13 @@ local md_to_html_chunk = function(md)
     writer.code = function(s)
         has_code = true
         return old_code(s)
+    end
+    writer.header = function(s, level)
+        return {
+            "<h", level, " id=\"", as_slug(s), "\">",
+            s,
+            "</h", level, ">"
+        }
     end
     local parse = lunamark.reader.markdown.new(
         writer,

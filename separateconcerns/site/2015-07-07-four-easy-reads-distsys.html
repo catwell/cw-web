@@ -23,29 +23,29 @@
 
 <p>I have selected four documents to help you understand the kind of things we spend our days thinking about, the physical limits we work with and the trade-offs we make. You may want to read them, because distribution is becoming the norm rather than the exception, so you may have to think about at least some of those issues sooner than you expected. Those are simple documents that any programmer should be able to read. Only the last one is an actual paper, and it is a simple position paper with no math, I promise.</p>
 
-<h2><a href="https://queue.acm.org/detail.cfm?id=2745385">There is No Now</a></h2>
+<h2 id="there-is-no-now"><a href="https://queue.acm.org/detail.cfm?id=2745385">There is No Now</a></h2>
 
 <p>Most distributed systems are <em>asynchronous</em>, which means that the usual notion of time does not make sense within them. This article by Justin Sheehy, former Basho CTO (now at VMWare), published in ACM Queue in March 2015, is about that fact and its consequences. It inspired me to make this list, because as soon as I read it my first thought was that I should share it with all of my colleagues and every single person I will ever work with. It introduces two important impossibility theorems (FLP and CAP) and adversarial models, discusses the existence of &quot;reliable&quot; clocks and networks, and touches on some solutions such as consensus protocols and CRDT.</p>
 
-<h2><a href="http://www.allthingsdistributed.com/2008/12/eventually_consistent.html">Eventually Consistent - Revisited</a></h2>
+<h2 id="eventually-consistent---revisited"><a href="http://www.allthingsdistributed.com/2008/12/eventually_consistent.html">Eventually Consistent - Revisited</a></h2>
 
 <p>This 2008 blog post by Werner Vogel (Amazon CTO) explains the trade-off between availability and consistency, introduces consistency models, and hints at the relationship between the replication factor of data and the level of consistency that can be achieved. If you want to go further after that, you can read the famous Dynamo paper (which is not too complicated), preferably in <a href="http://docs.basho.com/riak/2.0.1/theory/dynamo/">its version annotated by Basho</a>.</p>
 
-<h2><a href="http://book.mixu.net/distsys/">Distributed systems for fun and profit</a></h2>
+<h2 id="distributed-systems-for-fun-and-profit"><a href="http://book.mixu.net/distsys/">Distributed systems for fun and profit</a></h2>
 
 <p>This document, by Mikito Takada (Trifacta), is longer than the others. It is the best short (meaning: not a whole course or book) introduction to distributed systems I know. In a nutshell, it expands on the ideas presented in the first two documents and gives you most of the necessary concepts and vocabulary to understand actual distributed systems papers, should you want to read them.</p>
 
-<h2><a href="http://www-db.cs.wisc.edu/cidr/cidr2009/Paper_133.pdf">Building on quicksand</a></h2>
+<h2 id="building-on-quicksand"><a href="http://www-db.cs.wisc.edu/cidr/cidr2009/Paper_133.pdf">Building on quicksand</a></h2>
 
 <p>I could hardly leave that 2009 paper by Pat Helland and Dave Campbell out of this list. It starts with the idea that, as the distribution of systems increases, latency makes synchronicity intractable and pushes us towards asynchronous designs. The rest of the paper is a discussion of the trade-offs involved. The very interesting idea in that paper (also found in other papers by Pat Helland) is that it all comes down to a problem of risk management and reconciliation. If asynchronous software can not ensure something will happen, it may make a guess and fix the result later if it was wrong. That may include having to make excuses to an actual human being. An important corollary is that the distributed nature of software permeates <a href="http://bravenewgeek.com/distributed-systems-are-a-ux-problem/">all the way to the user interface</a> (which is why you may have seen me ranting about how we need to start forming cross-functional teams, with developers who understand UX and designers who get distributed systems).</p>
 
-<h2>Bonus: <a href="http://queue.acm.org/detail.cfm?id=2917756">Why Logical Clocks are Easy</a></h2>
+<h2 id="bonus-why-logical-clocks-are-easy">Bonus: <a href="http://queue.acm.org/detail.cfm?id=2917756">Why Logical Clocks are Easy</a></h2>
 
 <p>I said on Hacker News that, if I wrote that article today (in May 2016), I would add this article to the list. I <a href="https://news.ycombinator.com/item?id=11690113">was advised</a> to edit the original blog post, so I did.</p>
 
 <p>Published in April 2016 in ACM Queue, this article by Carlos Baquero and Nuno Preguiça may be the best introduction to causality I know. Causality is a very important concept in distributed systems. In a nutshell, the idea is to answer the question: given two events, could one have influenced the other? In other words: when the entity performing the second event did, dit it have any knowledge that the first happened? This article introduces causality and gives usual ways to represent it in theory, with causal histories, and in practice, with vector clocks and version vectors as well as their dotted variants.</p>
 
-<h2>Conclusion</h2>
+<h2 id="conclusion">Conclusion</h2>
 
 <p>When I started programming as a child, I was hooked by the idea that the computer was a perfect machine that, unlike a teacher, would never be unjust: it would work if I got the code right, and if I did not I just had to fix it and try again. Once it worked, it would always work! Everything was reproducible, and all issues could be diagnosed and understood.</p>
 

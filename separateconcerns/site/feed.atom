@@ -10,7 +10,7 @@
     rel="alternate" type="application/xhtml+xml"
   />
   <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
-  <updated>2016-09-16T15:05:16Z</updated>
+  <updated>2016-12-07T21:15:08Z</updated>
   <author>
     <name>Pierre 'catwell' Chapuis</name>
     <uri>http://catwell.info/</uri>
@@ -29,15 +29,15 @@
       <div xmlns="http://www.w3.org/1999/xhtml">
         
 
-<h2>Thoughts</h2>
+<h2 id="thoughts">Thoughts</h2>
 
 <p>I have not found the motivation to write here for a while, so I will be trying something new. This is the first of a series of posts which will be composed of a few smaller unrelated snippets, mostly things I would usually post in a smaller form on Twitter. They will relate to anything I will have found interesting recently. Some will be practical and some will just be reflections about a give topic.</p>
 
-<h2>MSYS2</h2>
+<h2 id="msys2">MSYS2</h2>
 
 <p>If, like me, you are mostly a Linux user but sometimes have to work on a Windows machine, have a look at <a href="https://msys2.github.io/">MSYS2</a>. It allows you to quickly get a decent environment set up, with Bash and a package manager, (<a href="https://www.archlinux.org/pacman/">pacman</a>), which you can use to install things like Git.</p>
 
-<h2>Sailfish</h2>
+<h2 id="sailfish">Sailfish</h2>
 
 <p>I have had my <a href="https://jolla.com/jollac/">Jolla C</a> for two months now. I have not spent as much time as I would like playing with it, but so far I am pretty happy with Sailfish. Like <a href="https://en.wikipedia.org/wiki/WebOS">WebOS</a>, it relies heavily on gestures, which makes most of the features of the phone usable with the thumb of a single hand. There are not many applications in the store so far but the default applications are good in general and most Android applications work well, I could run <a href="https://meetlima.com">Lima</a> on it without any problem for instance.</p>
 
@@ -47,11 +47,11 @@
 
 <p>The main reason I have not made that device my main phone yet is that its battery life is much worse than that of my Android phone, but hopefully that is something that can be solved.</p>
 
-<h2>The fractal dimension of software</h2>
+<h2 id="the-fractal-dimension-of-software">The fractal dimension of software</h2>
 
 <p>I stumbled upon <a href="https://twitter.com/jtolds/status/758716505320075266">an insightful tweet</a> about software development time estimation. The larger the tasks we try to estimate, the more wrong we will be. Maybe an estimate as a single number representing time is not enough; maybe we should also try to figure out the <a href="https://en.wikipedia.org/wiki/Fractal_dimension">fractal dimension</a> of the job to be done.</p>
 
-<h2>Distributed systems are a UX problem</h2>
+<h2 id="distributed-systems-are-a-ux-problem">Distributed systems are a UX problem</h2>
 
 <p>Everyday I grow more convinced that <a href="http://bravenewgeek.com/distributed-systems-are-a-ux-problem/">this is true</a>. Not only of failure conditions, but even more so of things like reconciliation strategies in case of causally concurrent events, for instance how to represent data with <a href="https://en.wikipedia.org/wiki/Conflict-free_replicated_data_type">CRDTs</a>.</p>
 
@@ -59,13 +59,13 @@
 
 <p>The result of this is that, if we design without taking technical constraints into account, we end up with systems that cannot be implemented without relying on central authority. Add to that the fact that it is almost always much easier to implement something in a centralized way, and you have one reason why the Cloud is winning and distributed alternatives to popular services never seem to take off.</p>
 
-<h2>Palm</h2>
+<h2 id="palm">Palm</h2>
 
 <p>I stumbled upon two fantastic documents related to Palm recently. The first is a series of blog posts called <a href="http://lowendmac.com/2016/a-history-of-palm-part-1-before-the-palmpilot/">A History of Palm</a>. Very interesting, even though I disagree with the conclusion of the fifth post. What killed the Pre line at HP was not that WebOS did not take off; they never let it a chance to. I have been using a Pre 3 for a long time (I had pre-ordered it so I was one of the lucky few to have it in France) and it was a fantastic device, extremely influential on future evolutions of both iOS and Android (after all, the interface was the brainchild of <a href="https://en.wikipedia.org/wiki/Mat%C3%ADas_Duarte">Mathias Duarte</a>). What ended Palm&#39;s legacy was the <a href="https://en.wikipedia.org/wiki/Mark_Hurd#Resignation">eviction of Mark Hurd</a> and his replacement with <a href="https://en.wikipedia.org/wiki/L%C3%A9o_Apotheker">Léo Apotheker</a>, who hates hardware. Probably one of the worst mistakes the HP board ever made.</p>
 
 <p>The second document is the <a href="designingmlearning.com/resources/ZenOfPalm.pdf">Zen of Palm</a>, a design guide for Palm OS from 2003 which is still pretty relevant today in some ways.</p>
 
-<h2>Is preemption the root of all evil?</h2>
+<h2 id="is-preemption-the-root-of-all-evil">Is preemption the root of all evil?</h2>
 
 <p>Two decades years ago <a href="https://en.wikipedia.org/wiki/Computer_multitasking#Cooperative_multitasking">cooperative scheduling</a> was more frequent than preemptive scheduling. Windows 3.1 was completely cooperatively scheduled, which means that all applications had to yield to the system scheduler, or they would block the whole system. In Mac OS 9, the threading API was cooperative as well within a process, even though different applications would be scheduled preemptively by the kernel.</p>
 
@@ -91,15 +91,15 @@ Modern OSs do not make much distinction between a thread and a process anymore, 
 
 <p>In this post, I will give an overview of how a data.mdb file is structured. Note that I will sometimes skip over some things and operate under the assumption that you are running on a little-endian platform with 4 kB pages, etc.</p>
 
-<h2>Portability</h2>
+<h2 id="portability">Portability</h2>
 
 <p>The first thing to know is that the data.mdb format is platform-specific, which means that you cannot necessarily open a database created on a machine on another one. In practice, on ARM and x86, the only thing you have to care about is whether the machine is 32 or 64 bits. On a 64 bit machine, you can read the data from a 32 bit database by exporting it to a text format using the <code>mdb_dump</code> utility compiled in 32 bits and reimporting it with a 64 bits <code>mdb_load</code>. With lua-mdb, you can read a 32 bits database directly by passing the <code>bits</code> option to the constructor.</p>
 
-<h2>Pages</h2>
+<h2 id="pages">Pages</h2>
 
 <p>A data.mdb file is made to be mapped into memory, and as such is organized into a set pages of 4 kB. All pages start with a header which contains the page number and some flags which determine the type of the page. For all page types except overflow pages, the header also includes the bounds of the free space in the page.</p>
 
-<h2>Meta pages</h2>
+<h2 id="meta-pages">Meta pages</h2>
 
 <p>The first two pages (page numbers 0 and 1) are called meta pages. Meta pages start with a magic number (<code>0xBEEFC0DE</code>), a version (currently 1), and the address and size of the memory mapping. The address is only valid if the mapping is fixed, i.e. if LMDB is used with the option <code>MDB_FIXEDMAP</code>.</p>
 
@@ -107,29 +107,29 @@ Modern OSs do not make much distinction between a thread and a process anymore, 
 
 <p>Finally come the number of the last page used in the file and the ID of the last transaction that wrote to the page successfully. Indeed, those meta pages is the mechanism LMDB uses to implement <a href="https://en.wikipedia.org/wiki/Multiversion_concurrency_control">MVCC</a>. There can be a single writer at a time, and it will always write to page ID <code>N % 2</code>, where <code>N</code> is the current write transaction ID. Meanwhile, readers will read page <code>N % 2 + 1</code>, providing readers - writer isolation. This means that, when opening a .mdb file, the latest data can be found in the databases pointed to by the meta page with the highest transaction ID.</p>
 
-<h2>Databases</h2>
+<h2 id="databases">Databases</h2>
 
 <p>As we saw, a meta page contains two structures describing databases. Databases in LMDB are technically B+ trees. The structures contain some environment flags used at runtime, information about the tree including its depth, the number of pages of each type and the total number of entries, and finally the page number of the root of the tree.</p>
 
 <p>Pages of the tree itself can be one of three types: branch pages, leaf pages and overflow pages. There are two other types (<code>BRANCH2</code> and <code>SUBP</code>) which are only used with specific DB options (<code>MDB_DUPFIXED</code> and <code>MDB_DUPSORT</code>) and that we will ignore.</p>
 
-<h2>Branch pages</h2>
+<h2 id="branch-pages">Branch pages</h2>
 
 <p>Branch pages represent internal nodes of the tree. After the header, they contain an array of &quot;pointers&quot; (technically, 16 bit indices within the page) to &quot;branch nodes&quot; within that page. The number of branch nodes, which is the number of keys in the page, can be deduced from the boundaries of the free space in the header.</p>
 
 <p>Branch nodes are allocated from the bottom of the page up. They start with a page number, then a key prefixed by its size. Branch node pointers are sorted according to the key and the current key comparison function, and the page number indicates the page which should be visited to look up keys between the key of the node (included) and the key of the next node. That page can be a branch or a leaf.</p>
 
-<h2>Leaf pages</h2>
+<h2 id="leaf-pages">Leaf pages</h2>
 
 <p>Like branch pages, leaf pages start with a number of pointers to leaf nodes. Leaves store the actual keys and values contained into the DB. Small values are stored in the leaf node itself and large values are stored in overflow pages.</p>
 
 <p>Leaf nodes are slightly more complex than branch nodes. They contain flags, which determine if the value is contained in the node or in an overflow page, and the key which corresponds to the node. For small values, they contain the value itself, and for larger values they contain the page number of the corresponding overflow page.</p>
 
-<h2>Overflow pages</h2>
+<h2 id="overflow-pages">Overflow pages</h2>
 
 <p>Large values are stored in so-called overflow pages. Those pages are pretty simple: after the header, they contain the raw value (not prefixed by its size). This value can be larger than the size of a page, which explains the name: they overflow on later pages. Note that this means those later pages do not start by the usual header.</p>
 
-<h2>Learning more</h2>
+<h2 id="learning-more">Learning more</h2>
 
 I have explained the basics of the data.mdb file format. Should you have to debug broken databases, it will help you get started. If you need more, read <a href="https://github.com/catwell/cw-lua/tree/master/lua-mdb">the lua-mdb source code</a> or <a href="https://github.com/LMDB/lmdb">the LMDB source code</a> (it is only about 10000 lines, although sometimes not easy to understand given that its author adopts a style that favors performance to readability).
       </div>
@@ -153,7 +153,7 @@ I have explained the basics of the data.mdb file format. Should you have to debu
 
 <p>Disclaimer: links, as those on my <a href="https://catwell.info/booklist/">reading list</a>, are Amazon Affiliate links, which means I may earn a little money if you buy books after clicking on them.</p>
 
-<h2><a href="http://amzn.to/1NuJ5AR">The Year Without Pants - Scott Berkun</a></h2>
+<h2 id="the-year-without-pants---scott-berkun"><a href="http://amzn.to/1NuJ5AR">The Year Without Pants - Scott Berkun</a></h2>
 
 <p>Scott Berkun was a management writer and consultant when he was hired by WordPress. Before that, he had been a UX designer and team lead at Microsoft, on the Internet Explorer project. When he joined WordPress, the company had over 50 employees, it was completely flat and had a culture of remote work. The founder wanted to experiment with a team-based structure, and Scott was to be the first team lead.</p>
 
@@ -161,7 +161,7 @@ I have explained the basics of the data.mdb file format. Should you have to debu
 
 <p>That culture, rooted in Open Source and documented by Berkun, an outsider, is what makes the book interesting. I would say it is a must read for anybody considering starting or leading a team at a small software company.</p>
 
-<h2><a href="http://amzn.to/1NktPAS">The Open Organization - Jim Whitehurst</a></h2>
+<h2 id="the-open-organization---jim-whitehurst"><a href="http://amzn.to/1NktPAS">The Open Organization - Jim Whitehurst</a></h2>
 
 <p>This book is somehow similar to the one above, but on a larger scale. Jim Whitehurst is the current CEO of Red Hat, a company with over $1.5B in yearly revenue, over 8000 employees, and a culture firmly rooted in Open Source (I started using Linux with their distribution, Red Hat 6.2, in 2000).</p>
 
@@ -169,7 +169,7 @@ I have explained the basics of the data.mdb file format. Should you have to debu
 
 <p>The book is both analytical and prescriptive, and it shows how the way Open Source projects are organized can be successfully adopted by a large company.</p>
 
-<h2><a href="http://amzn.to/1NuKgQO">The Systems Bible (Systemantics) - John Gall</a></h2>
+<h2 id="the-systems-bible-systemantics---john-gall"><a href="http://amzn.to/1NuKgQO">The Systems Bible (Systemantics) - John Gall</a></h2>
 
 <p>A 1975 classic. Gall is a (retired) pediatrician, but he is well-known in software engineering circles for this book which contains, among other things, what is now known as Gall&#39;s Law:</p>
 
@@ -199,7 +199,7 @@ I have explained the basics of the data.mdb file format. Should you have to debu
 
 <p>Remember: this book is originally not about <em>computer</em> systems. Not at all. But read it anyway!</p>
 
-<h2><a href="http://amzn.to/1Himm61">The Four Steps to the Epiphany - Steve Blank</a></h2>
+<h2 id="the-four-steps-to-the-epiphany---steve-blank"><a href="http://amzn.to/1Himm61">The Four Steps to the Epiphany - Steve Blank</a></h2>
 
 <p>I have read <a href="http://amzn.to/132XE3z">several</a> <a href="http://amzn.to/1HikaeJ">other</a> <a href="http://amzn.to/1eXLEJF">books</a> <a href="http://amzn.to/18xfzCx">about</a> Lean Startup, but this is the one I would recommend now, especially if you already have some experience with startups.</p>
 
@@ -207,7 +207,7 @@ I have explained the basics of the data.mdb file format. Should you have to debu
 
 <p>Read this book if you want to understand what this Lean Startup thing is about, and offer it to your friends who want to start their own business.</p>
 
-<h2><a href="http://amzn.to/1Pwcp90">Flash Boys: Not So Fast - Peter Kovac</a></h2>
+<h2 id="flash-boys-not-so-fast---peter-kovac"><a href="http://amzn.to/1Pwcp90">Flash Boys: Not So Fast - Peter Kovac</a></h2>
 
 <p>This book is an answer to Michael Lewis&#39; Flash Boys and a defence of High-Frequency Trading.</p>
 
@@ -263,29 +263,29 @@ I have long thought that the financial world used HFT as a scapegoat (especially
 
 <p>I have selected four documents to help you understand the kind of things we spend our days thinking about, the physical limits we work with and the trade-offs we make. You may want to read them, because distribution is becoming the norm rather than the exception, so you may have to think about at least some of those issues sooner than you expected. Those are simple documents that any programmer should be able to read. Only the last one is an actual paper, and it is a simple position paper with no math, I promise.</p>
 
-<h2><a href="https://queue.acm.org/detail.cfm?id=2745385">There is No Now</a></h2>
+<h2 id="there-is-no-now"><a href="https://queue.acm.org/detail.cfm?id=2745385">There is No Now</a></h2>
 
 <p>Most distributed systems are <em>asynchronous</em>, which means that the usual notion of time does not make sense within them. This article by Justin Sheehy, former Basho CTO (now at VMWare), published in ACM Queue in March 2015, is about that fact and its consequences. It inspired me to make this list, because as soon as I read it my first thought was that I should share it with all of my colleagues and every single person I will ever work with. It introduces two important impossibility theorems (FLP and CAP) and adversarial models, discusses the existence of &quot;reliable&quot; clocks and networks, and touches on some solutions such as consensus protocols and CRDT.</p>
 
-<h2><a href="http://www.allthingsdistributed.com/2008/12/eventually_consistent.html">Eventually Consistent - Revisited</a></h2>
+<h2 id="eventually-consistent---revisited"><a href="http://www.allthingsdistributed.com/2008/12/eventually_consistent.html">Eventually Consistent - Revisited</a></h2>
 
 <p>This 2008 blog post by Werner Vogel (Amazon CTO) explains the trade-off between availability and consistency, introduces consistency models, and hints at the relationship between the replication factor of data and the level of consistency that can be achieved. If you want to go further after that, you can read the famous Dynamo paper (which is not too complicated), preferably in <a href="http://docs.basho.com/riak/2.0.1/theory/dynamo/">its version annotated by Basho</a>.</p>
 
-<h2><a href="http://book.mixu.net/distsys/">Distributed systems for fun and profit</a></h2>
+<h2 id="distributed-systems-for-fun-and-profit"><a href="http://book.mixu.net/distsys/">Distributed systems for fun and profit</a></h2>
 
 <p>This document, by Mikito Takada (Trifacta), is longer than the others. It is the best short (meaning: not a whole course or book) introduction to distributed systems I know. In a nutshell, it expands on the ideas presented in the first two documents and gives you most of the necessary concepts and vocabulary to understand actual distributed systems papers, should you want to read them.</p>
 
-<h2><a href="http://www-db.cs.wisc.edu/cidr/cidr2009/Paper_133.pdf">Building on quicksand</a></h2>
+<h2 id="building-on-quicksand"><a href="http://www-db.cs.wisc.edu/cidr/cidr2009/Paper_133.pdf">Building on quicksand</a></h2>
 
 <p>I could hardly leave that 2009 paper by Pat Helland and Dave Campbell out of this list. It starts with the idea that, as the distribution of systems increases, latency makes synchronicity intractable and pushes us towards asynchronous designs. The rest of the paper is a discussion of the trade-offs involved. The very interesting idea in that paper (also found in other papers by Pat Helland) is that it all comes down to a problem of risk management and reconciliation. If asynchronous software can not ensure something will happen, it may make a guess and fix the result later if it was wrong. That may include having to make excuses to an actual human being. An important corollary is that the distributed nature of software permeates <a href="http://bravenewgeek.com/distributed-systems-are-a-ux-problem/">all the way to the user interface</a> (which is why you may have seen me ranting about how we need to start forming cross-functional teams, with developers who understand UX and designers who get distributed systems).</p>
 
-<h2>Bonus: <a href="http://queue.acm.org/detail.cfm?id=2917756">Why Logical Clocks are Easy</a></h2>
+<h2 id="bonus-why-logical-clocks-are-easy">Bonus: <a href="http://queue.acm.org/detail.cfm?id=2917756">Why Logical Clocks are Easy</a></h2>
 
 <p>I said on Hacker News that, if I wrote that article today (in May 2016), I would add this article to the list. I <a href="https://news.ycombinator.com/item?id=11690113">was advised</a> to edit the original blog post, so I did.</p>
 
 <p>Published in April 2016 in ACM Queue, this article by Carlos Baquero and Nuno Preguiça may be the best introduction to causality I know. Causality is a very important concept in distributed systems. In a nutshell, the idea is to answer the question: given two events, could one have influenced the other? In other words: when the entity performing the second event did, dit it have any knowledge that the first happened? This article introduces causality and gives usual ways to represent it in theory, with causal histories, and in practice, with vector clocks and version vectors as well as their dotted variants.</p>
 
-<h2>Conclusion</h2>
+<h2 id="conclusion">Conclusion</h2>
 
 <p>When I started programming as a child, I was hooked by the idea that the computer was a perfect machine that, unlike a teacher, would never be unjust: it would work if I got the code right, and if I did not I just had to fix it and try again. Once it worked, it would always work! Everything was reproducible, and all issues could be diagnosed and understood.</p>
 
@@ -548,7 +548,7 @@ And finally, just to be clear: do not look too much at the left part of the curv
 
 <p>Iris supports three usual basic patterns for communication: Request/Response, Publish/Subscribe and Broadcast. A fourth one, Tunnel, is slightly more complicated.</p>
 
-<h1>Request/Response</h1>
+<h1 id="request-response">Request/Response</h1>
 
 <p>This is the pattern everybody knows about from HTTP, and probably the workhorse of most SOAs. A client sends a request to a cluster, and a single node of the cluster answers it. Iris just does the messaging here: the request and the response are binary blobs, there is no notion of headers.</p>
 
@@ -585,7 +585,7 @@ for i=1,5 do c:process_one() end
 c:teardown()
 </code></pre>
 
-<h1>Publish/Subscribe</h1>
+<h1 id="publish-subscribe">Publish/Subscribe</h1>
 
 <p>Another well-known pattern. Consumers subscribe to a channel identified by a name, producers send messages into the channel and all subscribers receive them. There is no response from the subscriber. Channels are completely independent from clusters, i.e. channel &quot;X&quot; and cluster &quot;X&quot; can coexist and have nothing in common, and there is no restriction that a channel only works within a given cluster (any entity on the same Iris network can access it).</p>
 
@@ -624,7 +624,7 @@ for i=1,5 do c:process_one() end
 c:teardown()
 </code></pre>
 
-<h1>Broadcast</h1>
+<h1 id="broadcast">Broadcast</h1>
 
 <p>We have seen that requests are sent to a single instance of a cluster. What if you want to notify <em>all</em> members of a cluster of some event? This is what Broadcast is for. It is kind of redundant with Publish/Subscribe (you could have all members of each cluster subscribe to a channel) but it is somehow cleaner to have a separate message type for this. You could use it to build more complicated things on top, for instance a full-fledged service bus.</p>
 
@@ -655,7 +655,7 @@ for i=1,5 do c:process_one() end
 c:teardown()
 </code></pre>
 
-<h1>Tunnel</h1>
+<h1 id="tunnel">Tunnel</h1>
 
 <p>Tunnels are the last and most complicated way to communicate provided by Iris. To understand why we need them, remember how requests work.</p>
 
@@ -741,7 +741,7 @@ while op ~= iris.OP.TUN_CLOSE do op = c:process_one() end
 c:teardown()
 </code></pre>
 
-<h1>Conclusion</h1>
+<h1 id="conclusion">Conclusion</h1>
 
 <p>Iris is a very interesting piece of software which implements a vision of systems that I like and cannot find in any other product out of the box. It is still very young and probably not ready for serious production yet, although I have found it stable during the (limited) testing I have done. Even though my current job does not involve SOA I will probably come back to it someday, so Iris will join the list of tools whose progress I follow attentively.</p>
 
@@ -873,7 +873,7 @@ And it turns out of you want to make a change in the larger world, you have to d
       <div xmlns="http://www.w3.org/1999/xhtml">
         
 
-<h2>Writing a Lisp</h2>
+<h2 id="writing-a-lisp">Writing a Lisp</h2>
 
 <p>I like to learn new tools and concepts by experimenting with small projects whose sole purpose is to help me grasp something better. Working on a larger project in a team with other people is invaluable, but doing things on a smaller scale on my own offers a different perspective.</p>
 
@@ -887,7 +887,7 @@ And it turns out of you want to make a change in the larger world, you have to d
 
 <p>Oh, just in case you were wondering, nobody paid me to write that blog post!</p>
 
-<h2>Moving on to Go</h2>
+<h2 id="moving-on-to-go">Moving on to Go</h2>
 
 <p>Next, I will probably be <a href="https://gobyexample.com/">learning Go</a>. Go is a weird language in that about half of the technical people I follow and look up to like it a lot, and the other half hates it. The latter tend to be users of languages with stricter type systems...</p>
 
@@ -975,69 +975,69 @@ end]]&gt;&lt;/content&gt;
 
 <p>Last weekend I attended <a href="https://fosdem.org/2014/">FOSDEM</a>, the largest Open Source conference in Europe that takes place every year in Brussels. This was my fourth year in a row. Not much Lua this year, although I saw some <a href="https://github.com/ladc">familiar</a> <a href="http://specfun.inria.fr/tassi/">faces</a>. But I did listen to lots of interesting talks which I will try to summarize briefly.</p>
 
-<h2><a href="https://fosdem.org/2014/schedule/event/reproducibledebian/">Reproducible Builds for Debian</a> (Jérémy Bobbio)</h2>
+<h2 id="reproducible-builds-for-debian-jrmy-bobbio"><a href="https://fosdem.org/2014/schedule/event/reproducibledebian/">Reproducible Builds for Debian</a> (Jérémy Bobbio)</h2>
 
 <p>Debian developers want to provide their users a way to verify that the binary packages they distribute correspond to the source. To achieve reproducible builds they have to patch code that depends on things such as timestamps at build time. To make things worse, using a standard VM for builds would help but they refuse to do it &quot;because they&#39;re Debian.&quot;</p>
 
-<h2><a href="https://fosdem.org/2014/schedule/event/obsolete/">Is distribution-level package management obsolete?</a> (Donnie Berkholz)</h2>
+<h2 id="is-distribution-level-package-management-obsolete-donnie-berkholz"><a href="https://fosdem.org/2014/schedule/event/obsolete/">Is distribution-level package management obsolete?</a> (Donnie Berkholz)</h2>
 
 <p>The Gentoo leader thinks distribution are doing a poor job of meeting the needs of users - especially developers and system administrators - in terms of package management. They are increasingly relying on configuration management tools (CFEngine, Puppet, Chef, Ansible...), language-specific package managers (RubyGems, NPM, LuaRocks...) and tools like Docker; however, distribution package managers do not integrate well with those.</p>
 
 <p>This is a topic that interests me, following all the discussion that occurred at <a href="http://www.lua.org/wshop13.html">the last Lua Workshop</a>. After the talk I asked Donnie whether there was a discussion list somewhere dedicated to those issues. He told me that, to his knowledge, there was not. It may be a good idea to start one.</p>
 
-<h2><a href="https://fosdem.org/2014/schedule/event/minix_3_on_arm/">Minix 3 on ARM</a> (Kees Jongenburger)</h2>
+<h2 id="minix-3-on-arm-kees-jongenburger"><a href="https://fosdem.org/2014/schedule/event/minix_3_on_arm/">Minix 3 on ARM</a> (Kees Jongenburger)</h2>
 
 <p>Kees talked about the <a href="http://www.minix3.org/">Minix 3</a> architecture, how it was ported to ARM (with the BeagleBoard and BeagleBone devices as first targets) and plans for the future.</p>
 
 <p>The main priority of the project is porting the NetBSD userland. As a former user I think this is an excellent idea. I may try the OS again someday if it becomes more &quot;usable&quot;, I really like some of the ideas behind it.</p>
 
-<h2><a href="https://fosdem.org/2014/schedule/event/technical_introduction_to_the_deeper_parts_of_sailfishos,_a_qt5_wayland_based_mobile_os/">Technical introduction to the deeper parts of Sailfish OS</a> (Carsten Munk)</h2>
+<h2 id="technical-introduction-to-the-deeper-parts-of-sailfish-os-carsten-munk"><a href="https://fosdem.org/2014/schedule/event/technical_introduction_to_the_deeper_parts_of_sailfishos,_a_qt5_wayland_based_mobile_os/">Technical introduction to the deeper parts of Sailfish OS</a> (Carsten Munk)</h2>
 
 <p>Sailfish is probably the most interesting mobile OS project today, go <a href="https://sailfishos.org/">check it out</a> if you don&#39;t know it yet. Carsten gave us an overview of the main parts of the OS and explained some funny things they did, such as making glibc and the Bionic libc co-exist within the same process. He also provided the audience an SSH access to an actual terminal. I <a href="https://twitter.com/pchapuis/status/429619422592905217">found liblua 5.1</a> on it :)</p>
 
-<h2><a href="https://fosdem.org/2014/schedule/event/postfix_lessons_learned_and_recent_developments/">Postfix: lessons learned and recent developments</a> (Wietse Venema)</h2>
+<h2 id="postfix-lessons-learned-and-recent-developments-wietse-venema"><a href="https://fosdem.org/2014/schedule/event/postfix_lessons_learned_and_recent_developments/">Postfix: lessons learned and recent developments</a> (Wietse Venema)</h2>
 
 <p>This talk introduced the Postfix least-privilege architecture, and then went on to explain recent improvements. Most of them revolve around fighting spam more efficiently. Postfix also migrated from Berkley DB to LMDB (see later), mostly for licensing reasons.</p>
 
-<h2><a href="https://fosdem.org/2014/schedule/event/nixos_declarative_configuration_linux_distribution/">NixOS: declarative configuration Linux distribution</a> (Domen Kožar)</h2>
+<h2 id="nixos-declarative-configuration-linux-distribution-domen-koar"><a href="https://fosdem.org/2014/schedule/event/nixos_declarative_configuration_linux_distribution/">NixOS: declarative configuration Linux distribution</a> (Domen Kožar)</h2>
 
 <p><a href="http://nixos.org/">Nix OS</a> is a Linux distribution built around the Nix package manager. It is one of those few distributions that completely disrupt the FHS, another one being <a href="http://www.gobolinux.org/">GoboLinux</a>.</p>
 
 <p>The idea of Nix is that a package is the output of a function provided with some arguments and without side effects. There are a lot of interesting ideas there, such as atomic updates based on symlinks. However, doing this involves some heavy patching and that makes me uncomfortable.</p>
 
-<h2><a href="https://fosdem.org/2014/schedule/event/iris_decentralized_messaging/">Iris Decentralized Messaging</a> (Péter Szilágyi)</h2>
+<h2 id="iris-decentralized-messaging-pter-szilgyi"><a href="https://fosdem.org/2014/schedule/event/iris_decentralized_messaging/">Iris Decentralized Messaging</a> (Péter Szilágyi)</h2>
 
 <p><a href="http://iris.karalabe.com/">Iris</a> is a messaging backend written in Go but with a language-agnostic interface. It is somehow similar 0MQ but goes further by removing the notion of a specific instance or process in favor of sets of those. Each machine runs a single daemon that does all the heavy lifting, and each client connects to it locally to interact with the system.</p>
 
 <p>This is a very interesting project and I was a bit surprised I had never heard about it until now. The slides and live demos were also really good, with multiple Go code snippets running concurrently in a browser. Oh, and Gopher drawings!</p>
 
-<h2><a href="https://fosdem.org/2014/schedule/event/camlistore/">Camlistore</a> (Brad Fitzpatrick and Mathieu Lonjaret)</h2>
+<h2 id="camlistore-brad-fitzpatrick-and-mathieu-lonjaret"><a href="https://fosdem.org/2014/schedule/event/camlistore/">Camlistore</a> (Brad Fitzpatrick and Mathieu Lonjaret)</h2>
 
 <p>The speakers showed off what the latest release of <a href="http://camlistore.org/">Camlistore</a>, a personal file storage system, can do. I already knew and liked the technical design of the project, but I was impressed by the progress made on usability since Brad&#39;s talk at dotScale 2013. They have a new Web UI which is not complete yet but looks very promising. I really have to install my own node someday.</p>
 
-<h2><a href="https://fosdem.org/2014/schedule/event/llvmruby/">Statically compiling Ruby with LLVM</a> (Laurent Sansonetti)</h2>
+<h2 id="statically-compiling-ruby-with-llvm-laurent-sansonetti"><a href="https://fosdem.org/2014/schedule/event/llvmruby/">Statically compiling Ruby with LLVM</a> (Laurent Sansonetti)</h2>
 
 <p>A very interesting talk on LLVM and how it helps when statically compiling a (very) dynamic language such as Ruby. Among other things, the optimization passes do an incredible job. However, it looks like JIT compilation is not as good as static compilation yet.</p>
 
-<h2><a href="https://fosdem.org/2014/schedule/event/whats_new_in_openldap/">What&#39;s new in OpenLDAP</a> (Howard Chu)</h2>
+<h2 id="what39s-new-in-openldap-howard-chu"><a href="https://fosdem.org/2014/schedule/event/whats_new_in_openldap/">What&#39;s new in OpenLDAP</a> (Howard Chu)</h2>
 
 <p>This was, as I had hoped, mostly a talk about <a href="http://symas.com/mdb/">LMDB</a>. It confirmed what I already suspected: at least according to its author&#39;s benchmarks, it outperforms any kind of competition in this space (embedded key-value stores). It is also one of the rare NoSQL DBs to implement MVCC transactions, in less than 10000 lines of C code and 32 kB of object code. If there is a piece of Open Source software I think you should not have missed in 2013, it is this one.</p>
 
-<h2><a href="https://fosdem.org/2014/schedule/event/persistent_memory/">Persistent Memory: Changing the way we store data</a> (Ric Wheeler)</h2>
+<h2 id="persistent-memory-changing-the-way-we-store-data-ric-wheeler"><a href="https://fosdem.org/2014/schedule/event/persistent_memory/">Persistent Memory: Changing the way we store data</a> (Ric Wheeler)</h2>
 
 <p>An interesting talk about how the shift away from rotating disk towards persistent memory storage affects the way we develop filesystems, kernels and any code that does I/O. This is not only about SSDs, but also about new kinds of devices that will come out soon and be an order of magnitude faster according to Ric.</p>
 
-<h2><a href="https://fosdem.org/2014/schedule/event/concurrent_programming_with_python/">Concurrent programming with Python and my little experiment</a> (Benoit Chesneau)</h2>
+<h2 id="concurrent-programming-with-python-and-my-little-experiment-benoit-chesneau"><a href="https://fosdem.org/2014/schedule/event/concurrent_programming_with_python/">Concurrent programming with Python and my little experiment</a> (Benoit Chesneau)</h2>
 
 <p>Benoit explained how he ported the Go concurrency model (Goroutines and Channels) to Python. I know Benoit and his <a href="https://github.com/benoitc/offset">offset</a> project so this was not foreign to me, but there are two pieces of interesting news: first, the next version will support multiple processes, freeing users from the GIL (yay!), and second he is thinking about changing the API to make it more like <a href="http://julialang.org/">Julia</a> and less like Go, because Julia is more similar to Python.</p>
 
-<h2><a href="https://fosdem.org/2014/schedule/event/nsa_operation_orchestra/">NSA operation ORCHESTRA: Annual Status Report</a> (Poul-Henning Kamp)</h2>
+<h2 id="nsa-operation-orchestra-annual-status-report-poul-henning-kamp"><a href="https://fosdem.org/2014/schedule/event/nsa_operation_orchestra/">NSA operation ORCHESTRA: Annual Status Report</a> (Poul-Henning Kamp)</h2>
 
 <p>This was a fun talk where <a href="http://phk.freebsd.dk/">phk</a> endorsed the role of a NSA agent who mistakes the FOSDEM amphitheater for the European Commission and explains how they sabotage attempts to give the general public more privacy. Lots of conspiracy theory in there obviously, but given the recent events, is this really so absurd? phk argued at the end of the talk that the solution should be political and not technical.</p>
 
 <p>The format of the talk was a very good idea that worked really well on my brain tired by two days of conference, but also by two consecutive nights out filled with Belgian beer and other strong drinks. :)</p>
 
-<h2>Conclusion</h2>
+<h2 id="conclusion">Conclusion</h2>
 
 FOSDEM is still a very good event which you should consider attending next year. Besides the talks, you will enjoy the parties and meeting people you only knew online. I hopefully will see you there.
       </div>
@@ -1296,7 +1296,7 @@ typedef const struct stuff_s stuff_t;
       <div xmlns="http://www.w3.org/1999/xhtml">
         
 
-<h2>Goodbye Moodstocks</h2>
+<h2 id="goodbye-moodstocks">Goodbye Moodstocks</h2>
 
 <p>Friday 20th will be my last day at Moodstocks. I am leaving a company where, after three years and a half, I was the most senior employee. As you may imagine, it was not an easy decision.</p>
 
@@ -1308,7 +1308,7 @@ typedef const struct stuff_s stuff_t;
 
 <p>With those two products in the pipes, choosing to leave was incredibly difficult. But I did nevertheless, because of an opportunity I could not turn down.</p>
 
-<h2>Hello Lima</h2>
+<h2 id="hello-lima">Hello Lima</h2>
 
 <p>So, what next for me? After two weeks to see my family, eat too much and have some welcome rest, I <a href="http://www.kickstarter.com/projects/cloud-guys/plug-the-brain-of-your-devices/posts/691351">will be joining</a> the team developing <a href="http://meetlima.com">the Lima</a> as a core developer.</p>
 
@@ -1368,7 +1368,7 @@ So, what did I think of it? Well, finally I could see myself write a serious Web
 
 <p>Some of the code I write is Open Source, but these days most of it is closed source and property of <a href="http://www.moodstocks.com/">Moodstocks</a>, the startup I work for. For the last three years I have had the chance to work on a lot of really interesting projects, the most significant of which I will talk about now. If you are still a student, maybe that can inspire you to join a startup. Maybe you will even decide to join us in our quest to advance mobile image recognition and applications in general.</p>
 
-<h2>Harvest, the Pikadeo crawler</h2>
+<h2 id="harvest-the-pikadeo-crawler">Harvest, the Pikadeo crawler</h2>
 
 <p>When I joined Moodstocks in April 2010 the team was working on a mobile price comparison application called Pikadeo. The pitch was that you could take a picture of any cultural product (CD, DVD, book...) and it would give you a list of places where you could buy it, sorted by price.</p>
 
@@ -1384,7 +1384,7 @@ So, what did I think of it? Well, finally I could see myself write a serious Web
 
 <p>Due to the deprecation of the Pikadeo product, Harvest is no longer used today. It is probably a good thing: it was my first Ruby program so the code was awful, it was way too complex and too tied to AWS (the master instance would run and kill worker instances, it relied a lot on SimpleDB...). That being said, the crawling model was sound.</p>
 
-<h2>Acorn</h2>
+<h2 id="acorn">Acorn</h2>
 
 <p>Once we got crawling sorted out, the image recognition engine itself became the problem. Oak (it has become a tradition to use plant-related names for our projects internally) had been almost entirely written by <a href="https://twitter.com/deltheil">Cédric</a>, Moodstocks&#39; CTO. It was a piece of C++ software, with the image recognition parts isolated in dynamic libraries and a <a href="http://thrift.apache.org/">Thrift</a> layer to interface with the core Ruby on Rails Web application. It was multithreaded, designed to run on a single multicore EC2 instance.</p>
 
@@ -1402,7 +1402,7 @@ So, what did I think of it? Well, finally I could see myself write a serious Web
 
 <p>In retrospect, relying on two unstable pieces of software was risky. It turned out well, and Redis was definitely the right choice, especially since Lua Scripting now allows us to use a regular, stable 2.6 version. <a href="http://www.zeromq.org/">0MQ</a> would probably have been a better technical choice than MessagePack-RPC, and plain C better than Ruby, but I believe those choices saved us development time, and time to market was important. Acorn is still in production today, doing its job for legacy clients who use online recognition.</p>
 
-<h2>Moodstocks Notes</h2>
+<h2 id="moodstocks-notes">Moodstocks Notes</h2>
 
 <p>You now know that when I joined Moodstocks it was trying to be a B2C company. However we were seeing interest in licensing our technology, and began to envision a B2B product: Moodstocks API.</p>
 
@@ -1420,7 +1420,7 @@ So, what did I think of it? Well, finally I could see myself write a serious Web
 
 <p>Eventually we took the decision not to invest more time in the idea: we were a small team and our now core B2B business needed our attention. Notes&#39; success was a long shot and would have required significant time and money investment so I guess it was the right decision, although I would love to see someone revisit the idea.</p>
 
-<h2>Moodstocks API v2</h2>
+<h2 id="moodstocks-api-v2">Moodstocks API v2</h2>
 
 <p>As I said, Notes was written to help us design our API. Using its feedback and that from the few users of our v1 API, which was more some kind of beta, I set out to write version two.</p>
 
@@ -1430,7 +1430,7 @@ So, what did I think of it? Well, finally I could see myself write a serious Web
 
 <p>Another interesting choice was the authentication method, HTTP Digest, which we kept from version one. Theoretically, it had all the right properties and was a standard, so it was the best choice. What we had not realized is how many <a href="http://devblog.avdi.org/2013/02/04/the-trouble-with-http-digest-authentication/">implementations were broken</a> or incomplete (i.e. not supporting nonce reuse, which is a necessity on mobile to reduce the number of HTTP requests). I ended up having to submit patches to a lot of them, and I am not even mentioning .NET land... If I had to do it again today I would probably go with Basic Auth and SSL.</p>
 
-<h2>Acorn Quantizer</h2>
+<h2 id="acorn-quantizer">Acorn Quantizer</h2>
 
 <p>Earlier, I wrote about how I had made Acorn processes single-threaded. This had some advantages, but also a big inconvenient.</p>
 
@@ -1450,7 +1450,7 @@ So, what did I think of it? Well, finally I could see myself write a serious Web
 
 <p>The idea is simple once you stop under-estimating the capabilities of SHM on Linux. By default it usually limited to a few MB so you have to increase it a lot for this to work (it can be done with <a href="http://linux.die.net/man/8/sysctl">sysctl</a>). The implementation, on the other hand, is far from trivial. My code uses a <em>lot</em> of pointer arithmetics, I should probably clean it up someday, but in the meantime it does its job perfectly.</p>
 
-<h2>Seed</h2>
+<h2 id="seed">Seed</h2>
 
 <p>The Acorn Quantizer was the last major improvement to our online search stack. Around that time, we resolved on a major technological shift: we would perform image recognition on mobile devices directly instead of doing it on the server. Of course, initially, we would have an hybrid approach where on-device recognition would work as a kind of cache, but the mobile was where we would focus our efforts.</p>
 
@@ -1462,7 +1462,7 @@ So, what did I think of it? Well, finally I could see myself write a serious Web
 
 <p>With the current (second) generation of the Seed algorithms, we are actually mostly using the C implementation through the LuaJIT FFI on the server side now. That is because I have been working on other projects while the rest of the team (which is not as comfortable with Lua) was developing them, so I would have been a bottleneck if we had kept the dual stack approach. I may well bring the Lua branch up to date someday though, who knows?</p>
 
-<h2>chksrv and chkcoherence</h2>
+<h2 id="chksrv-and-chkcoherence">chksrv and chkcoherence</h2>
 
 <p>Moodstocks&#39; server-side architecture is <a href="/2013-01-02-startups-soa.html">some kind of SOA</a>. That means we have a lot of different services that run as daemons and need to stay up. chksrv is a medium-sized program in Bash that takes care of this. It is deployed on every instance with a configuration file that indicates which services should be running on that instance, and it makes sure that they are (correctly). It also checks if other instances are up. If something goes wrongs, it warns the &quot;ops team&quot;, who is basically me and Cédric as a backup in case I am not available.</p>
 
@@ -1470,7 +1470,7 @@ So, what did I think of it? Well, finally I could see myself write a serious Web
 
 <p>chkcoherence is the ideal complement to chksrv: where the latter checks if services are running, the former verifies that they are doing things right. It is also written in Bash at the top level. I have already written about its concept <a href="/2013-05-28-coherence-checks.html">here</a>.</p>
 
-<h2>Anemone</h2>
+<h2 id="anemone">Anemone</h2>
 
 <p>Anemone is the project that deals with everything related to metrics and measurements at Moodstocks. It is written in Lua and has quite a few different roles:</p>
 
@@ -1484,7 +1484,7 @@ So, what did I think of it? Well, finally I could see myself write a serious Web
 
 <p>It also has a web-based dashboard for the team with high-level KPI, written in JavaScript and <a href="http://code.google.com/p/flot/">flot</a>. Someday I might integrate Brett Slatkin&#39;s <a href="http://bslatkin.github.com/cohorts/">Cohort Visualizer</a> into it.</p>
 
-<h2>Dandelion</h2>
+<h2 id="dandelion">Dandelion</h2>
 
 <p>I said earlier that with Seed we generate image signatures on the server and send them to the mobile clients where they are used for recognition. Dandelion is the code name of the service responsible for that.</p>
 
@@ -1492,7 +1492,7 @@ So, what did I think of it? Well, finally I could see myself write a serious Web
 
 <p>The server part of Dandelion is written in Lua and depends on pieces like Redis and Beanstalkd, which is why I wrote <a href="https://github.com/catwell/haricot">haricot</a>.</p>
 
-<h2>Physalis</h2>
+<h2 id="physalis">Physalis</h2>
 
 <p>Finally, Physalis is the project I am currently working on. It has not been released yet so I won&#39;t get into the details, but I can explain the reasoning behind it.</p>
 
@@ -1528,7 +1528,7 @@ So, what did I think of it? Well, finally I could see myself write a serious Web
 
 <p>Recently I found a rare, ugly bug in a piece of software that had been in production at Moodstocks for 6 months. The bug itself is not that interesting, but the way I found and fixed it is.</p>
 
-<h2>Story of a bug</h2>
+<h2 id="story-of-a-bug">Story of a bug</h2>
 
 <p>Imagine you have a database where you can index some documents in a full text search engine. Indexing can be turned on and off on a per document basis.</p>
 
@@ -1544,7 +1544,7 @@ end
 
 <p>Of course, in practice, it is less trivial and only happens in rare corner cases, so your tests don&#39;t catch it...</p>
 
-<h2>This ain&#39;t normal(ized)</h2>
+<h2 id="this-ain39t-normalized">This ain&#39;t normal(ized)</h2>
 
 <p>This kind of bug in a system can be very nasty. What happens when it is triggered is that the worldviews of two subsystems (here the datastore and the index) are not coherent anymore.</p>
 
@@ -1556,7 +1556,7 @@ end
 
 <p>So that leaves us with denormalized data and its own problems. How do we mitigate them?</p>
 
-<h2>Invariants are sexy</h2>
+<h2 id="invariants-are-sexy">Invariants are sexy</h2>
 
 <p>Once you have denormalized data, your problem is to keep it coherent. That means that there are invariants that must be verified at all times by the various states of the subsystems. Or rather, because of asynchronous jobs, invariants that shouldn&#39;t remain unverified for too long.</p>
 
@@ -1566,7 +1566,7 @@ end
 
 <p>In our case, the script responsible for coherence checks warned me that a few documents belonging to the same user were present in the search engine but not flagged as indexed. I asked the application logs what had happened to these documents around the time when the incoherence occurred, and saw they had all been updated. I looked up the relevant code path in application code... and facepalm-ed. I had pushed that code to production half a year ago, and it was obviously wrong.</p>
 
-<h2>Conclusion</h2>
+<h2 id="conclusion">Conclusion</h2>
 
 <p>The moral of it all is not, as I already discussed, that you should not denormalize data. It is not that we should write more tests, either. At least it is not what I want the takeaway to be (we do test these things more carefully now, but edge cases can always slip through).</p>
 
@@ -1638,13 +1638,13 @@ These are the first few things that come to mind.
       <div xmlns="http://www.w3.org/1999/xhtml">
         
 
-<h2>The State Machine</h2>
+<h2 id="the-state-machine">The State Machine</h2>
 
 <p>Let us consider a system that can take a finite number of states <code>S[1]</code> to <code>S[n]</code> over time.</p>
 
 <p>We can represent the system as a N-node directed graph, where nodes are the states. An arc exists between node <code>S[i]</code> and <code>S[j]</code> if the system can transition from <code>S[i]</code> to <code>S[j]</code>. You probably already know that.</p>
 
-<h2>In Chains</h2>
+<h2 id="in-chains">In Chains</h2>
 
 <p>We will now observe the evolution of the system over time. We will model time discretely. That does not mean that time itself is discrete, but we will observe the system at fixed-interval &quot;ticks&quot;. We call <code>S(t)</code> the state of the system at tick <code>t</code>.</p>
 
@@ -1660,7 +1660,7 @@ These are the first few things that come to mind.
 
 <p>By the way, this is called a Markov Chain.</p>
 
-<h2>Blurry Sights</h2>
+<h2 id="blurry-sights">Blurry Sights</h2>
 
 <p>Now let&#39;s complicate things a little by introducing a separate system that can take states <code>V[1]</code> to <code>V[M]</code>. This second system <code>V</code> is tied to <code>S</code>: at every tick <code>t</code>, the probability distribution of <code>V(t)</code> only depends on <code>S(t)</code>. We will note: <code>O(i,j) = P(V(j) | S[i])</code>.</p>
 
@@ -1672,7 +1672,7 @@ These are the first few things that come to mind.
 
 <p>Now, add more possible colors to <code>S</code> and <code>V</code>, not necessarily the same number for both, to generalize the system.</p>
 
-<h2>The Black Box</h2>
+<h2 id="the-black-box">The Black Box</h2>
 
 <p>Now, here is our problem: imagine that you know how system <code>S</code> works (the probabilities of transition between the states) but that it is hidden in a black box such that you cannot observe it. What you <em>can</em> observe is system <code>V</code>. Is there any way to guess what system <code>S</code> is doing at any time in this setting? If yes, how?</p>
 
@@ -1680,7 +1680,7 @@ These are the first few things that come to mind.
 
 <p>The second question is the one my favorite algorithm, the Viterbi algorithm, answers. Let&#39;s see how it works.</p>
 
-<h2>Make it Code</h2>
+<h2 id="make-it-code">Make it Code</h2>
 
 <p>First we need to represent the problem in a way that can be understood by a computer. I will use the Lua programming language for that.</p>
 
@@ -1731,7 +1731,7 @@ end
 
 <p>The green part is the Markov chain itself, the blue part corresponds to the observation device. Arcs are labeled with probabilities of transition or observation.</p>
 
-<h2>Stepping Forward</h2>
+<h2 id="stepping-forward">Stepping Forward</h2>
 
 <p>Now we can simulate the behavior of the system.</p>
 
@@ -1769,7 +1769,7 @@ end
 
 <p>This code is slightly more complicated, but what you should understand is that, at the end of it, <code>S</code> is a vector of <code>L</code> states of the system and <code>V</code> is the corresponding vector of observations. The initial state <code>S[1]</code> is chosen randomly with uniform probabilities.</p>
 
-<h2>Seeing Through the Box</h2>
+<h2 id="seeing-through-the-box">Seeing Through the Box</h2>
 
 <p>Now, let us proceed to guess what happens inside the black box. We do so iteratively: at each tick <code>t</code>, we calculate the most plausible sequence of events that could have led to each possible state of the system, given the observation at <code>t</code> and the results for <code>t-1</code>.</p>
 
@@ -1844,7 +1844,7 @@ end
 local bestpath = getpath(best_node(trellis[L]))
 </code></pre>
 
-<h2>Does this thing really work?</h2>
+<h2 id="does-this-thing-really-work">Does this thing really work?</h2>
 
 <p>To check if this work, let&#39;s take the actual system out of the box and calculate how much it looks like our estimate:</p>
 
@@ -1860,7 +1860,7 @@ print(100*ok/L)
 
 <p>The result I got with those parameters is 72% accuracy, to compare to what a naive random process would get (33%).</p>
 
-<h2>Why I love it</h2>
+<h2 id="why-i-love-it">Why I love it</h2>
 
 <p>Let&#39;s go back to the title of this post: now that you know what it does, <em>why</em> is Viterbi&#39;s algorithm my favorite?</p>
 
@@ -1884,7 +1884,7 @@ Yes, it is. And because of that it has a whole range of applications, from advan
       <div xmlns="http://www.w3.org/1999/xhtml">
         
 
-<h2>Algorithms &amp; Data Structures</h2>
+<h2 id="algorithms-amp-data-structures">Algorithms &amp; Data Structures</h2>
 
 <p>For a long time I have thought that there were only two fundamental parts to Computer Science: Algorithms and Data Structures. This is how it used to be taught, and how I think it should still be taught to beginners.</p>
 
@@ -1896,7 +1896,7 @@ Yes, it is. And because of that it has a whole range of applications, from advan
 
 <p>Or so I thought.</p>
 
-<h2>Protocols</h2>
+<h2 id="protocols">Protocols</h2>
 
 <p>It turns out looking at the aforementioned parts of the computer is not enough. We need to look at the negative space too: how does the data move around? Inside the computer, data mostly circulates in buses. Between computers, data may circulate in networks, on detachable storage units...</p>
 
@@ -1924,7 +1924,7 @@ Yes, it is. And because of that it has a whole range of applications, from advan
       <div xmlns="http://www.w3.org/1999/xhtml">
         
 
-<h2>What is SOA?</h2>
+<h2 id="what-is-soa">What is SOA?</h2>
 
 <p>When people say SOA (Service Oriented Architecture) they often mean different things. My personal definition of SOA is rather loose and, like all the quotes in this article, <a href="http://queue.acm.org/detail.cfm?id=1142065">comes from Werner Vogels</a>, the CTO of Amazon:</p>
 
@@ -1944,7 +1944,7 @@ Yes, it is. And because of that it has a whole range of applications, from advan
 <li><p>Do we have a Web application that does significantly more than rendering templates? Is it stateful? What parts of that state could we also use in a mobile application? Does the same application render JSON and HTML?</p></li>
 </ul>
 
-<h2>Advantages of SOA</h2>
+<h2 id="advantages-of-soa">Advantages of SOA</h2>
 
 <p>One of the most obvious benefits of SOA is that services are easier to scale than monolithic applications. Maybe you want to migrate user authentication data to Redis and keep other data in whatever DB you already have? SOA makes it trivial. Maybe some part of your product would benefit from running on an AWS instance that has lots of RAM while another one is CPU-intensive? Just deploy the corresponding services where they run best.</p>
 
@@ -1970,7 +1970,7 @@ Yes, it is. And because of that it has a whole range of applications, from advan
 
 <p>Finally, I can see a (perhaps more abstract) last advantage to SOA which is related to the rise of the Programmable Web. After all, there is little difference between a Web API and a service, except that you wrote the latter and not the former. Embracing SOA will prepare you to work with external APIs, and more importantly to publish your own. For instance, lots of AWS services have started their life as internal services at Amazon.</p>
 
-<h2>Conclusion</h2>
+<h2 id="conclusion">Conclusion</h2>
 
 <p>I am not saying SOA <em>only</em> has advantages. Such an architecture can be fragile if you do not code with service unavailability in mind. Testing complex operations involving lots of services can be hard, and debugging them even harder. Correctly defining the boundaries and interfaces of services requires a significant amount of reflection and may not be a good idea when you do not know what exactly you are building.</p>
 
@@ -2095,19 +2095,19 @@ Pour conclure, un conseil : si vous voulez vous faire une idée sur le sujet, é
 
 <p>Ceux qui me connaissent savent que râler, je sais faire. J&#39;essaie d&#39;éviter autant que possible, mais parfois c&#39;est nécessaire.</p>
 
-<h2>Paye ta TV</h2>
+<h2 id="paye-ta-tv">Paye ta TV</h2>
 
 <p>On la critique en France mais la redevance TV est bien pire en Angleterre. Si dans l&#39;hexagone elle est perçue par l&#39;État, ici c&#39;est une <a href="http://www.tvlicensing.co.uk">société privée</a> qui s&#39;en charge. Et contrairement à chez nous, ni les gens qui regardent la télé sur Internet ou sur un téléphone mobile ni les étudiants en résidence ne sont exemptés.</p>
 
 <p>Cette société, TV Licensing, envoie régulièrement des lettres de menace aux délinquants qui osent capter la bonne parole diffusée sur les ondes sans s&#39;acquitter de la dîme. Hmm, un petit arrière-goût d&#39;HADOPI ? J&#39;ai reçu cinq lettres, et je suis d&#39;après leurs dires &quot;scheduled for visit&quot;. Ils peuvent venir, j&#39;ai l&#39;esprit tranquille : je ne regarde <em>pas</em> la TV, la loi anglaise ne leur permet pas d&#39;entrer chez moi et de toute façon c&#39;est tellement difficile techniquement d&#39;atteindre ma porte que ça m&#39;étonnerait qu&#39;ils y arrivent un jour.</p>
 
-<h2>Le garçon qui criait au loup</h2>
+<h2 id="le-garon-qui-criait-au-loup">Le garçon qui criait au loup</h2>
 
 <p>Depuis que j&#39;habite ici, j&#39;ai bien dû être réveillé une vingtaine de fois par des alarmes incendies en pleine nuit. La première fois, enfiler un manteau, des chaussures et descendre devant l&#39;entrée se geler pendant une demi-heure en attendant l&#39;arrivée de la sécurité peut être drôle, mais à la longue ça lasse. Qui plus est, le dispositif d&#39;alarme permet de savoir aisément quel détecteur a déclenché l&#39;alerte, et donc de confirmer rapidement que c&#39;est une erreur, mais la loi anglaise stipule qu&#39;ignorer l&#39;alarme et retourner au chaud dans son lit est un crime !</p>
 
 <p>Si jamais un feu se déclenche vraiment, j&#39;espère que les familles des victimes penseront à faire un procès à tous les responsables du dispositif d&#39;alarme. Un système d&#39;alerte qui génère autant de faux-positifs est totalement inutile, simplement parce que personne n&#39;y prête plus attention. Tous les administrateurs système qui ont déjà essayé de lire des logs doivent bien le savoir...</p>
 
-<h2>La vie privée, c&#39;est dépassé !</h2>
+<h2 id="la-vie-prive-c39est-dpass-">La vie privée, c&#39;est dépassé !</h2>
 
 <p>C&#39;est en tout cas ce que pense Mark Zuckerberg, le patron de Facebook. Il a le droit, et j&#39;ai le droit de ne pas être d&#39;accord. Comme <a href="http://www.alain-bazot.fr/index.php/la-vie-privee-un-concept-depasse/">mon ami Dédé</a>, je vais donc logiquement quitter le célèbre réseau social.</p>
 
@@ -2115,7 +2115,7 @@ Pour conclure, un conseil : si vous voulez vous faire une idée sur le sujet, é
 
 <p>Pour ma part, je ne consulterai pas Facebook en février. Je ne clôturerai mon compte que début mars de sorte que les gens qui n&#39;ont que ce moyen pour me joindre puissent m&#39;en demander un autre par message privé (je les reçois dans ma boite mail). Si vous trouvez que je suis paranoïaque, sachez simplement que l&#39;un des sujets proposés en <em>MSc Thesis</em> à Cranfield consiste à faire du <em>data-mining</em> (collecter plein d&#39;informations sur vous) sur Facebook en utilisant le <em>Grid Computing</em> (un paquet d&#39;ordinateurs, dont des super-calculateurs, en réseau). Si de tels moyens, habituellement réservés à de très grosses industries comme le pétrole, l&#39;automobile ou la mode, sont déployés dans ce but, c&#39;est simplement parce que vos données personnelles valent très cher.</p>
 
-<h2>Java m&#39;pendre (ou pas)</h2>
+<h2 id="java-m39pendre-ou-pas">Java m&#39;pendre (ou pas)</h2>
 
 <p>Java est un langage tout pourri, si je commençais à énumérer toutes les raisons pour ça il me faudrait autant de lignes que pour coder une application de taille moyenne dans le dit langage, et oui ça fait beaucoup.</p>
 
@@ -2201,7 +2201,7 @@ Bref, nous voilà encore une fois sauvés de l&#39;horrible Big Brother du 21e s
 
 <p>Regarder le <a href="http://www.alexa.com/topsites">top 10 d&#39;Alexa</a> peut faire peur quand on connait un peu ce qu&#39;est Internet. Ce classement par trafic est assez représentatif de l&#39;évolution du web ces quelques années. On y trouve évidemment beaucoup de moteurs de recherche : google.com (1er), yahoo.com (3e), live.com (5e), baidu.com (8e) et yahoo.jp (10e). msn.com, le portail de Microsoft, arrive en 9e position, pourquoi pas. Le problème, c&#39;est les quatre autres. Prenons-les dans le désordre.</p>
 
-<h2>YouTube (4e) et Blogger (7e)</h2>
+<h2 id="youtube-4e-et-blogger-7e">YouTube (4e) et Blogger (7e)</h2>
 
 <p>Deux services de Google, bizarrement. Tous deux vous permettent d&#39;héberger du contenu, vidéo pour YouTube et principalement textuel pour Blogger. Ce contenu pourra ensuite être commenté par d&#39;autres utilisateurs, c&#39;est ce qu&#39;on appelle Web 2.0. Qu&#39;y a-t-il de mal à cela ? Pas grand-chose, en fait, si ce n&#39;est la situation de quasi-monopole de ces plates-formes.</p>
 
@@ -2215,7 +2215,7 @@ Bref, nous voilà encore une fois sauvés de l&#39;horrible Big Brother du 21e s
 
 <p>[2] Pour ceux qui ne l&#39;utilisent pas, je parle de publicités sous forme de bandeaux qui s&#39;affichent en superposition sur la vidéo.</p>
 
-<h2>Wikipedia (6e)</h2>
+<h2 id="wikipedia-6e">Wikipedia (6e)</h2>
 
 <p>Wikipedia, l&#39;un des plus gros succès du libre. Une source d&#39;information à laquelle chacun peut contribuer s&#39;il a les compétences nécessaires, accessible instantanément de tout point du monde. Une merveille !</p>
 
@@ -2223,7 +2223,7 @@ Bref, nous voilà encore une fois sauvés de l&#39;horrible Big Brother du 21e s
 
 <p><em>EDIT - Pour ceux qui ne s&#39;en seraient pas rendu compte, j&#39;exagère volontairement. Ne prenez pas tout pour argent comptant non plus, la diversité d&#39;opinion existe bien sur Wikipedia dans une certaine mesure.</em></p>
 
-<h2>Facebook (2e)</h2>
+<h2 id="facebook-2e">Facebook (2e)</h2>
 
 <p>J&#39;ai gardé le meilleur pour la fin. Juste derrière le roi des moteurs de recherche, le sultan des réseaux sociaux. Facebook, la toile dans la toile, mais une toile encore une fois centralisée et où on ne communique qu&#39;avec ses &quot;amis&quot;. Pratique, je peux dire des bêtises comme ça, personne ne le verra. Et si jamais un jour je ne les assume plus, j&#39;efface.</p>
 
@@ -2231,7 +2231,7 @@ Bref, nous voilà encore une fois sauvés de l&#39;horrible Big Brother du 21e s
 
 <p>Et puis même au-delà de ça, comment comprendre qu&#39;un tel principe ait du succès ? Parce qu&#39;après tout, soit vous n&#39;ajoutez pas de contenu et vous ne faites que poster des liens vers des choses que vous avez trouvées en surfant sur le Web ou partager ceux des autres, et ça ressemble fortement aux chaînes d&#39;emails que personne ou presque n&#39;aime, soit vous mettez des choses nouvelles en ligne et c&#39;est souvent égoïste parce que vous réservez (théoriquement) à vos pseudo-amis l&#39;accès à de l&#39;information qui n&#39;est en général pas si privée que ça et qui aurait peut-être pu servir ou faire plaisir à d&#39;autres. Regardez un peu en arrière, même les kikoolols de la génération Caramail préféraient en général les forums publics aux forums privés.</p>
 
-<h2>Le cœur du problème</h2>
+<h2 id="le-cur-du-problme">Le cœur du problème</h2>
 
 <p>Oui, parce qu&#39;il faut bien le dire, il y a un problème. Et ce n&#39;est pas que ces trucs-là existent, ils en ont le droit, c&#39;est même un des fondements d&#39;Internet : n&#39;importe quel service a sa chance.</p>
 
@@ -2239,7 +2239,7 @@ Bref, nous voilà encore une fois sauvés de l&#39;horrible Big Brother du 21e s
 
 <p>La raison pour laquelle je les utilise, c&#39;est que bien que conceptuellement et idéologiquement ils soient percés de partout, techniquement, ils vont de pas trop mauvais (Facebook, Wikipedia) à très bons (tout ce que fait Google). C&#39;est un peu la différence avec Windows ou Internet Explorer, vous voyez : le fait qu&#39;ils sont techniquement mauvais fait que leurs alternatives sont crédibles, pas vraiment la question éthique qui est derrière.</p>
 
-<h2>Conclusion</h2>
+<h2 id="conclusion">Conclusion</h2>
 
 <p>Conclusion ? Rien. Que voulez-vous que je dise de plus ? Voir que ces sites-là sont parmi les plus visités du monde me rend un peu triste mais ce n&#39;est pas pour autant que je vais arrêter de les utiliser. Pas tout de suite en tout cas.</p>
 

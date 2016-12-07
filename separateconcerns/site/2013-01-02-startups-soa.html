@@ -19,7 +19,7 @@
     </header>
     
 
-<h2>What is SOA?</h2>
+<h2 id="what-is-soa">What is SOA?</h2>
 
 <p>When people say SOA (Service Oriented Architecture) they often mean different things. My personal definition of SOA is rather loose and, like all the quotes in this article, <a href="http://queue.acm.org/detail.cfm?id=1142065">comes from Werner Vogels</a>, the CTO of Amazon:</p>
 
@@ -39,7 +39,7 @@
 <li><p>Do we have a Web application that does significantly more than rendering templates? Is it stateful? What parts of that state could we also use in a mobile application? Does the same application render JSON and HTML?</p></li>
 </ul>
 
-<h2>Advantages of SOA</h2>
+<h2 id="advantages-of-soa">Advantages of SOA</h2>
 
 <p>One of the most obvious benefits of SOA is that services are easier to scale than monolithic applications. Maybe you want to migrate user authentication data to Redis and keep other data in whatever DB you already have? SOA makes it trivial. Maybe some part of your product would benefit from running on an AWS instance that has lots of RAM while another one is CPU-intensive? Just deploy the corresponding services where they run best.</p>
 
@@ -65,7 +65,7 @@
 
 <p>Finally, I can see a (perhaps more abstract) last advantage to SOA which is related to the rise of the Programmable Web. After all, there is little difference between a Web API and a service, except that you wrote the latter and not the former. Embracing SOA will prepare you to work with external APIs, and more importantly to publish your own. For instance, lots of AWS services have started their life as internal services at Amazon.</p>
 
-<h2>Conclusion</h2>
+<h2 id="conclusion">Conclusion</h2>
 
 <p>I am not saying SOA <em>only</em> has advantages. Such an architecture can be fragile if you do not code with service unavailability in mind. Testing complex operations involving lots of services can be hard, and debugging them even harder. Correctly defining the boundaries and interfaces of services requires a significant amount of reflection and may not be a good idea when you do not know what exactly you are building.</p>
 

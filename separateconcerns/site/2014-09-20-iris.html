@@ -31,7 +31,7 @@
 
 <p>Iris supports three usual basic patterns for communication: Request/Response, Publish/Subscribe and Broadcast. A fourth one, Tunnel, is slightly more complicated.</p>
 
-<h1>Request/Response</h1>
+<h1 id="request-response">Request/Response</h1>
 
 <p>This is the pattern everybody knows about from HTTP, and probably the workhorse of most SOAs. A client sends a request to a cluster, and a single node of the cluster answers it. Iris just does the messaging here: the request and the response are binary blobs, there is no notion of headers.</p>
 
@@ -68,7 +68,7 @@ for i=1,5 do c:process_one() end
 c:teardown()
 </code></pre>
 
-<h1>Publish/Subscribe</h1>
+<h1 id="publish-subscribe">Publish/Subscribe</h1>
 
 <p>Another well-known pattern. Consumers subscribe to a channel identified by a name, producers send messages into the channel and all subscribers receive them. There is no response from the subscriber. Channels are completely independent from clusters, i.e. channel &quot;X&quot; and cluster &quot;X&quot; can coexist and have nothing in common, and there is no restriction that a channel only works within a given cluster (any entity on the same Iris network can access it).</p>
 
@@ -107,7 +107,7 @@ for i=1,5 do c:process_one() end
 c:teardown()
 </code></pre>
 
-<h1>Broadcast</h1>
+<h1 id="broadcast">Broadcast</h1>
 
 <p>We have seen that requests are sent to a single instance of a cluster. What if you want to notify <em>all</em> members of a cluster of some event? This is what Broadcast is for. It is kind of redundant with Publish/Subscribe (you could have all members of each cluster subscribe to a channel) but it is somehow cleaner to have a separate message type for this. You could use it to build more complicated things on top, for instance a full-fledged service bus.</p>
 
@@ -138,7 +138,7 @@ for i=1,5 do c:process_one() end
 c:teardown()
 </code></pre>
 
-<h1>Tunnel</h1>
+<h1 id="tunnel">Tunnel</h1>
 
 <p>Tunnels are the last and most complicated way to communicate provided by Iris. To understand why we need them, remember how requests work.</p>
 
@@ -224,7 +224,7 @@ while op ~= iris.OP.TUN_CLOSE do op = c:process_one() end
 c:teardown()
 </code></pre>
 
-<h1>Conclusion</h1>
+<h1 id="conclusion">Conclusion</h1>
 
 <p>Iris is a very interesting piece of software which implements a vision of systems that I like and cannot find in any other product out of the box. It is still very young and probably not ready for serious production yet, although I have found it stable during the (limited) testing I have done. Even though my current job does not involve SOA I will probably come back to it someday, so Iris will join the list of tools whose progress I follow attentively.</p>
 
