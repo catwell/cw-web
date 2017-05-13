@@ -15,7 +15,7 @@ local template = [[
   </head>
   <body>
     <div id="container">
-      <h1>Reading list of <a href="http://catwell.info">Pierre Chapuis</a></h1>
+      <h1>Reading list of <a href="https://catwell.info">Pierre Chapuis</a></h1>
       <div id="books">
       {{#books}}
         <div class="book">

@@ -12,7 +12,7 @@ TPL.html_post = [[
     {{/has_code}}
     <link
       rel="alternate" type="application/atom+xml"
-      href="http://blog.separateconcerns.com/feed.atom"
+      href="https://blog.separateconcerns.com/feed.atom"
     />
     <title>{{{title}}}</title>
   </head>
@@ -44,7 +44,7 @@ TPL.html_index = [[
     <link href="css/theme.css" rel="stylesheet" type="text/css">
     <link
       rel="alternate" type="application/atom+xml"
-      href="http://blog.separateconcerns.com/feed.atom"
+      href="https://blog.separateconcerns.com/feed.atom"
     />
     <title>Separate Concerns</title>
   </head>
@@ -53,7 +53,7 @@ TPL.html_index = [[
     <header>
       <h1>Separate Concerns</h1>
       <h4>
-        <a href="http://catwell.info" rel="me">catwell</a>'s
+        <a href="https://catwell.info" rel="me">catwell</a>'s
         online journal
         [<a href="feed.atom">subscribe</a>]
       </h4>
@@ -77,25 +77,25 @@ TPL.atom_feed = [[
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Separate Concerns</title>
   <link
-    href="http://blog.separateconcerns.com/feed.atom"
+    href="https://blog.separateconcerns.com/feed.atom"
     rel="self" type="application/atom+xml"
   />
   <link
-    href="http://blog.separateconcerns.com"
+    href="https://blog.separateconcerns.com"
     rel="alternate" type="application/xhtml+xml"
   />
   <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
   <updated>{{updated}}</updated>
   <author>
     <name>Pierre 'catwell' Chapuis</name>
-    <uri>http://catwell.info/</uri>
+    <uri>https://catwell.info/</uri>
   </author>
   {{#entries}}
   <entry>
     <title>{{{title}}}</title>
     <link
       rel="alternate" type="text/html"
-      href="http://blog.separateconcerns.com/{{url}}"
+      href="https://blog.separateconcerns.com/{{url}}"
     />
     <id>tag:blog.separateconcerns.com,{{shortdate}}:{{atom.fragment}}</id>
     <published>{{atom.published}}</published>

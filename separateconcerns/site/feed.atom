@@ -2,25 +2,25 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Separate Concerns</title>
   <link
-    href="http://blog.separateconcerns.com/feed.atom"
+    href="https://blog.separateconcerns.com/feed.atom"
     rel="self" type="application/atom+xml"
   />
   <link
-    href="http://blog.separateconcerns.com"
+    href="https://blog.separateconcerns.com"
     rel="alternate" type="application/xhtml+xml"
   />
   <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
-  <updated>2017-05-07T12:37:46Z</updated>
+  <updated>2017-05-13T09:30:39Z</updated>
   <author>
     <name>Pierre 'catwell' Chapuis</name>
-    <uri>http://catwell.info/</uri>
+    <uri>https://catwell.info/</uri>
   </author>
   
   <entry>
     <title>A short introduction to Interval Tree Clocks</title>
     <link
       rel="alternate" type="text/html"
-      href="http://blog.separateconcerns.com/2017-05-07-itc.html"
+      href="https://blog.separateconcerns.com/2017-05-07-itc.html"
     />
     <id>tag:blog.separateconcerns.com,2017-05-07:itc</id>
     <published>2017-05-07T14:30:00Z</published>
@@ -82,7 +82,7 @@
     <title>Goodbye Lua Toolbox</title>
     <link
       rel="alternate" type="text/html"
-      href="http://blog.separateconcerns.com/2016-12-22-goodbye-lua-toolbox.html"
+      href="https://blog.separateconcerns.com/2016-12-22-goodbye-lua-toolbox.html"
     />
     <id>tag:blog.separateconcerns.com,2016-12-22:goodbye-lua-toolbox</id>
     <published>2016-12-22T08:00:00Z</published>
@@ -110,7 +110,7 @@ Today, I finally replaced the whole website by <a href="https://lua-toolbox.com"
     <title>Thoughts 2</title>
     <link
       rel="alternate" type="text/html"
-      href="http://blog.separateconcerns.com/2016-12-07-thoughts-2.html"
+      href="https://blog.separateconcerns.com/2016-12-07-thoughts-2.html"
     />
     <id>tag:blog.separateconcerns.com,2016-12-07:thoughts-2</id>
     <published>2016-12-07T22:35:00Z</published>
@@ -152,7 +152,7 @@ Sadly, for reasons that probably have a lot to do with business models, things l
     <title>Thoughts 1</title>
     <link
       rel="alternate" type="text/html"
-      href="http://blog.separateconcerns.com/2016-09-16-thoughts-1.html"
+      href="https://blog.separateconcerns.com/2016-09-16-thoughts-1.html"
     />
     <id>tag:blog.separateconcerns.com,2016-09-16:thoughts-1</id>
     <published>2016-09-16T17:00:00Z</published>
@@ -210,7 +210,7 @@ Modern OSs do not make much distinction between a thread and a process anymore, 
     <title>The LMDB file format</title>
     <link
       rel="alternate" type="text/html"
-      href="http://blog.separateconcerns.com/2016-04-03-lmdb-format.html"
+      href="https://blog.separateconcerns.com/2016-04-03-lmdb-format.html"
     />
     <id>tag:blog.separateconcerns.com,2016-04-03:lmdb-format</id>
     <published>2016-04-03T23:00:00Z</published>
@@ -272,7 +272,7 @@ I have explained the basics of the data.mdb file format. Should you have to debu
     <title>Five books I read in 2015</title>
     <link
       rel="alternate" type="text/html"
-      href="http://blog.separateconcerns.com/2016-01-03-five-books-2015.html"
+      href="https://blog.separateconcerns.com/2016-01-03-five-books-2015.html"
     />
     <id>tag:blog.separateconcerns.com,2016-01-03:five-books-2015</id>
     <published>2016-01-03T11:40:00Z</published>
@@ -352,7 +352,7 @@ I have long thought that the financial world used HFT as a scapegoat (especially
     <title>Electronic Voting</title>
     <link
       rel="alternate" type="text/html"
-      href="http://blog.separateconcerns.com/2015-11-06-e-voting.html"
+      href="https://blog.separateconcerns.com/2015-11-06-e-voting.html"
     />
     <id>tag:blog.separateconcerns.com,2015-11-06:e-voting</id>
     <published>2015-11-06T23:20:00Z</published>
@@ -382,7 +382,7 @@ I have long thought that the financial world used HFT as a scapegoat (especially
     <title>Four easy reads to understand distributed systems issues</title>
     <link
       rel="alternate" type="text/html"
-      href="http://blog.separateconcerns.com/2015-07-07-four-easy-reads-distsys.html"
+      href="https://blog.separateconcerns.com/2015-07-07-four-easy-reads-distsys.html"
     />
     <id>tag:blog.separateconcerns.com,2015-07-07:four-easy-reads-distsys</id>
     <published>2015-07-07T09:00:00Z</published>
@@ -432,7 +432,7 @@ Distributed systems work is about that adversarial world out there, and how we w
     <title>My love-hate relationship with LuaJIT</title>
     <link
       rel="alternate" type="text/html"
-      href="http://blog.separateconcerns.com/2015-06-18-love-hate-luajit.html"
+      href="https://blog.separateconcerns.com/2015-06-18-love-hate-luajit.html"
     />
     <id>tag:blog.separateconcerns.com,2015-06-18:love-hate-luajit</id>
     <published>2015-06-18T02:00:00Z</published>
@@ -478,7 +478,7 @@ Oh, and by the way, with this whole systemd thing, I am semi-seriously consideri
     <title>Continuous Integration for Lua with Travis</title>
     <link
       rel="alternate" type="text/html"
-      href="http://blog.separateconcerns.com/2015-03-08-travis-lua.html"
+      href="https://blog.separateconcerns.com/2015-03-08-travis-lua.html"
     />
     <id>tag:blog.separateconcerns.com,2015-03-08:travis-lua</id>
     <published>2015-03-08T12:00:00Z</published>
@@ -510,7 +510,7 @@ After that, commit <code>.travis</code> and <code>.travis.yml</code> and push to
     <title>Indie Web</title>
     <link
       rel="alternate" type="text/html"
-      href="http://blog.separateconcerns.com/2015-01-04-indie-web.html"
+      href="https://blog.separateconcerns.com/2015-01-04-indie-web.html"
     />
     <id>tag:blog.separateconcerns.com,2015-01-04:indie-web</id>
     <published>2015-01-04T20:10:00Z</published>
@@ -534,7 +534,7 @@ If you want to do the same, you can use <a href="http://indiewebify.me/">this ha
     <title>Lean tools</title>
     <link
       rel="alternate" type="text/html"
-      href="http://blog.separateconcerns.com/2014-11-23-lean-tools.html"
+      href="https://blog.separateconcerns.com/2014-11-23-lean-tools.html"
     />
     <id>tag:blog.separateconcerns.com,2014-11-23:lean-tools</id>
     <published>2014-11-23T21:45:00Z</published>
@@ -576,7 +576,7 @@ Eventually, this is a matter of choice. Avdi is right: fat tools usually exist f
     <title>Disabling graphical password prompts</title>
     <link
       rel="alternate" type="text/html"
-      href="http://blog.separateconcerns.com/2014-10-24-cli-passwords.html"
+      href="https://blog.separateconcerns.com/2014-10-24-cli-passwords.html"
     />
     <id>tag:blog.separateconcerns.com,2014-10-24:cli-passwords</id>
     <published>2014-10-24T21:30:00Z</published>
@@ -619,7 +619,7 @@ for i in *; do echo &quot;Hidden=true&quot; &gt;&gt; $i; done
     <title>Microservices</title>
     <link
       rel="alternate" type="text/html"
-      href="http://blog.separateconcerns.com/2014-09-25-microservices.html"
+      href="https://blog.separateconcerns.com/2014-09-25-microservices.html"
     />
     <id>tag:blog.separateconcerns.com,2014-09-25:microservices</id>
     <published>2014-09-25T23:00:00Z</published>
@@ -661,7 +661,7 @@ And finally, just to be clear: do not look too much at the left part of the curv
     <title>Iris</title>
     <link
       rel="alternate" type="text/html"
-      href="http://blog.separateconcerns.com/2014-09-20-iris.html"
+      href="https://blog.separateconcerns.com/2014-09-20-iris.html"
     />
     <id>tag:blog.separateconcerns.com,2014-09-20:iris</id>
     <published>2014-09-20T15:00:00Z</published>
@@ -888,7 +888,7 @@ Finally, if you try <a href="https://github.com/catwell/iris-lua">my Iris client
     <title>Hacker Founders</title>
     <link
       rel="alternate" type="text/html"
-      href="http://blog.separateconcerns.com/2014-05-28-hacker-founders.html"
+      href="https://blog.separateconcerns.com/2014-05-28-hacker-founders.html"
     />
     <id>tag:blog.separateconcerns.com,2014-05-28:hacker-founders</id>
     <published>2014-05-28T00:00:01Z</published>
@@ -920,7 +920,7 @@ The relationship between the programmers and the business types? Well... I belie
     <title>Indistinguishable from Magic</title>
     <link
       rel="alternate" type="text/html"
-      href="http://blog.separateconcerns.com/2014-05-27-magic.html"
+      href="https://blog.separateconcerns.com/2014-05-27-magic.html"
     />
     <id>tag:blog.separateconcerns.com,2014-05-27:magic</id>
     <published>2014-05-27T23:30:00Z</published>
@@ -946,7 +946,7 @@ I think it is time for the pendulum to swing back to products that optimize for 
     <title>Modern design and Alan Kay</title>
     <link
       rel="alternate" type="text/html"
-      href="http://blog.separateconcerns.com/2014-04-25-design-alan-kay.html"
+      href="https://blog.separateconcerns.com/2014-04-25-design-alan-kay.html"
     />
     <id>tag:blog.separateconcerns.com,2014-04-25:design-alan-kay</id>
     <published>2014-04-25T00:30:00Z</published>
@@ -996,7 +996,7 @@ And it turns out of you want to make a change in the larger world, you have to d
     <title>Learning in the small</title>
     <link
       rel="alternate" type="text/html"
-      href="http://blog.separateconcerns.com/2014-04-22-learning-small.html"
+      href="https://blog.separateconcerns.com/2014-04-22-learning-small.html"
     />
     <id>tag:blog.separateconcerns.com,2014-04-22:learning-small</id>
     <published>2014-04-22T23:59:00Z</published>
@@ -1036,7 +1036,7 @@ Moreover, Go appears to be a simpler language than Rust. I suspect I can learn e
     <title>Editing Sublime Text packages</title>
     <link
       rel="alternate" type="text/html"
-      href="http://blog.separateconcerns.com/2014-03-03-sublime-packages.html"
+      href="https://blog.separateconcerns.com/2014-03-03-sublime-packages.html"
     />
     <id>tag:blog.separateconcerns.com,2014-03-03:sublime-packages</id>
     <published>2014-03-03T21:30:00Z</published>
@@ -1096,7 +1096,7 @@ end]]&gt;&lt;/content&gt;
     <title>FOSDEM 2014</title>
     <link
       rel="alternate" type="text/html"
-      href="http://blog.separateconcerns.com/2014-02-09-fosdem-2014.html"
+      href="https://blog.separateconcerns.com/2014-02-09-fosdem-2014.html"
     />
     <id>tag:blog.separateconcerns.com,2014-02-09:fosdem-2014</id>
     <published>2014-02-09T19:30:00Z</published>
@@ -1180,7 +1180,7 @@ FOSDEM is still a very good event which you should consider attending next year.
     <title>How I write Lua modules</title>
     <link
       rel="alternate" type="text/html"
-      href="http://blog.separateconcerns.com/2014-01-03-lua-module-policy.html"
+      href="https://blog.separateconcerns.com/2014-01-03-lua-module-policy.html"
     />
     <id>tag:blog.separateconcerns.com,2014-01-03:lua-module-policy</id>
     <published>2014-01-03T00:00:01Z</published>
@@ -1371,7 +1371,7 @@ I think this is what matters the most in the end: modules always return tables a
     <title>C: what I had forgotten</title>
     <link
       rel="alternate" type="text/html"
-      href="http://blog.separateconcerns.com/2014-01-02-clang-forgotten.html"
+      href="https://blog.separateconcerns.com/2014-01-02-clang-forgotten.html"
     />
     <id>tag:blog.separateconcerns.com,2014-01-02:clang-forgotten</id>
     <published>2014-01-02T22:10:00Z</published>
@@ -1419,7 +1419,7 @@ typedef const struct stuff_s stuff_t;
     <title>To Infinity and Beyond</title>
     <link
       rel="alternate" type="text/html"
-      href="http://blog.separateconcerns.com/2013-12-12-infinity-beyond.html"
+      href="https://blog.separateconcerns.com/2013-12-12-infinity-beyond.html"
     />
     <id>tag:blog.separateconcerns.com,2013-12-12:infinity-beyond</id>
     <published>2013-12-12T21:30:00Z</published>
@@ -1459,7 +1459,7 @@ So it looks like my short-term future holds some Unix development and a good dus
     <title>Lapis: Lua for the Web</title>
     <link
       rel="alternate" type="text/html"
-      href="http://blog.separateconcerns.com/2013-09-01-lapis.html"
+      href="https://blog.separateconcerns.com/2013-09-01-lapis.html"
     />
     <id>tag:blog.separateconcerns.com,2013-09-01:lapis</id>
     <published>2013-09-01T16:00:00Z</published>
@@ -1489,7 +1489,7 @@ So, what did I think of it? Well, finally I could see myself write a serious Web
     <title>Three years of (proprietary) projects</title>
     <link
       rel="alternate" type="text/html"
-      href="http://blog.separateconcerns.com/2013-06-20-three-years-proprietary-projects.html"
+      href="https://blog.separateconcerns.com/2013-06-20-three-years-proprietary-projects.html"
     />
     <id>tag:blog.separateconcerns.com,2013-06-20:three-years-proprietary-projects</id>
     <published>2013-06-20T00:40:00Z</published>
@@ -1649,7 +1649,7 @@ So, what did I think of it? Well, finally I could see myself write a serious Web
     <title>Coherence checks in SOA</title>
     <link
       rel="alternate" type="text/html"
-      href="http://blog.separateconcerns.com/2013-05-28-coherence-checks.html"
+      href="https://blog.separateconcerns.com/2013-05-28-coherence-checks.html"
     />
     <id>tag:blog.separateconcerns.com,2013-05-28:coherence-checks</id>
     <published>2013-05-28T23:10:00Z</published>
@@ -1719,7 +1719,7 @@ I cannot imagine releasing a distributed system that does not have those things.
     <title>Werner Vogels on Skills</title>
     <link
       rel="alternate" type="text/html"
-      href="http://blog.separateconcerns.com/2013-03-24-vogels-skills.html"
+      href="https://blog.separateconcerns.com/2013-03-24-vogels-skills.html"
     />
     <id>tag:blog.separateconcerns.com,2013-03-24:vogels-skills</id>
     <published>2013-03-24T19:30:00Z</published>
@@ -1761,7 +1761,7 @@ These are the first few things that come to mind.
     <title>Viterbi, my favorite algorithm</title>
     <link
       rel="alternate" type="text/html"
-      href="http://blog.separateconcerns.com/2013-03-03-viterbi-algorithm.html"
+      href="https://blog.separateconcerns.com/2013-03-03-viterbi-algorithm.html"
     />
     <id>tag:blog.separateconcerns.com,2013-03-03:viterbi-algorithm</id>
     <published>2013-03-03T18:00:01Z</published>
@@ -2007,7 +2007,7 @@ Yes, it is. And because of that it has a whole range of applications, from advan
     <title>Algorithms, Data Structures &amp; Protocols</title>
     <link
       rel="alternate" type="text/html"
-      href="http://blog.separateconcerns.com/2013-01-28-algorithms-data-structures-protocols.html"
+      href="https://blog.separateconcerns.com/2013-01-28-algorithms-data-structures-protocols.html"
     />
     <id>tag:blog.separateconcerns.com,2013-01-28:algorithms-data-structures-protocols</id>
     <published>2013-01-28T22:00:00Z</published>
@@ -2047,7 +2047,7 @@ Yes, it is. And because of that it has a whole range of applications, from advan
     <title>Startups, think about SOA</title>
     <link
       rel="alternate" type="text/html"
-      href="http://blog.separateconcerns.com/2013-01-02-startups-soa.html"
+      href="https://blog.separateconcerns.com/2013-01-02-startups-soa.html"
     />
     <id>tag:blog.separateconcerns.com,2013-01-02:startups-soa</id>
     <published>2013-01-02T14:00:01Z</published>
@@ -2115,7 +2115,7 @@ That being said I still think more technological and/or Web startups should cons
     <title>Hello again, World!</title>
     <link
       rel="alternate" type="text/html"
-      href="http://blog.separateconcerns.com/2013-01-02-hello-world.html"
+      href="https://blog.separateconcerns.com/2013-01-02-hello-world.html"
     />
     <id>tag:blog.separateconcerns.com,2013-01-02:hello-world</id>
     <published>2013-01-02T14:00:00Z</published>
@@ -2146,7 +2146,7 @@ greet(&quot;World&quot;)
     <title>The Future of Computing: Ubiquity</title>
     <link
       rel="alternate" type="text/html"
-      href="http://blog.separateconcerns.com/2012-01-09-ubiquitous.html"
+      href="https://blog.separateconcerns.com/2012-01-09-ubiquitous.html"
     />
     <id>tag:blog.separateconcerns.com,2012-01-09:ubiquitous</id>
     <published>2012-01-09T12:00:00Z</published>
@@ -2170,7 +2170,7 @@ Now maybe you are thinking &quot;he&#39;s nuts&quot;, and I am thinking &quot;ma
     <title>(French) Neutralité du Net</title>
     <link
       rel="alternate" type="text/html"
-      href="http://blog.separateconcerns.com/2010-02-04-fr-neutralite-du-net.html"
+      href="https://blog.separateconcerns.com/2010-02-04-fr-neutralite-du-net.html"
     />
     <id>tag:blog.separateconcerns.com,2010-02-04:fr-neutralite-du-net</id>
     <published>2010-02-04T12:00:00Z</published>
@@ -2216,7 +2216,7 @@ Pour conclure, un conseil : si vous voulez vous faire une idée sur le sujet, é
     <title>(French) Râleries multiples</title>
     <link
       rel="alternate" type="text/html"
-      href="http://blog.separateconcerns.com/2010-01-30-fr-raleries.html"
+      href="https://blog.separateconcerns.com/2010-01-30-fr-raleries.html"
     />
     <id>tag:blog.separateconcerns.com,2010-01-30:fr-raleries</id>
     <published>2010-01-30T12:00:00Z</published>
@@ -2268,7 +2268,7 @@ Voilà, tout ceux qui l&#39;ont utilisé savent que Java c&#39;est mal. Après, 
     <title>(French) GTD ROI</title>
     <link
       rel="alternate" type="text/html"
-      href="http://blog.separateconcerns.com/2009-12-04-fr-gtd-roi.html"
+      href="https://blog.separateconcerns.com/2009-12-04-fr-gtd-roi.html"
     />
     <id>tag:blog.separateconcerns.com,2009-12-04:fr-gtd-roi</id>
     <published>2009-12-04T12:00:00Z</published>
@@ -2292,7 +2292,7 @@ J&#39;ai l&#39;impression que ces quelques changements n&#39;ont pas trop mal fo
     <title>(French) Chrome OS</title>
     <link
       rel="alternate" type="text/html"
-      href="http://blog.separateconcerns.com/2009-12-04-fr-chrome-os.html"
+      href="https://blog.separateconcerns.com/2009-12-04-fr-chrome-os.html"
     />
     <id>tag:blog.separateconcerns.com,2009-12-04:fr-chrome-os</id>
     <published>2009-12-04T12:00:00Z</published>
@@ -2322,7 +2322,7 @@ Bref, nous voilà encore une fois sauvés de l&#39;horrible Big Brother du 21e s
     <title>(French) Ces sites qui ne devraient pas exister</title>
     <link
       rel="alternate" type="text/html"
-      href="http://blog.separateconcerns.com/2009-11-24-fr-websites-that-should-not-exist.html"
+      href="https://blog.separateconcerns.com/2009-11-24-fr-websites-that-should-not-exist.html"
     />
     <id>tag:blog.separateconcerns.com,2009-11-24:fr-websites-that-should-not-exist</id>
     <published>2009-11-24T12:00:00Z</published>
@@ -2388,7 +2388,7 @@ La prochaine fois, je parlerai peut-être de Chrome OS, un sujet pas si éloign�
     <title>(French) Le piège de la génération Y</title>
     <link
       rel="alternate" type="text/html"
-      href="http://blog.separateconcerns.com/2009-11-16-fr-gen-y.html"
+      href="https://blog.separateconcerns.com/2009-11-16-fr-gen-y.html"
     />
     <id>tag:blog.separateconcerns.com,2009-11-16:fr-gen-y</id>
     <published>2009-11-16T12:00:00Z</published>
