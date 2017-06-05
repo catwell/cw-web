@@ -1202,7 +1202,7 @@ return {
   {
     title = "Dealers of Lightning: Xerox PARC and the Dawn of the Computer Age",
     url = "http://amzn.to/2kDVC8w",
-    cover = {amazon = "1lQdTIGMAL"},
+    cover = {amazon = "41lQdTIGMAL"},
     authors = {"Michael A. Hiltzik"},
   },
   {
@@ -1232,7 +1232,7 @@ return {
   {
     title = "Weapons of Math Destruction: How Big Data Increases Inequality and Threatens Democracy",
     url = "http://amzn.to/2kdGW3E",
-    cover = {amazon = "h518fatWEIQL"},
+    cover = {amazon = "51V3piRZY4L"},
     authors = {"Cathy O'Neil"},
   },
   {
