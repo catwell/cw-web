@@ -69,3 +69,9 @@ ul {
 ol.index {
   list-style-type: none;
 }
+
+span.daydate {
+  display: inline-block;
+  overflow: hidden;
+  min-width: 6em;
+}

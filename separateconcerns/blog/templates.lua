@@ -61,7 +61,7 @@ TPL.html_index = [[
     <ol class="index">
       {{#entries}}
       <li>
-        {{shortdate}}
+        <span class="daydate">{{shortdate}}</span>
         <a href="{{url}}">{{{title}}}</a>
       </li>
       {{/entries}}
