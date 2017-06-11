@@ -77,7 +77,6 @@
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>Goodbye Lua Toolbox</title>
     <link
@@ -105,7 +104,6 @@ Today, I finally replaced the whole website by <a href="https://lua-toolbox.com"
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>Thoughts 2</title>
     <link
@@ -147,7 +145,6 @@ Sadly, for reasons that probably have a lot to do with business models, things l
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>Thoughts 1</title>
     <link
@@ -205,7 +202,6 @@ Modern OSs do not make much distinction between a thread and a process anymore, 
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>The LMDB file format</title>
     <link
@@ -267,7 +263,6 @@ I have explained the basics of the data.mdb file format. Should you have to debu
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>Five books I read in 2015</title>
     <link
@@ -347,7 +342,6 @@ I have long thought that the financial world used HFT as a scapegoat (especially
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>Electronic Voting</title>
     <link
@@ -377,7 +371,6 @@ I have long thought that the financial world used HFT as a scapegoat (especially
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>Four easy reads to understand distributed systems issues</title>
     <link
@@ -427,7 +420,6 @@ Distributed systems work is about that adversarial world out there, and how we w
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>My love-hate relationship with LuaJIT</title>
     <link
@@ -473,7 +465,6 @@ Oh, and by the way, with this whole systemd thing, I am semi-seriously consideri
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>Continuous Integration for Lua with Travis</title>
     <link
@@ -505,7 +496,6 @@ After that, commit <code>.travis</code> and <code>.travis.yml</code> and push to
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>Indie Web</title>
     <link
@@ -529,7 +519,6 @@ If you want to do the same, you can use <a href="http://indiewebify.me/">this ha
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>Lean tools</title>
     <link
@@ -571,7 +560,6 @@ Eventually, this is a matter of choice. Avdi is right: fat tools usually exist f
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>Disabling graphical password prompts</title>
     <link
@@ -614,7 +602,6 @@ for i in *; do echo &quot;Hidden=true&quot; &gt;&gt; $i; done
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>Microservices</title>
     <link
@@ -656,7 +643,6 @@ And finally, just to be clear: do not look too much at the left part of the curv
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>Iris</title>
     <link
@@ -883,7 +869,6 @@ Finally, if you try <a href="https://github.com/catwell/iris-lua">my Iris client
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>Hacker Founders</title>
     <link
@@ -915,7 +900,6 @@ The relationship between the programmers and the business types? Well... I belie
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>Indistinguishable from Magic</title>
     <link
@@ -941,7 +925,6 @@ I think it is time for the pendulum to swing back to products that optimize for 
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>Modern design and Alan Kay</title>
     <link
@@ -991,7 +974,6 @@ And it turns out of you want to make a change in the larger world, you have to d
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>Learning in the small</title>
     <link
@@ -1031,7 +1013,6 @@ Moreover, Go appears to be a simpler language than Rust. I suspect I can learn e
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>Editing Sublime Text packages</title>
     <link
@@ -1091,7 +1072,6 @@ end]]&gt;&lt;/content&gt;
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>FOSDEM 2014</title>
     <link
@@ -1175,7 +1155,6 @@ FOSDEM is still a very good event which you should consider attending next year.
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>How I write Lua modules</title>
     <link
@@ -1366,7 +1345,6 @@ I think this is what matters the most in the end: modules always return tables a
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>C: what I had forgotten</title>
     <link
@@ -1414,7 +1392,6 @@ typedef const struct stuff_s stuff_t;
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>To Infinity and Beyond</title>
     <link
@@ -1454,7 +1431,6 @@ So it looks like my short-term future holds some Unix development and a good dus
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>Lapis: Lua for the Web</title>
     <link
@@ -1484,7 +1460,6 @@ So, what did I think of it? Well, finally I could see myself write a serious Web
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>Three years of (proprietary) projects</title>
     <link
@@ -1644,7 +1619,6 @@ So, what did I think of it? Well, finally I could see myself write a serious Web
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>Coherence checks in SOA</title>
     <link
@@ -1714,7 +1688,6 @@ I cannot imagine releasing a distributed system that does not have those things.
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>Werner Vogels on Skills</title>
     <link
@@ -1756,7 +1729,6 @@ These are the first few things that come to mind.
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>Viterbi, my favorite algorithm</title>
     <link
@@ -2002,7 +1974,6 @@ Yes, it is. And because of that it has a whole range of applications, from advan
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>Algorithms, Data Structures &amp; Protocols</title>
     <link
@@ -2042,7 +2013,6 @@ Yes, it is. And because of that it has a whole range of applications, from advan
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>Startups, think about SOA</title>
     <link
@@ -2110,7 +2080,6 @@ That being said I still think more technological and/or Web startups should cons
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>Hello again, World!</title>
     <link
@@ -2141,7 +2110,6 @@ greet(&quot;World&quot;)
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>The Future of Computing: Ubiquity</title>
     <link
@@ -2165,7 +2133,6 @@ Now maybe you are thinking &quot;he&#39;s nuts&quot;, and I am thinking &quot;ma
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>(French) Neutralité du Net</title>
     <link
@@ -2211,7 +2178,6 @@ Pour conclure, un conseil : si vous voulez vous faire une idée sur le sujet, é
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>(French) Râleries multiples</title>
     <link
@@ -2263,7 +2229,6 @@ Voilà, tout ceux qui l&#39;ont utilisé savent que Java c&#39;est mal. Après, 
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>(French) GTD ROI</title>
     <link
@@ -2287,7 +2252,6 @@ J&#39;ai l&#39;impression que ces quelques changements n&#39;ont pas trop mal fo
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>(French) Chrome OS</title>
     <link
@@ -2317,7 +2281,6 @@ Bref, nous voilà encore une fois sauvés de l&#39;horrible Big Brother du 21e s
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>(French) Ces sites qui ne devraient pas exister</title>
     <link
@@ -2383,7 +2346,6 @@ La prochaine fois, je parlerai peut-être de Chrome OS, un sujet pas si éloign�
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>(French) Le piège de la génération Y</title>
     <link
@@ -2421,5 +2383,4 @@ J&#39;espère en tout cas que tout ça me permettra de gagner en productivité e
       </div>
     </content>
   </entry>
-  
 </feed>
