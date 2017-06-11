@@ -10,12 +10,32 @@
     rel="alternate" type="application/xhtml+xml"
   />
   <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
-  <updated>2017-05-13T09:30:39Z</updated>
+  <updated>2017-06-11T17:07:46Z</updated>
   <author>
     <name>Pierre 'catwell' Chapuis</name>
     <uri>https://catwell.info/</uri>
   </author>
-  
+  <entry>
+    <title>knetstat: checking socket options on Linux</title>
+    <link
+      rel="alternate" type="text/html"
+      href="https://blog.separateconcerns.com/2017-06-11-knetstat.html"
+    />
+    <id>tag:blog.separateconcerns.com,2017-06-11:knetstat</id>
+    <published>2017-06-11T19:10:00Z</published>
+    <updated>2017-06-11T19:10:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        
+
+<p>A few weeks ago I was debugging network code, and I needed to check if some sockets were bound with <code>SO_REUSEADDR</code> and/or <code>SO_REUSEPORT</code>. I researched how I could inspect that, and was surprised to find out that the Linux kernel did not expose those options to userland.</p>
+
+<p>Thankfully, there is <a href="https://github.com/veithen/knetstat">a kernel module called knetstat</a> which lets you do this very easily by adding new files into <code>procfs</code>. When I found it it only supported TCP, but I needed the information for UDP as well so I <a href="https://github.com/veithen/knetstat/issues/10">contributed the code</a> to support it.</p>
+
+If you write networking code on Linux or just run servers, I encourage you to check it out. It is a nice little tool that can come very handy in some situations, including when you need to check options like <code>SO_{RCV,SND}BUF</code>.
+      </div>
+    </content>
+  </entry>
   <entry>
     <title>A short introduction to Interval Tree Clocks</title>
     <link
