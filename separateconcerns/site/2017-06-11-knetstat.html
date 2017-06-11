@@ -21,7 +21,7 @@
 
 <p>A few weeks ago I was debugging network code, and I needed to check if some sockets were bound with <code>SO_REUSEADDR</code> and/or <code>SO_REUSEPORT</code>. I researched how I could inspect that, and was surprised to find out that the Linux kernel did not expose those options to userland.</p>
 
-<p>Thankfully, there is <a href="https://github.com/veithen/knetstat">a kernel module called knetstat</a> which lets you do this very easily by adding new files into <code>procfs</code>. When I found it it only supported TCP, but I needed the information for UDP as well so I <a href="https://github.com/veithen/knetstat/issues/10">contributed the code</a> to support it.</p>
+<p>Thankfully, there is <a href="https://github.com/veithen/knetstat">a kernel module called knetstat</a> which lets you do this very easily by adding new files into <code>procfs</code>. When I found it it only supported TCP, but I needed the information for UDP as well so I <a href="https://github.com/veithen/knetstat/pull/11">contributed the code</a> to support it.</p>
 
 If you write networking code on Linux or just run servers, I encourage you to check it out. It is a nice little tool that can come very handy in some situations, including when you need to check options like <code>SO_{RCV,SND}BUF</code>.
     </div>
