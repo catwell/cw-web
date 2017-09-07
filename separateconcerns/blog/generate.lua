@@ -70,9 +70,12 @@ local md_to_html_chunk = function(md)
     local has_code, description = false, nil
     writer.verbatim = function(s)
         local desc = s:match("^::description::\n(.-)\n")
+        local raw = s:match("^::raw::\n(.-)\n")
         if desc then
             description = desc
             return ""
+        elseif raw then
+            return raw
         else
             has_code = true
             local lang, code = s:match("^lang: (%w+)\n(.*)")
@@ -121,7 +124,7 @@ local process_all = function()
     local files = dirx.getallfiles("articles", "*.md")
     table.sort(files, function(x, y) return x > y end) -- newest first
     local entries = {}
-    local fnpart, content, metadata, pdate, sdate, udate, fragment
+    local fnpart, content, metadata, pdate, sdate, udate, fragment, entry
     for i=1,#files do
         fnpart = pathx.splitext(pathx.basename(files[i]))
         print(fnpart)
@@ -138,7 +141,7 @@ local process_all = function()
         end
         fragment = fnpart:sub(12)
         assert(fmt("%s-%s", sdate, fragment) == fnpart)
-        entries[i] = {
+        entry = {
             title = metadata.title,
             url = url,
             content = content,
@@ -154,12 +157,14 @@ local process_all = function()
         }
         if metadata.updated then
             sdate = Date.Format("yyyy-mm-dd"):tostring(udate)
-            if sdate ~= entries[i].shortdate then
-                entries[i].updated = sdate
+            if sdate ~= entry.shortdate then
+                entry.updated = sdate
             end
         end
+        if not metadata.skip then
+            table.insert(entries, entry)
+        end
     end
-    local entry
     for i=1,#entries do
         entry = entries[i]
         local html = lustache:render(TPL.html_post, entry)
