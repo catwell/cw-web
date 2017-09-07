@@ -4,7 +4,9 @@
     <meta charset="utf-8">
     <meta name="description" content="A short introduction to Interval Tree Clocks, a causality tracking">
     <link href="css/theme.css" rel="stylesheet" type="text/css">
+    
       <link href="css/rainbow-github.css" rel="stylesheet" type="text/css">
+    
     <link
       rel="alternate" type="application/atom+xml"
       href="https://blog.separateconcerns.com/feed.atom"
@@ -15,11 +17,13 @@
     <div id="container">
     <header>
       <h1>A short introduction to Interval Tree Clocks</h1>
-      <h4>published 2017-05-07</h4>
+      <h4>published 2017-05-07, updated 2017-09-07</h4>
     </header>
     
 
 <p><em>This post is a rough transcription of <a href="http://files.catwell.info/presentations/2017-04-dotscale-itc/">a lightning talk I gave at dotScale 2017</a>.</em></p>
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/PgCziibErvU?rel=0" frameborder="0" allowfullscreen></iframe>
 
 <p>One of the things I work on at <a href="https://meetlima.com">Lima</a> is master-master filesystem replication. In this kind of system, we need to <a href="http://queue.acm.org/detail.cfm?id=2917756">track causality</a>. In a nutshell, given two events modifying a given piece of data and originating from different nodes in the system, we want to know if one of those events could have influenced the other one, or in other words if one of those events <a href="https://en.wikipedia.org/wiki/Happened-before">&quot;happened before&quot;</a> the other one.</p>
 
