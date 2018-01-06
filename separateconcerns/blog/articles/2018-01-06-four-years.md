@@ -13,7 +13,7 @@ For the public, [Lima](https://meetlima.com) makes a device which turns a USB ha
 
 Technically, Lima is really a personal distributed filesystem. Every single machine running a Lima application logged into to the same user account is a node in the system. All nodes keep a copy of all the filesystem metadata, which means the user can always browse the whole file tree, create or remove files, move them around, etc. The actual data, however, may or may not be on the device, which makes it possible to access a multi-terabyte filesystem on a mobile device. In theory, the Lima device is just another node in the system, except it always stores all the data.
 
-To make this all work, we need a mechanism to keep the filesystem metadata synchronized on all nodes. I have designed and implemented the algorithm and protocol behind this. It is tricky, because we always want users to be able to write to their filesystem, even on an offline device, so when devices come back online there may be conflicts to resolve. And then it is sometimes tempting to do something simple and correct, but which would not result in what the end user would expect. Yes, [distributed systems are a UX problem](http://bravenewgeek.com/distributed-systems-are-a-ux-problem/)...
+To make this all work, we need a mechanism to keep the filesystem metadata synchronized on all nodes. I have designed and implemented the algorithm and protocol behind this. It is tricky, because we always want users to be able to write to their filesystem, even on an offline device, so when devices come back online there may be conflicts to resolve. It is sometimes tempting to do something simple and correct, but which would not result in what the end user would expect. Yes, [distributed systems are a UX problem](http://bravenewgeek.com/distributed-systems-are-a-ux-problem/)...
 
 I can't get into too much detail here, this being proprietary technology and all, but I have drawn a lot of inspiration from [CRDTs](https://en.wikipedia.org/wiki/Conflict-free_replicated_data_type) as well as older systems like Bayou and WinFS.
 
@@ -38,7 +38,7 @@ I won't get into too much detail about all the other things I have written or wo
 
 ## What's next
 
-Lately, my role has changed as I have become responsible for software architecture for the whole company. I now work more closely with the developers outside of my team (Core Engineering), who implement the more user-facing parts of our stack. I also do some hiring - and by the way, if you are interested, get in touch. :)
+Lately, my role has changed as I have become responsible for software architecture for the whole company. I now work more closely with the developers outside of my team (Core Engineering), who implement the user-facing parts of our stack. I also do some hiring - and by the way, if you are interested, get in touch. :)
 
 All in all, it was four interesting years. Things have not always been easy to say the least, but a relaxing job is not what I expect from a startup anyway. We have some really great people on the team, challenging plans for the future, and we learn a lot, so here's to the next years of Lima!
 
