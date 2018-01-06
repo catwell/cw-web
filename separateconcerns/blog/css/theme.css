@@ -70,6 +70,11 @@ ol.index {
   list-style-type: none;
 }
 
+ol.index li a {
+  display: inline-block;
+  overflow: hidden;
+}
+
 span.daydate {
   display: inline-block;
   overflow: hidden;
