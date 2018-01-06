@@ -10,12 +10,65 @@
     rel="alternate" type="application/xhtml+xml"
   />
   <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
-  <updated>2017-09-07T19:16:03Z</updated>
+  <updated>2018-01-06T13:11:15Z</updated>
   <author>
     <name>Pierre 'catwell' Chapuis</name>
     <uri>https://catwell.info/</uri>
   </author>
-  
+  <entry>
+    <title>Four years at Lima</title>
+    <link
+      rel="alternate" type="text/html"
+      href="https://blog.separateconcerns.com/2018-01-06-four-years.html"
+    />
+    <id>tag:blog.separateconcerns.com,2018-01-06:four-years</id>
+    <published>2018-01-06T14:10:00Z</published>
+    <updated>2018-01-06T14:10:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        
+
+<p>Today marks the fourth birthday of <a href="https://blog.separateconcerns.com/2013-12-12-infinity-beyond.html">my joining Lima</a>, and it is a good occasion to talk a bit about some of the things I have been doing there.</p>
+
+<h2 id="distributed-filesystem-synchronization">Distributed filesystem synchronization</h2>
+
+<p>For the public, <a href="https://meetlima.com">Lima</a> makes a device which turns a USB hard drive into personal &quot;cloud&quot; data storage. We actually shipped two devices, Lima Original in July 2015 and Lima Ultra in January 2017.</p>
+
+<p>Technically, Lima is really a personal distributed filesystem. Every single machine running a Lima application logged into to the same user account is a node in the system. All nodes keep a copy of all the filesystem metadata, which means the user can always browse the whole file tree, create or remove files, move them around, etc. The actual data, however, may or may not be on the device, which makes it possible to access a multi-terabyte filesystem on a mobile device. In theory, the Lima device is just another node in the system, except it always stores all the data.</p>
+
+<p>To make this all work, we need a mechanism to keep the filesystem metadata synchronized on all nodes. I have designed and implemented the algorithm and protocol behind this. It is tricky, because we always want users to be able to write to their filesystem, even on an offline device, so when devices come back online there may be conflicts to resolve. And then it is sometimes tempting to do something simple and correct, but which would not result in what the end user would expect. Yes, <a href="http://bravenewgeek.com/distributed-systems-are-a-ux-problem/">distributed systems are a UX problem</a>...</p>
+
+<p>I can&#39;t get into too much detail here, this being proprietary technology and all, but I have drawn a lot of inspiration from <a href="https://en.wikipedia.org/wiki/Conflict-free_replicated_data_type">CRDTs</a> as well as older systems like Bayou and WinFS.</p>
+
+<h2 id="minicore-fitting-into-a-tiny-box">Minicore: fitting into a tiny box</h2>
+
+<p>Like I said, in theory, the Lima device just runs a slightly modified Lima application. And in theory, theory and practice are the same thing. But in practice...</p>
+
+<p>The Lima Original hardware was very limited, with a slow exotic CPU, 32 MB of RAM and 8 MB of Flash. At some point we realized that we would never succeed in running our software on it with reasonably good performance, so shortly before shipping we decided we had to do something radical: write entirely different software for it. We called that software &quot;minicore&quot;, and I wrote its first version in a 6-week rush.</p>
+
+<p>Unlike the Lima filesystem, minicore is designed to be very conservative about its use of memory and I/O resources. It uses a different data model and synchronization protocol, which relies on client machines running Lima to do the heavy lifting. It prioritizes what Lima devices have to do best, which is downloading or serving file data.</p>
+
+<p>The trade-off here was a huge increase in the complexity of the system. Minicore itself is not that complex, but we had to introduce a separate protocol between client nodes and Lima devices, and a third protocol to deal with replication between Lima devices (if you add several Lima devices to the same account they mirror one another).</p>
+
+<h2 id="other-things">Other things</h2>
+
+<p>I won&#39;t get into too much detail about all the other things I have written or worked on over the last four years, but important ones include:</p>
+
+<ul>
+<li>our build system, which builds our software and its dependencies on five different OSs and three major architectures ;</li>
+<li>an integration test suite designed among other things to replicate timing-related edge cases for the synchronization protocol ;</li>
+<li>our &quot;identity server&quot; which lets users log into their account with just an email and a password ;</li>
+<li>our Lua scripting layer, which I didn&#39;t implement initially but maintain now, and on which we rely more and more.</li>
+</ul>
+
+<h2 id="what39s-next">What&#39;s next</h2>
+
+<p>Lately, my role has changed as I have become responsible for software architecture for the whole company. I now work more closely with the developers outside of my team (Core Engineering), who implement the more user-facing parts of our stack. I also do some hiring - and by the way, if you are interested, get in touch. :)</p>
+
+<p>All in all, it was four interesting years. Things have not always been easy to say the least, but a relaxing job is not what I expect from a startup anyway. We have some really great people on the team, challenging plans for the future, and we learn a lot, so here&#39;s to the next years of Lima!</p>
+      </div>
+    </content>
+  </entry>
   <entry>
     <title>knetstat: checking socket options on Linux</title>
     <link
@@ -37,7 +90,6 @@ If you write networking code on Linux or just run servers, I encourage you to ch
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>A short introduction to Interval Tree Clocks</title>
     <link
@@ -101,7 +153,6 @@ If you write networking code on Linux or just run servers, I encourage you to ch
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>Goodbye Lua Toolbox</title>
     <link
@@ -129,7 +180,6 @@ Today, I finally replaced the whole website by <a href="https://lua-toolbox.com"
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>Thoughts 2</title>
     <link
@@ -171,7 +221,6 @@ Sadly, for reasons that probably have a lot to do with business models, things l
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>Thoughts 1</title>
     <link
@@ -229,7 +278,6 @@ Modern OSs do not make much distinction between a thread and a process anymore, 
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>The LMDB file format</title>
     <link
@@ -291,7 +339,6 @@ I have explained the basics of the data.mdb file format. Should you have to debu
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>Five books I read in 2015</title>
     <link
@@ -371,7 +418,6 @@ I have long thought that the financial world used HFT as a scapegoat (especially
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>Electronic Voting</title>
     <link
@@ -401,7 +447,6 @@ I have long thought that the financial world used HFT as a scapegoat (especially
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>Four easy reads to understand distributed systems issues</title>
     <link
@@ -451,7 +496,6 @@ Distributed systems work is about that adversarial world out there, and how we w
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>My love-hate relationship with LuaJIT</title>
     <link
@@ -497,7 +541,6 @@ Oh, and by the way, with this whole systemd thing, I am semi-seriously consideri
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>Continuous Integration for Lua with Travis</title>
     <link
@@ -529,7 +572,6 @@ After that, commit <code>.travis</code> and <code>.travis.yml</code> and push to
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>Indie Web</title>
     <link
@@ -553,7 +595,6 @@ If you want to do the same, you can use <a href="http://indiewebify.me/">this ha
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>Lean tools</title>
     <link
@@ -595,7 +636,6 @@ Eventually, this is a matter of choice. Avdi is right: fat tools usually exist f
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>Disabling graphical password prompts</title>
     <link
@@ -638,7 +678,6 @@ for i in *; do echo &quot;Hidden=true&quot; &gt;&gt; $i; done
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>Microservices</title>
     <link
@@ -680,7 +719,6 @@ And finally, just to be clear: do not look too much at the left part of the curv
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>Iris</title>
     <link
@@ -907,7 +945,6 @@ Finally, if you try <a href="https://github.com/catwell/iris-lua">my Iris client
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>Hacker Founders</title>
     <link
@@ -939,7 +976,6 @@ The relationship between the programmers and the business types? Well... I belie
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>Indistinguishable from Magic</title>
     <link
@@ -965,7 +1001,6 @@ I think it is time for the pendulum to swing back to products that optimize for 
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>Modern design and Alan Kay</title>
     <link
@@ -1015,7 +1050,6 @@ And it turns out of you want to make a change in the larger world, you have to d
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>Learning in the small</title>
     <link
@@ -1055,7 +1089,6 @@ Moreover, Go appears to be a simpler language than Rust. I suspect I can learn e
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>Editing Sublime Text packages</title>
     <link
@@ -1115,7 +1148,6 @@ end]]&gt;&lt;/content&gt;
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>FOSDEM 2014</title>
     <link
@@ -1199,7 +1231,6 @@ FOSDEM is still a very good event which you should consider attending next year.
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>How I write Lua modules</title>
     <link
@@ -1390,7 +1421,6 @@ I think this is what matters the most in the end: modules always return tables a
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>C: what I had forgotten</title>
     <link
@@ -1438,7 +1468,6 @@ typedef const struct stuff_s stuff_t;
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>To Infinity and Beyond</title>
     <link
@@ -1478,7 +1507,6 @@ So it looks like my short-term future holds some Unix development and a good dus
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>Lapis: Lua for the Web</title>
     <link
@@ -1508,7 +1536,6 @@ So, what did I think of it? Well, finally I could see myself write a serious Web
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>Three years of (proprietary) projects</title>
     <link
@@ -1668,7 +1695,6 @@ So, what did I think of it? Well, finally I could see myself write a serious Web
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>Coherence checks in SOA</title>
     <link
@@ -1738,7 +1764,6 @@ I cannot imagine releasing a distributed system that does not have those things.
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>Werner Vogels on Skills</title>
     <link
@@ -1780,7 +1805,6 @@ These are the first few things that come to mind.
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>Viterbi, my favorite algorithm</title>
     <link
@@ -2026,7 +2050,6 @@ Yes, it is. And because of that it has a whole range of applications, from advan
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>Algorithms, Data Structures &amp; Protocols</title>
     <link
@@ -2066,7 +2089,6 @@ Yes, it is. And because of that it has a whole range of applications, from advan
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>Startups, think about SOA</title>
     <link
@@ -2134,7 +2156,6 @@ That being said I still think more technological and/or Web startups should cons
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>Hello again, World!</title>
     <link
@@ -2165,7 +2186,6 @@ greet(&quot;World&quot;)
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>The Future of Computing: Ubiquity</title>
     <link
@@ -2189,7 +2209,6 @@ Now maybe you are thinking &quot;he&#39;s nuts&quot;, and I am thinking &quot;ma
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>(French) Neutralité du Net</title>
     <link
@@ -2235,7 +2254,6 @@ Pour conclure, un conseil : si vous voulez vous faire une idée sur le sujet, é
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>(French) Râleries multiples</title>
     <link
@@ -2287,7 +2305,6 @@ Voilà, tout ceux qui l&#39;ont utilisé savent que Java c&#39;est mal. Après, 
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>(French) GTD ROI</title>
     <link
@@ -2311,7 +2328,6 @@ J&#39;ai l&#39;impression que ces quelques changements n&#39;ont pas trop mal fo
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>(French) Chrome OS</title>
     <link
@@ -2341,7 +2357,6 @@ Bref, nous voilà encore une fois sauvés de l&#39;horrible Big Brother du 21e s
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>(French) Ces sites qui ne devraient pas exister</title>
     <link
@@ -2407,7 +2422,6 @@ La prochaine fois, je parlerai peut-être de Chrome OS, un sujet pas si éloign�
       </div>
     </content>
   </entry>
-  
   <entry>
     <title>(French) Le piège de la génération Y</title>
     <link
@@ -2445,5 +2459,4 @@ J&#39;espère en tout cas que tout ça me permettra de gagner en productivité e
       </div>
     </content>
   </entry>
-  
 </feed>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="I have been working at Lima for four years.">
+    <link href="css/theme.css" rel="stylesheet" type="text/css">
+    <link
+      rel="alternate" type="application/atom+xml"
+      href="https://blog.separateconcerns.com/feed.atom"
+    />
+    <title>Four years at Lima</title>
+  </head>
+  <body>
+    <div id="container">
+    <header>
+      <h1>Four years at Lima</h1>
+      <h4>published 2018-01-06</h4>
+    </header>
+    
+
+<p>Today marks the fourth birthday of <a href="https://blog.separateconcerns.com/2013-12-12-infinity-beyond.html">my joining Lima</a>, and it is a good occasion to talk a bit about some of the things I have been doing there.</p>
+
+<h2 id="distributed-filesystem-synchronization">Distributed filesystem synchronization</h2>
+
+<p>For the public, <a href="https://meetlima.com">Lima</a> makes a device which turns a USB hard drive into personal &quot;cloud&quot; data storage. We actually shipped two devices, Lima Original in July 2015 and Lima Ultra in January 2017.</p>
+
+<p>Technically, Lima is really a personal distributed filesystem. Every single machine running a Lima application logged into to the same user account is a node in the system. All nodes keep a copy of all the filesystem metadata, which means the user can always browse the whole file tree, create or remove files, move them around, etc. The actual data, however, may or may not be on the device, which makes it possible to access a multi-terabyte filesystem on a mobile device. In theory, the Lima device is just another node in the system, except it always stores all the data.</p>
+
+<p>To make this all work, we need a mechanism to keep the filesystem metadata synchronized on all nodes. I have designed and implemented the algorithm and protocol behind this. It is tricky, because we always want users to be able to write to their filesystem, even on an offline device, so when devices come back online there may be conflicts to resolve. And then it is sometimes tempting to do something simple and correct, but which would not result in what the end user would expect. Yes, <a href="http://bravenewgeek.com/distributed-systems-are-a-ux-problem/">distributed systems are a UX problem</a>...</p>
+
+<p>I can&#39;t get into too much detail here, this being proprietary technology and all, but I have drawn a lot of inspiration from <a href="https://en.wikipedia.org/wiki/Conflict-free_replicated_data_type">CRDTs</a> as well as older systems like Bayou and WinFS.</p>
+
+<h2 id="minicore-fitting-into-a-tiny-box">Minicore: fitting into a tiny box</h2>
+
+<p>Like I said, in theory, the Lima device just runs a slightly modified Lima application. And in theory, theory and practice are the same thing. But in practice...</p>
+
+<p>The Lima Original hardware was very limited, with a slow exotic CPU, 32 MB of RAM and 8 MB of Flash. At some point we realized that we would never succeed in running our software on it with reasonably good performance, so shortly before shipping we decided we had to do something radical: write entirely different software for it. We called that software &quot;minicore&quot;, and I wrote its first version in a 6-week rush.</p>
+
+<p>Unlike the Lima filesystem, minicore is designed to be very conservative about its use of memory and I/O resources. It uses a different data model and synchronization protocol, which relies on client machines running Lima to do the heavy lifting. It prioritizes what Lima devices have to do best, which is downloading or serving file data.</p>
+
+<p>The trade-off here was a huge increase in the complexity of the system. Minicore itself is not that complex, but we had to introduce a separate protocol between client nodes and Lima devices, and a third protocol to deal with replication between Lima devices (if you add several Lima devices to the same account they mirror one another).</p>
+
+<h2 id="other-things">Other things</h2>
+
+<p>I won&#39;t get into too much detail about all the other things I have written or worked on over the last four years, but important ones include:</p>
+
+<ul>
+<li>our build system, which builds our software and its dependencies on five different OSs and three major architectures ;</li>
+<li>an integration test suite designed among other things to replicate timing-related edge cases for the synchronization protocol ;</li>
+<li>our &quot;identity server&quot; which lets users log into their account with just an email and a password ;</li>
+<li>our Lua scripting layer, which I didn&#39;t implement initially but maintain now, and on which we rely more and more.</li>
+</ul>
+
+<h2 id="what39s-next">What&#39;s next</h2>
+
+<p>Lately, my role has changed as I have become responsible for software architecture for the whole company. I now work more closely with the developers outside of my team (Core Engineering), who implement the more user-facing parts of our stack. I also do some hiring - and by the way, if you are interested, get in touch. :)</p>
+
+<p>All in all, it was four interesting years. Things have not always been easy to say the least, but a relaxing job is not what I expect from a startup anyway. We have some really great people on the team, challenging plans for the future, and we learn a lot, so here&#39;s to the next years of Lima!</p>
+    </div>
+    <div id="footer">
+      [ <a href="index.html">home</a> ]
+    </div>
+    
+  </body>
+</html>
