@@ -9,7 +9,7 @@ Today marks the fourth birthday of [my joining Lima](https://blog.separateconcer
 
 ## Distributed filesystem synchronization
 
-For the public, [Lima](https://meetlima.com) makes a device which turns a USB hard drive into personal "cloud" data storage. We actually shipped two devices, Lima Original in July 2015 and Lima Ultra in January 2017.
+For the public, [Lima](https://meetlima.com) makes a device which turns a USB hard drive into personal "cloud" data storage. We actually shipped two devices, Lima Original in July 2015 and Lima Ultra in Decemner 2016.
 
 Technically, Lima is really a personal distributed filesystem. Every single machine running a Lima application logged into to the same user account is a node in the system. All nodes keep a copy of all the filesystem metadata, which means the user can always browse the whole file tree, create or remove files, move them around, etc. The actual data, however, may or may not be on the device, which makes it possible to access a multi-terabyte filesystem on a mobile device. In theory, the Lima device is just another node in the system, except it always stores all the data.
 
