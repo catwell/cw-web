@@ -10,7 +10,7 @@
     rel="alternate" type="application/xhtml+xml"
   />
   <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
-  <updated>2018-01-06T13:11:15Z</updated>
+  <updated>2018-01-06T13:20:52Z</updated>
   <author>
     <name>Pierre 'catwell' Chapuis</name>
     <uri>https://catwell.info/</uri>
@@ -105,7 +105,7 @@ If you write networking code on Linux or just run servers, I encourage you to ch
 
 <p><em>This post is a rough transcription of <a href="http://files.catwell.info/presentations/2017-04-dotscale-itc/">a lightning talk I gave at dotScale 2017</a>.</em></p>
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/PgCziibErvU?rel=0" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/PgCziibErvU?rel=0" frameborder="0" allowfullscreen="true"></iframe>
 
 <p>One of the things I work on at <a href="https://meetlima.com">Lima</a> is master-master filesystem replication. In this kind of system, we need to <a href="http://queue.acm.org/detail.cfm?id=2917756">track causality</a>. In a nutshell, given two events modifying a given piece of data and originating from different nodes in the system, we want to know if one of those events could have influenced the other one, or in other words if one of those events <a href="https://en.wikipedia.org/wiki/Happened-before">&quot;happened before&quot;</a> the other one.</p>
 
