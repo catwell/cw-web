@@ -1,0 +1,27 @@
+% Fixing right click on touchpads in Gnome
+% Pierre 'catwell' Chapuis
+% 2018-03-30 19:00:00
+
+    ::description::
+    Gnome 3.28 changes the default behavior of touchpads,
+    here is how to change it back.
+
+If you are like me, maybe you have recently updated your Linux laptop and found out that right click had stopped working on the touchpad. It took me half an hour to figure out why. I was looking at low-level stuff until I realized `libinput debug-events` saw the right thing:
+
+    event11  POINTER_BUTTON    +3.35s
+        BTN_RIGHT (273) pressed, seat count: 1
+    event11  POINTER_BUTTON    +3.49s
+        BTN_RIGHT (273) released, seat count:
+
+It turns out Gnome decided to [change the default behavior of touchpads](https://help.gnome.org/misc/release-notes/3.28/) in version 3.28:
+
+> All touchpads now use a gesture for secondary click (the equivalent to right click on a mouse) by default. To use the gesture, keep one finger in contact with the touchpad and tap with another finger. In many cases this replaces tapping areas of the touchpad as the default secondary click method. A choice between the two behaviors is available in the Tweaks application.
+
+Of course the new behavior is terrible if you use physical clicks, plus you have to re-train your muscle memory... To revert to clicks in the bottom-right corner, you can use the gnome-tweaks application as advised, or simply this gsettings command:
+
+    gsettings set org.gnome.desktop.peripherals.touchpad \
+        click-method areas
+
+But seriously, Gnome developers, if you are going to change an important default like that, why not at least add an option in the obvious place where it belongs?
+
+![gnome-touchpad-settings](img/gnome-touchpad-settings.jpg)
