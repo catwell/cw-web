@@ -1439,4 +1439,28 @@ return {
     cover = {amazon = "31BH9M5gHHL"},
     authors = {"Robert Hoekman Jr."},
   },
+  {
+    title = "Replication: Theory and Practice",
+    url = "https://www.amazon.com/Replication-Practice-Lecture-Computer-Science/dp/3642112935",
+    cover = {amazon = "51XOBzte1HL"},
+    authors = {"Bernadette Charron-Bost", "Fernando Pedone", "Andre Schiper"},
+  },
+  {
+    title = "System Software Reliability",
+    url = "https://www.amazon.com/System-Software-Reliability-Springer-Engineering/dp/1852339500",
+    cover = {amazon = "41vFWD2o9OL"},
+    authors = {"Hoang Pham"},
+  },
+  {
+    title = "It Doesn't Have to Be Crazy at Work",
+    url = "https://www.amazon.com/Doesnt-Have-Be-Crazy-Work/dp/0062874780",
+    cover = {amazon = "51nepS2j-UL"},
+    authors = {"Jason Fried", "David Heinemeier Hansson"},
+  },
+  {
+    title = "Infrastructure: The Book of Everything for the Industrial Landscape",
+    url = "https://www.amazon.com/Infrastructure-Book-Everything-Industrial-Landscape/dp/0393329593",
+    cover = {amazon = "61sFKPe-bsL"},
+    authors = {"Brian Hayes"},
+  },
 }
