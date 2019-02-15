@@ -33,7 +33,7 @@ Finally, it won't be possible to access Lima from outside your home. This is a l
 
 ## Is there a risk for my personal data?
 
-At that moment, not that I know of. Your data was never stored on our servers, and all data traffic going through relay servers is end-to-end encrypted, which means that even if an attacker took control of one they couldn't decipher your data.
+At that moment, not that I know of. Your data was never stored on Lima's servers, and all data traffic going through relay servers is end-to-end encrypted, which means that even if an attacker took control of one they couldn't decipher your data.
 
 However in the long run there are two issues.
 
