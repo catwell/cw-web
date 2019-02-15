@@ -93,6 +93,6 @@ If you still think something shady went on with that money, rest assured: when a
 
 Yes, I have plans.
 
-No, they do not anything remotely similar to Lima.
+No, they are not in any way related to Lima.
 
 I will tell you more next month, probably.
