@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Lima is shutting down. A few answers to questions raised in the process.">
+    <link href="css/theme.css" rel="stylesheet" type="text/css">
+    <link
+      rel="alternate" type="application/atom+xml"
+      href="https://blog.separateconcerns.com/feed.atom"
+    />
+    <title>Goodbye Lima</title>
+  </head>
+  <body>
+    <div id="container">
+    <header>
+      <h1>Goodbye Lima</h1>
+      <h4>published 2019-02-15</h4>
+    </header>
+    
+
+<p>You may have heard it already: five years after I <a href="https://blog.separateconcerns.com/2013-12-12-infinity-beyond.html">joined Lima</a>, the company <a href="https://medium.com/@MeetLima/this-time-its-goodbye-5573a97be7d4">is shutting down</a>.</p>
+
+<p>Obviously, things did not go like we hoped they would. Customers are disappointed, and wondering what will happen now. Let me try to answer some of the questions I read online the best I can.</p>
+
+<blockquote>
+<p>Please note that this is my personal take on things, and does not represent the views of anyone else but me (i.e. not Lima, not other employees...).</p>
+</blockquote>
+
+<h2 id="what-happened-to-the-company-exactly">What happened to the company exactly?</h2>
+
+<p>Lima as a company no longer exists. It ran out of money. Its employees (including me) have all been fired, and its assets will be sold to pay its debts.</p>
+
+<p>Regarding why the company died, it is a long story and it is not my place to tell it all. What I can say is that it ran into unexpected money problems in early 2017, shortly after we started shipping the Lima Ultra. During most of 2017, there was strong demand for the product but we could not fulfill it because we did not have enough cash to pay for production and shipping (Remember the never-ending waiting list?) At the end of the year, we had no choice but to fire a large part of the team, and make a deal where we worked for another company to keep the company afloat and the product alive. What happened recently is that this deal eventually fell through, leaving us with no viable options.</p>
+
+<p>This past year was not the best time of my life, or for any of the other employees who stayed. Many of us could have left for much better jobs at any time, some did and I cannot blame them. All those who stayed on board all this time did so hoping for a better end for the company and its customers.</p>
+
+<h2 id="why-will-happen-to-the-devices">Why will happen to the devices?</h2>
+
+<p>Once Lima&#39;s servers shut down, Lima will keep working on your local LAN with the devices you have already paired with it. However, a lot of things will stop working.</p>
+
+<p>First, it won&#39;t be possible to add new devices to the system. That&#39;s because, when you log a new device into Lima, you do so with an email and password. To find out which Lima those credentials belong to, the system asks a server, and that server won&#39;t answer anymore.</p>
+
+<p>Second, it won&#39;t be possible to reset your password, because email confirmation will be broken. If you have forgotten your password, change it now while the servers are still up.</p>
+
+<p>Third, the sharing feature will be broken, because it relies on sending HTTP requests to relay servers which will go down as well.</p>
+
+<p>Finally, it won&#39;t be possible to access Lima from outside your home. This is a little harder to explain than the rest. Basically all communications between anything related to Lima (Lima devices, your devices, servers...) happen in a peer-to-peer VPN. To &quot;locate&quot; devices within the VPN (basically figure out how to talk to something), devices rely on a node which is called the ZVPN master. The IP address and public key of that node are hardcoded into every Lima client, and that node will go down as well. The use of that node is not needed on local networks because Lima devices and applications have a protocol to pair with other devices associated to the same account on a LAN without talking to any server.</p>
+
+<h2 id="is-there-a-risk-for-my-personal-data">Is there a risk for my personal data?</h2>
+
+<p>At that moment, not that I know of. Your data was never stored on our servers, and all data traffic going through relay servers is end-to-end encrypted, which means that even if an attacker took control of one they couldn&#39;t decipher your data.</p>
+
+<p>However in the long run there are two issues.</p>
+
+<p>First, we won&#39;t be able to publish updates for the Lima firmware and applications anymore. If a security issue is found in one of the components they use, they may become vulnerable with no way to fix them.</p>
+
+<p>Second, if someone was to acquire all the assets or Lima, including the domain and code signing certificate, they could theoretically do everything Lima was able to do, including publishing updates. That means they could publish malicious updates of the applications and firmware.</p>
+
+<p>That second issue sounds scary but I do not think there is any chance it will happen. Potential acquirers will probably be more interested in Lima&#39;s technological IP, there are very few chances that an acquirer will get all the assets necessary for such an attach, and even if they do they probably won&#39;t have an interest in performing it. Even if it did happen, it would be easy to notice. Still, I have to mention it for transparency.</p>
+
+<p>What I will personally do now, and what I advise users to do as well, is export all my data out of Lima, unplug the device and uninstall all the applications.</p>
+
+<h2 id="what-can-users-replace-lima-with">What can users replace Lima with?</h2>
+
+<p>It depends on the users. I don&#39;t know anything that is exactly like Lima. There was Helixee, which I have never tried out, but I just found out they are <a href="http://www.helixee.me/end-of-adventure/">shutting down as well</a>. I also learned that a project I had never heard about before called Amber had a <a href="https://www.myamberlife.com/news/an-open-letter-to-lima-customers/">special offer for Lima customers</a>.</p>
+
+<p>For technical people, you can probably do most of what you were doing with Lima with a Synology NAS, or a setup based on some small computer and Open Source software such as <a href="https://nextcloud.com">Nextcloud</a> or <a href="https://cozy.io">Cozy Cloud</a>.</p>
+
+<p>However, Lima was never designed for technical customers. It was built for, marketed to and mostly bought by non-technical people. For them, I don&#39;t have a good answer. I heard that <a href="https://mycloud.com">WD My Cloud Home</a> had become a lot better than it once was, but I have not tried it personally.</p>
+
+<h2 id="can-you-open-source-the-code">Can you open-source the code?</h2>
+
+<p>To the best of my knowledge, there is no way that can happen. This makes me extremely sad, especially since I know there are parts of the code I would <a href="http://lua-users.org/lists/lua-l/2018-11/msg00418.html">love to reuse myself</a>, and that could be useful to other projects.</p>
+
+<p>The reason why we cannot open-source is that the code does not belong to us, the employees, or the CEO. Intellectual property is considered an asset of a bankrupt company, and as such will be sold to the highest bidder to pay the company&#39;s debts.</p>
+
+<p>That being said, Lima has contributed some source code to a few Open Source projects already. Most importantly we fixed the issues in OSXFUSE that prevented it from being used for something like Lima, and those fixes are now in the main branch.</p>
+
+<p>Completely independently from the company, the former CTO of Lima has also released <a href="https://github.com/gawen/wirehub">a project</a> which looks a lot like a second, fully decentralized iteration of the Lima network layer ZVPN (using a DHT instead of a master node, and WireGuard instead of TLS). Let me be clear: this project contains no code or IP from Lima, it is a clean room implementation.</p>
+
+<h2 id="can-you-give-us-root-access-to-the-device">Can you give us root access to the device?</h2>
+
+<p>For Lima Original, no, I think that would be impossible (or rather, I can&#39;t see a solution that doesn&#39;t involve soldering...). The device is not worth much today anyway, its specs are so low I don&#39;t think you could run any other private cloud software on it.</p>
+
+<p>For Lima Ultra, a few of us ex-Lima employees (and the CEO) are trying to figure out a way to let users get root access. We can&#39;t promise anything, but we will keep you informed if we do.</p>
+
+<h2 id="why-does-it-say-something-different-in-the-kickstarter-faq">Why does it say something different in the Kickstarter FAQ?</h2>
+
+<p>Some people have mentioned that what was happening was not in line with what had been said in the <a href="https://www.kickstarter.com/projects/cloud-guys/plug-the-brain-of-your-devices/faqs#project_faq_62443">Kickstarter FAQ</a>.</p>
+
+<p>This FAQ has been written in 2013, before I or any other Lima developer joined the company. At the time Lima was a very small project with two founders trying to raise $70,000 to make their dream happen. Instead they raised $1,229,074, hired 12 people (including me), and the rest is history.</p>
+
+<p>To my knowledge we have not communicated like that ever since, especially regarding decentralization. For what I know we have been transparent that our servers were needed for some major features of the product, as it was obvious the few times they went down. You may ask why we didn&#39;t amend this page then, and the answer is (from what I know) that it is technically impossible to edit it after the campaign is over.</p>
+
+<p>Regarding Open Source, I sincerely believe the CEO of Lima would have done it if it was possible, but with the success of the Kickstarter the company had to take VC funding very early on (see below), and from that moment on I do not think it was in his hands.</p>
+
+<h2 id="where-did-all-that-kickstarter-money-go">Where did all that Kickstarter money go?</h2>
+
+<p>OK, let&#39;s address this last. What Kickstarter money?</p>
+
+<p>Yeah, the founders raised over a million dollar. But do you remember how much the backers paid for those devices? From $59 to $79 each. Well, as bad as the hardware was, it was planned for about 1000 devices, not over 10,000. And it was pretty expensive.</p>
+
+<p>I don&#39;t know the exact figures, but basically Lima did not make money on those devices, or no significant amount of money at least. Which is why it raised extra cash from VCs just afterwards, to pay the team that worked on the project, the production of more devices to sell, etc...</p>
+
+<p>If you still think something shady went on with that money, rest assured: when a company like Lima goes bankrupt, its books are closely investigated by the state, which is one of its main creditors. So if you are right, the people responsible will end up in jail. (Spoiler: I really don&#39;t think it will happen.)</p>
+
+<h2 id="what-are-you-going-to-do-next">What are you going to do next?</h2>
+
+<p>Yes, I have plans.</p>
+
+<p>No, they do not anything remotely similar to Lima.</p>
+
+I will tell you more next month, probably.
+    </div>
+    <div id="footer">
+      [ <a href="index.html">home</a> ]
+    </div>
+    
+  </body>
+</html>
