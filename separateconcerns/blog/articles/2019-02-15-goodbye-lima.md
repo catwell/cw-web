@@ -41,7 +41,7 @@ First, we won't be able to publish updates for the Lima firmware and application
 
 Second, if someone was to acquire all the assets or Lima, including the domain and code signing certificate, they could theoretically do everything Lima was able to do, including publishing updates. That means they could publish malicious updates of the applications and firmware.
 
-That second issue sounds scary but I do not think there is any chance it will happen. Potential acquirers will probably be more interested in Lima's technological IP, there are very few chances that an acquirer will get all the assets necessary for such an attach, and even if they do they probably won't have an interest in performing it. Even if it did happen, it would be easy to notice. Still, I have to mention it for transparency.
+That second issue sounds scary but I do not think there is any chance it will happen. Potential acquirers will probably be more interested in Lima's technological IP, there are very few chances that an acquirer will get all the assets necessary for such an attack, and even if they do they probably won't have an interest in performing it. Even if it did happen, it would be easy to notice. Still, I have to mention it for transparency.
 
 What I will personally do now, and what I advise users to do as well, is export all my data out of Lima, unplug the device and uninstall all the applications.
 
