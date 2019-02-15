@@ -10,11 +10,41 @@
     rel="alternate" type="application/xhtml+xml"
   />
   <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
-  <updated>2018-03-30T16:59:03Z</updated>
+  <updated>2019-02-15T09:18:54Z</updated>
   <author>
     <name>Pierre 'catwell' Chapuis</name>
     <uri>https://catwell.info/</uri>
   </author>
+  <entry>
+    <title>Software Architecture Principles</title>
+    <link
+      rel="alternate" type="text/html"
+      href="https://blog.separateconcerns.com/2019-02-15-architecture-principles.html"
+    />
+    <id>tag:blog.separateconcerns.com,2019-02-15:architecture-principles</id>
+    <published>2019-02-15T10:20:00Z</published>
+    <updated>2019-02-15T10:20:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        
+
+<p>This is just a short post to share what I now consider, after 10 years in the industry (and almost twice as many writing code), my core software architecture principles.</p>
+
+<p>You may or may not agree with them all, but if you design software or systems, you should have a similar list in your head; it really helps a lot when making decisions.</p>
+
+<p>Without further ado, the principles are:</p>
+
+<ul>
+<li><p><a href="https://en.wikipedia.org/wiki/Separation_of_concerns">Separation of Concern</a> often trumps not repeating oneself (<a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself">DRY</a>). In other words, avoiding duplication does not justify introducing coupling.</p></li>
+<li><p><a href="https://en.wikipedia.org/wiki/John_Gall_(author)#Gall%27s_law">Gall&#39;s Law</a>: &quot;A complex system that works is invariably found to have evolved from a simple system that worked.&quot;</p></li>
+<li><p><a href="https://en.wikipedia.org/wiki/Conway%27s_law">Conway&#39;s Law</a>: &quot;Organizations produce designs which are copies of their communication structures.&quot;</p></li>
+<li><p>When writing code or designing, stop and think &quot;consequences&quot;. What will be the impact of what you are doing on the rest of the systems? Could there be adverse side-effects?</p></li>
+<li><p>Think about debuggability in production. There is nothing worse than having your software break and not being able to figure out why. Do not automate things you do not understand.</p></li>
+<li><p><a href="https://programmingisterrible.com/post/139222674273/write-code-that-is-easy-to-delete-not-easy-to">Write code that is easy to delete, not easy to extend.</a></p></li>
+</ul>
+      </div>
+    </content>
+  </entry>
   <entry>
     <title>Fixing right click on touchpads in Gnome</title>
     <link

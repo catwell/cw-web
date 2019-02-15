@@ -1,0 +1,24 @@
+% Software Architecture Principles
+% Pierre 'catwell' Chapuis
+% 2019-02-15 10:20:00
+
+    ::description::
+    My guiding principles regarding software architecture and design.
+
+This is just a short post to share what I now consider, after 10 years in the industry (and almost twice as many writing code), my core software architecture principles.
+
+You may or may not agree with them all, but if you design software or systems, you should have a similar list in your head; it really helps a lot when making decisions.
+
+Without further ado, the principles are:
+
+- [Separation of Concern](https://en.wikipedia.org/wiki/Separation_of_concerns) often trumps not repeating oneself ([DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)). In other words, avoiding duplication does not justify introducing coupling.
+
+- [Gall's Law](https://en.wikipedia.org/wiki/John_Gall_(author)#Gall%27s_law): "A complex system that works is invariably found to have evolved from a simple system that worked."
+
+- [Conway's Law](https://en.wikipedia.org/wiki/Conway%27s_law): "Organizations produce designs which are copies of their communication structures."
+
+- When writing code or designing, stop and think "consequences". What will be the impact of what you are doing on the rest of the systems? Could there be adverse side-effects?
+
+- Think about debuggability in production. There is nothing worse than having your software break and not being able to figure out why. Do not automate things you do not understand.
+
+- [Write code that is easy to delete, not easy to extend.](https://programmingisterrible.com/post/139222674273/write-code-that-is-easy-to-delete-not-easy-to)
