@@ -47,6 +47,8 @@ What I will personally do now, and what I advise users to do as well, is [export
 
 > Note: If you have problems when trying to recover your data (due to e.g. a hardware issue with the USB drive), *do not* uninstall the applications. The data on your desktop might sometimes help recovering some of the files.
 
+If you have an issue with the Decrypt Tool, check [here](https://github.com/catwell/postlima) for potential answers.
+
 ## What can users replace Lima with?
 
 It depends on the users. I don't know anything that is exactly like Lima. There was Helixee, which I have never tried out, but I just found out they are [shutting down as well](http://www.helixee.me/end-of-adventure/). I also learned that a project I had never heard about before called Amber had a [special offer for Lima customers](https://www.myamberlife.com/news/an-open-letter-to-lima-customers/).
