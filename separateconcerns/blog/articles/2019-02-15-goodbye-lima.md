@@ -77,7 +77,7 @@ Some people have mentioned that what was happening was not in line with what had
 
 This FAQ has been written in 2013, before I or any other Lima developer joined the company. At the time Lima was a very small project with two founders trying to raise $70,000 to make their dream happen. Instead they raised $1,229,074, hired 12 people (including me), and the rest is history.
 
-To my knowledge we have not communicated like that ever since, especially regarding decentralization. For what I know we have been transparent that our servers were needed for some major features of the product, as it was obvious the few times they went down. You may ask why we didn't amend this page then, and the answer is (from what I know) that it is technically impossible to edit it after the campaign is over.
+I do not think we have not communicated like that ever since, especially regarding decentralization. As far as what I know we have been transparent that our servers were needed for some major features of the product, as it was obvious the few times they went down. You may ask why we didn't amend this page then, and the answer is (I think) that it is technically impossible to edit it after the campaign is over.
 
 Regarding Open Source, I sincerely believe the CEO of Lima would have done it if it was possible, but with the success of the Kickstarter the company had to take VC funding very early on (see below), and from that moment on I do not think it was in his hands.
 
