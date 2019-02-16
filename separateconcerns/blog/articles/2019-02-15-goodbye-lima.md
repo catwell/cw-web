@@ -19,7 +19,7 @@ Regarding why the company died, it is a long story and it is not my place to tel
 
 This past year was not the best time of my life, or for any of the other employees who stayed. Many of us could have left for much better jobs at any time, some did and I cannot blame them. All those who stayed on board all this time did so hoping for a better end for the company and its customers.
 
-## Why will happen to the devices?
+## What will happen to the devices?
 
 Once Lima's servers shut down, Lima will keep working on your local LAN with the devices you have already paired with it. However, a lot of things will stop working.
 
