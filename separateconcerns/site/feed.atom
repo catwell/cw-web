@@ -10,7 +10,7 @@
     rel="alternate" type="application/xhtml+xml"
   />
   <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
-  <updated>2019-02-16T08:43:50Z</updated>
+  <updated>2019-02-16T16:52:11Z</updated>
   <author>
     <name>Pierre 'catwell' Chapuis</name>
     <uri>https://catwell.info/</uri>
@@ -73,6 +73,8 @@
 <blockquote>
 <p>Note: If you have problems when trying to recover your data (due to e.g. a hardware issue with the USB drive), <em>do not</em> uninstall the applications. The data on your desktop might sometimes help recovering some of the files.</p>
 </blockquote>
+
+<p>If you have an issue with the Decrypt Tool, check <a href="https://github.com/catwell/postlima">here</a> for potential answers.</p>
 
 <h2 id="what-can-users-replace-lima-with">What can users replace Lima with?</h2>
 
