@@ -45,6 +45,8 @@ That second issue sounds scary but I do not think there is any chance it will ha
 
 What I will personally do now, and what I advise users to do as well, is [export all my data out of Lima](https://lima.gitbook.io/support), unplug the device and uninstall all the applications.
 
+> Note: If you have problems when trying to recover your data (due to e.g. a hardware issue with the USB drive), *do not* uninstall the applications. The data on your desktop might sometimes help recovering some of the files.
+
 ## What can users replace Lima with?
 
 It depends on the users. I don't know anything that is exactly like Lima. There was Helixee, which I have never tried out, but I just found out they are [shutting down as well](http://www.helixee.me/end-of-adventure/). I also learned that a project I had never heard about before called Amber had a [special offer for Lima customers](https://www.myamberlife.com/news/an-open-letter-to-lima-customers/).
