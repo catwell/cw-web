@@ -15,7 +15,7 @@ Obviously, things did not go like we hoped they would. Customers are disappointe
 
 Lima as a company no longer exists. It ran out of money. Its employees (including me) have all been fired, and its assets will be sold to pay its debts.
 
-Regarding why the company died, it is a long story and it is not my place to tell it all. What I can say is that it ran into unexpected money problems in early 2017, shortly after we started shipping the Lima Ultra. During most of 2017, there was strong demand for the product but we could not fulfill it because we did not have enough cash to pay for production and shipping (Remember the never-ending waiting list?) At the end of the year, we had no choice but to fire a large part of the team, and make a deal where we worked for another company to keep the company afloat and the product alive. What happened recently is that this deal eventually fell through, leaving us with no viable options.
+Regarding why the company died, it is a long story and it is not my place to tell it all. What I can say is that it ran into unexpected funding problems in early 2017, shortly after we started shipping the Lima Ultra. During most of 2017, there was strong demand for the product but we could not fulfill it because we did not have enough cash to pay for production and shipping (Remember the never-ending waiting list?) At the end of the year, we had to fire a large part of the team and we switched our business model to sell our software to other companies. We made a deal where we worked for another startup. The deal was good enough to keep the company afloat and the product alive for a year, but it forced us to stop selling Lima devices. What happened recently is that this deal eventually fell through, leaving us with no viable options.
 
 This past year was not the best time of my life, or for any of the other employees who stayed. Many of us could have left for much better jobs at any time, some did and I cannot blame them. All those who stayed on board all this time did so hoping for a better end for the company and its customers.
 
@@ -72,6 +72,8 @@ Completely independently from the company, the former CTO of Lima has also relea
 For Lima Original, no, I think that would be impossible (or rather, I can't see a solution that doesn't involve soldering...). The device is not worth much today anyway, its specs are so low I don't think you could run any other private cloud software on it.
 
 For Lima Ultra, a few of us ex-Lima employees (and the CEO) are trying to figure out a way to let users get root access. We can't promise anything, but we will keep you informed if we do.
+
+EDIT (2019-02-18): [We did it, check this out!](https://github.com/catwell/postlima)
 
 ## Why does it say something different in the Kickstarter FAQ?
 
