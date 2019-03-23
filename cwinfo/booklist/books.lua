@@ -1400,7 +1400,7 @@ return {
   {
     title = "Mastering PostgreSQL in Application Development",
     url = "https://www.amazon.com/Mastering-PostgreSQL-Application-Development-Fontaine/dp/024494525X",
-    cover = {amazon = "51KSlT339p"},
+    cover = {amazon = "51KSlT339pL"},
     authors = {"Dimitri Fontaine"},
   },
   {
@@ -1462,5 +1462,65 @@ return {
     url = "https://www.amazon.com/Infrastructure-Book-Everything-Industrial-Landscape/dp/0393329593",
     cover = {amazon = "61sFKPe-bsL"},
     authors = {"Brian Hayes"},
+  },
+  {
+    title = "Flask Web Development",
+    url = "https://www.amazon.com/Flask-Web-Development-Developing-Applications/dp/1449372627",
+    cover = {amazon = "51bTrx9a-%2BL"},
+    authors = {"Miguel Grinberg"},
+  },
+  {
+    title = "Essential SQLAlchemy",
+    url = "https://www.amazon.com/Essential-SQLAlchemy-Mapping-Python-Databases/dp/149191646X",
+    cover = {amazon = "51LGK%2BezuxL"},
+    authors = {"Jason Myers", "Rick Copeland"},
+  },
+  {
+    title = "Getting Things Done",
+    url = "https://www.amazon.com/Getting-Things-Done-Stress-Free-Productivity/dp/0143126563",
+    cover = {amazon = "51W-ZL%2BQRlL"},
+    authors = {"David Allen"},
+  },
+  {
+    title = "Angular: Up and Running",
+    url = "https://www.amazon.com/Angular-Up-Running-Learning-Step-ebook/dp/B07DFTFMRK",
+    cover = {amazon = "51XAcKnSJKL"},
+    authors = {"Shyam Seshadri"},
+  },
+  {
+    title = "The Startup Owner's Manual",
+    url = "https://www.amazon.com/Startup-Owners-Manual-Step-Step/dp/0984999302",
+    cover = {amazon = "51L7EwwlkbL"},
+    authors = {"Steve Blank", "Bob Dorf"},
+  },
+  {
+    title = "The Great Game of Business",
+    url = "https://www.amazon.com/Great-Game-Business-Expanded-Updated/dp/0385348339",
+    cover = {amazon = "51fjvcGuKYL"},
+    authors = {"Jack Stack", "Bo Burlingham"},
+  },
+  {
+    title = "Blitzscaling",
+    url = "https://www.amazon.com/Blitzscaling-Lightning-Fast-Building-Massively-Companies/dp/1524761419",
+    cover = {amazon = "51DlsAs1p7L"},
+    authors = {"Reid Hoffman", "Chris Yeh"},
+  },
+  {
+    title = "Who",
+    url = "https://www.amazon.com/Who-Geoff-Smart/dp/0345504194",
+    cover = {amazon = "41HZBEj2DTL"},
+    authors = {"Geoff Smart", "Randy Street"},
+  },
+  {
+    title = "Measure What Matters",
+    url = "https://www.amazon.com/Measure-What-Matters-Google-Foundation/dp/0525536221",
+    cover = {amazon = "51G-XiecxvL"},
+    authors = {"John Doerr"},
+  },
+  {
+    title = "Scaling Up",
+    url = "https://www.amazon.com/Scaling-Up-Companies-Rockefeller-Habits/dp/0986019526",
+    cover = {amazon = "51qR%2BClWEaL"},
+    authors = {"Verne Harnish"},
   },
 }
