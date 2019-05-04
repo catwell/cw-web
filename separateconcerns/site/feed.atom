@@ -10,11 +10,41 @@
     rel="alternate" type="application/xhtml+xml"
   />
   <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
-  <updated>2019-04-24T08:19:11Z</updated>
+  <updated>2019-05-04T16:01:56Z</updated>
   <author>
     <name>Pierre 'catwell' Chapuis</name>
     <uri>https://catwell.info/</uri>
   </author>
+  <entry>
+    <title>Changing the SSH port on Arch Linux</title>
+    <link
+      rel="alternate" type="text/html"
+      href="https://blog.separateconcerns.com/2019-05-04-ssh-port.html"
+    />
+    <id>tag:blog.separateconcerns.com,2019-05-04:ssh-port</id>
+    <published>2019-05-04T18:00:00Z</published>
+    <updated>2019-05-04T18:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        
+
+<p>I often change the default SSH port from 22 to something else on servers I run. It kind of is a dangerous operation, especially when the only way you have to connect to that server <em>is</em> SSH.</p>
+
+<p>The historical way to do this is editing <code>sshd_config</code> and setting the <code>Port</code> variable, but with recent versions of Arch Linux and the default configuration, this will <em>not</em> work.</p>
+
+<p>The reason is that SSH is configured with systemd socket activation. So what you need to do is run <code>sudo systemctl edit sshd.socket</code> and set the contents of the file to:</p>
+
+<pre><code>[Socket]
+ListenStream=MY_PORT
+Accept=yes
+</code></pre>
+
+<p>where <code>MY_PORT</code> is the port number you want.</p>
+
+I hope this short post will avoid trouble for other people, at least it will be a reminder for me the next time I have to setup an Arch server...
+      </div>
+    </content>
+  </entry>
   <entry>
     <title>Spicing things up</title>
     <link
