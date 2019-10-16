@@ -1,49 +1,20 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
- "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE HTML>
+<html lang="en">
 
 <head>
   <title>catwell.info - Open Source</title>
-  <meta name="description" content="catwell.info - Open Source"/>
-  <link rel="icon" type="image/png" href="../assets/fav.png"/>
-  <link href="../assets/style.css" rel="stylesheet" type="text/css"
-   media="screen"/>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta name="description" content="catwell.info - Open Source">
+  <link rel="icon" type="image/png" href="../assets/fav.png">
+  <link href="../assets/style.css" rel="stylesheet" type="text/css" media="screen">
+  <script src="../assets/script.js"></script>
 </head>
 
 <body>
 
-  <script type="text/javascript">
-    // <![CDATA[
-    // Email obfuscator script 2.1 by Tim Williams, University of Arizona
-    // Random encryption key feature by Andrew Moulden, Site Engineering Ltd
-    // This code is freeware provided these four comment lines remain intact
-    // A wizard to generate this code is at http://www.jottings.com/obfuscator/
-    // Adapted by Pierre Chapuis.
-    function cw_email() {
-      var coded = "f8c1@tDYEn55.f8c1"
-      var key = "VELa5NjW4KsvteGmBbQ0DCTidxJzrYnhpOuUFk7ofyPASZw8XlH2MR6I1c39qg"
-      var shift = coded.length
-      var link = ""
-      var ltr
-      for (i=0; i<coded.length; i++) {
-        if (key.indexOf(coded.charAt(i))==-1) {
-          ltr = coded.charAt(i);
-          link += (ltr);
-        }
-        else {
-          ltr = (key.indexOf(coded.charAt(i))-shift+key.length) % key.length;
-          link += (key.charAt(ltr));
-        }
-      }
-      return link;
-    }
-    // ]]>
-  </script>
-
-  <div id="head"></div>
-  <div id="container">
+  <a href=".." class="head"></a>
+  <div class="container">
     <p>
       I maintain the following Open Source projects. Most of them are written in <a href="http://www.lua.org/">Lua</a> and MIT licensed.
     </p>

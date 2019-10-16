@@ -14,9 +14,9 @@ local template = [[
     <title>catwell's books</title>
   </head>
   <body>
-    <div id="container">
+    <div class="container">
       <h1>Reading list of <a href="https://catwell.info">Pierre Chapuis</a></h1>
-      <div id="books">
+      <div>
       {{#books}}
         <div class="book">
           <h3><a href="{{{url}}}">{{title}}</a></h3>

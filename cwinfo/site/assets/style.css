@@ -8,6 +8,8 @@
 
 html {
   height: 100%;
+  font-size: 18px;
+  font-family: "Courier New", Courier, monospace;
 }
 
 body {
@@ -16,11 +18,14 @@ body {
 }
 
 p {
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
+  line-height: 1.3rem;
 }
 
 li {
-  margin-bottom: 0.5em;
+  margin-bottom: 0.2rem;
+  line-height: 1.3rem;
+  list-style-position: inside;
 }
 
 a {
@@ -32,42 +37,32 @@ a:hover {
   border-bottom: 1px dotted #ff4100;
 }
 
-#head {
-  margin-top: 60px;
-  margin-bottom: 30px;
+.head {
+  display: block;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
   height: 60px;
   background: #d0d0d0 url('head.png') no-repeat center;
 }
 
-#container {
+a.head:hover {
+   border-bottom: none;
+}
+
+.container {
   margin: auto;
-  margin-bottom: 1em;
-  padding-top: 1em;
-  padding-left: 3ex;
-  padding-right: 3ex;
-  padding-bottom: 1em;
-  max-width: 80ex;
-  font-size: 18px;
-  font-family: "Courier New", Courier, monospace;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  max-width: 900px;
   background: #f9f9f9;
   color: #000000;
   overflow: hidden;
 }
 
-#container h1 {
-  font-size: 32px;
+.container h1 {
+  font-size: 2rem;
   text-align: center;
-  margin-bottom: 1em;
-}
-
-#container h2 {
-  font-size: 32px;
-  margin-bottom: 0.5em;
-}
-
-#container h3 {
-  font-size: 24px;
-  margin-bottom: 0.5em;
+  margin-bottom: 2rem;
 }
 
 div.center {
