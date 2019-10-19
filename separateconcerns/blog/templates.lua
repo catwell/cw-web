@@ -5,6 +5,7 @@ TPL.html_post = [[
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta name="description" content="{{description}}">
     <link href="css/theme.css" rel="stylesheet" type="text/css">
     {{#has_code}}
@@ -37,6 +38,7 @@ TPL.html_index = [[
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta
       name="description"
       content="Pierre Chapuis' online journal about system architecture, programming, startups and the separation of concerns."
