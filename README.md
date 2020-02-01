@@ -10,7 +10,7 @@ There is probably nothing of interest there, but I also have no reason to keep i
 
 ## Copyright
 
-Copyright (c) 2013-2019 Pierre Chapuis
+Copyright (c) 2013-2020 Pierre Chapuis
 
 Lua source code available under the MIT license, content under CC BY-ND 4.0.
 See LICENSE.txt for the details.
