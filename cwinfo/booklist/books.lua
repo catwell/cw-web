@@ -1610,7 +1610,7 @@ return {
   {
     title = "UNIX: A History and a Memoir",
     url = "https://www.amazon.fr/UNIX-History-Memoir-Brian-Kernighan/dp/1695978552",
-    cover = {amazon = "https://www.amazon.fr/UNIX-History-Memoir-Brian-Kernighan/dp/1695978552"},
+    cover = {amazon = "41MTU7QliqL"},
     authors = {"Brian W Kernighan"},
     digital = false,
   },
