@@ -1614,4 +1614,11 @@ return {
     authors = {"Brian W Kernighan"},
     digital = false,
   },
+  {
+    title = "Patterns of Software",
+    url = "https://www.amazon.com/Patterns-Software-Tales-Community-dp-0195121236/dp/0195121236",
+    cover = {amazon = "51CMC7VQMTL"},
+    authors = {"Richard P. Gabriel"},
+    digital = true,
+  }
 }
