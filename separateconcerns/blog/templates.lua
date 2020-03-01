@@ -21,7 +21,11 @@ TPL.html_post = [[
     <div id="container">
     <header>
       <h1>{{{title}}}</h1>
-      <h4>published {{shortdate}}{{#updated}}, updated {{updated}}{{/updated}}</h4>
+      <h4>
+        published {{shortdate}}{{#updated}},
+        updated {{updated}}{{/updated}}
+        [ <a href="index.html">home</a> ]
+      </h4>
     </header>
     {{{content}}}
     </div>
@@ -57,7 +61,7 @@ TPL.html_index = [[
       <h4>
         <a href="https://catwell.info" rel="me">catwell</a>'s
         online journal
-        [<a href="feed.atom">subscribe</a>]
+        [ <a href="feed.atom">subscribe</a> ]
       </h4>
     </header>
     <ol class="index">
