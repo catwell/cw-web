@@ -10,11 +10,134 @@
     rel="alternate" type="application/xhtml+xml"
   />
   <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
-  <updated>2019-10-19T13:44:52Z</updated>
+  <updated>2020-03-01T16:58:43Z</updated>
   <author>
     <name>Pierre 'catwell' Chapuis</name>
     <uri>https://catwell.info/</uri>
   </author>
+  <entry>
+    <title>Tools</title>
+    <link
+      rel="alternate" type="text/html"
+      href="https://blog.separateconcerns.com/2020-03-01-tools.html"
+    />
+    <id>tag:blog.separateconcerns.com,2020-03-01:tools</id>
+    <published>2020-03-01T18:00:00Z</published>
+    <updated>2020-03-01T18:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        
+
+<p>A few days ago I read <a href="https://acrossapp.com/blog/how-a-2-person-startup-already-uses-28-other-tools">this article</a> which made me want to list some of the tools used at the four startups I have worked at so far.</p>
+
+<p>I have mostly listed SaaS tools here, but you can also check out <a href="https://pinboard.in/u:catwell/t:~stack/">the ~stack tag on my Pinboard</a> for more.</p>
+
+<p>I have also added a section at the end for some tools I use for my own projects.</p>
+
+<h1 id="moodstocks-2010---2013">Moodstocks (2010 - 2013)</h1>
+
+<ul>
+<li><a href="https://www.fastmail.com">Fastmail</a> - E-mail</li>
+<li><a href="https://github.com">GitHub</a> - Code hosting &amp; issues</li>
+<li><a href="https://basecamp.com">Basecamp</a> - PM</li>
+<li><a href="https://basecamp.com/retired/campfire">Campfire</a> - Chat &amp; Customer Support</li>
+<li><a href="https://www.salesforce.com">Salesforce</a> - CRM</li>
+<li><a href="https://desk.com">Desk.com</a> - Customer Support</li>
+<li><a href="https://gandi.net">Gandi</a> - DNS</li>
+<li><a href="https://uptimerobot.com">Uptime Robot</a> - Alerting</li>
+<li><a href="https://aws.amazon.com">AWS</a> - Hosting</li>
+<li><a href="https://mandrillapp.com">Mandrill</a> - Transactional e-mails</li>
+<li><a href="https://konghq.com">Kong</a> - API Gateway</li>
+</ul>
+
+<h1 id="lima-2014---2019">Lima (2014 - 2019)</h1>
+
+<ul>
+<li><a href="https://gsuite.google.com">GSuite</a> - E-mail &amp; Calendar</li>
+<li><a href="https://github.com">GitHub</a> - Code hosting, issues &amp; PM</li>
+<li><a href="https://www.flowdock.com">Flowdock</a> then <a href="https://slack.com">Slack</a> - Chat</li>
+<li><a href="https://www.lucca.fr">Lucca</a> then <a href="https://payfit.com">Payfit</a></li>
+<li><a href="https://segment.com">Segment</a> - Customer workflows</li>
+<li><a href="https://customer.io">customer.io</a> - Customer base, emailing</li>
+<li><a href="https://www.zendesk.com">Zendesk</a> - Customer support</li>
+<li><a href="https://www.invisionapp.com">Invision</a> - Design work</li>
+<li><a href="https://www.oneskyapp.com">OneSky</a> - App translation</li>
+<li><a href="https://www.talent.io">Talent.io</a> - Hiring</li>
+<li><a href="https://gandi.net">Gandi</a> - DNS</li>
+<li><a href="https://www.datadoghq.com">Datadog</a> - Monitoring</li>
+<li><a href="https://uptimerobot.com">Uptime Robot</a> - Alerting</li>
+<li><a href="https://pushover.net">Pushover</a> - Alerting</li>
+<li><a href="https://sentry.io">Sentry</a> - Error monitoring</li>
+<li><a href="https://www.appveyor.com">AppVeyor</a> - Windows build &amp; CI</li>
+<li><a href="https://travis-ci.com">Travis</a> - Build &amp; CI</li>
+<li><a href="https://firebase.google.com/">Firebase</a> (<a href="https://get.fabric.io">Fabric</a>...)</li>
+<li><a href="https://aws.amazon.com">AWS</a> (+ many others including <a href="https://www.ovh.com">OVH</a> and <a href="https://www.scaleway.com">Scaleway</a>) - Hosting</li>
+<li><a href="https://sendgrid.com">Sendgrid</a> - Transactional e-mails</li>
+<li><a href="https://www.cloudflare.com">Cloudflare</a> - CDN</li>
+</ul>
+
+<h1 id="chilli-efounders-2019">Chilli (eFounders, 2019)</h1>
+
+<ul>
+<li><a href="https://gsuite.google.com">GSuite</a> - E-mail, Calendar, Drive</li>
+<li><a href="https://github.com">GitHub</a> - Code hosting</li>
+<li><a href="https://slack.com">Slack</a> - Chat</li>
+<li><a href="https://slite.com">Slite</a> - EDM</li>
+<li><a href="https://airtable.com">Airtable</a> - Process modeling</li>
+<li><a href="https://www.pipedrive.com">Pipedrive</a> - CRM</li>
+<li><a href="https://trello.com">Trello</a> - PM</li>
+<li><a href="https://payfit.com">Payfit</a> - Payroll, Leaves &amp; absences</li>
+<li><a href="https://www.spendesk.com">Spendesk</a> - Expenses</li>
+<li><a href="https://zoom.us">Zoom</a> - Video calls</li>
+<li><a href="https://www.intercom.com">Intercom</a> - Lead acquisition</li>
+<li><a href="https://aircall.io">Aircall</a> - Centralized phone calls</li>
+<li><a href="https://moqups.com">Moqups</a> - Design work</li>
+<li><a href="https://www.invisionapp.com">Invision</a> - Design work</li>
+<li><a href="https://analytics.google.com">Google Analytics</a></li>
+<li><a href="https://www.squarespace.com">Squarespace</a> - Blog</li>
+<li><a href="https://1password.com">1Password</a> - Team password management</li>
+<li><a href="https://codility.com">Codility</a> - Hiring (screening)</li>
+<li><a href="https://hiresweet.com">Hiresweet</a> - Hiring (sourcing)</li>
+<li><a href="https://www.workable.com">Workable</a> - Hiring</li>
+<li><a href="https://gandi.net">Gandi</a> - DNS</li>
+<li><a href="https://uptimerobot.com">Uptime Robot</a> - Alerting</li>
+<li><a href="https://aws.amazon.com">AWS</a> - Hosting</li>
+<li><a href="https://www.mailjet.com">Mailjet</a> - Transactional e-mails</li>
+</ul>
+
+<h1 id="inch-2019">Inch (2019)</h1>
+
+<ul>
+<li><a href="https://gsuite.google.com">GSuite</a> - E-mail, Calendar, Drive</li>
+<li><a href="https://github.com">GitHub</a> - Code hosting &amp; issues</li>
+<li><a href="https://slack.com">Slack</a> - Chat</li>
+<li><a href="https://www.notion.so">Notion</a> - EDM</li>
+<li><a href="https://www.hubspot.fr">Hubspot</a> - CRM</li>
+<li><a href="https://www.lucca.fr">Lucca</a> - Payroll, Leaves &amp; absences</li>
+<li><a href="https://mixpanel.com">Mixpanel</a> - Analytics</li>
+<li><a href="https://discordapp.com">Discord</a> - Team voice calls</li>
+<li><a href="https://www.intercom.com">Intercom</a> - Customer support</li>
+<li><a href="https://aircall.io">Aircall</a> - Centralized phone calls</li>
+<li><a href="https://uptimerobot.com">Uptime Robot</a> - Alerting</li>
+<li><a href="https://rollbar.com">Rollbar</a> - Error monitoring</li>
+<li><a href="https://scoutapm.com">Scout</a> - APM</li>
+<li><a href="https://cloud.google.com">GCP</a> (+ <a href="https://www.ovh.com">OVH</a>) - Hosting</li>
+<li><a href="https://mandrillapp.com">Mandrill</a> - Transactional e-mails</li>
+</ul>
+
+<h1 id="personal">Personal</h1>
+
+<ul>
+<li><a href="https://www.fastmail.com">Fastmail</a> - Email</li>
+<li><a href="https://github.com">GitHub</a> - Code hosting</li>
+<li><a href="https://pinboard.in">Pinboard</a> - Bookmarks</li>
+<li><a href="https://gandi.net">Gandi</a> - DNS</li>
+<li><a href="https://uptimerobot.com">Uptime Robot</a> - Alerting</li>
+<li><a href="https://my.vultr.com">Vultr</a> - Hosting</li>
+</ul>
+      </div>
+    </content>
+  </entry>
   <entry>
     <title>Opinions</title>
     <link
