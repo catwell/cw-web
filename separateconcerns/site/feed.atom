@@ -10,7 +10,7 @@
     rel="alternate" type="application/xhtml+xml"
   />
   <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
-  <updated>2020-04-03T07:05:38Z</updated>
+  <updated>2020-04-03T14:22:04Z</updated>
   <author>
     <name>Pierre 'catwell' Chapuis</name>
     <uri>https://catwell.info/</uri>
@@ -23,7 +23,7 @@
     />
     <id>tag:blog.separateconcerns.com,2020-04-03:2fa-pass-oathtool</id>
     <published>2020-04-03T09:05:00Z</published>
-    <updated>2020-04-03T09:05:00Z</updated>
+    <updated>2020-04-03T16:20:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         
@@ -53,7 +53,17 @@ scanned 1 barcode symbols from 1 images in 0.03 seconds
 795864
 </code></pre>
 
-All the tools used in that article are <a href="https://www.archlinux.org/packages/community/any/pass/">available</a> <a href="https://www.archlinux.org/packages/community/x86_64/oath-toolkit/">as</a> <a href="https://www.archlinux.org/packages/extra/x86_64/zbar/">packages</a> in the Arch Linux repositories.
+<p>All the tools used in that article are <a href="https://www.archlinux.org/packages/community/any/pass/">available</a> <a href="https://www.archlinux.org/packages/community/x86_64/oath-toolkit/">as</a> <a href="https://www.archlinux.org/packages/extra/x86_64/zbar/">packages</a> in the Arch Linux repositories.</p>
+
+<h2 id="complements">Complements</h2>
+
+<p>It was <a href="https://lobste.rs/s/abmkdz/2fa_2_factor_authentication_terminal_app">a post on Lobsters</a> that prompted me to post this. Someone from the comments told me that there is <a href="https://github.com/tadfisher/pass-otp">a pass extension</a> which does almost the same thing.</p>
+
+<p>Also, some people think that putting 2FA codes in a password manager defeats the purpose. But in practice TOTP 2FA does not really add much more to the security of my accounts than the strong random passwords I generate with pass. The &quot;second factor&quot; part isn&#39;t really the true benefit.</p>
+
+<p>One actual advantage is that nobody on the network can sniff all of my credentials (like digest-based password verification methods). Another, and I think this is the main one, is that the owner of the website has chosen part of the credentials and hence ensured some degree of strength. What I do preserves both of those properties, so I&#39;m fine with it. By the way, note that password managers like 1Password <a href="https://support.1password.com/one-time-passwords/">do the same thing</a>.</p>
+
+The one thing I could do to really improve the security of the whole thing is use 2FA <em>to access pass</em> by storing my GPG key in a Yubikey. I probably will, someday.
       </div>
     </content>
   </entry>

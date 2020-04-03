@@ -2,6 +2,10 @@
 % Pierre 'catwell' Chapuis
 % 2020-04-03 09:05:00
 
+<!--@
+  updated = "2020-04-03 16:20:00"
+-->
+
     ::description::
     How to use pass and oathtool to generate 2FA codes easily.
 
@@ -27,3 +31,13 @@ You can now get your 2FA codes like this:
     795864
 
 All the tools used in that article are [available](https://www.archlinux.org/packages/community/any/pass/) [as](https://www.archlinux.org/packages/community/x86_64/oath-toolkit/) [packages](https://www.archlinux.org/packages/extra/x86_64/zbar/) in the Arch Linux repositories.
+
+## Complements
+
+It was [a post on Lobsters](https://lobste.rs/s/abmkdz/2fa_2_factor_authentication_terminal_app) that prompted me to post this. Someone from the comments told me that there is [a pass extension](https://github.com/tadfisher/pass-otp) which does almost the same thing.
+
+Also, some people think that putting 2FA codes in a password manager defeats the purpose. But in practice TOTP 2FA does not really add much more to the security of my accounts than the strong random passwords I generate with pass. The "second factor" part isn't really the true benefit.
+
+One actual advantage is that nobody on the network can sniff all of my credentials (like digest-based password verification methods). Another, and I think this is the main one, is that the owner of the website has chosen part of the credentials and hence ensured some degree of strength. What I do preserves both of those properties, so I'm fine with it. By the way, note that password managers like 1Password [do the same thing](https://support.1password.com/one-time-passwords/).
+
+The one thing I could do to really improve the security of the whole thing is use 2FA *to access pass* by storing my GPG key in a Yubikey. I probably will, someday.
