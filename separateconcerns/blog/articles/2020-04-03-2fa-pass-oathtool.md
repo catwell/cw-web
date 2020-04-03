@@ -34,7 +34,7 @@ All the tools used in that article are [available](https://www.archlinux.org/pac
 
 ## Complements
 
-It was [a post on Lobsters](https://lobste.rs/s/abmkdz/2fa_2_factor_authentication_terminal_app) that prompted me to post this. Someone from the comments told me that there is [a pass extension](https://github.com/tadfisher/pass-otp) which does almost the same thing.
+It was [a post on Lobsters](https://lobste.rs/s/abmkdz/2fa_2_factor_authentication_terminal_app) that prompted me to post this. [Someone from the comments](https://lobste.rs/s/abmkdz/2fa_2_factor_authentication_terminal_app#c_c0y9io) and [a former colleague on Twitter](https://twitter.com/gawenr/status/1245973593453932544) told me about [a pass extension](https://github.com/tadfisher/pass-otp) I didn't know about which does almost the same thing.
 
 Also, some people think that putting 2FA codes in a password manager defeats the purpose. But in practice TOTP 2FA does not really add much more to the security of my accounts than the strong random passwords I generate with pass. The "second factor" part isn't really the true benefit.
 

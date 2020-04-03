@@ -10,7 +10,7 @@
     rel="alternate" type="application/xhtml+xml"
   />
   <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
-  <updated>2020-04-03T14:22:04Z</updated>
+  <updated>2020-04-03T14:24:23Z</updated>
   <author>
     <name>Pierre 'catwell' Chapuis</name>
     <uri>https://catwell.info/</uri>
@@ -57,7 +57,7 @@ scanned 1 barcode symbols from 1 images in 0.03 seconds
 
 <h2 id="complements">Complements</h2>
 
-<p>It was <a href="https://lobste.rs/s/abmkdz/2fa_2_factor_authentication_terminal_app">a post on Lobsters</a> that prompted me to post this. Someone from the comments told me that there is <a href="https://github.com/tadfisher/pass-otp">a pass extension</a> which does almost the same thing.</p>
+<p>It was <a href="https://lobste.rs/s/abmkdz/2fa_2_factor_authentication_terminal_app">a post on Lobsters</a> that prompted me to post this. <a href="https://lobste.rs/s/abmkdz/2fa_2_factor_authentication_terminal_app#c_c0y9io">Someone from the comments</a> and <a href="https://twitter.com/gawenr/status/1245973593453932544">a former colleague on Twitter</a> told me about <a href="https://github.com/tadfisher/pass-otp">a pass extension</a> I didn&#39;t know about which does almost the same thing.</p>
 
 <p>Also, some people think that putting 2FA codes in a password manager defeats the purpose. But in practice TOTP 2FA does not really add much more to the security of my accounts than the strong random passwords I generate with pass. The &quot;second factor&quot; part isn&#39;t really the true benefit.</p>
 
