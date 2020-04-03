@@ -10,11 +10,53 @@
     rel="alternate" type="application/xhtml+xml"
   />
   <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
-  <updated>2020-03-01T17:39:38Z</updated>
+  <updated>2020-04-03T07:05:38Z</updated>
   <author>
     <name>Pierre 'catwell' Chapuis</name>
     <uri>https://catwell.info/</uri>
   </author>
+  <entry>
+    <title>Two-factor authentication with pass and oathtool</title>
+    <link
+      rel="alternate" type="text/html"
+      href="https://blog.separateconcerns.com/2020-04-03-2fa-pass-oathtool.html"
+    />
+    <id>tag:blog.separateconcerns.com,2020-04-03:2fa-pass-oathtool</id>
+    <published>2020-04-03T09:05:00Z</published>
+    <updated>2020-04-03T09:05:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        
+
+<p>If you&#39;re like me, you don&#39;t want to depend on your phone to log into a website, and you wish <a href="https://www.passwordstore.org">your favorite password manager</a> would support 2FA. Well, it can.</p>
+
+<p>When asked to setup 2FA on a website, get a text code. If the website doesn&#39;t give you that option, just use <a href="http://zbar.sourceforge.net">zbar</a>. For instance, with the QR code from the <a href="https://help.github.com/en/github/authenticating-to-github/configuring-two-factor-authentication">GitHub documentation</a>:</p>
+
+<pre><code>$ zbarimg totp-click-enter-code.png
+QR-Code:otpauth://totp/GitHub:LyaLya?secret=qmli3dwqm53vl7fy&amp;issuer=GitHub
+scanned 1 barcode symbols from 1 images in 0.03 seconds
+</code></pre>
+
+<p>Once you get the secret, put the command line to generate a code using <a href="https://www.nongnu.org/oath-toolkit/oathtool.1.html">oathtool</a> in <code>2fa/github</code> in <code>pass</code> like this:</p>
+
+<pre><code>oathtool --totp --base32 qmli3dwqm53vl7fy
+</code></pre>
+
+<p>Finally, add this to your <code>.bashrc</code> (or the equivalent for whatever shell you use):</p>
+
+<pre><code>2fa () { eval $(pass 2fa/$1) ; }
+</code></pre>
+
+<p>You can now get your 2FA codes like this:</p>
+
+<pre><code>$ 2fa github
+795864
+</code></pre>
+
+All the tools used in that article are <a href="https://www.archlinux.org/packages/community/any/pass/">available</a> <a href="https://www.archlinux.org/packages/community/x86_64/oath-toolkit/">as</a> <a href="https://www.archlinux.org/packages/extra/x86_64/zbar/">packages</a> in the Arch Linux repositories.
+      </div>
+    </content>
+  </entry>
   <entry>
     <title>Tools</title>
     <link
