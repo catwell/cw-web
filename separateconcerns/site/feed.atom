@@ -10,7 +10,7 @@
     rel="alternate" type="application/xhtml+xml"
   />
   <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
-  <updated>2020-04-03T14:24:23Z</updated>
+  <updated>2020-04-07T08:38:28Z</updated>
   <author>
     <name>Pierre 'catwell' Chapuis</name>
     <uri>https://catwell.info/</uri>
@@ -324,10 +324,16 @@ git branch -D tmp-alembic
     />
     <id>tag:blog.separateconcerns.com,2019-05-04:ssh-port</id>
     <published>2019-05-04T18:00:00Z</published>
-    <updated>2019-05-04T18:00:00Z</updated>
+    <updated>2020-04-07T10:40:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         
+
+<h2 id="april-2020-update">April 2020 update</h2>
+
+<p>This article is out of date. Arch Linux <a href="https://bugs.archlinux.org/task/62248">stopped shipping OpenSSH with socket activation</a> due to the risk of DoS attack. Now you can just set <code>Port</code> in <code>sshd_config</code> as usual.</p>
+
+<h2 id="original-article">Original article</h2>
 
 <p>I often change the default SSH port from 22 to something else on servers I run. It kind of is a dangerous operation, especially when the only way you have to connect to that server <em>is</em> SSH.</p>
 
