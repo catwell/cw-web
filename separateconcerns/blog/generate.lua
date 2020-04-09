@@ -111,11 +111,25 @@ local md_to_html_chunk = function(md)
     return html, metadata
 end
 
+local function get_from_parts(parts)
+    if type(parts) == 'string' then
+        return parts
+    elseif type(parts) == 'table' then
+        local t = {}
+        for i, v in ipairs(parts) do
+            t[i] = get_from_parts(v)
+        end
+        return table.concat(t)
+    elseif type(parts) == 'function' then
+        return get_from_parts((parts()))
+    end
+end
+
 local process_one = function(fname)
     local md = assert(file_read(fname))
     local content,metadata = md_to_html_chunk(md)
     metadata.date = table.concat(metadata.date)
-    metadata.title = table.concat(metadata.title)
+    metadata.title = get_from_parts(metadata.title)
     metadata.author = table.concat(metadata.author[1])
     return content, metadata
 end
