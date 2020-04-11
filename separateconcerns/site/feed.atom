@@ -10,11 +10,128 @@
     rel="alternate" type="application/xhtml+xml"
   />
   <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
-  <updated>2020-04-09T06:39:41Z</updated>
+  <updated>2020-04-11T10:40:33Z</updated>
   <author>
     <name>Pierre 'catwell' Chapuis</name>
     <uri>https://catwell.info/</uri>
   </author>
+  <entry>
+    <title>[Quora] Explaining classes to a 10 year old</title>
+    <link
+      rel="alternate" type="text/html"
+      href="https://blog.separateconcerns.com/2020-04-11-quora-class-concept.html"
+    />
+    <id>tag:blog.separateconcerns.com,2020-04-11:quora-class-concept</id>
+    <published>2020-04-11T13:00:00Z</published>
+    <updated>2020-04-11T13:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        
+
+<p>Continuing my <a href="https://blog.separateconcerns.com/2020-04-09-quora-lua-call.html">Quora answers series</a> with <a href="https://www.quora.com/How-would-you-explain-the-concept-of-a-class-in-Python-to-a-10-year-old">this question</a> which I answered on June 26, 2012:</p>
+
+<blockquote>
+<p>How would you explain the concept of a &quot;class&quot; in Python to a 10 year old?</p>
+</blockquote>
+
+<hr />
+
+<p>You cannot distinguish the concept of &quot;class&quot; from the concept of &quot;instance&quot;. I think OOP is often taught the wrong way around, paradoxically because it is taught with languages that have support for class-based Object Oriented Programming such as Python (or Java for that matter). So excuse me but I will use another language (Lua, but you don&#39;t need to know to understand) to explain it. (Note: this will be <em>bad</em> Lua on purpose, but the point is not to teach Lua, it is to explain OOP).</p>
+
+<p>Since you wrote &quot;to a 10 year old&quot; let&#39;s proceed with examples.</p>
+
+<p>Imagine you come from another planet and you do not know what cats are. You encounter something small that purrs. You decide to name it Sam. Later on, you see something else very similar, except it is bigger, and you name it Max.</p>
+
+<p>Let us describe Sam and Max in Lua.</p>
+
+<pre><code data-language="lua">sam = {
+    name = &quot;Sam&quot;,
+    size = &quot;small&quot;,
+}
+
+max = {
+    name = &quot;Max&quot;,
+    size = &quot;big&quot;,
+}
+</code></pre>
+
+<p>Now we said that they purr, so let&#39;s define purring:</p>
+
+<pre><code data-language="lua">purr = function(self)
+    print(self.name .. &quot; purrs!&quot;)
+end
+</code></pre>
+
+<p><code>purr</code> is a function that has its first argument called <code>self</code> and represents the thing that purrs. For instance you could make Max purr like this:</p>
+
+<pre><code data-language="lua">purr(max)
+</code></pre>
+
+<p>Now you could stop here, or you could see purring as a property of Sam and Max. To represent that we could make <code>purr</code> a &quot;method&quot; of the &quot;objects&quot; Sam and Max:</p>
+
+<pre><code data-language="lua">sam.purr = purr
+max.purr = purr
+</code></pre>
+
+<p>Now with the Lua syntax we cound also make Max purr like this:</p>
+
+<pre><code data-language="lua">max:purr()
+</code></pre>
+
+<p>Which is a short way to write this:</p>
+
+<pre><code data-language="lua">max.purr(max)
+</code></pre>
+
+<p>Since we said that <code>max.purr = purr</code> it works as expected.</p>
+
+<p>After some time on Earth you realize there are lots of things like Sam and Max. Moreover there are lots of things Sam, Max and their friends do, such as sleep on keyboards. They also have things in common such as the fact they have two eyes.</p>
+
+<p>You grow tired to say: &quot;Max purrs. Max has two eyes. (...). Sam purrs. (...)&quot;. It would be much simpler to say give a name to the set of Sam, Max and their friends (for instance &quot;Cats&quot;) and say &quot;Cats purr. Cats have two eyes.&quot;.</p>
+
+<p>Note that &quot;Cats&quot; is nothing physical, it is an idea, a <em>category</em> you have created for Sam, Max and their friends in order to be able to express things about them in an easier way.</p>
+
+<p>Let&#39;s switch to Python to show how this is done now:</p>
+
+<pre><code data-language="lua">class Cat:
+    eyes = 2
+
+    def __init__(self, name, size):
+        self.name = name
+        self.size = size
+
+    def purr(self):
+        print(self.name + &quot; purrs!&quot;)
+</code></pre>
+
+<p>And how you use it:</p>
+
+<pre><code data-language="lua">sam = Cat(name=&quot;Sam&quot;, size=&quot;small&quot;)
+sam.purr()
+</code></pre>
+
+<p>Note that we have never said explicitly that Sam can purr. He can purr because he is a Cat.</p>
+
+<p>In this example:</p>
+
+<ul>
+<li><p>Cat is a class, ie. a category of objects ;</p></li>
+<li><p>Sam and Max are instances of the Cat class ;</p></li>
+<li><p><code>purr</code> is a method of the Cat class, ie. not much more conceptually than a function that takes a Cat instance as its first argument and some syntactic sugar (ie. special notation) to call it.</p></li>
+</ul>
+
+<hr />
+
+<p>By the way, this answer got one of the best comments I ever got on a Quora answer:</p>
+
+<blockquote>
+<p>Sam and Max are not cats!</p>
+</blockquote>
+
+;)
+      </div>
+    </content>
+  </entry>
   <entry>
     <title>[Quora] What is the call metamethod in Lua?</title>
     <link
