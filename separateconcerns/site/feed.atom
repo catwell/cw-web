@@ -10,11 +10,48 @@
     rel="alternate" type="application/xhtml+xml"
   />
   <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
-  <updated>2020-04-11T10:40:33Z</updated>
+  <updated>2020-06-19T16:51:17Z</updated>
   <author>
     <name>Pierre 'catwell' Chapuis</name>
     <uri>https://catwell.info/</uri>
   </author>
+  <entry>
+    <title>[Quora] Transparency in distributed systems UX</title>
+    <link
+      rel="alternate" type="text/html"
+      href="https://blog.separateconcerns.com/2020-06-19-quora-transparency-distributed.html"
+    />
+    <id>tag:blog.separateconcerns.com,2020-06-19:quora-transparency-distributed</id>
+    <published>2020-06-19T18:52:00Z</published>
+    <updated>2020-06-19T18:52:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        
+
+<p>Yet another <a href="https://blog.separateconcerns.com/2020-04-09-quora-lua-call.html">Quora answer</a>, this time to with <a href="https://www.quora.com/Why-is-Transparency-a-major-issue-in-distributed-databases">this question</a> which I answered on August 24, 2016:</p>
+
+<blockquote>
+<p>Why is Transparency a major issue in distributed databases?</p>
+</blockquote>
+
+<hr />
+
+<p>First, a few words about what &quot;transparency&quot; is. Transparency is a <a href="https://en.wikipedia.org/wiki/Transparency_(human%E2%80%93computer_interaction)">UX term</a> about the user not noticing that they are using a distributed system. We actually talk about transparencies in the plural, because there are several kinds of transparencies: fault transparency, location transparency, concurrency transparency, access transparency, etc. In my opinion, the choice of wording is not so good: when we talk about &quot;transparency&quot; we actually mean we hide things from the user, so &quot;opacity&quot; would be more logical. (The name comes from the fact that, if we replace a single node system by a distributed system, it will be transparent for the user, i.e. then will not notice it.)</p>
+
+<p>The reason why transparency is important is usability. The more transparencies our system has, the less cognitive burden there is on the user. In other words: <em>transparencies simplify the API of the system</em>.</p>
+
+<p>However, what transparencies we implement or not is a trade-off between that simplicity of API and things like flexibility, performance, and sometimes correctness. Years ago (when Object Oriented programming à la Java was booming) it was fashionable to abstract everything and make the user forget that they were using an actual distributed system. For instance, we had RPC everywhere, which kind of hid the network from the user. Since then we learnt that <a href="http://www.rgoarchitects.com/Files/fallacies.pdf">abstracting the network entirely is a bad idea</a>.</p>
+
+<p>On the other hand, exposing too many knobs to the user is dangerous as well: they might turn them without really understanding what they do and set the system on fire.</p>
+
+<p>So, determining what to expose to the user and what to implement &quot;transparently&quot; is a crucial point in all distributed systems work, not only databases.</p>
+
+<p>In databases in particular, conflict resolution is a contention point. Do we only provide the user with databases that are consistent, knowing that this severly impacts performance and availability? Do we let them tweak the parameters (the R and W parameters in a quorum system, for instance)? Do we tolerate divergence, detect it, inform the user and let them reconcile (à la CouchDB)? Do we provide the user with constrained datastructures that resolve conflicts by themselves (CRDTs)?</p>
+
+Some people have gone as far as saying that <a href="https://bravenewgeek.com/distributed-systems-are-a-ux-problem/">Distributed Systems Are a UX Problem</a> and I tend to agree with this line of reasoning.
+      </div>
+    </content>
+  </entry>
   <entry>
     <title>[Quora] Explaining classes to a 10 year old</title>
     <link
