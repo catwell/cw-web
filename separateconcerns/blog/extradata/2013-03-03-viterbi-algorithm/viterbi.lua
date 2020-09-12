@@ -1,7 +1,7 @@
 --- system
 
 local N = 3
-local M = 2
+-- local M = 2 -- actually unused
 local L = 1000
 
 local T = {

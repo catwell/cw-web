@@ -11,7 +11,7 @@ local SITE_DIR = "../site"
 
 local fmt = string.format
 
-local file_read = function(fn)
+local function file_read(fn)
     local f = io.open(fn, "rb")
     if not f then return nil end
     local data = f:read("*all")
@@ -19,45 +19,43 @@ local file_read = function(fn)
     return data
 end
 
-local file_write = function(fn, data)
+local function file_write(fn, data)
     local f = assert(io.open(fn, "wb"))
     f:write(data)
     f:close()
 end
 
-local parse_date = function(s)
+local function parse_date(s)
     return Date.Format("yyyy-mm-dd HH:MM:SS"):parse(s)
 end
 
-local date_to_atom = function(date)
+local function date_to_atom(date)
     return Date.Format("yyyy-mm-ddTHH:MM:SSZ"):tostring(date) .. "Z"
 end
 
-local linearize; linearize = function(t)
+local function linearize(t)
     if type(t) == "string" then
         return t
     else
         assert(type(t) == "table")
-        local r = {}; for i = 1, #t do r[i] = linearize(t[i]) end
+        local r = {}
+        for i = 1, #t do r[i] = linearize(t[i]) end
         -- remove everything in < >, e.g. links in titles
-        local loop = true
-        while loop do
-            loop = false
-            for i = 1, #r do
-                if r[i]:sub(1, 1) == "<" then
-                    while r[i]:sub(-1) ~= ">" do
-                        table.remove(r, i)
-                    end
+        ::loop::
+        for i = 1, #r do
+            if r[i]:sub(1, 1) == "<" then
+                while r[i]:sub(-1) ~= ">" do
                     table.remove(r, i)
-                    loop = true; break
                 end
+                table.remove(r, i)
+                goto loop
             end
         end
         return table.concat(r)
     end
 end
 
-local as_slug = function(s)
+local function as_slug(s)
     s = linearize(s)
     s = string.gsub(s, "[^A-Za-z0-9 /_%-]", "")
     return string.gsub(s, "[ /_]+", "-"):lower()
@@ -65,7 +63,7 @@ end
 
 ---
 
-local md_to_html_chunk = function(md)
+local function md_to_html_chunk(md)
     local writer = lunamark.writer.html5.new({})
     local has_code, description = false, nil
     writer.verbatim = function(s)
@@ -81,7 +79,7 @@ local md_to_html_chunk = function(md)
             local lang, code = s:match("^lang: (%w+)\n(.*)")
             local l1
             if lang and code then
-                l1 = fmt("<pre><code data-language=\"lua\">", lang)
+                l1 = fmt("<pre><code data-language=\"%s\">", lang)
             else
                 code = s
                 l1 = "<pre><code>"
@@ -125,62 +123,66 @@ local function get_from_parts(parts)
     end
 end
 
-local process_one = function(fname)
+local function parse_entry(fname)
     local md = assert(file_read(fname))
-    local content,metadata = md_to_html_chunk(md)
+    local content, metadata = md_to_html_chunk(md)
     metadata.date = table.concat(metadata.date)
     metadata.title = get_from_parts(metadata.title)
     metadata.author = table.concat(metadata.author[1])
     return content, metadata
 end
 
-local process_all = function()
+local function process_file(path)
+    local fnpart = pathx.splitext(pathx.basename(path))
+    print(fnpart)
+    local fname = fmt("articles/%s.md", fnpart)
+    local url = fmt("%s.html", fnpart)
+    local content, metadata = parse_entry(fname)
+    local pdate = assert(parse_date(metadata.date))
+    local sdate = Date.Format("yyyy-mm-dd"):tostring(pdate)
+    pdate:toUTC()
+    local udate = pdate
+    if metadata.updated then
+        udate = parse_date(metadata.updated)
+        udate:toUTC()
+    end
+    local fragment = fnpart:sub(12)
+    assert(fmt("%s-%s", sdate, fragment) == fnpart)
+    local entry = {
+        title = metadata.title,
+        url = url,
+        content = content,
+        shortdate = sdate,
+        has_code = metadata.has_code,
+        description = metadata.description,
+        fnpart = fnpart,
+        atom = {
+            published = date_to_atom(pdate),
+            updated = date_to_atom(udate),
+            fragment = fragment,
+        }
+    }
+    if metadata.updated then
+        sdate = Date.Format("yyyy-mm-dd"):tostring(udate)
+        if sdate ~= entry.shortdate then
+            entry.updated = sdate
+        end
+    end
+    if not metadata.skip then
+        return entry
+    end
+end
+
+local function process_all()
     local files = dirx.getallfiles("articles", "*.md")
     table.sort(files, function(x, y) return x > y end) -- newest first
     local entries = {}
-    local fnpart, content, metadata, pdate, sdate, udate, fragment, entry
-    for i=1,#files do
-        fnpart = pathx.splitext(pathx.basename(files[i]))
-        print(fnpart)
-        fname = fmt("articles/%s.md", fnpart)
-        url = fmt("%s.html", fnpart)
-        content, metadata = process_one(fname)
-        pdate = assert(parse_date(metadata.date))
-        sdate = Date.Format("yyyy-mm-dd"):tostring(pdate)
-        pdate:toUTC()
-        udate = pdate
-        if metadata.updated then
-            udate = parse_date(metadata.updated)
-            udate:toUTC()
-        end
-        fragment = fnpart:sub(12)
-        assert(fmt("%s-%s", sdate, fragment) == fnpart)
-        entry = {
-            title = metadata.title,
-            url = url,
-            content = content,
-            shortdate = sdate,
-            has_code = metadata.has_code,
-            description = metadata.description,
-            fnpart = fnpart,
-            atom = {
-                published = date_to_atom(pdate),
-                updated = date_to_atom(udate),
-                fragment = fragment,
-            }
-        }
-        if metadata.updated then
-            sdate = Date.Format("yyyy-mm-dd"):tostring(udate)
-            if sdate ~= entry.shortdate then
-                entry.updated = sdate
-            end
-        end
-        if not metadata.skip then
-            table.insert(entries, entry)
-        end
+    for i = 1, #files do
+        local entry = process_file(files[i])
+        if entry then table.insert(entries, entry) end
     end
-    for i=1,#entries do
-        entry = entries[i]
+    for i = 1, #entries do
+        local entry = entries[i]
         local html = lustache:render(TPL.html_post, entry)
         file_write(fmt("%s/%s.html", SITE_DIR, entry.fnpart), html)
     end
@@ -188,7 +190,8 @@ local process_all = function()
         updated = os.date("!%Y-%m-%dT%H:%M:%SZ", os.time()),
         entries = entries,
     })
-    file_write(fmt("%s/feed.atom",SITE_DIR), atom)
+    file_write(fmt("%s/feed.atom", SITE_DIR), atom)
+
     local index = lustache:render(TPL.html_index, {
         updated = os.date("!%Y-%m-%dT%H:%M:%SZ", os.time()),
         entries = entries,
