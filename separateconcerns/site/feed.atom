@@ -10,11 +10,32 @@
     rel="alternate" type="application/xhtml+xml"
   />
   <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
-  <updated>2020-12-16T12:50:51Z</updated>
+  <updated>2021-03-27T19:16:58Z</updated>
   <author>
     <name>Pierre 'catwell' Chapuis</name>
     <uri>https://catwell.info/</uri>
   </author>
+  <entry>
+    <title>Booting GDM on my XPS with kernel 5.11</title>
+    <link
+      rel="alternate" type="text/html"
+      href="https://blog.separateconcerns.com/2021-03-27-archlinux-boot-xps-511.html"
+    />
+    <id>tag:blog.separateconcerns.com,2021-03-27:archlinux-boot-xps-511</id>
+    <published>2021-03-27T20:15:00Z</published>
+    <updated>2021-03-27T20:15:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        
+
+<p>When I updated my Linux kernel to 5.11 I had the bad surprise to end up with a blinking underscore on reboot. It had been many years since an update had broken my system like that. I fixed it rather easily by booting in rescue mode and downgrading the kernel. I had no time to investigate so I just added <code>linux</code> to <code>IgnorePkg</code> at the time, But I don&#39;t use Arch to run old kernels so today I took the time to fix it &quot;properly&quot;.</p>
+
+<p>To do so, I reproduced the issue, then downgraded again and looked at the logs with <code>journalctl -b --boot=-1</code>. It quickly let me understand that it was GDM that was failing due to something wrong with graphics initialization.</p>
+
+To keep things short, let me skip to the conclusion: if you run into this issue on an old-ish Dell XPS with an Intel Iris Plus 640 graphics card like mine with GDM, Arch and Wayland (or something similar), try <a href="https://wiki.archlinux.org/index.php/kernel_mode_setting#Early_KMS_start">enabling early KMS</a> by adding <code>i915</code> to the <code>MODULES</code> array in <code>mkinitcpio.conf</code> and rebuilding the initramfs, that fixed it for me.
+      </div>
+    </content>
+  </entry>
   <entry>
     <title>Personal news, 2020 edition</title>
     <link

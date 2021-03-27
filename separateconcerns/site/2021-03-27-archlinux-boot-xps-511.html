@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta name="description" content="If you cannot boot into GDM on Arch Linux with Linux kernel 5.11 on an XPS with an Intel graphics card, enable early KMS.">
+    <link href="css/theme.css" rel="stylesheet" type="text/css">
+      <link href="css/rainbow-github.css" rel="stylesheet" type="text/css">
+    <link
+      rel="alternate" type="application/atom+xml"
+      href="https://blog.separateconcerns.com/feed.atom"
+    />
+    <title>Booting GDM on my XPS with kernel 5.11</title>
+  </head>
+  <body>
+    <div id="container">
+    <header>
+      <h1>Booting GDM on my XPS with kernel 5.11</h1>
+      <h4>
+        published 2021-03-27
+        [ <a href="index.html">home</a> ]
+      </h4>
+    </header>
+    
+
+<p>When I updated my Linux kernel to 5.11 I had the bad surprise to end up with a blinking underscore on reboot. It had been many years since an update had broken my system like that. I fixed it rather easily by booting in rescue mode and downgrading the kernel. I had no time to investigate so I just added <code>linux</code> to <code>IgnorePkg</code> at the time, But I don&#39;t use Arch to run old kernels so today I took the time to fix it &quot;properly&quot;.</p>
+
+<p>To do so, I reproduced the issue, then downgraded again and looked at the logs with <code>journalctl -b --boot=-1</code>. It quickly let me understand that it was GDM that was failing due to something wrong with graphics initialization.</p>
+
+To keep things short, let me skip to the conclusion: if you run into this issue on an old-ish Dell XPS with an Intel Iris Plus 640 graphics card like mine with GDM, Arch and Wayland (or something similar), try <a href="https://wiki.archlinux.org/index.php/kernel_mode_setting#Early_KMS_start">enabling early KMS</a> by adding <code>i915</code> to the <code>MODULES</code> array in <code>mkinitcpio.conf</code> and rebuilding the initramfs, that fixed it for me.
+    </div>
+    <div id="footer">
+      [ <a href="index.html">home</a> ]
+    </div>
+    <script src="js/rainbow.min.js"></script>
+  </body>
+</html>
