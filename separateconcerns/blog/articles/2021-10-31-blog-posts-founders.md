@@ -5,7 +5,7 @@
     ::description::
     A list of links intended for founders and people working at young companies.
 
-Over the years, I have accumulated links to blog posts I have read and intend to re-read every time find myself in a position to influence the early stage of a company.
+Over the years, I have accumulated links to blog posts I intend to re-read every time find myself in a position to influence the early stage of a company.
 
 I thought it might be helpful to someone if I published part of that list here. I will avoid links which are too technical and focus on links that can be interest non-technical founders as well.
 
