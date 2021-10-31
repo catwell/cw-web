@@ -1,4 +1,4 @@
-% Blog posts for founders (and startup employees)
+% Blog posts for founders (and early employees)
 % Pierre 'catwell' Chapuis
 % 2021-10-31 15:45:00
 
