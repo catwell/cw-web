@@ -5,7 +5,7 @@
     ::description::
     A list of links intended for founders and people working at young companies.
 
-Over the years, I have accumulated links to blog posts I have read and intend to re-read every time I would find myself in a position to consider founding a company or to influence the early stage of a company.
+Over the years, I have accumulated links to blog posts I have read and intend to re-read every time find myself in a position to influence the early stage of a company.
 
 I thought it might be helpful to someone if I published part of that list here. I will avoid links which are too technical and focus on links that can be interest non-technical founders as well.
 
@@ -15,7 +15,7 @@ If this isn't enough for you, you're always welcome to explore [my Pinboard acco
 
 ## My own posts
 
-Let's get started by mentioning two posts from this blog which transcribe the opinions of two influential people, which I share (on those topics).
+Let's get started by mentioning posts from this blog which transcribe the opinions of two influential people, which I share (on those topics).
 
 - [Werner Vogels on Skills](https://blog.separateconcerns.com/2013-03-24-vogels-skills.html), where the CTO of Amazon.com describes the qualities he is looking for in leaders at Amazon, in particular Ownership and the willingness to get their hands dirty doing operations.
 
@@ -25,11 +25,13 @@ Let's get started by mentioning two posts from this blog which transcribe the op
 
 Michael Lopp (Rands) on issues with giving people titles. Personally I have never liked titles, which can be a source of conflicts and bad decisions. I have also often held titles that didn't really correspond to the job I did - which was almost always multi-faceted. Yet, titles are a proxy used by people who don't know you to understand what you do at work.
 
-Like Rands I don't have a good solution to that. I would always suggest avoiding giving titles to people too early, including founders: having a "technical co-founder", not a "CTO", will make things easier if you grow fast and need to hire someone later on. I also write [some](https://blog.separateconcerns.com/2013-06-20-three-years-proprietary-projects.html) [blog](https://blog.separateconcerns.com/2018-01-06-four-years.html) [posts](https://blog.separateconcerns.com/2021-05-01-inch.html) explaining what I do in more details that a title ever could, for people who care.
+Like Rands I don't have a good solution to that. I write [some](https://blog.separateconcerns.com/2013-06-20-three-years-proprietary-projects.html) [blog](https://blog.separateconcerns.com/2018-01-06-four-years.html) [posts](https://blog.separateconcerns.com/2021-05-01-inch.html) explaining what I do in more details that a title ever could, for people who care.
+
+In any case I always suggest avoiding giving some titles to people too early, including to founders: having a "technical co-founder" instead of a CTO will make things easier if you grow fast and need to hire someone later on.
 
 ## [Creating a Software Company? 9 Decisions You Have to Make](https://spin.atomicobject.com/2014/06/02/software-company-decisions/)
 
-A list of questions you have to ask yourself when founding a software company, by Michael Marsiglia, CEO of Atomic Object. It can also be a good idea to ask them before joining one.
+A list of questions to ask yourself when founding a software company, by Michael Marsiglia, CEO of Atomic Object. It can also be a good idea to ask them before joining one.
 
 ## [The 40% rule](https://avc.com/2015/02/the-40-rule/)
 
@@ -106,7 +108,7 @@ Jason Gorman says small teams win because:
 
 ## [How To Decide What To Build](https://dcgross.com/decide-what-to-build/)
 
-Daniel Gross (a founder I have been following since his first YC startup, Greplin) on ways to decide what company to build on a personal level. I wish he had published that before my last attempt!
+Daniel Gross (a founder I have been following since his first YC startup, Greplin) on ways to decide what company to build on a personal level. I wish he had published that before my last attempt.
 
 ## [Qu’est-ce qu’un projet entrepreneurial viable?](https://philippesilberzahn.com/2011/10/03/projet-entrepreneurial-viable/)
 
