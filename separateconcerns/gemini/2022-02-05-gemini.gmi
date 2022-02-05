@@ -8,7 +8,7 @@ I ended up adding Gemini support to the static generator I use for this blog [3]
 
 To host it, I went with Agate [5] which is a simple static content server; I will revisit this choice if I ever need dynamic content.
 
-If you want to check it out, point a Gemini browser - I use Lagrange [6] - to separateconcerns.info [7].
+If you want to check it out, point a Gemini browser - I use Lagrange [6] - to separateconcerns.com [7].
 
 => https://gemini.circumlunar.space 1: https://gemini.circumlunar.space
 => https://fosdem.org/2022/ 2: https://fosdem.org/2022/
@@ -16,5 +16,5 @@ If you want to check it out, point a Gemini browser - I use Lagrange [6] - to se
 => https://github.com/jgm/lunamark 4: https://github.com/jgm/lunamark
 => https://github.com/mbrubeck/agate 5: https://github.com/mbrubeck/agate
 => https://gmi.skyjake.fi/lagrange/ 6: https://gmi.skyjake.fi/lagrange/
-=> gemini://separateconcerns.info 7: gemini://separateconcerns.info
+=> gemini://separateconcerns.com 7: gemini://separateconcerns.com
 

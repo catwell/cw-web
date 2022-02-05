@@ -10,7 +10,7 @@
     rel="alternate" type="application/xhtml+xml"
   />
   <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
-  <updated>2022-02-05T18:46:36Z</updated>
+  <updated>2022-02-05T18:49:11Z</updated>
   <author>
     <name>Pierre 'catwell' Chapuis</name>
     <uri>https://catwell.info/</uri>
@@ -34,7 +34,7 @@
 
 <p>To host it, I went with <a href="https://github.com/mbrubeck/agate">Agate</a> which is a simple static content server; I will revisit this choice if I ever need dynamic content.</p>
 
-If you want to check it out, point a Gemini browser - I use <a href="https://gmi.skyjake.fi/lagrange/">Lagrange</a> - to <a href="gemini://separateconcerns.info">separateconcerns.info</a>.
+If you want to check it out, point a Gemini browser - I use <a href="https://gmi.skyjake.fi/lagrange/">Lagrange</a> - to <a href="gemini://separateconcerns.com">separateconcerns.com</a>.
       </div>
     </content>
   </entry>
