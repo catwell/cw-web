@@ -128,7 +128,6 @@ TPL.gemini_index = [[
 ## catwell's online journal
 
 => https://blog.separateconcerns.com Visit on the Web
-
 => gemini://catwell.info catwell.info
 
 {{#entries}}
