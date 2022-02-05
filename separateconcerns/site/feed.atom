@@ -10,11 +10,34 @@
     rel="alternate" type="application/xhtml+xml"
   />
   <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
-  <updated>2021-10-31T15:00:45Z</updated>
+  <updated>2022-02-05T18:46:36Z</updated>
   <author>
     <name>Pierre 'catwell' Chapuis</name>
     <uri>https://catwell.info/</uri>
   </author>
+  <entry>
+    <title>Hello Gemini</title>
+    <link
+      rel="alternate" type="text/html"
+      href="https://blog.separateconcerns.com/2022-02-05-gemini.html"
+    />
+    <id>tag:blog.separateconcerns.com,2022-02-05:gemini</id>
+    <published>2022-02-05T19:45:00Z</published>
+    <updated>2022-02-05T19:45:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        
+
+<p>I have wanted to play with <a href="https://gemini.circumlunar.space">Gemini</a> for while now, so today being <a href="https://fosdem.org/2022/">the first day of FOSDEM</a> I decided to do what I would have done if I was in Brussels and hack on something between two talks.</p>
+
+<p>I ended up adding Gemini support to <a href="https://github.com/catwell/cw-web/tree/master/separateconcerns/blog">the static generator I use for this blog</a>, which meant implementing a Gemini writer for <a href="https://github.com/jgm/lunamark">Lunamark</a>, plus a small trick to display links in the right place.</p>
+
+<p>To host it, I went with <a href="https://github.com/mbrubeck/agate">Agate</a> which is a simple static content server; I will revisit this choice if I ever need dynamic content.</p>
+
+If you want to check it out, point a Gemini browser - I use <a href="https://gmi.skyjake.fi/lagrange/">Lagrange</a> - to <a href="gemini://separateconcerns.info">separateconcerns.info</a>.
+      </div>
+    </content>
+  </entry>
   <entry>
     <title>Blog posts for founders (and early employees)</title>
     <link

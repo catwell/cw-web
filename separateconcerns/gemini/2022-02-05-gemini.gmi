@@ -1,0 +1,20 @@
+# Hello Gemini
+published 2022-02-05
+
+
+I have wanted to play with Gemini [1] for while now, so today being the first day of FOSDEM [2] I decided to do what I would have done if I was in Brussels and hack on something between two talks.
+
+I ended up adding Gemini support to the static generator I use for this blog [3], which meant implementing a Gemini writer for Lunamark [4], plus a small trick to display links in the right place.
+
+To host it, I went with Agate [5] which is a simple static content server; I will revisit this choice if I ever need dynamic content.
+
+If you want to check it out, point a Gemini browser - I use Lagrange [6] - to separateconcerns.info [7].
+
+=> https://gemini.circumlunar.space 1: https://gemini.circumlunar.space
+=> https://fosdem.org/2022/ 2: https://fosdem.org/2022/
+=> https://github.com/catwell/cw-web/tree/master/separateconcerns/blog 3: https://github.com/catwell/cw-web/tree/master/separateconcerns/blog
+=> https://github.com/jgm/lunamark 4: https://github.com/jgm/lunamark
+=> https://github.com/mbrubeck/agate 5: https://github.com/mbrubeck/agate
+=> https://gmi.skyjake.fi/lagrange/ 6: https://gmi.skyjake.fi/lagrange/
+=> gemini://separateconcerns.info 7: gemini://separateconcerns.info
+
