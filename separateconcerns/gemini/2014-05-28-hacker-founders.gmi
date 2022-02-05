@@ -1,0 +1,25 @@
+# Hacker Founders
+published 2014-05-28
+
+
+Note: I posted what follows as a Gist [1] over a year ago. Recently I was looking for it and couldn't find it, so I am re-posting it here for the next time.
+
+At the last Human Talks Paris meetup, Fabien Charbit (founder of sush.io [2]) gave a talk [3] in French whose title could be translated as: "Programmers, create your company!"
+
+Of course I agree with the idea, but at the end of it I said [4] I was disappointed because he said [5] you should find a marketing / commercial-minded CEO and be CTO. This is a commonplace, and I thought his message would be bolder than that. You can always discuss whether this is right or wrong but I think a tech startup where all the founders are tech-minded makes a lot of sense.
+
+It turns out, Paul Graham said exactly that [6] in a video interview back in 2005. He is is much more credible than me on the topic, so I reproduced what he has to say about it below.
+
+Note that Fabien later clarified that this was not an issue of degree or even competence, but rather that one of the founders should have the motivation to deal with the softer aspects of the company, so we agree after all. But it is still way too common in France to assume every startup's CEO should have a business degree...
+
+Anyway, the question was: "What is the relationship in startups between programmers and the business types?", and PG answered:
+
+> The relationship between the programmers and the business types? Well... I believe, and Y Combinator is kind of an experiment to test this... I believe that programmers can become business types. I think that business is kind of like chess, in the sense that the hard part is not knowing the rules about how the pieces move, the hard part is actually being able to, like... look ahead and make strategies and stuff like that, right. The hard part about playing chess well is being smart, right, not knowing how to play the rules of chess. And I think business is like that, that there's a few rules of business and that hackers are capable of learning them, most hackers, and that... once they learn them, they'll be as good at it as business guys, you know? So... I think hackers can be business guys. Hackers are perfectly capable of being business guys. Look at Bill Gates, right! He didn't go to business school. I mean... you might wonder, why would anyone want to go to business school? You know, when you look at the example of Bill Gates, he seems to be doing fine at business, right? He sort of picked it up as he went along, and that did not seem to hurt him at all. Larry and Serguey, they didn't go to business school either, right, they're just hackers, and they seem to be doing fine too. So I think the relationship between hackers and business guys, at least in the beginning, is that you need hackers and you don't need business guys.
+
+=> https://gist.github.com/catwell/5387617 1: https://gist.github.com/catwell/5387617
+=> http://sush.io 2: http://sush.io
+=> http://humantalks.com/talks/131-developpeurs-montez-votre-boite 3: http://humantalks.com/talks/131-developpeurs-montez-votre-boite
+=> http://www.youtube.com/watch?v=0nxDKTJ5Ovc#t=641s 4: http://www.youtube.com/watch?v=0nxDKTJ5Ovc#t=641s
+=> http://www.youtube.com/watch?v=0nxDKTJ5Ovc#t=439s 5: http://www.youtube.com/watch?v=0nxDKTJ5Ovc#t=439s
+=> http://www.youtube.com/watch?v=BDA0t49AaZ4#t=1383s 6: http://www.youtube.com/watch?v=BDA0t49AaZ4#t=1383s
+

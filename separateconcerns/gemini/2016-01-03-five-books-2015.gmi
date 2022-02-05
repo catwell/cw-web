@@ -1,0 +1,76 @@
+# Five books I read in 2015
+published 2016-01-03
+
+
+It is that time of the year where my RSS feed fills with book recommendations, so I decided I would try my hand at the exercise this year and write a short paragraph about five books I read in 2015 that left me with a good impression.
+
+Disclaimer: links, as those on my reading list [1], are Amazon Affiliate links, which means I may earn a little money if you buy books after clicking on them.
+
+=> https://catwell.info/booklist/ 1: https://catwell.info/booklist/
+## The Year Without Pants - Scott Berkun
+=> http://amzn.to/1NuJ5AR
+
+Scott Berkun was a management writer and consultant when he was hired by WordPress. Before that, he had been a UX designer and team lead at Microsoft, on the Internet Explorer project. When he joined WordPress, the company had over 50 employees, it was completely flat and had a culture of remote work. The founder wanted to experiment with a team-based structure, and Scott was to be the first team lead.
+
+The book is not a story about how WordPress was a doomed company, and how Scott came in to save the day. On the contrary, WordPress was already working much better than most companies that size, and Scott was part of a series of changes they implemented to scale to the next level without losing too much of their culture.
+
+That culture, rooted in Open Source and documented by Berkun, an outsider, is what makes the book interesting. I would say it is a must read for anybody considering starting or leading a team at a small software company.
+
+## The Open Organization - Jim Whitehurst
+=> http://amzn.to/1NktPAS
+
+This book is somehow similar to the one above, but on a larger scale. Jim Whitehurst is the current CEO of Red Hat, a company with over $1.5B in yearly revenue, over 8000 employees, and a culture firmly rooted in Open Source (I started using Linux with their distribution, Red Hat 6.2, in 2000).
+
+Before joining Red Hat, Whitehurst was COO of Delta Airlines. When he arrived at Red Hat, he quickly realized it was a company that worked in a very different way, following the core values of Open Source, transparency and meritocracy (Whitehurst uses the word with the meaning it had in the Free Software community in the 90s and 00s, without the background that makes it controversial nowadays).
+
+The book is both analytical and prescriptive, and it shows how the way Open Source projects are organized can be successfully adopted by a large company.
+
+## The Systems Bible (Systemantics) - John Gall
+=> http://amzn.to/1NuKgQO
+
+A 1975 classic. Gall is a (retired) pediatrician, but he is well-known in software engineering circles for this book which contains, among other things, what is now known as Gall's Law:
+
+> A complex system that works is invariably found to have evolved from a simple system that worked. A complex system designed from scratch never works and cannot be patched up to make it work.
+
+The book is a curious mix of humor and philosophy, written in faux-scientific style and full of things which people working in Distributed Systems will be painfully aware of:
+
+> In complex systems, malfunction and even total non-function may not be detectable for long periods, if ever.
+> 
+> Any large system is going to be operating most of the time in failure mode.
+> 
+> Intermittent failure is the hardest case.
+> 
+> One does not know all the expected effects of known bugs.
+> 
+> In setting up a new system, tread softly. You may be disturbing another system that is actually working.
+> 
+> Bad design can rarely be overcome by more design, whether good or bad.
+> 
+> A system that ignores feedback has already begun the process of terminal instability.
+> 
+> In dealing with large systems, the striving for perfection is a serious imperfection.
+
+Remember: this book is originally not about computer systems. Not at all. But read it anyway!
+
+## The Four Steps to the Epiphany - Steve Blank
+=> http://amzn.to/1Himm61
+
+I have read several [2] other [3] books [4] about [5] Lean Startup, but this is the one I would recommend now, especially if you already have some experience with startups.
+
+It exposes the Customer Development model, composed of four steps: Customer Discovery, Customer Validation, Customer Creation and Company Building. The most interesting ones, in my opinion, are the first two, the ones that occur before Product / Market Fit.
+
+Read this book if you want to understand what this Lean Startup thing is about, and offer it to your friends who want to start their own business.
+
+=> http://amzn.to/132XE3z 2: http://amzn.to/132XE3z
+=> http://amzn.to/1HikaeJ 3: http://amzn.to/1HikaeJ
+=> http://amzn.to/1eXLEJF 4: http://amzn.to/1eXLEJF
+=> http://amzn.to/18xfzCx 5: http://amzn.to/18xfzCx
+## Flash Boys: Not So Fast - Peter Kovac
+=> http://amzn.to/1Pwcp90
+
+This book is an answer to Michael Lewis' Flash Boys and a defence of High-Frequency Trading.
+
+I have long thought that the financial world used HFT as a scapegoat (especially since I read Chris Stucchio's blog [6]). Flash Boys: Not So Fast follows the structure of Lewis' book; it provides a nice overview of what HFT is and why it may not be as evil as you think it is.
+
+=> https://www.chrisstucchio.com/blog/2012/hft_apology.html 6: https://www.chrisstucchio.com/blog/2012/hft_apology.html
+

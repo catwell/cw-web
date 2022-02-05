@@ -1,0 +1,15 @@
+# Indistinguishable from Magic
+published 2014-05-27
+
+
+I have just watched a small TEDx talk by Simon Peyton Jones [1] (of Haskell fame) on CS education. Something he said struck me as relevant to what I was saying in my last post [2]:
+
+> Arthur C. Clarke once famously remarked that "any sufficiently advanced technology is indistinguishable from magic". And I think it is very damaging if our children come to believe that the computer systems they use are essentially magic. That is: not under their control.
+
+If you have a programming background, you may experience a feeling close to disgust when you hear the word "magic". But I have heard "product people" use it as if it was a good thing way too many times. Short term, maybe. But eventually I want to master my tools, to understand them inside out. I want to be able to rely on them, and for that I expect them not to surprise me.
+
+I think it is time for the pendulum to swing back to products that optimize for how high the asymptote of the learning curve is, not the time it takes to reach it. The kind of products that come with manuals and teach you things instead of trying very hard not to make you feel stupid, or in other words: not to make you think.
+
+=> https://www.youtube.com/watch?v=Ia55clAtdMs 1: https://www.youtube.com/watch?v=Ia55clAtdMs
+=> /2014-04-25-design-alan-kay.html 2: /2014-04-25-design-alan-kay.html
+

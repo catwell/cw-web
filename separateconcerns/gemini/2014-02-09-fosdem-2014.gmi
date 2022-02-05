@@ -1,0 +1,99 @@
+# FOSDEM 2014
+published 2014-02-09
+
+
+Last weekend I attended FOSDEM [1], the largest Open Source conference in Europe that takes place every year in Brussels. This was my fourth year in a row. Not much Lua this year, although I saw some familiar [2] faces [3]. But I did listen to lots of interesting talks which I will try to summarize briefly.
+
+=> https://fosdem.org/2014/ 1: https://fosdem.org/2014/
+=> https://github.com/ladc 2: https://github.com/ladc
+=> http://specfun.inria.fr/tassi/ 3: http://specfun.inria.fr/tassi/
+## Reproducible Builds for Debian
+=> https://fosdem.org/2014/schedule/event/reproducibledebian/
+
+Debian developers want to provide their users a way to verify that the binary packages they distribute correspond to the source. To achieve reproducible builds they have to patch code that depends on things such as timestamps at build time. To make things worse, using a standard VM for builds would help but they refuse to do it "because they're Debian."
+
+## Is distribution-level package management obsolete?
+=> https://fosdem.org/2014/schedule/event/obsolete/
+
+The Gentoo leader thinks distribution are doing a poor job of meeting the needs of users - especially developers and system administrators - in terms of package management. They are increasingly relying on configuration management tools (CFEngine, Puppet, Chef, Ansible...), language-specific package managers (RubyGems, NPM, LuaRocks...) and tools like Docker; however, distribution package managers do not integrate well with those.
+
+This is a topic that interests me, following all the discussion that occurred at the last Lua Workshop [4]. After the talk I asked Donnie whether there was a discussion list somewhere dedicated to those issues. He told me that, to his knowledge, there was not. It may be a good idea to start one.
+
+=> http://www.lua.org/wshop13.html 4: http://www.lua.org/wshop13.html
+## Minix 3 on ARM
+=> https://fosdem.org/2014/schedule/event/minix_3_on_arm/
+
+Kees talked about the Minix 3 [5] architecture, how it was ported to ARM (with the BeagleBoard and BeagleBone devices as first targets) and plans for the future.
+
+The main priority of the project is porting the NetBSD userland. As a former user I think this is an excellent idea. I may try the OS again someday if it becomes more "usable", I really like some of the ideas behind it.
+
+=> http://www.minix3.org/ 5: http://www.minix3.org/
+## Technical introduction to the deeper parts of Sailfish OS
+=> https://fosdem.org/2014/schedule/event/technical_introduction_to_the_deeper_parts_of_sailfishos,_a_qt5_wayland_based_mobile_os/
+
+Sailfish is probably the most interesting mobile OS project today, go check it out [6] if you don't know it yet. Carsten gave us an overview of the main parts of the OS and explained some funny things they did, such as making glibc and the Bionic libc co-exist within the same process. He also provided the audience an SSH access to an actual terminal. I found liblua 5.1 [7] on it :)
+
+=> https://sailfishos.org/ 6: https://sailfishos.org/
+=> https://twitter.com/pchapuis/status/429619422592905217 7: https://twitter.com/pchapuis/status/429619422592905217
+## Postfix: lessons learned and recent developments
+=> https://fosdem.org/2014/schedule/event/postfix_lessons_learned_and_recent_developments/
+
+This talk introduced the Postfix least-privilege architecture, and then went on to explain recent improvements. Most of them revolve around fighting spam more efficiently. Postfix also migrated from Berkley DB to LMDB (see later), mostly for licensing reasons.
+
+## NixOS: declarative configuration Linux distribution
+=> https://fosdem.org/2014/schedule/event/nixos_declarative_configuration_linux_distribution/
+
+Nix OS [8] is a Linux distribution built around the Nix package manager. It is one of those few distributions that completely disrupt the FHS, another one being GoboLinux [9].
+
+The idea of Nix is that a package is the output of a function provided with some arguments and without side effects. There are a lot of interesting ideas there, such as atomic updates based on symlinks. However, doing this involves some heavy patching and that makes me uncomfortable.
+
+=> http://nixos.org/ 8: http://nixos.org/
+=> http://www.gobolinux.org/ 9: http://www.gobolinux.org/
+## Iris Decentralized Messaging
+=> https://fosdem.org/2014/schedule/event/iris_decentralized_messaging/
+
+Iris [10] is a messaging backend written in Go but with a language-agnostic interface. It is somehow similar 0MQ but goes further by removing the notion of a specific instance or process in favor of sets of those. Each machine runs a single daemon that does all the heavy lifting, and each client connects to it locally to interact with the system.
+
+This is a very interesting project and I was a bit surprised I had never heard about it until now. The slides and live demos were also really good, with multiple Go code snippets running concurrently in a browser. Oh, and Gopher drawings!
+
+=> http://iris.karalabe.com/ 10: http://iris.karalabe.com/
+## Camlistore
+=> https://fosdem.org/2014/schedule/event/camlistore/
+
+The speakers showed off what the latest release of Camlistore [11], a personal file storage system, can do. I already knew and liked the technical design of the project, but I was impressed by the progress made on usability since Brad's talk at dotScale 2013. They have a new Web UI which is not complete yet but looks very promising. I really have to install my own node someday.
+
+=> http://camlistore.org/ 11: http://camlistore.org/
+## Statically compiling Ruby with LLVM
+=> https://fosdem.org/2014/schedule/event/llvmruby/
+
+A very interesting talk on LLVM and how it helps when statically compiling a (very) dynamic language such as Ruby. Among other things, the optimization passes do an incredible job. However, it looks like JIT compilation is not as good as static compilation yet.
+
+## What's new in OpenLDAP
+=> https://fosdem.org/2014/schedule/event/whats_new_in_openldap/
+
+This was, as I had hoped, mostly a talk about LMDB [12]. It confirmed what I already suspected: at least according to its author's benchmarks, it outperforms any kind of competition in this space (embedded key-value stores). It is also one of the rare NoSQL DBs to implement MVCC transactions, in less than 10000 lines of C code and 32 kB of object code. If there is a piece of Open Source software I think you should not have missed in 2013, it is this one.
+
+=> http://symas.com/mdb/ 12: http://symas.com/mdb/
+## Persistent Memory: Changing the way we store data
+=> https://fosdem.org/2014/schedule/event/persistent_memory/
+
+An interesting talk about how the shift away from rotating disk towards persistent memory storage affects the way we develop filesystems, kernels and any code that does I/O. This is not only about SSDs, but also about new kinds of devices that will come out soon and be an order of magnitude faster according to Ric.
+
+## Concurrent programming with Python and my little experiment
+=> https://fosdem.org/2014/schedule/event/concurrent_programming_with_python/
+
+Benoit explained how he ported the Go concurrency model (Goroutines and Channels) to Python. I know Benoit and his offset [13] project so this was not foreign to me, but there are two pieces of interesting news: first, the next version will support multiple processes, freeing users from the GIL (yay!), and second he is thinking about changing the API to make it more like Julia [14] and less like Go, because Julia is more similar to Python.
+
+=> https://github.com/benoitc/offset 13: https://github.com/benoitc/offset
+=> http://julialang.org/ 14: http://julialang.org/
+## NSA operation ORCHESTRA: Annual Status Report
+=> https://fosdem.org/2014/schedule/event/nsa_operation_orchestra/
+
+This was a fun talk where phk [15] endorsed the role of a NSA agent who mistakes the FOSDEM amphitheater for the European Commission and explains how they sabotage attempts to give the general public more privacy. Lots of conspiracy theory in there obviously, but given the recent events, is this really so absurd? phk argued at the end of the talk that the solution should be political and not technical.
+
+The format of the talk was a very good idea that worked really well on my brain tired by two days of conference, but also by two consecutive nights out filled with Belgian beer and other strong drinks. :)
+
+=> http://phk.freebsd.dk/ 15: http://phk.freebsd.dk/
+## Conclusion
+
+FOSDEM is still a very good event which you should consider attending next year. Besides the talks, you will enjoy the parties and meeting people you only knew online. I hopefully will see you there.

@@ -1,0 +1,185 @@
+# How I write Lua modules
+published 2014-01-03
+
+
+Hisham just published an article about his personal guidelines for writing Lua modules [1]. Interestingly, I do a lot of things differently. Let us see how.
+
+> Policy Bit #1: always require a module into a local named after the last component of the module’s full name.
+
+I tend to do that, but not always. Exceptions include:
+
+* modules with names that are too generic such as`path`, `utils` or `types` from Penlight, where I add an `x` at the end of the name (e.g. `pathx`);
+* modules which I use as alternatives for others, for instance `cjson` which I call `json`;
+* modules with names that are too long such as my own `multipart-post` which I call `mp` (it is not a valid identifier anyway, I would have to replace the dash by an underscore).
+
+> Policy Bit #2: start a module by declaring its table using the same all-lowercase local name that will be used to require it.
+> 
+> Policy Bit #3: Use local function to declare local functions only: that is, functions that won’t be accessible from outside the module.
+> 
+> Policy Bit #4: public functions are declared in the module table, with dot syntax.
+
+I do something entirely different. First, I never use the function sugar in Lua, so instead of writing `local function f()` I write `local f = function()`.
+
+I also do not declare the module table at the top of the module, I return it at the end, listing public functions explicitly. That means public functions are declared as locals. Arguably, they could be confused with private functions but that doesn't bother me: if you are editing the code of the module, you probably know its interface. My public functions are also usually located at the end of the module.
+
+To illustrate, Hisham's module example is:
+
+```
+local bar = {}
+
+local function happy_greet(greeting)
+   print(greeting .. "!!!! :-D")
+end
+
+function bar.say(greeting)
+   happy_greet(greeting)
+end
+
+return bar
+
+```
+
+I would write instead:
+
+```
+local happy_greet = function(greeting)
+   print(greeting .. "!!!! :-D")
+end
+
+local say = function(greeting)
+  happy_greet(greeting)
+end
+
+return {
+  say = say,
+}
+
+```
+
+One advantage of doing this is that when you call a public function in the module itself it is a local. That means that you avoid a table lookup, but also that it acts as a private function from the point of view of other functions in your module.
+
+To understand what I mean, imagine that we change our mind and now want to expose `happy_greet` as well.
+
+Hisham's module becomes:
+
+```
+local bar = {}
+
+function bar.happy_greet(greeting)
+   print(greeting .. "!!!! :-D")
+end
+
+function bar.say(greeting)
+   bar.happy_greet(greeting)
+end
+
+return bar
+
+```
+
+Mine becomes:
+
+```
+local happy_greet = function(greeting)
+   print(greeting .. "!!!! :-D")
+end
+
+local say = function(greeting)
+  happy_greet(greeting)
+end
+
+return {
+  say = say,
+  happy_greet = happy_greet,
+}
+
+```
+
+The first thing we can notice is that we had to modify `say` in Hisham's module and not in mine. But now imagine a "malicious" user does this:
+
+```
+local bar = require "bar"
+
+local fishy_greet = function(greeting)
+  print(greeting .. " ><>")
+end
+
+bar.happy_greet = fishy_greet
+
+bar.say("yay")
+
+```
+
+With my module, the output would be `yay!!!! :-D`. With Hisham's, the output would be `yay ><>`: the user is allowed to monkey patch their module in a way that has an effect on functions they do not explicitly touch.
+
+> Policy Bit #5: construct a table for your class and name it LikeThis so we know your table is a class.
+> 
+> Policy Bit #6: functions that are supposed to be used as object methods should be clearly marked as such, and the colon syntax is a great way to do it.
+
+Again, not how I do it :) Using CamelCase is a good idea but in the wild I see it more often for the actual module table, not for what Hisham calls the "class" table that is associated to `__index` in the metatable (I call it "methods"). Usually, it means (to me) that the constructor is `MyClass()`, whereas with a lowercase module name it would be `myclass.new()`. I use the latter and Penlight is an example of the former.
+
+Just like I do not use the `function` sugar, I do not use the colon syntax to define functions. Moreover, I often call methods with explicit self in the module itself. Any idea why? Yeah, same as above, resistance to monkey patches. I agree that this is not a very convincing argument given that I often skip the little `local print = print` dance.
+
+Other advantages include, again, less call overhead and the ability to call methods consistently on objects before they have their metatable. This is sometimes useful in constructors.
+
+So where Hisham's class example is:
+
+```
+local myclass = {}
+
+local MyClass = {}
+
+function MyClass:some_method()
+   -- code
+end
+
+function MyClass:another_one()
+   self:some_method()
+   -- more code
+end
+
+function myclass.new()
+   local self = {}
+   setmetatable(self, { __index = MyClass })
+   return self
+end
+
+return myclass
+
+```
+
+I would write:
+
+```
+local some_method = function(self)
+  -- code
+end
+
+local another_one = function(self)
+  some_method(self)
+  -- more code
+end
+
+local methods = {
+  some_method = some_method,
+  another_one = another_one,
+}
+
+local new = function()
+  return setmetatable({}, {__index = methods})
+end
+
+return {new = new}
+
+```
+
+Of course sometimes I do not want to resist monkey patches, and in that case I use colon syntax for calls, but never for definitions.
+
+> Policy Bit #7: do not set any globals in your module and always return a table in the end.
+
+This one I cannot disagree with. It is the only rule that has an obvious externally visible effect. Do this or you will annoy all your users.
+
+I think this is what matters the most in the end: modules always return tables and never create globals. The rest is mostly implementation details!
+
+=> http://hisham.hm/2014/01/02/how-to-write-lua-modules-in-a-post-module-world/ 1: http://hisham.hm/2014/01/02/how-to-write-lua-modules-in-a-post-module-world/
+

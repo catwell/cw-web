@@ -2,8 +2,64 @@
 
 ## catwell's online journal
 
-Not available on Gemini yet.
-
 => https://blog.separateconcerns.com Visit on the Web
 
 => gemini://catwell.info catwell.info
+
+=> 2021-10-31-blog-posts-founders.gmi 2021-10-31 - Blog posts for founders (and early employees)
+=> 2021-05-01-inch.gmi 2021-05-01 - What I do at Inch
+=> 2021-03-27-archlinux-boot-xps-511.gmi 2021-03-27 - Booting GDM on my XPS with kernel 5.11
+=> 2020-12-16-personal-news.gmi 2020-12-16 - Personal news, 2020 edition
+=> 2020-06-19-quora-transparency-distributed.gmi 2020-06-19 - [Quora] Transparency in distributed systems UX
+=> 2020-04-11-quora-class-concept.gmi 2020-04-11 - [Quora] Explaining classes to a 10 year old
+=> 2020-04-09-quora-lua-call.gmi 2020-04-09 - [Quora] What is the call metamethod in Lua?
+=> 2020-04-03-2fa-pass-oathtool.gmi 2020-04-03 - Two-factor authentication with pass and oathtool
+=> 2020-03-01-tools.gmi 2020-03-01 - Tools
+=> 2019-10-19-opinions.gmi 2019-10-19 - Opinions
+=> 2019-06-01-truncating-alembic.gmi 2019-06-01 - Truncating an Alembic migrations history
+=> 2019-05-04-ssh-port.gmi 2019-05-04 - Changing the SSH port on Arch Linux
+=> 2019-04-23-spicing-things-up.gmi 2019-04-23 - Spicing things up
+=> 2019-02-15-goodbye-lima.gmi 2019-02-15 - Goodbye Lima
+=> 2019-02-15-architecture-principles.gmi 2019-02-15 - Software Architecture Principles
+=> 2018-03-30-gnome-touchpad.gmi 2018-03-30 - Fixing right click on touchpads in Gnome
+=> 2018-01-06-four-years.gmi 2018-01-06 - Four years at Lima
+=> 2017-06-11-knetstat.gmi 2017-06-11 - knetstat: checking socket options on Linux
+=> 2017-05-07-itc.gmi 2017-05-07 - A short introduction to Interval Tree Clocks
+=> 2016-12-22-goodbye-lua-toolbox.gmi 2016-12-22 - Goodbye Lua Toolbox
+=> 2016-12-07-thoughts-2.gmi 2016-12-07 - Thoughts 2
+=> 2016-09-16-thoughts-1.gmi 2016-09-16 - Thoughts 1
+=> 2016-04-03-lmdb-format.gmi 2016-04-03 - The LMDB file format
+=> 2016-01-03-five-books-2015.gmi 2016-01-03 - Five books I read in 2015
+=> 2015-11-06-e-voting.gmi 2015-11-06 - Electronic Voting
+=> 2015-07-07-four-easy-reads-distsys.gmi 2015-07-07 - Four easy reads to understand distributed systems issues
+=> 2015-06-18-love-hate-luajit.gmi 2015-06-18 - My love-hate relationship with LuaJIT
+=> 2015-03-08-travis-lua.gmi 2015-03-08 - Continuous Integration for Lua with Travis
+=> 2015-01-04-indie-web.gmi 2015-01-04 - Indie Web
+=> 2014-11-23-lean-tools.gmi 2014-11-23 - Lean tools
+=> 2014-10-24-cli-passwords.gmi 2014-10-24 - Disabling graphical password prompts
+=> 2014-09-25-microservices.gmi 2014-09-25 - Microservices
+=> 2014-09-20-iris.gmi 2014-09-20 - Iris
+=> 2014-05-28-hacker-founders.gmi 2014-05-28 - Hacker Founders
+=> 2014-05-27-magic.gmi 2014-05-27 - Indistinguishable from Magic
+=> 2014-04-25-design-alan-kay.gmi 2014-04-25 - Modern design and Alan Kay
+=> 2014-04-22-learning-small.gmi 2014-04-22 - Learning in the small
+=> 2014-03-03-sublime-packages.gmi 2014-03-03 - Editing Sublime Text packages
+=> 2014-02-09-fosdem-2014.gmi 2014-02-09 - FOSDEM 2014
+=> 2014-01-03-lua-module-policy.gmi 2014-01-03 - How I write Lua modules
+=> 2014-01-02-clang-forgotten.gmi 2014-01-02 - C: what I had forgotten
+=> 2013-12-12-infinity-beyond.gmi 2013-12-12 - To Infinity and Beyond
+=> 2013-09-01-lapis.gmi 2013-09-01 - Lapis: Lua for the Web
+=> 2013-06-20-three-years-proprietary-projects.gmi 2013-06-20 - Three years of (proprietary) projects
+=> 2013-05-28-coherence-checks.gmi 2013-05-28 - Coherence checks in SOA
+=> 2013-03-24-vogels-skills.gmi 2013-03-24 - Werner Vogels on Skills
+=> 2013-03-03-viterbi-algorithm.gmi 2013-03-03 - Viterbi, my favorite algorithm
+=> 2013-01-28-algorithms-data-structures-protocols.gmi 2013-01-28 - Algorithms, Data Structures &amp; Protocols
+=> 2013-01-02-startups-soa.gmi 2013-01-02 - Startups, think about SOA
+=> 2013-01-02-hello-world.gmi 2013-01-02 - Hello again, World!
+=> 2012-01-09-ubiquitous.gmi 2012-01-09 - The Future of Computing: Ubiquity
+=> 2010-02-04-fr-neutralite-du-net.gmi 2010-02-04 - (French) Neutralité du Net
+=> 2010-01-30-fr-raleries.gmi 2010-01-30 - (French) Râleries multiples
+=> 2009-12-04-fr-gtd-roi.gmi 2009-12-04 - (French) GTD ROI
+=> 2009-12-04-fr-chrome-os.gmi 2009-12-04 - (French) Chrome OS
+=> 2009-11-24-fr-websites-that-should-not-exist.gmi 2009-11-24 - (French) Ces sites qui ne devraient pas exister
+=> 2009-11-16-fr-gen-y.gmi 2009-11-16 - (French) Le piège de la génération Y

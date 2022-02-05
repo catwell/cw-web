@@ -116,4 +116,24 @@ TPL.atom_feed = [[
 </feed>
 ]]
 
+TPL.gemini_post = [[
+# {{title}}
+published {{shortdate}}{{#updated}},updated {{updated}}{{/updated}}
+{{{gemtext}}}
+]]
+
+TPL.gemini_index = [[
+# Separate Concerns
+
+## catwell's online journal
+
+=> https://blog.separateconcerns.com Visit on the Web
+
+=> gemini://catwell.info catwell.info
+
+{{#entries}}
+=> {{fnpart}}.gmi {{shortdate}} - {{{title}}}
+{{/entries}}
+]]
+
 return TPL

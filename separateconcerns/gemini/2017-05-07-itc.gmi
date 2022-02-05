@@ -1,0 +1,61 @@
+# A short introduction to Interval Tree Clocks
+published 2017-05-07,updated 2017-09-07
+
+
+This post is a rough transcription of a lightning talk I gave at dotScale 2017 [1].
+
+
+
+One of the things I work on at Lima [2] is master-master filesystem replication. In this kind of system, we need to track causality [3]. In a nutshell, given two events modifying a given piece of data and originating from different nodes in the system, we want to know if one of those events could have influenced the other one, or in other words if one of those events "happened before" [4] the other one.
+
+To do that, we use constructs such as Version vectors [5]. The idea is that we give each node in the system a globally unique identifier, and we associate it to a counter.
+
+=> img/itc-vv.png Version Vector
+
+When an event modifying data on a node occurs, we increment the local value of the corresponding counter by one.
+
+=> img/itc-vv-inc.png inc
+
+Version Vectors are partially ordered. Given two vectors, if we can find one such that, for every node, its counter is higher than the other one, then we say it descends the other one, meaning the related event "happened after" the other one. Otherwise, we say that the vectors are concurrent, and typically that means we will probably have some kind of data conflict to solve.
+
+=> img/itc-vv-cmp.png compare
+
+When we merge data changes we also merge the vectors, and to do so we take the maximum value of the counter for every node.
+
+=> img/itc-vv-merge.png merge
+
+This works fine in most cases, but there is one case where it breaks down: highly dynamic systems experiencing a lot of churn. This means systems where nodes join the system, modify some data, then leave forever. The issue with such systems is that, even though there may not be a lot of active devices at any given point in time, the number of unique node identifiers in version vectors keeps increasing. We call that issue actor explosion.
+
+Interval Tree Clocks are an attempt to solve this problem. Instead of giving a unique identifier to every node in the system, we take the real-valued interval `[0, 1]` and attribute a part of it (not necessarily contiguous) to every node. On top of it, we draw an integer-valued curve. We call the combination of the interval share and the curve a stamp.
+
+=> img/itc-stamp.png stamp
+
+To add a new node to the system, we start from an existing node and we fork it, meaning we give part of its share of the interval to the new node.
+
+=> img/itc-fork.png fork
+
+When an event occurs on a node, it increases the height of the curve of its copy of the stamp anywhere within its share of the interval. Comparison works similarly to Version Vectors: if the curve of a stamp is above the other one, it descends it, otherwise the curves intersect and the stamps are concurrent.
+
+When a node wants to leave the system, it merges back with any other node and surrenders its share of the interval. To merge, we just take the maximum curve.
+
+=> img/itc-join.png join
+
+The beauty of this scheme is that a node only has to know about its share of the interval, not information about all other nodes. There are no globally unique node identifiers.
+
+If we choose how we increase the height of the curve when an event occurs in a clever way which I will not detail here, we can ensure the complexity of the curve remains low. We can then encode it efficiently using a tree-shaped data structure and a custom binary format, with a size that depends more on the number of nodes interacting with the data at a given point in time than on the overall number of nodes which have touched it since inception.
+
+=> img/itc-results.png results
+
+If you want to know more, I encourage you to read the 2008 paper [6] by Paulo Sérgio Almeida, Carlos Baquero and Victor Fonte; it is one of the best I know on the topic of causality. You can also check out my Lua implementation of ITC [7] or one of the other implementations linked in the README.
+
+If this kind of thing interests you and you live in - or would like to relocate to - Paris (France), there may be a place for you on my team at Lima. Don't hesitate to get in touch [8].
+
+=> http://files.catwell.info/presentations/2017-04-dotscale-itc/ 1: http://files.catwell.info/presentations/2017-04-dotscale-itc/
+=> https://meetlima.com 2: https://meetlima.com
+=> http://queue.acm.org/detail.cfm?id=2917756 3: http://queue.acm.org/detail.cfm?id=2917756
+=> https://en.wikipedia.org/wiki/Happened-before 4: https://en.wikipedia.org/wiki/Happened-before
+=> https://en.wikipedia.org/wiki/Version_vector 5: https://en.wikipedia.org/wiki/Version_vector
+=> http://haslab.uminho.pt/cbm/files/itc.pdf 6: http://haslab.uminho.pt/cbm/files/itc.pdf
+=> https://github.com/catwell/itc.lua 7: https://github.com/catwell/itc.lua
+=> https://catwell.info 8: https://catwell.info
+

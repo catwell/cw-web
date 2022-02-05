@@ -1,0 +1,29 @@
+# Continuous Integration for Lua with Travis
+published 2015-03-08,updated 2015-10-16
+
+
+Travis [1] is a Continuous Integration service which is free for Open Source projects and has very good GitHub integration. We will see how to use it for your Lua projects.
+
+Your test suite will work well with Travis as long as executing it returns 0 on success and nonzero on failure. If you use plain Lua assertions, it is already the case. If you use a test framework, make sure that it works that way. I have added a helper [2] to cwtest for that purpose.
+
+Travis does not support Lua out of the box, but using it with Lua projects is not hard because moteus [3] has done all the hard work for you. You just have to clone this repository [4] and copy the `.travis` directory to yours.
+
+After that, you only have to write a single YAML file, `.travis.yml`. For example, here is the one I wrote for Haricot [5].
+
+Most sections should be self-explanatory. `install` is where you set up your dependencies. The first line calls moteus' script which lets you use Lua and LuaRocks. A separate build and test run will occur for every Lua version declared in `matrix`; you can comment some lines there if you do not want to test some Lua versions. For Haricot I need Beanstalk [6] running in the background so I start it in `before_script`. `script` is where you run your actual tests.
+
+To enable Travis, sign up, allow Travis to access your GitHub account, then go to your profile [7] and flip the switch for your repository:
+
+=> img/travis.png travis
+
+After that, commit `.travis` and `.travis.yml` and push to GitHub. It will trigger a test build, and so will every subsequent commit. If you want, you can now add a badge [8] with the status of your build to your README or your project's home page.
+
+=> https://travis-ci.org 1: https://travis-ci.org
+=> https://github.com/catwell/cwtest#exit 2: https://github.com/catwell/cwtest#exit
+=> https://github.com/moteus 3: https://github.com/moteus
+=> https://github.com/moteus/lua-travis-example 4: https://github.com/moteus/lua-travis-example
+=> https://github.com/catwell/haricot/blob/master/.travis.yml 5: https://github.com/catwell/haricot/blob/master/.travis.yml
+=> http://kr.github.io/beanstalkd/ 6: http://kr.github.io/beanstalkd/
+=> https://travis-ci.org/profile 7: https://travis-ci.org/profile
+=> https://travis-ci.org/catwell/haricot.png?branch=master 8: https://travis-ci.org/catwell/haricot.png?branch=master
+

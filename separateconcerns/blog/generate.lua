@@ -6,6 +6,7 @@ local Date = require "pl.Date"
 
 local TPL = require "templates"
 local SITE_DIR = "../site"
+local GEMINI_DIR = "../gemini"
 
 --- TOOLS
 
@@ -109,27 +110,110 @@ local function md_to_html_chunk(md)
     return html, metadata
 end
 
-local function get_from_parts(parts)
-    if type(parts) == 'string' then
-        return parts
-    elseif type(parts) == 'table' then
-        local t = {}
-        for i, v in ipairs(parts) do
-            t[i] = get_from_parts(v)
+local function md_links(links)
+    local link_rows = {}
+    for _, link in ipairs(links) do
+        if not link.written then
+            links.ref = links.ref + 1
+            link.ref = links.ref
+            link.written = true
+            table.insert(link_rows, fmt("=> %s %d: %s\n", link.url, links.ref, link.url))
         end
-        return table.concat(t)
-    elseif type(parts) == 'function' then
-        return get_from_parts((parts()))
     end
+    return link_rows
+end
+
+local function md_to_gemtext(md)
+    local writer = lunamark.writer.generic.new({})
+    local links = {ref = 0}
+
+    writer.verbatim = function(s)
+        local desc = s:match("^::description::\n(.-)\n")
+        local raw = s:match("^::raw::\n(.-)\n")
+        if desc or raw then
+            return ""
+        end
+        local code = s:match("^lang: %w+\n(.*)")
+        return {"```\n", code or s, "\n```"}
+    end
+
+    writer.header = function(s, level)
+        if level > 3 then return s end
+        local prefix = {string.rep("#", level), " "}
+        local link_id = lunamark.util.rope_to_string(s):match("<<<(%d+)>>>")
+
+        if link_id then
+            local link = links[tonumber(link_id)]
+            link.written = true
+            return {md_links(links), prefix, link.label, "\n", "=> ", link.url}
+        end
+        return {md_links(links), prefix, s}
+    end
+
+    writer.link = function(label, url)
+        local link_id = #links + 1
+        links[link_id] = {label = lunamark.util.rope_to_string(label), url = url}
+        return { "<<<", tostring(link_id), ">>>" }
+    end
+
+    writer.code = function(s)
+        return {"`", s, "`"}
+    end
+
+    writer.blockquote = function(s)
+        local r = {"> "}
+        for _,v in ipairs(s) do
+            if type(v) == "string" and v == "\n\n" then
+                table.insert(r, "\n> \n> ")
+            else
+                table.insert(r, v)
+            end
+        end
+        return r
+    end
+
+    writer.bulletlist = function(items)
+        local buffer = {}
+        for i, v in ipairs(items) do
+            buffer[i] = {"* ", v}
+        end
+        return lunamark.util.intersperse(buffer, "\n")
+    end
+
+    writer.image = function(label, src)
+        return {"=> ", src, " ", label}
+    end
+
+    writer.stop_document = function()
+        local rows = md_links(links)
+        if #rows > 0 then
+            return {"\n\n", rows}
+        end
+    end
+
+    local parse = lunamark.reader.markdown.new(
+        writer,
+        {pandoc_title_blocks = true, lua_metadata = true}
+    )
+    local function f(link_id)
+        local link = links[tonumber(link_id)]
+        return fmt("%s [%d]", link.label, link.ref)
+    end
+    return parse(md):gsub("<<<(%d+)>>>", f)
 end
 
 local function parse_entry(fname)
     local md = assert(file_read(fname))
-    local content, metadata = md_to_html_chunk(md)
+    local html, metadata = md_to_html_chunk(md)
+    local gemtext = md_to_gemtext(md)
     metadata.date = table.concat(metadata.date)
-    metadata.title = get_from_parts(metadata.title)
+    metadata.title = lunamark.util.rope_to_string(metadata.title)
     metadata.author = table.concat(metadata.author[1])
-    return content, metadata
+    return {
+        html = html,
+        gemtext = gemtext,
+        metadata = metadata,
+    }
 end
 
 local function process_file(path)
@@ -137,7 +221,8 @@ local function process_file(path)
     print(fnpart)
     local fname = fmt("articles/%s.md", fnpart)
     local url = fmt("%s.html", fnpart)
-    local content, metadata = parse_entry(fname)
+    local parsed_entry = parse_entry(fname)
+    local metadata = parsed_entry.metadata
     local pdate = assert(parse_date(metadata.date))
     local sdate = Date.Format("yyyy-mm-dd"):tostring(pdate)
     pdate:toUTC()
@@ -151,7 +236,8 @@ local function process_file(path)
     local entry = {
         title = metadata.title,
         url = url,
-        content = content,
+        content = parsed_entry.html,
+        gemtext = parsed_entry.gemtext,
         shortdate = sdate,
         has_code = metadata.has_code,
         description = metadata.description,
@@ -184,7 +270,9 @@ local function process_all()
     for i = 1, #entries do
         local entry = entries[i]
         local html = lustache:render(TPL.html_post, entry)
+        local gemini = lustache:render(TPL.gemini_post, entry)
         file_write(fmt("%s/%s.html", SITE_DIR, entry.fnpart), html)
+        file_write(fmt("%s/%s.gmi", GEMINI_DIR, entry.fnpart), gemini)
     end
     local atom = lustache:render(TPL.atom_feed, {
         updated = os.date("!%Y-%m-%dT%H:%M:%SZ", os.time()),
@@ -197,6 +285,12 @@ local function process_all()
         entries = entries,
     })
     file_write(fmt("%s/index.html", SITE_DIR), index)
+
+    local gemini_index = lustache:render(TPL.gemini_index, {
+        updated = os.date("!%Y-%m-%dT%H:%M:%SZ", os.time()),
+        entries = entries,
+    })
+    file_write(fmt("%s/index.gmi", GEMINI_DIR), gemini_index)
 end
 
 process_all()
