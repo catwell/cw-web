@@ -5,6 +5,7 @@ published 2009-11-24
 Regarder le top 10 d'Alexa [1] peut faire peur quand on connait un peu ce qu'est Internet. Ce classement par trafic est assez représentatif de l'évolution du web ces quelques années. On y trouve évidemment beaucoup de moteurs de recherche : google.com (1er), yahoo.com (3e), live.com (5e), baidu.com (8e) et yahoo.jp (10e). msn.com, le portail de Microsoft, arrive en 9e position, pourquoi pas. Le problème, c'est les quatre autres. Prenons-les dans le désordre.
 
 => http://www.alexa.com/topsites 1: http://www.alexa.com/topsites
+
 ## YouTube (4e) et Blogger (7e)
 
 Deux services de Google, bizarrement. Tous deux vous permettent d'héberger du contenu, vidéo pour YouTube et principalement textuel pour Blogger. Ce contenu pourra ensuite être commenté par d'autres utilisateurs, c'est ce qu'on appelle Web 2.0. Qu'y a-t-il de mal à cela ? Pas grand-chose, en fait, si ce n'est la situation de quasi-monopole de ces plates-formes.
@@ -20,6 +21,7 @@ Ceci dit, ces problèmes sont mineurs, il suffit d'en être informé, et ces ser
 [2] Pour ceux qui ne l'utilisent pas, je parle de publicités sous forme de bandeaux qui s'affichent en superposition sur la vidéo.
 
 => http://investor.google.com/conduct.html 2: http://investor.google.com/conduct.html
+
 ## Wikipedia (6e)
 
 Wikipedia, l'un des plus gros succès du libre. Une source d'information à laquelle chacun peut contribuer s'il a les compétences nécessaires, accessible instantanément de tout point du monde. Une merveille !

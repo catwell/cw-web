@@ -12,6 +12,7 @@ If this isn't enough for you, you're always welcome to explore my Pinboard accou
 
 => https://www.amazon.com/Four-Steps-Epiphany-Steve-Blank/dp/0989200507 1: https://www.amazon.com/Four-Steps-Epiphany-Steve-Blank/dp/0989200507
 => https://pinboard.in/u:catwell/ 2: https://pinboard.in/u:catwell/
+
 ## My own posts
 
 Let's get started by mentioning posts from this blog which transcribe the opinions of two influential people, which I share (on those topics).
@@ -21,6 +22,7 @@ Let's get started by mentioning posts from this blog which transcribe the opinio
 
 => https://blog.separateconcerns.com/2013-03-24-vogels-skills.html 3: https://blog.separateconcerns.com/2013-03-24-vogels-skills.html
 => https://blog.separateconcerns.com/2014-05-28-hacker-founders.html 4: https://blog.separateconcerns.com/2014-05-28-hacker-founders.html
+
 ## Titles are Toxic
 => https://randsinrepose.com/archives/titles-are-toxic/
 
@@ -33,6 +35,7 @@ In any case I always suggest avoiding giving some titles to people too early, in
 => https://blog.separateconcerns.com/2013-06-20-three-years-proprietary-projects.html 5: https://blog.separateconcerns.com/2013-06-20-three-years-proprietary-projects.html
 => https://blog.separateconcerns.com/2018-01-06-four-years.html 6: https://blog.separateconcerns.com/2018-01-06-four-years.html
 => https://blog.separateconcerns.com/2021-05-01-inch.html 7: https://blog.separateconcerns.com/2021-05-01-inch.html
+
 ## Creating a Software Company? 9 Decisions You Have to Make
 => https://spin.atomicobject.com/2014/06/02/software-company-decisions/
 
@@ -77,11 +80,13 @@ If you don't know that series of blog posts, you are missing something. They are
 => https://www.joelonsoftware.com/2001/03/23/strategy-letter-iv-bloatware-and-the-8020-myth/ 11: https://www.joelonsoftware.com/2001/03/23/strategy-letter-iv-bloatware-and-the-8020-myth/
 => https://www.joelonsoftware.com/2002/06/12/strategy-letter-v/ 12: https://www.joelonsoftware.com/2002/06/12/strategy-letter-v/
 => https://www.joelonsoftware.com/2007/09/18/strategy-letter-vi/ 13: https://www.joelonsoftware.com/2007/09/18/strategy-letter-vi/
+
 ## Ev William's 10 rules for Web Startups
 
 This post used to be on Ev William's blog which went offline some time ago, thankfully I mirror articles that interest me that much [14].
 
 => http://files.catwell.info/misc/mirror/evan-williams-10-rules-startups.txt 14: http://files.catwell.info/misc/mirror/evan-williams-10-rules-startups.txt
+
 ## Your company's most valuable resource
 => https://twitter.com/williampietri/status/732602463082188801
 

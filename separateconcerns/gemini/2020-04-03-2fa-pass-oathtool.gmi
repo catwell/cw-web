@@ -44,6 +44,7 @@ All the tools used in that article are available [5] as [6] packages [7] in the 
 => https://www.archlinux.org/packages/community/any/pass/ 5: https://www.archlinux.org/packages/community/any/pass/
 => https://www.archlinux.org/packages/community/x86_64/oath-toolkit/ 6: https://www.archlinux.org/packages/community/x86_64/oath-toolkit/
 => https://www.archlinux.org/packages/extra/x86_64/zbar/ 7: https://www.archlinux.org/packages/extra/x86_64/zbar/
+
 ## Complements
 
 It was a post on Lobsters [8] that prompted me to post this. Someone from the comments [9] and a former colleague on Twitter [10] told me about a pass extension [11] I didn't know about which does almost the same thing.

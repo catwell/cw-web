@@ -13,6 +13,7 @@ For the longest time, I have believed in strong opinions (somewhat) weakly held 
 What has changed in the last 5-7 years is my view on how explicit those opinions should be, and how much I should fight for them.
 
 => https://blog.asmartbear.com/strong-opinions-somewhat-weakly-held.html 1: https://blog.asmartbear.com/strong-opinions-somewhat-weakly-held.html
+
 ## Expressing opinions
 
 I was strongly influenced by the Open Source community of the early 2000s where, if you wanted something to happen, you had to state your opinion and be ready to defend it - sometimes ferociously - with arguments. If you didn't, you would be ignored.
@@ -26,6 +27,7 @@ It is especially easy to ignore the existence of these people when the only way 
 There are lots of ways to work around that issue, including timeboxing contributions on a topic while keeping them secret, or simply having people in positions of power and people more comfortable with their opinion express it last.
 
 => https://en.wikipedia.org/wiki/Benevolent_dictator_for_life 2: https://en.wikipedia.org/wiki/Benevolent_dictator_for_life
+
 ## Defending opinions
 
 Another matter is how much you should fight for your opinion. I am not talking about the famous XKCD comic [3], I know I can be this guy sometimes, but that is something else.
@@ -54,6 +56,7 @@ Unlike Bezos my current (weakly held) opinion is that sometimes keeping social p
 => https://www.amazon.jobs/en/principles 4: https://www.amazon.jobs/en/principles
 => https://www.thestar.com/news/insight/2017/05/21/how-israeli-intelligence-failures-led-to-a-devils-advocate-role.html 5: https://www.thestar.com/news/insight/2017/05/21/how-israeli-intelligence-failures-led-to-a-devils-advocate-role.html
 => https://blog.aboutamazon.com/company-news/2016-letter-to-shareholders 6: https://blog.aboutamazon.com/company-news/2016-letter-to-shareholders
+
 ## Tolerating opinions
 
 The first step for all this to work is probably to admit that opinions can exist without being "right" or "wrong".

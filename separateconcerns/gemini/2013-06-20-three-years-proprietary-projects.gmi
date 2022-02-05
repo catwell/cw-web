@@ -5,6 +5,7 @@ published 2013-06-20,updated 2015-11-11
 Some of the code I write is Open Source, but these days most of it is closed source and property of Moodstocks [1], the startup I work for. For the last three years I have had the chance to work on a lot of really interesting projects, the most significant of which I will talk about now. If you are still a student, maybe that can inspire you to join a startup. Maybe you will even decide to join us in our quest to advance mobile image recognition and applications in general.
 
 => http://www.moodstocks.com/ 1: http://www.moodstocks.com/
+
 ## Harvest, the Pikadeo crawler
 
 When I joined Moodstocks in April 2010 the team was working on a mobile price comparison application called Pikadeo. The pitch was that you could take a picture of any cultural product (CD, DVD, book...) and it would give you a list of places where you could buy it, sorted by price.
@@ -23,6 +24,7 @@ Due to the deprecation of the Pikadeo product, Harvest is no longer used today. 
 
 => https://twitter.com/Arcank 2: https://twitter.com/Arcank
 => http://kr.github.io/beanstalkd/ 3: http://kr.github.io/beanstalkd/
+
 ## Acorn
 
 Once we got crawling sorted out, the image recognition engine itself became the problem. Oak (it has become a tradition to use plant-related names for our projects internally) had been almost entirely written by Cédric [4], Moodstocks' CTO. It was a piece of C++ software, with the image recognition parts isolated in dynamic libraries and a Thrift [5] layer to interface with the core Ruby on Rails Web application. It was multithreaded, designed to run on a single multicore EC2 instance.
@@ -49,6 +51,7 @@ In retrospect, relying on two unstable pieces of software was risky. It turned o
 => http://msgpack.org/ 9: http://msgpack.org/
 => https://github.com/msgpack/msgpack-rpc 10: https://github.com/msgpack/msgpack-rpc
 => http://www.zeromq.org/ 11: http://www.zeromq.org/
+
 ## Moodstocks Notes
 
 You now know that when I joined Moodstocks it was trying to be a B2C company. However we were seeing interest in licensing our technology, and began to envision a B2B product: Moodstocks API.
@@ -70,6 +73,7 @@ Eventually we took the decision not to invest more time in the idea: we were a s
 => http://www.google.com/sidewiki/ 12: http://www.google.com/sidewiki/
 => http://techcrunch.com/2010/12/10/moodstocks-notes-is-stickybits-without-the-barcodes/ 13: http://techcrunch.com/2010/12/10/moodstocks-notes-is-stickybits-without-the-barcodes/
 => http://mashable.com/2010/12/18/moodstocks/ 14: http://mashable.com/2010/12/18/moodstocks/
+
 ## Moodstocks API v2
 
 As I said, Notes was written to help us design our API. Using its feedback and that from the few users of our v1 API, which was more some kind of beta, I set out to write version two.
@@ -82,6 +86,7 @@ Another interesting choice was the authentication method, HTTP Digest, which we 
 
 => http://amzn.to/17nHJmF 15: http://amzn.to/17nHJmF
 => http://devblog.avdi.org/2013/02/04/the-trouble-with-http-digest-authentication/ 16: http://devblog.avdi.org/2013/02/04/the-trouble-with-http-digest-authentication/
+
 ## Acorn Quantizer
 
 Earlier, I wrote about how I had made Acorn processes single-threaded. This had some advantages, but also a big inconvenient.
@@ -106,6 +111,7 @@ The idea is simple once you stop under-estimating the capabilities of SHM on Lin
 => http://luajit.org/ 18: http://luajit.org/
 => http://beej.us/guide/bgipc/output/html/multipage/shm.html 19: http://beej.us/guide/bgipc/output/html/multipage/shm.html
 => http://linux.die.net/man/8/sysctl 20: http://linux.die.net/man/8/sysctl
+
 ## Seed
 
 The Acorn Quantizer was the last major improvement to our online search stack. Around that time, we resolved on a major technological shift: we would perform image recognition on mobile devices directly instead of doing it on the server. Of course, initially, we would have an hybrid approach where on-device recognition would work as a kind of cache, but the mobile was where we would focus our efforts.
@@ -119,6 +125,7 @@ The big picture is that some processing is done on the server at indexing time t
 With the current (second) generation of the Seed algorithms, we are actually mostly using the C implementation through the LuaJIT FFI on the server side now. That is because I have been working on other projects while the rest of the team (which is not as comfortable with Lua) was developing them, so I would have been a bottleneck if we had kept the dual stack approach. I may well bring the Lua branch up to date someday though, who knows?
 
 => https://twitter.com/mbrenon 21: https://twitter.com/mbrenon
+
 ## chksrv and chkcoherence
 
 Moodstocks' server-side architecture is some kind of SOA [22]. That means we have a lot of different services that run as daemons and need to stay up. chksrv is a medium-sized program in Bash that takes care of this. It is deployed on every instance with a configuration file that indicates which services should be running on that instance, and it makes sure that they are (correctly). It also checks if other instances are up. If something goes wrongs, it warns the "ops team", who is basically me and Cédric as a backup in case I am not available.
@@ -130,6 +137,7 @@ chkcoherence is the ideal complement to chksrv: where the latter checks if servi
 => /2013-01-02-startups-soa.html 22: /2013-01-02-startups-soa.html
 => http://libslack.org/ 23: http://libslack.org/
 => /2013-05-28-coherence-checks.html 24: /2013-05-28-coherence-checks.html
+
 ## Anemone
 
 Anemone is the project that deals with everything related to metrics and measurements at Moodstocks. It is written in Lua and has quite a few different roles:
@@ -144,6 +152,7 @@ It also has a web-based dashboard for the team with high-level KPI, written in J
 
 => http://code.google.com/p/flot/ 25: http://code.google.com/p/flot/
 => http://bslatkin.github.com/cohorts/ 26: http://bslatkin.github.com/cohorts/
+
 ## Dandelion
 
 I said earlier that with Seed we generate image signatures on the server and send them to the mobile clients where they are used for recognition. Dandelion is the code name of the service responsible for that.
@@ -153,6 +162,7 @@ It turns out efficiently sending millions of image signatures per day, over slow
 The server part of Dandelion is written in Lua and depends on pieces like Redis and Beanstalkd, which is why I wrote haricot [27].
 
 => https://github.com/catwell/haricot 27: https://github.com/catwell/haricot
+
 ## Physalis
 
 Finally, Physalis is the project I am currently working on. It has not been released yet so I won't get into the details, but I can explain the reasoning behind it.

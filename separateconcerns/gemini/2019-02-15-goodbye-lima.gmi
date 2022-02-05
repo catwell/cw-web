@@ -10,6 +10,7 @@ Obviously, things did not go like we hoped they would. Customers are disappointe
 
 => https://blog.separateconcerns.com/2013-12-12-infinity-beyond.html 1: https://blog.separateconcerns.com/2013-12-12-infinity-beyond.html
 => https://medium.com/@MeetLima/this-time-its-goodbye-5573a97be7d4 2: https://medium.com/@MeetLima/this-time-its-goodbye-5573a97be7d4
+
 ## What happened to the company exactly?
 
 Lima as a company no longer exists. It ran out of money. Its employees (including me) have all been fired, and its assets will be sold to pay its debts.
@@ -50,6 +51,7 @@ If you have an issue with the Decrypt Tool, check here [4] for potential answers
 
 => https://lima.gitbook.io/support 3: https://lima.gitbook.io/support
 => https://github.com/catwell/postlima 4: https://github.com/catwell/postlima
+
 ## What can users replace Lima with?
 
 It depends on the users. I don't know anything that is exactly like Lima. There was Helixee, which I have never tried out, but I just found out they are shutting down as well [5]. I also learned that a project I had never heard about before called Amber had a special offer for Lima customers [6].
@@ -63,6 +65,7 @@ However, Lima was never designed for technical customers. It was built for, mark
 => https://nextcloud.com 7: https://nextcloud.com
 => https://cozy.io 8: https://cozy.io
 => https://mycloud.com 9: https://mycloud.com
+
 ## Can you open-source the code?
 
 To the best of my knowledge, there is no way that can happen. This makes me extremely sad, especially since I know there are parts of the code I would love to reuse myself [10], and that could be useful to other projects.
@@ -75,6 +78,7 @@ Completely independently from the company, the former CTO of Lima has also relea
 
 => http://lua-users.org/lists/lua-l/2018-11/msg00418.html 10: http://lua-users.org/lists/lua-l/2018-11/msg00418.html
 => https://github.com/gawen/wirehub 11: https://github.com/gawen/wirehub
+
 ## Can you give us root access to the device?
 
 For Lima Original, no, I think that would be impossible (or rather, I can't see a solution that doesn't involve soldering...). The device is not worth much today anyway, its specs are so low I don't think you could run any other private cloud software on it.
@@ -84,6 +88,7 @@ For Lima Ultra, a few of us ex-Lima employees (and the CEO) are trying to figure
 EDIT (2019-02-18): We did it, check this out! [12]
 
 => https://github.com/catwell/postlima 12: https://github.com/catwell/postlima
+
 ## Why does it say something different in the Kickstarter FAQ?
 
 Some people have mentioned that what was happening was not in line with what had been said in the Kickstarter FAQ [13].
@@ -95,6 +100,7 @@ I do not think we have not communicated like that ever since, especially regardi
 Regarding Open Source, I sincerely believe the CEO of Lima would have done it if it was possible, but with the success of the Kickstarter the company had to take VC funding very early on (see below), and from that moment on I do not think it was in his hands.
 
 => https://www.kickstarter.com/projects/cloud-guys/plug-the-brain-of-your-devices/faqs#project_faq_62443 13: https://www.kickstarter.com/projects/cloud-guys/plug-the-brain-of-your-devices/faqs#project_faq_62443
+
 ## Where did all that Kickstarter money go?
 
 OK, let's address this last. What Kickstarter money?

@@ -12,6 +12,7 @@ Now, what do I do there in practice? As you may guess if you know me, a few diff
 
 => https://inch.fr 1: https://inch.fr
 => https://fr.wikipedia.org/wiki/Syndic_de_copropriété 2: https://fr.wikipedia.org/wiki/Syndic_de_copropriété
+
 ## Dealing with integrations
 
 That is my main role, and the reason I was hired in the first place. See, our software is used by our customers to manage the relationship with their own customers and suppliers, but they invariably already have pre-existing sotware with overlapping data: their accounting software or ERPs. Some have built them in-house, but most picked from a very fragmented market of industry-specific software which we have to integrate with. So I maintain somewhere between 20 and 30 different integrations with those pieces of software you have probably never heard about.
@@ -37,6 +38,7 @@ At small companies like this, operations also come with a lot of security-relate
 As usual, nothing is ever done in that space and I still have a lot of work coming up, but at least I believe we've significantly improved since I joined.
 
 => https://www.reuters.com/article/us-france-ovh-fire-idUSKBN2B20NU 3: https://www.reuters.com/article/us-france-ovh-fire-idUSKBN2B20NU
+
 ## Fullstack Web development
 
 Finally, the third leg of my role is the same as every developer at Inch: working on the product.

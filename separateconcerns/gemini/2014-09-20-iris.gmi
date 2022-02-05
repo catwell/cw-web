@@ -18,6 +18,7 @@ Iris supports three usual basic patterns for communication: Request/Response, Pu
 => https://dl.dropboxusercontent.com/u/10435909/Iris/relay.pdf 4: https://dl.dropboxusercontent.com/u/10435909/Iris/relay.pdf
 => https://github.com/catwell/iris-lua 5: https://github.com/catwell/iris-lua
 => https://github.com/catwell/iris-lua/tree/master/eFxamples 6: https://github.com/catwell/iris-lua/tree/master/eFxamples
+
 # Request/Response
 
 This is the pattern everybody knows about from HTTP, and probably the workhorse of most SOAs. A client sends a request to a cluster, and a single node of the cluster answers it. Iris just does the messaging here: the request and the response are binary blobs, there is no notion of headers.

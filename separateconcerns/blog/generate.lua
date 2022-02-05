@@ -141,13 +141,17 @@ local function md_to_gemtext(md)
         if level > 3 then return s end
         local prefix = {string.rep("#", level), " "}
         local link_id = lunamark.util.rope_to_string(s):match("<<<(%d+)>>>")
-
+        local function _links()
+            local r = md_links(links)
+            if #r > 0 then table.insert(r, "\n") end
+            return r
+        end
         if link_id then
             local link = links[tonumber(link_id)]
             link.written = true
-            return {md_links(links), prefix, link.label, "\n", "=> ", link.url}
+            return {_links(links), prefix, link.label, "\n", "=> ", link.url}
         end
-        return {md_links(links), prefix, s}
+        return {_links(links), prefix, s}
     end
 
     writer.link = function(label, url)

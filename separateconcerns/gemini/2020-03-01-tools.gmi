@@ -10,6 +10,7 @@ I have also added a section at the end for some tools I use for my own projects.
 
 => https://acrossapp.com/blog/how-a-2-person-startup-already-uses-28-other-tools 1: https://acrossapp.com/blog/how-a-2-person-startup-already-uses-28-other-tools
 => https://pinboard.in/u:catwell/t:~stack/ 2: https://pinboard.in/u:catwell/t:~stack/
+
 # Moodstocks (2010 - 2013)
 
 * Fastmail [3] - E-mail
@@ -35,6 +36,7 @@ I have also added a section at the end for some tools I use for my own projects.
 => https://aws.amazon.com 11: https://aws.amazon.com
 => https://mandrillapp.com 12: https://mandrillapp.com
 => https://konghq.com 13: https://konghq.com
+
 # Lima (2014 - 2019)
 
 * GSuite [14] - E-mail & Calendar
@@ -85,6 +87,7 @@ I have also added a section at the end for some tools I use for my own projects.
 => https://www.scaleway.com 37: https://www.scaleway.com
 => https://sendgrid.com 38: https://sendgrid.com
 => https://www.cloudflare.com 39: https://www.cloudflare.com
+
 # Chilli (eFounders, 2019)
 
 * GSuite [40] - E-mail, Calendar, Drive
@@ -136,6 +139,7 @@ I have also added a section at the end for some tools I use for my own projects.
 => https://uptimerobot.com 61: https://uptimerobot.com
 => https://aws.amazon.com 62: https://aws.amazon.com
 => https://www.mailjet.com 63: https://www.mailjet.com
+
 # Inch (2019 - 2020)
 
 * GSuite [64] - E-mail, Calendar, Drive
@@ -170,6 +174,7 @@ I have also added a section at the end for some tools I use for my own projects.
 => https://cloud.google.com 77: https://cloud.google.com
 => https://www.ovh.com 78: https://www.ovh.com
 => https://mandrillapp.com 79: https://mandrillapp.com
+
 # Personal
 
 * Fastmail [80] - Email

@@ -18,6 +18,7 @@ Oh, just in case you were wondering, nobody paid me to write that blog post!
 
 => http://www.buildyourownlisp.com/ 1: http://www.buildyourownlisp.com/
 => https://github.com/catwell/ownlisp 2: https://github.com/catwell/ownlisp
+
 ## Moving on to Go
 
 Next, I will probably be learning Go [3]. Go is a weird language in that about half of the technical people I follow and look up to like it a lot, and the other half hates it. The latter tend to be users of languages with stricter type systems...

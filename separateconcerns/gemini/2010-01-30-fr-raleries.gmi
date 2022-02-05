@@ -11,6 +11,7 @@ On la critique en France mais la redevance TV est bien pire en Angleterre. Si da
 Cette société, TV Licensing, envoie régulièrement des lettres de menace aux délinquants qui osent capter la bonne parole diffusée sur les ondes sans s'acquitter de la dîme. Hmm, un petit arrière-goût d'HADOPI ? J'ai reçu cinq lettres, et je suis d'après leurs dires "scheduled for visit". Ils peuvent venir, j'ai l'esprit tranquille : je ne regarde pas la TV, la loi anglaise ne leur permet pas d'entrer chez moi et de toute façon c'est tellement difficile techniquement d'atteindre ma porte que ça m'étonnerait qu'ils y arrivent un jour.
 
 => http://www.tvlicensing.co.uk 1: http://www.tvlicensing.co.uk
+
 ## Le garçon qui criait au loup
 
 Depuis que j'habite ici, j'ai bien dû être réveillé une vingtaine de fois par des alarmes incendies en pleine nuit. La première fois, enfiler un manteau, des chaussures et descendre devant l'entrée se geler pendant une demi-heure en attendant l'arrivée de la sécurité peut être drôle, mais à la longue ça lasse. Qui plus est, le dispositif d'alarme permet de savoir aisément quel détecteur a déclenché l'alerte, et donc de confirmer rapidement que c'est une erreur, mais la loi anglaise stipule qu'ignorer l'alarme et retourner au chaud dans son lit est un crime !
@@ -26,6 +27,7 @@ De toute façon, les soi-disant réseaux sociaux sont des aberrations, des subst
 Pour ma part, je ne consulterai pas Facebook en février. Je ne clôturerai mon compte que début mars de sorte que les gens qui n'ont que ce moyen pour me joindre puissent m'en demander un autre par message privé (je les reçois dans ma boite mail). Si vous trouvez que je suis paranoïaque, sachez simplement que l'un des sujets proposés en MSc Thesis à Cranfield consiste à faire du data-mining (collecter plein d'informations sur vous) sur Facebook en utilisant le Grid Computing (un paquet d'ordinateurs, dont des super-calculateurs, en réseau). Si de tels moyens, habituellement réservés à de très grosses industries comme le pétrole, l'automobile ou la mode, sont déployés dans ce but, c'est simplement parce que vos données personnelles valent très cher.
 
 => http://www.alain-bazot.fr/index.php/la-vie-privee-un-concept-depasse/ 2: http://www.alain-bazot.fr/index.php/la-vie-privee-un-concept-depasse/
+
 ## Java m'pendre (ou pas)
 
 Java est un langage tout pourri, si je commençais à énumérer toutes les raisons pour ça il me faudrait autant de lignes que pour coder une application de taille moyenne dans le dit langage, et oui ça fait beaucoup.

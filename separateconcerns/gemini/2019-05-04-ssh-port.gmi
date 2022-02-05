@@ -7,6 +7,7 @@ published 2019-05-04,updated 2020-04-07
 This article is out of date. Arch Linux stopped shipping OpenSSH with socket activation [1] due to the risk of DoS attack. Now you can just set `Port` in `sshd_config` as usual.
 
 => https://bugs.archlinux.org/task/62248 1: https://bugs.archlinux.org/task/62248
+
 ## Original article
 
 I often change the default SSH port from 22 to something else on servers I run. It kind of is a dangerous operation, especially when the only way you have to connect to that server is SSH.

@@ -19,6 +19,7 @@ With those two products in the pipes, choosing to leave was incredibly difficult
 => https://winch.io/ 3: https://winch.io/
 => http://overlay.ms/ 4: http://overlay.ms/
 => https://moodstocks.com/ 5: https://moodstocks.com/
+
 ## Hello Lima
 
 So, what next for me? After two weeks to see my family, eat too much and have some welcome rest, I will be joining [6] the team developing the Lima [7] as a core developer.

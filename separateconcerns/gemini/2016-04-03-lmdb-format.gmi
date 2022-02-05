@@ -9,6 +9,7 @@ In this post, I will give an overview of how a data.mdb file is structured. Note
 => https://meetlima.com 1: https://meetlima.com
 => http://symas.com/mdb/ 2: http://symas.com/mdb/
 => https://github.com/catwell/cw-lua/tree/master/lua-mdb 3: https://github.com/catwell/cw-lua/tree/master/lua-mdb
+
 ## Portability
 
 The first thing to know is that the data.mdb format is platform-specific, which means that you cannot necessarily open a database created on a machine on another one. In practice, on ARM and x86, the only thing you have to care about is whether the machine is 32 or 64 bits. On a 64 bit machine, you can read the data from a 32 bit database by exporting it to a text format using the `mdb_dump` utility compiled in 32 bits and reimporting it with a 64 bits `mdb_load`. With lua-mdb, you can read a 32 bits database directly by passing the `bits` option to the constructor.
@@ -26,6 +27,7 @@ After that, we find two structures describing what LMDB calls databases. The fir
 Finally come the number of the last page used in the file and the ID of the last transaction that wrote to the page successfully. Indeed, those meta pages is the mechanism LMDB uses to implement MVCC [4]. There can be a single writer at a time, and it will always write to page ID `N % 2`, where `N` is the current write transaction ID. Meanwhile, readers will read page `N % 2 + 1`, providing readers - writer isolation. This means that, when opening a .mdb file, the latest data can be found in the databases pointed to by the meta page with the highest transaction ID.
 
 => https://en.wikipedia.org/wiki/Multiversion_concurrency_control 4: https://en.wikipedia.org/wiki/Multiversion_concurrency_control
+
 ## Databases
 
 As we saw, a meta page contains two structures describing databases. Databases in LMDB are technically B+ trees. The structures contain some environment flags used at runtime, information about the tree including its depth, the number of pages of each type and the total number of entries, and finally the page number of the root of the tree.

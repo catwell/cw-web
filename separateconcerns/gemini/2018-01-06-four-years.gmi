@@ -5,6 +5,7 @@ published 2018-01-06
 Today marks the fourth birthday of my joining Lima [1], and it is a good occasion to talk a bit about some of the things I have been doing there.
 
 => https://blog.separateconcerns.com/2013-12-12-infinity-beyond.html 1: https://blog.separateconcerns.com/2013-12-12-infinity-beyond.html
+
 ## Distributed filesystem synchronization
 
 For the public, Lima [2] makes a device which turns a USB hard drive into personal "cloud" data storage. We actually shipped two devices, Lima Original in July 2015 and Lima Ultra in Decemner 2016.
@@ -18,6 +19,7 @@ I can't get into too much detail here, this being proprietary technology and all
 => https://meetlima.com 2: https://meetlima.com
 => http://bravenewgeek.com/distributed-systems-are-a-ux-problem/ 3: http://bravenewgeek.com/distributed-systems-are-a-ux-problem/
 => https://en.wikipedia.org/wiki/Conflict-free_replicated_data_type 4: https://en.wikipedia.org/wiki/Conflict-free_replicated_data_type
+
 ## Minicore: fitting into a tiny box
 
 Like I said, in theory, the Lima device just runs a slightly modified Lima application. And in theory, theory and practice are the same thing. But in practice...

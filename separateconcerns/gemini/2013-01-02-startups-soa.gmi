@@ -19,6 +19,7 @@ If you are wondering if what you are currently doing is closer to SOA than to mo
 * Do we have a Web application that does significantly more than rendering templates? Is it stateful? What parts of that state could we also use in a mobile application? Does the same application render JSON and HTML?
 
 => http://queue.acm.org/detail.cfm?id=1142065 1: http://queue.acm.org/detail.cfm?id=1142065
+
 ## Advantages of SOA
 
 One of the most obvious benefits of SOA is that services are easier to scale than monolithic applications. Maybe you want to migrate user authentication data to Redis and keep other data in whatever DB you already have? SOA makes it trivial. Maybe some part of your product would benefit from running on an AWS instance that has lots of RAM while another one is CPU-intensive? Just deploy the corresponding services where they run best.
@@ -42,6 +43,7 @@ SOA also gives you language agnosticism almost for free. Not much prevents diffe
 Finally, I can see a (perhaps more abstract) last advantage to SOA which is related to the rise of the Programmable Web. After all, there is little difference between a Web API and a service, except that you wrote the latter and not the former. Embracing SOA will prepare you to work with external APIs, and more importantly to publish your own. For instance, lots of AWS services have started their life as internal services at Amazon.
 
 => http://www.codinghorror.com/blog/2011/04/working-with-the-chaos-monkey.html 2: http://www.codinghorror.com/blog/2011/04/working-with-the-chaos-monkey.html
+
 ## Conclusion
 
 I am not saying SOA only has advantages. Such an architecture can be fragile if you do not code with service unavailability in mind. Testing complex operations involving lots of services can be hard, and debugging them even harder. Correctly defining the boundaries and interfaces of services requires a significant amount of reflection and may not be a good idea when you do not know what exactly you are building.

@@ -17,6 +17,7 @@ Most distributed systems are asynchronous, which means that the usual notion of 
 This 2008 blog post by Werner Vogel (Amazon CTO) explains the trade-off between availability and consistency, introduces consistency models, and hints at the relationship between the replication factor of data and the level of consistency that can be achieved. If you want to go further after that, you can read the famous Dynamo paper (which is not too complicated), preferably in its version annotated by Basho [1].
 
 => http://docs.basho.com/riak/2.0.1/theory/dynamo/ 1: http://docs.basho.com/riak/2.0.1/theory/dynamo/
+
 ## Distributed systems for fun and profit
 => http://book.mixu.net/distsys/
 
@@ -28,6 +29,7 @@ This document, by Mikito Takada (Trifacta), is longer than the others. It is the
 I could hardly leave that 2009 paper by Pat Helland and Dave Campbell out of this list. It starts with the idea that, as the distribution of systems increases, latency makes synchronicity intractable and pushes us towards asynchronous designs. The rest of the paper is a discussion of the trade-offs involved. The very interesting idea in that paper (also found in other papers by Pat Helland) is that it all comes down to a problem of risk management and reconciliation. If asynchronous software can not ensure something will happen, it may make a guess and fix the result later if it was wrong. That may include having to make excuses to an actual human being. An important corollary is that the distributed nature of software permeates all the way to the user interface [2] (which is why you may have seen me ranting about how we need to start forming cross-functional teams, with developers who understand UX and designers who get distributed systems).
 
 => http://bravenewgeek.com/distributed-systems-are-a-ux-problem/ 2: http://bravenewgeek.com/distributed-systems-are-a-ux-problem/
+
 ## Why Logical Clocks are Easy
 => http://queue.acm.org/detail.cfm?id=2917756
 
@@ -36,6 +38,7 @@ I said on Hacker News that, if I wrote that article today (in May 2016), I would
 Published in April 2016 in ACM Queue, this article by Carlos Baquero and Nuno Preguiça may be the best introduction to causality I know. Causality is a very important concept in distributed systems. In a nutshell, the idea is to answer the question: given two events, could one have influenced the other? In other words: when the entity performing the second event did, dit it have any knowledge that the first happened? This article introduces causality and gives usual ways to represent it in theory, with causal histories, and in practice, with vector clocks and version vectors as well as their dotted variants.
 
 => https://news.ycombinator.com/item?id=11690113 3: https://news.ycombinator.com/item?id=11690113
+
 ## Conclusion
 
 When I started programming as a child, I was hooked by the idea that the computer was a perfect machine that, unlike a teacher, would never be unjust: it would work if I got the code right, and if I did not I just had to fix it and try again. Once it worked, it would always work! Everything was reproducible, and all issues could be diagnosed and understood.
