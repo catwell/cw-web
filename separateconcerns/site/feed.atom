@@ -10,7 +10,7 @@
     rel="alternate" type="application/xhtml+xml"
   />
   <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
-  <updated>2022-02-05T18:49:11Z</updated>
+  <updated>2022-02-06T17:15:59Z</updated>
   <author>
     <name>Pierre 'catwell' Chapuis</name>
     <uri>https://catwell.info/</uri>
@@ -979,6 +979,8 @@ I hope this short post will avoid trouble for other people, at least it will be 
 </blockquote>
 
 <p>If you have an issue with the Decrypt Tool, check <a href="https://github.com/catwell/postlima">here</a> for potential answers.</p>
+
+<p>EDIT (2022-02-06): What I feared when I wrote this post did happen a while ago. Someone did get hold of the <code>meetlima.com</code> domain and uses it to host what is clearly a scam. They want you to think they are us, but they are not. I do not think they have performed any attack on the devices themselves, but it is definitely not safe to keep using the original software anymore.</p>
 
 <h2 id="what-can-users-replace-lima-with">What can users replace Lima with?</h2>
 

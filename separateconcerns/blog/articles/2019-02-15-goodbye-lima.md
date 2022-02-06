@@ -49,6 +49,8 @@ What I will personally do now, and what I advise users to do as well, is [export
 
 If you have an issue with the Decrypt Tool, check [here](https://github.com/catwell/postlima) for potential answers.
 
+EDIT (2022-02-06): What I feared when I wrote this post did happen a while ago. Someone did get hold of the `meetlima.com` domain and uses it to host what is clearly a scam. They want you to think they are us, but they are not. I do not think they have performed any attack on the devices themselves, but it is definitely not safe to keep using the original software anymore.
+
 ## What can users replace Lima with?
 
 It depends on the users. I don't know anything that is exactly like Lima. There was Helixee, which I have never tried out, but I just found out they are [shutting down as well](http://www.helixee.me/end-of-adventure/). I also learned that a project I had never heard about before called Amber had a [special offer for Lima customers](https://www.myamberlife.com/news/an-open-letter-to-lima-customers/).

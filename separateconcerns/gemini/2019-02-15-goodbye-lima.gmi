@@ -49,6 +49,8 @@ What I will personally do now, and what I advise users to do as well, is export 
 
 If you have an issue with the Decrypt Tool, check here [4] for potential answers.
 
+EDIT (2022-02-06): What I feared when I wrote this post did happen a while ago. Someone did get hold of the `meetlima.com` domain and uses it to host what is clearly a scam. They want you to think they are us, but they are not. I do not think they have performed any attack on the devices themselves, but it is definitely not safe to keep using the original software anymore.
+
 => https://lima.gitbook.io/support 3: https://lima.gitbook.io/support
 => https://github.com/catwell/postlima 4: https://github.com/catwell/postlima
 
