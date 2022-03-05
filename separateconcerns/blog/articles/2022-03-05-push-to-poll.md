@@ -1,0 +1,84 @@
+% The push-to-poll pattern
+% Pierre 'catwell' Chapuis
+% 2022-03-05 13:00:00
+
+    ::description::
+    A pattern to send a feed of messages or events from a server to a client.
+
+Here I want to discuss a system design pattern that I call "push-to-poll"; if it has another name I am not aware of it. I have applied that pattern successfully a few times, and used systems that did not but should have way too often.
+
+## Polling
+
+Suppose you are responsible for a "server" system. That system generates events (messages), and authenticated "clients" need to receive those messages.
+
+A simple solution is to provide some kind of feed: the client authenticates and provides a small piece of state (a timestamp or a cursor) which allows the server to return the messages they haven't processed yet. Ideally individual messages also have properties which allow the client to process them in an idempotent way, e.g. skip messages it has already processed. The client can then just process the feed in a loop, in pseudocode:
+
+    cursor = INCEPTION
+
+    loop do
+        messages, new_cursor = fetch_messages_since(cursor)
+        for message in messages do
+            if not processed(message)
+                process(message)
+            end
+        end
+        cursor = new_cursor
+        sleep(DELAY)
+    end
+
+This solution is called polling, but the main problem with it is the `DELAY` variable. If it is set too low, both the server and the client will keep doing work and exchanging data for nothing, but if it is too high messages won't be received by the client in a timely fashion.
+
+## Server Push
+
+If we want message reception to be realtime, we may use a push-based design instead. In that model, the client starts by registering with the server. The server will then send the messages to the client as they arrive.
+
+In practice you might not really want to send each message on its own so you will send message batches instead and client code looks like that:
+
+    def messages_handler(messages)
+        for message in messages do
+            process(message)
+        end
+    end
+
+    register_with_server(messages_handler)
+
+This design, however, has a few issues as well.
+
+First, there is the bootstrap problem. The client might need messages that arrived before they registered. The server could theoretically just send all the previous messages to every client on connection, but in practice this is almost never what you want because of volume, performance, etc.
+
+Even if you don't need to bootstrap, what should the server do when it tries to send a message to the client and it doesn't work? It could be that the client has gone down, or it could just be a network issue. In some systems the server keeps the failed messages for a while and retries, but that complexifies the design because it means the server needs to keep per-client state.
+
+Finally, in practice, authentication is often more complicated that way. The server needs to authenticate the client, of course, but the client also needs a way to make sure the data it receives comes from the server. Here we might need to take a few real-life examples: the client could be a single-page app, in which case the push channel would be something like SSE or websockets; it could also be two HTTP servers communicating in which case we are talking webhooks and might need some ad hoc [signature scheme](https://docs.github.com/en/developers/webhooks-and-events/webhooks/securing-your-webhooks). And by the way, the GitHub scheme does not have any form of protection against replay attacks, which might or might not be a problem for your use case...
+
+## Push-to-poll
+
+The push-to-poll pattern combines the best of both worlds. The idea is simple: start with the same feed as polling, but instead of using a delayed loop to decide when to fetch it let the server tell you like with the push pattern.
+
+It looks like this:
+
+    cursor = INCEPTION
+
+    def poll_now()
+        messages, new_cursor = fetch_messages_since(cursor)
+        for message in messages do
+            if not processed(message)
+                process(message)
+            end
+        end
+        cursor = new_cursor
+    end
+
+    poll_now()
+    register_with_server(poll_now)
+
+It solves the problems from the poll design, because there is no more arbitrary delay. The server tells clients when to poll, which might be every time a new message comes, or with a slight delay to optimize the number of requests and ensure messages are processed in batch. Clients might decide not to poll immediately when they receive a server push as well.
+
+There is no more bootstrap problem or reliability problem since it is built on the poll design: every time you poll, you catch everything up. If you want to be extra safe and messages are very rare, you can decide to poll even if you didn't receive any message after a reasonably long delay.
+
+The authentication story is better than in the push case, because pushes contain no data. All data access uses regular, client-calls-server authentication. It is still a good thing to authenticate server pushes (for various reasons I won't go into) but mistakes there have less impact, especially if you have client-side rate-limiting.
+
+There are many small tweaks that can be added on top of that design, for instance you can include a little bit of metadata in the push messages to let clients decide whether they should actually poll or not.
+
+Finally, note that you get polling for free! Implementers who do not need realtime can just use the feed endpoint with the polling pattern.
+
+The only drawback is that it takes an extra request for every exchange, but in practice I have seen very few cases where the server keeps message history where it would not have been an improvement over server push. So I hope you think about it next time you consider serializing data into websockets or webhooks.
