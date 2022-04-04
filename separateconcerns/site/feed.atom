@@ -10,7 +10,7 @@
     rel="alternate" type="application/xhtml+xml"
   />
   <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
-  <updated>2022-03-05T12:05:31Z</updated>
+  <updated>2022-04-04T09:44:15Z</updated>
   <author>
     <name>Pierre 'catwell' Chapuis</name>
     <uri>https://catwell.info/</uri>
@@ -23,7 +23,7 @@
     />
     <id>tag:blog.separateconcerns.com,2022-03-05:push-to-poll</id>
     <published>2022-03-05T13:00:00Z</published>
-    <updated>2022-03-05T13:00:00Z</updated>
+    <updated>2022-04-04T09:45:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         
@@ -34,7 +34,11 @@
 
 <p>Suppose you are responsible for a &quot;server&quot; system. That system generates events (messages), and authenticated &quot;clients&quot; need to receive those messages.</p>
 
-<p>A simple solution is to provide some kind of feed: the client authenticates and provides a small piece of state (a timestamp or a cursor) which allows the server to return the messages they haven&#39;t processed yet. Ideally individual messages also have properties which allow the client to process them in an idempotent way, e.g. skip messages it has already processed. The client can then just process the feed in a loop, in pseudocode:</p>
+<p>A simple solution is to provide some kind of feed: the client authenticates and provides a small piece of state (a timestamp or a cursor) which allows the server to return the messages they haven&#39;t processed yet. Ideally individual messages also have properties which allow the client to process them in an idempotent way, e.g. skip messages it has already processed.</p>
+
+<p><em>EDIT (2022-04-04): I was made aware <a href="https://news.ycombinator.com/item?id=30904220">through HN</a> of a spec called <a href="https://www.http-feeds.org">HTTP Feeds</a> which looks like a very good format for those feeds. Something like Atom can still work too.</em></p>
+
+<p>The client can then just process the feed in a loop, in pseudocode:</p>
 
 <pre><code>cursor = INCEPTION
 

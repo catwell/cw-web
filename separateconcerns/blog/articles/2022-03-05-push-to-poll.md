@@ -2,6 +2,10 @@
 % Pierre 'catwell' Chapuis
 % 2022-03-05 13:00:00
 
+<!--@
+  updated = "2022-04-04 09:45:00"
+-->
+
     ::description::
     A pattern to send a feed of messages or events from a server to a client.
 
@@ -11,7 +15,11 @@ Here I want to discuss a system design pattern that I call "push-to-poll"; if it
 
 Suppose you are responsible for a "server" system. That system generates events (messages), and authenticated "clients" need to receive those messages.
 
-A simple solution is to provide some kind of feed: the client authenticates and provides a small piece of state (a timestamp or a cursor) which allows the server to return the messages they haven't processed yet. Ideally individual messages also have properties which allow the client to process them in an idempotent way, e.g. skip messages it has already processed. The client can then just process the feed in a loop, in pseudocode:
+A simple solution is to provide some kind of feed: the client authenticates and provides a small piece of state (a timestamp or a cursor) which allows the server to return the messages they haven't processed yet. Ideally individual messages also have properties which allow the client to process them in an idempotent way, e.g. skip messages it has already processed.
+
+*EDIT (2022-04-04): I was made aware [through HN](https://news.ycombinator.com/item?id=30904220) of a spec called [HTTP Feeds](https://www.http-feeds.org) which looks like a very good format for those feeds. Something like Atom can still work too.*
+
+The client can then just process the feed in a loop, in pseudocode:
 
     cursor = INCEPTION
 
