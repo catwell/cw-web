@@ -5,6 +5,7 @@
 => https://blog.separateconcerns.com Visit on the Web
 => gemini://catwell.info catwell.info
 
+=> 2022-08-15-dependency-injection.gmi 2022-08-15 - Dependency Injection
 => 2022-03-05-push-to-poll.gmi 2022-03-05 - The push-to-poll pattern
 => 2022-02-05-gemini.gmi 2022-02-05 - Hello Gemini
 => 2021-10-31-blog-posts-founders.gmi 2021-10-31 - Blog posts for founders (and early employees)
