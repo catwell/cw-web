@@ -100,7 +100,7 @@ Probably the most well-known use case for DI is simplifying testing of code that
 
 ## Supporting different implementations of dependencies
 
-This use case is less well-known but a very good use-case, especially in Lua. Let us consider my JSON example above. Users of this code may want to use [dkjson](https://luarocks.org/modules/dhkolf/dkjson), but maybe they want to use a faster, pure C module, or maybe they are running in OpenResty and have [cjson](https://openresty.org/en/lua-cjson-library.html) available. With dependency injection, it's easy to just use it.
+This is a less well-known but very good use-case, especially in Lua. Let us consider my JSON example above. Users of this code may want to use [dkjson](https://luarocks.org/modules/dhkolf/dkjson), but maybe they want to use a faster, pure C module, or maybe they are running in OpenResty and have [cjson](https://openresty.org/en/lua-cjson-library.html) available. With dependency injection, it's easy to just use it.
 
 ## Eliminating randomness
 

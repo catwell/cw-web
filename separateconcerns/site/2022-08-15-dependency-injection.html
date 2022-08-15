@@ -118,7 +118,7 @@ o:as_json()
 
 <h2 id="supporting-different-implementations-of-dependencies">Supporting different implementations of dependencies</h2>
 
-<p>This use case is less well-known but a very good use-case, especially in Lua. Let us consider my JSON example above. Users of this code may want to use <a href="https://luarocks.org/modules/dhkolf/dkjson">dkjson</a>, but maybe they want to use a faster, pure C module, or maybe they are running in OpenResty and have <a href="https://openresty.org/en/lua-cjson-library.html">cjson</a> available. With dependency injection, it&#39;s easy to just use it.</p>
+<p>This is a less well-known but very good use-case, especially in Lua. Let us consider my JSON example above. Users of this code may want to use <a href="https://luarocks.org/modules/dhkolf/dkjson">dkjson</a>, but maybe they want to use a faster, pure C module, or maybe they are running in OpenResty and have <a href="https://openresty.org/en/lua-cjson-library.html">cjson</a> available. With dependency injection, it&#39;s easy to just use it.</p>
 
 <h2 id="eliminating-randomness">Eliminating randomness</h2>
 
