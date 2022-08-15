@@ -10,7 +10,7 @@
     rel="alternate" type="application/xhtml+xml"
   />
   <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
-  <updated>2022-08-15T19:29:26Z</updated>
+  <updated>2022-08-15T19:31:19Z</updated>
   <author>
     <name>Pierre 'catwell' Chapuis</name>
     <uri>https://catwell.info/</uri>
@@ -129,7 +129,7 @@ o:as_json()
 
 <p>This is in fact the use case that prompted me to write this blog post. I was writing some algorithmic code in Teal for which I had a reference in Python, and I wanted to apply <a href="https://blog.separateconcerns.com/2013-06-20-three-years-proprietary-projects.html#seed">the dual-implementation comparison technique I like</a>. However, this was AI code that had random parts.</p>
 
-<p>What I did was that I re-wrote the code in both languages so that all sources of randomness were injected, and then I injected deterministic pseudo-random values instead, which meant I could now compare the state of both implementations at all time and easily debug things such as numerical problems.</p>
+<p>What I did was that I refactored the code in both languages so that all sources of randomness were injected, and then I injected deterministic pseudo-random values instead, which meant I could now compare the state of both implementations at all times and easily debug things such as numerical problems.</p>
 
 <h2 id="when-not-to-use-di">When not to use DI</h2>
 
