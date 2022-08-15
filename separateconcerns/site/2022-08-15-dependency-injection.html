@@ -60,7 +60,10 @@ o:as_json()
 }
 
 local function new_obj(data, json_encoder)
-    return setmetatable({data = data, json_encoder = json_encoder}, obj_mt)
+    return setmetatable(
+        {data = data, json_encoder = json_encoder},
+        obj_mt
+    )
 end
 
 local json = require &quot;dkjson&quot;

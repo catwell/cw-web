@@ -10,7 +10,7 @@
     rel="alternate" type="application/xhtml+xml"
   />
   <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
-  <updated>2022-08-15T19:24:06Z</updated>
+  <updated>2022-08-15T19:25:46Z</updated>
   <author>
     <name>Pierre 'catwell' Chapuis</name>
     <uri>https://catwell.info/</uri>
@@ -65,7 +65,10 @@ o:as_json()
 }
 
 local function new_obj(data, json_encoder)
-    return setmetatable({data = data, json_encoder = json_encoder}, obj_mt)
+    return setmetatable(
+        {data = data, json_encoder = json_encoder},
+        obj_mt
+    )
 end
 
 local json = require &quot;dkjson&quot;

@@ -43,7 +43,10 @@ I could write something like this:
     }
 
     local function new_obj(data, json_encoder)
-        return setmetatable({data = data, json_encoder = json_encoder}, obj_mt)
+        return setmetatable(
+            {data = data, json_encoder = json_encoder},
+            obj_mt
+        )
     end
 
     local json = require "dkjson"
