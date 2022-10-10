@@ -10,11 +10,42 @@
     rel="alternate" type="application/xhtml+xml"
   />
   <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
-  <updated>2022-08-15T19:31:19Z</updated>
+  <updated>2022-10-10T15:58:47Z</updated>
   <author>
     <name>Pierre 'catwell' Chapuis</name>
     <uri>https://catwell.info/</uri>
   </author>
+  <entry>
+    <title>Pallene support in localua</title>
+    <link
+      rel="alternate" type="text/html"
+      href="https://blog.separateconcerns.com/2022-10-10-localua-pallene.html"
+    />
+    <id>tag:blog.separateconcerns.com,2022-10-10:localua-pallene</id>
+    <published>2022-10-10T17:50:00Z</published>
+    <updated>2022-10-10T17:50:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        
+
+<p>Today I attended Lua Workshop, and Roberto Ierusalimschy&#39;s keynote was about <a href="https://github.com/pallene-lang/pallene">Pallene</a>, a language designed as a system counterpart to Lua in a scripting architecture. The language is a typed subset of Lua and can be used to replace C or as an interface between Lua and C. It is still a work in progress, there is no stable release yet.</p>
+
+<p>Pallene works by accessing the internals of the Lua VM, so it requires <a href="https://github.com/pallene-lang/lua-internals">a patched version of Lua</a>. I wanted to try it so I added support for it to <a href="https://loadk.com">localua</a>. You can just use &quot;pallene&quot; instead of the Lua version and it will pull the latest sources of Pallene and its Lua fork and install them in a self-contained directory.</p>
+
+<p>The Pallene compiler does not have an easy way to specify a local Lua directory and I decided against hacking it so you will have to pass <code>CFLAGS</code> as an environment variable for it to work.</p>
+
+<p>I have just pushed a localua version that supports this so you too can try Pallene now. Be aware that I have only tested this on Linux, and that it is an undocumented feature which means I do not guarantee I will support it forever. That being said, this works now:</p>
+
+<pre><code data-language="shell">curl &quot;https://loadk.com/localua.sh&quot; -O
+chmod +x localua.sh
+./localua.sh .lua pallene
+curl -O &quot;https://raw.githubusercontent.com/pallene-lang/pallene/master/examples/fibonacci/fibonacci.pln&quot;
+CFLAGS=&quot;-I $(pwd)/.lua/include -O2&quot; ./.lua/bin/pallenec fibonacci.pln
+./.lua/bin/lua -e &#39;print((require &quot;fibonacci&quot;).fibonacci(10)[8])&#39; # prints 13
+</code></pre>
+      </div>
+    </content>
+  </entry>
   <entry>
     <title>Dependency Injection</title>
     <link
