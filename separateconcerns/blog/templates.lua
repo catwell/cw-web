@@ -34,7 +34,7 @@ TPL.html_post = [[
     </div>
     {{#has_code}}<script src="js/rainbow.min.js"></script>{{/has_code}}
     <script
-      data-goatcounter="https://catwell.goatcounter.com/count"
+      data-goatcounter="https://separateconcerns.goatcounter.com/count"
       async src="//gc.zgo.at/count.js"></script>
   </body>
 </html>
@@ -78,7 +78,7 @@ TPL.html_index = [[
     {{{content}}}
     </div>
     <script
-      data-goatcounter="https://catwell.goatcounter.com/count"
+      data-goatcounter="https://separateconcerns.goatcounter.com/count"
       async src="//gc.zgo.at/count.js"></script>
   </body>
 </html>
