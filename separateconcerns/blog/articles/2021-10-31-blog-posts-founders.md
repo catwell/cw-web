@@ -59,7 +59,7 @@ If you don't know that series of blog posts, you are missing something. They are
 
 - [Chicken and Egg Problems](https://www.joelonsoftware.com/2000/05/24/strategy-letter-ii-chicken-and-egg-problems/) - Understanding the Chicken and Egg problem and some ways to solve it.
 
-- [Let Me Go Back!](https://www.joelonsoftware.com/2000/06/03/strategy-letter-iii-let-me-go-back/) - On barriers to entry, and how letting customers understand they ca easily move *out* of your product (maybe back to what they used before) important.
+- [Let Me Go Back!](https://www.joelonsoftware.com/2000/06/03/strategy-letter-iii-let-me-go-back/) - On barriers to entry, and how letting customers understand they can easily move *out* of your product (maybe back to what they used before) is important.
 
 - [Bloatware and the 80/20 Myth](https://www.joelonsoftware.com/2001/03/23/strategy-letter-iv-bloatware-and-the-8020-myth/) - 80% of software users use 20% of features, so you can win the market with just 20% of the features, right? No, because not everyone uses the *same* 20%! I can't state how often I meet founders who don't understand this.
 

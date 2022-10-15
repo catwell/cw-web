@@ -68,7 +68,7 @@ If you don't know that series of blog posts, you are missing something. They are
 
 * Ben and Jerry’s vs. Amazon [8] - How to decide between slow profitable growth or fast VC-funded growth.
 * Chicken and Egg Problems [9] - Understanding the Chicken and Egg problem and some ways to solve it.
-* Let Me Go Back! [10] - On barriers to entry, and how letting customers understand they ca easily move out of your product (maybe back to what they used before) important.
+* Let Me Go Back! [10] - On barriers to entry, and how letting customers understand they can easily move out of your product (maybe back to what they used before) is important.
 * Bloatware and the 80/20 Myth [11] - 80% of software users use 20% of features, so you can win the market with just 20% of the features, right? No, because not everyone uses the same 20%! I can't state how often I meet founders who don't understand this.
 * Strategy Letter V [12] - How companies have an advantage in commoditizing their complements, and how this can explain some investments in Open Source software.
 
