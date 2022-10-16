@@ -1691,4 +1691,25 @@ return {
     authors = {"Mark Priestley"},
     digital = false,
   },
+  {
+    title = "Macroéconomie (Macroeconomics)",
+    url = "https://www.amazon.fr/gp/product/2326002628/",
+    cover = {amazon = "41bibO7jZpL"},
+    authors = {"Olivier Blanchard", "Daniel Cohen"},
+    digital = false,
+  },
+  {
+    title = "Human Compatible: Artificial Intelligence and the Problem of Control",
+    url = "https://www.amazon.com/Human-Compatible-Artificial-Intelligence-Problem/dp/0525558616",
+    cover = {amazon = "41nz36A4RdL"},
+    authors = {"Stuart Russell"},
+    digital = false,
+  },
+  {
+    title = "Math Games with Bad Drawings",
+    url = "https://www.amazon.com/Math-Games-Bad-Drawings-Games-ebook/dp/B09BN43BP4",
+    cover = {amazon = "51OoM21vEeL"},
+    authors = {"Ben Orlin"},
+    digital = false,
+  },
 }
