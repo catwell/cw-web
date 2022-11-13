@@ -7,6 +7,7 @@ TPL.html_post = [[
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta name="description" content="{{description}}">
+    <link rel="canonical" href="https://blog.separateconcerns.com/{{url}}">
     <link href="css/theme.css" rel="stylesheet" type="text/css">
     {{#has_code}}
       <link href="css/rainbow-github.css" rel="stylesheet" type="text/css">
@@ -50,6 +51,7 @@ TPL.html_index = [[
       name="description"
       content="Pierre Chapuis' online journal about system architecture, programming, startups and the separation of concerns."
     >
+    <link rel="canonical" href="https://blog.separateconcerns.com">
     <link href="css/theme.css" rel="stylesheet" type="text/css">
     <link
       rel="alternate" type="application/atom+xml"

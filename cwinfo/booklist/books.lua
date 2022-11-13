@@ -1712,4 +1712,11 @@ return {
     authors = {"Ben Orlin"},
     digital = false,
   },
+  {
+    title = "Deep Learning with Python, Second Edition",
+    url = "https://www.amazon.com/Learning-Python-Second-François-Chollet/dp/1617296864",
+    cover = {amazon = "41IRZVZmgDL"},
+    authors = {"François Chollet"},
+    digital = false,
+  },
 }

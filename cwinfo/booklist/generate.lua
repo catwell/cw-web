@@ -10,6 +10,8 @@ local template = [[
       name="description"
       content="Reading list of Pierre Chapuis (catwell)"
     >
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link rel="canonical" href="https://catwell.info/booklist.html">
     <link href="style.css" rel="stylesheet" type="text/css">
     <title>catwell's books</title>
   </head>
