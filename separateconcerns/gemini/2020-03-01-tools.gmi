@@ -1,5 +1,5 @@
 # Tools
-published 2020-03-01
+published 2020-03-01,updated 2022-11-15
 
 
 A few days ago I read this article [1] which made me want to list some of the tools used at the four startups I have worked at so far.
@@ -140,54 +140,61 @@ I have also added a section at the end for some tools I use for my own projects.
 => https://aws.amazon.com 62: https://aws.amazon.com
 => https://www.mailjet.com 63: https://www.mailjet.com
 
-# Inch (2019 - 2020)
+# Inch (2019 - 2022)
 
 * GSuite [64] - E-mail, Calendar, Drive
 * GitHub [65] - Code hosting & issues
 * Slack [66] - Chat
 * Notion [67] - EDM
 * Hubspot [68] - CRM
-* Lucca [69] - Payroll, Leaves & absences
-* Mixpanel [70] - Analytics
-* Discord [71] - Team voice calls
+* Payfit [69] (previously Lucca [70]) - Payroll, Leaves & absences
+* Mixpanel [71] - Analytics
 * Intercom [72] - Customer support
 * Aircall [73] - Centralized phone calls
 * Uptime Robot [74] - Alerting
-* Rollbar [75] - Error monitoring
-* Scout [76] - APM
-* GCP [77] (+ OVH [78]) - Hosting
-* Mandrill [79] - Transactional e-mails
+* Rollbar [75] - Error monitoring (backend)
+* Sentry [76] - Error monitoring (frontend)
+* Scout [77] - APM
+* GCP [78] (+ OVH [79]) - Hosting
+* Mandrill [80] - Transactional e-mails
+* Xero [81] - Accounting
+* Postman [82] - API documentation
+* Pipefy [83] - Customer lifecycle
 
 => https://gsuite.google.com 64: https://gsuite.google.com
 => https://github.com 65: https://github.com
 => https://slack.com 66: https://slack.com
 => https://www.notion.so 67: https://www.notion.so
 => https://www.hubspot.fr 68: https://www.hubspot.fr
-=> https://www.lucca.fr 69: https://www.lucca.fr
-=> https://mixpanel.com 70: https://mixpanel.com
-=> https://discordapp.com 71: https://discordapp.com
+=> https://payfit.com 69: https://payfit.com
+=> https://www.lucca.fr 70: https://www.lucca.fr
+=> https://mixpanel.com 71: https://mixpanel.com
 => https://www.intercom.com 72: https://www.intercom.com
 => https://aircall.io 73: https://aircall.io
 => https://uptimerobot.com 74: https://uptimerobot.com
 => https://rollbar.com 75: https://rollbar.com
-=> https://scoutapm.com 76: https://scoutapm.com
-=> https://cloud.google.com 77: https://cloud.google.com
-=> https://www.ovh.com 78: https://www.ovh.com
-=> https://mandrillapp.com 79: https://mandrillapp.com
+=> https://sentry.io 76: https://sentry.io
+=> https://scoutapm.com 77: https://scoutapm.com
+=> https://cloud.google.com 78: https://cloud.google.com
+=> https://www.ovh.com 79: https://www.ovh.com
+=> https://mandrillapp.com 80: https://mandrillapp.com
+=> https://www.xero.com 81: https://www.xero.com
+=> https://www.postman.com 82: https://www.postman.com
+=> https://www.pipefy.com 83: https://www.pipefy.com
 
 # Personal
 
-* Fastmail [80] - Email
-* GitHub [81] - Code hosting
-* Pinboard [82] - Bookmarks
-* Gandi [83] - DNS
-* Uptime Robot [84] - Alerting
-* Vultr [85] - Hosting
+* Fastmail [84] - Email
+* GitHub [85] - Code hosting
+* Pinboard [86] - Bookmarks
+* Gandi [87] - DNS
+* Uptime Robot [88] - Alerting
+* Vultr [89] - Hosting
 
-=> https://www.fastmail.com 80: https://www.fastmail.com
-=> https://github.com 81: https://github.com
-=> https://pinboard.in 82: https://pinboard.in
-=> https://gandi.net 83: https://gandi.net
-=> https://uptimerobot.com 84: https://uptimerobot.com
-=> https://my.vultr.com 85: https://my.vultr.com
+=> https://www.fastmail.com 84: https://www.fastmail.com
+=> https://github.com 85: https://github.com
+=> https://pinboard.in 86: https://pinboard.in
+=> https://gandi.net 87: https://gandi.net
+=> https://uptimerobot.com 88: https://uptimerobot.com
+=> https://my.vultr.com 89: https://my.vultr.com
 

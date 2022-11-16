@@ -29,5 +29,5 @@ Note that the title of this blog is still "Separate Concerns": you should still 
 And finally, just to be clear: do not look too much at the left part of the curve if you are a very early stage startup looking for product-market fit. You can still - and probably should - start with a monolith as long as you choose an architecture or framework with good modularization capabilities (like Flask Blueprints [2]). Only consider SOA when you start to have a good rough idea of what the product will look like.
 
 => http://blog.separateconcerns.com/2013-01-02-startups-soa.html 1: http://blog.separateconcerns.com/2013-01-02-startups-soa.html
-=> http://flask.pocoo.org/docs/0.10/blueprints/ 2: http://flask.pocoo.org/docs/0.10/blueprints/
+=> https://flask.palletsprojects.com/en/2.2.x/blueprints/ 2: https://flask.palletsprojects.com/en/2.2.x/blueprints/
 

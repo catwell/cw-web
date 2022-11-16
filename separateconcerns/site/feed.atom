@@ -10,7 +10,7 @@
     rel="alternate" type="application/xhtml+xml"
   />
   <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
-  <updated>2022-11-13T09:44:34Z</updated>
+  <updated>2022-11-16T10:25:10Z</updated>
   <author>
     <name>Pierre 'catwell' Chapuis</name>
     <uri>https://catwell.info/</uri>
@@ -872,7 +872,7 @@ The one thing I could do to really improve the security of the whole thing is us
     />
     <id>tag:blog.separateconcerns.com,2020-03-01:tools</id>
     <published>2020-03-01T18:00:00Z</published>
-    <updated>2020-03-01T18:00:00Z</updated>
+    <updated>2022-11-15T21:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         
@@ -954,7 +954,7 @@ The one thing I could do to really improve the security of the whole thing is us
 <li><a href="https://www.mailjet.com">Mailjet</a> - Transactional e-mails</li>
 </ul>
 
-<h1 id="inch-2019---2020">Inch (2019 - 2020)</h1>
+<h1 id="inch-2019---2022">Inch (2019 - 2022)</h1>
 
 <ul>
 <li><a href="https://gsuite.google.com">GSuite</a> - E-mail, Calendar, Drive</li>
@@ -962,16 +962,19 @@ The one thing I could do to really improve the security of the whole thing is us
 <li><a href="https://slack.com">Slack</a> - Chat</li>
 <li><a href="https://www.notion.so">Notion</a> - EDM</li>
 <li><a href="https://www.hubspot.fr">Hubspot</a> - CRM</li>
-<li><a href="https://www.lucca.fr">Lucca</a> - Payroll, Leaves &amp; absences</li>
+<li><a href="https://payfit.com">Payfit</a> (previously <a href="https://www.lucca.fr">Lucca</a>) - Payroll, Leaves &amp; absences</li>
 <li><a href="https://mixpanel.com">Mixpanel</a> - Analytics</li>
-<li><a href="https://discordapp.com">Discord</a> - Team voice calls</li>
 <li><a href="https://www.intercom.com">Intercom</a> - Customer support</li>
 <li><a href="https://aircall.io">Aircall</a> - Centralized phone calls</li>
 <li><a href="https://uptimerobot.com">Uptime Robot</a> - Alerting</li>
-<li><a href="https://rollbar.com">Rollbar</a> - Error monitoring</li>
+<li><a href="https://rollbar.com">Rollbar</a> - Error monitoring (backend)</li>
+<li><a href="https://sentry.io">Sentry</a> - Error monitoring (frontend)</li>
 <li><a href="https://scoutapm.com">Scout</a> - APM</li>
 <li><a href="https://cloud.google.com">GCP</a> (+ <a href="https://www.ovh.com">OVH</a>) - Hosting</li>
 <li><a href="https://mandrillapp.com">Mandrill</a> - Transactional e-mails</li>
+<li><a href="https://www.xero.com">Xero</a> - Accounting</li>
+<li><a href="https://www.postman.com">Postman</a> - API documentation</li>
+<li><a href="https://www.pipefy.com">Pipefy</a> - Customer lifecycle</li>
 </ul>
 
 <h1 id="personal">Personal</h1>
@@ -2064,7 +2067,7 @@ for i in *; do echo &quot;Hidden=true&quot; &gt;&gt; $i; done
 
 <p>Note that the title of this blog is still &quot;Separate Concerns&quot;: you should still draw clear lines between services, and you should still modularize as much as possible <em>within</em> services. But not every function call needs to be turned into a message sent over a network, and not every data structure needs its own process and source control repository.</p>
 
-And finally, just to be clear: do not look too much at the left part of the curve if you are a very early stage startup looking for product-market fit. You can still - and probably should - start with a monolith as long as you choose an architecture or framework with good modularization capabilities (like <a href="http://flask.pocoo.org/docs/0.10/blueprints/">Flask Blueprints</a>). Only consider SOA when you start to have a good rough idea of what the product will look like.
+And finally, just to be clear: do not look too much at the left part of the curve if you are a very early stage startup looking for product-market fit. You can still - and probably should - start with a monolith as long as you choose an architecture or framework with good modularization capabilities (like <a href="https://flask.palletsprojects.com/en/2.2.x/blueprints/">Flask Blueprints</a>). Only consider SOA when you start to have a good rough idea of what the product will look like.
       </div>
     </content>
   </entry>
@@ -3475,7 +3478,7 @@ Yes, it is. And because of that it has a whole range of applications, from advan
 
 <p>One of the most obvious benefits of SOA is that services are easier to scale than monolithic applications. Maybe you want to migrate user authentication data to Redis and keep other data in whatever DB you already have? SOA makes it trivial. Maybe some part of your product would benefit from running on an AWS instance that has lots of RAM while another one is CPU-intensive? Just deploy the corresponding services where they run best.</p>
 
-<p>SOA will also help you achieve resilience. You can program user-facing or aggregate services defensively so that they detect the unavailability of backend services and degrade gracefully. You can even use a <a href="http://www.codinghorror.com/blog/2011/04/working-with-the-chaos-monkey.html">chaos monkey</a> to ensure this.</p>
+<p>SOA will also help you achieve resilience. You can program user-facing or aggregate services defensively so that they detect the unavailability of backend services and degrade gracefully. You can even use a <a href="https://blog.codinghorror.com/working-with-the-chaos-monkey/">chaos monkey</a> to ensure this.</p>
 
 <p>However in my opinion the main advantages of SOA are not technical, they are organizational.</p>
 

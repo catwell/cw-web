@@ -42,7 +42,7 @@ SOA also gives you language agnosticism almost for free. Not much prevents diffe
 
 Finally, I can see a (perhaps more abstract) last advantage to SOA which is related to the rise of the Programmable Web. After all, there is little difference between a Web API and a service, except that you wrote the latter and not the former. Embracing SOA will prepare you to work with external APIs, and more importantly to publish your own. For instance, lots of AWS services have started their life as internal services at Amazon.
 
-=> http://www.codinghorror.com/blog/2011/04/working-with-the-chaos-monkey.html 2: http://www.codinghorror.com/blog/2011/04/working-with-the-chaos-monkey.html
+=> https://blog.codinghorror.com/working-with-the-chaos-monkey/ 2: https://blog.codinghorror.com/working-with-the-chaos-monkey/
 
 ## Conclusion
 

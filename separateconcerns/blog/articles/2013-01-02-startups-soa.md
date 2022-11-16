@@ -27,7 +27,7 @@ If you are wondering if what you are currently doing is closer to SOA than to mo
 
 One of the most obvious benefits of SOA is that services are easier to scale than monolithic applications. Maybe you want to migrate user authentication data to Redis and keep other data in whatever DB you already have? SOA makes it trivial. Maybe some part of your product would benefit from running on an AWS instance that has lots of RAM while another one is CPU-intensive? Just deploy the corresponding services where they run best.
 
-SOA will also help you achieve resilience. You can program user-facing or aggregate services defensively so that they detect the unavailability of backend services and degrade gracefully. You can even use a [chaos monkey](http://www.codinghorror.com/blog/2011/04/working-with-the-chaos-monkey.html) to ensure this.
+SOA will also help you achieve resilience. You can program user-facing or aggregate services defensively so that they detect the unavailability of backend services and degrade gracefully. You can even use a [chaos monkey](https://blog.codinghorror.com/working-with-the-chaos-monkey/) to ensure this.
 
 However in my opinion the main advantages of SOA are not technical, they are organizational.
 
