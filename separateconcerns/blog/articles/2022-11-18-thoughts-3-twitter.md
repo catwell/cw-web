@@ -1,0 +1,20 @@
+% Thoughts 3 - The end of Twitter?
+% Pierre Chapuis
+% 2022-11-18 22:45:00
+
+    ::description::
+    Thoughts on the end of Twitter, Mastodon and the Fediverse, the comeback of RSS and Atom feeds, the problem of discovery, and discussion.
+
+> "Thoughts" are posts that relate to things that have been on my mind recently. Some are practical and some are just reflections on a given topic. They are less thought out than regular posts.
+
+So, [the Bird](https://twitter.com/pchapuis), of course. Not sure if or when it will collapse. Better safe than sorry so I am planning my retreat to [the Pachyderm](https://framapiaf.org/@catwell), but I do not really believe in the Fediverse model.
+
+[Eric](https://eric.daspet.name) said on Twitter - where he deletes his tweets so I won't link it - that it might be time to bring back RSS/Atom feeds. I agree, especially since I finally found [a feed reader I like](https://github.com/nkanaev/yarr). I know I won't have the discipline to post as frequently as him, [Karl](https://www.la-grange.net) or [Rob](http://www.landley.net/notes.html), still that's what those "Thoughts" posts were supposed to be for initially.
+
+But feeds by themselves are not enough. The value is in the graph and the discovery that comes with it. I follow about 450 feeds, and you cannot see which ones. I won't publish my raw [OPML](https://en.wikipedia.org/wiki/OPML) though. It's not properly categorized so it wouldn't be very useful anyway. It's like my [booklist](https://catwell.info/booklist/), which I consider deprecating soon: too many items, not enough value.
+
+Maybe the solution is to publish lists of links here from time to time like [Daniel](https://lemire.me/blog/2022/10/16/science-and-technology-links-october-16-2022/). You can also follow [my Pinboard](https://pinboard.in/u:catwell), which has feeds. [Lobsters](https://lobste.rs) is great too.
+
+Something else feeds don't do is discussion / debate. But maybe that's a good thing; I was growing tired of that aspect of Twitter lately. I think I prefer topic-specific spaces to social networks. I'm on a bunch of Slacks, Google Groups and mailing lists already. I liked forums but they're out of fashion.
+
+Oh, and for private messages, well... just send me an email, I guess.
