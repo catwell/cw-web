@@ -1,44 +1,36 @@
-/* CSS for catwell.info v9 */
-
-* {
-  margin: 0;
-  padding: 0;
-  border: 0;
+html, body, ul, ol, li, form, h1, h2, h3, h4, p {
+  margin: 0; padding: 0;
 }
 
 html {
-  height: 100%;
-  font-size: 18px;
-  font-family: "Courier New", Courier, monospace;
+  font-size: 20px;
 }
 
 body {
-  background: #d0d0d0;
-  height: 100%;
+  font-family: Georgia, serif;
+  line-height: 1.5rem;
+  background-color: #ffffff;
+}
+
+h1 {
+  font-family: Helvetica, sans-serif;
+  color: #333333;
+  font-size: 1.7rem;
+  font-weight: normal;
+  margin-bottom: 1rem;
 }
 
 p {
   margin-bottom: 1rem;
-  line-height: 1.3rem;
-}
-
-ul {
-  margin-bottom: 1rem;
-}
-
-li {
-  margin-bottom: 0.2rem;
-  line-height: 1.3rem;
-  list-style-position: inside;
 }
 
 a {
   text-decoration: none;
-  color: #ff4100;
+  color: #cc0000;
 }
 
 a:hover {
-  border-bottom: 1px dotted #ff4100;
+  border-bottom: 1px dotted #cc0000;
 }
 
 .head {
@@ -46,27 +38,39 @@ a:hover {
   margin-top: 3rem;
   margin-bottom: 1.5rem;
   height: 60px;
-  background: #d0d0d0 url('head.png') no-repeat center;
-}
-
-a.head:hover {
-   border-bottom: none;
+  text-align: center;
 }
 
 .container {
-  margin: auto;
-  margin-bottom: 1rem;
-  padding: 1rem;
+  box-sizing: border-box;
+  width: 100%;
   max-width: 900px;
-  background: #f9f9f9;
-  color: #000000;
-  overflow: hidden;
+  padding: 0 10px;
+  margin: auto;
+  padding-top: 1rem;
 }
 
-.container h1 {
-  font-size: 2rem;
+ul {
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.social {
   text-align: center;
-  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+.social img {
+  width: 24px;
+  height: 24px;
+  margin: 8px;
+  display: inline-block;
+}
+
+.social a:hover {
+  border: none;
+  opacity: 60%;
 }
 
 div.center {

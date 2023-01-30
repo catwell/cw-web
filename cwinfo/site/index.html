@@ -8,13 +8,16 @@
   <meta name="description" content="catwell.info">
   <link rel="canonical" href="https://catwell.info">
   <link rel="icon" type="image/png" href="assets/fav.png">
-  <link href="assets/style.css" rel="stylesheet" type="text/css" media="screen">
+  <link href="assets/style.css?cache=1" rel="stylesheet" type="text/css" media="screen">
   <script src="assets/script.js"></script>
 </head>
 
 <body>
 
-  <div class="head"></div>
+  <div class="head">
+    <img src="assets/head.png" alt="catwell.info" />
+  </div>
+
   <div class="container">
     <div class="center h-card"><p>
       Hi, I'm
@@ -25,27 +28,26 @@
       <img class="u-photo" src="https://catwell.info/assets/avatar.png"
         alt="avatar" style="display: none;">
       I live in <span class="p-locality">Paris</span>. I make software.
-    </p><p>
-      You may be <a href="https://catwell.info" class="u-url" rel="me">here</a>
-      to learn more <a href="about">about me</a>,
-      for <a href="https://blog.separateconcerns.com" rel="me">my blog</a>,
-      <a href="https://pinboard.in/u:catwell">my Web bookmarks</a>,
-      <a href="opensource">my Open Source code</a>,
-      <a href="booklist">the books I read</a>,
-      <a href="http://files.catwell.info/presentations/">my talks</a>,
-      <a href="conferences">the conferences I attended and spoke at</a>,
-      <a href="assets/resume-pierre-chapuis.pdf" rel="me">my resume</a>,
-      <a href="https://www.linkedin.com/in/pchapuis/" rel="me">my LinkedIn profile</a>
-      or maybe
-      <a href="https://twitter.com/pchapuis" rel="me">my Twitter account</a>.
-    </p><p>
-      If you want, you can also
-      <script type="text/javascript">
-        // <![CDATA[
-        document.write("<a href='mailto:"+cw_email()+"'>"+"email me"+"</a>")
-        // ]]>
-      </script><noscript><p>[enable JavaScript]</p></noscript>.
     </p></div>
+  </div>
+
+  <div class="social">
+    <a href="about"><img src="assets/icons/info.svg" alt="About"/></a>
+    <a href="https://blog.separateconcerns.com"><img src="assets/icons/rss.svg" alt="Blog"/></a>
+    <a href="https://github.com/catwell"><img src="assets/icons/github.svg" alt="GitHub"/></a>
+    <a href="conferences"><img src="assets/icons/conference.svg" alt="Conferences"/></a>
+    <a href="https://pinboard.in/u:catwell"><img src="assets/icons/pinboard.svg" alt="Pinboard"/></a>
+    <a href="booklist"><img src="assets/icons/books.svg" alt="Books"/></a>
+    <a href="https://framapiaf.org/@catwell"><img src="assets/icons/mastodon.svg" alt="Mastodon"/></a>
+    <a href="https://twitter.com/pchapuis"><img src="assets/icons/twitter.svg" alt="Twitter"/></a>
+    <a href="https://www.linkedin.com/in/pchapuis/"><img src="assets/icons/linkedin.svg" alt="LinkedIn"/></a>
+    <a href="https://luarocks.org/modules/catwell"><img src="assets/icons/lua.svg" alt="LuaRocks"/></a>
+    <a href="https://aur.archlinux.org/account/catwell"><img src="assets/icons/archlinux.svg" alt="AUR (Arch Linux)"/></a>
+    <script type="text/javascript">
+      // <![CDATA[
+      document.write('<a href="mailto:'+cw_email()+'"><img src="assets/icons/mail.svg" alt="Email"/></a>')
+      // ]]>
+    </script>
   </div>
 
   <script
