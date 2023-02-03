@@ -1,0 +1,151 @@
+% The Staff Engineer role at small companies
+% Pierre Chapuis
+% 2023-02-03 12:20:00
+
+    ::description::
+    How the Staff Engineer role can be defined at a small company like Inch.
+
+When I was [hired at Inch](https://blog.separateconcerns.com/2021-05-01-inch.html) my "official" position quickly became an issue. For various reasons neither the title they wanted to give me initially (Engineering Manager) nor the one I would be given externally (CTO) nor the obvious Senior Software Engineer worked. So I proposed to help them define the next position on the technical ladder.
+
+What follows is a translation of a document I wrote in French, slightly edited to remove Inch-specific details. It is still written from a European - and more specifically French - point of view. That document was later used to promote a 2nd engineer to Staff. I publish it here so it can help people needing to do something similar elsewhere.
+
+## General information on technical ladders
+
+Typical early career levels for software engineers (or developers) are relatively well-known:
+
+- Junior Software Engineer
+- (Mid-level) Software Engineer
+- Senior Software Engineer
+
+Progression is based on experience and it is expected that a good engineer will reach mid-level after 2 to 5 years of experience and senior between 5 to 10.
+
+Senior developers have two ways to evolve: branch into management or stay on the technical track. This document describes the second option.
+
+Let's start with a few key things to understand regarding management. A development "team" (project or run) is typically 3 to 10 people. It has a "lead", which is not a level or a management position. It is a technico-organizational role assumed by a Senior+ developer at a point in time.
+
+The names of levels after Senior differ depending on companies but can be for instance:
+
+- Staff Software Engineer
+- Senior Staff Software Engineer
+- Principal Software Engineer
+- Distinguished Software Engineer
+- Fellow
+
+At some large tech companies the "Distinguished" level is equivalent to VP and Fellow to SVP or CXO. At Inch, Staff corresponds to level F. The difference between Staff+ levels is often defined by impact:
+
+- Staff / Senior Staff -> impact at team level
+- Principal -> impact at company level (strategy)
+- Distinguished -> external impact (aura)
+
+Those levels constitute a pyramid where each stage must be much smaller than the one below (e.g. by a factor of 5 at least) otherwise they stop making sense.
+
+Given the size of Inch, only the Staff level makes sense. A Principal level may not be created until the company is large enough to have several independent technical teams (at least 12 developers, ideally around 30). Consequently, some things relating to strategy and aura are expected from the Staff level at Inch.
+
+## Becoming a Staff Engineer
+
+### Not mandatory
+
+A key point is that Senior is a "terminal level", which means it is not expected that all Senior engineers will become Staff at some point. An engineer may very well remain at the Senior level for their whole career.
+
+### The end of "experience"
+
+Progression from Junior to Mid to Senior is very related to experience and hard skills (soft as well, especially for Senior). But the value of marginal experience goes down with the years and is harder and harder to measure.
+
+The Staff level is still partially related to experience - at least 8 years are expected in general - but more importantly to impact within the company. This means hiring at this level is rare, and it is not unusual for a Staff Engineer to go back to Senior for a few years after a job change.
+
+Important note: Staff is not a management level but it *does* require more soft skills than previous levels (more on that later).
+
+### A polymorphic job
+
+Staff is a technical specialization level, hence not all Staff engineers look the same. To understand the differences, here are a few axes.
+
+A developer can specialize in one or several fields or technologies and become a true technical expert. For instance, they can be a master of their language and framework and contribute to their core or ecosystem. They can also become experts in a business domain. Those are depth-first approaches.
+
+Others, on the other hand, expand their knowledge horizontally and know about numerous domains, technologies and parts of the stack. This is the generalist, breadth-first approach.
+
+In general it is rather a mix of both approaches: developers with a very wide background and a few specialty topics they master. We talk about [T-Shaped](https://en.wikipedia.org/wiki/T-shaped_skills) people.
+
+Will Larson defines [4 Staff+ archetypes](https://staffeng.com/guides/staff-archetypes): tech leads, architects, solvers and right hands.
+
+## Expectations
+
+### Competences
+
+A Staff Engineer should be able to:
+
+- Grapple with a complex, poorly documented system quickly. For instance, identify the root cause of a bug in a code base they do not know well.
+
+- Understand what limits a system, anticipate problems and propose realistic and pragmatic architectural changes while taking existing assets and resources into account.
+
+- Know and understand high-level software and system architecture principles (Conway's Law, Gall's Law, permission models, different kinds of data flows...)
+
+- Communicate with their team as a Lead, organize a project, implement new processes.
+
+- Communicate with their management: report their results and those of their team, give visibility on load and work in progress.
+
+- Communicate outside the company, for instance: with customers, with prospects, with candidates, with investors, with Open Source communities...
+
+- Deal with a crisis, for instance organize production incident response.
+
+- Analyze a development opportunity while taking all company-level parameters into account (cash flow, strategy and positioning, long-term vision). Think ahead 2 / 6 / 18 months.
+
+- Understand the concepts of backlog, velocity / capacity / pressure. Know how to prioritize, understand when to say yes and when to say no. Know how and when they should defend their opinion depending on the topic (when to "be right").
+
+- Think ahead developments and choices, considering impact on maintainability, stability, evolutivity, complexity and overall performance.
+
+- Anticipate hiring needs and departure risks. Understand hiring may take 6 months, plus 6 extra months to become really efficient. Understand that at Inch scale not everyone is replaceable, but still reduce risk for the company in the event of a departure, including their own.
+
+- Do technical watch, implement new tools and processes when it is necessary - and not when it is not. Retiring tools and processes whose benefits are dubious. Tech watch channels available include HN / Lobste.rs / Tilde, blogs, podcasts, meetups, the GitHub feed, social networks...
+
+- Be visible. Communicate internally on their progress and that of their team, in spoken and written form.
+
+- Develop their own network. At this stage of their career, an engineer must know people to get in touch with regarding specific topics, recruiting, etc. This kind of network is developed through previous experiences, participation in meetups and conferences, Open Source contribution and so on.
+
+### Achievements
+
+A Staff Engineer should tick several (not all) of those boxes:
+
+- Be the designated expert of one or several significant parts of the technical stack or technical topics (e.g frontend, backend, infra / deployment, security...)
+
+- Be the designated expert of one or several significant parts of the product's code base.
+
+- Have realized or led a development or technical evolution which is undoubtedly an important achievement at company level, recognized outside the bonds of the technical team. This kind of very visible project can be handed to a Senior engineer ready to evolve to Staff as a Staff Project.
+
+- Mentor one or several junior developers. This is in "achievements" and not "competences": any Staff - and even Senior - developer should be able to help a junior get better or understand something, but some can be true career accelerators for the juniors they work with.
+
+## References
+
+### Bedrock
+
+- StaffEng (Will Larson) - [the website](https://staffeng.com/) and [the book](https://staffeng.com/book)
+- [Levels.fyi](https://www.levels.fyi/?compare=Google,Facebook,Microsoft&track=Software%20Engineer)
+- [Career Ladders](https://career-ladders.dev)
+- [Engineering Ladders framework](http://www.engineeringladders.com)
+
+### Ladder examples
+
+- [Basecamp's Handbook](https://basecamp.com/handbook/appendix-05-titles-for-programmers)
+- [Ladder at Mozilla](https://twitter.com/Gankra_/status/1046438955439271936)
+- [Ladder at Rent The Runway](https://dresscode.renttherunway.com/blog/ladder)
+- [Ladder at Kickstarter](https://gist.github.com/jamtur01/aef437a79fee5a9cefdc)
+- [Ladder at Criteo](https://labs.criteo.com/2019/02/criteo-engineering-career-tracks-and-leveling/)
+- [How GitLab works](https://about.gitlab.com/handbook/engineering/career-development/)
+- [How Spotify works](https://engineering.atspotify.com/2016/02/15/spotify-technology-career-steps/)
+- [Square's Growth Framework](https://developer.squareup.com/blog/squares-growth-framework-for-engineers-and-engineering-managers/)
+- [Dropbox Engineering Career Framework](https://dropbox.github.io/dbx-career-framework/)
+- [Google =)](https://goomics.net/59/)
+
+### More reading
+
+- [Hugo Lassiège at Malt](https://eventuallycoding.com/2021/06/24/senior-avec-6-ans-dexperience-et-apres/) (French)
+- [Nicolas Martignole on being Principal Engineer at Doctolib](https://www.touilleur-express.fr/2021/04/11/premier-mois-chez-doctolib/) (French)
+- [Understanding Project Management Will Improve Your Developer Job](https://blog.danielna.com/understanding-project-management-will-improve-your-developer-job/)
+- [If Management is the Only Way Up, We’re All F’d](https://sparktoro.com/blog/if-management-is-the-only-way-up-were-all-fd/)
+- [The Conjoined Triangles of Senior-Level Development](https://frontside.com/blog/2016-07-07-the-conjoined-triangles-of-senior-level-development/)
+- [Werner Vogels on skills](https://blog.separateconcerns.com/2013-03-24-vogels-skills.html)
+- [Software Architect – A Role, Not a Job](https://spin.atomicobject.com/2015/02/19/software-architect-role/)
+- [Becoming Staff Engineer: how and why?](https://touilleur-express.fr/2022/07/17/devenir-staff-engineer/) (French)
+
+### See also
+
+- [Progression app](https://progressionapp.com)

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta name="description" content="How the Staff Engineer role can be defined at a small company like Inch.">
+    <link rel="canonical" href="https://blog.separateconcerns.com/2023-02-03-staff-engineer-inch.html">
+    <link href="css/theme.css" rel="stylesheet" type="text/css">
+    <link
+      rel="alternate" type="application/atom+xml"
+      href="https://blog.separateconcerns.com/feed.atom"
+    />
+    <title>The Staff Engineer role at small companies</title>
+  </head>
+  <body>
+    <div id="container">
+    <header>
+      <h1>The Staff Engineer role at small companies</h1>
+      <h4>
+        published 2023-02-03
+        [ <a href="index.html">home</a> ]
+      </h4>
+    </header>
+    
+
+<p>When I was <a href="https://blog.separateconcerns.com/2021-05-01-inch.html">hired at Inch</a> my &quot;official&quot; position quickly became an issue. For various reasons neither the title they wanted to give me initially (Engineering Manager) nor the one I would be given externally (CTO) nor the obvious Senior Software Engineer worked. So I proposed to help them define the next position on the technical ladder.</p>
+
+<p>What follows is a translation of a document I wrote in French, slightly edited to remove Inch-specific details. It is still written from a European - and more specifically French - point of view. That document was later used to promote a 2nd engineer to Staff. I publish it here so it can help people needing to do something similar elsewhere.</p>
+
+<h2 id="general-information-on-technical-ladders">General information on technical ladders</h2>
+
+<p>Typical early career levels for software engineers (or developers) are relatively well-known:</p>
+
+<ul>
+<li>Junior Software Engineer</li>
+<li>(Mid-level) Software Engineer</li>
+<li>Senior Software Engineer</li>
+</ul>
+
+<p>Progression is based on experience and it is expected that a good engineer will reach mid-level after 2 to 5 years of experience and senior between 5 to 10.</p>
+
+<p>Senior developers have two ways to evolve: branch into management or stay on the technical track. This document describes the second option.</p>
+
+<p>Let&#39;s start with a few key things to understand regarding management. A development &quot;team&quot; (project or run) is typically 3 to 10 people. It has a &quot;lead&quot;, which is not a level or a management position. It is a technico-organizational role assumed by a Senior+ developer at a point in time.</p>
+
+<p>The names of levels after Senior differ depending on companies but can be for instance:</p>
+
+<ul>
+<li>Staff Software Engineer</li>
+<li>Senior Staff Software Engineer</li>
+<li>Principal Software Engineer</li>
+<li>Distinguished Software Engineer</li>
+<li>Fellow</li>
+</ul>
+
+<p>At some large tech companies the &quot;Distinguished&quot; level is equivalent to VP and Fellow to SVP or CXO. At Inch, Staff corresponds to level F. The difference between Staff+ levels is often defined by impact:</p>
+
+<ul>
+<li>Staff / Senior Staff -&gt; impact at team level</li>
+<li>Principal -&gt; impact at company level (strategy)</li>
+<li>Distinguished -&gt; external impact (aura)</li>
+</ul>
+
+<p>Those levels constitute a pyramid where each stage must be much smaller than the one below (e.g. by a factor of 5 at least) otherwise they stop making sense.</p>
+
+<p>Given the size of Inch, only the Staff level makes sense. A Principal level may not be created until the company is large enough to have several independent technical teams (at least 12 developers, ideally around 30). Consequently, some things relating to strategy and aura are expected from the Staff level at Inch.</p>
+
+<h2 id="becoming-a-staff-engineer">Becoming a Staff Engineer</h2>
+
+<h3 id="not-mandatory">Not mandatory</h3>
+
+<p>A key point is that Senior is a &quot;terminal level&quot;, which means it is not expected that all Senior engineers will become Staff at some point. An engineer may very well remain at the Senior level for their whole career.</p>
+
+<h3 id="the-end-of-quotexperiencequot">The end of &quot;experience&quot;</h3>
+
+<p>Progression from Junior to Mid to Senior is very related to experience and hard skills (soft as well, especially for Senior). But the value of marginal experience goes down with the years and is harder and harder to measure.</p>
+
+<p>The Staff level is still partially related to experience - at least 8 years are expected in general - but more importantly to impact within the company. This means hiring at this level is rare, and it is not unusual for a Staff Engineer to go back to Senior for a few years after a job change.</p>
+
+<p>Important note: Staff is not a management level but it <em>does</em> require more soft skills than previous levels (more on that later).</p>
+
+<h3 id="a-polymorphic-job">A polymorphic job</h3>
+
+<p>Staff is a technical specialization level, hence not all Staff engineers look the same. To understand the differences, here are a few axes.</p>
+
+<p>A developer can specialize in one or several fields or technologies and become a true technical expert. For instance, they can be a master of their language and framework and contribute to their core or ecosystem. They can also become experts in a business domain. Those are depth-first approaches.</p>
+
+<p>Others, on the other hand, expand their knowledge horizontally and know about numerous domains, technologies and parts of the stack. This is the generalist, breadth-first approach.</p>
+
+<p>In general it is rather a mix of both approaches: developers with a very wide background and a few specialty topics they master. We talk about <a href="https://en.wikipedia.org/wiki/T-shaped_skills">T-Shaped</a> people.</p>
+
+<p>Will Larson defines <a href="https://staffeng.com/guides/staff-archetypes">4 Staff+ archetypes</a>: tech leads, architects, solvers and right hands.</p>
+
+<h2 id="expectations">Expectations</h2>
+
+<h3 id="competences">Competences</h3>
+
+<p>A Staff Engineer should be able to:</p>
+
+<ul>
+<li><p>Grapple with a complex, poorly documented system quickly. For instance, identify the root cause of a bug in a code base they do not know well.</p></li>
+<li><p>Understand what limits a system, anticipate problems and propose realistic and pragmatic architectural changes while taking existing assets and resources into account.</p></li>
+<li><p>Know and understand high-level software and system architecture principles (Conway&#39;s Law, Gall&#39;s Law, permission models, different kinds of data flows...)</p></li>
+<li><p>Communicate with their team as a Lead, organize a project, implement new processes.</p></li>
+<li><p>Communicate with their management: report their results and those of their team, give visibility on load and work in progress.</p></li>
+<li><p>Communicate outside the company, for instance: with customers, with prospects, with candidates, with investors, with Open Source communities...</p></li>
+<li><p>Deal with a crisis, for instance organize production incident response.</p></li>
+<li><p>Analyze a development opportunity while taking all company-level parameters into account (cash flow, strategy and positioning, long-term vision). Think ahead 2 / 6 / 18 months.</p></li>
+<li><p>Understand the concepts of backlog, velocity / capacity / pressure. Know how to prioritize, understand when to say yes and when to say no. Know how and when they should defend their opinion depending on the topic (when to &quot;be right&quot;).</p></li>
+<li><p>Think ahead developments and choices, considering impact on maintainability, stability, evolutivity, complexity and overall performance.</p></li>
+<li><p>Anticipate hiring needs and departure risks. Understand hiring may take 6 months, plus 6 extra months to become really efficient. Understand that at Inch scale not everyone is replaceable, but still reduce risk for the company in the event of a departure, including their own.</p></li>
+<li><p>Do technical watch, implement new tools and processes when it is necessary - and not when it is not. Retiring tools and processes whose benefits are dubious. Tech watch channels available include HN / Lobste.rs / Tilde, blogs, podcasts, meetups, the GitHub feed, social networks...</p></li>
+<li><p>Be visible. Communicate internally on their progress and that of their team, in spoken and written form.</p></li>
+<li><p>Develop their own network. At this stage of their career, an engineer must know people to get in touch with regarding specific topics, recruiting, etc. This kind of network is developed through previous experiences, participation in meetups and conferences, Open Source contribution and so on.</p></li>
+</ul>
+
+<h3 id="achievements">Achievements</h3>
+
+<p>A Staff Engineer should tick several (not all) of those boxes:</p>
+
+<ul>
+<li><p>Be the designated expert of one or several significant parts of the technical stack or technical topics (e.g frontend, backend, infra / deployment, security...)</p></li>
+<li><p>Be the designated expert of one or several significant parts of the product&#39;s code base.</p></li>
+<li><p>Have realized or led a development or technical evolution which is undoubtedly an important achievement at company level, recognized outside the bonds of the technical team. This kind of very visible project can be handed to a Senior engineer ready to evolve to Staff as a Staff Project.</p></li>
+<li><p>Mentor one or several junior developers. This is in &quot;achievements&quot; and not &quot;competences&quot;: any Staff - and even Senior - developer should be able to help a junior get better or understand something, but some can be true career accelerators for the juniors they work with.</p></li>
+</ul>
+
+<h2 id="references">References</h2>
+
+<h3 id="bedrock">Bedrock</h3>
+
+<ul>
+<li>StaffEng (Will Larson) - <a href="https://staffeng.com/">the website</a> and <a href="https://staffeng.com/book">the book</a></li>
+<li><a href="https://www.levels.fyi/?compare=Google,Facebook,Microsoft&amp;track=Software%20Engineer">Levels.fyi</a></li>
+<li><a href="https://career-ladders.dev">Career Ladders</a></li>
+<li><a href="http://www.engineeringladders.com">Engineering Ladders framework</a></li>
+</ul>
+
+<h3 id="ladder-examples">Ladder examples</h3>
+
+<ul>
+<li><a href="https://basecamp.com/handbook/appendix-05-titles-for-programmers">Basecamp&#39;s Handbook</a></li>
+<li><a href="https://twitter.com/Gankra_/status/1046438955439271936">Ladder at Mozilla</a></li>
+<li><a href="https://dresscode.renttherunway.com/blog/ladder">Ladder at Rent The Runway</a></li>
+<li><a href="https://gist.github.com/jamtur01/aef437a79fee5a9cefdc">Ladder at Kickstarter</a></li>
+<li><a href="https://labs.criteo.com/2019/02/criteo-engineering-career-tracks-and-leveling/">Ladder at Criteo</a></li>
+<li><a href="https://about.gitlab.com/handbook/engineering/career-development/">How GitLab works</a></li>
+<li><a href="https://engineering.atspotify.com/2016/02/15/spotify-technology-career-steps/">How Spotify works</a></li>
+<li><a href="https://developer.squareup.com/blog/squares-growth-framework-for-engineers-and-engineering-managers/">Square&#39;s Growth Framework</a></li>
+<li><a href="https://dropbox.github.io/dbx-career-framework/">Dropbox Engineering Career Framework</a></li>
+<li><a href="https://goomics.net/59/">Google =)</a></li>
+</ul>
+
+<h3 id="more-reading">More reading</h3>
+
+<ul>
+<li><a href="https://eventuallycoding.com/2021/06/24/senior-avec-6-ans-dexperience-et-apres/">Hugo Lassiège at Malt</a> (French)</li>
+<li><a href="https://www.touilleur-express.fr/2021/04/11/premier-mois-chez-doctolib/">Nicolas Martignole on being Principal Engineer at Doctolib</a> (French)</li>
+<li><a href="https://blog.danielna.com/understanding-project-management-will-improve-your-developer-job/">Understanding Project Management Will Improve Your Developer Job</a></li>
+<li><a href="https://sparktoro.com/blog/if-management-is-the-only-way-up-were-all-fd/">If Management is the Only Way Up, We’re All F’d</a></li>
+<li><a href="https://frontside.com/blog/2016-07-07-the-conjoined-triangles-of-senior-level-development/">The Conjoined Triangles of Senior-Level Development</a></li>
+<li><a href="https://blog.separateconcerns.com/2013-03-24-vogels-skills.html">Werner Vogels on skills</a></li>
+<li><a href="https://spin.atomicobject.com/2015/02/19/software-architect-role/">Software Architect – A Role, Not a Job</a></li>
+<li><a href="https://touilleur-express.fr/2022/07/17/devenir-staff-engineer/">Becoming Staff Engineer: how and why?</a> (French)</li>
+</ul>
+
+<h3 id="see-also">See also</h3>
+
+<ul>
+<li><a href="https://progressionapp.com">Progression app</a></li>
+</ul>
+    </div>
+    <div id="footer">
+      [ <a href="index.html">home</a> ]
+    </div>
+    
+    <script
+      data-goatcounter="https://separateconcerns.goatcounter.com/count"
+      async src="//gc.zgo.at/count.js"></script>
+  </body>
+</html>
