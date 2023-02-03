@@ -1,4 +1,4 @@
-% The Staff Engineer role at small companies
+% The Staff Software Engineer role at small companies
 % Pierre Chapuis
 % 2023-02-03 12:20:00
 
