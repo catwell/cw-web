@@ -10,11 +10,88 @@
     rel="alternate" type="application/xhtml+xml"
   />
   <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
-  <updated>2023-02-03T11:27:07Z</updated>
+  <updated>2023-03-02T10:47:13Z</updated>
   <author>
     <name>Pierre 'catwell' Chapuis</name>
     <uri>https://catwell.info/</uri>
   </author>
+  <entry>
+    <title>Thoughts 5 - Being a good engineer; using the word We</title>
+    <link
+      rel="alternate" type="text/html"
+      href="https://blog.separateconcerns.com/2023-03-02-thoughts-5.html"
+    />
+    <id>tag:blog.separateconcerns.com,2023-03-02:thoughts-5</id>
+    <published>2023-03-02T11:45:00Z</published>
+    <updated>2023-03-02T11:45:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        
+
+<blockquote>
+<p>&quot;Thoughts&quot; are posts about what has been on my mind. Sometimes practical, sometimes not; often just things I read recently. Less thought out than regular posts.</p>
+</blockquote>
+
+<h2 id="what-is-a-good-engineer">What is a good engineer?</h2>
+
+<p>When I was a student at <a href="https://www.imt-atlantique.fr/en">IMT Atlantique</a> (back when it was still called Telecom Bretagne) I took an optional class about the history of telecommunication systems. It was mostly taught by retired engineers from the field.</p>
+
+<p>It was a fascinating class. A recurring theme was what an engineer&#39;s job was about. One of the teachers, who had been instrumental in the development of <a href="https://en.wikipedia.org/wiki/Electronic_switching_system">electronic switching</a> in Europe, said something among those lines: &quot;a good engineer delivers systems that are scalable, cheaper, and ship faster&quot;.</p>
+
+<p>I have been thinking about that topic lately, and even though I will not deny the &quot;it&#39;s all about trade-offs&quot; line I have been using for years, it is good to remember that those trade-offs should be made only on the optimum curve.</p>
+
+<p>Add to that the idea that engineers should know what systems <em>not</em> to build, and you have my definition of what makes a good engineer.</p>
+
+<h2 id="using-the-word-we">Using the word We</h2>
+
+<p><a href="https://www.la-grange.net/karl/">Karl</a> wrote <a href="https://www.la-grange.net/2023/01/23/reveur">something interesting</a> about using the word We to talk about a company or a team. He wrote it in French so here is a rough translation:</p>
+
+<blockquote>
+<p>I often see a company&#39;s employees use the word We (&quot;nous&quot; in French). For a very long time I have been trying to avoid using this turn of phrase in my mail, bugs, etc. For instance, at Mozilla, I used to say &quot;the Webcompat team&quot; or &quot;Mozilla&quot;, or to change the sentence to focus on the product itself.</p>
+
+<p>Instead of &quot;We should add feature H to solve this bug&quot;, I would say &quot;Product A needs feature H to solve this bug&quot;.</p>
+
+<p>When I notice myself unconsciously using &quot;we&quot;, I correct it immediately. But why? To preserve the emotional distance between work and pseudo-belonging to a company.</p>
+
+<p>&quot;We&quot; has a very inclusive meaning of identity for me, and so I avoid it in contractual relationships. The company no longer has a &quot;we&quot; when the time to reduce its workforce for financial gain comes. It is one of my struggle techniques, a small resistance.</p>
+</blockquote>
+
+<p>I understand what he is saying and it makes a lot of sense, yet I make a different choice. In fact, I cannot fathom working for a company or at least a team where I would not feel comfortable saying &quot;we&quot;.</p>
+
+<p>It&#39;s the same uneasy feeling I have when I see people say that small startups branding themselves as family is a red flag. I understand why they would say that. And sure, we are not family, but when you work that closely with people for years, I think there should be some sense of belonging. Maybe &quot;friends&quot; is a better word.</p>
+
+<p>Also, I am never going to work for a company if I am not aligned with its mission. If I start trying to distance myself from it and notice it, things will have to change one way or another.</p>
+
+<h2 id="opportunity-cost">Opportunity Cost</h2>
+
+<p><a href="https://twitter.com/rakyll/status/1631032634779525122">This tweet by Jaana Dogan</a> made me remember <a href="https://erikbern.com/2020/03/10/never-attribute-to-stupidity-that-which-is-adequately-explained-by-opportunity-cost.html">this blog post by Erik Bernhardsson</a>, which I often find to be true, especially when dealing with startups.</p>
+
+<blockquote>
+<p>Never attribute to stupidity that which is adequately explained by opportunity cost.</p>
+</blockquote>
+
+<h2 id="theory-of-mind">Theory of Mind</h2>
+
+<p><a href="https://boz.com/articles/theory-mind">A great post by Andrew Bosworth</a> (CTO of Meta) about how some people such as John Carmack can have an influence even after they&#39;re gone.</p>
+
+<h2 id="chrome-10-years-later">Chrome, 10 years later</h2>
+
+<p><a href="https://neugierig.org/software/blog/2022/12/chrome.html">A long post by Evan Martin</a> about his experience working on Chrome from 2007 to 2012. Toward the end, he turns to the state of Chrome and the Web today.</p>
+
+<p>I love this kind of retrospective post, which are full of anecdotes, deeper insight, and food for thought.</p>
+
+<p>By the way, Evan posts interesting things on a variety of topics. I have been subscribing to his feed for a very long time, I think for Arch-related content initially. You may want to look at his other posts as well.</p>
+
+<h2 id="invest-in-things-that-don39t-change">Invest in things that don&#39;t change</h2>
+
+<p>Here is <a href="https://world.hey.com/dhh/invest-in-things-that-don-t-change-6f7f19e1">DHH saying something</a> I&#39;ve been saying for a very long time as well, but it bears repeating. There is way too much stuff happening to follow it all. If you want to last in this job, especially as a generalist, you must figure out the fundamental things that will matter even more in 10 years than today, and ignore most of the rest unless it&#39;s a deliberate strategy.</p>
+
+<h2 id="crdts-automerge-and-braid">CRDTs, Automerge and Braid</h2>
+
+Even though it&#39;s not my main focus anymore, I am still following CRDT-based state synchronization systems attentively. Two projects have caught my attention recently. The first one is <a href="https://braid.org">Braid</a> which has been progressing steadily, and the second is Automerge which has announced <a href="https://automerge.org/blog/automerge-2/">a major 2.0 release</a>.
+      </div>
+    </content>
+  </entry>
   <entry>
     <title>The Staff Software Engineer role at small companies</title>
     <link
