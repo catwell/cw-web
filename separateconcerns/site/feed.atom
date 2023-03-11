@@ -10,11 +10,34 @@
     rel="alternate" type="application/xhtml+xml"
   />
   <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
-  <updated>2023-03-02T10:47:13Z</updated>
+  <updated>2023-03-11T10:53:52Z</updated>
   <author>
     <name>Pierre 'catwell' Chapuis</name>
     <uri>https://catwell.info/</uri>
   </author>
+  <entry>
+    <title>Leaving Inch</title>
+    <link
+      rel="alternate" type="text/html"
+      href="https://blog.separateconcerns.com/2023-03-11-leaving-inch.html"
+    />
+    <id>tag:blog.separateconcerns.com,2023-03-11:leaving-inch</id>
+    <published>2023-03-11T11:55:00Z</published>
+    <updated>2023-03-11T11:55:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        
+
+<p>In two weeks, I will no longer be an <a href="https://inch.fr">Inch</a> employee. I <a href="https://blog.separateconcerns.com/2020-12-16-personal-news.html#joining-inch">joined the company</a> a bit over three years ago, but it feels like much longer. Back then I had no child, and the first thing the word &quot;Pandemic&quot; brought to mind was a good board game.</p>
+
+<p>Three years later, Inch is not so different from the company I joined, and yet much better in many ways. As for me, I did what I came for initially, and then more. Now I have an opportunity I could not pass. It is too early to talk about it except <a href="https://framapiaf.org/@catwell/109904487542868111">in cryptic form</a>, but when I do you will understand.</p>
+
+<p>So I close this chapter of my professional life, leaving Inch and its team. Which is the hardest part, because they&#39;re a fun and endearing bunch, and we&#39;ve been through those not-so-great years together, and we&#39;ve made so many memories. And now <a href="https://blog.separateconcerns.com/2023-03-02-thoughts-5.html#using-the-word-we">we&#39;re friends</a>. But well, I am not leaving Paris, so it&#39;s not like we won&#39;t see each other again. :)</p>
+
+And by the way, Inch is hiring a software engineer! The offer is not out yet (I will update this post when it is), but it is a French-speaking, semi-remote position. Get in touch if you are interested.
+      </div>
+    </content>
+  </entry>
   <entry>
     <title>Thoughts 5 - Being a good engineer; using the word We</title>
     <link
