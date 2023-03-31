@@ -10,11 +10,36 @@
     rel="alternate" type="application/xhtml+xml"
   />
   <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
-  <updated>2023-03-11T10:53:52Z</updated>
+  <updated>2023-03-31T20:15:47Z</updated>
   <author>
     <name>Pierre 'catwell' Chapuis</name>
     <uri>https://catwell.info/</uri>
   </author>
+  <entry>
+    <title>Joining Finegrain</title>
+    <link
+      rel="alternate" type="text/html"
+      href="https://blog.separateconcerns.com/2023-03-31-joining-finegrain.html"
+    />
+    <id>tag:blog.separateconcerns.com,2023-03-31:joining-finegrain</id>
+    <published>2023-03-31T22:15:00Z</published>
+    <updated>2023-03-31T22:15:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        
+
+<p>It&#39;s been a week since I <a href="https://blog.separateconcerns.com/2023-03-11-leaving-inch.html">left Inch</a>, and now it is time to disclose what I am up to.</p>
+
+<p>Last Monday <a href="https://twitter.com/pchapuis/status/1640254206148767745">I joined</a> a very early-stage startup called <a href="https://finegrain.ai">Finegrain</a>. We&#39;re working on improving online images using AI with no humans in the loop. The founders of the company are the <a href="https://blog.separateconcerns.com/2013-06-20-three-years-proprietary-projects.html">Moodstocks</a> founders Denis and Cédric, so we get to work together again after 10 years.</p>
+
+<p>I won&#39;t hide it, I am not an AI specialist. Even though I keep informed on advances in the field, I have read <a href="https://www.manning.com/books/deep-learning-with-python-second-edition">books</a> and written some deep learning code, I am far from the level required at a company like that.</p>
+
+<p>I do intend to learn more, but it turns out we <em>may</em> also need the things I do have experience with, such as building scalable and resilient systems with few resources, designing simple APIs to do complex things, integrating with customers and more generally being a technical jack-of-all-trades at a small company :)</p>
+
+If <em>you</em> know about AI though, we are hiring! Job offer coming up very soon, ask me about it.
+      </div>
+    </content>
+  </entry>
   <entry>
     <title>Leaving Inch</title>
     <link
@@ -34,7 +59,7 @@
 
 <p>So I close this chapter of my professional life, leaving Inch and its team. Which is the hardest part, because they&#39;re a fun and endearing bunch, and we&#39;ve been through those not-so-great years together, and we&#39;ve made so many memories. And now <a href="https://blog.separateconcerns.com/2023-03-02-thoughts-5.html#using-the-word-we">we&#39;re friends</a>. But well, I am not leaving Paris, so it&#39;s not like we won&#39;t see each other again. :)</p>
 
-And by the way, Inch is hiring a software engineer! The offer is not out yet (I will update this post when it is), but it is a French-speaking, semi-remote position. Get in touch if you are interested.
+And by the way, Inch is hiring a software engineer! It is a French-speaking, semi-remote position. Get in touch if you are interested.
       </div>
     </content>
   </entry>

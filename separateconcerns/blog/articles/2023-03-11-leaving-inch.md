@@ -11,4 +11,4 @@ Three years later, Inch is not so different from the company I joined, and yet m
 
 So I close this chapter of my professional life, leaving Inch and its team. Which is the hardest part, because they're a fun and endearing bunch, and we've been through those not-so-great years together, and we've made so many memories. And now [we're friends](https://blog.separateconcerns.com/2023-03-02-thoughts-5.html#using-the-word-we). But well, I am not leaving Paris, so it's not like we won't see each other again. :)
 
-And by the way, Inch is hiring a software engineer! The offer is not out yet (I will update this post when it is), but it is a French-speaking, semi-remote position. Get in touch if you are interested.
+And by the way, Inch is hiring a software engineer! It is a French-speaking, semi-remote position. Get in touch if you are interested.

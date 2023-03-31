@@ -5,6 +5,7 @@
 => https://blog.separateconcerns.com Visit on the Web
 => gemini://catwell.info catwell.info
 
+=> 2023-03-31-joining-finegrain.gmi 2023-03-31 - Joining Finegrain
 => 2023-03-11-leaving-inch.gmi 2023-03-11 - Leaving Inch
 => 2023-03-02-thoughts-5.gmi 2023-03-02 - Thoughts 5 - Being a good engineer; using the word We
 => 2023-02-03-staff-engineer-inch.gmi 2023-02-03 - The Staff Software Engineer role at small companies
