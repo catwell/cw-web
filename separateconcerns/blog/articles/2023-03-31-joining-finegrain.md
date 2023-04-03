@@ -13,4 +13,4 @@ I won't hide it, I am not an AI specialist. Even though I keep informed on advan
 
 I do intend to learn more, but it turns out we *may* also need the things I do have experience with, such as building scalable and resilient systems with few resources, designing simple APIs to do complex things, integrating with customers and more generally being a technical jack-of-all-trades at a small company :)
 
-If *you* know about AI though, we are hiring! Job offer coming up very soon, ask me about it.
+If *you* know about AI though, [we are hiring](https://finegrain.ai/jobs/openings/)!

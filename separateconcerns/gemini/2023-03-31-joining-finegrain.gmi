@@ -10,11 +10,12 @@ I won't hide it, I am not an AI specialist. Even though I keep informed on advan
 
 I do intend to learn more, but it turns out we may also need the things I do have experience with, such as building scalable and resilient systems with few resources, designing simple APIs to do complex things, integrating with customers and more generally being a technical jack-of-all-trades at a small company :)
 
-If you know about AI though, we are hiring! Job offer coming up very soon, ask me about it.
+If you know about AI though, we are hiring [6]!
 
 => https://blog.separateconcerns.com/2023-03-11-leaving-inch.html 1: https://blog.separateconcerns.com/2023-03-11-leaving-inch.html
 => https://twitter.com/pchapuis/status/1640254206148767745 2: https://twitter.com/pchapuis/status/1640254206148767745
 => https://finegrain.ai 3: https://finegrain.ai
 => https://blog.separateconcerns.com/2013-06-20-three-years-proprietary-projects.html 4: https://blog.separateconcerns.com/2013-06-20-three-years-proprietary-projects.html
 => https://www.manning.com/books/deep-learning-with-python-second-edition 5: https://www.manning.com/books/deep-learning-with-python-second-edition
+=> https://finegrain.ai/jobs/openings/ 6: https://finegrain.ai/jobs/openings/
 
