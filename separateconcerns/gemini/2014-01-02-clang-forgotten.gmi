@@ -34,8 +34,8 @@ struct stuff_s {
 typedef const struct stuff_s stuff_t;
 
 ```
+
 * I already knew sequence points can be tricky, but this bit of code tricked me anyway: `a[i] = i++;`. There is no sequence point so the result is undefined.
 * The standard allows the representation of `NULL` to be different from `0`, but its value has to be `0` so you can almost always write code that assumes `NULL == 0` and be right provided you do not actually test `NULL == 0`.
 
 => http://blog.separateconcerns.com/2013-12-12-infinity-beyond.html 1: http://blog.separateconcerns.com/2013-12-12-infinity-beyond.html
-

@@ -55,4 +55,3 @@ I have explained the basics of the data.mdb file format. Should you have to debu
 
 => https://github.com/catwell/cw-lua/tree/master/lua-mdb 5: https://github.com/catwell/cw-lua/tree/master/lua-mdb
 => https://github.com/LMDB/lmdb 6: https://github.com/LMDB/lmdb
-

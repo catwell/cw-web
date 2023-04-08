@@ -29,7 +29,7 @@ I could hardly leave that 2009 paper by Pat Helland and Dave Campbell out of thi
 
 => http://bravenewgeek.com/distributed-systems-are-a-ux-problem/ 2: http://bravenewgeek.com/distributed-systems-are-a-ux-problem/
 
-## Why Logical Clocks are Easy
+## Bonus: Why Logical Clocks are Easy
 => http://queue.acm.org/detail.cfm?id=2917756
 
 I said on Hacker News that, if I wrote that article today (in May 2016), I would add this article to the list. I was advised [3] to edit the original blog post, so I did.
@@ -49,4 +49,3 @@ Distributed systems work is about that adversarial world out there, and how we w
 => https://aphyr.com/tags/jepsen 4: https://aphyr.com/tags/jepsen
 => https://en.wikipedia.org/wiki/Paxos_%28computer_science%29 5: https://en.wikipedia.org/wiki/Paxos_%28computer_science%29
 => https://en.wikipedia.org/wiki/Byzantine_fault_tolerance 6: https://en.wikipedia.org/wiki/Byzantine_fault_tolerance
-

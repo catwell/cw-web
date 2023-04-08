@@ -1,0 +1,43 @@
+```=lua-meta
+title = "Four years at Lima"
+published = "2018-01-06 14:10:00"
+description = "I have been working at Lima for four years."
+```
+
+Today marks the fourth birthday of [my joining Lima](https://blog.separateconcerns.com/2013-12-12-infinity-beyond.html), and it is a good occasion to talk a bit about some of the things I have been doing there.
+
+## Distributed filesystem synchronization
+
+For the public, [Lima](https://meetlima.com) makes a device which turns a USB hard drive into personal "cloud" data storage. We actually shipped two devices, Lima Original in July 2015 and Lima Ultra in Decemner 2016.
+
+Technically, Lima is really a personal distributed filesystem. Every single machine running a Lima application logged into to the same user account is a node in the system. All nodes keep a copy of all the filesystem metadata, which means the user can always browse the whole file tree, create or remove files, move them around, etc. The actual data, however, may or may not be on the device, which makes it possible to access a multi-terabyte filesystem on a mobile device. In theory, the Lima device is just another node in the system, except it always stores all the data.
+
+To make this all work, we need a mechanism to keep the filesystem metadata synchronized on all nodes. I have designed and implemented the algorithm and protocol behind this. It is tricky, because we always want users to be able to write to their filesystem, even on an offline device, so when devices come back online there may be conflicts to resolve. It is sometimes tempting to do something simple and correct, but which would not result in what the end user would expect. Yes, [distributed systems are a UX problem](http://bravenewgeek.com/distributed-systems-are-a-ux-problem/)...
+
+I can't get into too much detail here, this being proprietary technology and all, but I have drawn a lot of inspiration from [CRDTs](https://en.wikipedia.org/wiki/Conflict-free_replicated_data_type) as well as older systems like Bayou and WinFS.
+
+## Minicore: fitting into a tiny box
+
+Like I said, in theory, the Lima device just runs a slightly modified Lima application. And in theory, theory and practice are the same thing. But in practice...
+
+The Lima Original hardware was very limited, with a slow exotic CPU, 32 MB of RAM and 8 MB of Flash. At some point we realized that we would never succeed in running our software on it with reasonably good performance, so shortly before shipping we decided we had to do something radical: write entirely different software for it. We called that software "minicore", and I wrote its first version in a 6-week rush.
+
+Unlike the Lima filesystem, minicore is designed to be very conservative about its use of memory and I/O resources. It uses a different data model and synchronization protocol, which relies on client machines running Lima to do the heavy lifting. It prioritizes what Lima devices have to do best, which is downloading or serving file data.
+
+The trade-off here was a huge increase in the complexity of the system. Minicore itself is not that complex, but we had to introduce a separate protocol between client nodes and Lima devices, and a third protocol to deal with replication between Lima devices (if you add several Lima devices to the same account they mirror one another).
+
+## Other things
+
+I won't get into too much detail about all the other things I have written or worked on over the last four years, but important ones include:
+
+- our build system, which builds our software and its dependencies on five different OSs and three major architectures ;
+- an integration test suite designed among other things to replicate timing-related edge cases for the synchronization protocol ;
+- our "identity server" which lets users log into their account with just an email and a password ;
+- our Lua scripting layer, which I didn't implement initially but maintain now, and on which we rely more and more.
+
+## What's next
+
+Lately, my role has changed as I have become responsible for software architecture for the whole company. I now work more closely with the developers outside of my team (Core Engineering), who implement the user-facing parts of our stack. I also do some hiring - and by the way, if you are interested, get in touch. :)
+
+All in all, it was four interesting years. Things have not always been easy to say the least, but a relaxing job is not what I expect from a startup anyway. We have some really great people on the team, challenging plans for the future, and we learn a lot, so here's to the next years of Lima!
+

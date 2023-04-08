@@ -11,4 +11,3 @@ J'ai l'impression que ces quelques changements n'ont pas trop mal fonctionné, e
 
 => http://blog.separateconcerns.com/2009-11-16-fr-gen-y.html 1: http://blog.separateconcerns.com/2009-11-16-fr-gen-y.html
 => http://surf.suckless.org/ 2: http://surf.suckless.org/
-

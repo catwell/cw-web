@@ -1,4 +1,4 @@
-local lunamark = require "lunamark"
+local djot = require "cwdjot"
 local lustache = require "lustache"
 local pathx = require "pl.path"
 local dirx = require "pl.dir"
@@ -34,169 +34,66 @@ local function date_to_atom(date)
     return Date.Format("yyyy-mm-ddTHH:MM:SSZ"):tostring(date) .. "Z"
 end
 
-local function linearize(t)
-    if type(t) == "string" then
-        return t
-    else
-        assert(type(t) == "table")
-        local r = {}
-        for i = 1, #t do r[i] = linearize(t[i]) end
-        -- remove everything in < >, e.g. links in titles
-        ::loop::
-        for i = 1, #r do
-            if r[i]:sub(1, 1) == "<" then
-                while r[i]:sub(-1) ~= ">" do
-                    table.remove(r, i)
-                end
-                table.remove(r, i)
-                goto loop
-            end
-        end
-        return table.concat(r)
-    end
-end
-
-local function as_slug(s)
-    s = linearize(s)
-    s = string.gsub(s, "[^A-Za-z0-9 /_%-]", "")
-    return string.gsub(s, "[ /_]+", "-"):lower()
-end
-
 ---
 
-local function md_to_html_chunk(md)
-    local writer = lunamark.writer.html5.new({})
-    local has_code, description = false, nil
-    writer.verbatim = function(s)
-        local raw = s:match("^::raw::\n(.-)\n")
-        if raw then
-            return raw
-        else
-            has_code = true
-            local lang, code = s:match("^lang: (%w+)\n(.*)")
-            local l1
-            if lang and code then
-                l1 = fmt("<pre><code data-language=\"%s\">", lang)
-            else
-                code = s
-                l1 = "<pre><code>"
+local function article_to_html_chunk(md)
+    local input = djot.parse(md)
+    local handle = djot.StringHandle.new()
+    local renderer = djot.html.Renderer:new()
+    local metadata = {}
+
+    djot.overload_renderer_method(
+        renderer, "raw_block", function(self, node, old)
+            if node.format == "lua-meta" then
+                load(node.s, nil, "t", metadata)()
             end
-            return table.concat({l1, writer.string(code), "</code></pre>"})
+            old(self, node)
         end
-    end
-    local old_code = writer.code
-    writer.code = function(s)
-        has_code = true
-        return old_code(s)
-    end
-    writer.header = function(s, level)
-        return {
-            "<h", level, " id=\"", as_slug(s), "\">",
-            s,
-            "</h", level, ">"
-        }
-    end
-    local parse = lunamark.reader.markdown.new(writer, {lua_metadata = true})
-    local html, metadata = parse(md)
-    if has_code then metadata.has_code = true end
+    )
+
+    djot.overload_renderer_method(
+        renderer, "verbatim", function(self, node, old)
+            metadata.has_code = true
+            old(self, node)
+        end
+    )
+
+    djot.overload_renderer_method(
+        renderer, "code_block", function(self, node, old)
+            metadata.has_code = true
+            old(self, node)
+        end
+    )
+
+    -- djot.overload_renderer_method(
+    --     renderer, "heading", function(self, node)
+    --         self.out("<h")
+    --         self.out(node.level)
+    --         -- self.out(" id=\"")
+    --         -- self.out(as_slug(node.attr.id))
+    --         -- self.out("\"")
+    --         self:render_attrs(node)
+    --         self.out(">")
+    --     end
+    -- )
+
+    renderer:render(input, handle)
+    local html = handle:flush()
     return html, metadata
 end
 
-local function md_links(links)
-    local link_rows = {}
-    for _, link in ipairs(links) do
-        if not link.written then
-            links.ref = links.ref + 1
-            link.ref = links.ref
-            link.written = true
-            table.insert(link_rows, fmt("=> %s %d: %s\n", link.url, links.ref, link.url))
-        end
-    end
-    return link_rows
-end
-
-local function md_to_gemtext(md)
-    local writer = lunamark.writer.generic.new({})
-    local links = {ref = 0}
-
-    writer.verbatim = function(s)
-        if s:match("^::raw::\n(.-)\n") then
-            return ""
-        end
-        local code = s:match("^lang: %w+\n(.*)")
-        return {"```\n", code or s, "\n```"}
-    end
-
-    writer.header = function(s, level)
-        if level > 3 then return s end
-        local prefix = {string.rep("#", level), " "}
-        local link_id = lunamark.util.rope_to_string(s):match("<<<(%d+)>>>")
-        local function _links()
-            local r = md_links(links)
-            if #r > 0 then table.insert(r, "\n") end
-            return r
-        end
-        if link_id then
-            local link = links[tonumber(link_id)]
-            link.written = true
-            return {_links(links), prefix, link.label, "\n", "=> ", link.url}
-        end
-        return {_links(links), prefix, s}
-    end
-
-    writer.link = function(label, url)
-        local link_id = #links + 1
-        links[link_id] = {label = lunamark.util.rope_to_string(label), url = url}
-        return { "<<<", tostring(link_id), ">>>" }
-    end
-
-    writer.code = function(s)
-        return {"`", s, "`"}
-    end
-
-    writer.blockquote = function(s)
-        local r = {"> "}
-        for _,v in ipairs(s) do
-            if type(v) == "string" and v == "\n\n" then
-                table.insert(r, "\n> \n> ")
-            else
-                table.insert(r, v)
-            end
-        end
-        return r
-    end
-
-    writer.bulletlist = function(items)
-        local buffer = {}
-        for i, v in ipairs(items) do
-            buffer[i] = {"* ", v}
-        end
-        return lunamark.util.intersperse(buffer, "\n")
-    end
-
-    writer.image = function(label, src)
-        return {"=> ", src, " ", label}
-    end
-
-    writer.stop_document = function()
-        local rows = md_links(links)
-        if #rows > 0 then
-            return {"\n\n", rows}
-        end
-    end
-
-    local parse = lunamark.reader.markdown.new(writer, {lua_metadata = true})
-    local function f(link_id)
-        local link = links[tonumber(link_id)]
-        return fmt("%s [%d]", link.label, link.ref)
-    end
-    return parse(md):gsub("<<<(%d+)>>>", f)
+local function article_to_gemtext(md)
+    local input = djot.parse(md)
+    local handle = djot.StringHandle.new()
+    local renderer = djot.gemini.Renderer:new()
+    renderer:render(input, handle)
+    return handle:flush()
 end
 
 local function parse_entry(fname)
     local md = assert(file_read(fname))
-    local html, metadata = md_to_html_chunk(md)
-    local gemtext = md_to_gemtext(md)
+    local html, metadata = article_to_html_chunk(md)
+    local gemtext = article_to_gemtext(md)
     metadata.title = metadata.title:gsub("&", "&amp;")
     metadata.description = metadata.description:
         gsub("%s+"," "):gsub("^ ",""):gsub(" $","")
@@ -210,7 +107,7 @@ end
 local function process_file(path)
     local fnpart = pathx.splitext(pathx.basename(path))
     print(fnpart)
-    local fname = fmt("articles/%s.md", fnpart)
+    local fname = fmt("articles/%s.dj", fnpart)
     local url = fmt("%s.html", fnpart)
     local parsed_entry = parse_entry(fname)
     local metadata = parsed_entry.metadata
@@ -251,7 +148,7 @@ local function process_file(path)
 end
 
 local function process_all()
-    local files = dirx.getallfiles("articles", "*.md")
+    local files = dirx.getallfiles("articles", "*.dj")
     table.sort(files, function(x, y) return x > y end) -- newest first
     local entries = {}
     for i = 1, #files do

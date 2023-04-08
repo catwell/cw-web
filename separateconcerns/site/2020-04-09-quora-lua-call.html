@@ -22,29 +22,25 @@
         [ <a href="index.html">home</a> ]
       </h4>
     </header>
-    <p>From 2011 to 2014, I used to post answers on <a href="https://www.quora.com/">Quora</a>. I don&#39;t anymore, because I don&#39;t really like what the website has become. I have a copy of some of my answers <a href="http://files.catwell.info/misc/mirror/quora-answers/">here</a> but someone <a href="https://www.quora.com/What-is-the-__call-metamethod-in-Lua-and-what-are-some-of-its-uses-and-basic-examples/all_comments/Pierre-Chapuis?__nsrc__=4&amp;__snid3__=7556751152&amp;comment_id=135057589&amp;comment_type=2">commented</a> on one of my answers that it should be available more prominently on the Web, so I decided to repost a few of my answers here, starting with this one.</p>
-
+    <p>From 2011 to 2014, I used to post answers on <a href="https://www.quora.com/">Quora</a>. I don&rsquo;t anymore, because I don&rsquo;t really like what the website has become. I have a copy of some of my answers <a href="http://files.catwell.info/misc/mirror/quora-answers/">here</a> but someone <a href="https://www.quora.com/What-is-the-__call-metamethod-in-Lua-and-what-are-some-of-its-uses-and-basic-examples/all_comments/Pierre-Chapuis?__nsrc__=4&amp;__snid3__=7556751152&amp;comment_id=135057589&amp;comment_type=2">commented</a> on one of my answers that it should be available more prominently on the Web, so I decided to repost a few of my answers here, starting with this one.</p>
 <p>The <a href="https://www.quora.com/What-is-the-__call-metamethod-in-Lua-and-what-are-some-of-its-uses-and-basic-examples/">original question</a> was:</p>
-
 <blockquote>
-<p>I&#39;m really new to lua and relatively new to programming.,so kindly excuse if I say something stupid.</p>
-
-<p>I have a table named x and its metatable named y. When I have a <code>__call</code> method defined for the metatable <code>y</code>, then I can call <code>x()</code> but if I have a <code>__call</code> for <code>x</code> then I can not call <code>x()</code>.</p>
-
+<p>I&rsquo;m really new to lua and relatively new to programming.,so kindly excuse if I say something stupid.</p>
+<p>I have a table named x and its metatable named y.
+When I have a <code>__call</code> method defined for the metatable <code>y</code>, then I can call <code>x()</code> but if I have a <code>__call</code> for <code>x</code> then I can not call <code>x()</code>.</p>
 <p>What is <code>__call</code> used for? How does it work and what are some examples of usage</p>
 </blockquote>
-
 <p>I answered it on February 25, 2013.</p>
-
-<hr />
-
-<p><code>__call</code> is a metamethod, that means it is meant to be defined in a metatable. A <code>__call</code> field added to a regular table (<code>x</code> in your example) does nothing.</p>
-
-<p>The role of <code>__call</code> is to make something that is not a function (usually a table) act like a function. There are a few reasons why you may want to do that. Here are two examples.</p>
-
-<p>The first one is a memoizing factorial function. In Lua you could write a recursive factorial like this:</p>
-
-<pre><code data-language="lua">local function fact(n)
+<hr>
+<p><code>__call</code> is a metamethod, that means it is meant to be defined in a
+metatable. A <code>__call</code> field added to a regular table (<code>x</code> in your example)
+does nothing.</p>
+<p>The role of <code>__call</code> is to make something that is not a function (usually
+a table) act like a function. There are a few reasons why you may want
+to do that. Here are two examples.</p>
+<p>The first one is a memoizing factorial function. In Lua you could write
+a recursive factorial like this:</p>
+<pre><code class="language-lua">local function fact(n)
     if n == 0 then
         return 1
     else
@@ -52,14 +48,15 @@
     end
 end
 </code></pre>
-
-<p>Note: this is not a good way to write a recursive factorial because you are not taking advantage of tail calls, but it&#39;s enough for what I want to explain.</p>
-
-<p>Now imagine your code uses that function to calculate the factorials of numbers from 1 to <code>N</code>. This would be very wasteful since you would calculate the factorial of <code>N</code> once, the factorial of <code>N-1</code> twice, and so on. You would end up computing approximately <code>N²/2</code> factorials.</p>
-
+<p>Note: this is not a good way to write a recursive factorial because you
+are not taking advantage of tail calls, but it&rsquo;s enough for what I want
+to explain.</p>
+<p>Now imagine your code uses that function to calculate the factorials of
+numbers from 1 to <code>N</code>. This would be very wasteful since you would
+calculate the factorial of <code>N</code> once, the factorial of <code>N-1</code> twice, and so
+on. You would end up computing approximately <code>N²/2</code> factorials.</p>
 <p>Instead you could write that:</p>
-
-<pre><code data-language="lua">local fact
+<pre><code class="language-lua">local fact
 fact = setmetatable(
     {[0] = 1},
     {
@@ -72,12 +69,13 @@ fact = setmetatable(
     }
 )
 </code></pre>
-
-<p>It is an implementation of factorial that memoizes the results it has already computed, which you can call like a function. You can use it exactly like the previous implementation of factorial and get linear complexity.</p>
-
-<p>Another use case for <code>__call</code> is matrices. Imagine you have a matrix implementation that works like that:</p>
-
-<pre><code data-language="lua">local methods = {
+<p>It is an implementation of factorial that memoizes the results it has
+already computed, which you can call like a function. You can use it
+exactly like the previous implementation of factorial and get linear
+complexity.</p>
+<p>Another use case for <code>__call</code> is matrices. Imagine you have a matrix
+implementation that works like that:</p>
+<pre><code class="language-lua">local methods = {
     get = function(self, i, j)
         return self[i + 1][j + 1]
     end
@@ -89,31 +87,27 @@ local new_matrix = function(t)
     return setmetatable(t, mt)
 end
 </code></pre>
-
 <p>You can use it like that:</p>
-
-<pre><code data-language="lua">local M = new_matrix({ {1, 2}, {3, 4} })
+<pre><code class="language-lua">local M = new_matrix({ {1, 2}, {3, 4} })
 local v = M:get(0, 1)
 assert(v == 2)
 </code></pre>
-
 <p>However scientists would probably expect something like this:</p>
-
-<pre><code data-language="lua">local v = M(0, 1)
+<pre><code class="language-lua">local v = M(0, 1)
 assert(v == 2)
 </code></pre>
-
 <p>You can achieve that thanks to <code>__call</code>:</p>
-
-<pre><code data-language="lua">local mt = {
+<pre><code class="language-lua">local mt = {
     __index = methods,
     __call = function(self, i, j)
         return self:get(i, j)
     end
 }
 </code></pre>
+<p>I hope this gives you enough information to understand how you can use
+<code>__call</code>. A word of warning though: like most other metamethods, it is
+useful but it is important not to abuse it. Simple code is better :)</p>
 
-I hope this gives you enough information to understand how you can use <code>__call</code>. A word of warning though: like most other metamethods, it is useful but it is important not to abuse it. Simple code is better :)
     </div>
     <div id="footer">
       [ <a href="index.html">home</a> ]

@@ -59,4 +59,3 @@ The one thing I could do to really improve the security of the whole thing is us
 => https://twitter.com/gawenr/status/1245973593453932544 10: https://twitter.com/gawenr/status/1245973593453932544
 => https://github.com/tadfisher/pass-otp 11: https://github.com/tadfisher/pass-otp
 => https://support.1password.com/one-time-passwords/ 12: https://support.1password.com/one-time-passwords/
-

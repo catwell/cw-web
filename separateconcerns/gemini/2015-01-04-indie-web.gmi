@@ -17,4 +17,3 @@ If you want to do the same, you can use this handy tool [8] to check everything 
 => http://catwell.info 6: http://catwell.info
 => http://indiewebcamp.com/h-entry 7: http://indiewebcamp.com/h-entry
 => http://indiewebify.me/ 8: http://indiewebify.me/
-

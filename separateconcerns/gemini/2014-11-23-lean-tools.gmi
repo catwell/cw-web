@@ -38,4 +38,3 @@ Eventually, this is a matter of choice. Avdi is right: fat tools usually exist f
 => https://github.com/catwell/haricot 9: https://github.com/catwell/haricot
 => http://yaml.org/spec/1.2/spec.html 10: http://yaml.org/spec/1.2/spec.html
 => https://github.com/catwell/haricot#note-about-yaml 11: https://github.com/catwell/haricot#note-about-yaml
-

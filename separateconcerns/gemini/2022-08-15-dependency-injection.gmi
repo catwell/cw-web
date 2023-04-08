@@ -133,4 +133,3 @@ If you have used Angular with Storybook [10], you may know what abuse of DI look
 A way to work around that if you still want to use DI may be to have sensible defaults for some injected objects. That way you can still override them if needed, but you can still have simple sample code.
 
 => https://storybook.js.org 10: https://storybook.js.org
-

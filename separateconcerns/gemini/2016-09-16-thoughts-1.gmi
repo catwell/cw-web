@@ -64,4 +64,3 @@ Two decades years ago cooperative scheduling [16] was more frequent than preempt
 Modern OSs do not make much distinction between a thread and a process anymore, threads are basically processes which share memory, and they are scheduled preemptively. I have come to think that this design results in code of lower quality, and which is harder to reason about. Of course, it is still possible to use event loops or programming languages which do their own preemptive scheduling (like Lua)...
 
 => https://en.wikipedia.org/wiki/Computer_multitasking#Cooperative_multitasking 16: https://en.wikipedia.org/wiki/Computer_multitasking#Cooperative_multitasking
-

@@ -11,7 +11,7 @@ In August 2014, MoonRocks, one of Leaf's many projects, became the official webs
 
 Eventually, in March 2016, Etiene Dalcol took up the project [6]. By September her and Leaf had written the code for labels and "follows", which replace endorsements. They also added a feature for users to convert their Toolbox endorsements to LuaRocks follows. I sent them a data dump which they imported into the production LuaRocks website, and I turned Lua Toolbox read-only.
 
-Today, I finally replaced the whole website by a static page [7] redirecting users to LuaRocks. In the end, the Toolbox had 232 users and referenced 1217 modules. The source code remains available but I would not advise you to do anything with it (it uses old Lapis APIs, from a time where plain Lua support was not official).
+Today, I finally replaced the whole website by a static page [7] redirecting users to LuaRocks. In the end, the Toolbox had 232 users and referenced 1217 modules. The source code remains available [8] but I would not advise you to do anything with it (it uses old Lapis APIs, from a time where plain Lua support was not official).
 
 => http://files.catwell.info/presentations/2013-11-lua-workshop-lua-ecosystem 1: http://files.catwell.info/presentations/2013-11-lua-workshop-lua-ecosystem
 => https://www.lua.org/wshop13.html 2: https://www.lua.org/wshop13.html
@@ -20,4 +20,4 @@ Today, I finally replaced the whole website by a static page [7] redirecting use
 => https://github.com/catwell/lua-toolbox/issues/18 5: https://github.com/catwell/lua-toolbox/issues/18
 => https://github.com/luarocks/luarocks-site/pull/86 6: https://github.com/luarocks/luarocks-site/pull/86
 => https://lua-toolbox.com 7: https://lua-toolbox.com
-
+=> https://github.com/catwell/lua-toolbox 8: https://github.com/catwell/lua-toolbox

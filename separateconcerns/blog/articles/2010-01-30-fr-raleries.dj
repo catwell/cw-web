@@ -1,0 +1,41 @@
+```=lua-meta
+title = "(French) Râleries multiples"
+published = "2010-01-30 12:00:00"
+description = "La redevance TV en Angleterre, les alarmes incendie, Facebook et Java."
+```
+
+Ceux qui me connaissent savent que râler, je sais faire. J'essaie d'éviter autant que possible, mais parfois c'est nécessaire.
+
+## Paye ta TV
+
+On la critique en France mais la redevance TV est bien pire en Angleterre. Si dans l'hexagone elle est perçue par l'État, ici c'est une [société privée](http://www.tvlicensing.co.uk) qui s'en charge. Et contrairement à chez nous, ni les gens qui regardent la télé sur Internet ou sur un téléphone mobile ni les étudiants en résidence ne sont exemptés.
+
+Cette société, TV Licensing, envoie régulièrement des lettres de menace aux délinquants qui osent capter la bonne parole diffusée sur les ondes sans s'acquitter de la dîme. Hmm, un petit arrière-goût d'HADOPI ? J'ai reçu cinq lettres, et je suis d'après leurs dires "scheduled for visit". Ils peuvent venir, j'ai l'esprit tranquille : je ne regarde *pas* la TV, la loi anglaise ne leur permet pas d'entrer chez moi et de toute façon c'est tellement difficile techniquement d'atteindre ma porte que ça m'étonnerait qu'ils y arrivent un jour.
+
+## Le garçon qui criait au loup
+
+Depuis que j'habite ici, j'ai bien dû être réveillé une vingtaine de fois par des alarmes incendies en pleine nuit. La première fois, enfiler un manteau, des chaussures et descendre devant l'entrée se geler pendant une demi-heure en attendant l'arrivée de la sécurité peut être drôle, mais à la longue ça lasse. Qui plus est, le dispositif d'alarme permet de savoir aisément quel détecteur a déclenché l'alerte, et donc de confirmer rapidement que c'est une erreur, mais la loi anglaise stipule qu'ignorer l'alarme et retourner au chaud dans son lit est un crime !
+
+Si jamais un feu se déclenche vraiment, j'espère que les familles des victimes penseront à faire un procès à tous les responsables du dispositif d'alarme. Un système d'alerte qui génère autant de faux-positifs est totalement inutile, simplement parce que personne n'y prête plus attention. Tous les administrateurs système qui ont déjà essayé de lire des logs doivent bien le savoir...
+
+## La vie privée, c'est dépassé !
+
+C'est en tout cas ce que pense Mark Zuckerberg, le patron de Facebook. Il a le droit, et j'ai le droit de ne pas être d'accord. Comme [mon ami Dédé](http://www.alain-bazot.fr/index.php/la-vie-privee-un-concept-depasse/), je vais donc logiquement quitter le célèbre réseau social.
+
+De toute façon, les soi-disant réseaux sociaux sont des aberrations, des substituts au Web pour ceux qui ne l'ont pas compris. Vous voulez donner des nouvelles, ou même poster des liens débiles ? Ouvrez un blog (on appelait ça "une page perso" à l'époque révolue du Web 1.0), ou twittez si ça vous amuse ! Il semblerait que la raison qui pousse les gens à rejoindre Facebook soit la simplicité d'ouverture d'un compte. Ouvrir son blog aussi est très simple.
+
+Pour ma part, je ne consulterai pas Facebook en février. Je ne clôturerai mon compte que début mars de sorte que les gens qui n'ont que ce moyen pour me joindre puissent m'en demander un autre par message privé (je les reçois dans ma boite mail). Si vous trouvez que je suis paranoïaque, sachez simplement que l'un des sujets proposés en *MSc Thesis* à Cranfield consiste à faire du *data-mining* (collecter plein d'informations sur vous) sur Facebook en utilisant le *Grid Computing* (un paquet d'ordinateurs, dont des super-calculateurs, en réseau). Si de tels moyens, habituellement réservés à de très grosses industries comme le pétrole, l'automobile ou la mode, sont déployés dans ce but, c'est simplement parce que vos données personnelles valent très cher.
+
+## Java m'pendre (ou pas)
+
+Java est un langage tout pourri, si je commençais à énumérer toutes les raisons pour ça il me faudrait autant de lignes que pour coder une application de taille moyenne dans le dit langage, et oui ça fait beaucoup.
+
+En tout cas, étant contraint et forcé d'en faire pas mal en ce moment, j'ai pu bien m'arracher les cheveux sur quelques points :
+
+- `string.length()`, mais `table.length`. La cohérence, vous connaissez ?
+
+- Avec Java, Axis et un programme un peu complexe, il suffit qu'une exception se déclenche pour afficher une trace qui fait cinq fois la hauteur de votre console. Bien entendu, le message d'erreur intéressant est en haut.
+
+- Enfin et surtout, c'est *lent*, à la compilation comme à l'exécution.
+
+Voilà, tout ceux qui l'ont utilisé savent que Java c'est mal. Après, il y en a qui aiment, et je n'ai rien contre les masochistes, mais je supporte déjà moins les sadiques qui forcent des gens sains d'esprit à s'en servir.

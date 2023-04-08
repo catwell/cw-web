@@ -1,0 +1,13 @@
+```=lua-meta
+title = "Hello Gemini"
+published = "2022-02-05 19:45:00"
+description = "This blog is now available on Gemini."
+```
+
+I have wanted to play with [Gemini](https://gemini.circumlunar.space) for while now, so today being [the first day of FOSDEM](https://fosdem.org/2022/) I decided to do what I would have done if I was in Brussels and hack on something between two talks.
+
+I ended up adding Gemini support to [the static generator I use for this blog](https://github.com/catwell/cw-web/tree/master/separateconcerns/blog), which meant implementing a Gemini writer for [Lunamark](https://github.com/jgm/lunamark), plus a small trick to display links in the right place.
+
+To host it, I went with [Agate](https://github.com/mbrubeck/agate) which is a simple static content server; I will revisit this choice if I ever need dynamic content.
+
+If you want to check it out, point a Gemini browser - I use [Lagrange](https://gmi.skyjake.fi/lagrange/) - to [separateconcerns.com](gemini://separateconcerns.com).

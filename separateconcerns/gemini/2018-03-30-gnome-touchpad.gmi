@@ -28,4 +28,3 @@ But seriously, Gnome developers, if you are going to change an important default
 => img/gnome-touchpad-settings.jpg gnome-touchpad-settings
 
 => https://help.gnome.org/misc/release-notes/3.28/ 1: https://help.gnome.org/misc/release-notes/3.28/
-

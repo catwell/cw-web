@@ -23,26 +23,23 @@
         [ <a href="index.html">home</a> ]
       </h4>
     </header>
-    <h2 id="april-2020-update">April 2020 update</h2>
-
+    <section id="April-2020-update">
+<h2>April 2020 update</h2>
 <p>This article is out of date. Arch Linux <a href="https://bugs.archlinux.org/task/62248">stopped shipping OpenSSH with socket activation</a> due to the risk of DoS attack. Now you can just set <code>Port</code> in <code>sshd_config</code> as usual.</p>
-
-<h2 id="original-article">Original article</h2>
-
-<p>I often change the default SSH port from 22 to something else on servers I run. It kind of is a dangerous operation, especially when the only way you have to connect to that server <em>is</em> SSH.</p>
-
-<p>The historical way to do this is editing <code>sshd_config</code> and setting the <code>Port</code> variable, but with recent versions of Arch Linux and the default configuration, this will <em>not</em> work.</p>
-
+</section>
+<section id="Original-article">
+<h2>Original article</h2>
+<p>I often change the default SSH port from 22 to something else on servers I run. It kind of is a dangerous operation, especially when the only way you have to connect to that server <strong>is</strong> SSH.</p>
+<p>The historical way to do this is editing <code>sshd_config</code> and setting the <code>Port</code> variable, but with recent versions of Arch Linux and the default configuration, this will <strong>not</strong> work.</p>
 <p>The reason is that SSH is configured with systemd socket activation. So what you need to do is run <code>sudo systemctl edit sshd.socket</code> and set the contents of the file to:</p>
-
 <pre><code>[Socket]
 ListenStream=MY_PORT
 Accept=yes
 </code></pre>
-
 <p>where <code>MY_PORT</code> is the port number you want.</p>
+<p>I hope this short post will avoid trouble for other people, at least it will be a reminder for me the next time I have to setup an Arch server&hellip;</p>
+</section>
 
-I hope this short post will avoid trouble for other people, at least it will be a reminder for me the next time I have to setup an Arch server...
     </div>
     <div id="footer">
       [ <a href="index.html">home</a> ]

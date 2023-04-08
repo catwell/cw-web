@@ -22,45 +22,36 @@
         [ <a href="index.html">home</a> ]
       </h4>
     </header>
-    <p><a href="http://iris.karalabe.com/">Iris</a> is a &quot;decentralized Cloud messaging&quot; middleware that I have really started looking into with the recent <a href="http://iris.karalabe.com/archive/2014/version_v0_3_0_shiny_stable_apis">release of version 0.3.0</a>. It had struck me as interesting when I first heard of it <a href="https://www.youtube.com/watch?v=WTRORimPvHE">at FOSDEM 2014</a>. The reason for that, beyond the great presentation skills of its author, is that it implements principles I think are sound to build SOA upon.</p>
-
-<p>In Iris, the logical and physical layers of services are cleanly separated. Each box in the system runs a local instance of the Iris broker (&quot;Iris node&quot;). The broker is written in Go, and all broker instances in the system converse in a proprietary protocol.</p>
-
-<p>To provide or consume a service, you never have to open a connection to a remote machine: you just talk to your local broker using the <a href="https://dl.dropboxusercontent.com/u/10435909/Iris/relay.pdf">Iris relay protocol</a>. This means you can use any programming language you want as long as you implement this protocol, which is much simpler than the protocol used between brokers. There are official clients for the relay protocol (Iris calls them &quot;bindings&quot;, but I think that name is confusing) in Go, Erlang and Java. I have <a href="https://github.com/catwell/iris-lua">written one in Lua</a> that I will use for examples in the rest of this post (if you prefer, you will find corresponding code in Go for most examples <a href="https://github.com/catwell/iris-lua/tree/master/eFxamples">here</a>).</p>
-
-<p>In Iris, services are represented by names. To provide a service you register with its name, to consume one you address it by its name. That means you never dial into a specific instance of a service explicitly. From the consumer&#39;s point of view, the service could be provided by a single box as well as hundreds across different datacenters. Boxes can go up or down, and you will almost never have to care about it when writing code: it is an operational concern. The way Iris&#39; author puts it is that in Iris the smallest logical entity is a cluster, there is no concept of individual machine or process.</p>
-
+    <p><a href="http://iris.karalabe.com/">Iris</a> is a &ldquo;decentralized Cloud messaging&rdquo; middleware that I have really started looking into with the recent <a href="http://iris.karalabe.com/archive/2014/version_v0_3_0_shiny_stable_apis">release of version 0.3.0</a>. It had struck me as interesting when I first heard of it <a href="https://www.youtube.com/watch?v=WTRORimPvHE">at FOSDEM 2014</a>. The reason for that, beyond the great presentation skills of its author, is that it implements principles I think are sound to build SOA upon.</p>
+<p>In Iris, the logical and physical layers of services are cleanly separated. Each box in the system runs a local instance of the Iris broker (&ldquo;Iris node&rdquo;). The broker is written in Go, and all broker instances in the system converse in a proprietary protocol.</p>
+<p>To provide or consume a service, you never have to open a connection to a remote machine: you just talk to your local broker using the <a href="https://dl.dropboxusercontent.com/u/10435909/Iris/relay.pdf">Iris relay protocol</a>. This means you can use any programming language you want as long as you implement this protocol, which is much simpler than the protocol used between brokers. There are official clients for the relay protocol (Iris calls them &ldquo;bindings&rdquo;, but I think that name is confusing) in Go, Erlang and Java. I have <a href="https://github.com/catwell/iris-lua">written one in Lua</a> that I will use for examples in the rest of this post (if you prefer, you will find corresponding code in Go for most examples <a href="https://github.com/catwell/iris-lua/tree/master/eFxamples">here</a>).</p>
+<p>In Iris, services are represented by names. To provide a service you register with its name, to consume one you address it by its name. That means you never dial into a specific instance of a service explicitly. From the consumer&rsquo;s point of view, the service could be provided by a single box as well as hundreds across different datacenters. Boxes can go up or down, and you will almost never have to care about it when writing code: it is an operational concern. The way Iris&rsquo; author puts it is that in Iris the smallest logical entity is a cluster, there is no concept of individual machine or process.</p>
 <p>Iris supports three usual basic patterns for communication: Request/Response, Publish/Subscribe and Broadcast. A fourth one, Tunnel, is slightly more complicated.</p>
-
-<h1 id="request-response">Request/Response</h1>
-
+<section id="RequestResponse">
+<h1>Request/Response</h1>
 <p>This is the pattern everybody knows about from HTTP, and probably the workhorse of most SOAs. A client sends a request to a cluster, and a single node of the cluster answers it. Iris just does the messaging here: the request and the response are binary blobs, there is no notion of headers.</p>
-
 <p>Here is how it looks in Lua on the client side:</p>
-
-<pre><code data-language="lua">local iris = require &quot;iris&quot;
+<pre><code class="language-lua">local iris = require "iris"
 
 local c = iris.new()
-assert(c:handshake(&quot;&quot;))
+assert(c:handshake(""))
 
-local req = c:request(&quot;echo&quot;, &quot;hello&quot;, 1000)
+local req = c:request("echo", "hello", 1000)
 c:process_one()
 local r = assert(req:response())
 
 c:teardown()
 
-print(&quot;reply arrived: &quot; .. r)
+print("reply arrived: " .. r)
 </code></pre>
-
 <p>and on the service side:</p>
-
-<pre><code data-language="lua">local iris = require &quot;iris&quot;
+<pre><code class="language-lua">local iris = require "iris"
 
 local c = iris.new()
-assert(c:handshake(&quot;echo&quot;))
+assert(c:handshake("echo"))
 
 c.handlers.request = function(req)
-    print(&quot;request arrived: &quot; .. req)
+    print("request arrived: " .. req)
     return req
 end
 
@@ -68,116 +59,102 @@ for i=1,5 do c:process_one() end
 
 c:teardown()
 </code></pre>
-
-<h1 id="publish-subscribe">Publish/Subscribe</h1>
-
-<p>Another well-known pattern. Consumers subscribe to a channel identified by a name, producers send messages into the channel and all subscribers receive them. There is no response from the subscriber. Channels are completely independent from clusters, i.e. channel &quot;X&quot; and cluster &quot;X&quot; can coexist and have nothing in common, and there is no restriction that a channel only works within a given cluster (any entity on the same Iris network can access it).</p>
-
-<p>Here is a publisher to channel &quot;somechan&quot; in Lua:</p>
-
-<pre><code data-language="lua">local iris = require &quot;iris&quot;
-local socket = require &quot;socket&quot;
+</section>
+<section id="PublishSubscribe">
+<h1>Publish/Subscribe</h1>
+<p>Another well-known pattern. Consumers subscribe to a channel identified by a name, producers send messages into the channel and all subscribers receive them. There is no response from the subscriber. Channels are completely independent from clusters, i.e. channel &ldquo;X&rdquo; and cluster &ldquo;X&rdquo; can coexist and have nothing in common, and there is no restriction that a channel only works within a given cluster (any entity on the same Iris network can access it).</p>
+<p>Here is a publisher to channel &ldquo;somechan&rdquo; in Lua:</p>
+<pre><code class="language-lua">local iris = require "iris"
+local socket = require "socket"
 
 local c = iris.new()
-assert(c:handshake(&quot;&quot;))
+assert(c:handshake(""))
 
 for i=1,5 do
-    c:publish(&quot;somechan&quot;, &quot;message &quot; .. i)
+    c:publish("somechan", "message " .. i)
     socket.sleep(1)
 end
 
 c:teardown()
 </code></pre>
-
 <p>and a consumer:</p>
-
-<pre><code data-language="lua">local iris = require &quot;iris&quot;
-local socket = require &quot;socket&quot;
+<pre><code class="language-lua">local iris = require "iris"
+local socket = require "socket"
 
 local c = iris.new()
-assert(c:handshake(&quot;&quot;))
+assert(c:handshake(""))
 
 c.handlers.pubsub.somechan = function(msg)
-    print(&quot;message arrived: &quot; .. msg)
+    print("message arrived: " .. msg)
 end
 
-c:subscribe(&quot;somechan&quot;)
+c:subscribe("somechan")
 
 for i=1,5 do c:process_one() end
 
 c:teardown()
 </code></pre>
-
-<h1 id="broadcast">Broadcast</h1>
-
-<p>We have seen that requests are sent to a single instance of a cluster. What if you want to notify <em>all</em> members of a cluster of some event? This is what Broadcast is for. It is kind of redundant with Publish/Subscribe (you could have all members of each cluster subscribe to a channel) but it is somehow cleaner to have a separate message type for this. You could use it to build more complicated things on top, for instance a full-fledged service bus.</p>
-
+</section>
+<section id="Broadcast">
+<h1>Broadcast</h1>
+<p>We have seen that requests are sent to a single instance of a cluster. What if you want to notify <strong>all</strong> members of a cluster of some event? This is what Broadcast is for. It is kind of redundant with Publish/Subscribe (you could have all members of each cluster subscribe to a channel) but it is somehow cleaner to have a separate message type for this. You could use it to build more complicated things on top, for instance a full-fledged service bus.</p>
 <p>Here is how to send a broadcast message in Lua:</p>
-
-<pre><code data-language="lua">local iris = require &quot;iris&quot;
+<pre><code class="language-lua">local iris = require "iris"
 
 local c = iris.new()
-assert(c:handshake(&quot;&quot;))
+assert(c:handshake(""))
 
-c:broadcast(&quot;bcst&quot;, &quot;hello&quot;)
+c:broadcast("bcst", "hello")
 c:teardown()
 </code></pre>
-
 <p>and how to handle them:</p>
-
-<pre><code data-language="lua">local iris = require &quot;iris&quot;
+<pre><code class="language-lua">local iris = require "iris"
 
 local c = iris.new()
-assert(c:handshake(&quot;bcst&quot;))
+assert(c:handshake("bcst"))
 
 c.handlers.broadcast = function(msg)
-    print(&quot;message arrived: &quot; .. msg)
+    print("message arrived: " .. msg)
 end
 
 for i=1,5 do c:process_one() end
 
 c:teardown()
 </code></pre>
-
-<h1 id="tunnel">Tunnel</h1>
-
+</section>
+<section id="Tunnel">
+<h1>Tunnel</h1>
 <p>Tunnels are the last and most complicated way to communicate provided by Iris. To understand why we need them, remember how requests work.</p>
-
 <p>The fact that any member of a cluster can answer a request prevents you from doing anything stateful, because you cannot know if you are talking to the same instance or not in two separate requests. Moreover, the nature of the request and response does not allow any of them to be composed of multiple parts sent in separate messages. A request cannot trigger multiple responses.</p>
-
 <p>Tunnels are a solution to all that. When you open a tunnel, you address a cluster, but what you obtain is a persistent, bidirectional, ordered pipe to a specific instance of that cluster. You can think of it as a TCP socket or a circuit if you come from a telecom background (although there are no latency guarantees). Tunnels implement a throttling algorithm so that both ends of the tunnel can specify a maximum size for their input buffer.</p>
-
 <p>For now, here is what I think of tunnels in the context of a SOA: they are very powerful but tricky to use. If you can avoid them, you should. If not, you should not use raw tunnels anyway: you should define your protocol, write an abstraction for it and never expose the tunnel itself to the application.</p>
-
 <p>One valid use case I can see for tunnels, and which is used in Iris examples, is streaming. But this can go much further. Like the name indicates, you could tunnel most protocols into them, so they could serve as the foundation for some kind of VPN.</p>
-
 <p>Anyway, here is an example client with multiple responses and state:</p>
-
-<pre><code data-language="lua">local iris = require &quot;iris&quot;
+<pre><code class="language-lua">local iris = require "iris"
 
 local c = iris.new()
-assert(c:handshake(&quot;&quot;))
+assert(c:handshake(""))
 
-local tun = c:tunnel(&quot;tunnel&quot;, 1000)
+local tun = c:tunnel("tunnel", 1000)
 tun:confirm()
 tun:allow(1024)
 
 tun.handlers.message = function(msg)
-    if msg == &quot;data&quot; then
-        print(&quot;got data&quot;)
-    elseif msg == &quot;continue&quot; then
-        print(&quot;got continue, sending request&quot;)
-        tun:cosend(&quot;request&quot;)
-    elseif msg == &quot;bye&quot; then
-        print(&quot;got bye, quitting&quot;)
+    if msg == "data" then
+        print("got data")
+    elseif msg == "continue" then
+        print("got continue, sending request")
+        tun:cosend("request")
+    elseif msg == "bye" then
+        print("got bye, quitting")
         tun:close()
     else
-        print(&quot;got invalid message: &quot; .. msg)
+        print("got invalid message: " .. msg)
         tun:close()
     end
 end
 
-local xfer = tun:transfer(&quot;request&quot;)
+local xfer = tun:transfer("request")
 while not xfer:run() do c:process_one() end
 
 local op
@@ -185,13 +162,11 @@ while op ~= iris.OP.TUN_CLOSE do op = c:process_one() end
 
 c:teardown()
 </code></pre>
-
 <p>and the server on the other end:</p>
-
-<pre><code data-language="lua">local iris = require &quot;iris&quot;
+<pre><code class="language-lua">local iris = require "iris"
 
 local c = iris.new()
-assert(c:handshake(&quot;tunnel&quot;))
+assert(c:handshake("tunnel"))
 
 local MAX_COUNT = 3
 local count = 0
@@ -199,21 +174,21 @@ local count = 0
 c.handlers.tunnel = function(tun)
     tun:allow(1024)
     tun.handlers.message = function(msg)
-        if msg == &quot;request&quot; then
+        if msg == "request" then
             if count &lt; MAX_COUNT then
                 count = count + 1
                 print(string.format(
-                    &quot;got request, sending %dx data + continue&quot;,
+                    "got request, sending %dx data + continue",
                     count
                 ))
-                for i=1,count do tun:cosend(&quot;data&quot;) end
-                tun:cosend(&quot;continue&quot;)
+                for i=1,count do tun:cosend("data") end
+                tun:cosend("continue")
             else
-                print(&quot;got request, sending bye&quot;)
-                tun:cosend(&quot;bye&quot;)
+                print("got request, sending bye")
+                tun:cosend("bye")
             end
         else
-            print(&quot;got invalid message: &quot; .. msg)
+            print("got invalid message: " .. msg)
             tun:close()
         end
     end
@@ -224,14 +199,14 @@ while op ~= iris.OP.TUN_CLOSE do op = c:process_one() end
 
 c:teardown()
 </code></pre>
-
-<h1 id="conclusion">Conclusion</h1>
-
+</section>
+<section id="Conclusion">
+<h1>Conclusion</h1>
 <p>Iris is a very interesting piece of software which implements a vision of systems that I like and cannot find in any other product out of the box. It is still very young and probably not ready for serious production yet, although I have found it stable during the (limited) testing I have done. Even though my current job does not involve SOA I will probably come back to it someday, so Iris will join the list of tools whose progress I follow attentively.</p>
+<p>On a side note, Iris was built for its authors&rsquo; thesis, and he is now <a href="http://iris.karalabe.com/archive/2014/core_concepts_at_dotscale">looking for a sponsor</a> to allow him to continue working on it. If you have the power to make that happen, give it a look. Think how VMWare / Pivotal must be happy of the deal they did with <a href="http://invece.org/">Antirez</a> :)</p>
+<p>Finally, if you try <a href="https://github.com/catwell/iris-lua">my Iris client</a> and find bugs, do not hesitate to report them on Github! I have no real world Iris system to try it on so there are certainly plenty.</p>
+</section>
 
-<p>On a side note, Iris was built for its authors&#39; thesis, and he is now <a href="http://iris.karalabe.com/archive/2014/core_concepts_at_dotscale">looking for a sponsor</a> to allow him to continue working on it. If you have the power to make that happen, give it a look. Think how VMWare / Pivotal must be happy of the deal they did with <a href="http://invece.org/">Antirez</a> :)</p>
-
-Finally, if you try <a href="https://github.com/catwell/iris-lua">my Iris client</a> and find bugs, do not hesitate to report them on Github! I have no real world Iris system to try it on so there are certainly plenty.
     </div>
     <div id="footer">
       [ <a href="index.html">home</a> ]

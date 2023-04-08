@@ -35,4 +35,3 @@ Moreover, Go appears to be a simpler language than Rust. I suspect I can learn e
 => https://github.com/ha/doozerd 7: https://github.com/ha/doozerd
 => https://github.com/bitly/nsq 8: https://github.com/bitly/nsq
 => http://iris.karalabe.com/ 9: http://iris.karalabe.com/
-

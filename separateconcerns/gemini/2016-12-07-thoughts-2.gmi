@@ -40,4 +40,3 @@ Here is something I have been believing in for a long time: there is no good tec
 Sadly, for reasons that probably have a lot to do with business models, things like remoteStorage [10] did not really take off. But I hope someone will revisit that idea someday, and find a way to make it take off.
 
 => https://unhosted.org/adventures/7/Adding-remote-storage-to-unhosted-web-apps.html 10: https://unhosted.org/adventures/7/Adding-remote-storage-to-unhosted-web-apps.html
-

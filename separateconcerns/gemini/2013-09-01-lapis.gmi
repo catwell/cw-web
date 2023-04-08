@@ -38,4 +38,3 @@ So, what did I think of it? Well, finally I could see myself write a serious Web
 => http://leafo.net/lapis/reference.html#input-validation 21: http://leafo.net/lapis/reference.html#input-validation
 => http://rocks.moonscript.org/ 22: http://rocks.moonscript.org/
 => https://github.com/leafo/moonrocks-site 23: https://github.com/leafo/moonrocks-site
-

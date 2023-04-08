@@ -22,4 +22,3 @@ CFLAGS="-I $(pwd)/.lua/include -O2" ./.lua/bin/pallenec fibonacci.pln
 => https://github.com/pallene-lang/pallene 1: https://github.com/pallene-lang/pallene
 => https://github.com/pallene-lang/lua-internals 2: https://github.com/pallene-lang/lua-internals
 => https://loadk.com 3: https://loadk.com
-

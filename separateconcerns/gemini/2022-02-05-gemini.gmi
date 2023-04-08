@@ -16,4 +16,3 @@ If you want to check it out, point a Gemini browser - I use Lagrange [6] - to se
 => https://github.com/mbrubeck/agate 5: https://github.com/mbrubeck/agate
 => https://gmi.skyjake.fi/lagrange/ 6: https://gmi.skyjake.fi/lagrange/
 => gemini://separateconcerns.com 7: gemini://separateconcerns.com
-

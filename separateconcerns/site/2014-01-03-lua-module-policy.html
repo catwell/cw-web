@@ -23,37 +23,37 @@
       </h4>
     </header>
     <p>Hisham just published an article about his personal <a href="http://hisham.hm/2014/01/02/how-to-write-lua-modules-in-a-post-module-world/">guidelines for writing Lua modules</a>. Interestingly, I do a lot of things differently. Let us see how.</p>
-
 <blockquote>
 <p>Policy Bit #1: always require a module into a local named after the last component of the module’s full name.</p>
 </blockquote>
-
 <p>I tend to do that, but not always. Exceptions include:</p>
-
 <ul>
-<li>modules with names that are too generic such as<code>path</code>, <code>utils</code> or <code>types</code> from Penlight, where I add an <code>x</code> at the end of the name (e.g. <code>pathx</code>);</li>
-<li>modules which I use as alternatives for others, for instance <code>cjson</code> which I call <code>json</code>;</li>
-<li>modules with names that are too long such as my own <code>multipart-post</code> which I call <code>mp</code> (it is not a valid identifier anyway, I would have to replace the dash by an underscore).</li>
+<li>
+modules with names that are too generic such as<code>path</code>, <code>utils</code> or <code>types</code> from Penlight, where I add an <code>x</code> at the end of the name (e.g. <code>pathx</code>);
+</li>
+<li>
+modules which I use as alternatives for others, for instance <code>cjson</code> which I call <code>json</code>;
+</li>
+<li>
+modules with names that are too long such as my own <code>multipart-post</code> which I call <code>mp</code> (it is not a valid identifier anyway, I would have to replace the dash by an underscore).
+</li>
 </ul>
-
 <blockquote>
 <p>Policy Bit #2: start a module by declaring its table using the same all-lowercase local name that will be used to require it.</p>
-
+</blockquote>
+<blockquote>
 <p>Policy Bit #3: Use local function to declare local functions only: that is, functions that won’t be accessible from outside the module.</p>
-
+</blockquote>
+<blockquote>
 <p>Policy Bit #4: public functions are declared in the module table, with dot syntax.</p>
 </blockquote>
-
-<p>I do something entirely different. First, I <em>never</em> use the function sugar in Lua, so instead of writing <code>local function f()</code> I write <code>local f = function()</code>.</p>
-
-<p>I also do not declare the module table at the top of the module, I return it at the end, listing public functions explicitly. That means public functions are declared as locals. Arguably, they could be confused with private functions but that doesn&#39;t bother me: if you are editing the code of the module, you probably know its interface. My public functions are also usually located at the end of the module.</p>
-
-<p>To illustrate, Hisham&#39;s module example is:</p>
-
-<pre><code data-language="lua">local bar = {}
+<p>I do something entirely different. First, I <strong>never</strong> use the function sugar in Lua, so instead of writing <code>local function f()</code> I write <code>local f = function()</code>.</p>
+<p>I also do not declare the module table at the top of the module, I return it at the end, listing public functions explicitly. That means public functions are declared as locals. Arguably, they could be confused with private functions but that doesn&rsquo;t bother me: if you are editing the code of the module, you probably know its interface. My public functions are also usually located at the end of the module.</p>
+<p>To illustrate, Hisham&rsquo;s module example is:</p>
+<pre><code class="language-lua">local bar = {}
 
 local function happy_greet(greeting)
-   print(greeting .. &quot;!!!! :-D&quot;)
+   print(greeting .. "!!!! :-D")
 end
 
 function bar.say(greeting)
@@ -62,11 +62,9 @@ end
 
 return bar
 </code></pre>
-
 <p>I would write instead:</p>
-
-<pre><code data-language="lua">local happy_greet = function(greeting)
-   print(greeting .. &quot;!!!! :-D&quot;)
+<pre><code class="language-lua">local happy_greet = function(greeting)
+   print(greeting .. "!!!! :-D")
 end
 
 local say = function(greeting)
@@ -77,17 +75,13 @@ return {
   say = say,
 }
 </code></pre>
-
-<p>One advantage of doing this is that when you call a public function in the module itself it is a local. That means that you avoid a table lookup, but also that <em>it acts as a private function from the point of view of other functions in your module</em>.</p>
-
+<p>One advantage of doing this is that when you call a public function in the module itself it is a local. That means that you avoid a table lookup, but also that <strong>it acts as a private function from the point of view of other functions in your module</strong>.</p>
 <p>To understand what I mean, imagine that we change our mind and now want to expose <code>happy_greet</code> as well.</p>
-
-<p>Hisham&#39;s module becomes:</p>
-
-<pre><code data-language="lua">local bar = {}
+<p>Hisham&rsquo;s module becomes:</p>
+<pre><code class="language-lua">local bar = {}
 
 function bar.happy_greet(greeting)
-   print(greeting .. &quot;!!!! :-D&quot;)
+   print(greeting .. "!!!! :-D")
 end
 
 function bar.say(greeting)
@@ -96,11 +90,9 @@ end
 
 return bar
 </code></pre>
-
 <p>Mine becomes:</p>
-
-<pre><code data-language="lua">local happy_greet = function(greeting)
-   print(greeting .. &quot;!!!! :-D&quot;)
+<pre><code class="language-lua">local happy_greet = function(greeting)
+   print(greeting .. "!!!! :-D")
 end
 
 local say = function(greeting)
@@ -112,37 +104,29 @@ return {
   happy_greet = happy_greet,
 }
 </code></pre>
-
-<p>The first thing we can notice is that we had to modify <code>say</code> in Hisham&#39;s module and not in mine. But now imagine a &quot;malicious&quot; user does this:</p>
-
-<pre><code data-language="lua">local bar = require &quot;bar&quot;
+<p>The first thing we can notice is that we had to modify <code>say</code> in Hisham&rsquo;s module and not in mine. But now imagine a &ldquo;malicious&rdquo; user does this:</p>
+<pre><code class="language-lua">local bar = require "bar"
 
 local fishy_greet = function(greeting)
-  print(greeting .. &quot; &gt;&lt;&gt;&quot;)
+  print(greeting .. " &gt;&lt;&gt;")
 end
 
 bar.happy_greet = fishy_greet
 
-bar.say(&quot;yay&quot;)
+bar.say("yay")
 </code></pre>
-
-<p>With my module, the output would be <code>yay!!!! :-D</code>. With Hisham&#39;s, the output would be <code>yay &gt;&lt;&gt;</code>: the user is allowed to monkey patch their module in a way that has an effect on functions they do not explicitly touch.</p>
-
+<p>With my module, the output would be <code>yay!!!! :-D</code>. With Hisham&rsquo;s, the output would be <code>yay &gt;&lt;&gt;</code>: the user is allowed to monkey patch their module in a way that has an effect on functions they do not explicitly touch.</p>
 <blockquote>
 <p>Policy Bit #5: construct a table for your class and name it LikeThis so we know your table is a class.</p>
-
+</blockquote>
+<blockquote>
 <p>Policy Bit #6: functions that are supposed to be used as object methods should be clearly marked as such, and the colon syntax is a great way to do it.</p>
 </blockquote>
-
-<p>Again, not how I do it :) Using CamelCase is a good idea but in the wild I see it more often for the actual module table, not for what Hisham calls the &quot;class&quot; table that is associated to <code>__index</code> in the metatable (I call it &quot;methods&quot;). Usually, it means (to me) that the constructor is <code>MyClass()</code>, whereas with a lowercase module name it would be <code>myclass.new()</code>. I use the latter and Penlight is an example of the former.</p>
-
-<p>Just like I do not use the <code>function</code> sugar, I do not use the colon syntax to define functions. Moreover, <em>I often call methods with explicit self in the module itself</em>. Any idea why? Yeah, same as above, resistance to monkey patches. I agree that this is not a very convincing argument given that I often skip the little <code>local print = print</code> dance.</p>
-
+<p>Again, not how I do it :) Using CamelCase is a good idea but in the wild I see it more often for the actual module table, not for what Hisham calls the &ldquo;class&rdquo; table that is associated to <code>__index</code> in the metatable (I call it &ldquo;methods&rdquo;). Usually, it means (to me) that the constructor is <code>MyClass()</code>, whereas with a lowercase module name it would be <code>myclass.new()</code>. I use the latter and Penlight is an example of the former.</p>
+<p>Just like I do not use the <code>function</code> sugar, I do not use the colon syntax to define functions. Moreover, <strong>I often call methods with explicit self in the module itself</strong>. Any idea why? Yeah, same as above, resistance to monkey patches. I agree that this is not a very convincing argument given that I often skip the little <code>local print = print</code> dance.</p>
 <p>Other advantages include, again, less call overhead and the ability to call methods consistently on objects before they have their metatable. This is sometimes useful in constructors.</p>
-
-<p>So where Hisham&#39;s class example is:</p>
-
-<pre><code data-language="lua">local myclass = {}
+<p>So where Hisham&rsquo;s class example is:</p>
+<pre><code class="language-lua">local myclass = {}
 
 local MyClass = {}
 
@@ -163,10 +147,8 @@ end
 
 return myclass
 </code></pre>
-
 <p>I would write:</p>
-
-<pre><code data-language="lua">local some_method = function(self)
+<pre><code class="language-lua">local some_method = function(self)
   -- code
 end
 
@@ -186,16 +168,13 @@ end
 
 return {new = new}
 </code></pre>
-
-<p>Of course sometimes I do <em>not</em> want to resist monkey patches, and in that case I use colon syntax for calls, but never for definitions.</p>
-
+<p>Of course sometimes I do <strong>not</strong> want to resist monkey patches, and in that case I use colon syntax for calls, but never for definitions.</p>
 <blockquote>
 <p>Policy Bit #7: do not set any globals in your module and always return a table in the end.</p>
 </blockquote>
-
 <p>This one I cannot disagree with. It is the only rule that has an obvious externally visible effect. Do this or you will annoy all your users.</p>
+<p>I think this is what matters the most in the end: modules always return tables and never create globals. The rest is mostly implementation details!</p>
 
-I think this is what matters the most in the end: modules always return tables and never create globals. The rest is mostly implementation details!
     </div>
     <div id="footer">
       [ <a href="index.html">home</a> ]

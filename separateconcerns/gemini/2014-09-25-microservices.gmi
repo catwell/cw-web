@@ -29,4 +29,3 @@ And finally, just to be clear: do not look too much at the left part of the curv
 
 => http://blog.separateconcerns.com/2013-01-02-startups-soa.html 1: http://blog.separateconcerns.com/2013-01-02-startups-soa.html
 => https://flask.palletsprojects.com/en/2.2.x/blueprints/ 2: https://flask.palletsprojects.com/en/2.2.x/blueprints/
-

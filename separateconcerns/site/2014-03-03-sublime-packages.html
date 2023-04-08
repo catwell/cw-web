@@ -22,27 +22,26 @@
         [ <a href="index.html">home</a> ]
       </h4>
     </header>
-    <p>I have finally decided to configure Sublime Text 2 to have it autocomplete Lua code the way I want it to.</p>
-
-<p>For instance, by default, when you start typing <code>function</code> and hit TAB, you get the following result:</p>
-
-<pre><code data-language="lua">function function_name( ... )
+    <p>I have finally decided to configure Sublime Text 2 to have it autocomplete
+Lua code the way I want it to.</p>
+<p>For instance, by default, when you start typing <code>function</code> and hit TAB,
+you get the following result:</p>
+<pre><code class="language-lua">function function_name( ... )
   -- body
 end
 </code></pre>
-
 <p>Instead I wanted this:</p>
-
-<pre><code data-language="lua">function(self)
-  error(&quot;unimplemented&quot;)
+<pre><code class="language-lua">function(self)
+  error("unimplemented")
 end
 </code></pre>
-
-<p>It turns out this is very simple. Go to <code>Preferences -&gt; Browse Packages...</code> and open the Lua directory. There are several files there, including two named <em>function-(fun).sublime-snippet</em> and <em>function-(function).sublime-snippet</em> which do almost the same thing.</p>
-
-<p>Remove the first one and open the second one in a text editor. Its content should be something like:</p>
-
-<pre><code>&lt;snippet&gt;
+<p>It turns out this is very simple. Go to <code>Preferences -&gt; Browse Packages...</code>
+and open the Lua directory. There are several files there, including two
+named <strong>function-(fun).sublime-snippet</strong> and <strong>function-(function).sublime-snippet</strong>
+which do almost the same thing.</p>
+<p>Remove the first one and open the second one in a text editor. Its content
+should be something like:</p>
+<pre><code class="language-xml">&lt;snippet&gt;
     &lt;content&gt;&lt;![CDATA[function ${1:function_name}( ${2:...} )
     ${0:-- body}
 end]]&gt;&lt;/content&gt;
@@ -51,20 +50,18 @@ end]]&gt;&lt;/content&gt;
     &lt;description&gt;function&lt;/description&gt;
 &lt;/snippet&gt;
 </code></pre>
-
 <p>Replace it by:</p>
-
-<pre><code>&lt;snippet&gt;
+<pre><code class="language-xml">&lt;snippet&gt;
     &lt;content&gt;&lt;![CDATA[function(${1:self})
-    ${0:error(&quot;unimplemented&quot;)}
+    ${0:error("unimplemented")}
 end]]&gt;&lt;/content&gt;
     &lt;tabTrigger&gt;function&lt;/tabTrigger&gt;
     &lt;scope&gt;source.lua&lt;/scope&gt;
     &lt;description&gt;function&lt;/description&gt;
 &lt;/snippet&gt;
 </code></pre>
+<p>&hellip; and that is all, the deed is done!</p>
 
-... and that is all, the deed is done!
     </div>
     <div id="footer">
       [ <a href="index.html">home</a> ]

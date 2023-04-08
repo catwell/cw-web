@@ -1,0 +1,34 @@
+```=lua-meta
+title = "Lean tools"
+published = "2014-11-23 21:45:00"
+description = [[
+  On the complexity of programming tools and libraries.
+  Some people prefer fat tools like Ruby on Rails, I prefer lean tools.
+]]
+```
+
+Two people I respect a lot, [Avdi Grimm](http://about.avdi.org/) and [Michel Martens](http://soveran.com/), are having [an interesting debate](http://devblog.avdi.org/2014/11/21/in-defense-of-fat-tools/) about the complexity of programming tools and libraries.
+
+In the Ruby community, Michel is well-known for writing simple tools that do their job well. Avdi defends the framework approach of Rails, arguing that using fatter tools allows you to make your own code simpler. If you want to hear them debate it, listen to [the podcast](http://devchat.tv/ruby-rogues/182-rr-keeping-libraries-and-utilities-small-and-simple-with-michel-martens).
+
+It will not surprise people who know me that I side with Michel here. Actually, I am probably more extreme than he is: I used his [Redis Object Mapper](https://github.com/soveran/ohm) at Moodstocks some years ago, but I eventually went back to using redis-rb directly, and finally dropped the Ruby language entirely. You can also see by yourself how much I obsess about simplicity by looking as [my list of quotes](http://files.catwell.info/notes/quotes.txt).
+
+I feel like most programmers do not reason like Michel and me regarding this, and it seems to me those who do often have similar backgrounds in Unix and maintenance of production systems. Maybe as a result, we tend to take a system approach to everything, so when we evaluate the complexity of software, we take into account the complexity of dependencies as well as the complexity of the application code itself.
+
+When running production systems, the most important thing you want to optimize for is the speed with which you can diagnose and recover from a problem. Reliability is also important, sure, but you quickly learn that no matter how good the software you use is, it *will* fail (coincidentally, another host of the podcast [talks about that on her blog](http://blog.jessitron.com/2014/03/weakness-and-vulnerability.html)). For that purpose, you want few moving pieces, each one being simple enough for you to understand it.
+
+You can take this idea very far. Around 2007 I thought about how nice it would be to know a programming language so well that 1) there would be nothing in it I would not know about and 2) I would be able to know exactly what every line of code I wrote did internally. At the time, I wondered if it would require me to pick a language like Forth or LISP implement it myself. It turned out not to: I discovered Lua, whose reference implementation is roughly 15000 lines of (readable) C code. It has been my dynamic language of choice ever since.
+
+When I have a problem to solve, I look for the simplest Open Source tool that does it and weigh the cost of implementing the feature myself against the cost of using and maintaining this tool. Tools usually win when they just do what I wanted; they lose when they do too many things or pull in too many dependencies I did not already use.
+
+Many Ruby programmers, when they install a gem that pulls in several dependencies and compiles some C code, think: "How nice! All of this is automated for me!" The reaction of an operations person, on the other hand, is closer to this:
+
+![nope](img/nope.gif)
+
+When I write Open Source tools myself, I try to reason the same way. For instance, I wrote a small [Beanstalk](http://kr.github.io/beanstalkd/) client for Lua called [haricot](https://github.com/catwell/haricot). The protocol used by Beanstalk has a few methods that return YAML. Those methods are for monitoring and are typically not used by job producers or consumers.
+
+YAML being a [terribly complicated format](http://yaml.org/spec/1.2/spec.html) (please do not use it), all the YAML parsers I know about in Lua land are bindings to C libraries, making them annoying to install and maintain. I had to decide between choosing one of them and making it a dependency or writing my own code to parse the subset of YAML used by Beanstalk.
+
+I chose a third solution: [returning raw YAML to the user](https://github.com/catwell/haricot#note-about-yaml). Yes, this is "pushing the complexity upstream". But most users of this library will never need those methods. In the test suite, I auto-detect the presence of a YAML parser and skip related tests if none is available.
+
+Eventually, this is a matter of choice. Avdi is right: fat tools usually exist for good reasons, not because their authors did not think of a simpler solution. Choosing whether to use them or not has to be a conscious trade-off. I just personally decided there are very few things I want to trade simplicity off against.

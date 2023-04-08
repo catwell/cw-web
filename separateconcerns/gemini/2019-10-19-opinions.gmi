@@ -70,4 +70,3 @@ Don't worry though, I still hold a few strong opinions, both in my field (some q
 => https://en.wikipedia.org/wiki/Simpson%27s_paradox 8: https://en.wikipedia.org/wiki/Simpson%27s_paradox
 => https://en.wikipedia.org/wiki/Gödel%27s_incompleteness_theorems 9: https://en.wikipedia.org/wiki/Gödel%27s_incompleteness_theorems
 => https://blog.separateconcerns.com/2019-02-15-architecture-principles.html 10: https://blog.separateconcerns.com/2019-02-15-architecture-principles.html
-

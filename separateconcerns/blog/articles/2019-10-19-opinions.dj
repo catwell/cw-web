@@ -1,0 +1,61 @@
+```=lua-meta
+title = "Opinions"
+published = "2019-10-19 15:30:00"
+description = "My view on how strong opinions should be has changed over the last few years."
+```
+
+You know how some discussions can make you pause and introspect for a while after they happen? Well, I have had such a discussion recently about how strong my opinions are nowadays, and I decided to write something about it.
+
+## Forming opinions
+
+People who have spent significant time around me know all too well how I behave when I get interested in a topic. I can spend weeks (and sometimes even much longer) reading all I can find about it until I know its ins and outs. This results in me being able to discuss and have opinions about things which are apparently completely random, but which I ended up picking up along the way for some reason.
+
+For the longest time, I have believed in [strong opinions (somewhat) weakly held](https://blog.asmartbear.com/strong-opinions-somewhat-weakly-held.html), and for the most part I still do. In particular, I agree with the "somewhat" part, which says that the strength with which you should hold an opinion depends on how you formed it.
+
+What has changed in the last 5-7 years is my view on how explicit those opinions should be, and how much I should fight for them.
+
+## Expressing opinions
+
+I was strongly influenced by the Open Source community of the early 2000s where, if you wanted something to happen, you had to state your opinion and be ready to defend it - sometimes ferociously - with arguments. If you didn't, you would be ignored.
+
+What outsiders often overlook about this method is that it worked, and it was pretty efficient. Most people got used to it, and in general it did not turn into endless debates, because in the end we had [benevolent dictators](https://en.wikipedia.org/wiki/Benevolent_dictator_for_life) to settle the matter.
+
+But a problem I could not see for a long time is that this excludes a lot of people from the discussion. People who, because of their education or the position society put them in, won't express their own opinion if it contradicts the current consensus or that of someone they either respect or fear; or people who won't engage in anything remotely resembling conflict because that's not in their nature.
+
+It is especially easy to ignore the existence of these people when the only way you are communicating is through asynchronous text over the Internet. However they often have very interesting things to say, with different points of view that can make headway or prevent big mistakes.
+
+There are lots of ways to work around that issue, including timeboxing contributions on a topic while keeping them secret, or simply having people in positions of power and people more comfortable with their opinion express it last.
+
+## Defending opinions
+
+Another matter is how much you should fight for your opinion. I am not talking about [the famous XKCD comic](https://xkcd.com/386/), I know I can be this guy sometimes, but that is something else.
+
+Some time ago I was struggling with how to handle disagreement at work, and I became an adept of the way Amazon does things, its [Leadership Principles](https://www.amazon.jobs/en/principles), and in particular Disagree and Commit:
+
+> Leaders are obligated to respectfully challenge decisions when they disagree, even when doing so is uncomfortable or exhausting. Leaders have conviction and are tenacious. They do not compromise for the sake of social cohesion. Once a decision is determined, they commit wholly.
+
+When organizations follow this principle, it helps a lot with the issue, because it makes it clear that you can - and should - express dissenting opinion, and how you can align on things you do not agree with without making it look like you changed your mind when you did not.
+
+(On a side note, I even think in some cases making dissent mandatory by instituting a [Tenth Man / Devil's Advocate rule](https://www.thestar.com/news/insight/2017/05/21/how-israeli-intelligence-failures-led-to-a-devils-advocate-role.html) can be beneficial.)
+
+However, it turns out this principle is more complicated than it sounds, and there are two important points I did not immediately understand, which are much more explicit in [Bezos' 2016 letter to shareholders](https://blog.aboutamazon.com/company-news/2016-letter-to-shareholders).
+
+The first is that the person who "disagrees but commits" is not necessarily the subordinate in a power relationship. Bezos says:
+
+> This isn’t one way. If you’re the boss, you should do this too. I disagree and commit all the time. We recently greenlit a particular Amazon Studios original. I told the team my view: debatable whether it would be interesting enough, complicated to produce, the business terms aren’t that good, and we have lots of other opportunities. They had a completely different opinion and wanted to go ahead. I wrote back right away with “I disagree and commit and hope it becomes the most watched thing we’ve ever made.” Consider how much slower this decision cycle would have been if the team had actually had to convince me rather than simply get my commitment.
+
+The second point I missed is the meaning of the sentence "they do not compromise for the sake of social cohesion." The "compromise" part is clear enough; here compromising would have meant giving the green light but with, say, fewer resources. From experience compromises like this often end up poorly. But the hard part is "for the sake of social cohesion". Here is what Bezos has to say:
+
+> Note what this example is not: it’s not me thinking to myself "well, these guys are wrong and missing the point, but this isn’t worth me chasing." It’s a genuine disagreement of opinion, a candid expression of my view, a chance for the team to weigh my view, and a quick, sincere commitment to go their way.
+
+Unlike Bezos my current (weakly held) opinion is that sometimes keeping social peace is worth not engaging in some minor issues. Some people will always appreciate being told when you think they're mistaken, but others won't even if they end up admitting they were wrong in the end, so it only makes sense to contradict them if it is worth risking being resented for it.
+
+## Tolerating opinions
+
+The first step for all this to work is probably to admit that opinions can exist without being "right" or "wrong".
+
+That may be obvious to you but for a long time it was not for me. When I was a kid I looked at things in binary: true or false, right or wrong, better or worse. This made me enjoy CS and math, but paradoxically learning more advanced math ([partial orders](https://en.wikipedia.org/wiki/Order_theory#Partially_ordered_sets), [Simpson's paradox](https://en.wikipedia.org/wiki/Simpson%27s_paradox), [Gödel's incompleteness theorems](https://en.wikipedia.org/wiki/Gödel%27s_incompleteness_theorems)...) showed me that even in the hardest of sciences things were more nuanced.
+
+Anyway, there are reasons why people come to hold a set of beliefs which makes sense at least locally. Learning about this background is important, whether it helps you convince them or changes your own mind.
+
+Don't worry though, I still hold a few strong opinions, both in my field (some quite strongly - you won't easily make me change [those](https://blog.separateconcerns.com/2019-02-15-architecture-principles.html) for instance) and outside of it!

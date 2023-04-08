@@ -1,0 +1,115 @@
+```=lua-meta
+title = "Blog posts for founders (and early employees)"
+published = "2021-10-31 15:45:00"
+description = "A list of links intended for founders and people working at young companies."
+```
+
+Over the years, I have accumulated links to blog posts I intend to re-read every time find myself in a position to influence the early stage of a company.
+
+I thought it might be helpful to someone if I published part of that list here. I will avoid links which are too technical and focus on links that can be interest non-technical founders as well.
+
+Note that I haven't included books. There are many good books for founders, but if you must read only one make it [The Four Steps to the Epiphany](https://www.amazon.com/Four-Steps-Epiphany-Steve-Blank/dp/0989200507).
+
+If this isn't enough for you, you're always welcome to explore [my Pinboard account](https://pinboard.in/u:catwell/).
+
+## My own posts
+
+Let's get started by mentioning posts from this blog which transcribe the opinions of two influential people, which I share (on those topics).
+
+- [Werner Vogels on Skills](https://blog.separateconcerns.com/2013-03-24-vogels-skills.html), where the CTO of Amazon.com describes the qualities he is looking for in leaders at Amazon, in particular Ownership and the willingness to get their hands dirty doing operations.
+
+- [Hacker Founders](https://blog.separateconcerns.com/2014-05-28-hacker-founders.html), where Paul Graham, founder of Y Combinator, explains how programmers have an edge as company founders, including as CEOs.
+
+## [Titles are Toxic](https://randsinrepose.com/archives/titles-are-toxic/)
+
+Michael Lopp (Rands) on issues with giving people titles. Personally I have never liked titles, which can be a source of conflicts and bad decisions. I have also often held titles that didn't really correspond to the job I did - which was almost always multi-faceted. Yet, titles are a proxy used by people who don't know you to understand what you do at work.
+
+Like Rands I don't have a good solution to that. I write [some](https://blog.separateconcerns.com/2013-06-20-three-years-proprietary-projects.html) [blog](https://blog.separateconcerns.com/2018-01-06-four-years.html) [posts](https://blog.separateconcerns.com/2021-05-01-inch.html) explaining what I do in more details that a title ever could, for people who care.
+
+In any case I always suggest avoiding giving some titles to people too early, including to founders: having a "technical co-founder" instead of a CTO will make things easier if you grow fast and need to hire someone later on.
+
+## [Creating a Software Company? 9 Decisions You Have to Make](https://spin.atomicobject.com/2014/06/02/software-company-decisions/)
+
+A list of questions to ask yourself when founding a software company, by Michael Marsiglia, CEO of Atomic Object. It can also be a good idea to ask them before joining one.
+
+## [The 40% rule](https://avc.com/2015/02/the-40-rule/)
+
+A simple but powerful rule of thumb for SaaS companies by Brad Feld, relayed by Fred Wilson:
+
+> annual revenue growth rate + operating margin should equal 40%
+
+## [Why it’s nice to compete against a large, profitable company](https://blog.asmartbear.com/compete-on-profit.html)
+
+Jason Cohen explains how a startup can disrupt a large competitor by making a part of their business unprofitable and forcing them to abandon it. It's not as simple as this summary makes it sound, and it's not the Innovator's Dilemma. Read the article :)
+
+## [Product design at GitHub](https://warpspire.com/posts/product-design)
+
+Kyle Neath on how, in the early days of GitHub, everyone was a "product designer". Many successful SaaS products started with the same concept:
+
+> We only hire smart people we trust to make our product better. We don’t have managers dictating what to work on. We don’t require executive signoff to ship features. Executives, system administrators, developers, and designers concieve, ship, and remove features alike.
+
+Actually, I think I have never seen a company ship good product fast without doing some version of this.
+
+## Joel Spolsky's Strategy Letters
+
+If you don't know that series of blog posts, you are missing something. They are super insightful essays by a multi-successful founder about building companies.
+
+- [Ben and Jerry’s vs. Amazon](https://www.joelonsoftware.com/2000/05/12/strategy-letter-i-ben-and-jerrys-vs-amazon/) - How to decide between slow profitable growth or fast VC-funded growth.
+
+- [Chicken and Egg Problems](https://www.joelonsoftware.com/2000/05/24/strategy-letter-ii-chicken-and-egg-problems/) - Understanding the Chicken and Egg problem and some ways to solve it.
+
+- [Let Me Go Back!](https://www.joelonsoftware.com/2000/06/03/strategy-letter-iii-let-me-go-back/) - On barriers to entry, and how letting customers understand they can easily move *out* of your product (maybe back to what they used before) is important.
+
+- [Bloatware and the 80/20 Myth](https://www.joelonsoftware.com/2001/03/23/strategy-letter-iv-bloatware-and-the-8020-myth/) - 80% of software users use 20% of features, so you can win the market with just 20% of the features, right? No, because not everyone uses the *same* 20%! I can't state how often I meet founders who don't understand this.
+
+- [Strategy Letter V](https://www.joelonsoftware.com/2002/06/12/strategy-letter-v/) - How companies have an advantage in commoditizing their complements, and how this can explain some investments in Open Source software.
+
+(There is at least a [sixth strategy letter](https://www.joelonsoftware.com/2007/09/18/strategy-letter-vi/), but it is less interesting IMO.)
+
+## Ev William's 10 rules for Web Startups
+
+This post used to be on Ev William's blog which went offline some time ago, thankfully I [mirror articles that interest me that much](http://files.catwell.info/misc/mirror/evan-williams-10-rules-startups.txt).
+
+## [Your company's most valuable resource](https://twitter.com/williampietri/status/732602463082188801)
+
+Just a tweet, but an important one, by William Pietri:
+
+> Your company's most valuable resource is people giving a shit. Ask yourself: does your system encourage or discourage that?
+
+## [Wants, needs, and chasm-crossing](https://apenwarr.ca/log/20211024)
+
+A recent post by Avery Pennarun, Tailscale CEO. It shows how the best strategy to acquire customers is often to solve a single *Want* - something their current solution doesn't provide - and then to resolve all their *Needs* (blockers) so they can actually flock to your product instead of attempting to implement any more *Wants*.
+
+## [Financial modeling for startups](https://www.slideshare.net/rodrigo1971/financial-modeling-for-startups)
+
+A slide deck by Rodrigo Sepulveda with a simple and effective approach to business models and PnLs for startups.
+
+
+## [Startup Therapy: Ten questions to ask yourself every month](https://blog.asmartbear.com/startup-business-plan.html)
+
+Jason Cohen (again) shares his alternative to business plans: a list of 10 questions to help you figure out where you are and where to go next.
+
+## [The Small Teams Manifesto](http://codemanship.co.uk/parlezuml/blog/?postid=1322)
+
+Jason Gorman says small teams win because:
+
+- the probability that a project fails increases rapidly with size;
+- small teams interact more effectively with the customer and/or end users;
+- small teams are easier to build (hiring good people is hard).
+
+## [Innovating with purposeful anger](https://www.icopilots.com/innovation-mindset/innovating-purposeful-anger-12965)
+
+> One of the very interesting tools using anger as a driver to innovate is the “You Got Fired!” game.
+>
+> Get a bunch of managers in a business unit and role-play that their whole team is fired. Indicate also that as a cockup from legal their non-compete clause isn’t applicable.
+>
+> Then, give them an hour to build a competitor startup that will take revenge on their company on a “That’ll teach them!” mode.
+
+## [How To Decide What To Build](https://dcgross.com/decide-what-to-build/)
+
+Daniel Gross (a founder I have been following since his first YC startup, Greplin) on ways to decide what company to build on a personal level. I wish he had published that before my last attempt.
+
+## [Qu’est-ce qu’un projet entrepreneurial viable?](https://philippesilberzahn.com/2011/10/03/projet-entrepreneurial-viable/)
+
+A blog post in French by Philippe Silberzahn. A viable project stems from an individual acting on an idea and convincing people.
+

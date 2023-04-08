@@ -35,19 +35,19 @@ A 1975 classic. Gall is a (retired) pediatrician, but he is well-known in softwa
 The book is a curious mix of humor and philosophy, written in faux-scientific style and full of things which people working in Distributed Systems will be painfully aware of:
 
 > In complex systems, malfunction and even total non-function may not be detectable for long periods, if ever.
-> 
+
 > Any large system is going to be operating most of the time in failure mode.
-> 
+
 > Intermittent failure is the hardest case.
-> 
+
 > One does not know all the expected effects of known bugs.
-> 
+
 > In setting up a new system, tread softly. You may be disturbing another system that is actually working.
-> 
+
 > Bad design can rarely be overcome by more design, whether good or bad.
-> 
+
 > A system that ignores feedback has already begun the process of terminal instability.
-> 
+
 > In dealing with large systems, the striving for perfection is a serious imperfection.
 
 Remember: this book is originally not about computer systems. Not at all. But read it anyway!
@@ -74,4 +74,3 @@ This book is an answer to Michael Lewis' Flash Boys and a defence of High-Freque
 I have long thought that the financial world used HFT as a scapegoat (especially since I read Chris Stucchio's blog [6]). Flash Boys: Not So Fast follows the structure of Lewis' book; it provides a nice overview of what HFT is and why it may not be as evil as you think it is.
 
 => https://www.chrisstucchio.com/blog/2012/hft_apology.html 6: https://www.chrisstucchio.com/blog/2012/hft_apology.html
-

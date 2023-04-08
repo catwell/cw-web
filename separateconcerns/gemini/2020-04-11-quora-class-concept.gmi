@@ -6,7 +6,6 @@ Continuing my Quora answers series [1] with this question [2] which I answered o
 > How would you explain the concept of a "class" in Python to a 10 year old?
 
 
-
 You cannot distinguish the concept of "class" from the concept of "instance". I think OOP is often taught the wrong way around, paradoxically because it is taught with languages that have support for class-based Object Oriented Programming such as Python (or Java for that matter). So excuse me but I will use another language (Lua, but you don't need to know to understand) to explain it. (Note: this will be bad Lua on purpose, but the point is not to teach Lua, it is to explain OOP).
 
 Since you wrote "to a 10 year old" let's proceed with examples.
@@ -106,7 +105,6 @@ In this example:
 * `purr` is a method of the Cat class, ie. not much more conceptually than a function that takes a Cat instance as its first argument and some syntactic sugar (ie. special notation) to call it.
 
 
-
 By the way, this answer got one of the best comments I ever got on a Quora answer:
 
 > Sam and Max are not cats!
@@ -115,4 +113,3 @@ By the way, this answer got one of the best comments I ever got on a Quora answe
 
 => https://blog.separateconcerns.com/2020-04-09-quora-lua-call.html 1: https://blog.separateconcerns.com/2020-04-09-quora-lua-call.html
 => https://www.quora.com/How-would-you-explain-the-concept-of-a-class-in-Python-to-a-10-year-old 2: https://www.quora.com/How-would-you-explain-the-concept-of-a-class-in-Python-to-a-10-year-old
-

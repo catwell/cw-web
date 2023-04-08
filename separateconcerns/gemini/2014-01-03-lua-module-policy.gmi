@@ -12,9 +12,9 @@ I tend to do that, but not always. Exceptions include:
 * modules with names that are too long such as my own `multipart-post` which I call `mp` (it is not a valid identifier anyway, I would have to replace the dash by an underscore).
 
 > Policy Bit #2: start a module by declaring its table using the same all-lowercase local name that will be used to require it.
-> 
+
 > Policy Bit #3: Use local function to declare local functions only: that is, functions that won’t be accessible from outside the module.
-> 
+
 > Policy Bit #4: public functions are declared in the module table, with dot syntax.
 
 I do something entirely different. First, I never use the function sugar in Lua, so instead of writing `local function f()` I write `local f = function()`.
@@ -112,7 +112,7 @@ bar.say("yay")
 With my module, the output would be `yay!!!! :-D`. With Hisham's, the output would be `yay ><>`: the user is allowed to monkey patch their module in a way that has an effect on functions they do not explicitly touch.
 
 > Policy Bit #5: construct a table for your class and name it LikeThis so we know your table is a class.
-> 
+
 > Policy Bit #6: functions that are supposed to be used as object methods should be clearly marked as such, and the colon syntax is a great way to do it.
 
 Again, not how I do it :) Using CamelCase is a good idea but in the wild I see it more often for the actual module table, not for what Hisham calls the "class" table that is associated to `__index` in the metatable (I call it "methods"). Usually, it means (to me) that the constructor is `MyClass()`, whereas with a lowercase module name it would be `myclass.new()`. I use the latter and Penlight is an example of the former.
@@ -181,4 +181,3 @@ This one I cannot disagree with. It is the only rule that has an obvious externa
 I think this is what matters the most in the end: modules always return tables and never create globals. The rest is mostly implementation details!
 
 => http://hisham.hm/2014/01/02/how-to-write-lua-modules-in-a-post-module-world/ 1: http://hisham.hm/2014/01/02/how-to-write-lua-modules-in-a-post-module-world/
-

@@ -27,7 +27,7 @@ Wikipedia, l'un des plus gros succès du libre. Une source d'information à laqu
 
 Attendez, ça ne vous fait pas penser à quelque chose ça ? Ah si, le Web... Sauf que Wikipedia a un modèle centralisé alors que le Web est distribué. Sauf que sur Wikipedia ce sont les modérateurs qui détiennent le pouvoir de décider si une information est valable ou non, alors que sur le Web c'est à chacun de se faire son idée, même si l'opinion dominante se trouvera en premier dans les moteurs de recherche. Sauf que sur Wikipedia tout devra s'appuyer sur des sources "fiables", comme par exemple des publications scientifiques (hum). Bref, Wikipedia, une formidable machine à imposer une pensée unique à des utilisateurs qui ne demandent pas mieux.
 
-EDIT - Pour ceux qui ne s'en seraient pas rendu compte, j'exagère volontairement. Ne prenez pas tout pour argent comptant non plus, la diversité d'opinion existe bien sur Wikipedia dans une certaine mesure.
+> EDIT - Pour ceux qui ne s'en seraient pas rendu compte, j'exagère volontairement. Ne prenez pas tout pour argent comptant non plus, la diversité d'opinion existe bien sur Wikipedia dans une certaine mesure.
 
 ## Facebook (2e)
 

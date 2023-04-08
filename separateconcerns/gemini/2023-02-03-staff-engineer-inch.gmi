@@ -162,4 +162,3 @@ A Staff Engineer should tick several (not all) of those boxes:
 * Progression app [27]
 
 => https://progressionapp.com 27: https://progressionapp.com
-

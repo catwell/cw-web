@@ -1,0 +1,29 @@
+```=lua-meta
+title = "To Infinity and Beyond"
+published = "2013-12-12 21:30:00"
+description = "I am joining the Lima team as a core developer."
+```
+
+## Goodbye Moodstocks
+
+Friday 20th will be my last day at Moodstocks. I am leaving a company where, after three years and a half, I was the most senior employee. As you may imagine, it was not an easy decision.
+
+Moodstocks has grown up since I joined it. After several pivots, the founders have assembled a [great team](https://moodstocks.com/humans.txt) I will miss, and together I dare say we have advanced the state of mobile image recognition. Recently, we have also been looking at other technologies related to mobile.
+
+We have released two new products. The first one is what [was known as Physalis](http://blog.separateconcerns.com/2013-06-20-three-years-proprietary-projects.html) and took the commercial name [Winch](https://winch.io/). This is what I have been mostly involved with for the last few months. I believe it has the potential to become the reference solution to write native mobile applications that react quickly and work offline.
+
+The second product is [Overlay](http://overlay.ms/), a mobile application that lets you buy products from paper catalogs online. Years after Pikadeo and Notes, it is finally time for a real application available in the stores, leveraging Moodstocks' [image recognition SDK](https://moodstocks.com/) and Winch, showcasing the best of both technologies. But beyond pure tech, it is also a demonstration of Augmented Reality as we like it: fast, predictable, purposeful. No need for 3D models.
+
+With those two products in the pipes, choosing to leave was incredibly difficult. But I did nevertheless, because of an opportunity I could not turn down.
+
+## Hello Lima
+
+So, what next for me? After two weeks to see my family, eat too much and have some welcome rest, I [will be joining](http://www.kickstarter.com/projects/cloud-guys/plug-the-brain-of-your-devices/posts/691351) the team developing [the Lima](http://meetlima.com) as a core developer.
+
+The Lima, which promises no less than to solve the personal data storage problem, is the first hardware product I backed on Kickstarter. I was thinking: "this won't be easy, but if those guys can do it, I want that device."
+
+The Kickstarter went (very) well, so they started looking for help and got in touch. I was curious and decided to meet the founders. After a Saturday morning spent discussing the project at Starbucks, I was convinced: they are the right people to do this.
+
+For years I have been convinced that ubiquitous computing is one of the next big things in technology and wanted to be part of it. As I see it, Lima gives me this opportunity today.
+
+So it looks like my short-term future holds some Unix development and a good dusting of my rusty C. I may try to sneak a Lua interpreter in that box at some point, but please don't tell the others! ;) Severin and Gawen have high expectations and I do not expect much relaxing but hey, it should be fun to live the adventure of Early Stage again.

@@ -238,4 +238,3 @@ Finally, if you try my Iris client [9] and find bugs, do not hesitate to report 
 => http://iris.karalabe.com/archive/2014/core_concepts_at_dotscale 7: http://iris.karalabe.com/archive/2014/core_concepts_at_dotscale
 => http://invece.org/ 8: http://invece.org/
 => https://github.com/catwell/iris-lua 9: https://github.com/catwell/iris-lua
-

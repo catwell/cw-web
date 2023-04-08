@@ -1,0 +1,66 @@
+```=lua-meta
+title = "Thoughts 2"
+published = "2016-12-07 22:35:00"
+description = [[
+  Thoughts on developers on call, the value of metrics, and AI that can
+  explain its thought process.
+]]
+```
+
+## On Call
+
+[Alice Goldfuss](https://twitter.com/alicegoldfuss) started
+[a debate](https://dbsmasher.com/2016/12/07/on-being-on-call/) about having
+developers on call. I am firmly in the camp of those who think it is a good
+thing, probably because I was a sysadmin before being a software engineer.
+But this means those developers must have the power to refuse to ship broken
+code that may make the pager go off as well.
+
+In fact, it is all about fostering the sense of ownership, which is the N.1
+trait I look for in developers. And this won't be the first time I have
+[quoted great people](https://twitter.com/pchapuis/status/222690433308966913)
+[saying similar things](https://blog.separateconcerns.com/2013-03-24-vogels-skills.html)!
+
+## The value of metrics
+
+Here is something people who haven't worked in B2B software companies may not
+understand: sometimes knowing your product's metrics, how its users behave and
+the market it is operating in can be more valuable than the product itself.
+Small B2B2C software vendors often end up knowing things about their (huge)
+customers' clients that the customers themselves don't.
+
+What that means is: if you provide third-party software to your users, ask the
+third-party vendor what data points they collect, what they can do with them,
+and if they can feed them back to you. And if you are the third-party vendor,
+consider the value of that data, and maybe find clever ways to turn it into a
+competitive advantage.
+
+## Why did the robot do that?
+
+[Explaining why AI makes decisions](https://insights.sei.cmu.edu/sei_blog/2016/12/why-did-the-robot-do-that.html)
+is going to be very important in the years to come. Trusting algorithms is
+hard for humans. This slows down adoption and progress the most in areas that
+[really](https://twitter.com/CalebWatney/status/747772853102084097)
+[matter](https://blog.separateconcerns.com/2015-11-06-e-voting.html). So we
+need a way to let concerned people "feel" why machines do things the way they
+do it. Because writing papers is nice, but we all know simply telling people to
+trust experts is never going to work. This means those topics are now
+[also UX problems](https://blog.separateconcerns.com/2016-09-16-thoughts-1.html#distributed-systems-are-a-ux-problem).
+
+## Can't you just...?
+
+Someone made [a nice web page](http://cantyoujust.no/) to answer a question we
+hear pretty often. :)
+
+## Applications and Data
+
+Here is something I have been believing in for a long time: there is no good
+technical reason why most Web-based application vendors force you to store
+your data on *their* servers. It should be possible to use, say, a presentation
+application from Google to edit slides stored on Microsoft's servers.
+
+Sadly, for reasons that probably have a lot to do with business models,
+things like
+[remoteStorage](https://unhosted.org/adventures/7/Adding-remote-storage-to-unhosted-web-apps.html)
+did not really take off. But I hope someone will revisit that idea someday,
+and find a way to make it take off.

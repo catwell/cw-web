@@ -1,0 +1,21 @@
+```=lua-meta
+title = "knetstat: checking socket options on Linux"
+published = "2017-06-11 19:10:00"
+description = "Linux does not expose options such as SO_REUSEADDR and SO_REUSEPORT to userland. The knetstat module does."
+```
+
+A few weeks ago I was debugging network code, and I needed to check if some
+sockets were bound with `SO_REUSEADDR` and/or `SO_REUSEPORT`. I researched how
+I could inspect that, and was surprised to find out that the Linux kernel did
+not expose those options to userland.
+
+Thankfully, there is
+[a kernel module called knetstat](https://github.com/veithen/knetstat)
+which lets you do this very easily by adding new files into `procfs`. When I
+found it it only supported TCP, but I needed the information for UDP as well so
+I [contributed the code](https://github.com/veithen/knetstat/pull/11) to
+support it.
+
+If you write networking code on Linux or just run servers, I encourage you to
+check it out. It is a nice little tool that can come very handy in some
+situations, including when you need to check options like `SO_{RCV,SND}BUF`.

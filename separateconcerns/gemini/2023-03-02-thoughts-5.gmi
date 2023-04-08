@@ -21,11 +21,11 @@ Add to that the idea that engineers should know what systems not to build, and y
 Karl [3] wrote something interesting [4] about using the word We to talk about a company or a team. He wrote it in French so here is a rough translation:
 
 > I often see a company's employees use the word We ("nous" in French). For a very long time I have been trying to avoid using this turn of phrase in my mail, bugs, etc. For instance, at Mozilla, I used to say "the Webcompat team" or "Mozilla", or to change the sentence to focus on the product itself.
-> 
+
 > Instead of "We should add feature H to solve this bug", I would say "Product A needs feature H to solve this bug".
-> 
+
 > When I notice myself unconsciously using "we", I correct it immediately. But why? To preserve the emotional distance between work and pseudo-belonging to a company.
-> 
+
 > "We" has a very inclusive meaning of identity for me, and so I avoid it in contractual relationships. The company no longer has a "we" when the time to reduce its workforce for financial gain comes. It is one of my struggle techniques, a small resistance.
 
 I understand what he is saying and it makes a lot of sense, yet I make a different choice. In fact, I cannot fathom working for a company or at least a team where I would not feel comfortable saying "we".
@@ -74,4 +74,3 @@ Even though it's not my main focus anymore, I am still following CRDT-based stat
 
 => https://braid.org 10: https://braid.org
 => https://automerge.org/blog/automerge-2/ 11: https://automerge.org/blog/automerge-2/
-

@@ -25,4 +25,3 @@ After that, commit `.travis` and `.travis.yml` and push to GitHub. It will trigg
 => http://kr.github.io/beanstalkd/ 6: http://kr.github.io/beanstalkd/
 => https://travis-ci.org/profile 7: https://travis-ci.org/profile
 => https://travis-ci.org/catwell/haricot.png?branch=master 8: https://travis-ci.org/catwell/haricot.png?branch=master
-

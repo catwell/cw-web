@@ -46,4 +46,3 @@ git branch -D tmp-alembic
 => https://alembic.sqlalchemy.org 1: https://alembic.sqlalchemy.org
 => https://flask-migrate.readthedocs.io 2: https://flask-migrate.readthedocs.io
 => https://12factor.net 3: https://12factor.net
-

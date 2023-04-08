@@ -22,51 +22,112 @@
         [ <a href="index.html">home</a> ]
       </h4>
     </header>
-    <p>At <a href="https://meetlima.com">Lima</a>, we use <a href="http://symas.com/mdb/">the LMDB database</a> extensively, and we looked into its source code in order to debug a few issues we had. To help us diagnose broken databases, and also because I wanted to learn more about it, I wrote <a href="https://github.com/catwell/cw-lua/tree/master/lua-mdb">a parser for the LMDB database file format in Lua</a> in my spare time, which I published under the Open Source MIT license.</p>
+    <p>At <a href="https://meetlima.com">Lima</a>, we use
+<a href="http://symas.com/mdb/">the LMDB database</a> extensively, and we looked into its
+source code in order to debug a few issues we had. To help us diagnose broken
+databases, and also because I wanted to learn more about it, I wrote <a href="https://github.com/catwell/cw-lua/tree/master/lua-mdb">a parser
+for the LMDB database file format in
+Lua</a> in my spare time,
+which I published under the Open Source MIT license.</p>
+<p>In this post, I will give an overview of how a data.mdb file is structured.
+Note that I will sometimes skip over some things and operate under the
+assumption that you are running on a little-endian platform with 4 kB pages,
+etc.</p>
+<section id="Portability">
+<h2>Portability</h2>
+<p>The first thing to know is that the data.mdb format is platform-specific,
+which means that you cannot necessarily open a database created on a machine
+on another one. In practice, on ARM and x86, the only thing you have to care
+about is whether the machine is 32 or 64 bits. On a 64 bit machine, you can
+read the data from a 32 bit database by exporting it to a text format using
+the <code>mdb_dump</code> utility compiled in 32 bits and reimporting it with a 64 bits
+<code>mdb_load</code>. With lua-mdb, you can read a 32 bits database directly by passing
+the <code>bits</code> option to the constructor.</p>
+</section>
+<section id="Pages">
+<h2>Pages</h2>
+<p>A data.mdb file is made to be mapped into memory, and as such is organized into
+a set pages of 4 kB. All pages start with a header which contains the page
+number and some flags which determine the type of the page. For all page types
+except overflow pages, the header also includes the bounds of the free space
+in the page.</p>
+</section>
+<section id="Meta-pages">
+<h2>Meta pages</h2>
+<p>The first two pages (page numbers 0 and 1) are called meta pages. Meta pages
+start with a magic number (<code>0xBEEFC0DE</code>), a version (currently 1), and the
+address and size of the memory mapping. The address is only valid if the
+mapping is fixed,
+i.e. if LMDB is used with the option <code>MDB_FIXEDMAP</code>.</p>
+<p>After that, we find two structures describing what LMDB calls databases.
+The first one is the &ldquo;free&rdquo; database, which is used to track free pages,
+and the second one is the &ldquo;main&rdquo; database.</p>
+<p>Finally come the number of the last page used in the file and the ID of
+the last transaction that wrote to the page successfully. Indeed, those meta
+pages is the mechanism LMDB uses to implement
+<a href="https://en.wikipedia.org/wiki/Multiversion_concurrency_control">MVCC</a>.
+There can be a single writer at a time, and it will always write to page ID
+<code>N % 2</code>, where <code>N</code> is the current write transaction ID. Meanwhile, readers will
+read page <code>N % 2 + 1</code>, providing readers - writer isolation. This means that,
+when opening a .mdb file, the latest data can be found in the databases pointed
+to by the meta page with the highest transaction ID.</p>
+</section>
+<section id="Databases">
+<h2>Databases</h2>
+<p>As we saw, a meta page contains two structures describing databases. Databases
+in LMDB are technically B+ trees. The structures contain some environment flags
+used at runtime, information about the tree including its depth, the number
+of pages of each type and the total number of entries, and finally the page
+number of the root of the tree.</p>
+<p>Pages of the tree itself can be one of three types: branch pages, leaf pages
+and overflow pages. There are two other types (<code>BRANCH2</code> and <code>SUBP</code>) which are
+only used with specific DB options (<code>MDB_DUPFIXED</code> and <code>MDB_DUPSORT</code>) and that
+we will ignore.</p>
+</section>
+<section id="Branch-pages">
+<h2>Branch pages</h2>
+<p>Branch pages represent internal nodes of the tree. After the header, they
+contain an array of &ldquo;pointers&rdquo; (technically, 16 bit indices within the page)
+to &ldquo;branch nodes&rdquo; within that page. The number of branch nodes, which is the
+number of keys in the page, can be deduced from the boundaries of the free
+space in the header.</p>
+<p>Branch nodes are allocated from the bottom of the page up. They start with a
+page number, then a key prefixed by its size. Branch node pointers are sorted
+according to the key and the current key comparison function, and the page
+number indicates the page which should be visited to look up keys between the
+key of the node (included) and the key of the next node. That page can be a
+branch or a leaf.</p>
+</section>
+<section id="Leaf-pages">
+<h2>Leaf pages</h2>
+<p>Like branch pages, leaf pages start with a number of pointers to leaf nodes.
+Leaves store the actual keys and values contained into the DB. Small values
+are stored in the leaf node itself and large values are stored in overflow
+pages.</p>
+<p>Leaf nodes are slightly more complex than branch nodes. They contain flags,
+which determine if the value is contained in the node or in an overflow page,
+and the key which corresponds to the node. For small values, they contain the
+value itself, and for larger values they contain the page number of the
+corresponding overflow page.</p>
+</section>
+<section id="Overflow-pages">
+<h2>Overflow pages</h2>
+<p>Large values are stored in so-called overflow pages. Those pages are pretty
+simple: after the header, they contain the raw value (not prefixed by its size).
+This value can be larger than the size of a page, which explains the name:
+they overflow on later pages. Note that this means those later pages do not
+start by the usual header.</p>
+</section>
+<section id="Learning-more">
+<h2>Learning more</h2>
+<p>I have explained the basics of the data.mdb file format. Should you have to
+debug broken databases, it will help you get started. If you need more, read
+<a href="https://github.com/catwell/cw-lua/tree/master/lua-mdb">the lua-mdb source code</a>
+or <a href="https://github.com/LMDB/lmdb">the LMDB source code</a> (it is only about 10000
+lines, although sometimes not easy to understand given that its author adopts a
+style that favors performance to readability).</p>
+</section>
 
-<p>In this post, I will give an overview of how a data.mdb file is structured. Note that I will sometimes skip over some things and operate under the assumption that you are running on a little-endian platform with 4 kB pages, etc.</p>
-
-<h2 id="portability">Portability</h2>
-
-<p>The first thing to know is that the data.mdb format is platform-specific, which means that you cannot necessarily open a database created on a machine on another one. In practice, on ARM and x86, the only thing you have to care about is whether the machine is 32 or 64 bits. On a 64 bit machine, you can read the data from a 32 bit database by exporting it to a text format using the <code>mdb_dump</code> utility compiled in 32 bits and reimporting it with a 64 bits <code>mdb_load</code>. With lua-mdb, you can read a 32 bits database directly by passing the <code>bits</code> option to the constructor.</p>
-
-<h2 id="pages">Pages</h2>
-
-<p>A data.mdb file is made to be mapped into memory, and as such is organized into a set pages of 4 kB. All pages start with a header which contains the page number and some flags which determine the type of the page. For all page types except overflow pages, the header also includes the bounds of the free space in the page.</p>
-
-<h2 id="meta-pages">Meta pages</h2>
-
-<p>The first two pages (page numbers 0 and 1) are called meta pages. Meta pages start with a magic number (<code>0xBEEFC0DE</code>), a version (currently 1), and the address and size of the memory mapping. The address is only valid if the mapping is fixed, i.e. if LMDB is used with the option <code>MDB_FIXEDMAP</code>.</p>
-
-<p>After that, we find two structures describing what LMDB calls databases. The first one is the &quot;free&quot; database, which is used to track free pages, and the second one is the &quot;main&quot; database.</p>
-
-<p>Finally come the number of the last page used in the file and the ID of the last transaction that wrote to the page successfully. Indeed, those meta pages is the mechanism LMDB uses to implement <a href="https://en.wikipedia.org/wiki/Multiversion_concurrency_control">MVCC</a>. There can be a single writer at a time, and it will always write to page ID <code>N % 2</code>, where <code>N</code> is the current write transaction ID. Meanwhile, readers will read page <code>N % 2 + 1</code>, providing readers - writer isolation. This means that, when opening a .mdb file, the latest data can be found in the databases pointed to by the meta page with the highest transaction ID.</p>
-
-<h2 id="databases">Databases</h2>
-
-<p>As we saw, a meta page contains two structures describing databases. Databases in LMDB are technically B+ trees. The structures contain some environment flags used at runtime, information about the tree including its depth, the number of pages of each type and the total number of entries, and finally the page number of the root of the tree.</p>
-
-<p>Pages of the tree itself can be one of three types: branch pages, leaf pages and overflow pages. There are two other types (<code>BRANCH2</code> and <code>SUBP</code>) which are only used with specific DB options (<code>MDB_DUPFIXED</code> and <code>MDB_DUPSORT</code>) and that we will ignore.</p>
-
-<h2 id="branch-pages">Branch pages</h2>
-
-<p>Branch pages represent internal nodes of the tree. After the header, they contain an array of &quot;pointers&quot; (technically, 16 bit indices within the page) to &quot;branch nodes&quot; within that page. The number of branch nodes, which is the number of keys in the page, can be deduced from the boundaries of the free space in the header.</p>
-
-<p>Branch nodes are allocated from the bottom of the page up. They start with a page number, then a key prefixed by its size. Branch node pointers are sorted according to the key and the current key comparison function, and the page number indicates the page which should be visited to look up keys between the key of the node (included) and the key of the next node. That page can be a branch or a leaf.</p>
-
-<h2 id="leaf-pages">Leaf pages</h2>
-
-<p>Like branch pages, leaf pages start with a number of pointers to leaf nodes. Leaves store the actual keys and values contained into the DB. Small values are stored in the leaf node itself and large values are stored in overflow pages.</p>
-
-<p>Leaf nodes are slightly more complex than branch nodes. They contain flags, which determine if the value is contained in the node or in an overflow page, and the key which corresponds to the node. For small values, they contain the value itself, and for larger values they contain the page number of the corresponding overflow page.</p>
-
-<h2 id="overflow-pages">Overflow pages</h2>
-
-<p>Large values are stored in so-called overflow pages. Those pages are pretty simple: after the header, they contain the raw value (not prefixed by its size). This value can be larger than the size of a page, which explains the name: they overflow on later pages. Note that this means those later pages do not start by the usual header.</p>
-
-<h2 id="learning-more">Learning more</h2>
-
-I have explained the basics of the data.mdb file format. Should you have to debug broken databases, it will help you get started. If you need more, read <a href="https://github.com/catwell/cw-lua/tree/master/lua-mdb">the lua-mdb source code</a> or <a href="https://github.com/LMDB/lmdb">the LMDB source code</a> (it is only about 10000 lines, although sometimes not easy to understand given that its author adopts a style that favors performance to readability).
     </div>
     <div id="footer">
       [ <a href="index.html">home</a> ]

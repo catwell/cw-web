@@ -6,7 +6,6 @@ Yet another Quora answer [1], this time to with this question [2] which I answer
 > Why is Transparency a major issue in distributed databases?
 
 
-
 First, a few words about what "transparency" is. Transparency is a UX term [3] about the user not noticing that they are using a distributed system. We actually talk about transparencies in the plural, because there are several kinds of transparencies: fault transparency, location transparency, concurrency transparency, access transparency, etc. In my opinion, the choice of wording is not so good: when we talk about "transparency" we actually mean we hide things from the user, so "opacity" would be more logical. (The name comes from the fact that, if we replace a single node system by a distributed system, it will be transparent for the user, i.e. then will not notice it.)
 
 The reason why transparency is important is usability. The more transparencies our system has, the less cognitive burden there is on the user. In other words: transparencies simplify the API of the system.
@@ -23,7 +22,6 @@ Some people have gone as far as saying that Distributed Systems Are a UX Problem
 
 => https://blog.separateconcerns.com/2020-04-09-quora-lua-call.html 1: https://blog.separateconcerns.com/2020-04-09-quora-lua-call.html
 => https://www.quora.com/Why-is-Transparency-a-major-issue-in-distributed-databases 2: https://www.quora.com/Why-is-Transparency-a-major-issue-in-distributed-databases
-=> https://en.wikipedia.org/wiki/Transparency_(human%E2%80%93computer_interaction) 3: https://en.wikipedia.org/wiki/Transparency_(human%E2%80%93computer_interaction)
+=> https://en.wikipedia.org/wiki/Transparency_%28human%E2%80%93computer_interaction%29 3: https://en.wikipedia.org/wiki/Transparency_%28human%E2%80%93computer_interaction%29
 => http://www.rgoarchitects.com/Files/fallacies.pdf 4: http://www.rgoarchitects.com/Files/fallacies.pdf
 => https://bravenewgeek.com/distributed-systems-are-a-ux-problem/ 5: https://bravenewgeek.com/distributed-systems-are-a-ux-problem/
-

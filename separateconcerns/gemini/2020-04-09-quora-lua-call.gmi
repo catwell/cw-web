@@ -14,7 +14,6 @@ The original question [4] was:
 I answered it on February 25, 2013.
 
 
-
 `__call` is a metamethod, that means it is meant to be defined in a metatable. A `__call` field added to a regular table (`x` in your example) does nothing.
 
 The role of `__call` is to make something that is not a function (usually a table) act like a function. There are a few reasons why you may want to do that. Here are two examples.
@@ -108,4 +107,3 @@ I hope this gives you enough information to understand how you can use `__call`.
 => http://files.catwell.info/misc/mirror/quora-answers/ 2: http://files.catwell.info/misc/mirror/quora-answers/
 => https://www.quora.com/What-is-the-__call-metamethod-in-Lua-and-what-are-some-of-its-uses-and-basic-examples/all_comments/Pierre-Chapuis?__nsrc__=4&__snid3__=7556751152&comment_id=135057589&comment_type=2 3: https://www.quora.com/What-is-the-__call-metamethod-in-Lua-and-what-are-some-of-its-uses-and-basic-examples/all_comments/Pierre-Chapuis?__nsrc__=4&__snid3__=7556751152&comment_id=135057589&comment_type=2
 => https://www.quora.com/What-is-the-__call-metamethod-in-Lua-and-what-are-some-of-its-uses-and-basic-examples/ 4: https://www.quora.com/What-is-the-__call-metamethod-in-Lua-and-what-are-some-of-its-uses-and-basic-examples/
-

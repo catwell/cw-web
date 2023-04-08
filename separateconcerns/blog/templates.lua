@@ -41,6 +41,11 @@ TPL.html_post = [[
 </html>
 ]]
 
+local _desc = table.concat({
+  "Pierre Chapuis' online journal about system architecture,",
+  "programming, startups and the separation of concerns.",
+}, " ")
+
 TPL.html_index = [[
 <!DOCTYPE html>
 <html lang="en">
@@ -49,7 +54,7 @@ TPL.html_index = [[
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta
       name="description"
-      content="Pierre Chapuis' online journal about system architecture, programming, startups and the separation of concerns."
+      content="]] .. _desc .. [["
     >
     <link rel="canonical" href="https://blog.separateconcerns.com">
     <link href="css/theme.css" rel="stylesheet" type="text/css">

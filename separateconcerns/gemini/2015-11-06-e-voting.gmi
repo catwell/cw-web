@@ -13,7 +13,7 @@ I am not denying that there are issues that will be hard or impossible to solve.
 
 However, I would like to see more research and experiments with e-voting. I think that making the organization of votes easier and cheaper will allow our political systems to evolve towards something where citizen have more direct influence on the democratic process.
 
-I have to disclose that I know one of the authors of Belenios (Stéphane Glondu [9]) personally, which is how I came to learn about systems like Helios and Belenios in the first place.
+> I have to disclose that I know one of the authors of Belenios (Stéphane Glondu [9]) personally, which is how I came to learn about systems like Helios and Belenios in the first place.
 
 => https://twitter.com/axellelemaire/status/662247104123904001 1: https://twitter.com/axellelemaire/status/662247104123904001
 => https://www.eff.org/issues/e-voting 2: https://www.eff.org/issues/e-voting
@@ -24,4 +24,3 @@ I have to disclose that I know one of the authors of Belenios (Stéphane Glondu 
 => https://github.com/glondu/belenios 7: https://github.com/glondu/belenios
 => http://www.loria.fr/~cortier/Belenios.pdf 8: http://www.loria.fr/~cortier/Belenios.pdf
 => http://stephane.glondu.net/ 9: http://stephane.glondu.net/
-

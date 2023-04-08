@@ -21,17 +21,38 @@
         [ <a href="index.html">home</a> ]
       </h4>
     </header>
-    <p>In November 2013, I gave <a href="http://files.catwell.info/presentations/2013-11-lua-workshop-lua-ecosystem">a talk</a> about the Lua Ecosystem at <a href="https://www.lua.org/wshop13.html">Lua Workshop</a>, in which I mentioned that finding the best module for some job could be hard and introduced a website I had built to solve that problem.</p>
+    <p>In November 2013, I gave
+<a href="http://files.catwell.info/presentations/2013-11-lua-workshop-lua-ecosystem">a talk</a>
+about the Lua Ecosystem at <a href="https://www.lua.org/wshop13.html">Lua Workshop</a>, in
+which I mentioned that finding the best module for some job could be hard and
+introduced a website I had built to solve that problem.</p>
+<p>That website, Lua Toolbox, was inspired by the popular
+<a href="https://www.ruby-toolbox.com/">Ruby Toolbox</a>. It had two major features:
+modules classification (&ldquo;labels&rdquo;) and endorsements by users. I had written it
+using Leaf Corcoran&rsquo;s relatively new Lua Web framework,
+<a href="http://leafo.net/lapis/">Lapis</a>, and Redis as the datastore.</p>
+<p><img alt="Lua Toolbox homepage" src="img/lua-toolbox.jpg"></p>
+<p>In August 2014, MoonRocks, one of Leaf&rsquo;s many projects, became the official
+website for LuaRocks. It offered many features including user accounts,
+manifests and the ability to upload rocks on the Web. We quickly
+<a href="https://github.com/catwell/lua-toolbox/issues/18">started to discuss</a>
+merging Lua Toolbox into MoonRocks, but it led nowhere at first and the two
+websites continued their separate lives.</p>
+<p>Eventually, in March 2016, Etiene Dalcol
+<a href="https://github.com/luarocks/luarocks-site/pull/86">took up the project</a>.
+By September her and Leaf had written the code for labels and &ldquo;follows&rdquo;,
+which replace endorsements. They also added a feature for users to convert
+their Toolbox endorsements to LuaRocks follows. I sent them a data dump which
+they imported into the production LuaRocks website, and I turned Lua Toolbox
+read-only.</p>
+<p>Today, I finally replaced the whole website by
+<a href="https://lua-toolbox.com">a static page</a>
+redirecting users to LuaRocks. In the end, the Toolbox had 232 users and
+referenced 1217 modules. The source code
+<a href="https://github.com/catwell/lua-toolbox">remains available</a> but
+I would not advise you to do anything with it (it uses old Lapis APIs, from
+a time where plain Lua support was not official).</p>
 
-<p>That website, Lua Toolbox, was inspired by the popular <a href="https://www.ruby-toolbox.com/">Ruby Toolbox</a>. It had two major features: modules classification (&quot;labels&quot;) and endorsements by users. I had written it using Leaf Corcoran&#39;s relatively new Lua Web framework, <a href="http://leafo.net/lapis/">Lapis</a>, and Redis as the datastore.</p>
-
-<p><img src="img/lua-toolbox.jpg" alt="Lua Toolbox homepage" /></p>
-
-<p>In August 2014, MoonRocks, one of Leaf&#39;s many projects, became the official website for LuaRocks. It offered many features including user accounts, manifests and the ability to upload rocks on the Web. We quickly <a href="https://github.com/catwell/lua-toolbox/issues/18">started to discuss</a> merging Lua Toolbox into MoonRocks, but it led nowhere at first and the two websites continued their separate lives.</p>
-
-<p>Eventually, in March 2016, Etiene Dalcol <a href="https://github.com/luarocks/luarocks-site/pull/86">took up the project</a>. By September her and Leaf had written the code for labels and &quot;follows&quot;, which replace endorsements. They also added a feature for users to convert their Toolbox endorsements to LuaRocks follows. I sent them a data dump which they imported into the production LuaRocks website, and I turned Lua Toolbox read-only.</p>
-
-Today, I finally replaced the whole website by <a href="https://lua-toolbox.com">a static page</a> redirecting users to LuaRocks. In the end, the Toolbox had 232 users and referenced 1217 modules. The source code <a href="https://github.com/catwell/lua-toolbox">remains available</a> but I would not advise you to do anything with it (it uses old Lapis APIs, from a time where plain Lua support was not official).
     </div>
     <div id="footer">
       [ <a href="index.html">home</a> ]

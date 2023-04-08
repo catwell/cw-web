@@ -26,4 +26,3 @@ CS classes at engineering school did not teach me much or influence the way I wr
 So when I see people arguing endlessly about static versus dynamic typing or such matters, I think: OK, that may be important, but do not forget CS is, at heart, about algorithms, data structures and protocols.
 
 => http://erlang.org/pipermail/erlang-questions/2013-January/071944.html 1: http://erlang.org/pipermail/erlang-questions/2013-January/071944.html
-

@@ -176,8 +176,7 @@ So we thought: we have done it, why not make it accessible to everybody? This is
 
 Physalis will be available in private alpha for selected users soon, under its real brand name (Physalis is only its "internal plant-themed name"). If you are interested in trying it out, get in touch [28]. The requirements are that you should be making a mobile application and ready to communicate on a regular basis with us: we are doing this alpha to collect useful feedback.
 
-EDIT: Physalis was eventually released in August 2013 as Winch [29].
+> EDIT: Physalis was eventually released in August 2013 as Winch [29].
 
 => https://twitter.com/pchapuis 28: https://twitter.com/pchapuis
 => https://winch.io/ 29: https://winch.io/
-

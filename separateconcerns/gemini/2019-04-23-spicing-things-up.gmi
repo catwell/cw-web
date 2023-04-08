@@ -21,4 +21,3 @@ On that note, our Web stack is (typed) Python 3 / Flask and TypeScript / Angular
 => https://www.spendesk.com 6: https://www.spendesk.com
 => https://twitter.com/pchapuis/status/806463326842712067 7: https://twitter.com/pchapuis/status/806463326842712067
 => https://catwell.info 8: https://catwell.info
-
