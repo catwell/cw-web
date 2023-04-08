@@ -1,7 +1,6 @@
 # Werner Vogels on Skills
 published 2013-03-24
 
-
 I found a talk by Werner Vogels, the CTO of Amazon who is a role model of mine [1], on 21st century application architectures [2].
 
 After his presentation, someone from the audience asks him what skills he is looking for to run these services. His answer (starting at about 40:45 in the video) is so interesting that I thought it would be worth it to write it down. Here it is:

@@ -1,7 +1,6 @@
 # FOSDEM 2014
 published 2014-02-09
 
-
 Last weekend I attended FOSDEM [1], the largest Open Source conference in Europe that takes place every year in Brussels. This was my fourth year in a row. Not much Lua this year, although I saw some familiar [2] faces [3]. But I did listen to lots of interesting talks which I will try to summarize briefly.
 
 => https://fosdem.org/2014/ 1: https://fosdem.org/2014/

@@ -2,8 +2,9 @@
 % Pierre 'catwell' Chapuis
 % 2013-03-03 18:00:01
 
-    ::description::
-    The Viterbi algorithm is used to solve Hidden Markov Models. It has many practical applications.
+<!--@
+  description = "The Viterbi algorithm is used to solve Hidden Markov Models. It has many practical applications."
+-->
 
 ## The State Machine
 

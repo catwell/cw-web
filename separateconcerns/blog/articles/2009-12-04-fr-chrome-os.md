@@ -2,8 +2,9 @@
 % Pierre 'catwell' Chapuis
 % 2009-12-04 12:00:00
 
-    ::description::
-    Chrome OS est techniquement bon mais éthiquement dangereux.
+<!--@
+  description = "Chrome OS est techniquement bon mais éthiquement dangereux."
+-->
 
 J'avais promis que j'en parlerais : comme tout le monde (ou pas), j'ai regardé [les vidéos](http://www.chromium.org/chromium-os) diffusées par Google sur Chrome OS et je me suis fait ma petite idée.
 

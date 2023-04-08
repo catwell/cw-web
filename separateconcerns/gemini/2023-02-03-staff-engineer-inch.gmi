@@ -1,7 +1,6 @@
 # The Staff Software Engineer role at small companies
 published 2023-02-03
 
-
 When I was hired at Inch [1] my "official" position quickly became an issue. For various reasons neither the title they wanted to give me initially (Engineering Manager) nor the one I would be given externally (CTO) nor the obvious Senior Software Engineer worked. So I proposed to help them define the next position on the technical ladder.
 
 What follows is a translation of a document I wrote in French, slightly edited to remove Inch-specific details. It is still written from a European - and more specifically French - point of view. That document was later used to promote a 2nd engineer to Staff. I publish it here so it can help people needing to do something similar elsewhere.

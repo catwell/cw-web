@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
-    <meta name="description" content="I discovered Iris, a decentralized Cloud messaging middleware,">
+    <meta name="description" content="I discovered Iris, a decentralized Cloud messaging middleware, and wrote a Lua client for it.">
     <link rel="canonical" href="https://blog.separateconcerns.com/2014-09-20-iris.html">
     <link href="css/theme.css" rel="stylesheet" type="text/css">
       <link href="css/rainbow-github.css" rel="stylesheet" type="text/css">
@@ -22,9 +22,7 @@
         [ <a href="index.html">home</a> ]
       </h4>
     </header>
-    
-
-<p><a href="http://iris.karalabe.com/">Iris</a> is a &quot;decentralized Cloud messaging&quot; middleware that I have really started looking into with the recent <a href="http://iris.karalabe.com/archive/2014/version_v0_3_0_shiny_stable_apis">release of version 0.3.0</a>. It had struck me as interesting when I first heard of it <a href="https://www.youtube.com/watch?v=WTRORimPvHE">at FOSDEM 2014</a>. The reason for that, beyond the great presentation skills of its author, is that it implements principles I think are sound to build SOA upon.</p>
+    <p><a href="http://iris.karalabe.com/">Iris</a> is a &quot;decentralized Cloud messaging&quot; middleware that I have really started looking into with the recent <a href="http://iris.karalabe.com/archive/2014/version_v0_3_0_shiny_stable_apis">release of version 0.3.0</a>. It had struck me as interesting when I first heard of it <a href="https://www.youtube.com/watch?v=WTRORimPvHE">at FOSDEM 2014</a>. The reason for that, beyond the great presentation skills of its author, is that it implements principles I think are sound to build SOA upon.</p>
 
 <p>In Iris, the logical and physical layers of services are cleanly separated. Each box in the system runs a local instance of the Iris broker (&quot;Iris node&quot;). The broker is written in Go, and all broker instances in the system converse in a proprietary protocol.</p>
 

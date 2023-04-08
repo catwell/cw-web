@@ -1,7 +1,6 @@
 # Software Architecture Principles
 published 2019-02-15
 
-
 This is just a short post to share what I now consider, after 10 years in the industry (and almost twice as many writing code), my core software architecture principles.
 
 You may or may not agree with them all, but if you design software or systems, you should have a similar list in your head; it really helps a lot when making decisions.

@@ -68,12 +68,8 @@ local function md_to_html_chunk(md)
     local writer = lunamark.writer.html5.new({})
     local has_code, description = false, nil
     writer.verbatim = function(s)
-        local desc = s:match("^::description::\n(.-)\n")
         local raw = s:match("^::raw::\n(.-)\n")
-        if desc then
-            description = desc
-            return ""
-        elseif raw then
+        if raw then
             return raw
         else
             has_code = true
@@ -106,7 +102,6 @@ local function md_to_html_chunk(md)
     )
     local html, metadata = parse(md)
     if has_code then metadata.has_code = true end
-    metadata.description = assert(description)
     return html, metadata
 end
 
@@ -128,9 +123,7 @@ local function md_to_gemtext(md)
     local links = {ref = 0}
 
     writer.verbatim = function(s)
-        local desc = s:match("^::description::\n(.-)\n")
-        local raw = s:match("^::raw::\n(.-)\n")
-        if desc or raw then
+        if s:match("^::raw::\n(.-)\n") then
             return ""
         end
         local code = s:match("^lang: %w+\n(.*)")
@@ -213,6 +206,8 @@ local function parse_entry(fname)
     metadata.date = table.concat(metadata.date)
     metadata.title = lunamark.util.rope_to_string(metadata.title)
     metadata.author = table.concat(metadata.author[1])
+    metadata.description = metadata.description:
+        gsub("%s+"," "):gsub("^ ",""):gsub(" $","")
     return {
         html = html,
         gemtext = gemtext,

@@ -1,7 +1,6 @@
 # Editing Sublime Text packages
 published 2014-03-03
 
-
 I have finally decided to configure Sublime Text 2 to have it autocomplete Lua code the way I want it to.
 
 For instance, by default, when you start typing `function` and hit TAB, you get the following result:

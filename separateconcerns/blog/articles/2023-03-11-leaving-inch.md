@@ -2,8 +2,9 @@
 % Pierre 'catwell' Chapuis
 % 2023-03-11 11:55:00
 
-    ::description::
-    After three years, I am leaving Inch.
+<!--@
+  description = "After three years, I am leaving Inch."
+-->
 
 In two weeks, I will no longer be an [Inch](https://inch.fr) employee. I [joined the company](https://blog.separateconcerns.com/2020-12-16-personal-news.html#joining-inch) a bit over three years ago, but it feels like much longer. Back then I had no child, and the first thing the word "Pandemic" brought to mind was a good board game.
 

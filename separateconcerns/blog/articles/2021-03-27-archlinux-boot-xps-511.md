@@ -2,8 +2,9 @@
 % Pierre 'catwell' Chapuis
 % 2021-03-27 20:15:00
 
-    ::description::
-    If you cannot boot into GDM on Arch Linux with Linux kernel 5.11 on an XPS with an Intel graphics card, enable early KMS.
+<!--@
+  description = "If you cannot boot into GDM on Arch Linux with Linux kernel 5.11 on an XPS with an Intel graphics card, enable early KMS."
+-->
 
 When I updated my Linux kernel to 5.11 I had the bad surprise to end up with a blinking underscore on reboot. It had been many years since an update had broken my system like that. I fixed it rather easily by booting in rescue mode and downgrading the kernel. I had no time to investigate so I just added `linux` to `IgnorePkg` at the time, But I don't use Arch to run old kernels so today I took the time to fix it "properly".
 

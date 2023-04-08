@@ -2,8 +2,9 @@
 % Pierre Chapuis
 % 2022-11-18 22:45:00
 
-    ::description::
-    Thoughts on the end of Twitter, Mastodon and the Fediverse, the comeback of RSS and Atom feeds, the problem of discovery, and discussion.
+<!--@
+  description = "Thoughts on the end of Twitter, Mastodon and the Fediverse, the comeback of RSS and Atom feeds, the problem of discovery, and discussion."
+-->
 
 > "Thoughts" are posts that relate to things that have been on my mind recently. Some are practical and some are just reflections on a given topic. They are less thought out than regular posts.
 

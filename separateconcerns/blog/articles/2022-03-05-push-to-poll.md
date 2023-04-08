@@ -3,11 +3,9 @@
 % 2022-03-05 13:00:00
 
 <!--@
+  description = "A pattern to send a feed of messages or events from a server to a client."
   updated = "2022-04-04 09:45:00"
 -->
-
-    ::description::
-    A pattern to send a feed of messages or events from a server to a client.
 
 Here I want to discuss a system design pattern that I call "push-to-poll"; if it has another name I am not aware of it. I have applied that pattern successfully a few times, and used systems that did not but should have way too often.
 

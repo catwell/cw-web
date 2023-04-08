@@ -2,8 +2,9 @@
 % Pierre 'catwell' Chapuis
 % 2022-08-15 21:20:00
 
-    ::description::
-    I use dependency injection for non-deterministic code.
+<!--@
+  description = "I use dependency injection for non-deterministic code."
+-->
 
 In the list of application architecture patterns I like to use, [Dependency Injection](https://en.wikipedia.org/wiki/Dependency_injection) comes rather high. Here is how and why I use it.
 

@@ -2,8 +2,9 @@
 % Pierre 'catwell' Chapuis
 % 2023-03-31 22:15:00
 
-    ::description::
-    New job, old friends and AI.
+<!--@
+  description = "New job, old friends and AI."
+-->
 
 It's been a week since I [left Inch](https://blog.separateconcerns.com/2023-03-11-leaving-inch.html), and now it is time to disclose what I am up to.
 

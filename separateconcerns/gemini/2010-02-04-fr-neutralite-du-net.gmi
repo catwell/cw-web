@@ -1,7 +1,6 @@
 # (French) Neutralité du Net
 published 2010-02-04
 
-
 Tout le monde parle de neutralité du Net en ce moment. J'ai pensé que ça pourrait être une bonne idée de faire un point là-dessus, parce que j'entends et je lis tout et n'importe quoi, en particulier dans la presse française.
 
 La première étape pour appréhender le problème de la neutralité du Net, c'est de la définir. Benjamin Bayart s'y est essayé devant l'ARCEP [1] et je suis d'accord avec lui pour l'essentiel, même si nos points de vue divergent probablement sur certains points de détail.

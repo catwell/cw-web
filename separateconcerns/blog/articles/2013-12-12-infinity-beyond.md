@@ -2,8 +2,9 @@
 % Pierre 'catwell' Chapuis
 % 2013-12-12 21:30:00
 
-    ::description::
-    I am joining the Lima team as a core developer.
+<!--@
+  description = "I am joining the Lima team as a core developer."
+-->
 
 ## Goodbye Moodstocks
 

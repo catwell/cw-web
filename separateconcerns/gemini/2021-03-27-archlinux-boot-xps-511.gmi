@@ -1,7 +1,6 @@
 # Booting GDM on my XPS with kernel 5.11
 published 2021-03-27
 
-
 When I updated my Linux kernel to 5.11 I had the bad surprise to end up with a blinking underscore on reboot. It had been many years since an update had broken my system like that. I fixed it rather easily by booting in rescue mode and downgrading the kernel. I had no time to investigate so I just added `linux` to `IgnorePkg` at the time, But I don't use Arch to run old kernels so today I took the time to fix it "properly".
 
 To do so, I reproduced the issue, then downgraded again and looked at the logs with `journalctl -b --boot=-1`. It quickly let me understand that it was GDM that was failing due to something wrong with graphics initialization.

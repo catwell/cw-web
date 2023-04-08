@@ -22,9 +22,7 @@
         [ <a href="index.html">home</a> ]
       </h4>
     </header>
-    
-
-<p>At <a href="https://meetlima.com">Lima</a>, we use <a href="http://symas.com/mdb/">the LMDB database</a> extensively, and we looked into its source code in order to debug a few issues we had. To help us diagnose broken databases, and also because I wanted to learn more about it, I wrote <a href="https://github.com/catwell/cw-lua/tree/master/lua-mdb">a parser for the LMDB database file format in Lua</a> in my spare time, which I published under the Open Source MIT license.</p>
+    <p>At <a href="https://meetlima.com">Lima</a>, we use <a href="http://symas.com/mdb/">the LMDB database</a> extensively, and we looked into its source code in order to debug a few issues we had. To help us diagnose broken databases, and also because I wanted to learn more about it, I wrote <a href="https://github.com/catwell/cw-lua/tree/master/lua-mdb">a parser for the LMDB database file format in Lua</a> in my spare time, which I published under the Open Source MIT license.</p>
 
 <p>In this post, I will give an overview of how a data.mdb file is structured. Note that I will sometimes skip over some things and operate under the assumption that you are running on a little-endian platform with 4 kB pages, etc.</p>
 

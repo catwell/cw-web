@@ -1,7 +1,6 @@
 # [Quora] Explaining classes to a 10 year old
 published 2020-04-11
 
-
 Continuing my Quora answers series [1] with this question [2] which I answered on June 26, 2012:
 
 > How would you explain the concept of a "class" in Python to a 10 year old?

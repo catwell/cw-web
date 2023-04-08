@@ -2,8 +2,9 @@
 % Pierre Chapuis
 % 2010-02-04 12:00:00
 
-    ::description::
-    Un point sur ce qu'est la neutralité du Net.
+<!--@
+  description = "Un point sur ce qu'est la neutralité du Net."
+-->
 
 
 Tout le monde parle de neutralité du Net en ce moment. J'ai pensé que ça pourrait être une bonne idée de faire un point là-dessus, parce que j'entends et je lis tout et n'importe quoi, en particulier dans la presse française.

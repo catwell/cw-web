@@ -1,7 +1,6 @@
 # Joining Finegrain
 published 2023-03-31
 
-
 It's been a week since I left Inch [1], and now it is time to disclose what I am up to.
 
 Last Monday I joined [2] a very early-stage startup called Finegrain [3]. We're working on improving online images using AI with no humans in the loop. The founders of the company are the Moodstocks [4] founders Denis and Cédric, so we get to work together again after 10 years.

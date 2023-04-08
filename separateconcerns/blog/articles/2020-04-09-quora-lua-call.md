@@ -2,8 +2,9 @@
 % Pierre 'catwell' Chapuis
 % 2020-04-09 08:40:00
 
-    ::description::
-    What is the call metamethod in Lua and what are some of its uses and basic examples?
+<!--@
+  description = "What is the call metamethod in Lua and what are some of its uses and basic examples?"
+-->
 
 From 2011 to 2014, I used to post answers on [Quora](https://www.quora.com/). I don't anymore, because I don't really like what the website has become. I have a copy of some of my answers [here](http://files.catwell.info/misc/mirror/quora-answers/) but someone [commented](https://www.quora.com/What-is-the-__call-metamethod-in-Lua-and-what-are-some-of-its-uses-and-basic-examples/all_comments/Pierre-Chapuis?__nsrc__=4&__snid3__=7556751152&comment_id=135057589&comment_type=2) on one of my answers that it should be available more prominently on the Web, so I decided to repost a few of my answers here, starting with this one.
 

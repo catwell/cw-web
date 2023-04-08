@@ -3,11 +3,9 @@
 % 2020-04-03 09:05:00
 
 <!--@
+  description = "How to use pass and oathtool to generate 2FA codes easily."
   updated = "2020-04-03 16:20:00"
 -->
-
-    ::description::
-    How to use pass and oathtool to generate 2FA codes easily.
 
 If you're like me, you don't want to depend on your phone to log into a website, and you wish [your favorite password manager](https://www.passwordstore.org) would support 2FA. Well, it can.
 

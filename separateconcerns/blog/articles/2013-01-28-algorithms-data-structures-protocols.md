@@ -2,8 +2,9 @@
 % Pierre 'catwell' Chapuis
 % 2013-01-28 22:00:00
 
-    ::description::
-    There are three fundamental parts to Computer Science: Algorithms, Data Structures and Protocols.
+<!--@
+  description = "There are three fundamental parts to Computer Science: Algorithms, Data Structures and Protocols."
+-->
 
 ## Algorithms & Data Structures
 

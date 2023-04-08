@@ -1,7 +1,6 @@
 # Thoughts 2
 published 2016-12-07
 
-
 ## On Call
 
 Alice Goldfuss [1] started a debate [2] about having developers on call. I am firmly in the camp of those who think it is a good thing, probably because I was a sysadmin before being a software engineer. But this means those developers must have the power to refuse to ship broken code that may make the pager go off as well.

@@ -2,8 +2,9 @@
 % Pierre Chapuis
 % 2022-12-11 18:20:00
 
-    ::description::
-    Thoughts on the SSO tax in SaaS, Amazon's Distributed Computing Manifesto, an old Aaron Swartz essay, and approachable research.
+<!--@
+  description = "Thoughts on the SSO tax in SaaS, Amazon's Distributed Computing Manifesto, an old Aaron Swartz essay, and approachable research."
+-->
 
 > "Thoughts" are posts about what has been on my mind. Sometimes practical, sometimes not; often just things I read recently. Less thought out than regular posts.
 

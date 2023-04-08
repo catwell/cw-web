@@ -1,7 +1,6 @@
 # How I write Lua modules
 published 2014-01-03
 
-
 Hisham just published an article about his personal guidelines for writing Lua modules [1]. Interestingly, I do a lot of things differently. Let us see how.
 
 > Policy Bit #1: always require a module into a local named after the last component of the module’s full name.

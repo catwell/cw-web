@@ -1,7 +1,6 @@
 # Viterbi, my favorite algorithm
 published 2013-03-03
 
-
 ## The State Machine
 
 Let us consider a system that can take a finite number of states `S[1]` to `S[n]` over time.

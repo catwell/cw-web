@@ -1,7 +1,6 @@
 # Two-factor authentication with pass and oathtool
 published 2020-04-03
 
-
 If you're like me, you don't want to depend on your phone to log into a website, and you wish your favorite password manager [1] would support 2FA. Well, it can.
 
 When asked to setup 2FA on a website, get a text code. If the website doesn't give you that option, just use zbar [2]. For instance, with the QR code from the GitHub documentation [3]:

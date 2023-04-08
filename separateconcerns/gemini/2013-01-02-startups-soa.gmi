@@ -1,7 +1,6 @@
 # Startups, think about SOA
 published 2013-01-02
 
-
 ## What is SOA?
 
 When people say SOA (Service Oriented Architecture) they often mean different things. My personal definition of SOA is rather loose and, like all the quotes in this article, comes from Werner Vogels [1], the CTO of Amazon:

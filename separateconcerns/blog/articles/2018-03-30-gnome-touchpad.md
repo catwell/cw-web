@@ -2,9 +2,12 @@
 % Pierre 'catwell' Chapuis
 % 2018-03-30 19:00:00
 
-    ::description::
+<!--@
+  description = [[
     Gnome 3.28 changes the default behavior of touchpads,
     here is how to change it back.
+  ]]
+-->
 
 If you are like me, maybe you have recently updated your Linux laptop and found out that right click had stopped working on the touchpad. It took me half an hour to figure out why. I was looking at low-level stuff until I realized `libinput debug-events` saw the right thing:
 

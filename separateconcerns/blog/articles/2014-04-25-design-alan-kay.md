@@ -2,8 +2,9 @@
 % Pierre Chapuis
 % 2014-04-25 00:30:00
 
-    ::description::
-    Alan Kay gave a talk at Demo called The Future Doesn't Have To Be
+<!--@
+  description = "Alan Kay gave a talk at Demo called The Future Doesn't Have To Be"
+-->
     Incremental which resonates with some ideas I have on modern design.
 
 

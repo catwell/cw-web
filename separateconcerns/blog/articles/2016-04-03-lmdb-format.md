@@ -2,8 +2,9 @@
 % Pierre Chapuis
 % 2016-04-03 23:00:00
 
-    ::description::
-    The format of data.mdb files, used by the LMDB database.
+<!--@
+  description = "The format of data.mdb files, used by the LMDB database."
+-->
 
 At [Lima](https://meetlima.com), we use
 [the LMDB database](http://symas.com/mdb/) extensively, and we looked into its

@@ -2,8 +2,9 @@
 % Pierre Chapuis
 % 2014-01-03 00:00:01
 
-    ::description::
-    How I write Lua modules - an answer to Hisham's post.
+<!--@
+  description = "How I write Lua modules - an answer to Hisham's post."
+-->
 
 Hisham just published an article about his personal [guidelines for writing Lua modules](http://hisham.hm/2014/01/02/how-to-write-lua-modules-in-a-post-module-world/). Interestingly, I do a lot of things differently. Let us see how.
 

@@ -2,8 +2,9 @@
 % Pierre Chapuis
 % 2016-12-22 08:00:00
 
-    ::description::
-    The Lua Toolbox has been merged into the main LuaRocks website.
+<!--@
+  description = "The Lua Toolbox has been merged into the main LuaRocks website."
+-->
 
 In November 2013, I gave
 [a talk](http://files.catwell.info/presentations/2013-11-lua-workshop-lua-ecosystem)

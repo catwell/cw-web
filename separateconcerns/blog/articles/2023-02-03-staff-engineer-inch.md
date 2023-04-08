@@ -2,8 +2,9 @@
 % Pierre Chapuis
 % 2023-02-03 12:20:00
 
-    ::description::
-    How the Staff Engineer role can be defined at a small company like Inch.
+<!--@
+  description = "How the Staff Engineer role can be defined at a small company like Inch."
+-->
 
 When I was [hired at Inch](https://blog.separateconcerns.com/2021-05-01-inch.html) my "official" position quickly became an issue. For various reasons neither the title they wanted to give me initially (Engineering Manager) nor the one I would be given externally (CTO) nor the obvious Senior Software Engineer worked. So I proposed to help them define the next position on the technical ladder.
 

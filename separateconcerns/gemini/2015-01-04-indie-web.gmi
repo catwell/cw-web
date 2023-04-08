@@ -1,7 +1,6 @@
 # Indie Web
 published 2015-01-04
 
-
 It is not a secret that I don't like Web technology. I prefer XHTML to HTML5, I think JavaScript is a terrible language, and don't get me started on microformats (let's just say that SoC > DRY...). I'd rather see this mess replaced by something much simpler that only deals with linked documents and feeds, and maybe a separate platform for portable applications.
 
 However, the Web is here to last, and given its importance, its centralization is concerning. This is why I am interested in the Indie Web [1] movement, which I see as part of the larger effort to decentralize Internet. By the way, if you are into this and live in Paris, check out this meetup [2] which is held every six weeks at Mozilla's office. I have been there every time since its inception and it is well worth it.

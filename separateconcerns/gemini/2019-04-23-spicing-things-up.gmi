@@ -1,7 +1,6 @@
 # Spicing things up
 published 2019-04-23
 
-
 In my last post I told you [1] I had plans that I was not ready to talk about yet. Well, the time has come. I am happy to announce that I am now the CTO and co-founder of a startup called Chilli [2].
 
 Chilli is not a typical startup, it is an eFounders [3] project. You may know eFounders as the first startup studio in France, which originated companies such as Front [4], Aircall [5] and Spendesk [6]. The way they usually work is that they identify a problem that needs solving and find founders to tackle it, providing them both support and funding in exchange for equity. When the studio was created, I had doubts about the model, but later on I became quite enthusiastic [7] about it.

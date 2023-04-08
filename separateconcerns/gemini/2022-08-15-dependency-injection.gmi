@@ -1,7 +1,6 @@
 # Dependency Injection
 published 2022-08-15
 
-
 In the list of application architecture patterns I like to use, Dependency Injection [1] comes rather high. Here is how and why I use it.
 
 => https://en.wikipedia.org/wiki/Dependency_injection 1: https://en.wikipedia.org/wiki/Dependency_injection

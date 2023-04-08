@@ -2,8 +2,9 @@
 % Pierre 'catwell' Chapuis
 % 2010-01-30 12:00:00
 
-    ::description::
-    La redevance TV en Angleterre, les alarmes incendie, Facebook et Java.
+<!--@
+  description = "La redevance TV en Angleterre, les alarmes incendie, Facebook et Java."
+-->
 
 
 Ceux qui me connaissent savent que râler, je sais faire. J'essaie d'éviter autant que possible, mais parfois c'est nécessaire.

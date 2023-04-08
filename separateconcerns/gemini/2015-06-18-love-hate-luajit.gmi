@@ -1,7 +1,6 @@
 # My love-hate relationship with LuaJIT
 published 2015-06-18
 
-
 > Clarification: The title is exaggerated. I have never hated LuaJIT, I just went back to using PUC Lua primarily.
 
 I started using Lua in early 2007. I had already been programming for years, but I had reached a point where I had decided that I wanted to know exactly what was going on when my computer executed dynamic code. That meant understanding two critical pieces of the software stack: the OS and the interpreter.

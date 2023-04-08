@@ -1,7 +1,6 @@
 # Goodbye Lima
 published 2019-02-15
 
-
 You may have heard it already: five years after I joined Lima [1], the company is shutting down [2].
 
 Obviously, things did not go like we hoped they would. Customers are disappointed, and wondering what will happen now. Let me try to answer some of the questions I read online the best I can.

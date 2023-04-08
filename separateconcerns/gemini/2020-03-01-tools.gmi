@@ -1,7 +1,6 @@
 # Tools
 published 2020-03-01,updated 2022-11-15
 
-
 A few days ago I read this article [1] which made me want to list some of the tools used at the four startups I have worked at so far.
 
 I have mostly listed SaaS tools here, but you can also check out the ~stack tag on my Pinboard [2] for more.

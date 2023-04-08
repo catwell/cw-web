@@ -1,7 +1,6 @@
 # Algorithms, Data Structures &amp;amp; Protocols
 published 2013-01-28
 
-
 ## Algorithms & Data Structures
 
 For a long time I have thought that there were only two fundamental parts to Computer Science: Algorithms and Data Structures. This is how it used to be taught, and how I think it should still be taught to beginners.

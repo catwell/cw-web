@@ -2,10 +2,12 @@
 % Pierre Chapuis
 % 2014-05-28 00:00:01
 
-    ::description::
+<!--@
+  description = [[
     Adapted from an old Gist, on how technically minded people can be
     good startup founders.
-
+  ]]
+-->
 
 Note: I posted what follows [as a Gist](https://gist.github.com/catwell/5387617) over a year ago. Recently I was looking for it and couldn't find it, so I am re-posting it here for the next time.
 

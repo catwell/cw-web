@@ -1,7 +1,6 @@
 # C: what I had forgotten
 published 2014-01-02
 
-
 Thanks to my new job [1] I will have the opportunity to write a lot more C than in the last three years. To prepare for this, I decided to read some old C89 books again and see what I remembered. Here are some of the quirks I had forgotten (or never known about).
 
 * Declarations cannot be interleaved with other statements in ANSI C. They have to happen at the beginning of a bloc.

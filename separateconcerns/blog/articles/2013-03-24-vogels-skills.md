@@ -2,9 +2,12 @@
 % Pierre 'catwell' Chapuis
 % 2013-03-24 19:30:00
 
-    ::description::
+<!--@
+  description = [[
     Werner Vogels, CTO of Amazon, explains what skills he is looking for
     to run 21st century application architectures.
+  ]]
+-->
 
 I found a talk by Werner Vogels, the CTO of Amazon [who is a role model of mine](http://blog.separateconcerns.com/2013-01-02-startups-soa.html), on [21st century application architectures](http://skillsmatter.com/podcast/design-architecture/21st-century-application-architectures).
 

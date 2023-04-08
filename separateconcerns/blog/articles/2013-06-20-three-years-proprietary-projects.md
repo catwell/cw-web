@@ -3,11 +3,9 @@
 % 2013-06-20 00:40:00
 
 <!--@
+  description = "Projects I have worked on at Moodstocks over the last three years."
   updated = "2015-11-11 21:15:00"
 -->
-
-    ::description::
-    Projects I have worked on at Moodstocks over the last three years.
 
 Some of the code I write is Open Source, but these days most of it is closed source and property of [Moodstocks](http://www.moodstocks.com/), the startup I work for. For the last three years I have had the chance to work on a lot of really interesting projects, the most significant of which I will talk about now. If you are still a student, maybe that can inspire you to join a startup. Maybe you will even decide to join us in our quest to advance mobile image recognition and applications in general.
 

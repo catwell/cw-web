@@ -26,9 +26,7 @@
     <updated>2023-03-31T22:15:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<p>It&#39;s been a week since I <a href="https://blog.separateconcerns.com/2023-03-11-leaving-inch.html">left Inch</a>, and now it is time to disclose what I am up to.</p>
+        <p>It&#39;s been a week since I <a href="https://blog.separateconcerns.com/2023-03-11-leaving-inch.html">left Inch</a>, and now it is time to disclose what I am up to.</p>
 
 <p>Last Monday <a href="https://twitter.com/pchapuis/status/1640254206148767745">I joined</a> a very early-stage startup called <a href="https://finegrain.ai">Finegrain</a>. We&#39;re working on improving online images using AI with no humans in the loop. The founders of the company are the <a href="https://blog.separateconcerns.com/2013-06-20-three-years-proprietary-projects.html">Moodstocks</a> founders Denis and Cédric, so we get to work together again after 10 years.</p>
 
@@ -51,9 +49,7 @@ If <em>you</em> know about AI though, <a href="https://finegrain.ai/jobs/opening
     <updated>2023-03-11T11:55:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<p>In two weeks, I will no longer be an <a href="https://inch.fr">Inch</a> employee. I <a href="https://blog.separateconcerns.com/2020-12-16-personal-news.html#joining-inch">joined the company</a> a bit over three years ago, but it feels like much longer. Back then I had no child, and the first thing the word &quot;Pandemic&quot; brought to mind was a good board game.</p>
+        <p>In two weeks, I will no longer be an <a href="https://inch.fr">Inch</a> employee. I <a href="https://blog.separateconcerns.com/2020-12-16-personal-news.html#joining-inch">joined the company</a> a bit over three years ago, but it feels like much longer. Back then I had no child, and the first thing the word &quot;Pandemic&quot; brought to mind was a good board game.</p>
 
 <p>Three years later, Inch is not so different from the company I joined, and yet much better in many ways. As for me, I did what I came for initially, and then more. Now I have an opportunity I could not pass. It is too early to talk about it except <a href="https://framapiaf.org/@catwell/109904487542868111">in cryptic form</a>, but when I do you will understand.</p>
 
@@ -74,9 +70,7 @@ And by the way, Inch is hiring a software engineer! It is a French-speaking, sem
     <updated>2023-03-02T11:45:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<blockquote>
+        <blockquote>
 <p>&quot;Thoughts&quot; are posts about what has been on my mind. Sometimes practical, sometimes not; often just things I read recently. Less thought out than regular posts.</p>
 </blockquote>
 
@@ -151,9 +145,7 @@ Even though it&#39;s not my main focus anymore, I am still following CRDT-based 
     <updated>2023-02-03T12:20:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<p>When I was <a href="https://blog.separateconcerns.com/2021-05-01-inch.html">hired at Inch</a> my &quot;official&quot; position quickly became an issue. For various reasons neither the title they wanted to give me initially (Engineering Manager) nor the one I would be given externally (CTO) nor the obvious Senior Software Engineer worked. So I proposed to help them define the next position on the technical ladder.</p>
+        <p>When I was <a href="https://blog.separateconcerns.com/2021-05-01-inch.html">hired at Inch</a> my &quot;official&quot; position quickly became an issue. For various reasons neither the title they wanted to give me initially (Engineering Manager) nor the one I would be given externally (CTO) nor the obvious Senior Software Engineer worked. So I proposed to help them define the next position on the technical ladder.</p>
 
 <p>What follows is a translation of a document I wrote in French, slightly edited to remove Inch-specific details. It is still written from a European - and more specifically French - point of view. That document was later used to promote a 2nd engineer to Staff. I publish it here so it can help people needing to do something similar elsewhere.</p>
 
@@ -313,9 +305,7 @@ Even though it&#39;s not my main focus anymore, I am still following CRDT-based 
     <updated>2022-12-11T18:20:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<blockquote>
+        <blockquote>
 <p>&quot;Thoughts&quot; are posts about what has been on my mind. Sometimes practical, sometimes not; often just things I read recently. Less thought out than regular posts.</p>
 </blockquote>
 
@@ -362,9 +352,7 @@ Even though it&#39;s not my main focus anymore, I am still following CRDT-based 
     <updated>2022-11-18T22:45:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<blockquote>
+        <blockquote>
 <p>&quot;Thoughts&quot; are posts that relate to things that have been on my mind recently. Some are practical and some are just reflections on a given topic. They are less thought out than regular posts.</p>
 </blockquote>
 
@@ -393,9 +381,7 @@ Oh, and for private messages, well... just send me an email, I guess.
     <updated>2022-10-10T17:50:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<p>Today I attended Lua Workshop, and Roberto Ierusalimschy&#39;s keynote was about <a href="https://github.com/pallene-lang/pallene">Pallene</a>, a language designed as a system counterpart to Lua in a scripting architecture. The language is a typed subset of Lua and can be used to replace C or as an interface between Lua and C. It is still a work in progress, there is no stable release yet.</p>
+        <p>Today I attended Lua Workshop, and Roberto Ierusalimschy&#39;s keynote was about <a href="https://github.com/pallene-lang/pallene">Pallene</a>, a language designed as a system counterpart to Lua in a scripting architecture. The language is a typed subset of Lua and can be used to replace C or as an interface between Lua and C. It is still a work in progress, there is no stable release yet.</p>
 
 <p>Pallene works by accessing the internals of the Lua VM, so it requires <a href="https://github.com/pallene-lang/lua-internals">a patched version of Lua</a>. I wanted to try it so I added support for it to <a href="https://loadk.com">localua</a>. You can just use &quot;pallene&quot; instead of the Lua version and it will pull the latest sources of Pallene and its Lua fork and install them in a self-contained directory.</p>
 
@@ -424,9 +410,7 @@ CFLAGS=&quot;-I $(pwd)/.lua/include -O2&quot; ./.lua/bin/pallenec fibonacci.pln
     <updated>2022-08-15T21:20:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<p>In the list of application architecture patterns I like to use, <a href="https://en.wikipedia.org/wiki/Dependency_injection">Dependency Injection</a> comes rather high. Here is how and why I use it.</p>
+        <p>In the list of application architecture patterns I like to use, <a href="https://en.wikipedia.org/wiki/Dependency_injection">Dependency Injection</a> comes rather high. Here is how and why I use it.</p>
 
 <h2 id="how-i-use-dependency-injection">How I use Dependency Injection</h2>
 
@@ -550,9 +534,7 @@ A way to work around that if you still want to use DI may be to have sensible de
     <updated>2022-04-04T09:45:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<p>Here I want to discuss a system design pattern that I call &quot;push-to-poll&quot;; if it has another name I am not aware of it. I have applied that pattern successfully a few times, and used systems that did not but should have way too often.</p>
+        <p>Here I want to discuss a system design pattern that I call &quot;push-to-poll&quot;; if it has another name I am not aware of it. I have applied that pattern successfully a few times, and used systems that did not but should have way too often.</p>
 
 <h2 id="polling">Polling</h2>
 
@@ -650,9 +632,7 @@ The only drawback is that it takes an extra request for every exchange, but in p
     <updated>2022-02-05T19:45:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<p>I have wanted to play with <a href="https://gemini.circumlunar.space">Gemini</a> for while now, so today being <a href="https://fosdem.org/2022/">the first day of FOSDEM</a> I decided to do what I would have done if I was in Brussels and hack on something between two talks.</p>
+        <p>I have wanted to play with <a href="https://gemini.circumlunar.space">Gemini</a> for while now, so today being <a href="https://fosdem.org/2022/">the first day of FOSDEM</a> I decided to do what I would have done if I was in Brussels and hack on something between two talks.</p>
 
 <p>I ended up adding Gemini support to <a href="https://github.com/catwell/cw-web/tree/master/separateconcerns/blog">the static generator I use for this blog</a>, which meant implementing a Gemini writer for <a href="https://github.com/jgm/lunamark">Lunamark</a>, plus a small trick to display links in the right place.</p>
 
@@ -673,9 +653,7 @@ If you want to check it out, point a Gemini browser - I use <a href="https://gmi
     <updated>2021-10-31T15:45:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<p>Over the years, I have accumulated links to blog posts I intend to re-read every time find myself in a position to influence the early stage of a company.</p>
+        <p>Over the years, I have accumulated links to blog posts I intend to re-read every time find myself in a position to influence the early stage of a company.</p>
 
 <p>I thought it might be helpful to someone if I published part of that list here. I will avoid links which are too technical and focus on links that can be interest non-technical founders as well.</p>
 
@@ -805,9 +783,7 @@ If you want to check it out, point a Gemini browser - I use <a href="https://gmi
     <updated>2021-05-01T18:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<p>I have been working at <a href="https://inch.fr">Inch</a> for about a year and a half now, so I thought it was a good time to write a bit about what I do there.</p>
+        <p>I have been working at <a href="https://inch.fr">Inch</a> for about a year and a half now, so I thought it was a good time to write a bit about what I do there.</p>
 
 <p>First, a bit of context: Inch is SaaS software for property managers that operates in the French (and Belgian) market. Many of our customers are <a href="https://fr.wikipedia.org/wiki/Syndic_de_copropriété">co-ownership trustees</a>, which is a much bigger deal in France than in most countries, but we also serve other professionals such as rental managers and social housing landlords.</p>
 
@@ -870,9 +846,7 @@ This article is already long enough so I&#39;ll stop here. I hope that gives you
     <updated>2021-03-27T20:15:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<p>When I updated my Linux kernel to 5.11 I had the bad surprise to end up with a blinking underscore on reboot. It had been many years since an update had broken my system like that. I fixed it rather easily by booting in rescue mode and downgrading the kernel. I had no time to investigate so I just added <code>linux</code> to <code>IgnorePkg</code> at the time, But I don&#39;t use Arch to run old kernels so today I took the time to fix it &quot;properly&quot;.</p>
+        <p>When I updated my Linux kernel to 5.11 I had the bad surprise to end up with a blinking underscore on reboot. It had been many years since an update had broken my system like that. I fixed it rather easily by booting in rescue mode and downgrading the kernel. I had no time to investigate so I just added <code>linux</code> to <code>IgnorePkg</code> at the time, But I don&#39;t use Arch to run old kernels so today I took the time to fix it &quot;properly&quot;.</p>
 
 <p>To do so, I reproduced the issue, then downgraded again and looked at the logs with <code>journalctl -b --boot=-1</code>. It quickly let me understand that it was GDM that was failing due to something wrong with graphics initialization.</p>
 
@@ -891,9 +865,7 @@ To keep things short, let me skip to the conclusion: if you run into this issue 
     <updated>2020-12-16T13:50:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<p>I haven&#39;t posted anything here for 6 months so I thought it would be a good idea to post a personal news update before the end of 2020.</p>
+        <p>I haven&#39;t posted anything here for 6 months so I thought it would be a good idea to post a personal news update before the end of 2020.</p>
 
 <h2 id="shutting-down-chilli">Shutting down Chilli</h2>
 
@@ -928,9 +900,7 @@ And here comes the last piece of news: despite all the madness that happened thi
     <updated>2020-06-19T18:52:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<p>Yet another <a href="https://blog.separateconcerns.com/2020-04-09-quora-lua-call.html">Quora answer</a>, this time to with <a href="https://www.quora.com/Why-is-Transparency-a-major-issue-in-distributed-databases">this question</a> which I answered on August 24, 2016:</p>
+        <p>Yet another <a href="https://blog.separateconcerns.com/2020-04-09-quora-lua-call.html">Quora answer</a>, this time to with <a href="https://www.quora.com/Why-is-Transparency-a-major-issue-in-distributed-databases">this question</a> which I answered on August 24, 2016:</p>
 
 <blockquote>
 <p>Why is Transparency a major issue in distributed databases?</p>
@@ -965,9 +935,7 @@ Some people have gone as far as saying that <a href="https://bravenewgeek.com/di
     <updated>2020-04-11T13:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<p>Continuing my <a href="https://blog.separateconcerns.com/2020-04-09-quora-lua-call.html">Quora answers series</a> with <a href="https://www.quora.com/How-would-you-explain-the-concept-of-a-class-in-Python-to-a-10-year-old">this question</a> which I answered on June 26, 2012:</p>
+        <p>Continuing my <a href="https://blog.separateconcerns.com/2020-04-09-quora-lua-call.html">Quora answers series</a> with <a href="https://www.quora.com/How-would-you-explain-the-concept-of-a-class-in-Python-to-a-10-year-old">this question</a> which I answered on June 26, 2012:</p>
 
 <blockquote>
 <p>How would you explain the concept of a &quot;class&quot; in Python to a 10 year old?</p>
@@ -1082,9 +1050,7 @@ sam.purr()
     <updated>2020-04-09T08:40:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<p>From 2011 to 2014, I used to post answers on <a href="https://www.quora.com/">Quora</a>. I don&#39;t anymore, because I don&#39;t really like what the website has become. I have a copy of some of my answers <a href="http://files.catwell.info/misc/mirror/quora-answers/">here</a> but someone <a href="https://www.quora.com/What-is-the-__call-metamethod-in-Lua-and-what-are-some-of-its-uses-and-basic-examples/all_comments/Pierre-Chapuis?__nsrc__=4&amp;__snid3__=7556751152&amp;comment_id=135057589&amp;comment_type=2">commented</a> on one of my answers that it should be available more prominently on the Web, so I decided to repost a few of my answers here, starting with this one.</p>
+        <p>From 2011 to 2014, I used to post answers on <a href="https://www.quora.com/">Quora</a>. I don&#39;t anymore, because I don&#39;t really like what the website has become. I have a copy of some of my answers <a href="http://files.catwell.info/misc/mirror/quora-answers/">here</a> but someone <a href="https://www.quora.com/What-is-the-__call-metamethod-in-Lua-and-what-are-some-of-its-uses-and-basic-examples/all_comments/Pierre-Chapuis?__nsrc__=4&amp;__snid3__=7556751152&amp;comment_id=135057589&amp;comment_type=2">commented</a> on one of my answers that it should be available more prominently on the Web, so I decided to repost a few of my answers here, starting with this one.</p>
 
 <p>The <a href="https://www.quora.com/What-is-the-__call-metamethod-in-Lua-and-what-are-some-of-its-uses-and-basic-examples/">original question</a> was:</p>
 
@@ -1190,9 +1156,7 @@ I hope this gives you enough information to understand how you can use <code>__c
     <updated>2020-04-03T16:20:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<p>If you&#39;re like me, you don&#39;t want to depend on your phone to log into a website, and you wish <a href="https://www.passwordstore.org">your favorite password manager</a> would support 2FA. Well, it can.</p>
+        <p>If you&#39;re like me, you don&#39;t want to depend on your phone to log into a website, and you wish <a href="https://www.passwordstore.org">your favorite password manager</a> would support 2FA. Well, it can.</p>
 
 <p>When asked to setup 2FA on a website, get a text code. If the website doesn&#39;t give you that option, just use <a href="http://zbar.sourceforge.net">zbar</a>. For instance, with the QR code from the <a href="https://help.github.com/en/github/authenticating-to-github/configuring-two-factor-authentication">GitHub documentation</a>:</p>
 
@@ -1242,9 +1206,7 @@ The one thing I could do to really improve the security of the whole thing is us
     <updated>2022-11-15T21:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<p>A few days ago I read <a href="https://acrossapp.com/blog/how-a-2-person-startup-already-uses-28-other-tools">this article</a> which made me want to list some of the tools used at the four startups I have worked at so far.</p>
+        <p>A few days ago I read <a href="https://acrossapp.com/blog/how-a-2-person-startup-already-uses-28-other-tools">this article</a> which made me want to list some of the tools used at the four startups I have worked at so far.</p>
 
 <p>I have mostly listed SaaS tools here, but you can also check out <a href="https://pinboard.in/u:catwell/t:~stack/">the ~stack tag on my Pinboard</a> for more.</p>
 
@@ -1368,9 +1330,7 @@ The one thing I could do to really improve the security of the whole thing is us
     <updated>2019-10-19T15:30:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<p>You know how some discussions can make you pause and introspect for a while after they happen? Well, I have had such a discussion recently about how strong my opinions are nowadays, and I decided to write something about it.</p>
+        <p>You know how some discussions can make you pause and introspect for a while after they happen? Well, I have had such a discussion recently about how strong my opinions are nowadays, and I decided to write something about it.</p>
 
 <h2 id="forming-opinions">Forming opinions</h2>
 
@@ -1445,9 +1405,7 @@ Don&#39;t worry though, I still hold a few strong opinions, both in my field (so
     <updated>2019-06-01T19:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<p>In projects that use SQLAlchemy and <a href="https://alembic.sqlalchemy.org">Alembic</a> via <a href="https://flask-migrate.readthedocs.io">Flask-Migrate</a>, you may want to truncate the migrations history. By that I mean: rewrite all the migrations up to some point as a single initial migration, to avoid replaying them every single time you create a new database instance. Of course, you only want to do that if you have already migrated all your database instances at least up to that point.</p>
+        <p>In projects that use SQLAlchemy and <a href="https://alembic.sqlalchemy.org">Alembic</a> via <a href="https://flask-migrate.readthedocs.io">Flask-Migrate</a>, you may want to truncate the migrations history. By that I mean: rewrite all the migrations up to some point as a single initial migration, to avoid replaying them every single time you create a new database instance. Of course, you only want to do that if you have already migrated all your database instances at least up to that point.</p>
 
 <p>As far as I know, there is no Alembic feature to do this automatically. However, I found a way to avoid having to write the migration by hand. Here is an example of how you can achieve this with a project using Git, PostgreSQL, and <a href="https://12factor.net">environment variables for configuration</a>.</p>
 
@@ -1494,9 +1452,7 @@ git branch -D tmp-alembic
     <updated>2020-04-07T10:40:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<h2 id="april-2020-update">April 2020 update</h2>
+        <h2 id="april-2020-update">April 2020 update</h2>
 
 <p>This article is out of date. Arch Linux <a href="https://bugs.archlinux.org/task/62248">stopped shipping OpenSSH with socket activation</a> due to the risk of DoS attack. Now you can just set <code>Port</code> in <code>sshd_config</code> as usual.</p>
 
@@ -1530,9 +1486,7 @@ I hope this short post will avoid trouble for other people, at least it will be 
     <updated>2019-04-23T21:45:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<p>In my last post I <a href="https://blog.separateconcerns.com/2019-02-15-goodbye-lima.html#what-are-you-going-to-do-next">told you</a> I had plans that I was not ready to talk about yet. Well, the time has come. I am happy to announce that I am now the CTO and co-founder of a startup called <a href="https://www.efounders.com/companies/chilli">Chilli</a>.</p>
+        <p>In my last post I <a href="https://blog.separateconcerns.com/2019-02-15-goodbye-lima.html#what-are-you-going-to-do-next">told you</a> I had plans that I was not ready to talk about yet. Well, the time has come. I am happy to announce that I am now the CTO and co-founder of a startup called <a href="https://www.efounders.com/companies/chilli">Chilli</a>.</p>
 
 <p>Chilli is not a typical startup, it is an <a href="https://www.efounders.com">eFounders</a> project. You may know eFounders as the first startup studio in France, which originated companies such as <a href="https://frontapp.com">Front</a>, <a href="https://aircall.io">Aircall</a> and <a href="https://www.spendesk.com">Spendesk</a>. The way they usually work is that they identify a problem that needs solving and find founders to tackle it, providing them both support and funding in exchange for equity. When the studio was created, I had doubts about the model, but later on I became <a href="https://twitter.com/pchapuis/status/806463326842712067">quite enthusiastic</a> about it.</p>
 
@@ -1557,9 +1511,7 @@ I hope this short post will avoid trouble for other people, at least it will be 
     <updated>2019-02-15T19:40:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<p>You may have heard it already: five years after I <a href="https://blog.separateconcerns.com/2013-12-12-infinity-beyond.html">joined Lima</a>, the company <a href="https://medium.com/@MeetLima/this-time-its-goodbye-5573a97be7d4">is shutting down</a>.</p>
+        <p>You may have heard it already: five years after I <a href="https://blog.separateconcerns.com/2013-12-12-infinity-beyond.html">joined Lima</a>, the company <a href="https://medium.com/@MeetLima/this-time-its-goodbye-5573a97be7d4">is shutting down</a>.</p>
 
 <p>Obviously, things did not go like we hoped they would. Customers are disappointed, and wondering what will happen now. Let me try to answer some of the questions I read online the best I can.</p>
 
@@ -1676,9 +1628,7 @@ I will tell you more next month, probably.
     <updated>2019-02-15T10:20:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<p>This is just a short post to share what I now consider, after 10 years in the industry (and almost twice as many writing code), my core software architecture principles.</p>
+        <p>This is just a short post to share what I now consider, after 10 years in the industry (and almost twice as many writing code), my core software architecture principles.</p>
 
 <p>You may or may not agree with them all, but if you design software or systems, you should have a similar list in your head; it really helps a lot when making decisions.</p>
 
@@ -1706,9 +1656,7 @@ I will tell you more next month, probably.
     <updated>2018-03-30T19:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<p>If you are like me, maybe you have recently updated your Linux laptop and found out that right click had stopped working on the touchpad. It took me half an hour to figure out why. I was looking at low-level stuff until I realized <code>libinput debug-events</code> saw the right thing:</p>
+        <p>If you are like me, maybe you have recently updated your Linux laptop and found out that right click had stopped working on the touchpad. It took me half an hour to figure out why. I was looking at low-level stuff until I realized <code>libinput debug-events</code> saw the right thing:</p>
 
 <pre><code>event11  POINTER_BUTTON    +3.35s
     BTN_RIGHT (273) pressed, seat count: 1
@@ -1745,9 +1693,7 @@ event11  POINTER_BUTTON    +3.49s
     <updated>2018-01-06T14:10:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<p>Today marks the fourth birthday of <a href="https://blog.separateconcerns.com/2013-12-12-infinity-beyond.html">my joining Lima</a>, and it is a good occasion to talk a bit about some of the things I have been doing there.</p>
+        <p>Today marks the fourth birthday of <a href="https://blog.separateconcerns.com/2013-12-12-infinity-beyond.html">my joining Lima</a>, and it is a good occasion to talk a bit about some of the things I have been doing there.</p>
 
 <h2 id="distributed-filesystem-synchronization">Distributed filesystem synchronization</h2>
 
@@ -1799,9 +1745,7 @@ event11  POINTER_BUTTON    +3.49s
     <updated>2017-06-11T19:10:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<p>A few weeks ago I was debugging network code, and I needed to check if some sockets were bound with <code>SO_REUSEADDR</code> and/or <code>SO_REUSEPORT</code>. I researched how I could inspect that, and was surprised to find out that the Linux kernel did not expose those options to userland.</p>
+        <p>A few weeks ago I was debugging network code, and I needed to check if some sockets were bound with <code>SO_REUSEADDR</code> and/or <code>SO_REUSEPORT</code>. I researched how I could inspect that, and was surprised to find out that the Linux kernel did not expose those options to userland.</p>
 
 <p>Thankfully, there is <a href="https://github.com/veithen/knetstat">a kernel module called knetstat</a> which lets you do this very easily by adding new files into <code>procfs</code>. When I found it it only supported TCP, but I needed the information for UDP as well so I <a href="https://github.com/veithen/knetstat/pull/11">contributed the code</a> to support it.</p>
 
@@ -1820,9 +1764,7 @@ If you write networking code on Linux or just run servers, I encourage you to ch
     <updated>2017-09-07T21:15:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<p><em>This post is a rough transcription of <a href="http://files.catwell.info/presentations/2017-04-dotscale-itc/">a lightning talk I gave at dotScale 2017</a>.</em></p>
+        <p><em>This post is a rough transcription of <a href="http://files.catwell.info/presentations/2017-04-dotscale-itc/">a lightning talk I gave at dotScale 2017</a>.</em></p>
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/PgCziibErvU?rel=0" frameborder="0" allowfullscreen="true"></iframe>
 
@@ -1883,9 +1825,7 @@ If you write networking code on Linux or just run servers, I encourage you to ch
     <updated>2016-12-22T08:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<p>In November 2013, I gave <a href="http://files.catwell.info/presentations/2013-11-lua-workshop-lua-ecosystem">a talk</a> about the Lua Ecosystem at <a href="https://www.lua.org/wshop13.html">Lua Workshop</a>, in which I mentioned that finding the best module for some job could be hard and introduced a website I had built to solve that problem.</p>
+        <p>In November 2013, I gave <a href="http://files.catwell.info/presentations/2013-11-lua-workshop-lua-ecosystem">a talk</a> about the Lua Ecosystem at <a href="https://www.lua.org/wshop13.html">Lua Workshop</a>, in which I mentioned that finding the best module for some job could be hard and introduced a website I had built to solve that problem.</p>
 
 <p>That website, Lua Toolbox, was inspired by the popular <a href="https://www.ruby-toolbox.com/">Ruby Toolbox</a>. It had two major features: modules classification (&quot;labels&quot;) and endorsements by users. I had written it using Leaf Corcoran&#39;s relatively new Lua Web framework, <a href="http://leafo.net/lapis/">Lapis</a>, and Redis as the datastore.</p>
 
@@ -1910,9 +1850,7 @@ Today, I finally replaced the whole website by <a href="https://lua-toolbox.com"
     <updated>2016-12-07T22:35:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<h2 id="on-call">On Call</h2>
+        <h2 id="on-call">On Call</h2>
 
 <p><a href="https://twitter.com/alicegoldfuss">Alice Goldfuss</a> started <a href="https://dbsmasher.com/2016/12/07/on-being-on-call/">a debate</a> about having developers on call. I am firmly in the camp of those who think it is a good thing, probably because I was a sysadmin before being a software engineer. But this means those developers must have the power to refuse to ship broken code that may make the pager go off as well.</p>
 
@@ -1951,9 +1889,7 @@ Sadly, for reasons that probably have a lot to do with business models, things l
     <updated>2016-09-16T17:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<h2 id="thoughts">Thoughts</h2>
+        <h2 id="thoughts">Thoughts</h2>
 
 <p>I have not found the motivation to write here for a while, so I will be trying something new. This is the first of a series of posts which will be composed of a few smaller unrelated snippets, mostly things I would usually post in a smaller form on Twitter. They will relate to anything I will have found interesting recently. Some will be practical and some will just be reflections about a given topic.</p>
 
@@ -2008,9 +1944,7 @@ Modern OSs do not make much distinction between a thread and a process anymore, 
     <updated>2016-04-03T23:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<p>At <a href="https://meetlima.com">Lima</a>, we use <a href="http://symas.com/mdb/">the LMDB database</a> extensively, and we looked into its source code in order to debug a few issues we had. To help us diagnose broken databases, and also because I wanted to learn more about it, I wrote <a href="https://github.com/catwell/cw-lua/tree/master/lua-mdb">a parser for the LMDB database file format in Lua</a> in my spare time, which I published under the Open Source MIT license.</p>
+        <p>At <a href="https://meetlima.com">Lima</a>, we use <a href="http://symas.com/mdb/">the LMDB database</a> extensively, and we looked into its source code in order to debug a few issues we had. To help us diagnose broken databases, and also because I wanted to learn more about it, I wrote <a href="https://github.com/catwell/cw-lua/tree/master/lua-mdb">a parser for the LMDB database file format in Lua</a> in my spare time, which I published under the Open Source MIT license.</p>
 
 <p>In this post, I will give an overview of how a data.mdb file is structured. Note that I will sometimes skip over some things and operate under the assumption that you are running on a little-endian platform with 4 kB pages, etc.</p>
 
@@ -2069,9 +2003,7 @@ I have explained the basics of the data.mdb file format. Should you have to debu
     <updated>2016-01-03T11:40:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<p>It is that time of the year where my RSS feed fills with book recommendations, so I decided I would try my hand at the exercise this year and write a short paragraph about five books I read in 2015 that left me with a good impression.</p>
+        <p>It is that time of the year where my RSS feed fills with book recommendations, so I decided I would try my hand at the exercise this year and write a short paragraph about five books I read in 2015 that left me with a good impression.</p>
 
 <p>Disclaimer: links, as those on my <a href="https://catwell.info/booklist/">reading list</a>, are Amazon Affiliate links, which means I may earn a little money if you buy books after clicking on them.</p>
 
@@ -2148,9 +2080,7 @@ I have long thought that the financial world used HFT as a scapegoat (especially
     <updated>2015-11-06T23:20:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<p>French politician Axelle Lemaire <a href="https://twitter.com/axellelemaire/status/662247104123904001">tweeted</a> today that, like half of French voters, she was in favor of electronic voting. This tweet has resulted in a strong reaction among most of my techno-saavy friends which could be summed up as &quot;OMG no, e-voting cannot be secure, please educate yourself&quot;.</p>
+        <p>French politician Axelle Lemaire <a href="https://twitter.com/axellelemaire/status/662247104123904001">tweeted</a> today that, like half of French voters, she was in favor of electronic voting. This tweet has resulted in a strong reaction among most of my techno-saavy friends which could be summed up as &quot;OMG no, e-voting cannot be secure, please educate yourself&quot;.</p>
 
 <p>On this topic, my views differ with the majority opinion among people in technology, even though I support the same organizations fighting abuses in e-voting such as <a href="https://www.eff.org/issues/e-voting">Electronic Frontier Foundation</a>.</p>
 
@@ -2177,9 +2107,7 @@ I have long thought that the financial world used HFT as a scapegoat (especially
     <updated>2016-05-16T17:20:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<p>Even among software people, those of us who work with distributed systems and algorithms are sometimes seen as mad scientists. We use words like like consistency, causality, consensus, commutativity, idempotence, immutability and &quot;impossibility theorems&quot;. How come we have to read papers and tear our hair out just to make software run correctly on a few machines? Are we all failed academics incapable of pragmatism?</p>
+        <p>Even among software people, those of us who work with distributed systems and algorithms are sometimes seen as mad scientists. We use words like like consistency, causality, consensus, commutativity, idempotence, immutability and &quot;impossibility theorems&quot;. How come we have to read papers and tear our hair out just to make software run correctly on a few machines? Are we all failed academics incapable of pragmatism?</p>
 
 <p>I have selected four documents to help you understand the kind of things we spend our days thinking about, the physical limits we work with and the trade-offs we make. You may want to read them, because distribution is becoming the norm rather than the exception, so you may have to think about at least some of those issues sooner than you expected. Those are simple documents that any programmer should be able to read. Only the last one is an actual paper, and it is a simple position paper with no math, I promise.</p>
 
@@ -2226,9 +2154,7 @@ Distributed systems work is about that adversarial world out there, and how we w
     <updated>2015-06-18T02:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<blockquote>
+        <blockquote>
 <p>Clarification: The title is exaggerated. I have never hated LuaJIT, I just went back to using PUC Lua primarily.</p>
 </blockquote>
 
@@ -2271,9 +2197,7 @@ Oh, and by the way, with this whole systemd thing, I am semi-seriously consideri
     <updated>2015-10-16T16:30:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<p><a href="https://travis-ci.org">Travis</a> is a Continuous Integration service which is free for Open Source projects and has very good GitHub integration. We will see how to use it for your Lua projects.</p>
+        <p><a href="https://travis-ci.org">Travis</a> is a Continuous Integration service which is free for Open Source projects and has very good GitHub integration. We will see how to use it for your Lua projects.</p>
 
 <p>Your test suite will work well with Travis as long as executing it returns 0 on success and nonzero on failure. If you use plain Lua assertions, it is already the case. If you use a test framework, make sure that it works that way. I have added <a href="https://github.com/catwell/cwtest#exit">a helper</a> to cwtest for that purpose.</p>
 
@@ -2302,9 +2226,7 @@ After that, commit <code>.travis</code> and <code>.travis.yml</code> and push to
     <updated>2015-01-04T20:10:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<p>It is not a secret that I don&#39;t like Web technology. I prefer XHTML to HTML5, I think JavaScript is a terrible language, and don&#39;t get me started on microformats (let&#39;s just say that SoC &gt; DRY...). I&#39;d rather see this mess replaced by something much simpler that <em>only</em> deals with linked documents and feeds, and maybe a separate platform for portable applications.</p>
+        <p>It is not a secret that I don&#39;t like Web technology. I prefer XHTML to HTML5, I think JavaScript is a terrible language, and don&#39;t get me started on microformats (let&#39;s just say that SoC &gt; DRY...). I&#39;d rather see this mess replaced by something much simpler that <em>only</em> deals with linked documents and feeds, and maybe a separate platform for portable applications.</p>
 
 <p>However, the Web is here to last, and given its importance, its centralization is concerning. This is why I am interested in the <a href="http://indiewebcamp.com/">Indie Web</a> movement, which I see as part of the larger effort to decentralize Internet. By the way, if you are into this and live in Paris, check out <a href="http://www.meetup.com/Paris-Meetup-pour-la-decentralisation-dInternet/">this meetup</a> which is held every six weeks at Mozilla&#39;s office. I have been there every time since its inception and it is well worth it.</p>
 
@@ -2325,9 +2247,7 @@ If you want to do the same, you can use <a href="http://indiewebify.me/">this ha
     <updated>2014-11-23T21:45:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<p>Two people I respect a lot, <a href="http://about.avdi.org/">Avdi Grimm</a> and <a href="http://soveran.com/">Michel Martens</a>, are having <a href="http://devblog.avdi.org/2014/11/21/in-defense-of-fat-tools/">an interesting debate</a> about the complexity of programming tools and libraries.</p>
+        <p>Two people I respect a lot, <a href="http://about.avdi.org/">Avdi Grimm</a> and <a href="http://soveran.com/">Michel Martens</a>, are having <a href="http://devblog.avdi.org/2014/11/21/in-defense-of-fat-tools/">an interesting debate</a> about the complexity of programming tools and libraries.</p>
 
 <p>In the Ruby community, Michel is well-known for writing simple tools that do their job well. Avdi defends the framework approach of Rails, arguing that using fatter tools allows you to make your own code simpler. If you want to hear them debate it, listen to <a href="http://devchat.tv/ruby-rogues/182-rr-keeping-libraries-and-utilities-small-and-simple-with-michel-martens">the podcast</a>.</p>
 
@@ -2366,9 +2286,7 @@ Eventually, this is a matter of choice. Avdi is right: fat tools usually exist f
     <updated>2015-08-31T21:30:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<p>These days Linux systems tend to open graphical password prompts when a CLI application needs user authentication. I don&#39;t know about you but I really don&#39;t like that.</p>
+        <p>These days Linux systems tend to open graphical password prompts when a CLI application needs user authentication. I don&#39;t know about you but I really don&#39;t like that.</p>
 
 <p>The first offender is git, which uses x11-ssh-askpass if installed. The simplest solution would be not to install it but it is a dependency of virt-manager on Arch Linux... Thankfully you can tell git not to use it:</p>
 
@@ -2408,9 +2326,7 @@ for i in *; do echo &quot;Hidden=true&quot; &gt;&gt; $i; done
     <updated>2014-09-25T23:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<p>Several people have asked me what I think about microservices. The tl;dr is: I like small services, but I don&#39;t like what some call microservices, which is isolating every single feature within its own service and aiming at services at small as possible (I heard about a target of &quot;a few hundred lines of code&quot; per service and a hard limit at 5000 LOC).</p>
+        <p>Several people have asked me what I think about microservices. The tl;dr is: I like small services, but I don&#39;t like what some call microservices, which is isolating every single feature within its own service and aiming at services at small as possible (I heard about a target of &quot;a few hundred lines of code&quot; per service and a hard limit at 5000 LOC).</p>
 
 <p>I <a href="http://blog.separateconcerns.com/2013-01-02-startups-soa.html">see SOA</a> (and modularization in general) as a technique to design a system so that it scales with the number of people on a team. The way it works is by dividing complexity between people. The following will be terribly simplified, but bear with me.</p>
 
@@ -2449,9 +2365,7 @@ And finally, just to be clear: do not look too much at the left part of the curv
     <updated>2014-09-20T15:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<p><a href="http://iris.karalabe.com/">Iris</a> is a &quot;decentralized Cloud messaging&quot; middleware that I have really started looking into with the recent <a href="http://iris.karalabe.com/archive/2014/version_v0_3_0_shiny_stable_apis">release of version 0.3.0</a>. It had struck me as interesting when I first heard of it <a href="https://www.youtube.com/watch?v=WTRORimPvHE">at FOSDEM 2014</a>. The reason for that, beyond the great presentation skills of its author, is that it implements principles I think are sound to build SOA upon.</p>
+        <p><a href="http://iris.karalabe.com/">Iris</a> is a &quot;decentralized Cloud messaging&quot; middleware that I have really started looking into with the recent <a href="http://iris.karalabe.com/archive/2014/version_v0_3_0_shiny_stable_apis">release of version 0.3.0</a>. It had struck me as interesting when I first heard of it <a href="https://www.youtube.com/watch?v=WTRORimPvHE">at FOSDEM 2014</a>. The reason for that, beyond the great presentation skills of its author, is that it implements principles I think are sound to build SOA upon.</p>
 
 <p>In Iris, the logical and physical layers of services are cleanly separated. Each box in the system runs a local instance of the Iris broker (&quot;Iris node&quot;). The broker is written in Go, and all broker instances in the system converse in a proprietary protocol.</p>
 
@@ -2675,9 +2589,7 @@ Finally, if you try <a href="https://github.com/catwell/iris-lua">my Iris client
     <updated>2014-05-28T00:00:01Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<p>Note: I posted what follows <a href="https://gist.github.com/catwell/5387617">as a Gist</a> over a year ago. Recently I was looking for it and couldn&#39;t find it, so I am re-posting it here for the next time.</p>
+        <p>Note: I posted what follows <a href="https://gist.github.com/catwell/5387617">as a Gist</a> over a year ago. Recently I was looking for it and couldn&#39;t find it, so I am re-posting it here for the next time.</p>
 
 <p>At the last Human Talks Paris meetup, Fabien Charbit (founder of <a href="http://sush.io">sush.io</a>) gave <a href="http://humantalks.com/talks/131-developpeurs-montez-votre-boite">a talk</a> in French whose title could be translated as: &quot;Programmers, create your company!&quot;</p>
 
@@ -2706,9 +2618,7 @@ The relationship between the programmers and the business types? Well... I belie
     <updated>2014-05-27T23:30:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<p>I have just watched a small <a href="https://www.youtube.com/watch?v=Ia55clAtdMs">TEDx talk by Simon Peyton Jones</a> (of Haskell fame) on CS education. Something he said struck me as relevant to what I was saying in <a href="/2014-04-25-design-alan-kay.html">my last post</a>:</p>
+        <p>I have just watched a small <a href="https://www.youtube.com/watch?v=Ia55clAtdMs">TEDx talk by Simon Peyton Jones</a> (of Haskell fame) on CS education. Something he said struck me as relevant to what I was saying in <a href="/2014-04-25-design-alan-kay.html">my last post</a>:</p>
 
 <blockquote>
 <p>Arthur C. Clarke once famously remarked that &quot;any sufficiently advanced technology is indistinguishable from magic&quot;. And I think it is very damaging if our children come to believe that the computer systems they use are essentially magic. That is: not under their control.</p>
@@ -2731,7 +2641,8 @@ I think it is time for the pendulum to swing back to products that optimize for 
     <updated>2014-04-25T00:30:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
+        <pre><code>Incremental which resonates with some ideas I have on modern design.
+</code></pre>
 
 <p>I have long been thinking that there is something wrong with modern product design thinking. I see designs that trade off almost all power, flexibility and composability for a smoother learning curve. I see designs that remove explicit controls and replace them by magic, choosing to hide essential complexity instead of reducing accidental complexity. I see designs optimized for new users and prospects instead of regular users, and designers who apparently consider documentation as something evil.</p>
 
@@ -2780,9 +2691,7 @@ And it turns out of you want to make a change in the larger world, you have to d
     <updated>2014-04-22T23:59:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<h2 id="writing-a-lisp">Writing a Lisp</h2>
+        <h2 id="writing-a-lisp">Writing a Lisp</h2>
 
 <p>I like to learn new tools and concepts by experimenting with small projects whose sole purpose is to help me grasp something better. Working on a larger project in a team with other people is invaluable, but doing things on a smaller scale on my own offers a different perspective.</p>
 
@@ -2819,9 +2728,7 @@ Moreover, Go appears to be a simpler language than Rust. I suspect I can learn e
     <updated>2014-03-03T21:30:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<p>I have finally decided to configure Sublime Text 2 to have it autocomplete Lua code the way I want it to.</p>
+        <p>I have finally decided to configure Sublime Text 2 to have it autocomplete Lua code the way I want it to.</p>
 
 <p>For instance, by default, when you start typing <code>function</code> and hit TAB, you get the following result:</p>
 
@@ -2878,9 +2785,7 @@ end]]&gt;&lt;/content&gt;
     <updated>2014-02-09T19:30:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<p>Last weekend I attended <a href="https://fosdem.org/2014/">FOSDEM</a>, the largest Open Source conference in Europe that takes place every year in Brussels. This was my fourth year in a row. Not much Lua this year, although I saw some <a href="https://github.com/ladc">familiar</a> <a href="http://specfun.inria.fr/tassi/">faces</a>. But I did listen to lots of interesting talks which I will try to summarize briefly.</p>
+        <p>Last weekend I attended <a href="https://fosdem.org/2014/">FOSDEM</a>, the largest Open Source conference in Europe that takes place every year in Brussels. This was my fourth year in a row. Not much Lua this year, although I saw some <a href="https://github.com/ladc">familiar</a> <a href="http://specfun.inria.fr/tassi/">faces</a>. But I did listen to lots of interesting talks which I will try to summarize briefly.</p>
 
 <h2 id="reproducible-builds-for-debian-jrmy-bobbio"><a href="https://fosdem.org/2014/schedule/event/reproducibledebian/">Reproducible Builds for Debian</a> (Jérémy Bobbio)</h2>
 
@@ -2961,9 +2866,7 @@ FOSDEM is still a very good event which you should consider attending next year.
     <updated>2014-01-03T00:00:01Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<p>Hisham just published an article about his personal <a href="http://hisham.hm/2014/01/02/how-to-write-lua-modules-in-a-post-module-world/">guidelines for writing Lua modules</a>. Interestingly, I do a lot of things differently. Let us see how.</p>
+        <p>Hisham just published an article about his personal <a href="http://hisham.hm/2014/01/02/how-to-write-lua-modules-in-a-post-module-world/">guidelines for writing Lua modules</a>. Interestingly, I do a lot of things differently. Let us see how.</p>
 
 <blockquote>
 <p>Policy Bit #1: always require a module into a local named after the last component of the module’s full name.</p>
@@ -3151,9 +3054,7 @@ I think this is what matters the most in the end: modules always return tables a
     <updated>2014-01-02T22:10:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<p>Thanks to my <a href="http://blog.separateconcerns.com/2013-12-12-infinity-beyond.html">new job</a> I will have the opportunity to write a lot more C than in the last three years. To prepare for this, I decided to read some old C89 books again and see what I remembered. Here are some of the quirks I had forgotten (or never known about).</p>
+        <p>Thanks to my <a href="http://blog.separateconcerns.com/2013-12-12-infinity-beyond.html">new job</a> I will have the opportunity to write a lot more C than in the last three years. To prepare for this, I decided to read some old C89 books again and see what I remembered. Here are some of the quirks I had forgotten (or never known about).</p>
 
 <ul>
 <li><p>Declarations cannot be interleaved with other statements in ANSI C. They have to happen at the beginning of a bloc.</p></li>
@@ -3198,9 +3099,7 @@ typedef const struct stuff_s stuff_t;
     <updated>2013-12-12T21:30:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<h2 id="goodbye-moodstocks">Goodbye Moodstocks</h2>
+        <h2 id="goodbye-moodstocks">Goodbye Moodstocks</h2>
 
 <p>Friday 20th will be my last day at Moodstocks. I am leaving a company where, after three years and a half, I was the most senior employee. As you may imagine, it was not an easy decision.</p>
 
@@ -3237,9 +3136,7 @@ So it looks like my short-term future holds some Unix development and a good dus
     <updated>2013-09-01T16:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<p>I use different programming languages for different tasks, but the one I prefer is <a href="http://www.lua.org/">Lua</a>. I have always wanted to use it for the Web, and in a way I already do: this blog is a static website generated by a custom Lua program. I have also written several services that can speak HTTP+JSON in Lua. For larger, HTML-based Web applications however, I have never found the framework I wanted. I have tried <a href="http://www.keplerproject.org/en/Orbit">several</a> <a href="https://github.com/zedshaw/Tir">of</a> <a href="https://github.com/nrk/mercury">them</a>, but kept coming back to <a href="http://flask.pocoo.org/">more dependable platforms</a>.</p>
+        <p>I use different programming languages for different tasks, but the one I prefer is <a href="http://www.lua.org/">Lua</a>. I have always wanted to use it for the Web, and in a way I already do: this blog is a static website generated by a custom Lua program. I have also written several services that can speak HTTP+JSON in Lua. For larger, HTML-based Web applications however, I have never found the framework I wanted. I have tried <a href="http://www.keplerproject.org/en/Orbit">several</a> <a href="https://github.com/zedshaw/Tir">of</a> <a href="https://github.com/nrk/mercury">them</a>, but kept coming back to <a href="http://flask.pocoo.org/">more dependable platforms</a>.</p>
 
 <p>Last March, I gave <a href="http://leafo.net/lapis/">Lapis</a> a try. It is a relatively new framework written by <a href="http://leafo.net/">Leaf Corcoran</a>, the author of <a href="http://moonscript.org/">MoonScript</a>, a programming language that compiles to Lua (like CoffeeScript for JavaScript). Lapis is powered by <a href="http://openresty.org/">OpenResty</a>, an <a href="http://www.techempower.com/benchmarks/">incredibly fast</a> web application server that run <em>inside</em> the <a href="http://nginx.org/">nginx</a> Web server and is already used by large websites like <a href="http://en.wikipedia.org/wiki/Taobao">Taobao</a> and <a href="https://www.cloudflare.com/">CloudFlare</a>.</p>
 
@@ -3266,9 +3163,7 @@ So, what did I think of it? Well, finally I could see myself write a serious Web
     <updated>2015-11-11T21:15:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<p>Some of the code I write is Open Source, but these days most of it is closed source and property of <a href="http://www.moodstocks.com/">Moodstocks</a>, the startup I work for. For the last three years I have had the chance to work on a lot of really interesting projects, the most significant of which I will talk about now. If you are still a student, maybe that can inspire you to join a startup. Maybe you will even decide to join us in our quest to advance mobile image recognition and applications in general.</p>
+        <p>Some of the code I write is Open Source, but these days most of it is closed source and property of <a href="http://www.moodstocks.com/">Moodstocks</a>, the startup I work for. For the last three years I have had the chance to work on a lot of really interesting projects, the most significant of which I will talk about now. If you are still a student, maybe that can inspire you to join a startup. Maybe you will even decide to join us in our quest to advance mobile image recognition and applications in general.</p>
 
 <h2 id="harvest-the-pikadeo-crawler">Harvest, the Pikadeo crawler</h2>
 
@@ -3425,9 +3320,7 @@ So, what did I think of it? Well, finally I could see myself write a serious Web
     <updated>2013-05-28T23:10:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<p>Recently I found a rare, ugly bug in a piece of software that had been in production at Moodstocks for 6 months. The bug itself is not that interesting, but the way I found and fixed it is.</p>
+        <p>Recently I found a rare, ugly bug in a piece of software that had been in production at Moodstocks for 6 months. The bug itself is not that interesting, but the way I found and fixed it is.</p>
 
 <h2 id="story-of-a-bug">Story of a bug</h2>
 
@@ -3494,9 +3387,7 @@ I cannot imagine releasing a distributed system that does not have those things.
     <updated>2013-03-24T19:30:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<p>I found a talk by Werner Vogels, the CTO of Amazon <a href="http://blog.separateconcerns.com/2013-01-02-startups-soa.html">who is a role model of mine</a>, on <a href="http://skillsmatter.com/podcast/design-architecture/21st-century-application-architectures">21st century application architectures</a>.</p>
+        <p>I found a talk by Werner Vogels, the CTO of Amazon <a href="http://blog.separateconcerns.com/2013-01-02-startups-soa.html">who is a role model of mine</a>, on <a href="http://skillsmatter.com/podcast/design-architecture/21st-century-application-architectures">21st century application architectures</a>.</p>
 
 <p>After his presentation, someone from the audience asks him what skills he is looking for to run these services. His answer (starting at about 40:45 in the video) is so interesting that I thought it would be worth it to write it down. Here it is:</p>
 
@@ -3535,9 +3426,7 @@ These are the first few things that come to mind.
     <updated>2013-03-03T18:00:01Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<h2 id="the-state-machine">The State Machine</h2>
+        <h2 id="the-state-machine">The State Machine</h2>
 
 <p>Let us consider a system that can take a finite number of states <code>S[1]</code> to <code>S[n]</code> over time.</p>
 
@@ -3780,9 +3669,7 @@ Yes, it is. And because of that it has a whole range of applications, from advan
     <updated>2013-01-28T22:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<h2 id="algorithms-amp-data-structures">Algorithms &amp; Data Structures</h2>
+        <h2 id="algorithms-amp-data-structures">Algorithms &amp; Data Structures</h2>
 
 <p>For a long time I have thought that there were only two fundamental parts to Computer Science: Algorithms and Data Structures. This is how it used to be taught, and how I think it should still be taught to beginners.</p>
 
@@ -3819,9 +3706,7 @@ Yes, it is. And because of that it has a whole range of applications, from advan
     <updated>2013-01-02T14:00:01Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<h2 id="what-is-soa">What is SOA?</h2>
+        <h2 id="what-is-soa">What is SOA?</h2>
 
 <p>When people say SOA (Service Oriented Architecture) they often mean different things. My personal definition of SOA is rather loose and, like all the quotes in this article, <a href="http://queue.acm.org/detail.cfm?id=1142065">comes from Werner Vogels</a>, the CTO of Amazon:</p>
 
@@ -3886,9 +3771,7 @@ That being said I still think more technological and/or Web startups should cons
     <updated>2013-01-02T14:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<p><a href="http://catwell.info">I</a> have not had a blog for over two years. The main reason for that is that writing is hard, so I went shopping on Twitter instead.</p>
+        <p><a href="http://catwell.info">I</a> have not had a blog for over two years. The main reason for that is that writing is hard, so I went shopping on Twitter instead.</p>
 
 <p>This was a bit hypocrite since I am an advocate for the Open Web and a huge consumer of information feeds, with several hundreds of them in my news reader. So for this New Year I have decided to put an end to this situation, thrown together a few lines of Lua code that act as a static blog generator (because reinventing the wheel is fun), and here it is: my new online journal.</p>
 
@@ -3916,9 +3799,7 @@ greet(&quot;World&quot;)
     <updated>2012-01-09T12:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<p>I used to enjoy predicting how computing technology would evolve; it was like a game for me, and I was not too bad at it. But for a few years I have felt like I could not predict anything anymore. Things went too fast, and that bothered me.</p>
+        <p>I used to enjoy predicting how computing technology would evolve; it was like a game for me, and I was not too bad at it. But for a few years I have felt like I could not predict anything anymore. Things went too fast, and that bothered me.</p>
 
 <p>During these years I have observed things that, taken separately, did not seem to make much sense. Some that already existed and grew in importance, and some that were new. Mobile &amp; Local computing. The Internet of Things. ARM&#39;s revenge on x86. The Cloud. Multicore, GPGPU. The HTML5 applications craze. Unhosted. Siri. Minix3 getting funding. Wolfram|Alpha, NKS. JSON, Git, CouchDB, Redis, Riak, DynamoDB, Doozer. JIT compilers, functional languages, event-driven programming. SPDY, 0MQ, MessagePack-RPC. Mechanical Turk and humans computer pieces. LTE, 4G networks, Free disrupting the French cell phone industry.</p>
 
@@ -3939,9 +3820,7 @@ Now maybe you are thinking &quot;he&#39;s nuts&quot;, and I am thinking &quot;ma
     <updated>2010-02-04T12:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<p>Tout le monde parle de neutralité du Net en ce moment. J&#39;ai pensé que ça pourrait être une bonne idée de faire un point là-dessus, parce que j&#39;entends et je lis tout et n&#39;importe quoi, en particulier dans la presse française.</p>
+        <p>Tout le monde parle de neutralité du Net en ce moment. J&#39;ai pensé que ça pourrait être une bonne idée de faire un point là-dessus, parce que j&#39;entends et je lis tout et n&#39;importe quoi, en particulier dans la presse française.</p>
 
 <p>La première étape pour appréhender le problème de la neutralité du Net, c&#39;est de la définir. Benjamin Bayart <a href="http://blog.fdn.fr/post/2010/01/12/Rencontre-avec-l-ARCEP-sur-la-neutralit%C3%A9-du-r%C3%A9seau">s&#39;y est essayé devant l&#39;ARCEP</a> et je suis d&#39;accord avec lui pour l&#39;essentiel, même si nos points de vue divergent probablement sur certains points de détail.</p>
 
@@ -3984,9 +3863,7 @@ Pour conclure, un conseil : si vous voulez vous faire une idée sur le sujet, é
     <updated>2010-01-30T12:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<p>Ceux qui me connaissent savent que râler, je sais faire. J&#39;essaie d&#39;éviter autant que possible, mais parfois c&#39;est nécessaire.</p>
+        <p>Ceux qui me connaissent savent que râler, je sais faire. J&#39;essaie d&#39;éviter autant que possible, mais parfois c&#39;est nécessaire.</p>
 
 <h2 id="paye-ta-tv">Paye ta TV</h2>
 
@@ -4035,9 +3912,7 @@ Voilà, tout ceux qui l&#39;ont utilisé savent que Java c&#39;est mal. Après, 
     <updated>2009-12-04T12:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<p>J&#39;ai l&#39;impression que <a href="http://blog.separateconcerns.com/2009-11-16-fr-gen-y.html">mon article</a> sur les habitudes consommatrices de temps en ligne avait intéressé quelques personnes. Je vais revenir brièvement sur ce qui est arrivé depuis et en tirer un rapide bilan.</p>
+        <p>J&#39;ai l&#39;impression que <a href="http://blog.separateconcerns.com/2009-11-16-fr-gen-y.html">mon article</a> sur les habitudes consommatrices de temps en ligne avait intéressé quelques personnes. Je vais revenir brièvement sur ce qui est arrivé depuis et en tirer un rapide bilan.</p>
 
 <p>Dans l&#39;ensemble, j&#39;ai fait ce que j&#39;avais prévu : je ne suis plus le forum d&#39;archlinux.org ni Tuxmachines et j&#39;ai arrêté les jeux Motion Twin. Ça m&#39;arrive encore pas mal de cliquer sur des liens par pure curiosité mais j&#39;imagine que c&#39;est une habitude difficile à perdre.</p>
 
@@ -4058,9 +3933,7 @@ J&#39;ai l&#39;impression que ces quelques changements n&#39;ont pas trop mal fo
     <updated>2009-12-04T12:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<p>J&#39;avais promis que j&#39;en parlerais : comme tout le monde (ou pas), j&#39;ai regardé <a href="http://www.chromium.org/chromium-os">les vidéos</a> diffusées par Google sur Chrome OS et je me suis fait ma petite idée.</p>
+        <p>J&#39;avais promis que j&#39;en parlerais : comme tout le monde (ou pas), j&#39;ai regardé <a href="http://www.chromium.org/chromium-os">les vidéos</a> diffusées par Google sur Chrome OS et je me suis fait ma petite idée.</p>
 
 <p>La première chose qui me vient à l&#39;esprit, c&#39;est que même Benjamin Bayart était probablement loin d&#39;imaginer combien il était proche de la vérité lorsqu&#39;il parlait de Minitel 2.0. Le principe de Chrome OS, c&#39;est le retour aux clients légers, aux terminaux. Toute l&#39;information est dans les nuages, rien sur votre machine. Il ne supporte même pas les disques durs au profit de la mémoire Flash !</p>
 
@@ -4087,9 +3960,7 @@ Bref, nous voilà encore une fois sauvés de l&#39;horrible Big Brother du 21e s
     <updated>2009-11-24T12:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<p>Regarder le <a href="http://www.alexa.com/topsites">top 10 d&#39;Alexa</a> peut faire peur quand on connait un peu ce qu&#39;est Internet. Ce classement par trafic est assez représentatif de l&#39;évolution du web ces quelques années. On y trouve évidemment beaucoup de moteurs de recherche : google.com (1er), yahoo.com (3e), live.com (5e), baidu.com (8e) et yahoo.jp (10e). msn.com, le portail de Microsoft, arrive en 9e position, pourquoi pas. Le problème, c&#39;est les quatre autres. Prenons-les dans le désordre.</p>
+        <p>Regarder le <a href="http://www.alexa.com/topsites">top 10 d&#39;Alexa</a> peut faire peur quand on connait un peu ce qu&#39;est Internet. Ce classement par trafic est assez représentatif de l&#39;évolution du web ces quelques années. On y trouve évidemment beaucoup de moteurs de recherche : google.com (1er), yahoo.com (3e), live.com (5e), baidu.com (8e) et yahoo.jp (10e). msn.com, le portail de Microsoft, arrive en 9e position, pourquoi pas. Le problème, c&#39;est les quatre autres. Prenons-les dans le désordre.</p>
 
 <h2 id="youtube-4e-et-blogger-7e">YouTube (4e) et Blogger (7e)</h2>
 
@@ -4152,9 +4023,7 @@ La prochaine fois, je parlerai peut-être de Chrome OS, un sujet pas si éloign�
     <updated>2009-11-16T12:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        
-
-<p>Hier soir, j&#39;ai joué à <a href="http://www.bigbluecup.com/yabb/index.php?topic=39327.0">Featherweight</a>, un bon petit jeu d&#39;aventure indépendant qui se finit en quelques minutes. J&#39;ai beaucoup apprécié, et ça m&#39;a fait réaliser que ça faisait longtemps que je n&#39;avais pas fait quelque chose du genre. La raison ? Je suis atteint d&#39;un syndrome qui touche beaucoup de gens de ma génération : je passe la plupart de mon temps libre à faire des choses inintéressantes sur mon PC. Du coup, je ne fais plus un certain nombre de choses que je faisais avant et qui me plaisaient beaucoup, comme jouer à des jeux vidéos ou coder pour moi, et ça me manque. C&#39;est grave docteur, ça se soigne ? À mon avis oui, mais il va falloir reprendre les choses en main et supprimer un certain nombre de distractions.</p>
+        <p>Hier soir, j&#39;ai joué à <a href="http://www.bigbluecup.com/yabb/index.php?topic=39327.0">Featherweight</a>, un bon petit jeu d&#39;aventure indépendant qui se finit en quelques minutes. J&#39;ai beaucoup apprécié, et ça m&#39;a fait réaliser que ça faisait longtemps que je n&#39;avais pas fait quelque chose du genre. La raison ? Je suis atteint d&#39;un syndrome qui touche beaucoup de gens de ma génération : je passe la plupart de mon temps libre à faire des choses inintéressantes sur mon PC. Du coup, je ne fais plus un certain nombre de choses que je faisais avant et qui me plaisaient beaucoup, comme jouer à des jeux vidéos ou coder pour moi, et ça me manque. C&#39;est grave docteur, ça se soigne ? À mon avis oui, mais il va falloir reprendre les choses en main et supprimer un certain nombre de distractions.</p>
 
 <p>Heureusement, le principal danger est évité : je gère à peu près bien ma messagerie instantanée. Je n&#39;ai jamais utilisé de réseau type MSN, et je vais beaucoup moins sur IRC depuis que <a href="http://phraktured.net/becoming-a-morning-person.html#comment-6120694">phrakture me l&#39;a conseillé</a>. J&#39;ai ajouté un peu trop de contacts dans Skype à mon goût, mais ça reste gérable. Je me suis aussi désinscrit de la plupart des mailing-lists de Télécom qui me prenaient pas mal de temps à lire, et j&#39;ai délaissé identi.ca (un twitter-like libre). Par contre, je fais un paquet de choses inutiles par habitude, que je vais arrêter immédiatement.</p>
 

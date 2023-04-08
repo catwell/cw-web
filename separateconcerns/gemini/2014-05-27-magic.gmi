@@ -1,7 +1,6 @@
 # Indistinguishable from Magic
 published 2014-05-27
 
-
 I have just watched a small TEDx talk by Simon Peyton Jones [1] (of Haskell fame) on CS education. Something he said struck me as relevant to what I was saying in my last post [2]:
 
 > Arthur C. Clarke once famously remarked that "any sufficiently advanced technology is indistinguishable from magic". And I think it is very damaging if our children come to believe that the computer systems they use are essentially magic. That is: not under their control.

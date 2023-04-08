@@ -1,7 +1,6 @@
 # Hello Gemini
 published 2022-02-05
 
-
 I have wanted to play with Gemini [1] for while now, so today being the first day of FOSDEM [2] I decided to do what I would have done if I was in Brussels and hack on something between two talks.
 
 I ended up adding Gemini support to the static generator I use for this blog [3], which meant implementing a Gemini writer for Lunamark [4], plus a small trick to display links in the right place.

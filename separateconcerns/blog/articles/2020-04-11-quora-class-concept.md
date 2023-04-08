@@ -2,8 +2,11 @@
 % Pierre 'catwell' Chapuis
 % 2020-04-11 13:00:00
 
-    ::description::
+<!--@
+  description = [[
     How would you explain the concept of a "class" in Python to a 10 year old?
+  ]]
+-->
 
 Continuing my [Quora answers series](https://blog.separateconcerns.com/2020-04-09-quora-lua-call.html) with [this question](https://www.quora.com/How-would-you-explain-the-concept-of-a-class-in-Python-to-a-10-year-old) which I answered on June 26, 2012:
 

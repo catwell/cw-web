@@ -2,8 +2,9 @@
 % Pierre 'catwell' Chapuis
 % 2021-10-31 15:45:00
 
-    ::description::
-    A list of links intended for founders and people working at young companies.
+<!--@
+  description = "A list of links intended for founders and people working at young companies."
+-->
 
 Over the years, I have accumulated links to blog posts I intend to re-read every time find myself in a position to influence the early stage of a company.
 

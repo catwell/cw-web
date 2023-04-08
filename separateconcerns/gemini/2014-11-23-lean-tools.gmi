@@ -1,7 +1,6 @@
 # Lean tools
 published 2014-11-23
 
-
 Two people I respect a lot, Avdi Grimm [1] and Michel Martens [2], are having an interesting debate [3] about the complexity of programming tools and libraries.
 
 In the Ruby community, Michel is well-known for writing simple tools that do their job well. Avdi defends the framework approach of Rails, arguing that using fatter tools allows you to make your own code simpler. If you want to hear them debate it, listen to the podcast [4].

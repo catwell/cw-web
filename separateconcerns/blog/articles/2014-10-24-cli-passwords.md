@@ -3,12 +3,12 @@
 % 2014-10-24 21:30:00
 
 <!--@
-  updated = "2015-08-31 21:30:00"
--->
-
-    ::description::
+  description = [[
     Some command-line programs open graphical password prompts.
     Here is how to disable them.
+  ]]
+  updated = "2015-08-31 21:30:00"
+-->
 
 These days Linux systems tend to open graphical password prompts when a CLI
 application needs user authentication. I don't know about you but I really

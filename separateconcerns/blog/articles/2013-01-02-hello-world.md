@@ -2,8 +2,9 @@
 % Pierre 'catwell' Chapuis
 % 2013-01-02 14:00:00
 
-    ::description::
-    Hello World post for Pierre Chapuis' new blog.
+<!--@
+  description = "Hello World post for Pierre Chapuis' new blog."
+-->
 
 [I](http://catwell.info) have not had a blog for over two years. The main reason for that is that writing is hard, so I went shopping on Twitter instead.
 

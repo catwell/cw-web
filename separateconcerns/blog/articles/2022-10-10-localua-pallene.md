@@ -2,8 +2,9 @@
 % Pierre 'catwell' Chapuis
 % 2022-10-10 17:50:00
 
-    ::description::
-    localua now supports Pallene.
+<!--@
+  description = "localua now supports Pallene."
+-->
 
 Today I attended Lua Workshop, and Roberto Ierusalimschy's keynote was about [Pallene](https://github.com/pallene-lang/pallene), a language designed as a system counterpart to Lua in a scripting architecture. The language is a typed subset of Lua and can be used to replace C or as an interface between Lua and C. It is still a work in progress, there is no stable release yet.
 

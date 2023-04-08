@@ -1,7 +1,6 @@
 # The LMDB file format
 published 2016-04-03
 
-
 At Lima [1], we use the LMDB database [2] extensively, and we looked into its source code in order to debug a few issues we had. To help us diagnose broken databases, and also because I wanted to learn more about it, I wrote a parser for the LMDB database file format in Lua [3] in my spare time, which I published under the Open Source MIT license.
 
 In this post, I will give an overview of how a data.mdb file is structured. Note that I will sometimes skip over some things and operate under the assumption that you are running on a little-endian platform with 4 kB pages, etc.

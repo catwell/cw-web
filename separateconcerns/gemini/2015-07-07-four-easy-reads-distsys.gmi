@@ -1,7 +1,6 @@
 # Four easy reads to understand distributed systems issues
 published 2015-07-07,updated 2016-05-16
 
-
 Even among software people, those of us who work with distributed systems and algorithms are sometimes seen as mad scientists. We use words like like consistency, causality, consensus, commutativity, idempotence, immutability and "impossibility theorems". How come we have to read papers and tear our hair out just to make software run correctly on a few machines? Are we all failed academics incapable of pragmatism?
 
 I have selected four documents to help you understand the kind of things we spend our days thinking about, the physical limits we work with and the trade-offs we make. You may want to read them, because distribution is becoming the norm rather than the exception, so you may have to think about at least some of those issues sooner than you expected. Those are simple documents that any programmer should be able to read. Only the last one is an actual paper, and it is a simple position paper with no math, I promise.

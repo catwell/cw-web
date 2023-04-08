@@ -2,8 +2,9 @@
 % Pierre 'catwell' Chapuis
 % 2019-04-23 21:45:00
 
-    ::description::
-    I am co-founding a company called Chilli to solve SaaS distribution to SMBs and SMEs.
+<!--@
+  description = "I am co-founding a company called Chilli to solve SaaS distribution to SMBs and SMEs."
+-->
 
 In my last post I [told you](https://blog.separateconcerns.com/2019-02-15-goodbye-lima.html#what-are-you-going-to-do-next) I had plans that I was not ready to talk about yet. Well, the time has come. I am happy to announce that I am now the CTO and co-founder of a startup called [Chilli](https://www.efounders.com/companies/chilli).
 

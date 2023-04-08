@@ -2,8 +2,9 @@
 % Pierre 'catwell' Chapuis
 % 2020-12-16 13:50:00
 
-    ::description::
-    I shut down my company, joined another, and had a son.
+<!--@
+  description = "I shut down my company, joined another, and had a son."
+-->
 
 I haven't posted anything here for 6 months so I thought it would be a good idea to post a personal news update before the end of 2020.
 

@@ -1,7 +1,6 @@
 # Changing the SSH port on Arch Linux
 published 2019-05-04,updated 2020-04-07
 
-
 ## April 2020 update
 
 This article is out of date. Arch Linux stopped shipping OpenSSH with socket activation [1] due to the risk of DoS attack. Now you can just set `Port` in `sshd_config` as usual.

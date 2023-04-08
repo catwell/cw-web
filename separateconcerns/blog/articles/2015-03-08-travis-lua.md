@@ -3,11 +3,9 @@
 % 2015-03-08 12:00:00
 
 <!--@
+  description = "Add automated testing to your Lua open source projects for free."
   updated = "2015-10-16 16:30:00"
 -->
-
-    ::description::
-    Add automated testing to your Lua open source projects for free.
 
 [Travis](https://travis-ci.org) is a Continuous Integration service which is free for Open Source projects and has very good GitHub integration. We will see how to use it for your Lua projects.
 

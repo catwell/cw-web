@@ -1,7 +1,6 @@
 # (French) Ces sites qui ne devraient pas exister
 published 2009-11-24
 
-
 Regarder le top 10 d'Alexa [1] peut faire peur quand on connait un peu ce qu'est Internet. Ce classement par trafic est assez représentatif de l'évolution du web ces quelques années. On y trouve évidemment beaucoup de moteurs de recherche : google.com (1er), yahoo.com (3e), live.com (5e), baidu.com (8e) et yahoo.jp (10e). msn.com, le portail de Microsoft, arrive en 9e position, pourquoi pas. Le problème, c'est les quatre autres. Prenons-les dans le désordre.
 
 => http://www.alexa.com/topsites 1: http://www.alexa.com/topsites

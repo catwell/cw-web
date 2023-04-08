@@ -1,7 +1,6 @@
 # Hacker Founders
 published 2014-05-28
 
-
 Note: I posted what follows as a Gist [1] over a year ago. Recently I was looking for it and couldn't find it, so I am re-posting it here for the next time.
 
 At the last Human Talks Paris meetup, Fabien Charbit (founder of sush.io [2]) gave a talk [3] in French whose title could be translated as: "Programmers, create your company!"

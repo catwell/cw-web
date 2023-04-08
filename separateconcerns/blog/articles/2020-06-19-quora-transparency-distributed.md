@@ -2,8 +2,9 @@
 % Pierre 'catwell' Chapuis
 % 2020-06-19 18:52:00
 
-    ::description::
-    Why is transparency (UX) a major issue in databases and other distributed systems?
+<!--@
+  description = "Why is transparency (UX) a major issue in databases and other distributed systems?"
+-->
 
 Yet another [Quora answer](https://blog.separateconcerns.com/2020-04-09-quora-lua-call.html), this time to with [this question](https://www.quora.com/Why-is-Transparency-a-major-issue-in-distributed-databases) which I answered on August 24, 2016:
 

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
-    <meta name="description" content="Gnome 3.28 changes the default behavior of touchpads,">
+    <meta name="description" content="Gnome 3.28 changes the default behavior of touchpads, here is how to change it back.">
     <link rel="canonical" href="https://blog.separateconcerns.com/2018-03-30-gnome-touchpad.html">
     <link href="css/theme.css" rel="stylesheet" type="text/css">
       <link href="css/rainbow-github.css" rel="stylesheet" type="text/css">
@@ -22,9 +22,7 @@
         [ <a href="index.html">home</a> ]
       </h4>
     </header>
-    
-
-<p>If you are like me, maybe you have recently updated your Linux laptop and found out that right click had stopped working on the touchpad. It took me half an hour to figure out why. I was looking at low-level stuff until I realized <code>libinput debug-events</code> saw the right thing:</p>
+    <p>If you are like me, maybe you have recently updated your Linux laptop and found out that right click had stopped working on the touchpad. It took me half an hour to figure out why. I was looking at low-level stuff until I realized <code>libinput debug-events</code> saw the right thing:</p>
 
 <pre><code>event11  POINTER_BUTTON    +3.35s
     BTN_RIGHT (273) pressed, seat count: 1

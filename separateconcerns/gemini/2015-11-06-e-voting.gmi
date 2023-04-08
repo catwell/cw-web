@@ -1,7 +1,6 @@
 # Electronic Voting
 published 2015-11-06
 
-
 French politician Axelle Lemaire tweeted [1] today that, like half of French voters, she was in favor of electronic voting. This tweet has resulted in a strong reaction among most of my techno-saavy friends which could be summed up as "OMG no, e-voting cannot be secure, please educate yourself".
 
 On this topic, my views differ with the majority opinion among people in technology, even though I support the same organizations fighting abuses in e-voting such as Electronic Frontier Foundation [2].

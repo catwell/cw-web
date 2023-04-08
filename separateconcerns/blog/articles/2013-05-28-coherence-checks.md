@@ -2,9 +2,12 @@
 % Pierre 'catwell' Chapuis
 % 2013-05-28 23:10:00
 
-    ::description::
+<!--@
+  description = [[
     My tools to detect and fix bugs in SOA: coherence checks verifying
     invariants, exhaustive logs, reconciliation scripts.
+  ]]
+-->
 
 Recently I found a rare, ugly bug in a piece of software that had been in production at Moodstocks for 6 months. The bug itself is not that interesting, but the way I found and fixed it is.
 

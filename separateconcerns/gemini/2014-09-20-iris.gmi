@@ -1,7 +1,6 @@
 # Iris
 published 2014-09-20
 
-
 Iris [1] is a "decentralized Cloud messaging" middleware that I have really started looking into with the recent release of version 0.3.0 [2]. It had struck me as interesting when I first heard of it at FOSDEM 2014 [3]. The reason for that, beyond the great presentation skills of its author, is that it implements principles I think are sound to build SOA upon.
 
 In Iris, the logical and physical layers of services are cleanly separated. Each box in the system runs a local instance of the Iris broker ("Iris node"). The broker is written in Go, and all broker instances in the system converse in a proprietary protocol.

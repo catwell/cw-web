@@ -6,7 +6,7 @@ TPL.html_post = [[
   <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
-    <meta name="description" content="{{description}}">
+    {{#description}}<meta name="description" content="{{description}}">{{/description}}
     <link rel="canonical" href="https://blog.separateconcerns.com/{{url}}">
     <link href="css/theme.css" rel="stylesheet" type="text/css">
     {{#has_code}}
@@ -127,6 +127,7 @@ TPL.atom_feed = [[
 TPL.gemini_post = [[
 # {{title}}
 published {{shortdate}}{{#updated}},updated {{updated}}{{/updated}}
+
 {{{gemtext}}}
 ]]
 

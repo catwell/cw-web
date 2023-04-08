@@ -1,7 +1,6 @@
 # What I do at Inch
 published 2021-05-01
 
-
 I have been working at Inch [1] for about a year and a half now, so I thought it was a good time to write a bit about what I do there.
 
 First, a bit of context: Inch is SaaS software for property managers that operates in the French (and Belgian) market. Many of our customers are co-ownership trustees [2], which is a much bigger deal in France than in most countries, but we also serve other professionals such as rental managers and social housing landlords.

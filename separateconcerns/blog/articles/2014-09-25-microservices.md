@@ -2,10 +2,12 @@
 % Pierre Chapuis
 % 2014-09-25 23:00:00
 
-    ::description::
+<!--@
+  description = [[
     An opinion on microservices and why I think the number of services
     in your system should grow like the square root of your team size.
-
+  ]]
+-->
 
 Several people have asked me what I think about microservices. The tl;dr is: I like small services, but I don't like what some call microservices, which is isolating every single feature within its own service and aiming at services at small as possible (I heard about a target of "a few hundred lines of code" per service and a hard limit at 5000 LOC).
 

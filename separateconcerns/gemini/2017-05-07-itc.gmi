@@ -1,7 +1,6 @@
 # A short introduction to Interval Tree Clocks
 published 2017-05-07,updated 2017-09-07
 
-
 This post is a rough transcription of a lightning talk I gave at dotScale 2017 [1].
 
 

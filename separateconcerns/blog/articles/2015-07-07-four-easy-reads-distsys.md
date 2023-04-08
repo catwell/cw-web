@@ -3,12 +3,12 @@
 % 2015-07-07 09:00:00
 
 <!--@
-  updated = "2016-05-16 17:20:00"
--->
-
-    ::description::
+  description = [[
     A few links to documents that help understanding why and how trade-offs
     must be made in distributed systems.
+  ]]
+  updated = "2016-05-16 17:20:00"
+-->
 
 Even among software people, those of us who work with distributed systems and algorithms are sometimes seen as mad scientists. We use words like like consistency, causality, consensus, commutativity, idempotence, immutability and "impossibility theorems". How come we have to read papers and tear our hair out just to make software run correctly on a few machines? Are we all failed academics incapable of pragmatism?
 

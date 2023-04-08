@@ -2,8 +2,9 @@
 % Pierre 'catwell' Chapuis
 % 2018-01-06 14:10:00
 
-    ::description::
-    I have been working at Lima for four years.
+<!--@
+  description = "I have been working at Lima for four years."
+-->
 
 Today marks the fourth birthday of [my joining Lima](https://blog.separateconcerns.com/2013-12-12-infinity-beyond.html), and it is a good occasion to talk a bit about some of the things I have been doing there.
 

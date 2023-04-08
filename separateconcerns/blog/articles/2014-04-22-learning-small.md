@@ -2,8 +2,9 @@
 % Pierre Chapuis
 % 2014-04-22 23:59:00
 
-    ::description::
-    I just wrote a Lisp to improve my C. I will learn Go next.
+<!--@
+  description = "I just wrote a Lisp to improve my C. I will learn Go next."
+-->
 
 ## Writing a Lisp
 

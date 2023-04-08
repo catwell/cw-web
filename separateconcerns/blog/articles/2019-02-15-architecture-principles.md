@@ -2,8 +2,9 @@
 % Pierre 'catwell' Chapuis
 % 2019-02-15 10:20:00
 
-    ::description::
-    My guiding principles regarding software architecture and design.
+<!--@
+  description = "My guiding principles regarding software architecture and design."
+-->
 
 This is just a short post to share what I now consider, after 10 years in the industry (and almost twice as many writing code), my core software architecture principles.
 

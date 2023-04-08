@@ -1,6 +1,10 @@
 # Modern design and Alan Kay
 published 2014-04-25
 
+```
+Incremental which resonates with some ideas I have on modern design.
+
+```
 
 I have long been thinking that there is something wrong with modern product design thinking. I see designs that trade off almost all power, flexibility and composability for a smoother learning curve. I see designs that remove explicit controls and replace them by magic, choosing to hide essential complexity instead of reducing accidental complexity. I see designs optimized for new users and prospects instead of regular users, and designers who apparently consider documentation as something evil.
 

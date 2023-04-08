@@ -2,8 +2,9 @@
 % Pierre 'catwell' Chapuis
 % 2019-02-15 19:40:00
 
-    ::description::
-    Lima is shutting down. A few answers to questions raised in the process.
+<!--@
+  description = "Lima is shutting down. A few answers to questions raised in the process."
+-->
 
 You may have heard it already: five years after I [joined Lima](https://blog.separateconcerns.com/2013-12-12-infinity-beyond.html), the company [is shutting down](https://medium.com/@MeetLima/this-time-its-goodbye-5573a97be7d4).
 

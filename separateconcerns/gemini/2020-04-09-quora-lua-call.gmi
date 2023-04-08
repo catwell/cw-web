@@ -1,7 +1,6 @@
 # [Quora] What is the call metamethod in Lua?
 published 2020-04-09
 
-
 From 2011 to 2014, I used to post answers on Quora [1]. I don't anymore, because I don't really like what the website has become. I have a copy of some of my answers here [2] but someone commented [3] on one of my answers that it should be available more prominently on the Web, so I decided to repost a few of my answers here, starting with this one.
 
 The original question [4] was:

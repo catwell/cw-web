@@ -2,9 +2,12 @@
 % Pierre Chapuis
 % 2014-11-23 21:45:00
 
-    ::description::
+<!--@
+  description = [[
     On the complexity of programming tools and libraries.
     Some people prefer fat tools like Ruby on Rails, I prefer lean tools.
+  ]]
+-->
 
 Two people I respect a lot, [Avdi Grimm](http://about.avdi.org/) and [Michel Martens](http://soveran.com/), are having [an interesting debate](http://devblog.avdi.org/2014/11/21/in-defense-of-fat-tools/) about the complexity of programming tools and libraries.
 

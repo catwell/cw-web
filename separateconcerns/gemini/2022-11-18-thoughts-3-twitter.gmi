@@ -1,7 +1,6 @@
 # Thoughts 3 - The end of Twitter?
 published 2022-11-18
 
-
 > "Thoughts" are posts that relate to things that have been on my mind recently. Some are practical and some are just reflections on a given topic. They are less thought out than regular posts.
 
 So, the Bird [1], of course. Not sure if or when it will collapse. Better safe than sorry so I am planning my retreat to the Pachyderm [2], but I do not really believe in the Fediverse model.

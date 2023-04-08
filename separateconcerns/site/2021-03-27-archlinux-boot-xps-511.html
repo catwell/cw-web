@@ -22,9 +22,7 @@
         [ <a href="index.html">home</a> ]
       </h4>
     </header>
-    
-
-<p>When I updated my Linux kernel to 5.11 I had the bad surprise to end up with a blinking underscore on reboot. It had been many years since an update had broken my system like that. I fixed it rather easily by booting in rescue mode and downgrading the kernel. I had no time to investigate so I just added <code>linux</code> to <code>IgnorePkg</code> at the time, But I don&#39;t use Arch to run old kernels so today I took the time to fix it &quot;properly&quot;.</p>
+    <p>When I updated my Linux kernel to 5.11 I had the bad surprise to end up with a blinking underscore on reboot. It had been many years since an update had broken my system like that. I fixed it rather easily by booting in rescue mode and downgrading the kernel. I had no time to investigate so I just added <code>linux</code> to <code>IgnorePkg</code> at the time, But I don&#39;t use Arch to run old kernels so today I took the time to fix it &quot;properly&quot;.</p>
 
 <p>To do so, I reproduced the issue, then downgraded again and looked at the logs with <code>journalctl -b --boot=-1</code>. It quickly let me understand that it was GDM that was failing due to something wrong with graphics initialization.</p>
 

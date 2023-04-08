@@ -2,8 +2,9 @@
 % Pierre Chapuis
 % 2014-01-02 22:10:00
 
-    ::description::
-    I read up on C and rediscovered some weird parts of the standard.
+<!--@
+  description = "I read up on C and rediscovered some weird parts of the standard."
+-->
 
 Thanks to my [new job](http://blog.separateconcerns.com/2013-12-12-infinity-beyond.html) I will have the opportunity to write a lot more C than in the last three years. To prepare for this, I decided to read some old C89 books again and see what I remembered. Here are some of the quirks I had forgotten (or never known about).
 

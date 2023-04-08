@@ -2,8 +2,9 @@
 % Pierre 'catwell' Chapuis
 % 2013-01-02 14:00:01
 
-    ::description::
-    Startups should consider SOA (Service Oriented Architecture) when their scale starts to increase.
+<!--@
+  description = "Startups should consider SOA (Service Oriented Architecture) when their scale starts to increase."
+-->
 
 ## What is SOA?
 

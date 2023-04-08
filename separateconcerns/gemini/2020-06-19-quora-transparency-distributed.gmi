@@ -1,7 +1,6 @@
 # [Quora] Transparency in distributed systems UX
 published 2020-06-19
 
-
 Yet another Quora answer [1], this time to with this question [2] which I answered on August 24, 2016:
 
 > Why is Transparency a major issue in distributed databases?

@@ -2,8 +2,9 @@
 % Pierre Chapuis
 % 2014-03-03 21:30:00
 
-    ::description::
-    How to change the behavior of Lua autocompletion in Sublime Text.
+<!--@
+  description = "How to change the behavior of Lua autocompletion in Sublime Text."
+-->
 
 I have finally decided to configure Sublime Text 2 to have it autocomplete
 Lua code the way I want it to.

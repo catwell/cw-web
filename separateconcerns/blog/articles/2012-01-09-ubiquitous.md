@@ -2,8 +2,9 @@
 % Pierre 'catwell' Chapuis
 % 2012-01-09 12:00:00
 
-    ::description::
-    Ubiquitous computing is the future.
+<!--@
+  description = "Ubiquitous computing is the future."
+-->
 
 
 I used to enjoy predicting how computing technology would evolve; it was like a game for me, and I was not too bad at it. But for a few years I have felt like I could not predict anything anymore. Things went too fast, and that bothered me.
