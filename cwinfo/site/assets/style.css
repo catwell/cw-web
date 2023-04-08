@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "PublicSans";
+  src: url("fonts/PublicSans-Regular.woff2") format("woff2"),
+       url("fonts/PublicSans-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 html, body, ul, ol, li, form, h1, h2, h3, h4, p {
   margin: 0; padding: 0;
 }
@@ -7,7 +15,7 @@ html {
 }
 
 body {
-  font-family: Georgia, serif;
+  font-family: "PublicSans", "Helvetica", serif;
   line-height: 1.5rem;
   background-color: #ffffff;
 }
@@ -70,7 +78,23 @@ ul {
 
 .social a:hover {
   border: none;
+  position: relative;
+}
+
+.social a:hover img {
   opacity: 60%;
+}
+
+.social a[data]:hover:after {
+  content: attr(data);
+  color: black;
+  font-size: 14px;
+  position: absolute;
+  left: 50%;
+  bottom: 36px;
+  white-space: nowrap;
+  z-index: 2;
+  transform: translate(-50%,0);
 }
 
 div.center {
