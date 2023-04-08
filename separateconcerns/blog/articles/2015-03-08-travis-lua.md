@@ -1,8 +1,6 @@
-% Continuous Integration for Lua with Travis
-% Pierre Chapuis
-% 2015-03-08 12:00:00
-
 <!--@
+  title="Continuous Integration for Lua with Travis"
+  published="2015-03-08 12:00:00"
   description = "Add automated testing to your Lua open source projects for free."
   updated = "2015-10-16 16:30:00"
 -->

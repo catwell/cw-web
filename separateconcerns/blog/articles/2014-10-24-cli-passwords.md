@@ -1,8 +1,6 @@
-% Disabling graphical password prompts
-% Pierre Chapuis
-% 2014-10-24 21:30:00
-
 <!--@
+  title="Disabling graphical password prompts"
+  published="2014-10-24 21:30:00"
   description = [[
     Some command-line programs open graphical password prompts.
     Here is how to disable them.

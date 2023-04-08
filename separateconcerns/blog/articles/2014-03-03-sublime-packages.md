@@ -1,8 +1,6 @@
-% Editing Sublime Text packages
-% Pierre Chapuis
-% 2014-03-03 21:30:00
-
 <!--@
+  title="Editing Sublime Text packages"
+  published="2014-03-03 21:30:00"
   description = "How to change the behavior of Lua autocompletion in Sublime Text."
 -->
 

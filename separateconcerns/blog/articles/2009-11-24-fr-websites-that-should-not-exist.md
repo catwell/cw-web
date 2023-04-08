@@ -1,11 +1,8 @@
-% (French) Ces sites qui ne devraient pas exister
-% Pierre 'catwell' Chapuis
-% 2009-11-24 12:00:00
-
 <!--@
+  title="(French) Ces sites qui ne devraient pas exister"
+  published="2009-11-24 12:00:00"
   description = "Certains sites essaient de recréer le Web dans des silos."
 -->
-
 
 Regarder le [top 10 d'Alexa](http://www.alexa.com/topsites) peut faire peur quand on connait un peu ce qu'est Internet. Ce classement par trafic est assez représentatif de l'évolution du web ces quelques années. On y trouve évidemment beaucoup de moteurs de recherche : google.com (1er), yahoo.com (3e), live.com (5e), baidu.com (8e) et yahoo.jp (10e). msn.com, le portail de Microsoft, arrive en 9e position, pourquoi pas. Le problème, c'est les quatre autres. Prenons-les dans le désordre.
 

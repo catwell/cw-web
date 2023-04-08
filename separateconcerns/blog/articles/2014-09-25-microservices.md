@@ -1,8 +1,6 @@
-% Microservices
-% Pierre Chapuis
-% 2014-09-25 23:00:00
-
 <!--@
+  title="Microservices"
+  published="2014-09-25 23:00:00"
   description = [[
     An opinion on microservices and why I think the number of services
     in your system should grow like the square root of your team size.

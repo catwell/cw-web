@@ -1,8 +1,6 @@
-% Joining Finegrain
-% Pierre 'catwell' Chapuis
-% 2023-03-31 22:15:00
-
 <!--@
+  title="Joining Finegrain"
+  published="2023-03-31 22:15:00"
   description = "New job, old friends and AI."
 -->
 

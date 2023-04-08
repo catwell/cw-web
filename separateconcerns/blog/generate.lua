@@ -96,10 +96,7 @@ local function md_to_html_chunk(md)
             "</h", level, ">"
         }
     end
-    local parse = lunamark.reader.markdown.new(
-        writer,
-        {pandoc_title_blocks = true, lua_metadata = true}
-    )
+    local parse = lunamark.reader.markdown.new(writer, {lua_metadata = true})
     local html, metadata = parse(md)
     if has_code then metadata.has_code = true end
     return html, metadata
@@ -188,10 +185,7 @@ local function md_to_gemtext(md)
         end
     end
 
-    local parse = lunamark.reader.markdown.new(
-        writer,
-        {pandoc_title_blocks = true, lua_metadata = true}
-    )
+    local parse = lunamark.reader.markdown.new(writer, {lua_metadata = true})
     local function f(link_id)
         local link = links[tonumber(link_id)]
         return fmt("%s [%d]", link.label, link.ref)
@@ -203,9 +197,7 @@ local function parse_entry(fname)
     local md = assert(file_read(fname))
     local html, metadata = md_to_html_chunk(md)
     local gemtext = md_to_gemtext(md)
-    metadata.date = table.concat(metadata.date)
-    metadata.title = lunamark.util.rope_to_string(metadata.title)
-    metadata.author = table.concat(metadata.author[1])
+    metadata.title = metadata.title:gsub("&", "&amp;")
     metadata.description = metadata.description:
         gsub("%s+"," "):gsub("^ ",""):gsub(" $","")
     return {
@@ -222,7 +214,7 @@ local function process_file(path)
     local url = fmt("%s.html", fnpart)
     local parsed_entry = parse_entry(fname)
     local metadata = parsed_entry.metadata
-    local pdate = assert(parse_date(metadata.date))
+    local pdate = assert(parse_date(metadata.published))
     local sdate = Date.Format("yyyy-mm-dd"):tostring(pdate)
     pdate:toUTC()
     local udate = pdate

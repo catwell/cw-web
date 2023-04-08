@@ -1,8 +1,6 @@
-% Leaving Inch
-% Pierre 'catwell' Chapuis
-% 2023-03-11 11:55:00
-
 <!--@
+  title="Leaving Inch"
+  published="2023-03-11 11:55:00"
   description = "After three years, I am leaving Inch."
 -->
 

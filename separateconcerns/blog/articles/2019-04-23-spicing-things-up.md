@@ -1,8 +1,6 @@
-% Spicing things up
-% Pierre 'catwell' Chapuis
-% 2019-04-23 21:45:00
-
 <!--@
+  title="Spicing things up"
+  published="2019-04-23 21:45:00"
   description = "I am co-founding a company called Chilli to solve SaaS distribution to SMBs and SMEs."
 -->
 

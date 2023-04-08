@@ -1,8 +1,6 @@
-% C: what I had forgotten
-% Pierre Chapuis
-% 2014-01-02 22:10:00
-
 <!--@
+  title="C: what I had forgotten"
+  published="2014-01-02 22:10:00"
   description = "I read up on C and rediscovered some weird parts of the standard."
 -->
 

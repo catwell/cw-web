@@ -1,8 +1,6 @@
-% Fixing right click on touchpads in Gnome
-% Pierre 'catwell' Chapuis
-% 2018-03-30 19:00:00
-
 <!--@
+  title="Fixing right click on touchpads in Gnome"
+  published="2018-03-30 19:00:00"
   description = [[
     Gnome 3.28 changes the default behavior of touchpads,
     here is how to change it back.

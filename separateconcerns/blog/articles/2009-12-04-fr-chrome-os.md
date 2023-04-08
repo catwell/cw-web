@@ -1,8 +1,6 @@
-% (French) Chrome OS
-% Pierre 'catwell' Chapuis
-% 2009-12-04 12:00:00
-
 <!--@
+  title="(French) Chrome OS"
+  published="2009-12-04 12:00:00"
   description = "Chrome OS est techniquement bon mais éthiquement dangereux."
 -->
 

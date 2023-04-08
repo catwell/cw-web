@@ -1,8 +1,6 @@
-% Goodbye Lua Toolbox
-% Pierre Chapuis
-% 2016-12-22 08:00:00
-
 <!--@
+  title="Goodbye Lua Toolbox"
+  published="2016-12-22 08:00:00"
   description = "The Lua Toolbox has been merged into the main LuaRocks website."
 -->
 

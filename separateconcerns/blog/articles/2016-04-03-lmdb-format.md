@@ -1,8 +1,6 @@
-% The LMDB file format
-% Pierre Chapuis
-% 2016-04-03 23:00:00
-
 <!--@
+  title="The LMDB file format"
+  published="2016-04-03 23:00:00"
   description = "The format of data.mdb files, used by the LMDB database."
 -->
 

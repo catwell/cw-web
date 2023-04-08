@@ -1,8 +1,6 @@
-% Viterbi, my favorite algorithm
-% Pierre 'catwell' Chapuis
-% 2013-03-03 18:00:01
-
 <!--@
+  title="Viterbi, my favorite algorithm"
+  published="2013-03-03 18:00:01"
   description = "The Viterbi algorithm is used to solve Hidden Markov Models. It has many practical applications."
 -->
 

@@ -1,8 +1,6 @@
-% Software Architecture Principles
-% Pierre 'catwell' Chapuis
-% 2019-02-15 10:20:00
-
 <!--@
+  title="Software Architecture Principles"
+  published="2019-02-15 10:20:00"
   description = "My guiding principles regarding software architecture and design."
 -->
 

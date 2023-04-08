@@ -1,8 +1,6 @@
-% Algorithms, Data Structures & Protocols
-% Pierre 'catwell' Chapuis
-% 2013-01-28 22:00:00
-
 <!--@
+  title="Algorithms, Data Structures & Protocols"
+  published="2013-01-28 22:00:00"
   description = "There are three fundamental parts to Computer Science: Algorithms, Data Structures and Protocols."
 -->
 

@@ -1,8 +1,6 @@
-% Personal news, 2020 edition
-% Pierre 'catwell' Chapuis
-% 2020-12-16 13:50:00
-
 <!--@
+  title="Personal news, 2020 edition"
+  published="2020-12-16 13:50:00"
   description = "I shut down my company, joined another, and had a son."
 -->
 

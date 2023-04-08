@@ -1,8 +1,6 @@
-% To Infinity and Beyond
-% Pierre 'catwell' Chapuis
-% 2013-12-12 21:30:00
-
 <!--@
+  title="To Infinity and Beyond"
+  published="2013-12-12 21:30:00"
   description = "I am joining the Lima team as a core developer."
 -->
 

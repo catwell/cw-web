@@ -1,8 +1,6 @@
-% The Staff Software Engineer role at small companies
-% Pierre Chapuis
-% 2023-02-03 12:20:00
-
 <!--@
+  title="The Staff Software Engineer role at small companies"
+  published="2023-02-03 12:20:00"
   description = "How the Staff Engineer role can be defined at a small company like Inch."
 -->
 

@@ -1,8 +1,6 @@
-% Lean tools
-% Pierre Chapuis
-% 2014-11-23 21:45:00
-
 <!--@
+  title="Lean tools"
+  published="2014-11-23 21:45:00"
   description = [[
     On the complexity of programming tools and libraries.
     Some people prefer fat tools like Ruby on Rails, I prefer lean tools.

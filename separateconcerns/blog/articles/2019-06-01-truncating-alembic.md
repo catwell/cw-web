@@ -1,11 +1,8 @@
-% Truncating an Alembic migrations history
-% Pierre 'catwell' Chapuis
-% 2019-06-01 19:00:00
-
 <!--@
+  title="Truncating an Alembic migrations history"
+  published="2019-06-01 19:00:00"
   description = "How to truncate an Alembic migrations history in projects that use Flask-Migrate."
 -->
-
 
 In projects that use SQLAlchemy and [Alembic](https://alembic.sqlalchemy.org) via [Flask-Migrate](https://flask-migrate.readthedocs.io), you may want to truncate the migrations history. By that I mean: rewrite all the migrations up to some point as a single initial migration, to avoid replaying them every single time you create a new database instance. Of course, you only want to do that if you have already migrated all your database instances at least up to that point.
 

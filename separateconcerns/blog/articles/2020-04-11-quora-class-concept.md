@@ -1,8 +1,6 @@
-% [Quora] Explaining classes to a 10 year old
-% Pierre 'catwell' Chapuis
-% 2020-04-11 13:00:00
-
 <!--@
+  title="[Quora] Explaining classes to a 10 year old"
+  published="2020-04-11 13:00:00"
   description = [[
     How would you explain the concept of a "class" in Python to a 10 year old?
   ]]

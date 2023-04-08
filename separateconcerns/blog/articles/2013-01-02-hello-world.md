@@ -1,8 +1,6 @@
-% Hello again, World!
-% Pierre 'catwell' Chapuis
-% 2013-01-02 14:00:00
-
 <!--@
+  title="Hello again, World!"
+  published="2013-01-02 14:00:00"
   description = "Hello World post for Pierre Chapuis' new blog."
 -->
 

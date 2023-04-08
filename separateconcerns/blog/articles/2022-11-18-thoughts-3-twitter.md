@@ -1,8 +1,6 @@
-% Thoughts 3 - The end of Twitter?
-% Pierre Chapuis
-% 2022-11-18 22:45:00
-
 <!--@
+  title="Thoughts 3 - The end of Twitter?"
+  published="2022-11-18 22:45:00"
   description = "Thoughts on the end of Twitter, Mastodon and the Fediverse, the comeback of RSS and Atom feeds, the problem of discovery, and discussion."
 -->
 

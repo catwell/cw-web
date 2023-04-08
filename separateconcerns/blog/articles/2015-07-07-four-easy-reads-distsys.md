@@ -1,8 +1,6 @@
-% Four easy reads to understand distributed systems issues
-% Pierre Chapuis
-% 2015-07-07 09:00:00
-
 <!--@
+  title="Four easy reads to understand distributed systems issues"
+  published="2015-07-07 09:00:00"
   description = [[
     A few links to documents that help understanding why and how trade-offs
     must be made in distributed systems.

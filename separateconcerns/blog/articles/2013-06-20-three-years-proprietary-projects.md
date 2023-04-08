@@ -1,8 +1,6 @@
-% Three years of (proprietary) projects
-% Pierre 'catwell' Chapuis
-% 2013-06-20 00:40:00
-
 <!--@
+  title="Three years of (proprietary) projects"
+  published="2013-06-20 00:40:00"
   description = "Projects I have worked on at Moodstocks over the last three years."
   updated = "2015-11-11 21:15:00"
 -->

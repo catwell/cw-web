@@ -1,8 +1,6 @@
-% Thoughts 4 - SSO Tax and various links
-% Pierre Chapuis
-% 2022-12-11 18:20:00
-
 <!--@
+  title="Thoughts 4 - SSO Tax and various links"
+  published="2022-12-11 18:20:00"
   description = "Thoughts on the SSO tax in SaaS, Amazon's Distributed Computing Manifesto, an old Aaron Swartz essay, and approachable research."
 -->
 

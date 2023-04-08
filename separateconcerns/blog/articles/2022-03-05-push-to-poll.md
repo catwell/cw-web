@@ -1,8 +1,6 @@
-% The push-to-poll pattern
-% Pierre 'catwell' Chapuis
-% 2022-03-05 13:00:00
-
 <!--@
+  title="The push-to-poll pattern"
+  published="2022-03-05 13:00:00"
   description = "A pattern to send a feed of messages or events from a server to a client."
   updated = "2022-04-04 09:45:00"
 -->

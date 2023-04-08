@@ -1,8 +1,6 @@
-% [Quora] Transparency in distributed systems UX
-% Pierre 'catwell' Chapuis
-% 2020-06-19 18:52:00
-
 <!--@
+  title="[Quora] Transparency in distributed systems UX"
+  published="2020-06-19 18:52:00"
   description = "Why is transparency (UX) a major issue in databases and other distributed systems?"
 -->
 

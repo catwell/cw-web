@@ -1,8 +1,6 @@
-% Dependency Injection
-% Pierre 'catwell' Chapuis
-% 2022-08-15 21:20:00
-
 <!--@
+  title="Dependency Injection"
+  published="2022-08-15 21:20:00"
   description = "I use dependency injection for non-deterministic code."
 -->
 

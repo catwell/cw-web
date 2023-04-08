@@ -1,8 +1,6 @@
-% Goodbye Lima
-% Pierre 'catwell' Chapuis
-% 2019-02-15 19:40:00
-
 <!--@
+  title="Goodbye Lima"
+  published="2019-02-15 19:40:00"
   description = "Lima is shutting down. A few answers to questions raised in the process."
 -->
 

@@ -1,8 +1,6 @@
-% Pallene support in localua
-% Pierre 'catwell' Chapuis
-% 2022-10-10 17:50:00
-
 <!--@
+  title="Pallene support in localua"
+  published="2022-10-10 17:50:00"
   description = "localua now supports Pallene."
 -->
 

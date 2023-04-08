@@ -1,8 +1,6 @@
-% Hacker Founders
-% Pierre Chapuis
-% 2014-05-28 00:00:01
-
 <!--@
+  title="Hacker Founders"
+  published="2014-05-28 00:00:01"
   description = [[
     Adapted from an old Gist, on how technically minded people can be
     good startup founders.

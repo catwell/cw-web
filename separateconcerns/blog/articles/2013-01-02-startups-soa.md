@@ -1,8 +1,6 @@
-% Startups, think about SOA
-% Pierre 'catwell' Chapuis
-% 2013-01-02 14:00:01
-
 <!--@
+  title="Startups, think about SOA"
+  published="2013-01-02 14:00:01"
   description = "Startups should consider SOA (Service Oriented Architecture) when their scale starts to increase."
 -->
 

@@ -1,8 +1,6 @@
-% Coherence checks in SOA
-% Pierre 'catwell' Chapuis
-% 2013-05-28 23:10:00
-
 <!--@
+  title="Coherence checks in SOA"
+  published="2013-05-28 23:10:00"
   description = [[
     My tools to detect and fix bugs in SOA: coherence checks verifying
     invariants, exhaustive logs, reconciliation scripts.

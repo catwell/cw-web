@@ -1,8 +1,6 @@
-% Two-factor authentication with pass and oathtool
-% Pierre 'catwell' Chapuis
-% 2020-04-03 09:05:00
-
 <!--@
+  title="Two-factor authentication with pass and oathtool"
+  published="2020-04-03 09:05:00"
   description = "How to use pass and oathtool to generate 2FA codes easily."
   updated = "2020-04-03 16:20:00"
 -->

@@ -1,8 +1,6 @@
-% My love-hate relationship with LuaJIT
-% Pierre Chapuis
-% 2015-06-18 02:00:00
-
 <!--@
+  title="My love-hate relationship with LuaJIT"
+  published="2015-06-18 02:00:00"
   description = "I love LuaJIT for its performance, but its complexity sometimes puts me off."
 -->
 

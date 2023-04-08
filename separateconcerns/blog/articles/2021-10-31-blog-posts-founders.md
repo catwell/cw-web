@@ -1,8 +1,6 @@
-% Blog posts for founders (and early employees)
-% Pierre 'catwell' Chapuis
-% 2021-10-31 15:45:00
-
 <!--@
+  title="Blog posts for founders (and early employees)"
+  published="2021-10-31 15:45:00"
   description = "A list of links intended for founders and people working at young companies."
 -->
 

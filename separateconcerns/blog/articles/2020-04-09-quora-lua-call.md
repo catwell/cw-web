@@ -1,8 +1,6 @@
-% [Quora] What is the call metamethod in Lua?
-% Pierre 'catwell' Chapuis
-% 2020-04-09 08:40:00
-
 <!--@
+  title="[Quora] What is the call metamethod in Lua?"
+  published="2020-04-09 08:40:00"
   description = "What is the call metamethod in Lua and what are some of its uses and basic examples?"
 -->
 

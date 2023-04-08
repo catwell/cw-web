@@ -1,8 +1,6 @@
-% Learning in the small
-% Pierre Chapuis
-% 2014-04-22 23:59:00
-
 <!--@
+  title="Learning in the small"
+  published="2014-04-22 23:59:00"
   description = "I just wrote a Lisp to improve my C. I will learn Go next."
 -->
 

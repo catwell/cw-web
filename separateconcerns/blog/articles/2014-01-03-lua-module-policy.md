@@ -1,8 +1,6 @@
-% How I write Lua modules
-% Pierre Chapuis
-% 2014-01-03 00:00:01
-
 <!--@
+  title="How I write Lua modules"
+  published="2014-01-03 00:00:01"
   description = "How I write Lua modules - an answer to Hisham's post."
 -->
 

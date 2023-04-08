@@ -1,8 +1,6 @@
-% Werner Vogels on Skills
-% Pierre 'catwell' Chapuis
-% 2013-03-24 19:30:00
-
 <!--@
+  title="Werner Vogels on Skills"
+  published="2013-03-24 19:30:00"
   description = [[
     Werner Vogels, CTO of Amazon, explains what skills he is looking for
     to run 21st century application architectures.

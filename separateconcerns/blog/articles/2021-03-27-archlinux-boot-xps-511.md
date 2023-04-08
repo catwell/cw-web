@@ -1,8 +1,6 @@
-% Booting GDM on my XPS with kernel 5.11
-% Pierre 'catwell' Chapuis
-% 2021-03-27 20:15:00
-
 <!--@
+  title="Booting GDM on my XPS with kernel 5.11"
+  published="2021-03-27 20:15:00"
   description = "If you cannot boot into GDM on Arch Linux with Linux kernel 5.11 on an XPS with an Intel graphics card, enable early KMS."
 -->
 

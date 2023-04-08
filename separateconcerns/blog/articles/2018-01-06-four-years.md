@@ -1,8 +1,6 @@
-% Four years at Lima
-% Pierre 'catwell' Chapuis
-% 2018-01-06 14:10:00
-
 <!--@
+  title="Four years at Lima"
+  published="2018-01-06 14:10:00"
   description = "I have been working at Lima for four years."
 -->
 
