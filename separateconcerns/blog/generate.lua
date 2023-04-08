@@ -65,18 +65,6 @@ local function article_to_html_chunk(md)
         end
     )
 
-    -- djot.overload_renderer_method(
-    --     renderer, "heading", function(self, node)
-    --         self.out("<h")
-    --         self.out(node.level)
-    --         -- self.out(" id=\"")
-    --         -- self.out(as_slug(node.attr.id))
-    --         -- self.out("\"")
-    --         self:render_attrs(node)
-    --         self.out(">")
-    --     end
-    -- )
-
     renderer:render(input, handle)
     local html = handle:flush()
     return html, metadata
