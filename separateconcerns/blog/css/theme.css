@@ -7,6 +7,14 @@
 }
 
 @font-face {
+  font-family: "PublicSansLight";
+  src: url("../fonts/PublicSans-Light.woff2") format("woff2"),
+       url("../fonts/PublicSans-Light.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "PublicSansItalic";
   src: url("../fonts/PublicSans-LightItalic.woff2") format("woff2"),
        url("../fonts/PublicSans-LightItalic.woff") format("woff");
@@ -38,7 +46,7 @@ h1 {
 h2 {
   color: #333333;
   font-size: 1.3rem;
-  font-weight:normal;
+  font-weight: normal;
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
@@ -46,16 +54,17 @@ h2 {
 h3 {
   color: #333333;
   font-size: 1.1rem;
-  font-weight:normal;
+  font-weight: normal;
   margin-top: 1rem;
   margin-bottom: 0.5rem;
 }
 
 h4 { /* subtitles only */
+  font-family: "PublicSansLight", "Helvetica", serif;
   margin-bottom: 2rem;
   color: #333333;
-  font-size: 1rem;
-  font-weight:normal;
+  font-size: 0.9rem;
+  font-weight: normal;
 }
 
 img {
