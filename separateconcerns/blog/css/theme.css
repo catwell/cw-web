@@ -1,3 +1,19 @@
+@font-face {
+  font-family: "PublicSans";
+  src: url("../fonts/PublicSans-Regular.woff2") format("woff2"),
+       url("../fonts/PublicSans-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PublicSansItalic";
+  src: url("../fonts/PublicSans-LightItalic.woff2") format("woff2"),
+       url("../fonts/PublicSans-LightItalic.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 html, body, ul, ol, li, form, h1, h2, h3, h4, p {
   margin: 0; padding: 0;
 }
@@ -7,13 +23,12 @@ html {
 }
 
 body {
-  font-family: Georgia, serif;
+  font-family: "PublicSans", "Helvetica", serif;
   line-height: 1.5rem;
   background-color: #ffffff;
 }
 
 h1 {
-  font-family: Helvetica, sans-serif;
   color: #333333;
   font-size: 1.7rem;
   font-weight: normal;
@@ -21,7 +36,6 @@ h1 {
 }
 
 h2 {
-  font-family: Helvetica, sans-serif;
   color: #333333;
   font-size: 1.3rem;
   font-weight:normal;
@@ -30,7 +44,6 @@ h2 {
 }
 
 h3 {
-  font-family: Helvetica, sans-serif;
   color: #333333;
   font-size: 1.1rem;
   font-weight:normal;
@@ -40,7 +53,6 @@ h3 {
 
 h4 { /* subtitles only */
   margin-bottom: 2rem;
-  font-family: Helvetica, sans-serif;
   color: #333333;
   font-size: 1rem;
   font-weight:normal;
@@ -64,6 +76,8 @@ p {
 
 a {
   text-decoration: none;
+  border-bottom: 1px solid transparent;
+  margin-bottom: -1px;
   color: #cc0000;
 }
 
@@ -72,6 +86,7 @@ a:hover {
 }
 
 blockquote {
+  font-family: "PublicSansItalic", "Helvetica", serif;
   font-style: italic;
   color: #841;
 }
