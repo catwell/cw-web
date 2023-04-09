@@ -10,11 +10,45 @@
     rel="alternate" type="application/xhtml+xml"
   />
   <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
-  <updated>2023-04-03T14:24:26Z</updated>
+  <updated>2023-04-09T09:20:14Z</updated>
   <author>
     <name>Pierre 'catwell' Chapuis</name>
     <uri>https://catwell.info/</uri>
   </author>
+  <entry>
+    <title>Porting this blog to djot</title>
+    <link
+      rel="alternate" type="text/html"
+      href="https://blog.separateconcerns.com/2023-04-09-djot.html"
+    />
+    <id>tag:blog.separateconcerns.com,2023-04-09:djot</id>
+    <published>2023-04-09T11:20:00Z</published>
+    <updated>2023-04-09T11:20:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><a href="https://blog.separateconcerns.com/2013-01-02-hello-world.html">Over 10 years ago</a>, I created this blog and wrote the static generator that powers it. I used Markdown for the articles and <a href="https://github.com/jgm/lunamark">lunamark</a>, a library written by John MacFarlane of <a href="https://commonmark.org">CommonMark</a> and <a href="https://pandoc.org">Pandoc</a> fame.</p>
+<p>Recently, John created <a href="https://djot.net">djot</a>, a markup syntax intended to be an evolution of Markdown. The <a href="https://github.com/jgm/djot.lua">initial reference implementation</a> was written in Lua and I decided to port my static generator to it.</p>
+<p>Converting the Markdown parts of the post themselves was not very hard, the main think I can think of was switching my old posts from intented code blocks - which are not supported by djot - to fenced code blocks. However, my posts were not pure vanilla Markdown. I used two specific features from lunamark and a few extensions of my own.</p>
+<p>The first lunamark feature I had to find a replacement for was Lua metadata. djot <a href="https://github.com/jgm/djot/issues/35">does not support metadata</a> yet but it does support <a href="https://htmlpreview.github.io/?https://github.com/jgm/djot/blob/master/doc/syntax.html#raw-block">raw blocks with a format</a> which I could easily abuse.</p>
+<p>The second feature is Pandoc-style title blocks, which I could just <a href="https://github.com/catwell/cw-web/commit/6518e8284880d6e64ec769ed47517c9dcbba6373">move to the metadata section</a> so I did that.</p>
+<p>I also had a custom block format syntax that I used for three things: raw blocks, syntax highlighting language choice and post descriptions. The first two are natively supported by djot, and I moved the description to the metadata as well.</p>
+<p>For those transformations I used Perl one-liners such as this one which converts the metadata format:</p>
+<pre><code class="language-shell">for i in separateconcerns/blog/articles/*.md; do
+    perl -0pe 's/&lt;!\-\-@(.*)\-\-&gt;/"```=lua-meta". join("\n", split(\/\n  \/, $1)) ."```"/es' \
+        $i &gt; "$(dirname $i)/$(basename $i .md).dj"
+done
+</code></pre>
+<p>Once that was done, it was time to port the generator itself. I started with the HTML part. As I said some of the things I was doing manually in lunamark are supported natively in djot, there were two things left to do: support my metadata blocks and detect posts with code in them so I can include the JavaScript syntax highlighting library only when needed.</p>
+<p>Djot has a step when you can get the AST and I could have used it to extract this information, but I decided to use the same method I used with lunamark instead, which is <a href="https://github.com/catwell/cw-web/blob/93fa373949b16ec30950877bd817a72e8a6f7bf8/separateconcerns/blog/generate.lua#L45-L66">overriding parts of the renderer</a>. To do that I created <a href="https://github.com/catwell/cw-web/blob/master/separateconcerns/blog/cwdjot/init.lua">a small helper library</a> which mostly exposes the StringHandle used internally in djot.lua. I would need it for the next part anyway.</p>
+<p>All in all, it was pretty smooth. I just hit a small <a href="https://github.com/jgm/djot/issues/101#issuecomment-1500966800">issue with URL parsing</a> which I worked around for now by using URL encoding in my .dj source files.</p>
+<p>Since I did not change my output format much and kept exactly the same metadata, my index and Atom feed generation worked out of the box. But there was still one last thing to do: because this blog is also <a href="https://blog.separateconcerns.com/2022-02-05-gemini.html">available on Gemini</a>, I had to implement a <a href="https://gemini.circumlunar.space/docs/gemtext.gmi">Gemtext</a> renderer.</p>
+<p>In lunamark, there was a generic writer which I overloaded for that purpose. As djot.lua only supports HTML output natively for now, this time I just <a href="https://github.com/catwell/cw-web/blob/master/separateconcerns/blog/cwdjot/gemini.lua">wrote a renderer</a> from scratch. I could also have gone the Pandoc route as djot includes a custom writer and reader, but I wanted to avoid it and Pandoc does not natively support Gemtext anyway.</p>
+<p>All in all, this took a few hours to do, and the blog post you are reading now has been published with this new stack. I like djot, it is an improvement over CommonMark even though it is still has a few rough edges. I like parts of the djot.lua library a bit less, especially <a href="https://github.com/jgm/djot.lua/blob/5970f1cff2fe6b5905ec1cdeab795d5b5b3b8b97/djot/inline.lua">the parser</a>. lunamark <a href="https://github.com/jgm/lunamark/blob/master/lunamark/reader/markdown.lua">uses LPeg</a> instead and I find it simpler, but it&rsquo;s still fine.</p>
+<p>This experience also conforts me in the choice I made 10 years ago to write my own static generator using a language I know well with few dependencies. It is very low maintenance most of the time compared to the likes of Hugo, Pelican or Jekyll, and it lets me do changes like this easily when I want to.</p>
+
+      </div>
+    </content>
+  </entry>
   <entry>
     <title>Joining Finegrain</title>
     <link
