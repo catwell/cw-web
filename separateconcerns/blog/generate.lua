@@ -42,7 +42,7 @@ local function article_to_html_chunk(md)
     local renderer = djot.html.Renderer:new()
     local metadata = {}
 
-    djot.overload_renderer_method(
+    djot.override_renderer_method(
         renderer, "raw_block", function(self, node, old)
             if node.format == "lua-meta" then
                 load(node.s, nil, "t", metadata)()
@@ -51,14 +51,14 @@ local function article_to_html_chunk(md)
         end
     )
 
-    djot.overload_renderer_method(
+    djot.override_renderer_method(
         renderer, "verbatim", function(self, node, old)
             metadata.has_code = true
             old(self, node)
         end
     )
 
-    djot.overload_renderer_method(
+    djot.override_renderer_method(
         renderer, "code_block", function(self, node, old)
             metadata.has_code = true
             old(self, node)

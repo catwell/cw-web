@@ -21,7 +21,7 @@ end
 
 djot.StringHandle = StringHandle
 
-function djot.overload_renderer_method(renderer, name, f)
+function djot.override_renderer_method(renderer, name, f)
     local old = renderer[name]
     renderer[name] = function(self, node)
         f(self, node, old)
