@@ -1,0 +1,44 @@
+# Thoughts 6 - Unpredictability, AI and Education
+published 2023-04-10
+
+> "Thoughts" are posts about what has been on my mind. Sometimes practical, sometimes not; often just things I read recently. Less thought out than regular posts.
+
+## Navigating the unpredictability of everything
+
+Jason Cohen posted this long article [1] on his blog A Smart Bear. It is about how despite - and really because of - us being bad at predicting anything, the best way to move forward is still to have a strategy.
+
+> Making a decision and moving forward is often more effective than extended deliberation about the decision. Deliberation assumes we know how to reason about the future, but even experts aren’t good at that. Making decisions and gaining experience is how to find the right answers, if the organization is introspective enough to also face the truth when it turns out the original strategy is incorrect.
+
+Still, some strategies are better than others. One is having several ways to succeed to reduce unpredictability. Perhaps less obviously, doing something seemingly impossible with a very high upside is also a good strategy.
+
+Go read the whole post when you have 30 minutes, it has other motivated advice seen elsewhere such as betting on things that don't change [2], looking at what customers do [3], and keeping things simple. It also features an interesting history of Flickr and Slack.
+
+=> https://longform.asmartbear.com/predict-the-future/ 1: https://longform.asmartbear.com/predict-the-future/
+=> https://blog.separateconcerns.com/2023-03-02-thoughts-5.html#Invest-in-things-that-don't-change 2: https://blog.separateconcerns.com/2023-03-02-thoughts-5.html#Invest-in-things-that-don't-change
+=> https://blog.separateconcerns.com/2016-01-03-five-books-2015.html#The-Four-Steps-to-the-Epiphany---Steve-Blank 3: https://blog.separateconcerns.com/2016-01-03-five-books-2015.html#The-Four-Steps-to-the-Epiphany---Steve-Blank
+
+## Growth of AI Through a Cloud Lens
+
+Mitchell Hashimoto compares [4] the growth of AI today to what happened with Cloud Computing and finds many similarities. He also points how that was not the case for Web3 (cryptocurrencies).
+
+=> https://mitchellh.com/writing/ai-through-a-cloud-lens 4: https://mitchellh.com/writing/ai-through-a-cloud-lens
+
+## Duct Tape Removal Engineer
+
+I love creative job titles and Jaana Dogan found a great one [5]. When you have the experience, you immediately understand what it means.
+
+At Lima my "unofficial" job title was VP of Data Corruption, and Denis [6] was Chief Packet Loss Officer. I never went as far as putting it on my LinkedIn though ;)
+
+=> https://twitter.com/rakyll/status/1592583835950383105 5: https://twitter.com/rakyll/status/1592583835950383105
+=> https://twitter.com/denisleroy 6: https://twitter.com/denisleroy
+
+## The Diamond Age
+
+Scott Chacon tweeted [7] about how he thinks that personalized AI-based tools will change education and his concern that some countries will not adapt fast enough. I share both parts of this opinion.
+
+I have had my own issues with how education works in France and I have been thinking about this for a long time. Neal Stephenson's book The Diamond Age is a must-read about that topic, and also yet another warning to make sure AI does not end up ossifying the privileges of an elite class.
+
+I want the Primer, but IMO the current breed of foundational models is poorly adapted to the task. We need online training and scalable user personalization. I am hopeful that will get there though, because there are other lucrative use cases [8] with similar requirements.
+
+=> https://twitter.com/chacon/status/1645341107981631491 7: https://twitter.com/chacon/status/1645341107981631491
+=> https://arxiv.org/abs/2209.07663 8: https://arxiv.org/abs/2209.07663
