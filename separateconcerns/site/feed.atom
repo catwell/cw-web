@@ -10,11 +10,40 @@
     rel="alternate" type="application/xhtml+xml"
   />
   <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
-  <updated>2023-04-10T15:22:13Z</updated>
+  <updated>2023-04-15T13:44:09Z</updated>
   <author>
     <name>Pierre 'catwell' Chapuis</name>
     <uri>https://catwell.info/</uri>
   </author>
+  <entry>
+    <title>Locking down the GCP VPC firewall</title>
+    <link
+      rel="alternate" type="text/html"
+      href="https://blog.separateconcerns.com/2023-04-15-gcp-firwall.html"
+    />
+    <id>tag:blog.separateconcerns.com,2023-04-15:gcp-firwall</id>
+    <published>2023-04-15T15:45:00Z</published>
+    <updated>2023-04-15T15:45:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>I have done that three times now, so it is time to make a quick blog post about it.</p>
+<p>When you create a new Google Cloud Platform account, its VPC firewall comes configured like this:</p>
+<p><img alt="default rules" src="img/gcp-vpc-firewall-default.jpg"></p>
+<p>The first two rules, <code>default-allow-http</code> and <code>default-allow-https</code>, only apply to machines with the <code>http-server</code> and <code>https-server</code> network tags and they are fine. The third one, <code>default-allow-icmp</code>, allows ICMP which is the protocol used by <code>ping</code>; some people do not want that but I typically keep it on. The three last rules, though, are too lax for my taste.</p>
+<p>We start with <code>default-allow-rdp</code>. The Remote Desktop Protocol is typically used to access remote Windows servers, even though it is now <a href="https://gitlab.gnome.org/GNOME/gnome-remote-desktop">also supported by Gnome</a>. You are probably not a Windows shop and you certainly do not want that open on all your instances, so disable it.</p>
+<p>Now, <code>default-allow-ssh</code>. It is the same thing for the Secure Shell Protocol. I typically do not want to allow SSH access to instances from the outside; instead, I enforce the use of <a href="https://cloud.google.com/iap">Identity-Aware Proxy</a> through <code>gcloud</code> like this:</p>
+<pre><code class="language-shell">gcloud compute ssh --tunnel-through-iap my-instance-name
+</code></pre>
+<p>So you can disable that rule, but you also need to create one which is exactly the same with the source set to the IAP IP range i.e. <code>35.235.240.0/20</code>. I call it <code>iap-allow-ssh</code>.</p>
+<p>You may also still want to allow SSH access from anywhere on <strong>some</strong> machines such as SFTP servers, so I create a rule with source <code>0.0.0.0/0</code> that only applies to machines with the <code>sshable</code> network tag.</p>
+<p>I also enable logs on both SSH rules so I can easily know exactly who connects to instances and when.</p>
+<p>Finally, the <code>default-allow-internal</code> rule allows all traffic between machines in your VPC. For some of you it may be fine, but I prefer configuring all flows explicitly using tags, so I disable it as well.</p>
+<p>This is how it all should look eventually:</p>
+<p><img alt="secure rules" src="img/gcp-vpc-firewall-secure.jpg"></p>
+
+      </div>
+    </content>
+  </entry>
   <entry>
     <title>Thoughts 6 - Unpredictability, AI and Education</title>
     <link

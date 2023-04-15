@@ -1,0 +1,34 @@
+# Locking down the GCP VPC firewall
+published 2023-04-15
+
+I have done that three times now, so it is time to make a quick blog post about it.
+
+When you create a new Google Cloud Platform account, its VPC firewall comes configured like this:
+
+=> img/gcp-vpc-firewall-default.jpg default rules
+
+The first two rules, `default-allow-http` and `default-allow-https`, only apply to machines with the `http-server` and `https-server` network tags and they are fine. The third one, `default-allow-icmp`, allows ICMP which is the protocol used by `ping`; some people do not want that but I typically keep it on. The three last rules, though, are too lax for my taste.
+
+We start with `default-allow-rdp`. The Remote Desktop Protocol is typically used to access remote Windows servers, even though it is now also supported by Gnome [1]. You are probably not a Windows shop and you certainly do not want that open on all your instances, so disable it.
+
+Now, `default-allow-ssh`. It is the same thing for the Secure Shell Protocol. I typically do not want to allow SSH access to instances from the outside; instead, I enforce the use of Identity-Aware Proxy [2] through `gcloud` like this:
+
+```
+gcloud compute ssh --tunnel-through-iap my-instance-name
+
+```
+
+So you can disable that rule, but you also need to create one which is exactly the same with the source set to the IAP IP range i.e. `35.235.240.0/20`. I call it `iap-allow-ssh`.
+
+You may also still want to allow SSH access from anywhere on some machines such as SFTP servers, so I create a rule with source `0.0.0.0/0` that only applies to machines with the `sshable` network tag.
+
+I also enable logs on both SSH rules so I can easily know exactly who connects to instances and when.
+
+Finally, the `default-allow-internal` rule allows all traffic between machines in your VPC. For some of you it may be fine, but I prefer configuring all flows explicitly using tags, so I disable it as well.
+
+This is how it all should look eventually:
+
+=> img/gcp-vpc-firewall-secure.jpg secure rules
+
+=> https://gitlab.gnome.org/GNOME/gnome-remote-desktop 1: https://gitlab.gnome.org/GNOME/gnome-remote-desktop
+=> https://cloud.google.com/iap 2: https://cloud.google.com/iap
