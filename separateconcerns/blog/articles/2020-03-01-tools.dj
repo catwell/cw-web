@@ -2,7 +2,7 @@
 title = "Tools"
 published = "2020-03-01 18:00:00"
 description = "Some tools I've used at various startups."
-updated = "2022-11-15 21:00:00"
+updated = "2023-05-01 12:00:00"
 ```
 
 A few days ago I read [this article](https://acrossapp.com/blog/how-a-2-person-startup-already-uses-28-other-tools) which made me want to list some of the tools used at the four startups I have worked at so far.
@@ -76,9 +76,9 @@ I have also added a section at the end for some tools I use for my own projects.
 - [AWS](https://aws.amazon.com) - Hosting
 - [Mailjet](https://www.mailjet.com) - Transactional e-mails
 
-# Inch (2019 - 2022)
+# Inch (2019 - 2023)
 
-- [GSuite](https://gsuite.google.com) - E-mail, Calendar, Drive
+- [Google Workspace](https://workspace.google.com) - E-mail, Calendar, Drive
 - [GitHub](https://github.com) - Code hosting & issues
 - [Slack](https://slack.com) - Chat
 - [Notion](https://www.notion.so) - EDM
@@ -95,7 +95,19 @@ I have also added a section at the end for some tools I use for my own projects.
 - [Mandrill](https://mandrillapp.com) - Transactional e-mails
 - [Xero](https://www.xero.com) - Accounting
 - [Postman](https://www.postman.com) - API documentation
-- [Pipefy](https://www.pipefy.com) - Customer lifecycle
+- [Pipefy](https://www.pipefy.com) - Customer lifecyce
+- [Vonage](https://www.vonage.com) and [smsmode](https://www.smsmode.com/) - Transactional SMS
+
+# Finegrain (2023)
+
+- [Google Workspace](https://workspace.google.com) - E-mail, Calendar, Drive
+- [GitHub](https://github.com) - Code & documentation hosting
+- [Linear](https://linear.app) - Project management and issues
+- [Slack](https://slack.com) - Chat
+- [Notion](https://www.notion.so) - EDM
+- [Uptime Robot](https://uptimerobot.com) - Alerting
+- [Sentry](https://sentry.io) - Error monitoring
+- [Vercel](https://vercel.com) - Frontend platform
 
 # Personal
 

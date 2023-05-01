@@ -10,7 +10,7 @@
     rel="alternate" type="application/xhtml+xml"
   />
   <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
-  <updated>2023-04-15T13:44:09Z</updated>
+  <updated>2023-05-01T10:00:48Z</updated>
   <author>
     <name>Pierre 'catwell' Chapuis</name>
     <uri>https://catwell.info/</uri>
@@ -1290,7 +1290,7 @@ scanned 1 barcode symbols from 1 images in 0.03 seconds
     />
     <id>tag:blog.separateconcerns.com,2020-03-01:tools</id>
     <published>2020-03-01T18:00:00Z</published>
-    <updated>2022-11-15T21:00:00Z</updated>
+    <updated>2023-05-01T12:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>A few days ago I read <a href="https://acrossapp.com/blog/how-a-2-person-startup-already-uses-28-other-tools">this article</a> which made me want to list some of the tools used at the four startups I have worked at so far.</p>
@@ -1479,11 +1479,11 @@ scanned 1 barcode symbols from 1 images in 0.03 seconds
 </li>
 </ul>
 </section>
-<section id="Inch-2019---2022">
-<h1>Inch (2019 - 2022)</h1>
+<section id="Inch-2019---2023">
+<h1>Inch (2019 - 2023)</h1>
 <ul>
 <li>
-<a href="https://gsuite.google.com">GSuite</a> - E-mail, Calendar, Drive
+<a href="https://workspace.google.com">Google Workspace</a> - E-mail, Calendar, Drive
 </li>
 <li>
 <a href="https://github.com">GitHub</a> - Code hosting &amp; issues
@@ -1534,7 +1534,39 @@ scanned 1 barcode symbols from 1 images in 0.03 seconds
 <a href="https://www.postman.com">Postman</a> - API documentation
 </li>
 <li>
-<a href="https://www.pipefy.com">Pipefy</a> - Customer lifecycle
+<a href="https://www.pipefy.com">Pipefy</a> - Customer lifecyce
+</li>
+<li>
+<a href="https://www.vonage.com">Vonage</a> and <a href="https://www.smsmode.com/">smsmode</a> - Transactional SMS
+</li>
+</ul>
+</section>
+<section id="Finegrain-2023">
+<h1>Finegrain (2023)</h1>
+<ul>
+<li>
+<a href="https://workspace.google.com">Google Workspace</a> - E-mail, Calendar, Drive
+</li>
+<li>
+<a href="https://github.com">GitHub</a> - Code &amp; documentation hosting
+</li>
+<li>
+<a href="https://linear.app">Linear</a> - Project management and issues
+</li>
+<li>
+<a href="https://slack.com">Slack</a> - Chat
+</li>
+<li>
+<a href="https://www.notion.so">Notion</a> - EDM
+</li>
+<li>
+<a href="https://uptimerobot.com">Uptime Robot</a> - Alerting
+</li>
+<li>
+<a href="https://sentry.io">Sentry</a> - Error monitoring
+</li>
+<li>
+<a href="https://vercel.com">Vercel</a> - Frontend platform
 </li>
 </ul>
 </section>

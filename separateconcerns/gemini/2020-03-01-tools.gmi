@@ -1,5 +1,5 @@
 # Tools
-published 2020-03-01,updated 2022-11-15
+published 2020-03-01,updated 2023-05-01
 
 A few days ago I read this article [1] which made me want to list some of the tools used at the four startups I have worked at so far.
 
@@ -139,9 +139,9 @@ I have also added a section at the end for some tools I use for my own projects.
 => https://aws.amazon.com 62: https://aws.amazon.com
 => https://www.mailjet.com 63: https://www.mailjet.com
 
-# Inch (2019 - 2022)
+# Inch (2019 - 2023)
 
-* GSuite [64] - E-mail, Calendar, Drive
+* Google Workspace [64] - E-mail, Calendar, Drive
 * GitHub [65] - Code hosting & issues
 * Slack [66] - Chat
 * Notion [67] - EDM
@@ -158,9 +158,10 @@ I have also added a section at the end for some tools I use for my own projects.
 * Mandrill [80] - Transactional e-mails
 * Xero [81] - Accounting
 * Postman [82] - API documentation
-* Pipefy [83] - Customer lifecycle
+* Pipefy [83] - Customer lifecyce
+* Vonage [84] and smsmode [85] - Transactional SMS
 
-=> https://gsuite.google.com 64: https://gsuite.google.com
+=> https://workspace.google.com 64: https://workspace.google.com
 => https://github.com 65: https://github.com
 => https://slack.com 66: https://slack.com
 => https://www.notion.so 67: https://www.notion.so
@@ -180,19 +181,41 @@ I have also added a section at the end for some tools I use for my own projects.
 => https://www.xero.com 81: https://www.xero.com
 => https://www.postman.com 82: https://www.postman.com
 => https://www.pipefy.com 83: https://www.pipefy.com
+=> https://www.vonage.com 84: https://www.vonage.com
+=> https://www.smsmode.com/ 85: https://www.smsmode.com/
+
+# Finegrain (2023)
+
+* Google Workspace [86] - E-mail, Calendar, Drive
+* GitHub [87] - Code & documentation hosting
+* Linear [88] - Project management and issues
+* Slack [89] - Chat
+* Notion [90] - EDM
+* Uptime Robot [91] - Alerting
+* Sentry [92] - Error monitoring
+* Vercel [93] - Frontend platform
+
+=> https://workspace.google.com 86: https://workspace.google.com
+=> https://github.com 87: https://github.com
+=> https://linear.app 88: https://linear.app
+=> https://slack.com 89: https://slack.com
+=> https://www.notion.so 90: https://www.notion.so
+=> https://uptimerobot.com 91: https://uptimerobot.com
+=> https://sentry.io 92: https://sentry.io
+=> https://vercel.com 93: https://vercel.com
 
 # Personal
 
-* Fastmail [84] - Email
-* GitHub [85] - Code hosting
-* Pinboard [86] - Bookmarks
-* Gandi [87] - DNS
-* Uptime Robot [88] - Alerting
-* Vultr [89] - Hosting
+* Fastmail [94] - Email
+* GitHub [95] - Code hosting
+* Pinboard [96] - Bookmarks
+* Gandi [97] - DNS
+* Uptime Robot [98] - Alerting
+* Vultr [99] - Hosting
 
-=> https://www.fastmail.com 84: https://www.fastmail.com
-=> https://github.com 85: https://github.com
-=> https://pinboard.in 86: https://pinboard.in
-=> https://gandi.net 87: https://gandi.net
-=> https://uptimerobot.com 88: https://uptimerobot.com
-=> https://my.vultr.com 89: https://my.vultr.com
+=> https://www.fastmail.com 94: https://www.fastmail.com
+=> https://github.com 95: https://github.com
+=> https://pinboard.in 96: https://pinboard.in
+=> https://gandi.net 97: https://gandi.net
+=> https://uptimerobot.com 98: https://uptimerobot.com
+=> https://my.vultr.com 99: https://my.vultr.com
