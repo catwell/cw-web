@@ -10,7 +10,7 @@
     rel="alternate" type="application/xhtml+xml"
   />
   <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
-  <updated>2023-05-01T10:00:48Z</updated>
+  <updated>2023-05-12T19:48:31Z</updated>
   <author>
     <name>Pierre 'catwell' Chapuis</name>
     <uri>https://catwell.info/</uri>
@@ -19,9 +19,9 @@
     <title>Locking down the GCP VPC firewall</title>
     <link
       rel="alternate" type="text/html"
-      href="https://blog.separateconcerns.com/2023-04-15-gcp-firwall.html"
+      href="https://blog.separateconcerns.com/2023-04-15-gcp-firewall.html"
     />
-    <id>tag:blog.separateconcerns.com,2023-04-15:gcp-firwall</id>
+    <id>tag:blog.separateconcerns.com,2023-04-15:gcp-firewall</id>
     <published>2023-04-15T15:45:00Z</published>
     <updated>2023-04-15T15:45:00Z</updated>
     <content type="xhtml">
