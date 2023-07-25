@@ -1,0 +1,14 @@
+# Goodbye luafr.org
+published 2023-07-25
+
+Ten years ago, I started a French-speaking mailing list about Lua. It was somehow active for around two years, but there was never really enough of an active community for it to keep going. To accompany that mailing list, I bought the domain luafr.org [1] and set up a small static webpage with a few links about Lua in French.
+
+Recently, my registrar Gandi was acquired by Total Web Solutions. Prices went up, service went down, so I will be migrating my domains elsewhere when they renew. I am also using the opportunity to let go of a few unnecessary domains, and luafr.org will be one of them. It will expire on October 9, 2023.
+
+Nobody should miss the static webpage, but there is one important thing hosted on that domain, and that is the only LuaRocks mirror enabled by default besides the official website and GitHub.
+
+I have opened a pull request [2] to change the URL to loadk.com [3], which points to the same IP, but if you have somehow hardcoded it in your configuration file please change `luafr.org` to `loadk.com` to avoid disruption.
+
+=> https://luafr.org 1: https://luafr.org
+=> https://github.com/luarocks/luarocks/pull/1517 2: https://github.com/luarocks/luarocks/pull/1517
+=> https://loadk.com/luarocks/ 3: https://loadk.com/luarocks/
