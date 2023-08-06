@@ -10,7 +10,7 @@
     rel="alternate" type="application/xhtml+xml"
   />
   <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
-  <updated>2023-08-06T14:35:28Z</updated>
+  <updated>2023-08-06T14:47:06Z</updated>
   <author>
     <name>Pierre 'catwell' Chapuis</name>
     <uri>https://catwell.info/</uri>
@@ -46,16 +46,16 @@
 <p>Putting a limit on function sizes, and systematic <a href="https://refactoring.guru/extract-method">method / function extraction</a>. This appears to make code superficially more readable, but in reality it makes it less linear and harder to debug. Other posts sharing that opinion: <a href="https://250bpm.com/blog:36/">Martin Sústrik</a>, <a href="https://loup-vaillant.fr/articles/physics-of-readability">Loup Vaillant</a>.</p>
 </li>
 <li>
-<p>Systematic <a href="https://en.wikipedia.org/wiki/Test-driven_development">Test-driven development</a>. TDD is very useful when the problem is well-defined and the implementation error-prone, for instance when implementing precise specs or an RFC. It is harmful when you do exploratory programming. In some code bases, I go as far as having no unit tests - only end-to-end and regression ones, in addition to plenty of inline assertions in the code.</p>
+<p>Systematic <a href="https://en.wikipedia.org/wiki/Test-driven_development">Test-driven development</a>. TDD is very useful when the problem is well-defined and the implementation error-prone, for instance when implementing precise specs or an RFC. It is harmful when you do exploratory programming. In some code bases, I go as far as having no unit tests — only end-to-end and regression ones, in addition to plenty of inline assertions in the code.</p>
 </li>
 <li>
 <p>Trying to achieve strict typing of dynamic languages. Don&rsquo;t get me wrong, type-checking is helpful as a tool to catch bugs and guide development. But trying to adhere to some theoretical principles too strictly can make you lose all the benefits of the dynamic language underneath. If you want to make that trade-off, great, but then use a statically typed language instead! There are good reasons why <a href="https://www.typescriptlang.org/docs/handbook/type-compatibility.html#a-note-on-soundness">TypeScript is unsound</a>.</p>
 </li>
 <li>
-<p>Writing extensive documentation. Some people tend to think documentation is a silver bullet, and it is often because they have a bad mental model of how users behave. There are two main ways users - including other developers - will possibly consume your documentation: they will read the Getting Started / tutorials, and then they will look for solutions when they encounter problems. Optimize your docs for that.</p>
+<p>Writing extensive documentation. Some people tend to think documentation is a silver bullet, and it is often because they have a bad mental model of how users behave. There are two main ways users — including other developers — will possibly consume your documentation: they will read the Getting Started / tutorials, and then they will look for solutions when they encounter problems. Optimize your docs for that.</p>
 </li>
 <li>
-<p>&ldquo;Elegance&rdquo; is overrated when writing software for production. It should usually be traded off for robustness first - i.e. lower MTBF and MTTR, which implies understandability - and performance second. &ldquo;Elegant&rdquo; is great if it means &ldquo;straightforward&rdquo;, harmful <a href="https://blog.separateconcerns.com/2014-05-27-magic.html">if it means magic</a>.</p>
+<p>&ldquo;Elegance&rdquo; is overrated when writing software for production. It should usually be traded off for robustness first — i.e. lower MTBF and MTTR, which implies understandability — and performance second. &ldquo;Elegant&rdquo; is great if it means &ldquo;straightforward&rdquo;, harmful <a href="https://blog.separateconcerns.com/2014-05-27-magic.html">if it means magic</a>.</p>
 </li>
 </ul>
 <p>To end this post with something related, <a href="https://www.onebigfluke.com">Brett Slatkin</a> is hosting <a href="https://www.youtube.com/@WorstPractices">a podcast called Worst Practices</a> where developers talk about something terrible they do. I am sure you will recognize yourself in some of those. For instance I have only used a simple editor for a long time like <a href="https://mitchellh.com">Mitchell Hashimoto</a> does, I debug with print statements like <a href="https://www.leahculver.com">Leah Culver</a> and I even sometimes put them in system libraries like <a href="https://sedimental.org">Mahmoud Hashemi</a>!</p>
