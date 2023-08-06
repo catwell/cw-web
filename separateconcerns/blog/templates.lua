@@ -121,7 +121,7 @@ TPL.atom_feed = [[
     <updated>{{atom.updated}}</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        {{{content}}}
+        {{{atom.content}}}
       </div>
     </content>
   </entry>

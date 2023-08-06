@@ -19,6 +19,12 @@ function StringHandle:flush()
     return table.concat(self)
 end
 
+function StringHandle:pop()
+    local r = self[#self]
+    self[#self] = nil
+    return r
+end
+
 djot.StringHandle = StringHandle
 
 function djot.override_renderer_method(renderer, name, f)

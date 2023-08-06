@@ -65,6 +65,22 @@ local function article_to_html_chunk(md)
         end
     )
 
+    -- Hacks to close tags for Atom validity
+
+    djot.override_renderer_method(
+        renderer, "image", function(self, node, old)
+            old(self, node)
+            assert(handle:pop() == ">")
+            self.out("/>")
+        end
+    )
+
+    djot.override_renderer_method(
+        renderer, "thematic_break", function(self, node, old)
+            self.out("<hr/>\n")
+        end
+    )
+
     renderer:render(input, handle)
     local html = handle:flush()
     return html, metadata
@@ -90,6 +106,22 @@ local function parse_entry(fname)
         gemtext = gemtext,
         metadata = metadata,
     }
+end
+
+local function clean_for_atom(s)
+    local subst = {
+        ["&ldquo;"] = "&#8220;",
+        ["&rdquo;"] = "&#8221;",
+        ["&lsquo;"] = "&#8216;",
+        ["&rsquo;"] = "&#8217;",
+        ["&hellip;"] = "&#8230;",
+        ["&mdash;"] = "&#8212;",
+        ["&ndash;"] = "&#8211;",
+    }
+    for k, v in pairs(subst) do
+        s = s:gsub(k, v)
+    end
+    return s
 end
 
 local function process_file(path)
@@ -122,6 +154,7 @@ local function process_file(path)
             published = date_to_atom(pdate),
             updated = date_to_atom(udate),
             fragment = fragment,
+            content = clean_for_atom(parsed_entry.html),
         }
     }
     if metadata.updated then

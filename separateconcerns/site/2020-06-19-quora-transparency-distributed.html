@@ -25,7 +25,7 @@
 <blockquote>
 <p>Why is Transparency a major issue in distributed databases?</p>
 </blockquote>
-<hr>
+<hr/>
 <p>First, a few words about what &ldquo;transparency&rdquo; is. Transparency is a <a href="https://en.wikipedia.org/wiki/Transparency_%28human%E2%80%93computer_interaction%29">UX term</a> about the user not noticing that they are using a distributed system. We actually talk about transparencies in the plural, because there are several kinds of transparencies: fault transparency, location transparency, concurrency transparency, access transparency, etc. In my opinion, the choice of wording is not so good: when we talk about &ldquo;transparency&rdquo; we actually mean we hide things from the user, so &ldquo;opacity&rdquo; would be more logical. (The name comes from the fact that, if we replace a single node system by a distributed system, it will be transparent for the user, i.e. then will not notice it.)</p>
 <p>The reason why transparency is important is usability. The more transparencies our system has, the less cognitive burden there is on the user. In other words: <strong>transparencies simplify the API of the system</strong>.</p>
 <p>However, what transparencies we implement or not is a trade-off between that simplicity of API and things like flexibility, performance, and sometimes correctness. Years ago (when Object Oriented programming à la Java was booming) it was fashionable to abstract everything and make the user forget that they were using an actual distributed system. For instance, we had RPC everywhere, which kind of hid the network from the user. Since then we learnt that <a href="http://www.rgoarchitects.com/Files/fallacies.pdf">abstracting the network entirely is a bad idea</a>.</p>

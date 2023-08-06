@@ -29,7 +29,7 @@
 <p>After that, you only have to write a single YAML file, <code>.travis.yml</code>. For example, here is <a href="https://github.com/catwell/haricot/blob/master/.travis.yml">the one I wrote for Haricot</a>.</p>
 <p>Most sections should be self-explanatory. <code>install</code> is where you set up your dependencies. The first line calls moteus&rsquo; script which lets you use Lua and LuaRocks. A separate build and test run will occur for every Lua version declared in <code>matrix</code>; you can comment some lines there if you do not want to test some Lua versions. For Haricot I need <a href="http://kr.github.io/beanstalkd/">Beanstalk</a> running in the background so I start it in <code>before_script</code>. <code>script</code> is where you run your actual tests.</p>
 <p>To enable Travis, sign up, allow Travis to access your GitHub account, then go to <a href="https://travis-ci.org/profile">your profile</a> and flip the switch for your repository:</p>
-<p><img alt="travis" src="img/travis.png"></p>
+<p><img alt="travis" src="img/travis.png"/></p>
 <p>After that, commit <code>.travis</code> and <code>.travis.yml</code> and push to GitHub. It will trigger a test build, and so will every subsequent commit. If you want, you can now add <a href="https://travis-ci.org/catwell/haricot.png?branch=master">a badge</a> with the status of your build to your README or your project&rsquo;s home page.</p>
 
     </div>
