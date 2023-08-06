@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta name="description" content="What so-called &quot;best practices&quot; do you think do not matter or are actively harmful?">
+    <link rel="canonical" href="https://blog.separateconcerns.com/2023-08-06-disagreeing-best-practices.html">
+    <link href="css/theme.css" rel="stylesheet" type="text/css">
+    <link
+      rel="alternate" type="application/atom+xml"
+      href="https://blog.separateconcerns.com/feed.atom"
+    />
+    <title>Disagreeing with "best practices"</title>
+  </head>
+  <body>
+    <div id="container">
+    <header>
+      <h1>Disagreeing with "best practices"</h1>
+      <h4>
+        published 2023-08-06
+        [ <a href="index.html">home</a> ]
+      </h4>
+    </header>
+    <p>When I interview software developers, I usually ask some variation of the following questions:</p>
+<blockquote>
+<p>What Software Engineering practices do you consider critical to achieve your objectives? Are there &ldquo;best practices&rdquo; that do not matter, or which can be actively harmful?</p>
+</blockquote>
+<p>My goal in asking this is mainly to understand if the candidate is opinionated, and if so where those opinions come from. For the most part there is no right or wrong answer, but there are good and bad <strong>ways</strong> to answer.</p>
+<p>I have already posted some of my answers to the first question <a href="https://blog.separateconcerns.com/2019-02-15-architecture-principles.html">here</a>. Some can be reversed to become answers to the second one too:</p>
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself">Don&rsquo;t Repeat Yourself</a> is easily one of the most abused principles. It leads to unnecessary over-abstraction and coupling. See &ldquo;AHA&rdquo; in the Alternatives section of the Wikipedia page.</p>
+</li>
+<li>
+<p>&ldquo;Don&rsquo;t ship the Org Chart.&rdquo; Conway&rsquo;s Law is not something you can easily fight, so odds are you <strong>will</strong> ship the org chart. Instead, acknowledge Conway&rsquo;s Law and architecture <strong>both</strong> your software and organization with that in mind.</p>
+</li>
+</ul>
+<p>In addition, here are some of my other answers to that second question:</p>
+<ul>
+<li>
+<p>Putting a limit on function sizes, and systematic <a href="https://refactoring.guru/extract-method">method / function extraction</a>. This appears to make code superficially more readable, but in reality it makes it less linear and harder to debug. Other posts sharing that opinion: <a href="https://250bpm.com/blog:36/">Martin Sústrik</a>, <a href="https://loup-vaillant.fr/articles/physics-of-readability">Loup Vaillant</a>.</p>
+</li>
+<li>
+<p>Systematic <a href="https://en.wikipedia.org/wiki/Test-driven_development">Test-driven development</a>. TDD is very useful when the problem is well-defined and the implementation error-prone, for instance when implementing precise specs or an RFC. It is harmful when you do exploratory programming. In some code bases, I go as far as having no unit tests - only end-to-end and regression ones, in addition to plenty of inline assertions in the code.</p>
+</li>
+<li>
+<p>Trying to achieve strict typing of dynamic languages. Don&rsquo;t get me wrong, type-checking is helpful as a tool to catch bugs and guide development. But trying to adhere to some theoretical principles too strictly can make you lose all the benefits of the dynamic language underneath. If you want to make that trade-off, great, but then use a statically typed language instead! There are good reasons why <a href="https://www.typescriptlang.org/docs/handbook/type-compatibility.html#a-note-on-soundness">TypeScript is unsound</a>.</p>
+</li>
+<li>
+<p>Writing extensive documentation. Some people tend to think documentation is a silver bullet, and it is often because they have a bad mental model of how users behave. There are two main ways users - including other developers - will possibly consume your documentation: they will read the Getting Started / tutorials, and then they will look for solutions when they encounter problems. Optimize your docs for that.</p>
+</li>
+<li>
+<p>&ldquo;Elegance&rdquo; is overrated when writing software for production. It should usually be traded off for robustness first - i.e. lower MTBF and MTTR, which implies understandability - and performance second. &ldquo;Elegant&rdquo; is great if it means &ldquo;straightforward&rdquo;, harmful <a href="https://blog.separateconcerns.com/2014-05-27-magic.html">if it means magic</a>.</p>
+</li>
+</ul>
+<p>To end this post with something related, <a href="https://www.onebigfluke.com">Brett Slatkin</a> is hosting <a href="https://www.youtube.com/@WorstPractices">a podcast called Worst Practices</a> where developers talk about something terrible they do. I am sure you will recognize yourself in some of those. For instance I have only used a simple editor for a long time like <a href="https://mitchellh.com">Mitchell Hashimoto</a> does, I debug with print statements like <a href="https://www.leahculver.com">Leah Culver</a> and I even sometimes put them in system libraries like <a href="https://sedimental.org">Mahmoud Hashemi</a>!</p>
+
+    </div>
+    <div id="footer">
+      [ <a href="index.html">home</a> ]
+    </div>
+    
+    <script
+      data-goatcounter="https://separateconcerns.goatcounter.com/count"
+      async src="//gc.zgo.at/count.js"></script>
+  </body>
+</html>

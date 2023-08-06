@@ -1,0 +1,37 @@
+# Disagreeing with &quot;best practices&quot;
+published 2023-08-06
+
+When I interview software developers, I usually ask some variation of the following questions:
+
+> What Software Engineering practices do you consider critical to achieve your objectives? Are there "best practices" that do not matter, or which can be actively harmful?
+
+My goal in asking this is mainly to understand if the candidate is opinionated, and if so where those opinions come from. For the most part there is no right or wrong answer, but there are good and bad ways to answer.
+
+I have already posted some of my answers to the first question here [1]. Some can be reversed to become answers to the second one too:
+
+* Don't Repeat Yourself [2] is easily one of the most abused principles. It leads to unnecessary over-abstraction and coupling. See "AHA" in the Alternatives section of the Wikipedia page.
+* "Don't ship the Org Chart." Conway's Law is not something you can easily fight, so odds are you will ship the org chart. Instead, acknowledge Conway's Law and architecture both your software and organization with that in mind.
+
+In addition, here are some of my other answers to that second question:
+
+* Putting a limit on function sizes, and systematic method / function extraction [3]. This appears to make code superficially more readable, but in reality it makes it less linear and harder to debug. Other posts sharing that opinion: Martin Sústrik [4], Loup Vaillant [5].
+* Systematic Test-driven development [6]. TDD is very useful when the problem is well-defined and the implementation error-prone, for instance when implementing precise specs or an RFC. It is harmful when you do exploratory programming. In some code bases, I go as far as having no unit tests - only end-to-end and regression ones, in addition to plenty of inline assertions in the code.
+* Trying to achieve strict typing of dynamic languages. Don't get me wrong, type-checking is helpful as a tool to catch bugs and guide development. But trying to adhere to some theoretical principles too strictly can make you lose all the benefits of the dynamic language underneath. If you want to make that trade-off, great, but then use a statically typed language instead! There are good reasons why TypeScript is unsound [7].
+* Writing extensive documentation. Some people tend to think documentation is a silver bullet, and it is often because they have a bad mental model of how users behave. There are two main ways users - including other developers - will possibly consume your documentation: they will read the Getting Started / tutorials, and then they will look for solutions when they encounter problems. Optimize your docs for that.
+* "Elegance" is overrated when writing software for production. It should usually be traded off for robustness first - i.e. lower MTBF and MTTR, which implies understandability - and performance second. "Elegant" is great if it means "straightforward", harmful if it means magic [8].
+
+To end this post with something related, Brett Slatkin [9] is hosting a podcast called Worst Practices [10] where developers talk about something terrible they do. I am sure you will recognize yourself in some of those. For instance I have only used a simple editor for a long time like Mitchell Hashimoto [11] does, I debug with print statements like Leah Culver [12] and I even sometimes put them in system libraries like Mahmoud Hashemi [13]!
+
+=> https://blog.separateconcerns.com/2019-02-15-architecture-principles.html 1: https://blog.separateconcerns.com/2019-02-15-architecture-principles.html
+=> https://en.wikipedia.org/wiki/Don%27t_repeat_yourself 2: https://en.wikipedia.org/wiki/Don%27t_repeat_yourself
+=> https://refactoring.guru/extract-method 3: https://refactoring.guru/extract-method
+=> https://250bpm.com/blog:36/ 4: https://250bpm.com/blog:36/
+=> https://loup-vaillant.fr/articles/physics-of-readability 5: https://loup-vaillant.fr/articles/physics-of-readability
+=> https://en.wikipedia.org/wiki/Test-driven_development 6: https://en.wikipedia.org/wiki/Test-driven_development
+=> https://www.typescriptlang.org/docs/handbook/type-compatibility.html#a-note-on-soundness 7: https://www.typescriptlang.org/docs/handbook/type-compatibility.html#a-note-on-soundness
+=> https://blog.separateconcerns.com/2014-05-27-magic.html 8: https://blog.separateconcerns.com/2014-05-27-magic.html
+=> https://www.onebigfluke.com 9: https://www.onebigfluke.com
+=> https://www.youtube.com/@WorstPractices 10: https://www.youtube.com/@WorstPractices
+=> https://mitchellh.com 11: https://mitchellh.com
+=> https://www.leahculver.com 12: https://www.leahculver.com
+=> https://sedimental.org 13: https://sedimental.org
