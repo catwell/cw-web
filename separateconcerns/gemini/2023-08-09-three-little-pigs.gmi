@@ -3,6 +3,11 @@ published 2023-08-09
 
 The Three Little Pigs is a popular bedtime story, but it strikes me as unrealistic and not teaching the right lesson. So I decided to revisit it.
 
+=> img/three-little-pigs.jpg Illustration: the Big Bad Wolf, Three Little Pigs and three houses
+
+Image by Freepik [1]
+
+
 > The Three Little Pigs — A Cautionary Tale about Over-Engineering
 > 
 > Once upon a time, there were three Little Pigs who lived in the forest. One day, they learned that a Big Bad Wolf would soon come to the forest. They decided to build houses to ensure their safety. The first Little Pig decided to build a straw house, the second one a wooden house. As for the third one he elected to build his home out of stone.
@@ -20,3 +25,5 @@ Here it is, a much better twist on the classic.
 Ah, and of course the moral:
 
 > Trade-offs are everything, pick the right ones!
+
+=> https://www.freepik.com/free-vector/three-little-pigs-illustration_33805483.htm 1: https://www.freepik.com/free-vector/three-little-pigs-illustration_33805483.htm
