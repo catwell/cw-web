@@ -31,13 +31,13 @@ The authors have taken the visual understanding part of [BLIP-2](https://arxiv.o
 
 ## What took you here won't take you there
 
-> It is hard to grasp for some engineers early in their careers what took them here won't take them there. Shipping features will probably can take you to senior, shipping 10x more features is not how you'll become a principal. What will get you to principal is removing chaos, unblocking others, fighting for things to be built in the right order, fighting scope creep, having backbone while knowing when to delegate decision making.
+> It is hard to grasp for some engineers early in their careers what took them here won't take them there. Shipping features will probably take you to senior, shipping 10x more features is not how you'll become a principal. What will get you to principal is removing chaos, unblocking others, fighting for things to be built in the right order, fighting scope creep, having backbone while knowing when to delegate decision making.
 >
 > -- [Jaana Dogan (@rakyll) on Twitter^WX](https://twitter.com/rakyll/status/1666592449207336960)
 
 ## [Why it's necessary to shoot yourself in the foot](https://jacobgw.com/blog/observation/2023/07/08/shoot-yourself-in-the-foot.html)
 
-> To fully understand a "best practice" or why something is necessary, it’s important to experience how things go wrong without it. When teaching programming, we should let people make these mistakes, and *then* show them the tools to correct them.
+> To fully understand a "best practice" or why something is necessary, it’s important to experience how things go wrong without it. When teaching programming, we should let people make these mistakes, and [only] then show them the tools to correct them.
 
 ## The Happiness Advantage
 
