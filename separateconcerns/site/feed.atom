@@ -10,11 +10,71 @@
     rel="alternate" type="application/xhtml+xml"
   />
   <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
-  <updated>2023-08-09T12:33:41Z</updated>
+  <updated>2023-08-12T14:33:05Z</updated>
   <author>
     <name>Pierre 'catwell' Chapuis</name>
     <uri>https://catwell.info/</uri>
   </author>
+  <entry>
+    <title>Thoughts 7 — Microblogging, Solarpunk, AI and success</title>
+    <link
+      rel="alternate" type="text/html"
+      href="https://blog.separateconcerns.com/2023-08-12-thoughts-7.html"
+    />
+    <id>tag:blog.separateconcerns.com,2023-08-12:thoughts-7</id>
+    <published>2023-08-12T16:30:00Z</published>
+    <updated>2023-08-12T16:30:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <blockquote>
+<p>&#8220;Thoughts&#8221; are posts about what has been on my mind. Sometimes practical, sometimes not; often just things I read recently. Less thought out than regular posts.</p>
+</blockquote>
+<section id="Microblogging">
+<h2>Microblogging</h2>
+<p>First a small announcement: <a href="https://bsky.app/profile/catwell.info">I have joined Bluesky</a>. I like it so far and I think it has a good founding team, so I want to believe in its long-term potential. On the other hand, I will likely stop using Mastodon soon; it is not working for me. I will stay on X for now, but I can see Bluesky replacing it entirely after a while.</p>
+</section>
+<section id="The-future-is-Solarpunk">
+<h2><a href="https://feldspaten.org/2023/07/17/The-future-is-solarpunk/">The future is Solarpunk</a></h2>
+<blockquote>
+<p>Let’s acknowledge the difficulties of our times but without accepting defeat in the process of trying to solve those issues. [&#8230;] We are at the point where we can decide if we want to go full Cyperpunk or something more positive. Solarpunk is the movement, the idea behind envisioning and then creating a better future based on humans which live in harmony with nature.</p>
+</blockquote>
+<p>If there is one thing I am certain of regarding climate change, it is that no amount of moderation will be enough to solve it without terrible consequences on a planetary scale. But there most likely won&#8217;t be a magical technological breakthrough either. We need to seriously start looking at technologies and ways of life that are both sustainable and acceptable for the whole planet.</p>
+<p>On a side note, I also think important technological breakthroughs are not easily predictable in detail. For instance, I think it is highly likely that AI will play a role in fighting climate change,
+but I currently have no idea how.</p>
+</section>
+<section id="StochasticDeterministic">
+<h2><a href="https://matt-rickard.com/stochastic-deterministic">Stochastic/Deterministic</a></h2>
+<blockquote>
+<p>Generative AI introduces much more stochasticity into programming. [&#8230;] Ironically, this makes the deterministic parts that much more important.</p>
+</blockquote>
+<p>One of the first things I did at Finegrain was making sure I knew about all the sources of randomness, and then adding deterministic end-to-end tests.</p>
+</section>
+<section id="MiniGPT-4">
+<h2><a href="https://minigpt-4.github.io">MiniGPT-4</a></h2>
+<p>The authors have taken the visual understanding part of <a href="https://arxiv.org/abs/2301.12597">BLIP-2</a> (a ViT and a Querying Transformer) and aligned it with <a href="https://lmsys.org/blog/2023-03-30-vicuna/">Vicuna</a>. They achieved that by connecting them through a single 5120x768 linear layer. This illustrates well the unintuitive effectiveness of simple linear projections in high-dimensional spaces.</p>
+</section>
+<section id="What-took-you-here-won't-take-you-there">
+<h2>What took you here won&#8217;t take you there</h2>
+<blockquote>
+<p>It is hard to grasp for some engineers early in their careers what took them here won&#8217;t take them there. Shipping features will probably can take you to senior, shipping 10x more features is not how you&#8217;ll become a principal. What will get you to principal is removing chaos, unblocking others, fighting for things to be built in the right order, fighting scope creep, having backbone while knowing when to delegate decision making.</p>
+<p>&#8211; <a href="https://twitter.com/rakyll/status/1666592449207336960">Jaana Dogan (@rakyll) on Twitter^WX</a></p>
+</blockquote>
+</section>
+<section id="Why-it's-necessary-to-shoot-yourself-in-the-foot">
+<h2><a href="https://jacobgw.com/blog/observation/2023/07/08/shoot-yourself-in-the-foot.html">Why it&#8217;s necessary to shoot yourself in the foot</a></h2>
+<blockquote>
+<p>To fully understand a &#8220;best practice&#8221; or why something is necessary, it’s important to experience how things go wrong without it. When teaching programming, we should let people make these mistakes, and <strong>then</strong> show them the tools to correct them.</p>
+</blockquote>
+</section>
+<section id="The-Happiness-Advantage">
+<h2>The Happiness Advantage</h2>
+<p>There is <a href="https://www.shawnachor.com/books/happiness-advantage/">a whole book</a> dedicated to the fact that happiness fuels success and (mostly) not the other way around, and how to take advantage of it.</p>
+<p>I haven&#8217;t read the book (yet) but I have come to that conclusion independently for a while now. I found the book through <a href="https://engineering.prezi.com/shifting-to-the-right-place-my-transition-back-from-em-to-engineer-d435acbabf2f">this post</a> which is one of several about people moving back from management to engineering.</p>
+</section>
+
+      </div>
+    </content>
+  </entry>
   <entry>
     <title>Three Little Pigs</title>
     <link
@@ -144,7 +204,7 @@
     </content>
   </entry>
   <entry>
-    <title>Thoughts 6 - Unpredictability, AI and Education</title>
+    <title>Thoughts 6 — Unpredictability, AI and Education</title>
     <link
       rel="alternate" type="text/html"
       href="https://blog.separateconcerns.com/2023-04-10-thoughts-6.html"
@@ -259,7 +319,7 @@ done
     </content>
   </entry>
   <entry>
-    <title>Thoughts 5 - Being a good engineer; using the word We</title>
+    <title>Thoughts 5 — Being a good engineer; using the word We</title>
     <link
       rel="alternate" type="text/html"
       href="https://blog.separateconcerns.com/2023-03-02-thoughts-5.html"
@@ -577,7 +637,7 @@ StaffEng (Will Larson) - <a href="https://staffeng.com/">the website</a> and <a 
     </content>
   </entry>
   <entry>
-    <title>Thoughts 4 - SSO Tax and various links</title>
+    <title>Thoughts 4 — SSO Tax and various links</title>
     <link
       rel="alternate" type="text/html"
       href="https://blog.separateconcerns.com/2022-12-11-thoughts-4-sso-tax.html"
@@ -627,7 +687,7 @@ charging extra for SAML support is fair.
     </content>
   </entry>
   <entry>
-    <title>Thoughts 3 - The end of Twitter?</title>
+    <title>Thoughts 3 — The end of Twitter?</title>
     <link
       rel="alternate" type="text/html"
       href="https://blog.separateconcerns.com/2022-11-18-thoughts-3-twitter.html"

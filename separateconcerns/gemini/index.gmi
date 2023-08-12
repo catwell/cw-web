@@ -5,18 +5,19 @@
 => https://blog.separateconcerns.com Visit on the Web
 => gemini://catwell.info catwell.info
 
+=> 2023-08-12-thoughts-7.gmi 2023-08-12 - Thoughts 7 — Microblogging, Solarpunk, AI and success
 => 2023-08-09-three-little-pigs.gmi 2023-08-09 - Three Little Pigs
 => 2023-08-06-disagreeing-best-practices.gmi 2023-08-06 - Disagreeing with "best practices"
 => 2023-07-25-bye-luafr.gmi 2023-07-25 - Goodbye luafr.org
 => 2023-04-15-gcp-firewall.gmi 2023-04-15 - Locking down the GCP VPC firewall
-=> 2023-04-10-thoughts-6.gmi 2023-04-10 - Thoughts 6 - Unpredictability, AI and Education
+=> 2023-04-10-thoughts-6.gmi 2023-04-10 - Thoughts 6 — Unpredictability, AI and Education
 => 2023-04-09-djot.gmi 2023-04-09 - Porting this blog to djot
 => 2023-03-31-joining-finegrain.gmi 2023-03-31 - Joining Finegrain
 => 2023-03-11-leaving-inch.gmi 2023-03-11 - Leaving Inch
-=> 2023-03-02-thoughts-5.gmi 2023-03-02 - Thoughts 5 - Being a good engineer; using the word We
+=> 2023-03-02-thoughts-5.gmi 2023-03-02 - Thoughts 5 — Being a good engineer; using the word We
 => 2023-02-03-staff-engineer-inch.gmi 2023-02-03 - The Staff Software Engineer role at small companies
-=> 2022-12-11-thoughts-4-sso-tax.gmi 2022-12-11 - Thoughts 4 - SSO Tax and various links
-=> 2022-11-18-thoughts-3-twitter.gmi 2022-11-18 - Thoughts 3 - The end of Twitter?
+=> 2022-12-11-thoughts-4-sso-tax.gmi 2022-12-11 - Thoughts 4 — SSO Tax and various links
+=> 2022-11-18-thoughts-3-twitter.gmi 2022-11-18 - Thoughts 3 — The end of Twitter?
 => 2022-10-10-localua-pallene.gmi 2022-10-10 - Pallene support in localua
 => 2022-08-15-dependency-injection.gmi 2022-08-15 - Dependency Injection
 => 2022-03-05-push-to-poll.gmi 2022-03-05 - The push-to-poll pattern
