@@ -35,4 +35,4 @@ Oh, and by the way, with this whole systemd thing, I am semi-seriously consideri
 => http://blog.separateconcerns.com/2013-06-20-three-years-proprietary-projects.html 4: http://blog.separateconcerns.com/2013-06-20-three-years-proprietary-projects.html
 => https://github.com/keplerproject/lua-compat-5.3 5: https://github.com/keplerproject/lua-compat-5.3
 => https://github.com/catwell/luajit-msgpack-pure 6: https://github.com/catwell/luajit-msgpack-pure
-=> https://meetlima.com/ 7: https://meetlima.com/
+=> https://blog.separateconcerns.com/2019-02-15-goodbye-lima.html 7: https://blog.separateconcerns.com/2019-02-15-goodbye-lima.html

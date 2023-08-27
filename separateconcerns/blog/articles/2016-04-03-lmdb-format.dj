@@ -4,7 +4,7 @@ published = "2016-04-03 23:00:00"
 description = "The format of data.mdb files, used by the LMDB database."
 ```
 
-At [Lima](https://meetlima.com), we use
+At [Lima](https://blog.separateconcerns.com/2019-02-15-goodbye-lima.html), we use
 [the LMDB database](http://symas.com/mdb/) extensively, and we looked into its
 source code in order to debug a few issues we had. To help us diagnose broken
 databases, and also because I wanted to learn more about it, I wrote [a parser

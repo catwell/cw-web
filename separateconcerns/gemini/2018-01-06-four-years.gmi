@@ -7,17 +7,16 @@ Today marks the fourth birthday of my joining Lima [1], and it is a good occasio
 
 ## Distributed filesystem synchronization
 
-For the public, Lima [2] makes a device which turns a USB hard drive into personal "cloud" data storage. We actually shipped two devices, Lima Original in July 2015 and Lima Ultra in Decemner 2016.
+For the public, Lima makes a device which turns a USB hard drive into personal "cloud" data storage. We actually shipped two devices, Lima Original in July 2015 and Lima Ultra in Decemner 2016.
 
 Technically, Lima is really a personal distributed filesystem. Every single machine running a Lima application logged into to the same user account is a node in the system. All nodes keep a copy of all the filesystem metadata, which means the user can always browse the whole file tree, create or remove files, move them around, etc. The actual data, however, may or may not be on the device, which makes it possible to access a multi-terabyte filesystem on a mobile device. In theory, the Lima device is just another node in the system, except it always stores all the data.
 
-To make this all work, we need a mechanism to keep the filesystem metadata synchronized on all nodes. I have designed and implemented the algorithm and protocol behind this. It is tricky, because we always want users to be able to write to their filesystem, even on an offline device, so when devices come back online there may be conflicts to resolve. It is sometimes tempting to do something simple and correct, but which would not result in what the end user would expect. Yes, distributed systems are a UX problem [3]...
+To make this all work, we need a mechanism to keep the filesystem metadata synchronized on all nodes. I have designed and implemented the algorithm and protocol behind this. It is tricky, because we always want users to be able to write to their filesystem, even on an offline device, so when devices come back online there may be conflicts to resolve. It is sometimes tempting to do something simple and correct, but which would not result in what the end user would expect. Yes, distributed systems are a UX problem [2]...
 
-I can't get into too much detail here, this being proprietary technology and all, but I have drawn a lot of inspiration from CRDTs [4] as well as older systems like Bayou and WinFS.
+I can't get into too much detail here, this being proprietary technology and all, but I have drawn a lot of inspiration from CRDTs [3] as well as older systems like Bayou and WinFS.
 
-=> https://meetlima.com 2: https://meetlima.com
-=> http://bravenewgeek.com/distributed-systems-are-a-ux-problem/ 3: http://bravenewgeek.com/distributed-systems-are-a-ux-problem/
-=> https://en.wikipedia.org/wiki/Conflict-free_replicated_data_type 4: https://en.wikipedia.org/wiki/Conflict-free_replicated_data_type
+=> http://bravenewgeek.com/distributed-systems-are-a-ux-problem/ 2: http://bravenewgeek.com/distributed-systems-are-a-ux-problem/
+=> https://en.wikipedia.org/wiki/Conflict-free_replicated_data_type 3: https://en.wikipedia.org/wiki/Conflict-free_replicated_data_type
 
 ## Minicore: fitting into a tiny box
 

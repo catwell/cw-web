@@ -24,7 +24,7 @@ The main reason I have not made that device my main phone yet is that its batter
 
 => https://jolla.com/jollac/ 3: https://jolla.com/jollac/
 => https://en.wikipedia.org/wiki/WebOS 4: https://en.wikipedia.org/wiki/WebOS
-=> https://meetlima.com 5: https://meetlima.com
+=> https://blog.separateconcerns.com/2019-02-15-goodbye-lima.html 5: https://blog.separateconcerns.com/2019-02-15-goodbye-lima.html
 => https://en.wikipedia.org/wiki/QML 6: https://en.wikipedia.org/wiki/QML
 
 ## The fractal dimension of software

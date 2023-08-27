@@ -32,4 +32,4 @@ For years I have been convinced that ubiquitous computing is one of the next big
 So it looks like my short-term future holds some Unix development and a good dusting of my rusty C. I may try to sneak a Lua interpreter in that box at some point, but please don't tell the others! ;) Severin and Gawen have high expectations and I do not expect much relaxing but hey, it should be fun to live the adventure of Early Stage again.
 
 => http://www.kickstarter.com/projects/cloud-guys/plug-the-brain-of-your-devices/posts/691351 6: http://www.kickstarter.com/projects/cloud-guys/plug-the-brain-of-your-devices/posts/691351
-=> http://meetlima.com 7: http://meetlima.com
+=> https://blog.separateconcerns.com/2019-02-15-goodbye-lima.html 7: https://blog.separateconcerns.com/2019-02-15-goodbye-lima.html

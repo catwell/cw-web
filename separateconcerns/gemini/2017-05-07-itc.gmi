@@ -48,7 +48,7 @@ If you want to know more, I encourage you to read the 2008 paper [6] by Paulo SÃ
 > If this kind of thing interests you and you live in - or would like to relocate to - Paris (France), there may be a place for you on my team at Lima. Don't hesitate to get in touch [8].
 
 => http://files.catwell.info/presentations/2017-04-dotscale-itc/ 1: http://files.catwell.info/presentations/2017-04-dotscale-itc/
-=> https://meetlima.com 2: https://meetlima.com
+=> https://blog.separateconcerns.com/2019-02-15-goodbye-lima.html 2: https://blog.separateconcerns.com/2019-02-15-goodbye-lima.html
 => http://queue.acm.org/detail.cfm?id=2917756 3: http://queue.acm.org/detail.cfm?id=2917756
 => https://en.wikipedia.org/wiki/Happened-before 4: https://en.wikipedia.org/wiki/Happened-before
 => https://en.wikipedia.org/wiki/Version_vector 5: https://en.wikipedia.org/wiki/Version_vector
