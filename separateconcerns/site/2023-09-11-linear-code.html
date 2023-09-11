@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta name="description" content="Code linearity is more desireable than keeping abstraction layers separate.">
+    <link rel="canonical" href="https://blog.separateconcerns.com/2023-09-11-linear-code.html">
+    <link href="css/theme.css?cache=1" rel="stylesheet" type="text/css">
+      <link href="css/rainbow-github.css" rel="stylesheet" type="text/css">
+    <link
+      rel="alternate" type="application/atom+xml"
+      href="https://blog.separateconcerns.com/feed.atom"
+    />
+    <title>Linear code is more readable</title>
+  </head>
+  <body>
+    <div id="container">
+    <header>
+      <h1>Linear code is more readable</h1>
+      <h4>
+        published 2023-09-11
+        [ <a href="index.html">home</a> ]
+      </h4>
+    </header>
+    <p>You can only claim to be contrarian if people actually defend the opposite viewpoint. Well, one of the &ldquo;best practices&rdquo; I <a href="https://blog.separateconcerns.com/2023-08-06-disagreeing-best-practices.html">disagree with</a> was recently <a href="https://testing.googleblog.com/2023/09/use-abstraction-to-improve-function.html">featured in the Google Testing Blog</a> — usually a very good resource, there is a reason that post appeared in my newsreader!</p>
+<p>The authors present two versions of a function and ask which one is the most readable.</p>
+<p><img alt="createPizza" src="img/linear-code.png"/></p>
+<p>At first glance, we can already notice the presentation is a bit partisan :) In addition to the obvious background color bias, you may notice that the authors ellipsed some code on the right-hand side, making both implementations appear roughly the same size when the right one is really much longer.</p>
+<p>The authors argue that the function on the right is more readable because it does not mix levels of abstraction, and that makes it more &ldquo;top-down&rdquo;. Well, OK, but the function of the left reads linearly from the top of the screen to the bottom, whereas if you want to understand everything that happens on the right-hand side you need to jump back and forth.</p>
+<p>You may tell me, sure, but you never need to look at the whole code! That&rsquo;s what abstraction is for! OK. Quick, tell me this: does the function that bakes the pizza also heat the oven, or do you need to preheat it first? Hint: there are <strong>two</strong> functions. One is called <code>bake</code> and takes a Pizza, and the other is called <code>bakePizza</code>&hellip;</p>
+<p>Also, what happens if you pass a pizza to those functions twice? Are they idempotent or do you end up eating cinder?</p>
+<p>So, you may have guessed that I do not like the code style on the right. But I have to admit something: it is somehow easier to understand than the code on the right. Is that because of the structure that separates the levels of abstraction? Let us see. What about that version?</p>
+<pre><code class="language-go">func createPizza(order *Order) *Pizza {
+  // Prepare pizza
+  pizza := &amp;Pizza{Base: order.Size,
+                  Sauce: order.Sauce,
+                  Cheese: “Mozzarella”}
+
+  // Add toppings
+  if order.kind == “Veg” {
+    pizza.Toppings = vegToppings
+  } else if order.kind == “Meat” {
+    pizza.Toppings = meatToppings
+  }
+
+  oven := oven.New()
+  if oven.Temp != cookingTemp {
+    // Heat oven
+    for (oven.Temp &lt; cookingTemp) {
+      time.Sleep(checkOvenInterval)
+      oven.Temp = getOvenTemp(oven)
+    }
+  }
+
+  if !pizza.Baked {
+    // Bake pizza
+    oven.Insert(pizza)
+    time.Sleep(cookTime)
+    oven.Remove(pizza)
+    pizza.Baked = true
+  }
+
+  // Box and slice
+  box := box.New()
+  pizza.Boxed = box.PutIn(pizza)
+  pizza.Sliced = box.SlicePizza(order.Size)
+  pizza.Ready = box.Close()
+
+  return pizza
+}
+</code></pre>
+<p>Do you recognize it? This is just the left-hand side function code, with function names from the right-hand side added as comments.</p>
+<p>I don&rsquo;t know about you, but this is my favorite. And it looks like the readability just came from explaining what we did properly here, not from extra abstraction layers and indirection.</p>
+<p>In conclusion, I stand by what I said earlier: do not extract small functions from linear code, especially if you only use them once. None of the benefits offsets the loss in linearity.</p>
+
+    </div>
+    <div id="footer">
+      [ <a href="index.html">home</a> ]
+    </div>
+    <script src="js/rainbow.min.js"></script>
+    <script
+      data-goatcounter="https://separateconcerns.goatcounter.com/count"
+      async src="//gc.zgo.at/count.js"></script>
+  </body>
+</html>

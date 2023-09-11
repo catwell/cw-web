@@ -1,0 +1,69 @@
+# Linear code is more readable
+published 2023-09-11
+
+You can only claim to be contrarian if people actually defend the opposite viewpoint. Well, one of the "best practices" I disagree with [1] was recently featured in the Google Testing Blog [2] — usually a very good resource, there is a reason that post appeared in my newsreader!
+
+The authors present two versions of a function and ask which one is the most readable.
+
+=> img/linear-code.png createPizza
+
+At first glance, we can already notice the presentation is a bit partisan :) In addition to the obvious background color bias, you may notice that the authors ellipsed some code on the right-hand side, making both implementations appear roughly the same size when the right one is really much longer.
+
+The authors argue that the function on the right is more readable because it does not mix levels of abstraction, and that makes it more "top-down". Well, OK, but the function of the left reads linearly from the top of the screen to the bottom, whereas if you want to understand everything that happens on the right-hand side you need to jump back and forth.
+
+You may tell me, sure, but you never need to look at the whole code! That's what abstraction is for! OK. Quick, tell me this: does the function that bakes the pizza also heat the oven, or do you need to preheat it first? Hint: there are two functions. One is called `bake` and takes a Pizza, and the other is called `bakePizza`...
+
+Also, what happens if you pass a pizza to those functions twice? Are they idempotent or do you end up eating cinder?
+
+So, you may have guessed that I do not like the code style on the right. But I have to admit something: it is somehow easier to understand than the code on the right. Is that because of the structure that separates the levels of abstraction? Let us see. What about that version?
+
+```
+func createPizza(order *Order) *Pizza {
+  // Prepare pizza
+  pizza := &Pizza{Base: order.Size,
+                  Sauce: order.Sauce,
+                  Cheese: “Mozzarella”}
+
+  // Add toppings
+  if order.kind == “Veg” {
+    pizza.Toppings = vegToppings
+  } else if order.kind == “Meat” {
+    pizza.Toppings = meatToppings
+  }
+
+  oven := oven.New()
+  if oven.Temp != cookingTemp {
+    // Heat oven
+    for (oven.Temp < cookingTemp) {
+      time.Sleep(checkOvenInterval)
+      oven.Temp = getOvenTemp(oven)
+    }
+  }
+
+  if !pizza.Baked {
+    // Bake pizza
+    oven.Insert(pizza)
+    time.Sleep(cookTime)
+    oven.Remove(pizza)
+    pizza.Baked = true
+  }
+
+  // Box and slice
+  box := box.New()
+  pizza.Boxed = box.PutIn(pizza)
+  pizza.Sliced = box.SlicePizza(order.Size)
+  pizza.Ready = box.Close()
+
+  return pizza
+}
+
+```
+
+Do you recognize it? This is just the left-hand side function code, with function names from the right-hand side added as comments.
+
+I don't know about you, but this is my favorite. And it looks like the readability just came from explaining what we did properly here, not from extra abstraction layers and indirection.
+
+In conclusion, I stand by what I said earlier: do not extract small functions from linear code, especially if you only use them once. None of the benefits offsets the loss in linearity.
+
+=> https://blog.separateconcerns.com/2023-08-06-disagreeing-best-practices.html 1: https://blog.separateconcerns.com/2023-08-06-disagreeing-best-practices.html
+=> https://testing.googleblog.com/2023/09/use-abstraction-to-improve-function.html 2: https://testing.googleblog.com/2023/09/use-abstraction-to-improve-function.html
