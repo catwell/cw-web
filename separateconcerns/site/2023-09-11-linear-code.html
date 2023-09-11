@@ -72,6 +72,12 @@
 <p>Do you recognize it? This is just the left-hand side function code, with function names from the right-hand side added as comments.</p>
 <p>I don&rsquo;t know about you, but this is my favorite. And it looks like the readability just came from explaining what we did properly here, not from extra abstraction layers and indirection.</p>
 <p>In conclusion, I stand by what I said earlier: do not extract small functions from linear code, especially if you only use them once. None of the benefits offsets the loss in linearity.</p>
+<section id="One-more-thing">
+<h2>One more thing</h2>
+<p>I wasn&rsquo;t sure if I wanted to mention this or not, but I ended up editing the post because there is something that bothers me with this function, and it is that business with the oven.</p>
+<p>First, pre-heating the oven is self-contained and should probably be a method of the oven itself. But beyond that, this code makes no sense: why would you create a whole new oven to make a pizza? In real life, you get an oven <strong>once</strong>, and then you bake a whole lot of pizzas with it, without going through the whole heating cycle.</p>
+<p>I know this is a synthetic example but this kind of issue actually occurs in real code and sometimes causes performance issues. It is likely that this code should <strong>take</strong> the oven as a parameter. Providing it is the job of the caller.</p>
+</section>
 
     </div>
     <div id="footer">

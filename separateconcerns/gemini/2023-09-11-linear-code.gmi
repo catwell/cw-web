@@ -67,3 +67,11 @@ In conclusion, I stand by what I said earlier: do not extract small functions fr
 
 => https://blog.separateconcerns.com/2023-08-06-disagreeing-best-practices.html 1: https://blog.separateconcerns.com/2023-08-06-disagreeing-best-practices.html
 => https://testing.googleblog.com/2023/09/use-abstraction-to-improve-function.html 2: https://testing.googleblog.com/2023/09/use-abstraction-to-improve-function.html
+
+## One more thing
+
+I wasn't sure if I wanted to mention this or not, but I ended up editing the post because there is something that bothers me with this function, and it is that business with the oven.
+
+First, pre-heating the oven is self-contained and should probably be a method of the oven itself. But beyond that, this code makes no sense: why would you create a whole new oven to make a pizza? In real life, you get an oven once, and then you bake a whole lot of pizzas with it, without going through the whole heating cycle.
+
+I know this is a synthetic example but this kind of issue actually occurs in real code and sometimes causes performance issues. It is likely that this code should take the oven as a parameter. Providing it is the job of the caller.
