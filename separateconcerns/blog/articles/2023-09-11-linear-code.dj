@@ -10,15 +10,15 @@ The authors present two versions of a function and ask which one is the most rea
 
 ![createPizza](img/linear-code.png)
 
-At first glance, we can already notice the presentation is a bit partisan :) In addition to the obvious background color bias, you may notice that the authors ellipsed some code on the right-hand side, making both implementations appear roughly the same size when the right one is really much longer.
+At first glance, we can already notice the presentation is a bit partisan :) In addition to the obvious background color bias, the authors ellipsed some code on the right-hand side, making both implementations appear roughly the same size when the right one is really much longer.
 
 The authors argue that the function on the right is more readable because it does not mix levels of abstraction, and that makes it more "top-down". Well, OK, but the function of the left reads linearly from the top of the screen to the bottom, whereas if you want to understand everything that happens on the right-hand side you need to jump back and forth.
 
-You may tell me, sure, but you never need to look at the whole code! That's what abstraction is for! OK. Quick, tell me this: does the function that bakes the pizza also heat the oven, or do you need to preheat it first? Hint: there are *two* functions. One is called `bake` and takes a Pizza, and the other is called `bakePizza`...
+You may tell me, sure, but you never need to look at the whole code, that is what abstraction is for! OK. Quick, tell me this: does the function that bakes the pizza also heat the oven, or do you need to preheat it first? Hint: there are *two* functions. One is called `bake` and takes a Pizza, and the other is called `bakePizza`...
 
 Also, what happens if you pass a pizza to those functions twice? Are they idempotent or do you end up eating cinder?
 
-So, you may have guessed that I do not like the code style on the right. But I have to admit something: it is somehow easier to understand than the code on the right. Is that because of the structure that separates the levels of abstraction? Let us see. What about that version?
+So, you may have guessed that I do not like the code style on the right. But I have to admit something: it is somehow easier to understand than the code on the left. Is that because of the structure that separates the levels of abstraction? Let us see. What about that version?
 
 ```go
 func createPizza(order *Order) *Pizza {
