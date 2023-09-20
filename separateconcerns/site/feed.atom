@@ -4055,7 +4055,7 @@ the sum of outbound probabilities is 1: <code>∀i, ∑[j=1,N]{P(i-&gt;j)} = 1</
 </section>
 <section id="Blurry-Sights">
 <h2>Blurry Sights</h2>
-<p>Now let&#8217;s complicate things a little by introducing a separate system that can take states <code>V[1]</code> to <code>V[M]</code>. This second system <code>V</code> is tied to <code>S</code>: at every tick <code>t</code>, the probability distribution of <code>V(t)</code> only depends on <code>S(t)</code>. We will note: <code>O(i,j) = P(V(j) | S[i])</code>.</p>
+<p>Now let&#8217;s complicate things a little by introducing a separate system that can take states <code>V[1]</code> to <code>V[M]</code>. This second system <code>V</code> is tied to <code>S</code>: at every tick <code>t</code>, the probability distribution of <code>V(t)</code> only depends on <code>S(t)</code>. We will note: <code>O(i,j) = P(V[j] | S[i])</code>.</p>
 <p>You can think of <code>V</code> as something that observes <code>S</code> and reports on its state in an incomplete and probabilistic manner.</p>
 <p>If you have understood everything up to now, you should easily get what this means: <code>∀i, ∑[j=1,M]{O(i,j)} = 1</code>.</p>
 <p>If you have not, let&#8217;s take a really simple example with <code>N = M = 2</code>. You can imagine that both <code>S</code> and <code>V</code> are lights that can be either red or blue. The relationship between <code>S</code> and <code>V</code> can be expressed by something like this: &#8220;If light <code>S</code> is red, then there is 90% chance that <code>V</code> is red too. If light <code>S</code> is blue, then there is only 40% chance that <code>V</code> is red.&#8221;</p>

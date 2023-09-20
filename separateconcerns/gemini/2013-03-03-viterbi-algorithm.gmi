@@ -23,7 +23,7 @@ By the way, this is called a Markov Chain.
 
 ## Blurry Sights
 
-Now let's complicate things a little by introducing a separate system that can take states `V[1]` to `V[M]`. This second system `V` is tied to `S`: at every tick `t`, the probability distribution of `V(t)` only depends on `S(t)`. We will note: `O(i,j) = P(V(j) | S[i])`.
+Now let's complicate things a little by introducing a separate system that can take states `V[1]` to `V[M]`. This second system `V` is tied to `S`: at every tick `t`, the probability distribution of `V(t)` only depends on `S(t)`. We will note: `O(i,j) = P(V[j] | S[i])`.
 
 You can think of `V` as something that observes `S` and reports on its state in an incomplete and probabilistic manner.
 
