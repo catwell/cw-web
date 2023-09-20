@@ -149,4 +149,25 @@ TPL.gemini_index = [[
 {{/entries}}
 ]]
 
+TPL.links_index = [[
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Dead links verification</title>
+  </head>
+  <body>
+  {{#entries}}
+  <h2>{{{title}}}</h2>
+  <ul>
+    {{#links}}
+    <li><a href="{{.}}">{{.}}</a></li>
+    {{/links}}
+  </ul>
+  {{/entries}}
+  </body>
+</html>
+]]
+
 return TPL

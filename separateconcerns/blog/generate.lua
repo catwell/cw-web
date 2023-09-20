@@ -7,6 +7,7 @@ local Date = require "pl.Date"
 local TPL = require "templates"
 local SITE_DIR = "../site"
 local GEMINI_DIR = "../gemini"
+local TMP_DIR = ".."
 
 --- TOOLS
 
@@ -40,7 +41,7 @@ local function article_to_html_chunk(md)
     local input = djot.parse(md)
     local handle = djot.StringHandle.new()
     local renderer = djot.html.Renderer:new()
-    local metadata = {}
+    local metadata = {links = {}}
 
     djot.override_renderer_method(
         renderer, "raw_block", function(self, node, old)
@@ -61,6 +62,15 @@ local function article_to_html_chunk(md)
     djot.override_renderer_method(
         renderer, "code_block", function(self, node, old)
             metadata.has_code = true
+            old(self, node)
+        end
+    )
+
+    djot.override_renderer_method(
+        renderer, "link", function(self, node, old)
+            if node.destination then
+                table.insert(metadata.links, node.destination)
+            end
             old(self, node)
         end
     )
@@ -150,6 +160,7 @@ local function process_file(path)
         has_code = metadata.has_code,
         description = metadata.description,
         fnpart = fnpart,
+        links = metadata.links,
         atom = {
             published = date_to_atom(pdate),
             updated = date_to_atom(udate),
@@ -200,6 +211,9 @@ local function process_all()
         entries = entries,
     })
     file_write(fmt("%s/index.gmi", GEMINI_DIR), gemini_index)
+
+    local links_index = lustache:render(TPL.links_index, {entries = entries})
+    file_write(fmt("%s/links.html", TMP_DIR), links_index)
 end
 
 process_all()
