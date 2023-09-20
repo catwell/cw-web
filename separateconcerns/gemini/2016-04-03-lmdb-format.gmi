@@ -6,7 +6,7 @@ At Lima [1], we use the LMDB database [2] extensively, and we looked into its so
 In this post, I will give an overview of how a data.mdb file is structured. Note that I will sometimes skip over some things and operate under the assumption that you are running on a little-endian platform with 4 kB pages, etc.
 
 => https://blog.separateconcerns.com/2019-02-15-goodbye-lima.html 1: https://blog.separateconcerns.com/2019-02-15-goodbye-lima.html
-=> http://symas.com/mdb/ 2: http://symas.com/mdb/
+=> https://www.symas.com/lmdb 2: https://www.symas.com/lmdb
 => https://github.com/catwell/cw-lua/tree/master/lua-mdb 3: https://github.com/catwell/cw-lua/tree/master/lua-mdb
 
 ## Portability

@@ -126,7 +126,7 @@ A Staff Engineer should tick several (not all) of those boxes:
 * Dropbox Engineering Career Framework [17]
 * Google =) [18]
 
-=> https://basecamp.com/handbook/appendix-05-titles-for-programmers 9: https://basecamp.com/handbook/appendix-05-titles-for-programmers
+=> https://basecamp.com/handbook/appendix-04-titles-for-programmers 9: https://basecamp.com/handbook/appendix-04-titles-for-programmers
 => https://twitter.com/Gankra_/status/1046438955439271936 10: https://twitter.com/Gankra_/status/1046438955439271936
 => https://dresscode.renttherunway.com/blog/ladder 11: https://dresscode.renttherunway.com/blog/ladder
 => https://gist.github.com/jamtur01/aef437a79fee5a9cefdc 12: https://gist.github.com/jamtur01/aef437a79fee5a9cefdc

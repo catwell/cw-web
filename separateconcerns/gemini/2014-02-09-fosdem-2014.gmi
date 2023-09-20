@@ -60,14 +60,14 @@ Iris [10] is a messaging backend written in Go but with a language-agnostic inte
 
 This is a very interesting project and I was a bit surprised I had never heard about it until now. The slides and live demos were also really good, with multiple Go code snippets running concurrently in a browser. Oh, and Gopher drawings!
 
-=> http://iris.karalabe.com/ 10: http://iris.karalabe.com/
+=> https://github.com/project-iris/iris 10: https://github.com/project-iris/iris
 
 ## Camlistore (Brad Fitzpatrick and Mathieu Lonjaret)
 => https://fosdem.org/2014/schedule/event/camlistore/
 
 The speakers showed off what the latest release of Camlistore [11], a personal file storage system, can do. I already knew and liked the technical design of the project, but I was impressed by the progress made on usability since Brad's talk at dotScale 2013. They have a new Web UI which is not complete yet but looks very promising. I really have to install my own node someday.
 
-=> http://camlistore.org/ 11: http://camlistore.org/
+=> https://perkeep.org 11: https://perkeep.org
 
 ## Statically compiling Ruby with LLVM (Laurent Sansonetti)
 => https://fosdem.org/2014/schedule/event/llvmruby/
@@ -79,7 +79,7 @@ A very interesting talk on LLVM and how it helps when statically compiling a (ve
 
 This was, as I had hoped, mostly a talk about LMDB [12]. It confirmed what I already suspected: at least according to its author's benchmarks, it outperforms any kind of competition in this space (embedded key-value stores). It is also one of the rare NoSQL DBs to implement MVCC transactions, in less than 10000 lines of C code and 32 kB of object code. If there is a piece of Open Source software I think you should not have missed in 2013, it is this one.
 
-=> http://symas.com/mdb/ 12: http://symas.com/mdb/
+=> https://www.symas.com/lmdb 12: https://www.symas.com/lmdb
 
 ## Persistent Memory: Changing the way we store data (Ric Wheeler)
 => https://fosdem.org/2014/schedule/event/persistent_memory/

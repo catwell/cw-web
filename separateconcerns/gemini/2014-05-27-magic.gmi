@@ -10,4 +10,4 @@ If you have a programming background, you may experience a feeling close to disg
 I think it is time for the pendulum to swing back to products that optimize for how high the asymptote of the learning curve is, not the time it takes to reach it. The kind of products that come with manuals and teach you things instead of trying very hard not to make you feel stupid, or in other words: not to make you think.
 
 => https://www.youtube.com/watch?v=Ia55clAtdMs 1: https://www.youtube.com/watch?v=Ia55clAtdMs
-=> /2014-04-25-design-alan-kay.html 2: /2014-04-25-design-alan-kay.html
+=> https://blog.separateconcerns.com/2014-04-25-design-alan-kay.html 2: https://blog.separateconcerns.com/2014-04-25-design-alan-kay.html

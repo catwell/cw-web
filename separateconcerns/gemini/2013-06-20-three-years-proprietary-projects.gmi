@@ -44,7 +44,7 @@ In retrospect, relying on two unstable pieces of software was risky. It turned o
 
 => https://twitter.com/deltheil 4: https://twitter.com/deltheil
 => http://thrift.apache.org/ 5: http://thrift.apache.org/
-=> http://fallabs.com/tokyocabinet/ 6: http://fallabs.com/tokyocabinet/
+=> https://dbdb.io/db/tokyo-cabinet 6: https://dbdb.io/db/tokyo-cabinet
 => http://files.catwell.info/presentations/2011-osdcfr-redis-iidx/ 7: http://files.catwell.info/presentations/2011-osdcfr-redis-iidx/
 => http://files.catwell.info/presentations/2011-osdcfr-redis-iidx/img03.png 8: http://files.catwell.info/presentations/2011-osdcfr-redis-iidx/img03.png
 => http://msgpack.org/ 9: http://msgpack.org/
@@ -69,7 +69,7 @@ As it turned out, Notes got a reasonable amount of online [13] press [14] after 
 
 Eventually we took the decision not to invest more time in the idea: we were a small team and our now core B2B business needed our attention. Notes' success was a long shot and would have required significant time and money investment so I guess it was the right decision, although I would love to see someone revisit the idea.
 
-=> http://www.google.com/sidewiki/ 12: http://www.google.com/sidewiki/
+=> https://en.wikipedia.org/wiki/Google_Sidewiki 12: https://en.wikipedia.org/wiki/Google_Sidewiki
 => http://techcrunch.com/2010/12/10/moodstocks-notes-is-stickybits-without-the-barcodes/ 13: http://techcrunch.com/2010/12/10/moodstocks-notes-is-stickybits-without-the-barcodes/
 => http://mashable.com/2010/12/18/moodstocks/ 14: http://mashable.com/2010/12/18/moodstocks/
 
@@ -108,7 +108,7 @@ The idea is simple once you stop under-estimating the capabilities of SHM on Lin
 
 => http://en.wikipedia.org/wiki/Curse_of_dimensionality 17: http://en.wikipedia.org/wiki/Curse_of_dimensionality
 => http://luajit.org/ 18: http://luajit.org/
-=> http://beej.us/guide/bgipc/output/html/multipage/shm.html 19: http://beej.us/guide/bgipc/output/html/multipage/shm.html
+=> https://beej.us/guide/bgipc/html/#shm 19: https://beej.us/guide/bgipc/html/#shm
 => http://linux.die.net/man/8/sysctl 20: http://linux.die.net/man/8/sysctl
 
 ## Seed
@@ -133,9 +133,9 @@ chksrv is a very useful piece of software but I was a bit worried by its growth 
 
 chkcoherence is the ideal complement to chksrv: where the latter checks if services are running, the former verifies that they are doing things right. It is also written in Bash at the top level. I have already written about its concept here [24].
 
-=> /2013-01-02-startups-soa.html 22: /2013-01-02-startups-soa.html
+=> https://blog.separateconcerns.com/2013-01-02-startups-soa.html 22: https://blog.separateconcerns.com/2013-01-02-startups-soa.html
 => http://libslack.org/ 23: http://libslack.org/
-=> /2013-05-28-coherence-checks.html 24: /2013-05-28-coherence-checks.html
+=> https://blog.separateconcerns.com/2013-05-28-coherence-checks.html 24: https://blog.separateconcerns.com/2013-05-28-coherence-checks.html
 
 ## Anemone
 
@@ -150,7 +150,7 @@ Anemone is the project that deals with everything related to metrics and measure
 It also has a web-based dashboard for the team with high-level KPI, written in JavaScript and flot [25]. Someday I might integrate Brett Slatkin's Cohort Visualizer [26] into it.
 
 => http://code.google.com/p/flot/ 25: http://code.google.com/p/flot/
-=> http://bslatkin.github.com/cohorts/ 26: http://bslatkin.github.com/cohorts/
+=> https://bslatkin.github.io/cohorts/ 26: https://bslatkin.github.io/cohorts/
 
 ## Dandelion
 

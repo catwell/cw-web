@@ -21,7 +21,7 @@ After that, commit `.travis` and `.travis.yml` and push to GitHub. It will trigg
 => https://github.com/catwell/cwtest#exit 2: https://github.com/catwell/cwtest#exit
 => https://github.com/moteus 3: https://github.com/moteus
 => https://github.com/moteus/lua-travis-example 4: https://github.com/moteus/lua-travis-example
-=> https://github.com/catwell/haricot/blob/master/.travis.yml 5: https://github.com/catwell/haricot/blob/master/.travis.yml
+=> https://github.com/catwell/haricot/blob/2d5320633c76f14f12c0d8486606de4b9d95c015/.travis.yml 5: https://github.com/catwell/haricot/blob/2d5320633c76f14f12c0d8486606de4b9d95c015/.travis.yml
 => http://kr.github.io/beanstalkd/ 6: http://kr.github.io/beanstalkd/
 => https://travis-ci.org/profile 7: https://travis-ci.org/profile
 => https://travis-ci.org/catwell/haricot.png?branch=master 8: https://travis-ci.org/catwell/haricot.png?branch=master

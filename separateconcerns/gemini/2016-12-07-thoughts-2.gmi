@@ -8,7 +8,7 @@ Alice Goldfuss [1] started a debate [2] about having developers on call. I am fi
 In fact, it is all about fostering the sense of ownership, which is the N.1 trait I look for in developers. And this won't be the first time I have quoted great people [3] saying similar things [4]!
 
 => https://twitter.com/alicegoldfuss 1: https://twitter.com/alicegoldfuss
-=> https://dbsmasher.com/2016/12/07/on-being-on-call/ 2: https://dbsmasher.com/2016/12/07/on-being-on-call/
+=> https://blog.dbsmasher.com/2016/12/07/on-being-on-call.html 2: https://blog.dbsmasher.com/2016/12/07/on-being-on-call.html
 => https://twitter.com/pchapuis/status/222690433308966913 3: https://twitter.com/pchapuis/status/222690433308966913
 => https://blog.separateconcerns.com/2013-03-24-vogels-skills.html 4: https://blog.separateconcerns.com/2013-03-24-vogels-skills.html
 
@@ -29,14 +29,14 @@ Explaining why AI makes decisions [5] is going to be very important in the years
 
 ## Can't you just...?
 
-Someone made a nice web page [9] to answer a question we hear pretty often. :)
+Someone made a nice web page to answer a question we hear pretty often. :)
 
-=> http://cantyoujust.no/ 9: http://cantyoujust.no/
+EDIT: That was about `cantyoujust.no` which does not exist anymore.
 
 ## Applications and Data
 
 Here is something I have been believing in for a long time: there is no good technical reason why most Web-based application vendors force you to store your data on their servers. It should be possible to use, say, a presentation application from Google to edit slides stored on Microsoft's servers.
 
-Sadly, for reasons that probably have a lot to do with business models, things like remoteStorage [10] did not really take off. But I hope someone will revisit that idea someday, and find a way to make it take off.
+Sadly, for reasons that probably have a lot to do with business models, things like remoteStorage [9] did not really take off. But I hope someone will revisit that idea someday, and find a way to make it take off.
 
-=> https://unhosted.org/adventures/7/Adding-remote-storage-to-unhosted-web-apps.html 10: https://unhosted.org/adventures/7/Adding-remote-storage-to-unhosted-web-apps.html
+=> https://unhosted.org/adventures/7/Adding-remote-storage-to-unhosted-web-apps.html 9: https://unhosted.org/adventures/7/Adding-remote-storage-to-unhosted-web-apps.html

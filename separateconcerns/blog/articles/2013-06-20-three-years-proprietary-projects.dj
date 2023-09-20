@@ -27,7 +27,7 @@ Due to the deprecation of the Pikadeo product, Harvest is no longer used today. 
 
 Once we got crawling sorted out, the image recognition engine itself became the problem. Oak (it has become a tradition to use plant-related names for our projects internally) had been almost entirely written by [Cédric](https://twitter.com/deltheil), Moodstocks' CTO. It was a piece of C++ software, with the image recognition parts isolated in dynamic libraries and a [Thrift](http://thrift.apache.org/) layer to interface with the core Ruby on Rails Web application. It was multithreaded, designed to run on a single multicore EC2 instance.
 
-The scalability pain point, it turned out, was not CPU load. The index was stored in a B+ Tree in [Tokyo Cabinet](http://fallabs.com/tokyocabinet/), a tool we like a lot and still use today in other parts of our system. The problem was that when we indexed millions of images the dataset would inevitably become very large, larger than the available memory. The system would still be very responsive on most reads, but writes would invalidate large chunks of the in-memory cache and result in long pauses.
+The scalability pain point, it turned out, was not CPU load. The index was stored in a B+ Tree in [Tokyo Cabinet](https://dbdb.io/db/tokyo-cabinet), a tool we like a lot and still use today in other parts of our system. The problem was that when we indexed millions of images the dataset would inevitably become very large, larger than the available memory. The system would still be very responsive on most reads, but writes would invalidate large chunks of the in-memory cache and result in long pauses.
 
 Latency is the enemy when you write image recognition software, so we decided not to sacrifice it: all the index had to fit in RAM. We decided to consider RAM as our primary datastore. That decision would bring about our later choices.
 
@@ -47,7 +47,7 @@ You now know that when I joined Moodstocks it was trying to be a B2C company. Ho
 
 When you write an API, especially as a product, you must write applications for it simultaneously. They serve two purposes: demonstrate what your API can do, and help you figure out how it should be improved. We set out to do that with two mobile applications, one of which was Notes.
 
-The original idea I proposed was, I think, simple: [Google SideWiki](http://www.google.com/sidewiki/) (RIP) for the real world. That is: you walk in the street, you see something interesting, you take a picture of it, you get a comments thread. If you are the first to do so, you get to leave the first comment (yay, first!!1).
+The original idea I proposed was, I think, simple: [Google SideWiki](https://en.wikipedia.org/wiki/Google_Sidewiki) (RIP) for the real world. That is: you walk in the street, you see something interesting, you take a picture of it, you get a comments thread. If you are the first to do so, you get to leave the first comment (yay, first!!1).
 
 As we were looking to add virality to it, that idea developed into a kind of mostly mobile social network where both people and objects could be followed. Objects actually had their own timeline with an associated Atom feed, which you could reach by browsing or, of course, as the result of an image search.
 
@@ -85,7 +85,7 @@ The solution I opted for was to rewrite the whole quantizer. Previously we had b
 
 I wrote the kd-forest generation algorithm as a [LuaJIT](http://luajit.org/) program. It was the first Lua program officially used in production at Moodstocks, although as you will see it was only run offline. What it does is take centroids as input, generate a kd-forest and serialize it in a way easily readable in C thanks to the FFI. It can also actually perform nearest-neighbor searches but this is only used for test purpose.
 
-Once the kd-forest is serialized, it can be loaded into [system shared memory](http://beej.us/guide/bgipc/output/html/multipage/shm.html) quite fast. A C library can then be used in every Acorn process to access this shared memory read-only and perform nearest-neighbor searches.
+Once the kd-forest is serialized, it can be loaded into [system shared memory](https://beej.us/guide/bgipc/html/#shm) quite fast. A C library can then be used in every Acorn process to access this shared memory read-only and perform nearest-neighbor searches.
 
 The idea is simple once you stop under-estimating the capabilities of SHM on Linux. By default it usually limited to a few MB so you have to increase it a lot for this to work (it can be done with [sysctl](http://linux.die.net/man/8/sysctl)). The implementation, on the other hand, is far from trivial. My code uses a *lot* of pointer arithmetics, I should probably clean it up someday, but in the meantime it does its job perfectly.
 
@@ -103,11 +103,11 @@ With the current (second) generation of the Seed algorithms, we are actually mos
 
 ## chksrv and chkcoherence
 
-Moodstocks' server-side architecture is [some kind of SOA](/2013-01-02-startups-soa.html). That means we have a lot of different services that run as daemons and need to stay up. chksrv is a medium-sized program in Bash that takes care of this. It is deployed on every instance with a configuration file that indicates which services should be running on that instance, and it makes sure that they are (correctly). It also checks if other instances are up. If something goes wrongs, it warns the "ops team", who is basically me and Cédric as a backup in case I am not available.
+Moodstocks' server-side architecture is [some kind of SOA](https://blog.separateconcerns.com/2013-01-02-startups-soa.html). That means we have a lot of different services that run as daemons and need to stay up. chksrv is a medium-sized program in Bash that takes care of this. It is deployed on every instance with a configuration file that indicates which services should be running on that instance, and it makes sure that they are (correctly). It also checks if other instances are up. If something goes wrongs, it warns the "ops team", who is basically me and Cédric as a backup in case I am not available.
 
 chksrv is a very useful piece of software but I was a bit worried by its growth as we added services. Standardizing the way we deamonize processes helped a lot with that by increasing code reuse (thank you [libslack](http://libslack.org/)).
 
-chkcoherence is the ideal complement to chksrv: where the latter checks if services are running, the former verifies that they are doing things right. It is also written in Bash at the top level. I have already written about its concept [here](/2013-05-28-coherence-checks.html).
+chkcoherence is the ideal complement to chksrv: where the latter checks if services are running, the former verifies that they are doing things right. It is also written in Bash at the top level. I have already written about its concept [here](https://blog.separateconcerns.com/2013-05-28-coherence-checks.html).
 
 ## Anemone
 
@@ -119,7 +119,7 @@ Anemone is the project that deals with everything related to metrics and measure
   - generate weekly reports per application and email them to our platform customers;
   - generate custom reports tailored to the needs of our enterprise customers.
 
-It also has a web-based dashboard for the team with high-level KPI, written in JavaScript and [flot](http://code.google.com/p/flot/). Someday I might integrate Brett Slatkin's [Cohort Visualizer](http://bslatkin.github.com/cohorts/) into it.
+It also has a web-based dashboard for the team with high-level KPI, written in JavaScript and [flot](http://code.google.com/p/flot/). Someday I might integrate Brett Slatkin's [Cohort Visualizer](https://bslatkin.github.io/cohorts/) into it.
 
 ## Dandelion
 

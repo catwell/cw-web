@@ -30,8 +30,8 @@ Moreover, Go appears to be a simpler language than Rust. I suspect I can learn e
 
 => https://gobyexample.com/ 3: https://gobyexample.com/
 => http://www.rust-lang.org/ 4: http://www.rust-lang.org/
-=> http://camlistore.org/ 5: http://camlistore.org/
+=> https://perkeep.org 5: https://perkeep.org
 => https://github.com/coreos/etcd 6: https://github.com/coreos/etcd
 => https://github.com/ha/doozerd 7: https://github.com/ha/doozerd
 => https://github.com/bitly/nsq 8: https://github.com/bitly/nsq
-=> http://iris.karalabe.com/ 9: http://iris.karalabe.com/
+=> https://github.com/project-iris/iris 9: https://github.com/project-iris/iris

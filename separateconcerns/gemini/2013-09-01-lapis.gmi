@@ -5,18 +5,18 @@ I use different programming languages for different tasks, but the one I prefer 
 
 Last March, I gave Lapis [6] a try. It is a relatively new framework written by Leaf Corcoran [7], the author of MoonScript [8], a programming language that compiles to Lua (like CoffeeScript for JavaScript). Lapis is powered by OpenResty [9], an incredibly fast [10] web application server that run inside the nginx [11] Web server and is already used by large websites like Taobao [12] and CloudFlare [13].
 
-Lapis was built with MoonScript in mind, so I had to hack around it to make it work with plain Lua. It worked but was too verbose, so I eventually gave up [14] on that and on Lapis altogether. But that was Lapis version 0.0.1! Leaf continues to improve it and recently released version 0.0.4. Last Friday evening, on a train to Bordeaux, I decided to give it another try.
+Lapis was built with MoonScript in mind, so I had to hack around it to make it work with plain Lua. It worked but was too verbose, so I eventually gave up on that and on Lapis altogether. But that was Lapis version 0.0.1! Leaf continues to improve it and recently released version 0.0.4. Last Friday evening, on a train to Bordeaux, I decided to give it another try.
 
-Lapis now natively supports Lua [15] and has improved in various aspects. I have found it comfortable to write the views and the configuration file with the MoonScript DSLs provided by the framework. For logic (models and controllers) I used Lua directly since I prefer its syntax to MoonScript for regular code.
+Lapis now natively supports Lua [14] and has improved in various aspects. I have found it comfortable to write the views and the configuration file with the MoonScript DSLs provided by the framework. For logic (models and controllers) I used Lua directly since I prefer its syntax to MoonScript for regular code.
 
-I have published a small skeleton application [16] which demonstrates this dual languages style to GitHub. I chose to use Redis for the datastore because I know it well and had it running on my laptop, so I did not use the database integration layer of MoonScript which is designed primarily for PostgreSQL (but it looks nice as well). This application is a kind of Hello World but it demonstrates most features of the framework, including sub-applications [17], widgets [18], layouts [19], exception-handling [20] and input validation [21].
+I have published a small skeleton application [15] which demonstrates this dual languages style to GitHub. I chose to use Redis for the datastore because I know it well and had it running on my laptop, so I did not use the database integration layer of MoonScript which is designed primarily for PostgreSQL (but it looks nice as well). This application is a kind of Hello World but it demonstrates most features of the framework, including sub-applications [16], widgets [17], layouts [18], exception-handling [19] and input validation [20].
 
-If you want an example of a larger Lapis codebase with a different style, MoonRocks [22] is written in Lapis and its code is on GitHub [23].
+If you want an example of a larger Lapis codebase with a different style, MoonRocks [21] is written in Lapis and its code is on GitHub [22].
 
 So, what did I think of it? Well, finally I could see myself write a serious Web application in Lua! I will still choose Python and Flask in a professional setting because it is is a more stable, more feature-complete stack, and because I would not want to ask a whole team to learn both Lua and MoonScript to work on the project. But if I make a Web application as a personal side project, I will certainly try to use Lapis for that.
 
 => http://www.lua.org/ 1: http://www.lua.org/
-=> http://www.keplerproject.org/en/Orbit 2: http://www.keplerproject.org/en/Orbit
+=> http://keplerproject.github.io/orbit/ 2: http://keplerproject.github.io/orbit/
 => https://github.com/zedshaw/Tir 3: https://github.com/zedshaw/Tir
 => https://github.com/nrk/mercury 4: https://github.com/nrk/mercury
 => http://flask.pocoo.org/ 5: http://flask.pocoo.org/
@@ -28,13 +28,12 @@ So, what did I think of it? Well, finally I could see myself write a serious Web
 => http://nginx.org/ 11: http://nginx.org/
 => http://en.wikipedia.org/wiki/Taobao 12: http://en.wikipedia.org/wiki/Taobao
 => https://www.cloudflare.com/ 13: https://www.cloudflare.com/
-=> https://github.com/catwell/fun-with-lapis/commit/42af204c6974f124c2b4856102e260d8ad7baca6 14: https://github.com/catwell/fun-with-lapis/commit/42af204c6974f124c2b4856102e260d8ad7baca6
-=> http://leafo.net/lapis/reference.html#lapis-in-lua 15: http://leafo.net/lapis/reference.html#lapis-in-lua
-=> https://github.com/catwell/badakhshan 16: https://github.com/catwell/badakhshan
-=> http://leafo.net/lapis/reference.html#lapis-applications-sub-applications 17: http://leafo.net/lapis/reference.html#lapis-applications-sub-applications
-=> http://leafo.net/lapis/reference.html#html-generation-html-widgets 18: http://leafo.net/lapis/reference.html#html-generation-html-widgets
-=> http://leafo.net/lapis/reference.html#html-generation-layouts 19: http://leafo.net/lapis/reference.html#html-generation-layouts
-=> http://leafo.net/lapis/reference.html#exception-handling 20: http://leafo.net/lapis/reference.html#exception-handling
-=> http://leafo.net/lapis/reference.html#input-validation 21: http://leafo.net/lapis/reference.html#input-validation
-=> http://rocks.moonscript.org/ 22: http://rocks.moonscript.org/
-=> https://github.com/leafo/moonrocks-site 23: https://github.com/leafo/moonrocks-site
+=> http://leafo.net/lapis/reference.html#lapis-in-lua 14: http://leafo.net/lapis/reference.html#lapis-in-lua
+=> https://github.com/catwell/badakhshan 15: https://github.com/catwell/badakhshan
+=> http://leafo.net/lapis/reference.html#lapis-applications-sub-applications 16: http://leafo.net/lapis/reference.html#lapis-applications-sub-applications
+=> http://leafo.net/lapis/reference.html#html-generation-html-widgets 17: http://leafo.net/lapis/reference.html#html-generation-html-widgets
+=> http://leafo.net/lapis/reference.html#html-generation-layouts 18: http://leafo.net/lapis/reference.html#html-generation-layouts
+=> http://leafo.net/lapis/reference.html#exception-handling 19: http://leafo.net/lapis/reference.html#exception-handling
+=> http://leafo.net/lapis/reference.html#input-validation 20: http://leafo.net/lapis/reference.html#input-validation
+=> http://rocks.moonscript.org/ 21: http://rocks.moonscript.org/
+=> https://github.com/leafo/moonrocks-site 22: https://github.com/leafo/moonrocks-site

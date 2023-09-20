@@ -10,7 +10,7 @@ description = [[
 ## On Call
 
 [Alice Goldfuss](https://twitter.com/alicegoldfuss) started
-[a debate](https://dbsmasher.com/2016/12/07/on-being-on-call/) about having
+[a debate](https://blog.dbsmasher.com/2016/12/07/on-being-on-call.html) about having
 developers on call. I am firmly in the camp of those who think it is a good
 thing, probably because I was a sysadmin before being a software engineer.
 But this means those developers must have the power to refuse to ship broken
@@ -49,8 +49,9 @@ trust experts is never going to work. This means those topics are now
 
 ## Can't you just...?
 
-Someone made [a nice web page](http://cantyoujust.no/) to answer a question we
-hear pretty often. :)
+Someone made a nice web page to answer a question we hear pretty often. :)
+
+EDIT: That was about `cantyoujust.no` which does not exist anymore.
 
 ## Applications and Data
 

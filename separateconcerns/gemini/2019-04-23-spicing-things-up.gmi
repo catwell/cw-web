@@ -14,7 +14,7 @@ For me, this is a new and exciting challenge. Despite having been a very early e
 On that note, our Web stack is (typed) Python 3 / Flask and TypeScript / Angular, and I am looking for a full stack developer to join the team. This is a junior to mid position based in Paris, France (no remote); since most of the work is on the frontend experience with Python is not a requirement. If you are interested, get in touch [8].
 
 => https://blog.separateconcerns.com/2019-02-15-goodbye-lima.html#what-are-you-going-to-do-next 1: https://blog.separateconcerns.com/2019-02-15-goodbye-lima.html#what-are-you-going-to-do-next
-=> https://www.efounders.com/companies/chilli 2: https://www.efounders.com/companies/chilli
+=> https://hellochilli.com 2: https://hellochilli.com
 => https://www.efounders.com 3: https://www.efounders.com
 => https://frontapp.com 4: https://frontapp.com
 => https://aircall.io 5: https://aircall.io

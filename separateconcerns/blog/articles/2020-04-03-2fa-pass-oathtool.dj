@@ -34,7 +34,7 @@ $ 2fa github
 795864
 ```
 
-All the tools used in that article are [available](https://www.archlinux.org/packages/community/any/pass/) [as](https://www.archlinux.org/packages/community/x86_64/oath-toolkit/) [packages](https://www.archlinux.org/packages/extra/x86_64/zbar/) in the Arch Linux repositories.
+All the tools used in that article are [available](https://archlinux.org/packages/extra/any/pass/) [as](https://archlinux.org/packages/extra/x86_64/oath-toolkit/) [packages](https://www.archlinux.org/packages/extra/x86_64/zbar/) in the Arch Linux repositories.
 
 ## Complements
 

@@ -635,7 +635,7 @@ StaffEng (Will Larson) - <a href="https://staffeng.com/">the website</a> and <a 
 <h3>Ladder examples</h3>
 <ul>
 <li>
-<a href="https://basecamp.com/handbook/appendix-05-titles-for-programmers">Basecamp&#8217;s Handbook</a>
+<a href="https://basecamp.com/handbook/appendix-04-titles-for-programmers">Basecamp&#8217;s Handbook</a>
 </li>
 <li>
 <a href="https://twitter.com/Gankra_/status/1046438955439271936">Ladder at Mozilla</a>
@@ -1124,7 +1124,7 @@ register_with_server(poll_now)
 <p>Jason Cohen (again) shares his alternative to business plans: a list of 10 questions to help you figure out where you are and where to go next.</p>
 </section>
 <section id="The-Small-Teams-Manifesto">
-<h2><a href="http://codemanship.co.uk/parlezuml/blog/?postid=1322">The Small Teams Manifesto</a></h2>
+<h2><a href="http://files.catwell.info/misc/mirror/2015-08-17-codemanship-small-teams-manifesto.txt">The Small Teams Manifesto</a></h2>
 <p>Jason Gorman says small teams win because:</p>
 <ul>
 <li>
@@ -1147,7 +1147,7 @@ small teams are easier to build (hiring good people is hard).
 </blockquote>
 </section>
 <section id="How-To-Decide-What-To-Build">
-<h2><a href="https://dcgross.com/decide-what-to-build/">How To Decide What To Build</a></h2>
+<h2><a href="http://files.catwell.info/misc/mirror/2019-04-dcgross-decide-build.txt">How To Decide What To Build</a></h2>
 <p>Daniel Gross (a founder I have been following since his first YC startup, Greplin) on ways to decide what company to build on a personal level. I wish he had published that before my last attempt.</p>
 </section>
 <section id="Qu’est-ce-qu’un-projet-entrepreneurial-viable">
@@ -1501,7 +1501,7 @@ scanned 1 barcode symbols from 1 images in 0.03 seconds
 <pre><code>$ 2fa github
 795864
 </code></pre>
-<p>All the tools used in that article are <a href="https://www.archlinux.org/packages/community/any/pass/">available</a> <a href="https://www.archlinux.org/packages/community/x86_64/oath-toolkit/">as</a> <a href="https://www.archlinux.org/packages/extra/x86_64/zbar/">packages</a> in the Arch Linux repositories.</p>
+<p>All the tools used in that article are <a href="https://archlinux.org/packages/extra/any/pass/">available</a> <a href="https://archlinux.org/packages/extra/x86_64/oath-toolkit/">as</a> <a href="https://www.archlinux.org/packages/extra/x86_64/zbar/">packages</a> in the Arch Linux repositories.</p>
 <section id="Complements">
 <h2>Complements</h2>
 <p>It was <a href="https://lobste.rs/s/abmkdz/2fa_2_factor_authentication_terminal_app">a post on Lobsters</a> that prompted me to post this. <a href="https://lobste.rs/s/abmkdz/2fa_2_factor_authentication_terminal_app#c_c0y9io">Someone from the comments</a> and <a href="https://twitter.com/gawenr/status/1245973593453932544">a former colleague on Twitter</a> told me about <a href="https://github.com/tadfisher/pass-otp">a pass extension</a> I didn&#8217;t know about which does almost the same thing.</p>
@@ -1524,7 +1524,7 @@ scanned 1 barcode symbols from 1 images in 0.03 seconds
     <updated>2023-05-01T12:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        <p>A few days ago I read <a href="https://acrossapp.com/blog/how-a-2-person-startup-already-uses-28-other-tools">this article</a> which made me want to list some of the tools used at the four startups I have worked at so far.</p>
+        <p>A few days ago I read <a href="https://medium.com/@kunaljasty/how-a-2-person-startup-already-uses-26-other-tools-318da014cf38">this article</a> which made me want to list some of the tools used at the four startups I have worked at so far.</p>
 <p>I have mostly listed SaaS tools here, but you can also check out <a href="https://pinboard.in/u:catwell/t:~stack/">the ~stack tag on my Pinboard</a> for more.</p>
 <p>I have also added a section at the end for some tools I use for my own projects.</p>
 <section id="Moodstocks-2010---2013">
@@ -1575,7 +1575,7 @@ scanned 1 barcode symbols from 1 images in 0.03 seconds
 <a href="https://github.com">GitHub</a> - Code hosting, issues &amp; PM
 </li>
 <li>
-<a href="https://www.flowdock.com">Flowdock</a> then <a href="https://slack.com">Slack</a> - Chat
+Flowdock then <a href="https://slack.com">Slack</a> - Chat
 </li>
 <li>
 <a href="https://www.lucca.fr">Lucca</a> then <a href="https://payfit.com">Payfit</a>
@@ -1966,7 +1966,7 @@ Accept=yes
     <updated>2019-04-23T21:45:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        <p>In my last post I <a href="https://blog.separateconcerns.com/2019-02-15-goodbye-lima.html#what-are-you-going-to-do-next">told you</a> I had plans that I was not ready to talk about yet. Well, the time has come. I am happy to announce that I am now the CTO and co-founder of a startup called <a href="https://www.efounders.com/companies/chilli">Chilli</a>.</p>
+        <p>In my last post I <a href="https://blog.separateconcerns.com/2019-02-15-goodbye-lima.html#what-are-you-going-to-do-next">told you</a> I had plans that I was not ready to talk about yet. Well, the time has come. I am happy to announce that I am now the CTO and co-founder of a startup called <a href="https://hellochilli.com">Chilli</a>.</p>
 <p>Chilli is not a typical startup, it is an <a href="https://www.efounders.com">eFounders</a> project. You may know eFounders as the first startup studio in France, which originated companies such as <a href="https://frontapp.com">Front</a>, <a href="https://aircall.io">Aircall</a> and <a href="https://www.spendesk.com">Spendesk</a>. The way they usually work is that they identify a problem that needs solving and find founders to tackle it, providing them both support and funding in exchange for equity. When the studio was created, I had doubts about the model, but later on I became <a href="https://twitter.com/pchapuis/status/806463326842712067">quite enthusiastic</a> about it.</p>
 <p>Most eFounders companies are Software-as-a-Service businesses, and several of them were born of a need identified in traditional SMBs and SMEs. However, many pivoted to serve a different market, either tech companies or enterprises, and we can see the same pattern in other SaaS companies as well. So we end up with software that doesn&#8217;t sell in the market it was originally designed for, and SMBs left on the side of the road with unaddressed digital needs. The reason, we believe, lies with the SaaS-to-SMBs distribution model, and that is the issue Chilli intends to solve.</p>
 <p>We are certain that the solution to that problem must involve software. However, we also think technology alone will not be enough; a human touch is necessary, which is why my co-founder and CEO Julien comes from a consulting background. What we will build is a hybrid platform to help leaders identify the pain points in their companies and match them with the best digital tools to solve them. By starting from the customer&#8217;s needs, we will work around the distribution cost issues and become the missing link between SaaS vendors and traditional SMBs and SMEs.</p>
@@ -2362,7 +2362,7 @@ a time where plain Lua support was not official).</p>
         <section id="On-Call">
 <h2>On Call</h2>
 <p><a href="https://twitter.com/alicegoldfuss">Alice Goldfuss</a> started
-<a href="https://dbsmasher.com/2016/12/07/on-being-on-call/">a debate</a> about having
+<a href="https://blog.dbsmasher.com/2016/12/07/on-being-on-call.html">a debate</a> about having
 developers on call. I am firmly in the camp of those who think it is a good
 thing, probably because I was a sysadmin before being a software engineer.
 But this means those developers must have the power to refuse to ship broken
@@ -2399,8 +2399,8 @@ trust experts is never going to work. This means those topics are now
 </section>
 <section id="Can't-you-just">
 <h2>Can&#8217;t you just&#8230;?</h2>
-<p>Someone made <a href="http://cantyoujust.no/">a nice web page</a> to answer a question we
-hear pretty often. :)</p>
+<p>Someone made a nice web page to answer a question we hear pretty often. :)</p>
+<p>EDIT: That was about <code>cantyoujust.no</code> which does not exist anymore.</p>
 </section>
 <section id="Applications-and-Data">
 <h2>Applications and Data</h2>
@@ -2517,7 +2517,7 @@ and his replacement with
 <a href="https://en.wikipedia.org/wiki/L%C3%A9o_Apotheker">Léo Apotheker</a>,
 who hates hardware. Probably one of the worst mistakes the HP board ever made.</p>
 <p>The second document is the
-<a href="designingmlearning.com/resources/ZenOfPalm.pdf">Zen of Palm</a>,
+<a href="https://archive.org/details/zen-of-palm">Zen of Palm</a>,
 a design guide for Palm OS from 2003 which is still pretty relevant today
 in some ways.</p>
 </section>
@@ -2552,7 +2552,7 @@ scheduling (like Lua)&#8230;</p>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>At <a href="https://blog.separateconcerns.com/2019-02-15-goodbye-lima.html">Lima</a>, we use
-<a href="http://symas.com/mdb/">the LMDB database</a> extensively, and we looked into its
+<a href="https://www.symas.com/lmdb">the LMDB database</a> extensively, and we looked into its
 source code in order to debug a few issues we had. To help us diagnose broken
 databases, and also because I wanted to learn more about it, I wrote <a href="https://github.com/catwell/cw-lua/tree/master/lua-mdb">a parser
 for the LMDB database file format in
@@ -2810,7 +2810,7 @@ by LORIA reasearcher Véronique Cortier. They may change your mind on e-voting
 somehow. In particular, she argues that, although e-voting cannot be as secure
 as physical voting, it could very well be better than absentee voting.</p>
 <p>Véronique is one of the researchers working on
-<a href="http://belenios.gforge.inria.fr/">Belenios</a>, which is
+<a href="https://www.belenios.org">Belenios</a>, which is
 <a href="https://github.com/glondu/belenios">Open Source</a> and
 <a href="http://www.loria.fr/~cortier/Belenios.pdf">scientifically proven</a>
 e-voting software. Belenios provides privacy, verifiability and full
@@ -2861,7 +2861,7 @@ came to learn about systems like Helios and Belenios in the first place.</p>
 <p>This document, by Mikito Takada (Trifacta), is longer than the others. It is the best short (meaning: not a whole course or book) introduction to distributed systems I know. In a nutshell, it expands on the ideas presented in the first two documents and gives you most of the necessary concepts and vocabulary to understand actual distributed systems papers, should you want to read them.</p>
 </section>
 <section id="Building-on-quicksand">
-<h2><a href="http://www-db.cs.wisc.edu/cidr/cidr2009/Paper_133.pdf">Building on quicksand</a></h2>
+<h2><a href="https://arxiv.org/abs/0909.1788">Building on quicksand</a></h2>
 <p>I could hardly leave that 2009 paper by Pat Helland and Dave Campbell out of this list. It starts with the idea that, as the distribution of systems increases, latency makes synchronicity intractable and pushes us towards asynchronous designs. The rest of the paper is a discussion of the trade-offs involved. The very interesting idea in that paper (also found in other papers by Pat Helland) is that it all comes down to a problem of risk management and reconciliation. If asynchronous software can not ensure something will happen, it may make a guess and fix the result later if it was wrong. That may include having to make excuses to an actual human being. An important corollary is that the distributed nature of software permeates <a href="http://bravenewgeek.com/distributed-systems-are-a-ux-problem/">all the way to the user interface</a> (which is why you may have seen me ranting about how we need to start forming cross-functional teams, with developers who understand UX and designers who get distributed systems).</p>
 </section>
 <section id="Bonus:-Why-Logical-Clocks-are-Easy">
@@ -2924,7 +2924,7 @@ came to learn about systems like Helios and Belenios in the first place.</p>
         <p><a href="https://travis-ci.org">Travis</a> is a Continuous Integration service which is free for Open Source projects and has very good GitHub integration. We will see how to use it for your Lua projects.</p>
 <p>Your test suite will work well with Travis as long as executing it returns 0 on success and nonzero on failure. If you use plain Lua assertions, it is already the case. If you use a test framework, make sure that it works that way. I have added <a href="https://github.com/catwell/cwtest#exit">a helper</a> to cwtest for that purpose.</p>
 <p>Travis does not support Lua out of the box, but using it with Lua projects is not hard because <a href="https://github.com/moteus">moteus</a> has done all the hard work for you. You just have to clone <a href="https://github.com/moteus/lua-travis-example">this repository</a> and copy the <code>.travis</code> directory to yours.</p>
-<p>After that, you only have to write a single YAML file, <code>.travis.yml</code>. For example, here is <a href="https://github.com/catwell/haricot/blob/master/.travis.yml">the one I wrote for Haricot</a>.</p>
+<p>After that, you only have to write a single YAML file, <code>.travis.yml</code>. For example, here is <a href="https://github.com/catwell/haricot/blob/2d5320633c76f14f12c0d8486606de4b9d95c015/.travis.yml">the one I wrote for Haricot</a>.</p>
 <p>Most sections should be self-explanatory. <code>install</code> is where you set up your dependencies. The first line calls moteus&#8217; script which lets you use Lua and LuaRocks. A separate build and test run will occur for every Lua version declared in <code>matrix</code>; you can comment some lines there if you do not want to test some Lua versions. For Haricot I need <a href="http://kr.github.io/beanstalkd/">Beanstalk</a> running in the background so I start it in <code>before_script</code>. <code>script</code> is where you run your actual tests.</p>
 <p>To enable Travis, sign up, allow Travis to access your GitHub account, then go to <a href="https://travis-ci.org/profile">your profile</a> and flip the switch for your repository:</p>
 <p><img alt="travis" src="img/travis.png"/></p>
@@ -2963,11 +2963,11 @@ came to learn about systems like Helios and Belenios in the first place.</p>
     <updated>2014-11-23T21:45:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        <p>Two people I respect a lot, <a href="http://about.avdi.org/">Avdi Grimm</a> and <a href="http://soveran.com/">Michel Martens</a>, are having <a href="http://devblog.avdi.org/2014/11/21/in-defense-of-fat-tools/">an interesting debate</a> about the complexity of programming tools and libraries.</p>
-<p>In the Ruby community, Michel is well-known for writing simple tools that do their job well. Avdi defends the framework approach of Rails, arguing that using fatter tools allows you to make your own code simpler. If you want to hear them debate it, listen to <a href="http://devchat.tv/ruby-rogues/182-rr-keeping-libraries-and-utilities-small-and-simple-with-michel-martens">the podcast</a>.</p>
+        <p>Two people I respect a lot, <a href="https://avdi.codes/about/">Avdi Grimm</a> and <a href="http://soveran.com/">Michel Martens</a>, are having <a href="http://devblog.avdi.org/2014/11/21/in-defense-of-fat-tools/">an interesting debate</a> about the complexity of programming tools and libraries.</p>
+<p>In the Ruby community, Michel is well-known for writing simple tools that do their job well. Avdi defends the framework approach of Rails, arguing that using fatter tools allows you to make your own code simpler. If you want to hear them debate it, listen to <a href="https://topenddevs.com/podcasts/ruby-rogues/episodes/182-rr-keeping-libraries-and-utilities-small-and-simple-with-michel-martens">the podcast</a>.</p>
 <p>It will not surprise people who know me that I side with Michel here. Actually, I am probably more extreme than he is: I used his <a href="https://github.com/soveran/ohm">Redis Object Mapper</a> at Moodstocks some years ago, but I eventually went back to using redis-rb directly, and finally dropped the Ruby language entirely. You can also see by yourself how much I obsess about simplicity by looking as <a href="http://files.catwell.info/notes/quotes.txt">my list of quotes</a>.</p>
 <p>I feel like most programmers do not reason like Michel and me regarding this, and it seems to me those who do often have similar backgrounds in Unix and maintenance of production systems. Maybe as a result, we tend to take a system approach to everything, so when we evaluate the complexity of software, we take into account the complexity of dependencies as well as the complexity of the application code itself.</p>
-<p>When running production systems, the most important thing you want to optimize for is the speed with which you can diagnose and recover from a problem. Reliability is also important, sure, but you quickly learn that no matter how good the software you use is, it <strong>will</strong> fail (coincidentally, another host of the podcast <a href="http://blog.jessitron.com/2014/03/weakness-and-vulnerability.html">talks about that on her blog</a>). For that purpose, you want few moving pieces, each one being simple enough for you to understand it.</p>
+<p>When running production systems, the most important thing you want to optimize for is the speed with which you can diagnose and recover from a problem. Reliability is also important, sure, but you quickly learn that no matter how good the software you use is, it <strong>will</strong> fail (coincidentally, another host of the podcast <a href="https://jessitron.com/2014/03/20/weakness-and-vulnerability/">talks about that on her blog</a>). For that purpose, you want few moving pieces, each one being simple enough for you to understand it.</p>
 <p>You can take this idea very far. Around 2007 I thought about how nice it would be to know a programming language so well that 1) there would be nothing in it I would not know about and 2) I would be able to know exactly what every line of code I wrote did internally. At the time, I wondered if it would require me to pick a language like Forth or LISP implement it myself. It turned out not to: I discovered Lua, whose reference implementation is roughly 15000 lines of (readable) C code. It has been my dynamic language of choice ever since.</p>
 <p>When I have a problem to solve, I look for the simplest Open Source tool that does it and weigh the cost of implementing the feature myself against the cost of using and maintaining this tool. Tools usually win when they just do what I wanted; they lose when they do too many things or pull in too many dependencies I did not already use.</p>
 <p>Many Ruby programmers, when they install a gem that pulls in several dependencies and compiles some C code, think: &#8220;How nice! All of this is automated for me!&#8221; The reaction of an operations person, on the other hand, is closer to this:</p>
@@ -3060,9 +3060,9 @@ terminal, create the file <code>~/.gnupg/gpg-agent.conf</code> with the followin
     <updated>2014-09-20T15:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        <p><a href="http://iris.karalabe.com/">Iris</a> is a &#8220;decentralized Cloud messaging&#8221; middleware that I have really started looking into with the recent <a href="http://iris.karalabe.com/archive/2014/version_v0_3_0_shiny_stable_apis">release of version 0.3.0</a>. It had struck me as interesting when I first heard of it <a href="https://www.youtube.com/watch?v=WTRORimPvHE">at FOSDEM 2014</a>. The reason for that, beyond the great presentation skills of its author, is that it implements principles I think are sound to build SOA upon.</p>
+        <p><a href="https://github.com/project-iris/iris">Iris</a> is a &#8220;decentralized Cloud messaging&#8221; middleware that I have really started looking into with the recent release of version 0.3.0. It had struck me as interesting when I first heard of it <a href="https://www.youtube.com/watch?v=WTRORimPvHE">at FOSDEM 2014</a>. The reason for that, beyond the great presentation skills of its author, is that it implements principles I think are sound to build SOA upon.</p>
 <p>In Iris, the logical and physical layers of services are cleanly separated. Each box in the system runs a local instance of the Iris broker (&#8220;Iris node&#8221;). The broker is written in Go, and all broker instances in the system converse in a proprietary protocol.</p>
-<p>To provide or consume a service, you never have to open a connection to a remote machine: you just talk to your local broker using the <a href="https://dl.dropboxusercontent.com/u/10435909/Iris/relay.pdf">Iris relay protocol</a>. This means you can use any programming language you want as long as you implement this protocol, which is much simpler than the protocol used between brokers. There are official clients for the relay protocol (Iris calls them &#8220;bindings&#8221;, but I think that name is confusing) in Go, Erlang and Java. I have <a href="https://github.com/catwell/iris-lua">written one in Lua</a> that I will use for examples in the rest of this post (if you prefer, you will find corresponding code in Go for most examples <a href="https://github.com/catwell/iris-lua/tree/master/eFxamples">here</a>).</p>
+<p>To provide or consume a service, you never have to open a connection to a remote machine: you just talk to your local broker using the Iris relay protocol. This means you can use any programming language you want as long as you implement this protocol, which is much simpler than the protocol used between brokers. There are official clients for the relay protocol (Iris calls them &#8220;bindings&#8221;, but I think that name is confusing) in Go, Erlang and Java. I have <a href="https://github.com/catwell/cw-lua/tree/master/iris-lua">written one in Lua</a> that I will use for examples in the rest of this post (if you prefer, you will find corresponding code in Go for most examples <a href="https://github.com/catwell/cw-lua/tree/2e74fcb3546ac4ef1a2f659e8012ff8a78fa7a36/iris-lua/examples">here</a>).</p>
 <p>In Iris, services are represented by names. To provide a service you register with its name, to consume one you address it by its name. That means you never dial into a specific instance of a service explicitly. From the consumer&#8217;s point of view, the service could be provided by a single box as well as hundreds across different datacenters. Boxes can go up or down, and you will almost never have to care about it when writing code: it is an operational concern. The way Iris&#8217; author puts it is that in Iris the smallest logical entity is a cluster, there is no concept of individual machine or process.</p>
 <p>Iris supports three usual basic patterns for communication: Request/Response, Publish/Subscribe and Broadcast. A fourth one, Tunnel, is slightly more complicated.</p>
 <section id="RequestResponse">
@@ -3241,7 +3241,7 @@ c:teardown()
 <section id="Conclusion">
 <h1>Conclusion</h1>
 <p>Iris is a very interesting piece of software which implements a vision of systems that I like and cannot find in any other product out of the box. It is still very young and probably not ready for serious production yet, although I have found it stable during the (limited) testing I have done. Even though my current job does not involve SOA I will probably come back to it someday, so Iris will join the list of tools whose progress I follow attentively.</p>
-<p>On a side note, Iris was built for its authors&#8217; thesis, and he is now <a href="http://iris.karalabe.com/archive/2014/core_concepts_at_dotscale">looking for a sponsor</a> to allow him to continue working on it. If you have the power to make that happen, give it a look. Think how VMWare / Pivotal must be happy of the deal they did with <a href="http://invece.org/">Antirez</a> :)</p>
+<p>On a side note, Iris was built for its authors&#8217; thesis, and he is now looking for a sponsor to allow him to continue working on it. If you have the power to make that happen, give it a look. Think how VMWare / Pivotal must be happy of the deal they did with <a href="http://invece.org/">Antirez</a> :)</p>
 <p>Finally, if you try <a href="https://github.com/catwell/iris-lua">my Iris client</a> and find bugs, do not hesitate to report them on Github! I have no real world Iris system to try it on so there are certainly plenty.</p>
 </section>
 
@@ -3302,7 +3302,7 @@ guys.</p>
     <updated>2014-05-27T23:30:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        <p>I have just watched a small <a href="https://www.youtube.com/watch?v=Ia55clAtdMs">TEDx talk by Simon Peyton Jones</a> (of Haskell fame) on CS education. Something he said struck me as relevant to what I was saying in <a href="/2014-04-25-design-alan-kay.html">my last post</a>:</p>
+        <p>I have just watched a small <a href="https://www.youtube.com/watch?v=Ia55clAtdMs">TEDx talk by Simon Peyton Jones</a> (of Haskell fame) on CS education. Something he said struck me as relevant to what I was saying in <a href="https://blog.separateconcerns.com/2014-04-25-design-alan-kay.html">my last post</a>:</p>
 <blockquote>
 <p>Arthur C. Clarke once famously remarked that &#8220;any sufficiently advanced technology is indistinguishable from magic&#8221;. And I think it is very damaging if our children come to believe that the computer systems they use are essentially magic. That is: not under their control.</p>
 </blockquote>
@@ -3386,7 +3386,7 @@ guys.</p>
 <h2>Moving on to Go</h2>
 <p>Next, I will probably be <a href="https://gobyexample.com/">learning Go</a>. Go is a weird language in that about half of the technical people I follow and look up to like it a lot, and the other half hates it. The latter tend to be users of languages with stricter type systems&#8230;</p>
 <p>I have to admit that, if I had looked solely at the technical merits of both languages, I would probably have learned more <a href="http://www.rust-lang.org/">Rust</a> instead. I already know some Rust, but not enough to use it productively. Its main advantages are its (arguably) better type system and the fact that it can run without a GC or a frontend, making it suitable to write dynamic libraries.</p>
-<p>However, Rust doesn&#8217;t look completely stable yet, whereas Go is already used in production by several serious companies. Also, I am a distributed systems programmer, and <a href="http://camlistore.org/">most</a> <a href="https://github.com/coreos/etcd">of</a> <a href="https://github.com/ha/doozerd">the</a> <a href="https://github.com/bitly/nsq">interesting</a> <a href="http://iris.karalabe.com/">codebases</a> I see popping up around in that field are written in Go.</p>
+<p>However, Rust doesn&#8217;t look completely stable yet, whereas Go is already used in production by several serious companies. Also, I am a distributed systems programmer, and <a href="https://perkeep.org">most</a> <a href="https://github.com/coreos/etcd">of</a> <a href="https://github.com/ha/doozerd">the</a> <a href="https://github.com/bitly/nsq">interesting</a> <a href="https://github.com/project-iris/iris">codebases</a> I see popping up around in that field are written in Go.</p>
 <p>Moreover, Go appears to be a simpler language than Rust. I suspect I can learn enough of it to read code &#8220;fluently&#8221; and write some much faster. So Go it is, and Rust will probably be next.</p>
 </section>
 
@@ -3488,12 +3488,12 @@ end]]&gt;&lt;/content&gt;
 </section>
 <section id="Iris-Decentralized-Messaging-Péter-Szilágyi">
 <h2><a href="https://fosdem.org/2014/schedule/event/iris_decentralized_messaging/">Iris Decentralized Messaging</a> (Péter Szilágyi)</h2>
-<p><a href="http://iris.karalabe.com/">Iris</a> is a messaging backend written in Go but with a language-agnostic interface. It is somehow similar 0MQ but goes further by removing the notion of a specific instance or process in favor of sets of those. Each machine runs a single daemon that does all the heavy lifting, and each client connects to it locally to interact with the system.</p>
+<p><a href="https://github.com/project-iris/iris">Iris</a> is a messaging backend written in Go but with a language-agnostic interface. It is somehow similar 0MQ but goes further by removing the notion of a specific instance or process in favor of sets of those. Each machine runs a single daemon that does all the heavy lifting, and each client connects to it locally to interact with the system.</p>
 <p>This is a very interesting project and I was a bit surprised I had never heard about it until now. The slides and live demos were also really good, with multiple Go code snippets running concurrently in a browser. Oh, and Gopher drawings!</p>
 </section>
 <section id="Camlistore-Brad-Fitzpatrick-and-Mathieu-Lonjaret">
 <h2><a href="https://fosdem.org/2014/schedule/event/camlistore/">Camlistore</a> (Brad Fitzpatrick and Mathieu Lonjaret)</h2>
-<p>The speakers showed off what the latest release of <a href="http://camlistore.org/">Camlistore</a>, a personal file storage system, can do. I already knew and liked the technical design of the project, but I was impressed by the progress made on usability since Brad&#8217;s talk at dotScale 2013. They have a new Web UI which is not complete yet but looks very promising. I really have to install my own node someday.</p>
+<p>The speakers showed off what the latest release of <a href="https://perkeep.org">Camlistore</a>, a personal file storage system, can do. I already knew and liked the technical design of the project, but I was impressed by the progress made on usability since Brad&#8217;s talk at dotScale 2013. They have a new Web UI which is not complete yet but looks very promising. I really have to install my own node someday.</p>
 </section>
 <section id="Statically-compiling-Ruby-with-LLVM-Laurent-Sansonetti">
 <h2><a href="https://fosdem.org/2014/schedule/event/llvmruby/">Statically compiling Ruby with LLVM</a> (Laurent Sansonetti)</h2>
@@ -3501,7 +3501,7 @@ end]]&gt;&lt;/content&gt;
 </section>
 <section id="What's-new-in-OpenLDAP-Howard-Chu">
 <h2><a href="https://fosdem.org/2014/schedule/event/whats_new_in_openldap/">What&#8217;s new in OpenLDAP</a> (Howard Chu)</h2>
-<p>This was, as I had hoped, mostly a talk about <a href="http://symas.com/mdb/">LMDB</a>. It confirmed what I already suspected: at least according to its author&#8217;s benchmarks, it outperforms any kind of competition in this space (embedded key-value stores). It is also one of the rare NoSQL DBs to implement MVCC transactions, in less than 10000 lines of C code and 32 kB of object code. If there is a piece of Open Source software I think you should not have missed in 2013, it is this one.</p>
+<p>This was, as I had hoped, mostly a talk about <a href="https://www.symas.com/lmdb">LMDB</a>. It confirmed what I already suspected: at least according to its author&#8217;s benchmarks, it outperforms any kind of competition in this space (embedded key-value stores). It is also one of the rare NoSQL DBs to implement MVCC transactions, in less than 10000 lines of C code and 32 kB of object code. If there is a piece of Open Source software I think you should not have missed in 2013, it is this one.</p>
 </section>
 <section id="Persistent-Memory:-Changing-the-way-we-store-data-Ric-Wheeler">
 <h2><a href="https://fosdem.org/2014/schedule/event/persistent_memory/">Persistent Memory: Changing the way we store data</a> (Ric Wheeler)</h2>
@@ -3763,7 +3763,7 @@ typedef const struct stuff_s stuff_t;
 <p>Friday 20th will be my last day at Moodstocks. I am leaving a company where, after three years and a half, I was the most senior employee. As you may imagine, it was not an easy decision.</p>
 <p>Moodstocks has grown up since I joined it. After several pivots, the founders have assembled a <a href="https://moodstocks.com/humans.txt">great team</a> I will miss, and together I dare say we have advanced the state of mobile image recognition. Recently, we have also been looking at other technologies related to mobile.</p>
 <p>We have released two new products. The first one is what <a href="http://blog.separateconcerns.com/2013-06-20-three-years-proprietary-projects.html">was known as Physalis</a> and took the commercial name <a href="https://winch.io/">Winch</a>. This is what I have been mostly involved with for the last few months. I believe it has the potential to become the reference solution to write native mobile applications that react quickly and work offline.</p>
-<p>The second product is <a href="http://overlay.ms/">Overlay</a>, a mobile application that lets you buy products from paper catalogs online. Years after Pikadeo and Notes, it is finally time for a real application available in the stores, leveraging Moodstocks&#8217; <a href="https://moodstocks.com/">image recognition SDK</a> and Winch, showcasing the best of both technologies. But beyond pure tech, it is also a demonstration of Augmented Reality as we like it: fast, predictable, purposeful. No need for 3D models.</p>
+<p>The second product is Overlay, a mobile application that lets you buy products from paper catalogs online. Years after Pikadeo and Notes, it is finally time for a real application available in the stores, leveraging Moodstocks&#8217; <a href="https://moodstocks.com/">image recognition SDK</a> and Winch, showcasing the best of both technologies. But beyond pure tech, it is also a demonstration of Augmented Reality as we like it: fast, predictable, purposeful. No need for 3D models.</p>
 <p>With those two products in the pipes, choosing to leave was incredibly difficult. But I did nevertheless, because of an opportunity I could not turn down.</p>
 </section>
 <section id="Hello-Lima">
@@ -3789,9 +3789,9 @@ typedef const struct stuff_s stuff_t;
     <updated>2013-09-01T16:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        <p>I use different programming languages for different tasks, but the one I prefer is <a href="http://www.lua.org/">Lua</a>. I have always wanted to use it for the Web, and in a way I already do: this blog is a static website generated by a custom Lua program. I have also written several services that can speak HTTP+JSON in Lua. For larger, HTML-based Web applications however, I have never found the framework I wanted. I have tried <a href="http://www.keplerproject.org/en/Orbit">several</a> <a href="https://github.com/zedshaw/Tir">of</a> <a href="https://github.com/nrk/mercury">them</a>, but kept coming back to <a href="http://flask.pocoo.org/">more dependable platforms</a>.</p>
+        <p>I use different programming languages for different tasks, but the one I prefer is <a href="http://www.lua.org/">Lua</a>. I have always wanted to use it for the Web, and in a way I already do: this blog is a static website generated by a custom Lua program. I have also written several services that can speak HTTP+JSON in Lua. For larger, HTML-based Web applications however, I have never found the framework I wanted. I have tried <a href="http://keplerproject.github.io/orbit/">several</a> <a href="https://github.com/zedshaw/Tir">of</a> <a href="https://github.com/nrk/mercury">them</a>, but kept coming back to <a href="http://flask.pocoo.org/">more dependable platforms</a>.</p>
 <p>Last March, I gave <a href="http://leafo.net/lapis/">Lapis</a> a try. It is a relatively new framework written by <a href="http://leafo.net/">Leaf Corcoran</a>, the author of <a href="http://moonscript.org/">MoonScript</a>, a programming language that compiles to Lua (like CoffeeScript for JavaScript). Lapis is powered by <a href="http://openresty.org/">OpenResty</a>, an <a href="http://www.techempower.com/benchmarks/">incredibly fast</a> web application server that run <strong>inside</strong> the <a href="http://nginx.org/">nginx</a> Web server and is already used by large websites like <a href="http://en.wikipedia.org/wiki/Taobao">Taobao</a> and <a href="https://www.cloudflare.com/">CloudFlare</a>.</p>
-<p>Lapis was built with MoonScript in mind, so I had to hack around it to make it work with plain Lua. It worked but was too verbose, so I eventually <a href="https://github.com/catwell/fun-with-lapis/commit/42af204c6974f124c2b4856102e260d8ad7baca6">gave up</a> on that and on Lapis altogether. But that was Lapis version 0.0.1! Leaf continues to improve it and recently released version 0.0.4. Last Friday evening, on a train to Bordeaux, I decided to give it another try.</p>
+<p>Lapis was built with MoonScript in mind, so I had to hack around it to make it work with plain Lua. It worked but was too verbose, so I eventually gave up on that and on Lapis altogether. But that was Lapis version 0.0.1! Leaf continues to improve it and recently released version 0.0.4. Last Friday evening, on a train to Bordeaux, I decided to give it another try.</p>
 <p>Lapis now <a href="http://leafo.net/lapis/reference.html#lapis-in-lua">natively supports Lua</a> and has improved in various aspects. I have found it comfortable to write the views and the configuration file with the MoonScript DSLs provided by the framework. For logic (models and controllers) I used Lua directly since I prefer its syntax to MoonScript for regular code.</p>
 <p>I have published <a href="https://github.com/catwell/badakhshan">a small skeleton application</a> which demonstrates this dual languages style to GitHub. I chose to use Redis for the datastore because I know it well and had it running on my laptop, so I did not use the database integration layer of MoonScript which is designed primarily for PostgreSQL (but it looks nice as well). This application is a kind of Hello World but it demonstrates most features of the framework, including <a href="http://leafo.net/lapis/reference.html#lapis-applications-sub-applications">sub-applications</a>, <a href="http://leafo.net/lapis/reference.html#html-generation-html-widgets">widgets</a>, <a href="http://leafo.net/lapis/reference.html#html-generation-layouts">layouts</a>, <a href="http://leafo.net/lapis/reference.html#exception-handling">exception-handling</a> and <a href="http://leafo.net/lapis/reference.html#input-validation">input validation</a>.</p>
 <p>If you want an example of a larger Lapis codebase with a different style, <a href="http://rocks.moonscript.org/">MoonRocks</a> is written in Lapis and <a href="https://github.com/leafo/moonrocks-site">its code is on GitHub</a>.</p>
@@ -3825,7 +3825,7 @@ typedef const struct stuff_s stuff_t;
 <section id="Acorn">
 <h2>Acorn</h2>
 <p>Once we got crawling sorted out, the image recognition engine itself became the problem. Oak (it has become a tradition to use plant-related names for our projects internally) had been almost entirely written by <a href="https://twitter.com/deltheil">Cédric</a>, Moodstocks&#8217; CTO. It was a piece of C++ software, with the image recognition parts isolated in dynamic libraries and a <a href="http://thrift.apache.org/">Thrift</a> layer to interface with the core Ruby on Rails Web application. It was multithreaded, designed to run on a single multicore EC2 instance.</p>
-<p>The scalability pain point, it turned out, was not CPU load. The index was stored in a B+ Tree in <a href="http://fallabs.com/tokyocabinet/">Tokyo Cabinet</a>, a tool we like a lot and still use today in other parts of our system. The problem was that when we indexed millions of images the dataset would inevitably become very large, larger than the available memory. The system would still be very responsive on most reads, but writes would invalidate large chunks of the in-memory cache and result in long pauses.</p>
+<p>The scalability pain point, it turned out, was not CPU load. The index was stored in a B+ Tree in <a href="https://dbdb.io/db/tokyo-cabinet">Tokyo Cabinet</a>, a tool we like a lot and still use today in other parts of our system. The problem was that when we indexed millions of images the dataset would inevitably become very large, larger than the available memory. The system would still be very responsive on most reads, but writes would invalidate large chunks of the in-memory cache and result in long pauses.</p>
 <p>Latency is the enemy when you write image recognition software, so we decided not to sacrifice it: all the index had to fit in RAM. We decided to consider RAM as our primary datastore. That decision would bring about our later choices.</p>
 <p>Since rebuilding an index can be <strong>very</strong> long we wanted something that could persist even if the engine crashed or had to be restarted for an update. Soon it became obvious that Redis could be the answer. However it was missing some commands that we needed, especially one that would insert the same key with different values in different maps (if you have already written inverted indices you may understand why, otherwise have a look at <a href="http://files.catwell.info/presentations/2011-osdcfr-redis-iidx/">that presentation</a>). Lua scripting was what we needed, but it wasn&#8217;t there yet so I ended up forking Redis to develop it in C while <a href="http://files.catwell.info/presentations/2011-osdcfr-redis-iidx/img03.png">lobbying for scripting support</a>. Acorn was, to my knowledge, the first application to run Redis 2.5 in production, and the first one to use Redis scripting too. We never encountered any Redis-related crash.</p>
 <p>Now, to have the index fit entirely in RAM, we would have to distribute it across different machines, so Acorn would have to be a distributed system. Knowing that, I chose to make Acorn nodes single-threaded: they would communicate by message passing and we would have several of them per instance.</p>
@@ -3837,7 +3837,7 @@ typedef const struct stuff_s stuff_t;
 <h2>Moodstocks Notes</h2>
 <p>You now know that when I joined Moodstocks it was trying to be a B2C company. However we were seeing interest in licensing our technology, and began to envision a B2B product: Moodstocks API.</p>
 <p>When you write an API, especially as a product, you must write applications for it simultaneously. They serve two purposes: demonstrate what your API can do, and help you figure out how it should be improved. We set out to do that with two mobile applications, one of which was Notes.</p>
-<p>The original idea I proposed was, I think, simple: <a href="http://www.google.com/sidewiki/">Google SideWiki</a> (RIP) for the real world. That is: you walk in the street, you see something interesting, you take a picture of it, you get a comments thread. If you are the first to do so, you get to leave the first comment (yay, first!!1).</p>
+<p>The original idea I proposed was, I think, simple: <a href="https://en.wikipedia.org/wiki/Google_Sidewiki">Google SideWiki</a> (RIP) for the real world. That is: you walk in the street, you see something interesting, you take a picture of it, you get a comments thread. If you are the first to do so, you get to leave the first comment (yay, first!!1).</p>
 <p>As we were looking to add virality to it, that idea developed into a kind of mostly mobile social network where both people and objects could be followed. Objects actually had their own timeline with an associated Atom feed, which you could reach by browsing or, of course, as the result of an image search.</p>
 <p>Technically the server-side part of Notes was a rather classic Sinatra application. The most interesting part of it was that it used some kind of CQRS architecture with all reads coming from Redis and all writes going to log-structured storage. The very nice thing about it was that any part of it could be replayed so it was almost trivial to reproduce bugs or replicate production incrementally to a development setup.</p>
 <p>The iPhone application, on the other hand, was one of the nicest and most complex ones we have ever written. I wasn&#8217;t responsible for it so I won&#8217;t get into details here but the latest internal version we never actually released was IMO a thing of beauty.</p>
@@ -3860,7 +3860,7 @@ typedef const struct stuff_s stuff_t;
 <p>The problem with that was that a kd-forest is a rather large datastructure. In our case it occupied hundreds of MB of RAM and took about one minute to generate. That was OK with Oak, where it was shared between threads, but with Acorn that overhead had to be paid for every process, both in space and time. We had to find a way to share the kd-forest across Acorn nodes on the same machine, and if possible to make startup faster.</p>
 <p>The solution I opted for was to rewrite the whole quantizer. Previously we had been using popular Open Source libraries for this, but they didn&#8217;t do what I wanted.</p>
 <p>I wrote the kd-forest generation algorithm as a <a href="http://luajit.org/">LuaJIT</a> program. It was the first Lua program officially used in production at Moodstocks, although as you will see it was only run offline. What it does is take centroids as input, generate a kd-forest and serialize it in a way easily readable in C thanks to the FFI. It can also actually perform nearest-neighbor searches but this is only used for test purpose.</p>
-<p>Once the kd-forest is serialized, it can be loaded into <a href="http://beej.us/guide/bgipc/output/html/multipage/shm.html">system shared memory</a> quite fast. A C library can then be used in every Acorn process to access this shared memory read-only and perform nearest-neighbor searches.</p>
+<p>Once the kd-forest is serialized, it can be loaded into <a href="https://beej.us/guide/bgipc/html/#shm">system shared memory</a> quite fast. A C library can then be used in every Acorn process to access this shared memory read-only and perform nearest-neighbor searches.</p>
 <p>The idea is simple once you stop under-estimating the capabilities of SHM on Linux. By default it usually limited to a few MB so you have to increase it a lot for this to work (it can be done with <a href="http://linux.die.net/man/8/sysctl">sysctl</a>). The implementation, on the other hand, is far from trivial. My code uses a <strong>lot</strong> of pointer arithmetics, I should probably clean it up someday, but in the meantime it does its job perfectly.</p>
 </section>
 <section id="Seed">
@@ -3873,9 +3873,9 @@ typedef const struct stuff_s stuff_t;
 </section>
 <section id="chksrv-and-chkcoherence">
 <h2>chksrv and chkcoherence</h2>
-<p>Moodstocks&#8217; server-side architecture is <a href="/2013-01-02-startups-soa.html">some kind of SOA</a>. That means we have a lot of different services that run as daemons and need to stay up. chksrv is a medium-sized program in Bash that takes care of this. It is deployed on every instance with a configuration file that indicates which services should be running on that instance, and it makes sure that they are (correctly). It also checks if other instances are up. If something goes wrongs, it warns the &#8220;ops team&#8221;, who is basically me and Cédric as a backup in case I am not available.</p>
+<p>Moodstocks&#8217; server-side architecture is <a href="https://blog.separateconcerns.com/2013-01-02-startups-soa.html">some kind of SOA</a>. That means we have a lot of different services that run as daemons and need to stay up. chksrv is a medium-sized program in Bash that takes care of this. It is deployed on every instance with a configuration file that indicates which services should be running on that instance, and it makes sure that they are (correctly). It also checks if other instances are up. If something goes wrongs, it warns the &#8220;ops team&#8221;, who is basically me and Cédric as a backup in case I am not available.</p>
 <p>chksrv is a very useful piece of software but I was a bit worried by its growth as we added services. Standardizing the way we deamonize processes helped a lot with that by increasing code reuse (thank you <a href="http://libslack.org/">libslack</a>).</p>
-<p>chkcoherence is the ideal complement to chksrv: where the latter checks if services are running, the former verifies that they are doing things right. It is also written in Bash at the top level. I have already written about its concept <a href="/2013-05-28-coherence-checks.html">here</a>.</p>
+<p>chkcoherence is the ideal complement to chksrv: where the latter checks if services are running, the former verifies that they are doing things right. It is also written in Bash at the top level. I have already written about its concept <a href="https://blog.separateconcerns.com/2013-05-28-coherence-checks.html">here</a>.</p>
 </section>
 <section id="Anemone">
 <h2>Anemone</h2>
@@ -3897,7 +3897,7 @@ generate weekly reports per application and email them to our platform customers
 generate custom reports tailored to the needs of our enterprise customers.
 </li>
 </ul>
-<p>It also has a web-based dashboard for the team with high-level KPI, written in JavaScript and <a href="http://code.google.com/p/flot/">flot</a>. Someday I might integrate Brett Slatkin&#8217;s <a href="http://bslatkin.github.com/cohorts/">Cohort Visualizer</a> into it.</p>
+<p>It also has a web-based dashboard for the team with high-level KPI, written in JavaScript and <a href="http://code.google.com/p/flot/">flot</a>. Someday I might integrate Brett Slatkin&#8217;s <a href="https://bslatkin.github.io/cohorts/">Cohort Visualizer</a> into it.</p>
 </section>
 <section id="Dandelion">
 <h2>Dandelion</h2>
@@ -4396,7 +4396,7 @@ to the tablets of the attendees. Computation jumping from my desktop computer at
 <p>Maintenant, pourquoi la neutralité du Net est-elle si importante ? Parce que c&#8217;est ce qui lui permet de garantir des droits fondamentaux tels que la liberté d&#8217;expression (c&#8217;est pas moi qui le dit, <a href="http://www.conseil-constitutionnel.fr/conseil-constitutionnel/francais/les-decisions/acces-par-date/decisions-depuis-1959/2009/2009-580-dc/decision-n-2009-580-dc-du-10-juin-2009.42666.html">c&#8217;est le Conseil Constitutionnel</a>) ou la libre concurrence, et aussi parce que c&#8217;est parce qu&#8217;Internet est neutre qu&#8217;il peut fonctionner, techniquement et d&#8217;un point de vue diplomatique. Simplement parce que si on commence à dire qu&#8217;Internet n&#8217;est plus neutre (ou ouvert, c&#8217;est à peu près équivalent), alors c&#8217;est qu&#8217;<a href="http://twitter.com/timoreilly/status/7924286619">on en laisse le contrôle à quelqu&#8217;un</a>, et les autres ne
 risquent pas d&#8217;être d&#8217;accord.</p>
 <p>Alors évidemment, il y en a que ça tenterait bien de contrôler Internet. On l&#8217;a vu, la neutralité va plus loin que l&#8217;absence de censure, mais elle l&#8217;inclut, et c&#8217;est bien de cela qu&#8217;il est question quand on vous parle de <a href="http://www.generation-nt.com/loppsi-filtrage-net-juge-tardy-actualite-951391.html">filtrage</a>. Bien entendu, le gouvernement et leurs amis des médias vous diront qu&#8217;ils cherchent à empêcher les méchants terroristes et leurs comparses pédophiles de nuire, parce qu&#8217;ils ne vont pas vous dire ouvertement qu&#8217;ils veulent juste reprendre le contrôle de l&#8217;information. Demandez donc à M. Chang ce qu&#8217;il en pense !</p>
-<p>Donc non, la neutralité du Net n&#8217;est <a href="http://www.youtube.com/watch?v=mP01t0Z4Hr8">pas une obsession de libristes illuminés</a>, et les artistes qui la comprennent <a href="http://futureofmusic.org/files/FCCopeninternet2010.rem.pdf">n&#8217;en pensent pas ce qu&#8217;on voudrait bien nous faire croire</a>. La France, en la matière, est en train de nager à contre-courant ; elle finira par s&#8217;épuiser et couler si elle persiste.</p>
+<p>Donc non, la neutralité du Net n&#8217;est <a href="http://www.youtube.com/watch?v=mP01t0Z4Hr8">pas une obsession de libristes illuminés</a>, et les artistes qui la comprennent <a href="https://en.wikipedia.org/wiki/Future_of_Music_Coalition">n&#8217;en pensent pas ce qu&#8217;on voudrait bien nous faire croire</a>. La France, en la matière, est en train de nager à contre-courant ; elle finira par s&#8217;épuiser et couler si elle persiste.</p>
 <p>Pour conclure, un conseil : si vous voulez vous faire une idée sur le sujet, éteignez votre télévision, débranchez votre radio et oubliez les journaux. On ne juge pas les abus d&#8217;un état en prenant pour argent comptant sa propagande. Le seul endroit où l&#8217;on peut s&#8217;informer objectivement sur Internet en France, c&#8217;est le Net lui-même. Du moins, tant qu&#8217;il lui reste un semblant de liberté&#8230;</p>
 
       </div>
@@ -4558,13 +4558,13 @@ risquent pas d&#8217;être d&#8217;accord.</p>
         <p>Hier soir, j&#8217;ai joué à <a href="http://www.bigbluecup.com/yabb/index.php?topic=39327.0">Featherweight</a>, un bon petit jeu d&#8217;aventure indépendant qui se finit en quelques minutes. J&#8217;ai beaucoup apprécié, et ça m&#8217;a fait réaliser que ça faisait longtemps que je n&#8217;avais pas fait quelque chose du genre. La raison ? Je suis atteint d&#8217;un syndrome qui touche beaucoup de gens de ma génération : je passe la plupart de mon temps libre à faire des choses inintéressantes sur mon PC. Du coup, je ne fais plus un certain nombre de choses que je faisais avant et qui me plaisaient beaucoup, comme jouer à des jeux vidéos ou coder pour moi, et ça me manque. C&#8217;est grave docteur, ça se soigne ? À mon avis oui, mais il va falloir reprendre les choses en main et supprimer un certain nombre de distractions.</p>
 <p>Heureusement, le principal danger est évité : je gère à peu près bien ma messagerie instantanée. Je n&#8217;ai jamais utilisé de réseau type MSN, et je vais beaucoup moins sur IRC depuis que <a href="http://phraktured.net/becoming-a-morning-person.html#comment-6120694">phrakture me l&#8217;a conseillé</a>. J&#8217;ai ajouté un peu trop de contacts dans Skype à mon goût, mais ça reste gérable. Je me suis aussi désinscrit de la plupart des mailing-lists de Télécom qui me prenaient pas mal de temps à lire, et j&#8217;ai délaissé identi.ca (un twitter-like libre). Par contre, je fais un paquet de choses inutiles par habitude, que je vais arrêter immédiatement.</p>
 <p>D&#8217;abord, lire les nouveaux messages sur le forum anglophone d&#8217;Arch Linux. Il y en a beaucoup trop maintenant, plusieurs centaines par jour, ça n&#8217;est plus gérable. Je continuerai à lire ceux du forum francophone de temps en temps pour l&#8217;instant.</p>
-<p>Ensuite, jouer à des jeux en ligne, du genre de ceux publiés par <a href="http://www.motion-twin.com/">Motion Twin</a>. Jouer à des jeux vidéos n&#8217;est pas forcément mauvais, c&#8217;est jouer à des jeux sans fin le problème (MMORPG, jeux Flash, etc). Je vais faire une exception de <a href="http://www.shinobi.fr/">Shinobi</a> pour l&#8217;instant parce que je m&#8217;y suis pas mal impliqué et qu&#8217;il ne me prend pas beaucoup de temps.</p>
+<p>Ensuite, jouer à des jeux en ligne, du genre de ceux publiés par <a href="http://www.motion-twin.com/">Motion Twin</a>. Jouer à des jeux vidéos n&#8217;est pas forcément mauvais, c&#8217;est jouer à des jeux sans fin le problème (MMORPG, jeux Flash, etc). Je vais faire une exception de <a href="https://www.shinobi.fr">Shinobi</a> pour l&#8217;instant parce que je m&#8217;y suis pas mal impliqué et qu&#8217;il ne me prend pas beaucoup de temps.</p>
 <p>Enfin, j&#8217;arrêterai de suivre <a href="http://www.tuxmachines.org/">Tuxmachines</a> ainsi que les liens lorsque je lis un article ou, pire, les suggestions de Youtube quand je regarde une vidéo.</p>
 <p>J&#8217;évaluerai l&#8217;efficacité de ces mesures dans environ deux semaines. Si ça ne suffit pas, j&#8217;en prendrai d&#8217;autres.</p>
 <p>Je commencerai par supprimer de mes contacts Facebook tous les gens qui ne sont pas des amis proches, surtout ceux qui spamment avec des quiz débiles (SVP, stop).</p>
 <p>Je supprimerai des RSS de mon lecteur de news. Certes, le RSS, c&#8217;est du push, donc bon pour la productivité, mais trop de webcomic tue le webcomic, et pareil pour l&#8217;actualité technologique.</p>
 <p>J&#8217;arrêterai Shinobi, le forum archlinux.fr et je me désinscrirai de presque toutes les mailing-lists auxquelles je suis abonné.</p>
-<p>C&#8217;est un peu violent, certes, mais je pense que j&#8217;y gagnerai beaucoup. Et si jamais tout ça ne suffit pas, j&#8217;ai bien encore des idées comme utiliser un navigateur, un client mail et un lecteur de flux RSS en mode texte seulement, mais j&#8217;espère bien ne pas en arriver à de telles extrémités, pourtant courantes chez les gens adeptes du worse is better. Je n&#8217;irai quand même pas jusqu&#8217;à faire comme Knuth, qui <a href="http://www-cs-faculty.stanford.edu/%7Euno/email.html">n&#8217;utilise pas l&#8217;email</a>&#8230;</p>
+<p>C&#8217;est un peu violent, certes, mais je pense que j&#8217;y gagnerai beaucoup. Et si jamais tout ça ne suffit pas, j&#8217;ai bien encore des idées comme utiliser un navigateur, un client mail et un lecteur de flux RSS en mode texte seulement, mais j&#8217;espère bien ne pas en arriver à de telles extrémités, pourtant courantes chez les gens adeptes du worse is better. Je n&#8217;irai quand même pas jusqu&#8217;à faire comme Knuth, qui <a href="https://www-cs-faculty.stanford.edu/~knuth/email.html">n&#8217;utilise pas l&#8217;email</a>&#8230;</p>
 <p>J&#8217;espère en tout cas que tout ça me permettra de gagner en productivité et en temps libre pour faire des choses utiles et/ou qui me plaisent plus.</p>
 
       </div>

@@ -7,7 +7,7 @@ I have mostly listed SaaS tools here, but you can also check out the ~stack tag 
 
 I have also added a section at the end for some tools I use for my own projects.
 
-=> https://acrossapp.com/blog/how-a-2-person-startup-already-uses-28-other-tools 1: https://acrossapp.com/blog/how-a-2-person-startup-already-uses-28-other-tools
+=> https://medium.com/@kunaljasty/how-a-2-person-startup-already-uses-26-other-tools-318da014cf38 1: https://medium.com/@kunaljasty/how-a-2-person-startup-already-uses-26-other-tools-318da014cf38
 => https://pinboard.in/u:catwell/t:~stack/ 2: https://pinboard.in/u:catwell/t:~stack/
 
 # Moodstocks (2010 - 2013)
@@ -40,182 +40,181 @@ I have also added a section at the end for some tools I use for my own projects.
 
 * GSuite [14] - E-mail & Calendar
 * GitHub [15] - Code hosting, issues & PM
-* Flowdock [16] then Slack [17] - Chat
-* Lucca [18] then Payfit [19]
-* Segment [20] - Customer workflows
-* customer.io [21] - Customer base, emailing
-* Zendesk [22] - Customer support
-* Invision [23] - Design work
-* OneSky [24] - App translation
-* Talent.io [25] - Hiring
-* Gandi [26] - DNS
-* Datadog [27] - Monitoring
-* Uptime Robot [28] - Alerting
-* Pushover [29] - Alerting
-* Sentry [30] - Error monitoring
-* AppVeyor [31] - Windows build & CI
-* Travis [32] - Build & CI
-* Firebase [33] (Fabric [34]...)
-* AWS [35] (+ many others including OVH [36] and Scaleway [37]) - Hosting
-* Sendgrid [38] - Transactional e-mails
-* Cloudflare [39] - CDN
+* Flowdock then Slack [16] - Chat
+* Lucca [17] then Payfit [18]
+* Segment [19] - Customer workflows
+* customer.io [20] - Customer base, emailing
+* Zendesk [21] - Customer support
+* Invision [22] - Design work
+* OneSky [23] - App translation
+* Talent.io [24] - Hiring
+* Gandi [25] - DNS
+* Datadog [26] - Monitoring
+* Uptime Robot [27] - Alerting
+* Pushover [28] - Alerting
+* Sentry [29] - Error monitoring
+* AppVeyor [30] - Windows build & CI
+* Travis [31] - Build & CI
+* Firebase [32] (Fabric [33]...)
+* AWS [34] (+ many others including OVH [35] and Scaleway [36]) - Hosting
+* Sendgrid [37] - Transactional e-mails
+* Cloudflare [38] - CDN
 
 => https://gsuite.google.com 14: https://gsuite.google.com
 => https://github.com 15: https://github.com
-=> https://www.flowdock.com 16: https://www.flowdock.com
-=> https://slack.com 17: https://slack.com
-=> https://www.lucca.fr 18: https://www.lucca.fr
-=> https://payfit.com 19: https://payfit.com
-=> https://segment.com 20: https://segment.com
-=> https://customer.io 21: https://customer.io
-=> https://www.zendesk.com 22: https://www.zendesk.com
-=> https://www.invisionapp.com 23: https://www.invisionapp.com
-=> https://www.oneskyapp.com 24: https://www.oneskyapp.com
-=> https://www.talent.io 25: https://www.talent.io
-=> https://gandi.net 26: https://gandi.net
-=> https://www.datadoghq.com 27: https://www.datadoghq.com
-=> https://uptimerobot.com 28: https://uptimerobot.com
-=> https://pushover.net 29: https://pushover.net
-=> https://sentry.io 30: https://sentry.io
-=> https://www.appveyor.com 31: https://www.appveyor.com
-=> https://travis-ci.com 32: https://travis-ci.com
-=> https://firebase.google.com/ 33: https://firebase.google.com/
-=> https://get.fabric.io 34: https://get.fabric.io
-=> https://aws.amazon.com 35: https://aws.amazon.com
-=> https://www.ovh.com 36: https://www.ovh.com
-=> https://www.scaleway.com 37: https://www.scaleway.com
-=> https://sendgrid.com 38: https://sendgrid.com
-=> https://www.cloudflare.com 39: https://www.cloudflare.com
+=> https://slack.com 16: https://slack.com
+=> https://www.lucca.fr 17: https://www.lucca.fr
+=> https://payfit.com 18: https://payfit.com
+=> https://segment.com 19: https://segment.com
+=> https://customer.io 20: https://customer.io
+=> https://www.zendesk.com 21: https://www.zendesk.com
+=> https://www.invisionapp.com 22: https://www.invisionapp.com
+=> https://www.oneskyapp.com 23: https://www.oneskyapp.com
+=> https://www.talent.io 24: https://www.talent.io
+=> https://gandi.net 25: https://gandi.net
+=> https://www.datadoghq.com 26: https://www.datadoghq.com
+=> https://uptimerobot.com 27: https://uptimerobot.com
+=> https://pushover.net 28: https://pushover.net
+=> https://sentry.io 29: https://sentry.io
+=> https://www.appveyor.com 30: https://www.appveyor.com
+=> https://travis-ci.com 31: https://travis-ci.com
+=> https://firebase.google.com/ 32: https://firebase.google.com/
+=> https://get.fabric.io 33: https://get.fabric.io
+=> https://aws.amazon.com 34: https://aws.amazon.com
+=> https://www.ovh.com 35: https://www.ovh.com
+=> https://www.scaleway.com 36: https://www.scaleway.com
+=> https://sendgrid.com 37: https://sendgrid.com
+=> https://www.cloudflare.com 38: https://www.cloudflare.com
 
 # Chilli (eFounders, 2019)
 
-* GSuite [40] - E-mail, Calendar, Drive
-* GitHub [41] - Code hosting
-* Slack [42] - Chat
-* Slite [43] - EDM
-* Airtable [44] - Process modeling
-* Pipedrive [45] - CRM
-* Trello [46] - PM
-* Payfit [47] - Payroll, Leaves & absences
-* Spendesk [48] - Expenses
-* Zoom [49] - Video calls
-* Intercom [50] - Lead acquisition
-* Aircall [51] - Centralized phone calls
-* Moqups [52] - Design work
-* Invision [53] - Design work
-* Google Analytics [54] - Analytics
-* Squarespace [55] - Blog
-* 1Password [56] - Team password management
-* Codility [57] - Hiring (screening)
-* Hiresweet [58] - Hiring (sourcing)
-* Workable [59] - Hiring
-* Gandi [60] - DNS
-* Uptime Robot [61] - Alerting
-* AWS [62] - Hosting
-* Mailjet [63] - Transactional e-mails
+* GSuite [39] - E-mail, Calendar, Drive
+* GitHub [40] - Code hosting
+* Slack [41] - Chat
+* Slite [42] - EDM
+* Airtable [43] - Process modeling
+* Pipedrive [44] - CRM
+* Trello [45] - PM
+* Payfit [46] - Payroll, Leaves & absences
+* Spendesk [47] - Expenses
+* Zoom [48] - Video calls
+* Intercom [49] - Lead acquisition
+* Aircall [50] - Centralized phone calls
+* Moqups [51] - Design work
+* Invision [52] - Design work
+* Google Analytics [53] - Analytics
+* Squarespace [54] - Blog
+* 1Password [55] - Team password management
+* Codility [56] - Hiring (screening)
+* Hiresweet [57] - Hiring (sourcing)
+* Workable [58] - Hiring
+* Gandi [59] - DNS
+* Uptime Robot [60] - Alerting
+* AWS [61] - Hosting
+* Mailjet [62] - Transactional e-mails
 
-=> https://gsuite.google.com 40: https://gsuite.google.com
-=> https://github.com 41: https://github.com
-=> https://slack.com 42: https://slack.com
-=> https://slite.com 43: https://slite.com
-=> https://airtable.com 44: https://airtable.com
-=> https://www.pipedrive.com 45: https://www.pipedrive.com
-=> https://trello.com 46: https://trello.com
-=> https://payfit.com 47: https://payfit.com
-=> https://www.spendesk.com 48: https://www.spendesk.com
-=> https://zoom.us 49: https://zoom.us
-=> https://www.intercom.com 50: https://www.intercom.com
-=> https://aircall.io 51: https://aircall.io
-=> https://moqups.com 52: https://moqups.com
-=> https://www.invisionapp.com 53: https://www.invisionapp.com
-=> https://analytics.google.com 54: https://analytics.google.com
-=> https://www.squarespace.com 55: https://www.squarespace.com
-=> https://1password.com 56: https://1password.com
-=> https://codility.com 57: https://codility.com
-=> https://hiresweet.com 58: https://hiresweet.com
-=> https://www.workable.com 59: https://www.workable.com
-=> https://gandi.net 60: https://gandi.net
-=> https://uptimerobot.com 61: https://uptimerobot.com
-=> https://aws.amazon.com 62: https://aws.amazon.com
-=> https://www.mailjet.com 63: https://www.mailjet.com
+=> https://gsuite.google.com 39: https://gsuite.google.com
+=> https://github.com 40: https://github.com
+=> https://slack.com 41: https://slack.com
+=> https://slite.com 42: https://slite.com
+=> https://airtable.com 43: https://airtable.com
+=> https://www.pipedrive.com 44: https://www.pipedrive.com
+=> https://trello.com 45: https://trello.com
+=> https://payfit.com 46: https://payfit.com
+=> https://www.spendesk.com 47: https://www.spendesk.com
+=> https://zoom.us 48: https://zoom.us
+=> https://www.intercom.com 49: https://www.intercom.com
+=> https://aircall.io 50: https://aircall.io
+=> https://moqups.com 51: https://moqups.com
+=> https://www.invisionapp.com 52: https://www.invisionapp.com
+=> https://analytics.google.com 53: https://analytics.google.com
+=> https://www.squarespace.com 54: https://www.squarespace.com
+=> https://1password.com 55: https://1password.com
+=> https://codility.com 56: https://codility.com
+=> https://hiresweet.com 57: https://hiresweet.com
+=> https://www.workable.com 58: https://www.workable.com
+=> https://gandi.net 59: https://gandi.net
+=> https://uptimerobot.com 60: https://uptimerobot.com
+=> https://aws.amazon.com 61: https://aws.amazon.com
+=> https://www.mailjet.com 62: https://www.mailjet.com
 
 # Inch (2019 - 2023)
 
-* Google Workspace [64] - E-mail, Calendar, Drive
-* GitHub [65] - Code hosting & issues
-* Slack [66] - Chat
-* Notion [67] - EDM
-* Hubspot [68] - CRM
-* Payfit [69] (previously Lucca [70]) - Payroll, Leaves & absences
-* Mixpanel [71] - Analytics
-* Intercom [72] - Customer support
-* Aircall [73] - Centralized phone calls
-* Uptime Robot [74] - Alerting
-* Rollbar [75] - Error monitoring (backend)
-* Sentry [76] - Error monitoring (frontend)
-* Scout [77] - APM
-* GCP [78] (+ OVH [79]) - Hosting
-* Mandrill [80] - Transactional e-mails
-* Xero [81] - Accounting
-* Postman [82] - API documentation
-* Pipefy [83] - Customer lifecyce
-* Vonage [84] and smsmode [85] - Transactional SMS
+* Google Workspace [63] - E-mail, Calendar, Drive
+* GitHub [64] - Code hosting & issues
+* Slack [65] - Chat
+* Notion [66] - EDM
+* Hubspot [67] - CRM
+* Payfit [68] (previously Lucca [69]) - Payroll, Leaves & absences
+* Mixpanel [70] - Analytics
+* Intercom [71] - Customer support
+* Aircall [72] - Centralized phone calls
+* Uptime Robot [73] - Alerting
+* Rollbar [74] - Error monitoring (backend)
+* Sentry [75] - Error monitoring (frontend)
+* Scout [76] - APM
+* GCP [77] (+ OVH [78]) - Hosting
+* Mandrill [79] - Transactional e-mails
+* Xero [80] - Accounting
+* Postman [81] - API documentation
+* Pipefy [82] - Customer lifecyce
+* Vonage [83] and smsmode [84] - Transactional SMS
 
-=> https://workspace.google.com 64: https://workspace.google.com
-=> https://github.com 65: https://github.com
-=> https://slack.com 66: https://slack.com
-=> https://www.notion.so 67: https://www.notion.so
-=> https://www.hubspot.fr 68: https://www.hubspot.fr
-=> https://payfit.com 69: https://payfit.com
-=> https://www.lucca.fr 70: https://www.lucca.fr
-=> https://mixpanel.com 71: https://mixpanel.com
-=> https://www.intercom.com 72: https://www.intercom.com
-=> https://aircall.io 73: https://aircall.io
-=> https://uptimerobot.com 74: https://uptimerobot.com
-=> https://rollbar.com 75: https://rollbar.com
-=> https://sentry.io 76: https://sentry.io
-=> https://scoutapm.com 77: https://scoutapm.com
-=> https://cloud.google.com 78: https://cloud.google.com
-=> https://www.ovh.com 79: https://www.ovh.com
-=> https://mandrillapp.com 80: https://mandrillapp.com
-=> https://www.xero.com 81: https://www.xero.com
-=> https://www.postman.com 82: https://www.postman.com
-=> https://www.pipefy.com 83: https://www.pipefy.com
-=> https://www.vonage.com 84: https://www.vonage.com
-=> https://www.smsmode.com/ 85: https://www.smsmode.com/
+=> https://workspace.google.com 63: https://workspace.google.com
+=> https://github.com 64: https://github.com
+=> https://slack.com 65: https://slack.com
+=> https://www.notion.so 66: https://www.notion.so
+=> https://www.hubspot.fr 67: https://www.hubspot.fr
+=> https://payfit.com 68: https://payfit.com
+=> https://www.lucca.fr 69: https://www.lucca.fr
+=> https://mixpanel.com 70: https://mixpanel.com
+=> https://www.intercom.com 71: https://www.intercom.com
+=> https://aircall.io 72: https://aircall.io
+=> https://uptimerobot.com 73: https://uptimerobot.com
+=> https://rollbar.com 74: https://rollbar.com
+=> https://sentry.io 75: https://sentry.io
+=> https://scoutapm.com 76: https://scoutapm.com
+=> https://cloud.google.com 77: https://cloud.google.com
+=> https://www.ovh.com 78: https://www.ovh.com
+=> https://mandrillapp.com 79: https://mandrillapp.com
+=> https://www.xero.com 80: https://www.xero.com
+=> https://www.postman.com 81: https://www.postman.com
+=> https://www.pipefy.com 82: https://www.pipefy.com
+=> https://www.vonage.com 83: https://www.vonage.com
+=> https://www.smsmode.com/ 84: https://www.smsmode.com/
 
 # Finegrain (2023)
 
-* Google Workspace [86] - E-mail, Calendar, Drive
-* GitHub [87] - Code & documentation hosting
-* Linear [88] - Project management and issues
-* Slack [89] - Chat
-* Notion [90] - EDM
-* Uptime Robot [91] - Alerting
-* Sentry [92] - Error monitoring
-* Vercel [93] - Frontend platform
+* Google Workspace [85] - E-mail, Calendar, Drive
+* GitHub [86] - Code & documentation hosting
+* Linear [87] - Project management and issues
+* Slack [88] - Chat
+* Notion [89] - EDM
+* Uptime Robot [90] - Alerting
+* Sentry [91] - Error monitoring
+* Vercel [92] - Frontend platform
 
-=> https://workspace.google.com 86: https://workspace.google.com
-=> https://github.com 87: https://github.com
-=> https://linear.app 88: https://linear.app
-=> https://slack.com 89: https://slack.com
-=> https://www.notion.so 90: https://www.notion.so
-=> https://uptimerobot.com 91: https://uptimerobot.com
-=> https://sentry.io 92: https://sentry.io
-=> https://vercel.com 93: https://vercel.com
+=> https://workspace.google.com 85: https://workspace.google.com
+=> https://github.com 86: https://github.com
+=> https://linear.app 87: https://linear.app
+=> https://slack.com 88: https://slack.com
+=> https://www.notion.so 89: https://www.notion.so
+=> https://uptimerobot.com 90: https://uptimerobot.com
+=> https://sentry.io 91: https://sentry.io
+=> https://vercel.com 92: https://vercel.com
 
 # Personal
 
-* Fastmail [94] - Email
-* GitHub [95] - Code hosting
-* Pinboard [96] - Bookmarks
-* Gandi [97] - DNS
-* Uptime Robot [98] - Alerting
-* Vultr [99] - Hosting
+* Fastmail [93] - Email
+* GitHub [94] - Code hosting
+* Pinboard [95] - Bookmarks
+* Gandi [96] - DNS
+* Uptime Robot [97] - Alerting
+* Vultr [98] - Hosting
 
-=> https://www.fastmail.com 94: https://www.fastmail.com
-=> https://github.com 95: https://github.com
-=> https://pinboard.in 96: https://pinboard.in
-=> https://gandi.net 97: https://gandi.net
-=> https://uptimerobot.com 98: https://uptimerobot.com
-=> https://my.vultr.com 99: https://my.vultr.com
+=> https://www.fastmail.com 93: https://www.fastmail.com
+=> https://github.com 94: https://github.com
+=> https://pinboard.in 95: https://pinboard.in
+=> https://gandi.net 96: https://gandi.net
+=> https://uptimerobot.com 97: https://uptimerobot.com
+=> https://my.vultr.com 98: https://my.vultr.com

@@ -1,22 +1,20 @@
 # Iris
 published 2014-09-20
 
-Iris [1] is a "decentralized Cloud messaging" middleware that I have really started looking into with the recent release of version 0.3.0 [2]. It had struck me as interesting when I first heard of it at FOSDEM 2014 [3]. The reason for that, beyond the great presentation skills of its author, is that it implements principles I think are sound to build SOA upon.
+Iris [1] is a "decentralized Cloud messaging" middleware that I have really started looking into with the recent release of version 0.3.0. It had struck me as interesting when I first heard of it at FOSDEM 2014 [2]. The reason for that, beyond the great presentation skills of its author, is that it implements principles I think are sound to build SOA upon.
 
 In Iris, the logical and physical layers of services are cleanly separated. Each box in the system runs a local instance of the Iris broker ("Iris node"). The broker is written in Go, and all broker instances in the system converse in a proprietary protocol.
 
-To provide or consume a service, you never have to open a connection to a remote machine: you just talk to your local broker using the Iris relay protocol [4]. This means you can use any programming language you want as long as you implement this protocol, which is much simpler than the protocol used between brokers. There are official clients for the relay protocol (Iris calls them "bindings", but I think that name is confusing) in Go, Erlang and Java. I have written one in Lua [5] that I will use for examples in the rest of this post (if you prefer, you will find corresponding code in Go for most examples here [6]).
+To provide or consume a service, you never have to open a connection to a remote machine: you just talk to your local broker using the Iris relay protocol. This means you can use any programming language you want as long as you implement this protocol, which is much simpler than the protocol used between brokers. There are official clients for the relay protocol (Iris calls them "bindings", but I think that name is confusing) in Go, Erlang and Java. I have written one in Lua [3] that I will use for examples in the rest of this post (if you prefer, you will find corresponding code in Go for most examples here [4]).
 
 In Iris, services are represented by names. To provide a service you register with its name, to consume one you address it by its name. That means you never dial into a specific instance of a service explicitly. From the consumer's point of view, the service could be provided by a single box as well as hundreds across different datacenters. Boxes can go up or down, and you will almost never have to care about it when writing code: it is an operational concern. The way Iris' author puts it is that in Iris the smallest logical entity is a cluster, there is no concept of individual machine or process.
 
 Iris supports three usual basic patterns for communication: Request/Response, Publish/Subscribe and Broadcast. A fourth one, Tunnel, is slightly more complicated.
 
-=> http://iris.karalabe.com/ 1: http://iris.karalabe.com/
-=> http://iris.karalabe.com/archive/2014/version_v0_3_0_shiny_stable_apis 2: http://iris.karalabe.com/archive/2014/version_v0_3_0_shiny_stable_apis
-=> https://www.youtube.com/watch?v=WTRORimPvHE 3: https://www.youtube.com/watch?v=WTRORimPvHE
-=> https://dl.dropboxusercontent.com/u/10435909/Iris/relay.pdf 4: https://dl.dropboxusercontent.com/u/10435909/Iris/relay.pdf
-=> https://github.com/catwell/iris-lua 5: https://github.com/catwell/iris-lua
-=> https://github.com/catwell/iris-lua/tree/master/eFxamples 6: https://github.com/catwell/iris-lua/tree/master/eFxamples
+=> https://github.com/project-iris/iris 1: https://github.com/project-iris/iris
+=> https://www.youtube.com/watch?v=WTRORimPvHE 2: https://www.youtube.com/watch?v=WTRORimPvHE
+=> https://github.com/catwell/cw-lua/tree/master/iris-lua 3: https://github.com/catwell/cw-lua/tree/master/iris-lua
+=> https://github.com/catwell/cw-lua/tree/2e74fcb3546ac4ef1a2f659e8012ff8a78fa7a36/iris-lua/examples 4: https://github.com/catwell/cw-lua/tree/2e74fcb3546ac4ef1a2f659e8012ff8a78fa7a36/iris-lua/examples
 
 # Request/Response
 
@@ -231,10 +229,9 @@ c:teardown()
 
 Iris is a very interesting piece of software which implements a vision of systems that I like and cannot find in any other product out of the box. It is still very young and probably not ready for serious production yet, although I have found it stable during the (limited) testing I have done. Even though my current job does not involve SOA I will probably come back to it someday, so Iris will join the list of tools whose progress I follow attentively.
 
-On a side note, Iris was built for its authors' thesis, and he is now looking for a sponsor [7] to allow him to continue working on it. If you have the power to make that happen, give it a look. Think how VMWare / Pivotal must be happy of the deal they did with Antirez [8] :)
+On a side note, Iris was built for its authors' thesis, and he is now looking for a sponsor to allow him to continue working on it. If you have the power to make that happen, give it a look. Think how VMWare / Pivotal must be happy of the deal they did with Antirez [5] :)
 
-Finally, if you try my Iris client [9] and find bugs, do not hesitate to report them on Github! I have no real world Iris system to try it on so there are certainly plenty.
+Finally, if you try my Iris client [6] and find bugs, do not hesitate to report them on Github! I have no real world Iris system to try it on so there are certainly plenty.
 
-=> http://iris.karalabe.com/archive/2014/core_concepts_at_dotscale 7: http://iris.karalabe.com/archive/2014/core_concepts_at_dotscale
-=> http://invece.org/ 8: http://invece.org/
-=> https://github.com/catwell/iris-lua 9: https://github.com/catwell/iris-lua
+=> http://invece.org/ 5: http://invece.org/
+=> https://github.com/catwell/iris-lua 6: https://github.com/catwell/iris-lua

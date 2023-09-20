@@ -38,13 +38,13 @@ The idea of Nix is that a package is the output of a function provided with some
 
 ## [Iris Decentralized Messaging](https://fosdem.org/2014/schedule/event/iris_decentralized_messaging/) (Péter Szilágyi)
 
-[Iris](http://iris.karalabe.com/) is a messaging backend written in Go but with a language-agnostic interface. It is somehow similar 0MQ but goes further by removing the notion of a specific instance or process in favor of sets of those. Each machine runs a single daemon that does all the heavy lifting, and each client connects to it locally to interact with the system.
+[Iris](https://github.com/project-iris/iris) is a messaging backend written in Go but with a language-agnostic interface. It is somehow similar 0MQ but goes further by removing the notion of a specific instance or process in favor of sets of those. Each machine runs a single daemon that does all the heavy lifting, and each client connects to it locally to interact with the system.
 
 This is a very interesting project and I was a bit surprised I had never heard about it until now. The slides and live demos were also really good, with multiple Go code snippets running concurrently in a browser. Oh, and Gopher drawings!
 
 ## [Camlistore](https://fosdem.org/2014/schedule/event/camlistore/) (Brad Fitzpatrick and Mathieu Lonjaret)
 
-The speakers showed off what the latest release of [Camlistore](http://camlistore.org/), a personal file storage system, can do. I already knew and liked the technical design of the project, but I was impressed by the progress made on usability since Brad's talk at dotScale 2013. They have a new Web UI which is not complete yet but looks very promising. I really have to install my own node someday.
+The speakers showed off what the latest release of [Camlistore](https://perkeep.org), a personal file storage system, can do. I already knew and liked the technical design of the project, but I was impressed by the progress made on usability since Brad's talk at dotScale 2013. They have a new Web UI which is not complete yet but looks very promising. I really have to install my own node someday.
 
 ## [Statically compiling Ruby with LLVM](https://fosdem.org/2014/schedule/event/llvmruby/) (Laurent Sansonetti)
 
@@ -52,7 +52,7 @@ A very interesting talk on LLVM and how it helps when statically compiling a (ve
 
 ## [What's new in OpenLDAP](https://fosdem.org/2014/schedule/event/whats_new_in_openldap/) (Howard Chu)
 
-This was, as I had hoped, mostly a talk about [LMDB](http://symas.com/mdb/). It confirmed what I already suspected: at least according to its author's benchmarks, it outperforms any kind of competition in this space (embedded key-value stores). It is also one of the rare NoSQL DBs to implement MVCC transactions, in less than 10000 lines of C code and 32 kB of object code. If there is a piece of Open Source software I think you should not have missed in 2013, it is this one.
+This was, as I had hoped, mostly a talk about [LMDB](https://www.symas.com/lmdb). It confirmed what I already suspected: at least according to its author's benchmarks, it outperforms any kind of competition in this space (embedded key-value stores). It is also one of the rare NoSQL DBs to implement MVCC transactions, in less than 10000 lines of C code and 32 kB of object code. If there is a piece of Open Source software I think you should not have missed in 2013, it is this one.
 
 ## [Persistent Memory: Changing the way we store data](https://fosdem.org/2014/schedule/event/persistent_memory/) (Ric Wheeler)
 

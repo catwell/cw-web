@@ -40,8 +40,8 @@ All the tools used in that article are available [5] as [6] packages [7] in the 
 => http://zbar.sourceforge.net 2: http://zbar.sourceforge.net
 => https://help.github.com/en/github/authenticating-to-github/configuring-two-factor-authentication 3: https://help.github.com/en/github/authenticating-to-github/configuring-two-factor-authentication
 => https://www.nongnu.org/oath-toolkit/oathtool.1.html 4: https://www.nongnu.org/oath-toolkit/oathtool.1.html
-=> https://www.archlinux.org/packages/community/any/pass/ 5: https://www.archlinux.org/packages/community/any/pass/
-=> https://www.archlinux.org/packages/community/x86_64/oath-toolkit/ 6: https://www.archlinux.org/packages/community/x86_64/oath-toolkit/
+=> https://archlinux.org/packages/extra/any/pass/ 5: https://archlinux.org/packages/extra/any/pass/
+=> https://archlinux.org/packages/extra/x86_64/oath-toolkit/ 6: https://archlinux.org/packages/extra/x86_64/oath-toolkit/
 => https://www.archlinux.org/packages/extra/x86_64/zbar/ 7: https://www.archlinux.org/packages/extra/x86_64/zbar/
 
 ## Complements

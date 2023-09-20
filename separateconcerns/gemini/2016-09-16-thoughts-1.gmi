@@ -55,7 +55,7 @@ The second document is the Zen of Palm [15], a design guide for Palm OS from 200
 => https://en.wikipedia.org/wiki/Mat%C3%ADas_Duarte 12: https://en.wikipedia.org/wiki/Mat%C3%ADas_Duarte
 => https://en.wikipedia.org/wiki/Mark_Hurd#Resignation 13: https://en.wikipedia.org/wiki/Mark_Hurd#Resignation
 => https://en.wikipedia.org/wiki/L%C3%A9o_Apotheker 14: https://en.wikipedia.org/wiki/L%C3%A9o_Apotheker
-=> designingmlearning.com/resources/ZenOfPalm.pdf 15: designingmlearning.com/resources/ZenOfPalm.pdf
+=> https://archive.org/details/zen-of-palm 15: https://archive.org/details/zen-of-palm
 
 ## Is preemption the root of all evil?
 

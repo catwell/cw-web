@@ -37,7 +37,7 @@
 <p>This document, by Mikito Takada (Trifacta), is longer than the others. It is the best short (meaning: not a whole course or book) introduction to distributed systems I know. In a nutshell, it expands on the ideas presented in the first two documents and gives you most of the necessary concepts and vocabulary to understand actual distributed systems papers, should you want to read them.</p>
 </section>
 <section id="Building-on-quicksand">
-<h2><a href="http://www-db.cs.wisc.edu/cidr/cidr2009/Paper_133.pdf">Building on quicksand</a></h2>
+<h2><a href="https://arxiv.org/abs/0909.1788">Building on quicksand</a></h2>
 <p>I could hardly leave that 2009 paper by Pat Helland and Dave Campbell out of this list. It starts with the idea that, as the distribution of systems increases, latency makes synchronicity intractable and pushes us towards asynchronous designs. The rest of the paper is a discussion of the trade-offs involved. The very interesting idea in that paper (also found in other papers by Pat Helland) is that it all comes down to a problem of risk management and reconciliation. If asynchronous software can not ensure something will happen, it may make a guess and fix the result later if it was wrong. That may include having to make excuses to an actual human being. An important corollary is that the distributed nature of software permeates <a href="http://bravenewgeek.com/distributed-systems-are-a-ux-problem/">all the way to the user interface</a> (which is why you may have seen me ranting about how we need to start forming cross-functional teams, with developers who understand UX and designers who get distributed systems).</p>
 </section>
 <section id="Bonus:-Why-Logical-Clocks-are-Easy">

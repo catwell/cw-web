@@ -20,7 +20,7 @@ However, I would like to see more research and experiments with e-voting. I thin
 => http://binaire.blog.lemonde.fr/2015/01/19/quest-ce-quun-bon-systeme-de-vote/ 3: http://binaire.blog.lemonde.fr/2015/01/19/quest-ce-quun-bon-systeme-de-vote/
 => http://binaire.blog.lemonde.fr/2015/01/29/le-vote-papier-est-il-reellement-plus-sur-que-lelectronique/ 4: http://binaire.blog.lemonde.fr/2015/01/29/le-vote-papier-est-il-reellement-plus-sur-que-lelectronique/
 => http://binaire.blog.lemonde.fr/2015/03/16/les-bonnes-proprietes-dun-systeme-de-vote-electronique/ 5: http://binaire.blog.lemonde.fr/2015/03/16/les-bonnes-proprietes-dun-systeme-de-vote-electronique/
-=> http://belenios.gforge.inria.fr/ 6: http://belenios.gforge.inria.fr/
+=> https://www.belenios.org 6: https://www.belenios.org
 => https://github.com/glondu/belenios 7: https://github.com/glondu/belenios
 => http://www.loria.fr/~cortier/Belenios.pdf 8: http://www.loria.fr/~cortier/Belenios.pdf
 => http://stephane.glondu.net/ 9: http://stephane.glondu.net/

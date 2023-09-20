@@ -26,6 +26,6 @@ J'espère en tout cas que tout ça me permettra de gagner en productivité et en
 => http://www.bigbluecup.com/yabb/index.php?topic=39327.0 1: http://www.bigbluecup.com/yabb/index.php?topic=39327.0
 => http://phraktured.net/becoming-a-morning-person.html#comment-6120694 2: http://phraktured.net/becoming-a-morning-person.html#comment-6120694
 => http://www.motion-twin.com/ 3: http://www.motion-twin.com/
-=> http://www.shinobi.fr/ 4: http://www.shinobi.fr/
+=> https://www.shinobi.fr 4: https://www.shinobi.fr
 => http://www.tuxmachines.org/ 5: http://www.tuxmachines.org/
-=> http://www-cs-faculty.stanford.edu/%7Euno/email.html 6: http://www-cs-faculty.stanford.edu/%7Euno/email.html
+=> https://www-cs-faculty.stanford.edu/~knuth/email.html 6: https://www-cs-faculty.stanford.edu/~knuth/email.html

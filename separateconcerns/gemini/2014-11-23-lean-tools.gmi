@@ -27,13 +27,13 @@ I chose a third solution: returning raw YAML to the user [11]. Yes, this is "pus
 
 Eventually, this is a matter of choice. Avdi is right: fat tools usually exist for good reasons, not because their authors did not think of a simpler solution. Choosing whether to use them or not has to be a conscious trade-off. I just personally decided there are very few things I want to trade simplicity off against.
 
-=> http://about.avdi.org/ 1: http://about.avdi.org/
+=> https://avdi.codes/about/ 1: https://avdi.codes/about/
 => http://soveran.com/ 2: http://soveran.com/
 => http://devblog.avdi.org/2014/11/21/in-defense-of-fat-tools/ 3: http://devblog.avdi.org/2014/11/21/in-defense-of-fat-tools/
-=> http://devchat.tv/ruby-rogues/182-rr-keeping-libraries-and-utilities-small-and-simple-with-michel-martens 4: http://devchat.tv/ruby-rogues/182-rr-keeping-libraries-and-utilities-small-and-simple-with-michel-martens
+=> https://topenddevs.com/podcasts/ruby-rogues/episodes/182-rr-keeping-libraries-and-utilities-small-and-simple-with-michel-martens 4: https://topenddevs.com/podcasts/ruby-rogues/episodes/182-rr-keeping-libraries-and-utilities-small-and-simple-with-michel-martens
 => https://github.com/soveran/ohm 5: https://github.com/soveran/ohm
 => http://files.catwell.info/notes/quotes.txt 6: http://files.catwell.info/notes/quotes.txt
-=> http://blog.jessitron.com/2014/03/weakness-and-vulnerability.html 7: http://blog.jessitron.com/2014/03/weakness-and-vulnerability.html
+=> https://jessitron.com/2014/03/20/weakness-and-vulnerability/ 7: https://jessitron.com/2014/03/20/weakness-and-vulnerability/
 => http://kr.github.io/beanstalkd/ 8: http://kr.github.io/beanstalkd/
 => https://github.com/catwell/haricot 9: https://github.com/catwell/haricot
 => http://yaml.org/spec/1.2/spec.html 10: http://yaml.org/spec/1.2/spec.html
