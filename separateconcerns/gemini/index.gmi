@@ -5,6 +5,7 @@
 => https://blog.separateconcerns.com Visit on the Web
 => gemini://catwell.info catwell.info
 
+=> 2024-02-07-fosdem.gmi 2024-02-07 - FOSDEM 2024
 => 2024-01-06-talos.gmi 2024-01-06 - The Talos Principle 2
 => 2023-10-21-automating-job.gmi 2023-10-21 - Automating myself out of a job?
 => 2023-09-11-linear-code.gmi 2023-09-11 - Linear code is more readable

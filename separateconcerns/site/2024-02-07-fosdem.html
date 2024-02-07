@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta name="description" content="I went to FOSDEM and saw those talks.">
+    <link rel="canonical" href="https://blog.separateconcerns.com/2024-02-07-fosdem.html">
+    <link href="css/theme.css?cache=1" rel="stylesheet" type="text/css">
+    <link
+      rel="alternate" type="application/atom+xml"
+      href="https://blog.separateconcerns.com/feed.atom"
+    />
+    <title>FOSDEM 2024</title>
+  </head>
+  <body>
+    <div id="container">
+    <header>
+      <h1>FOSDEM 2024</h1>
+      <h4>
+        published 2024-02-07
+        [ <a href="index.html">home</a> ]
+      </h4>
+    </header>
+    <p>Last weekend I attended my 12th <a href="https://fosdem.org/2024/">FOSDEM</a>, not counting the two years of &ldquo;remote FOSDEM&rdquo; due to COVID.</p>
+<p>For a few years now I&rsquo;ve been going less for the talks than to meet old acquaintances and make new ones. Still, I did see several interesting talks, and like <a href="https://blog.separateconcerns.com/2014-02-09-fosdem-2014.html">10 years ago</a> I decided to blog about them.</p>
+<blockquote>
+<p>Note: I saw other talks that were less interesting, I will not mention them.</p>
+</blockquote>
+<section id="Lightning-talks">
+<h2>Lightning talks</h2>
+<p>I started my Saturday with a series of lightning talks.</p>
+<section id="Problems-and-solutions-for-running-a-distributed-virtual-world-Vadim-Troshchinskiy-Shmelev">
+<h3><a href="https://fosdem.org/2024/schedule/event/fosdem-2024-2783-problems-and-solutions-for-running-a-distributed-virtual-world/">Problems and solutions for running a distributed virtual world</a> (Vadim Troshchinskiy Shmelev)</h3>
+<p>A talk about <a href="https://overte.org">Overte</a>, a system similar to Second Life but distributed. Advantages: it&rsquo;s much cheaper to run and users are more in control. Drawbacks: the world cannot be coherent, and it&rsquo;s harder to make things reliable and durable. It cannot be censored or prevent copyright infringement by design, which is an advantage or a drawback depending on how you look at it.</p>
+</section>
+<section id="Open-Food-Facts:-Acting-on-the-health-and-environmental-impacts-of-the-food-system-Pierre-Slamich">
+<h3><a href="https://fosdem.org/2024/schedule/event/fosdem-2024-3595-open-food-facts-acting-on-the-health-and-environnemental-impacts-of-the-food-system/">Open Food Facts: Acting on the health and environmental impacts of the food system</a> (Pierre Slamich)</h3>
+<p><a href="https://world.openfoodfacts.org">Open Food Facts</a> is 12 years old. They contributed to the success of Nutri-Score and the upcoming Eco-Score. They are expanding into other areas such as circular economy with <a href="https://world.openproductsfacts.org">Open Product Facts</a>.</p>
+</section>
+<section id="Observations-on-a-DNSSEC-incident:-the-Russian-TLD-Stéphane-Bortzmeyer">
+<h3><a href="https://fosdem.org/2024/schedule/event/fosdem-2024-3740-observations-on-a-dnssec-incident-the-russian-tld/">Observations on a DNSSEC incident: the Russian TLD</a> (Stéphane Bortzmeyer)</h3>
+<p>A few days before FOSDEM the .ru TLD was down for a lot of people (not everyone) for a few hours. Because of the context, there was wild speculation online regarding what caused it. Eventually, it looks like it was a simple technical error involving an incorrectly signed DNSSEC root key, which broke the entire TLD for people using validating resolvers.</p>
+</section>
+<section id="A-simple-caching-service-for-your-CI-Rémi-Duraffort">
+<h3><a href="https://fosdem.org/2024/schedule/event/fosdem-2024-2671-a-simple-caching-service-for-your-ci/">A simple caching service for your CI</a> (Rémi Duraffort)</h3>
+<p>The <a href="https://lkft.linaro.org">Linux Kernel Functional Testing</a> project runs the same CI tests on many machines (with different architectures) simultaneously, which all download the same assets. They logically wanted to introduce a caching proxy, but transparent proxies like <a href="https://www.squid-cache.org">Squid</a> could not do the job so they <a href="https://gitlab.com/Linaro/kisscache">wrote their own</a>.</p>
+</section>
+<section id="Reinventing-database-exploration-with-Azimutt-Loïc-Knuchel">
+<h3><a href="https://fosdem.org/2024/schedule/event/fosdem-2024-3669-reinventing-database-exploration-with-azimutt/">Reinventing database exploration with Azimutt</a> (Loïc Knuchel)</h3>
+<p>My friend Loïc presented his Open Source project <a href="https://azimutt.app">Azimutt</a>, a tool to explore large database schema and data, specifically tailored to very large databases. I had not looked at Azimutt in a long time but it has become super nice. The UI looks great and there are tons of useful features to go beyond exploration and actually document the database. If you ever have to deal with a large database or explore undocumented databases <a href="https://blog.separateconcerns.com/2021-05-01-inch.html#Dealing-with-integrations">like I did at Inch</a>, you should certainly have a look at it.</p>
+</section>
+<section id="Passbolt-—-Open-source-password-manager-for-teams-Remy-Bertot">
+<h3><a href="https://fosdem.org/2024/schedule/event/fosdem-2024-2181-passbolt-open-source-password-manager-for-teams/">Passbolt — Open source password manager for teams</a> (Remy Bertot)</h3>
+<p><a href="https://www.passbolt.com">Passbolt</a> is the team password manager we used at Inch. I had seen <a href="https://archive.fosdem.org/2023/schedule/event/passbolt/">their lightning talk last year</a>, I saw it again this year. The project is still progressing well and I would certainly recommend it if you need to share passwords as a team — which you probably do.</p>
+</section>
+</section>
+<section id="Writing-a-consistent-hashing-load-balancer-for-the-Kong-API-gateway-ketama-principle-Thijs-Schreijer">
+<h2><a href="https://fosdem.org/2024/schedule/event/fosdem-2024-1936-writing-a-consistent-hashing-loadbalancer-for-the-kong-api-gateway-ketama-principle-/">Writing a consistent-hashing load balancer for the Kong API gateway (ketama principle)</a> (Thijs Schreijer)</h2>
+<p>Kong is using consistent hashing in the load balancer to ensure a client always gets the same backend, for cache optimization purposes. Thijs explained consistent hashing and the DNS-specific complexities of using it (this talk was in the DNS room). Someone from the audience suggested <a href="https://en.wikipedia.org/wiki/Rendezvous_hashing">Rendezvous hashing</a> which I&rsquo;d heard about but never looked at in-depth, this prompted me to read the Wikipedia article which was interesting.</p>
+</section>
+<section id="Magic-and-Software-Steven-Goodwin">
+<h2><a href="https://fosdem.org/2024/schedule/event/fosdem-2024-2332-magic-and-software/">Magic and Software</a> (Steven Goodwin)</h2>
+<p>A very fun talk by an actual magician about how they share and protect their tricks. Sadly the amphitheater was far from full, probably because it was the last talk of the day. The video deserves a watch.</p>
+</section>
+<section id="You-too-could-have-made-curl-Daniel-Stenberg">
+<h2><a href="https://fosdem.org/2024/schedule/event/fosdem-2024-1931-you-too-could-have-made-curl-/">You too could have made curl!</a> (Daniel Stenberg)</h2>
+<p>Daniel&rsquo;s talks are always great and this one was no exception despite technical issues at the beginning. It was about his experience running the cURL project which is now old enough to drink in Europe. The content of the talk pretty much matches his online book <a href="https://un.curl.dev">Uncurled</a> which I had read before and recommend.</p>
+</section>
+<section id="Introducing-Refiners-–-A-Micro-Framework-for-Seamless-Integration-of-Adapters-in-Neural-Networks-Benjamin-Trom">
+<h2><a href="https://fosdem.org/2024/schedule/event/fosdem-2024-1821-introducing-refiners-a-micro-framework-for-seamless-integration-of-adapters-in-neural-networks/">Introducing &lsquo;Refiners&rsquo; – A Micro-Framework for Seamless Integration of Adapters in Neural Networks</a> (Benjamin Trom)</h2>
+<p>This was a talk by a colleague from <a href="https://finegrain.ai">Finegrain</a> on our Open Source micro-framework for foundation models adaptation <a href="https://refine.rs">Refiners</a>. Obviously, you should go check it out <strong>immediately</strong> and star <a href="https://github.com/finegrain-ai/refiners">the GitHub repository</a> :)</p>
+</section>
+<section id="Five-years-of-Teal:-minimalism-versus-growth-in-language-design-Hisham-Muhammad">
+<h2><a href="https://fosdem.org/2024/schedule/event/fosdem-2024-2564-five-years-of-teal-minimalism-versus-growth-in-language-design/">Five years of Teal: minimalism versus growth in language design</a> (Hisham Muhammad)</h2>
+<p><a href="https://github.com/teal-language/tl">Teal</a>, a typed dialect of Lua, is another project I use and occasionally contribute to. This year Hisham talked about upcoming features, and how and why he picked simple but somehow less powerful solutions instead of more complex alternatives.</p>
+</section>
+<section id="So-you-think-you-know-Git-Scott-Chacon">
+<h2><a href="https://fosdem.org/2024/schedule/event/fosdem-2024-3611-so-you-think-you-know-git/">So you think you know Git</a> (Scott Chacon)</h2>
+<p>Scott Chacon is an incredible speaker, and the FOSDEM crowd apparently knew it: the amphitheater was full and many people could not get in. The talk was a whirlwind of recent and older lesser-known Git options; watch it and you will certainly learn something.</p>
+<p>Toward the end, Scott presented his current project <a href="https://gitbutler.com">GitButler</a>, a graphical Git client leveraging virtual branches. It was recently open sourced and I tried it earlier this week, because I like the idea which could work very well with my workflow. I found it promising but still too rough around the edges to use it at work for now. I might look at the codebase someday because I am curious about the stack (<a href="https://tauri.app">Tauri</a> and <a href="https://svelte.dev">Svelte</a>).</p>
+</section>
+<section id="Version-control-post-Git-Pierre-Étienne-Meunier">
+<h2><a href="https://fosdem.org/2024/schedule/event/fosdem-2024-3423-version-control-post-git/">Version control post-Git</a> (Pierre-Étienne Meunier)</h2>
+<p>A talk about Pijul, a DVCS I know about but never actually used — although I did use its spiritual predecessor Darcs back in the day. It uses a very different approach from Git, representing edits as a graph that does not include the content. Having worked a lot with <a href="Distributed-filesystem-synchronization">tree CRDTs</a> (operation-based and state-based) and things like <a href="https://blog.separateconcerns.com/2017-05-07-itc.html">Interval Tree Clocks</a> I can certainly see the advantages but also some of the drawbacks of such an approach. The project also has a <a href="https://pijul.org/posts/2021-02-06-rethinking-sanakirja/">fast K-V store in Rust</a> somewhat similar to LMDB and a <a href="https://nest.pijul.com">forge</a> hosting its source code and offering free hosting.</p>
+</section>
+<section id="Conclusion">
+<h2>Conclusion</h2>
+<p>FOSDEM is a bit tiring, but FOSDEM is great. Like I said, the talks sure are nice, but you should also go for the people (and the beer!). This will certainly not be my last FOSDEM, see you next year in Brussels!</p>
+</section>
+
+    </div>
+    <div id="footer">
+      [ <a href="index.html">home</a> ]
+    </div>
+    
+    <script
+      data-goatcounter="https://separateconcerns.goatcounter.com/count"
+      async src="//gc.zgo.at/count.js"></script>
+  </body>
+</html>
