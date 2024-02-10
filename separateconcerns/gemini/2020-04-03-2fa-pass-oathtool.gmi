@@ -1,9 +1,9 @@
 # Two-factor authentication with pass and oathtool
-published 2020-04-03
+published 2020-04-03,updated 2024-02-10
 
 If you're like me, you don't want to depend on your phone to log into a website, and you wish your favorite password manager [1] would support 2FA. Well, it can.
 
-When asked to setup 2FA on a website, get a text code. If the website doesn't give you that option, just use zbar [2]. For instance, with the QR code from the GitHub documentation [3]:
+When asked to setup 2FA on a website, get a text code for TOTP. If the website doesn't give you that option, just use zbar [2]. For instance, with the QR code from the GitHub documentation [3]:
 
 ```
 $ zbarimg totp-click-enter-code.png
@@ -12,17 +12,12 @@ scanned 1 barcode symbols from 1 images in 0.03 seconds
 
 ```
 
-Once you get the secret, put the command line to generate a code using oathtool [4] in `2fa/github` in `pass` like this:
-
-```
-oathtool --totp --base32 qmli3dwqm53vl7fy
-
-```
+Once you get the secret, put it in `2fa/github` in `pass`.
 
 Finally, add this to your `.bashrc` (or the equivalent for whatever shell you use):
 
 ```
-2fa () { eval $(pass 2fa/$1) ; }
+2fa () { oathtool --totp --base32 $(pass 2fa/"$1" | head -n 1) ; }
 
 ```
 
@@ -34,28 +29,41 @@ $ 2fa github
 
 ```
 
-All the tools used in that article are available [5] as [6] packages [7] in the Arch Linux repositories.
+Finally, you can get Bash completion with this simple script, that you must put in `/usr/share/bash-completion/completions/2fa`:
+
+```
+#/usr/bin/env bash
+
+>/dev/null pushd "${PASSWORD_STORE_DIR:-$HOME/.password-store}/2fa"
+    l="$(find . -type f | sed s#^./## | sed s#.gpg\$##)"
+>/dev/null popd
+
+complete -W "$l" 2fa
+
+```
+
+All the tools used in that article are available [4] as [5] packages [6] in the Arch Linux repositories.
 
 => https://www.passwordstore.org 1: https://www.passwordstore.org
 => http://zbar.sourceforge.net 2: http://zbar.sourceforge.net
 => https://help.github.com/en/github/authenticating-to-github/configuring-two-factor-authentication 3: https://help.github.com/en/github/authenticating-to-github/configuring-two-factor-authentication
-=> https://www.nongnu.org/oath-toolkit/oathtool.1.html 4: https://www.nongnu.org/oath-toolkit/oathtool.1.html
-=> https://archlinux.org/packages/extra/any/pass/ 5: https://archlinux.org/packages/extra/any/pass/
-=> https://archlinux.org/packages/extra/x86_64/oath-toolkit/ 6: https://archlinux.org/packages/extra/x86_64/oath-toolkit/
-=> https://www.archlinux.org/packages/extra/x86_64/zbar/ 7: https://www.archlinux.org/packages/extra/x86_64/zbar/
+=> https://archlinux.org/packages/extra/any/pass/ 4: https://archlinux.org/packages/extra/any/pass/
+=> https://archlinux.org/packages/extra/x86_64/oath-toolkit/ 5: https://archlinux.org/packages/extra/x86_64/oath-toolkit/
+=> https://www.archlinux.org/packages/extra/x86_64/zbar/ 6: https://www.archlinux.org/packages/extra/x86_64/zbar/
 
 ## Complements
 
-It was a post on Lobsters [8] that prompted me to post this. Someone from the comments [9] and a former colleague on Twitter [10] told me about a pass extension [11] I didn't know about which does almost the same thing.
+It was a post on Lobsters [7] that prompted me to post this. Someone from the comments [8] and a former colleague on Twitter [9] told me about a pass extension [10] I didn't know about which does almost the same thing.
 
 Also, some people think that putting 2FA codes in a password manager defeats the purpose. But in practice TOTP 2FA does not really add much more to the security of my accounts than the strong random passwords I generate with pass. The "second factor" part isn't really the true benefit.
 
-One actual advantage is that nobody on the network can sniff all of my credentials (like digest-based password verification methods). Another, and I think this is the main one, is that the owner of the website has chosen part of the credentials and hence ensured some degree of strength. What I do preserves both of those properties, so I'm fine with it. By the way, note that password managers like 1Password do the same thing [12].
+One actual advantage is that nobody on the network can sniff all of my credentials (like digest-based password verification methods). Another, and I think this is the main one, is that the owner of the website has chosen part of the credentials and hence ensured some degree of strength. What I do preserves both of those properties, so I'm fine with it. By the way, note that password managers like 1Password [11] and Passbolt [12] do the same thing.
 
-The one thing I could do to really improve the security of the whole thing is use 2FA to access pass by storing my GPG key in a Yubikey. I probably will, someday.
+One thing you can do to improve the security of the whole thing is use 2FA to access pass by storing the GPG key in a Yubikey.
 
-=> https://lobste.rs/s/abmkdz/2fa_2_factor_authentication_terminal_app 8: https://lobste.rs/s/abmkdz/2fa_2_factor_authentication_terminal_app
-=> https://lobste.rs/s/abmkdz/2fa_2_factor_authentication_terminal_app#c_c0y9io 9: https://lobste.rs/s/abmkdz/2fa_2_factor_authentication_terminal_app#c_c0y9io
-=> https://twitter.com/gawenr/status/1245973593453932544 10: https://twitter.com/gawenr/status/1245973593453932544
-=> https://github.com/tadfisher/pass-otp 11: https://github.com/tadfisher/pass-otp
-=> https://support.1password.com/one-time-passwords/ 12: https://support.1password.com/one-time-passwords/
+=> https://lobste.rs/s/abmkdz/2fa_2_factor_authentication_terminal_app 7: https://lobste.rs/s/abmkdz/2fa_2_factor_authentication_terminal_app
+=> https://lobste.rs/s/abmkdz/2fa_2_factor_authentication_terminal_app#c_c0y9io 8: https://lobste.rs/s/abmkdz/2fa_2_factor_authentication_terminal_app#c_c0y9io
+=> https://twitter.com/gawenr/status/1245973593453932544 9: https://twitter.com/gawenr/status/1245973593453932544
+=> https://github.com/tadfisher/pass-otp 10: https://github.com/tadfisher/pass-otp
+=> https://support.1password.com/one-time-passwords/ 11: https://support.1password.com/one-time-passwords/
+=> https://help.passbolt.com/configure/totp/time-based-one-time-password-mobile 12: https://help.passbolt.com/configure/totp/time-based-one-time-password-mobile

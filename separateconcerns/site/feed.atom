@@ -10,7 +10,7 @@
     rel="alternate" type="application/xhtml+xml"
   />
   <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
-  <updated>2024-02-07T22:13:11Z</updated>
+  <updated>2024-02-10T20:48:12Z</updated>
   <author>
     <name>Pierre 'catwell' Chapuis</name>
     <uri>https://catwell.info/</uri>
@@ -1634,32 +1634,39 @@ useful but it is important not to abuse it. Simple code is better :)</p>
     />
     <id>tag:blog.separateconcerns.com,2020-04-03:2fa-pass-oathtool</id>
     <published>2020-04-03T09:05:00Z</published>
-    <updated>2020-04-03T16:20:00Z</updated>
+    <updated>2024-02-10T21:30:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>If you&#8217;re like me, you don&#8217;t want to depend on your phone to log into a website, and you wish <a href="https://www.passwordstore.org">your favorite password manager</a> would support 2FA. Well, it can.</p>
-<p>When asked to setup 2FA on a website, get a text code. If the website doesn&#8217;t give you that option, just use <a href="http://zbar.sourceforge.net">zbar</a>. For instance, with the QR code from the <a href="https://help.github.com/en/github/authenticating-to-github/configuring-two-factor-authentication">GitHub documentation</a>:</p>
+<p>When asked to setup 2FA on a website, get a text code for TOTP. If the website doesn&#8217;t give you that option, just use <a href="http://zbar.sourceforge.net">zbar</a>. For instance, with the QR code from the <a href="https://help.github.com/en/github/authenticating-to-github/configuring-two-factor-authentication">GitHub documentation</a>:</p>
 <pre><code>$ zbarimg totp-click-enter-code.png
 QR-Code:otpauth://totp/GitHub:LyaLya?secret=qmli3dwqm53vl7fy&amp;issuer=GitHub
 scanned 1 barcode symbols from 1 images in 0.03 seconds
 </code></pre>
-<p>Once you get the secret, put the command line to generate a code using <a href="https://www.nongnu.org/oath-toolkit/oathtool.1.html">oathtool</a> in <code>2fa/github</code> in <code>pass</code> like this:</p>
-<pre><code class="language-shell">oathtool --totp --base32 qmli3dwqm53vl7fy
-</code></pre>
+<p>Once you get the secret, put it in <code>2fa/github</code> in <code>pass</code>.</p>
 <p>Finally, add this to your <code>.bashrc</code> (or the equivalent for whatever shell you use):</p>
-<pre><code class="language-shell">2fa () { eval $(pass 2fa/$1) ; }
+<pre><code class="language-shell">2fa () { oathtool --totp --base32 $(pass 2fa/"$1" | head -n 1) ; }
 </code></pre>
 <p>You can now get your 2FA codes like this:</p>
 <pre><code>$ 2fa github
 795864
+</code></pre>
+<p>Finally, you can get Bash completion with this simple script, that you must put in <code>/usr/share/bash-completion/completions/2fa</code>:</p>
+<pre><code class="language-shell">#/usr/bin/env bash
+
+&gt;/dev/null pushd "${PASSWORD_STORE_DIR:-$HOME/.password-store}/2fa"
+    l="$(find . -type f | sed s#^./## | sed s#.gpg\$##)"
+&gt;/dev/null popd
+
+complete -W "$l" 2fa
 </code></pre>
 <p>All the tools used in that article are <a href="https://archlinux.org/packages/extra/any/pass/">available</a> <a href="https://archlinux.org/packages/extra/x86_64/oath-toolkit/">as</a> <a href="https://www.archlinux.org/packages/extra/x86_64/zbar/">packages</a> in the Arch Linux repositories.</p>
 <section id="Complements">
 <h2>Complements</h2>
 <p>It was <a href="https://lobste.rs/s/abmkdz/2fa_2_factor_authentication_terminal_app">a post on Lobsters</a> that prompted me to post this. <a href="https://lobste.rs/s/abmkdz/2fa_2_factor_authentication_terminal_app#c_c0y9io">Someone from the comments</a> and <a href="https://twitter.com/gawenr/status/1245973593453932544">a former colleague on Twitter</a> told me about <a href="https://github.com/tadfisher/pass-otp">a pass extension</a> I didn&#8217;t know about which does almost the same thing.</p>
 <p>Also, some people think that putting 2FA codes in a password manager defeats the purpose. But in practice TOTP 2FA does not really add much more to the security of my accounts than the strong random passwords I generate with pass. The &#8220;second factor&#8221; part isn&#8217;t really the true benefit.</p>
-<p>One actual advantage is that nobody on the network can sniff all of my credentials (like digest-based password verification methods). Another, and I think this is the main one, is that the owner of the website has chosen part of the credentials and hence ensured some degree of strength. What I do preserves both of those properties, so I&#8217;m fine with it. By the way, note that password managers like 1Password <a href="https://support.1password.com/one-time-passwords/">do the same thing</a>.</p>
-<p>The one thing I could do to really improve the security of the whole thing is use 2FA <strong>to access pass</strong> by storing my GPG key in a Yubikey. I probably will, someday.</p>
+<p>One actual advantage is that nobody on the network can sniff all of my credentials (like digest-based password verification methods). Another, and I think this is the main one, is that the owner of the website has chosen part of the credentials and hence ensured some degree of strength. What I do preserves both of those properties, so I&#8217;m fine with it. By the way, note that password managers like <a href="https://support.1password.com/one-time-passwords/">1Password</a> and <a href="https://help.passbolt.com/configure/totp/time-based-one-time-password-mobile">Passbolt</a> do the same thing.</p>
+<p>One thing you can do to improve the security of the whole thing is use 2FA <strong>to access pass</strong> by storing the GPG key in a Yubikey.</p>
 </section>
 
       </div>
