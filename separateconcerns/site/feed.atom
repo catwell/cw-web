@@ -10,11 +10,103 @@
     rel="alternate" type="application/xhtml+xml"
   />
   <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
-  <updated>2024-02-10T20:48:12Z</updated>
+  <updated>2024-02-11T13:41:35Z</updated>
   <author>
     <name>Pierre 'catwell' Chapuis</name>
     <uri>https://catwell.info/</uri>
   </author>
+  <entry>
+    <title>Thoughts 8 — Simplicity, Progress, Culture</title>
+    <link
+      rel="alternate" type="text/html"
+      href="https://blog.separateconcerns.com/2024-02-11-thoughts-8.html"
+    />
+    <id>tag:blog.separateconcerns.com,2024-02-11:thoughts-8</id>
+    <published>2024-02-11T14:40:00Z</published>
+    <updated>2024-02-11T14:40:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <blockquote>
+<p>&#8220;Thoughts&#8221; are posts about what has been on my mind. Sometimes practical, sometimes not; often just things I read recently. Less thought out than regular posts.</p>
+</blockquote>
+<section id="Automate-But-Automate-Last">
+<h2><a href="https://matt-rickard.com/automate-but-automate-last">Automate (But Automate Last)</a></h2>
+<p>Matt Rickard talking about the fifth step of Elon Musk&#8217;s manufacturing algorithm. Automating too early is one of the mistakes I have seen the most in software companies. Once people see the benefits of automation, they tend to abuse it. Doing that results in poor comprehension of the system and friction when changes are needed.</p>
+<p>All of the steps of Musk&#8217;s algorithm are relevant to software too, as is the fact that they are in chronological order. I won&#8217;t copy/paste them here, go read the end of Matt&#8217;s post. As far as I know, its source is <a href="https://www.amazon.com/Elon-Musk-Walter-Isaacson-ebook/dp/B0BW9TRGKV/">Walter Isaacson&#8217;s book</a>.</p>
+</section>
+<section id="The-model-is-not-the-product">
+<h2><a href="https://matt-rickard.com/the-model-is-not-the-product">The model is not the product</a></h2>
+<p>Matt (again) on how the way we see Generative AI today is only a temporary state. In most cases, raw models will not be exposed to users. We will often want AI use to be more subtle, hidden in the background even. To achieve that we will need a better, more deterministic and flexible interface around the models. This is why I predict a project such as <a href="https://outlines-dev.github.io/outlines/">Outlines</a> or <a href="https://lmql.ai">LQML</a> is likely to become very important soon.</p>
+</section>
+<section id="DHH-on-zero-interest-rates-and-low-productivity">
+<h2>DHH on zero-interest rates and low productivity</h2>
+<p>In his Rails World keynote, DHH <a href="https://www.youtube.com/watch?v=iqXjGiQ_D-A&amp;t=778s">talked about how</a> the low interest rates we had for over a decade were a likely cause of the success of complex, over-engineered tools and the hyper-specialization of software jobs.</p>
+<p>I think this <strong>may</strong> be true, and if so I hope the pendulum is swinging back.</p>
+</section>
+<section id="Toward-a-shallower-future">
+<h2><a href="https://www.noahpinion.blog/p/toward-a-shallower-future">Toward a shallower future</a></h2>
+<p>This is a long and very interesting post. Greatness is often born of terrible situations: misery, war, disease&#8230; But then if progress can eliminate those issues, should we do it? Noah Smith argues that yes, we should, hence the subtitle:</p>
+<blockquote>
+<p>Adversity isn&#8217;t worth the price of adversity.</p>
+</blockquote>
+<p>You may note that this theme is somehow related to <a href="https://blog.separateconcerns.com/2024-01-06-talos.html">this post</a>. The related meanings of life and progress is a topic I&#8217;m thinking about a lot at the moment.</p>
+</section>
+<section id="Archive-your-projects">
+<h2><a href="https://ratfactor.com/cards/archive-your-projects">Archive your projects</a></h2>
+<p>When you ship something significant you should take some time to either ensure it will be preserved and accessible by you forever, or at least that you can remember it years later, by writing about it and taking screenshots for instance.</p>
+<p>Note that I disagree with the &#8220;It&#8217;s never too late&#8221; part. I have not done that for some early work projects in my career, and I regret it now. Do it while you can.</p>
+</section>
+<section id="Easy-vs-Simple">
+<h2>Easy vs Simple</h2>
+<p>The tension between Simple and Easy has always been an important point for me. Hajime Hoshi <a href="https://twitter.com/hajimehoshi/status/1740250213712044198">gives an interesting definition</a>:</p>
+<blockquote>
+<p>Easy: how quickly you can achieve what you want<br>
+Simple: how quickly you can understand the model</p>
+</blockquote>
+<p>Easy is nice to have, Simple is crucial. The effect of &#8220;easy&#8221; is linear whereas the effect of &#8220;simple&#8221; is exponential. Never trade the latter for the former.</p>
+</section>
+<section id="AI-an-energy-bomb">
+<h2><a href="https://legrandcontinent.eu/fr/2023/12/29/lia-une-bombe-energetique-en-2024/">AI, an energy bomb?</a></h2>
+<p>An article in French and paywalled, sorry. But the issue of energy generation and consumption has been on my mind for a long time, and is even more pregnant now. Also a <a href="https://blog.separateconcerns.com/2024-01-06-talos.html">Talos Principle 2</a> issue!</p>
+</section>
+<section id="EU-CRA:-What-does-it-mean-for-open-source">
+<h2><a href="https://berthub.eu/articles/posts/eu-cra-what-does-it-mean-for-open-source/">EU CRA: What does it mean for open source?</a></h2>
+<p>Regulation is probably a niche topic for this blog, but it is one I have been following for a long time — ever since I got involved in activism against software patents in the mid-2000s.</p>
+<p>This is the best article I have found on the Cyber Resilience Act. Like most EU regulations it is not black and white. If you are interested, go read it and make up your own mind.</p>
+<p>The main problem I have with regulation is that the effects are not always easy to predict and not properly re-evaluated. For instance, I believe several laws passed to protect EU citizens and industry against US giants are having the opposite effect. We often forget that added complexity often introduces economies of scale.</p>
+</section>
+<section id="There-Is-No-Business-Case-For-Civilisation">
+<h2><a href="https://planetocracy.substack.com/p/theres-is-no-business-case-for-civilisation">There Is No Business Case For Civilisation</a></h2>
+<p>OK, there is no question that this one is a <a href="https://blog.separateconcerns.com/2024-01-06-talos.html">Talos topic</a> :)</p>
+<blockquote>
+<p>Not everything in life is a pitch to a VC. Organising human activity purely on the basis of return on investment is a dead end philosophy masquerading as rationalism.</p>
+</blockquote>
+<blockquote>
+<p>Better just to be brave, hold your head up and say “this is what I believe”, and then apply rationality to how you should shape the universe to realise your values. A great country does great things because of greatness itself.</p>
+</blockquote>
+</section>
+<section id="Don't-write-bugs">
+<h2><a href="https://www.teamten.com/lawrence/programming/dont-write-bugs.html">Don&#8217;t write bugs</a></h2>
+<p>Some programmers just want to ship fast and don&#8217;t care about writing fragile or broken code, they will &#8220;fix it later&#8221;. It might work for your personal project, but as soon as you work with other people you&#8217;re losing everyone else&#8217;s time by doing that.</p>
+<p>It sounds obvious, but I see people blame reviewers too often. No. The purpose of code review is to discuss design decisions, not find the bugs you wrote because you didn&#8217;t pay attention to edge cases or side effects.</p>
+<p>Oh, and sure a few unit tests may help too! But they&#8217;re not the main point. They&#8217;re more a consequence, and a proof that you thought about things, as well as a way to prevent someone else — or future you — from breaking assumptions in the future.</p>
+</section>
+<section id="There-is-no-compromise">
+<h2><a href="https://eventuallycoding.com/en/2024/01/no-compromise">There is no compromise</a></h2>
+<p>A good blog post about team culture. In particular, acknowledging that <strong>some</strong> diversity is good, but that it does not mean there should be no shared culture at all within a team or a company.</p>
+<p>The remote vs co-located work example is good. I know great fully-remote companies, and some where everyone works 100% from the office. Many of the people who love the former would hate the latter, and vice-versa. Why would you insist on joining a company that works differently from what you like and change its culture?</p>
+<p>Similarly, there are companies where everyone is very close and others where relationships are purely professional. Why would you insist that one or the other is wrong? If you want to join a team, adapt to its culture, or find another one that fits you better.</p>
+<p>Culture and values are not something you write on a document and mandate top-down, they&#8217;re bottom-up and organic. The best way you can shape culture if you really want to is by picking who you hire carefully. The worst thing you can do is mission someone to change a team or a company&#8217;s culture. If you ever are in a context where someone tries to do that and you cannot reason with them, there is only one thing to do: run.</p>
+</section>
+<section id="Still-using-Beanstalk">
+<h2>Still using Beanstalk</h2>
+<p>This is not new, but I am using <a href="https://beanstalkd.github.io">Beanstalk</a> for <a href="https://finegrain.ai">Finegrain</a>. I was already using it <a href="https://blog.separateconcerns.com/2013-06-20-three-years-proprietary-projects.html">at Moodstocks</a> over a decade ago. In the meantime, I have used several other queues, but Beanstalk is still my favorite. It works well and it is <a href="#Easy-vs-Simple">simple</a>. I love tools like that.</p>
+<p>I am using Beanstalk in a <a href="https://quart.palletsprojects.com">Quart</a> application with <a href="https://github.com/koodaamo/aiostalk">aiostalk</a>, but I still maintain my <a href="https://github.com/catwell/haricot">Lua client</a> so maybe this will be how I sneak some Lua at yet another company this time&#8230; :)</p>
+</section>
+
+      </div>
+    </content>
+  </entry>
   <entry>
     <title>FOSDEM 2024</title>
     <link

@@ -1,0 +1,94 @@
+```=lua-meta
+title = "Thoughts 8 — Simplicity, Progress, Culture"
+published = "2024-02-11 14:40:00"
+description = [[
+    Thoughts on automation, AI products, zero-interest rates and their impact on
+    software development, progress and art, simplicity, regulation, team culture
+    and other things.
+]]
+```
+
+> "Thoughts" are posts about what has been on my mind. Sometimes practical, sometimes not; often just things I read recently. Less thought out than regular posts.
+
+## [Automate (But Automate Last)](https://matt-rickard.com/automate-but-automate-last)
+
+Matt Rickard talking about the fifth step of Elon Musk's manufacturing algorithm. Automating too early is one of the mistakes I have seen the most in software companies. Once people see the benefits of automation, they tend to abuse it. Doing that results in poor comprehension of the system and friction when changes are needed.
+
+All of the steps of Musk's algorithm are relevant to software too, as is the fact that they are in chronological order. I won't copy/paste them here, go read the end of Matt's post. As far as I know, its source is [Walter Isaacson's book](https://www.amazon.com/Elon-Musk-Walter-Isaacson-ebook/dp/B0BW9TRGKV/).
+
+## [The model is not the product](https://matt-rickard.com/the-model-is-not-the-product)
+
+Matt (again) on how the way we see Generative AI today is only a temporary state. In most cases, raw models will not be exposed to users. We will often want AI use to be more subtle, hidden in the background even. To achieve that we will need a better, more deterministic and flexible interface around the models. This is why I predict a project such as [Outlines](https://outlines-dev.github.io/outlines/) or [LQML](https://lmql.ai) is likely to become very important soon.
+
+## DHH on zero-interest rates and low productivity
+
+In his Rails World keynote, DHH [talked about how](https://www.youtube.com/watch?v=iqXjGiQ_D-A&t=778s) the low interest rates we had for over a decade were a likely cause of the success of complex, over-engineered tools and the hyper-specialization of software jobs.
+
+I think this *may* be true, and if so I hope the pendulum is swinging back.
+
+## [Toward a shallower future](https://www.noahpinion.blog/p/toward-a-shallower-future)
+
+This is a long and very interesting post. Greatness is often born of terrible situations: misery, war, disease... But then if progress can eliminate those issues, should we do it? Noah Smith argues that yes, we should, hence the subtitle:
+
+> Adversity isn't worth the price of adversity.
+
+You may note that this theme is somehow related to [this post](https://blog.separateconcerns.com/2024-01-06-talos.html). The related meanings of life and progress is a topic I'm thinking about a lot at the moment.
+
+## [Archive your projects](https://ratfactor.com/cards/archive-your-projects)
+
+When you ship something significant you should take some time to either ensure it will be preserved and accessible by you forever, or at least that you can remember it years later, by writing about it and taking screenshots for instance.
+
+Note that I disagree with the "It's never too late" part. I have not done that for some early work projects in my career, and I regret it now. Do it while you can.
+
+## Easy vs Simple
+
+The tension between Simple and Easy has always been an important point for me. Hajime Hoshi [gives an interesting definition](https://twitter.com/hajimehoshi/status/1740250213712044198):
+
+> Easy: how quickly you can achieve what you want\
+> Simple: how quickly you can understand the model
+
+Easy is nice to have, Simple is crucial. The effect of "easy" is linear whereas the effect of "simple" is exponential. Never trade the latter for the former.
+
+## [AI, an energy bomb?](https://legrandcontinent.eu/fr/2023/12/29/lia-une-bombe-energetique-en-2024/)
+
+An article in French and paywalled, sorry. But the issue of energy generation and consumption has been on my mind for a long time, and is even more pregnant now. Also a [Talos Principle 2](https://blog.separateconcerns.com/2024-01-06-talos.html) issue!
+
+## [EU CRA: What does it mean for open source?](https://berthub.eu/articles/posts/eu-cra-what-does-it-mean-for-open-source/)
+
+Regulation is probably a niche topic for this blog, but it is one I have been following for a long time — ever since I got involved in activism against software patents in the mid-2000s.
+
+This is the best article I have found on the Cyber Resilience Act. Like most EU regulations it is not black and white. If you are interested, go read it and make up your own mind.
+
+The main problem I have with regulation is that the effects are not always easy to predict and not properly re-evaluated. For instance, I believe several laws passed to protect EU citizens and industry against US giants are having the opposite effect. We often forget that added complexity often introduces economies of scale.
+
+## [There Is No Business Case For Civilisation](https://planetocracy.substack.com/p/theres-is-no-business-case-for-civilisation)
+
+OK, there is no question that this one is a [Talos topic](https://blog.separateconcerns.com/2024-01-06-talos.html) :)
+
+> Not everything in life is a pitch to a VC. Organising human activity purely on the basis of return on investment is a dead end philosophy masquerading as rationalism.
+
+> Better just to be brave, hold your head up and say “this is what I believe”, and then apply rationality to how you should shape the universe to realise your values. A great country does great things because of greatness itself.
+
+## [Don't write bugs](https://www.teamten.com/lawrence/programming/dont-write-bugs.html)
+
+Some programmers just want to ship fast and don't care about writing fragile or broken code, they will "fix it later". It might work for your personal project, but as soon as you work with other people you're losing everyone else's time by doing that.
+
+It sounds obvious, but I see people blame reviewers too often. No. The purpose of code review is to discuss design decisions, not find the bugs you wrote because you didn't pay attention to edge cases or side effects.
+
+Oh, and sure a few unit tests may help too! But they're not the main point. They're more a consequence, and a proof that you thought about things, as well as a way to prevent someone else — or future you — from breaking assumptions in the future.
+
+## [There is no compromise](https://eventuallycoding.com/en/2024/01/no-compromise)
+
+A good blog post about team culture. In particular, acknowledging that *some* diversity is good, but that it does not mean there should be no shared culture at all within a team or a company.
+
+The remote vs co-located work example is good. I know great fully-remote companies, and some where everyone works 100% from the office. Many of the people who love the former would hate the latter, and vice-versa. Why would you insist on joining a company that works differently from what you like and change its culture?
+
+Similarly, there are companies where everyone is very close and others where relationships are purely professional. Why would you insist that one or the other is wrong? If you want to join a team, adapt to its culture, or find another one that fits you better.
+
+Culture and values are not something you write on a document and mandate top-down, they're bottom-up and organic. The best way you can shape culture if you really want to is by picking who you hire carefully. The worst thing you can do is mission someone to change a team or a company's culture. If you ever are in a context where someone tries to do that and you cannot reason with them, there is only one thing to do: run.
+
+## Still using Beanstalk
+
+This is not new, but I am using [Beanstalk](https://beanstalkd.github.io) for [Finegrain](https://finegrain.ai). I was already using it [at Moodstocks](https://blog.separateconcerns.com/2013-06-20-three-years-proprietary-projects.html) over a decade ago. In the meantime, I have used several other queues, but Beanstalk is still my favorite. It works well and it is [simple](#Easy-vs-Simple). I love tools like that.
+
+I am using Beanstalk in a [Quart](https://quart.palletsprojects.com) application with [aiostalk](https://github.com/koodaamo/aiostalk), but I still maintain my [Lua client](https://github.com/catwell/haricot) so maybe this will be how I sneak some Lua at yet another company this time... :)
