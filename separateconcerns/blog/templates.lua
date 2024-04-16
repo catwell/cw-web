@@ -8,7 +8,7 @@ TPL.html_post = [[
     <meta content="width=device-width, initial-scale=1" name="viewport">
     {{#description}}<meta name="description" content="{{description}}">{{/description}}
     <link rel="canonical" href="https://blog.separateconcerns.com/{{url}}">
-    <link href="css/theme.css?cache=1" rel="stylesheet" type="text/css">
+    <link href="css/theme.css?cache=2" rel="stylesheet" type="text/css">
     {{#has_code}}
       <link href="css/rainbow-github.css" rel="stylesheet" type="text/css">
     {{/has_code}}
