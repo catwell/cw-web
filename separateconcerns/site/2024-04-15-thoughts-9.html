@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta name="description" content="Thoughts on the differences between Google and Amazon, whether radicality is needed to solve Big Problems, statically typing dynamic languages, and various blog posts I read.">
+    <link rel="canonical" href="https://blog.separateconcerns.com/2024-04-15-thoughts-9.html">
+    <link href="css/theme.css?cache=1" rel="stylesheet" type="text/css">
+    <link
+      rel="alternate" type="application/atom+xml"
+      href="https://blog.separateconcerns.com/feed.atom"
+    />
+    <title>Thoughts 9 — Google vs Amazon, Radicality, Typing</title>
+  </head>
+  <body>
+    <div id="container">
+    <header>
+      <h1>Thoughts 9 — Google vs Amazon, Radicality, Typing</h1>
+      <h4>
+        published 2024-04-15
+        [ <a href="index.html">home</a> ]
+      </h4>
+    </header>
+    <blockquote>
+<p>&ldquo;Thoughts&rdquo; are posts about what has been on my mind. Sometimes practical, sometimes not; often just things I read recently. Less thought out than regular posts.</p>
+</blockquote>
+<section id="Differences-between-Google-and-Amazon">
+<h2>Differences between Google and Amazon</h2>
+<p>It is always interesting to compare those two companies. They differ in their fundamental principles and goals, the way they operate, their technical stacks&hellip;</p>
+<p>The mother of all comparisons is <a href="http://files.catwell.info/misc/mirror/steve-yegge-google-amazon.txt">Steve Yegge&rsquo;s famous rant</a>. More recently, I have also really enjoyed posts by <a href="https://carloarg02.medium.com">Carlos Arguelles</a> who went from Amazon to Google and (very recently) back.</p>
+<p>In <a href="https://blog.schmizz.net/disaggregated-wal">the disaggregated write-ahead log</a>, Shikhar Bhushan highlights an important difference between the two giants&rsquo; architectures. At Google the distributed filesystem (Colossus, formerly GFS) is a fundamental building block. It is not global but zonal, and replication is built on top of it. At AWS the globally distributed log — which is not exposed as a public service  —  is a fundamental primitive, and S3 is built on top of it. Shikhar is now <a href="https://s2.dev">building that service</a>.</p>
+<p>Jaana Dogan also <a href="https://twitter.com/rakyll/status/1775957427755917363">recently tweeted</a> about another difference:</p>
+<blockquote>
+<p>At Google, a lot of time is spent on rewriting infra or migrating to new infra. AWS rarely kills its services, hence if there are no new hard problems due to  growing scale or something, it&rsquo;s fairly cheap to keep the lights on.</p>
+</blockquote>
+<p>That would be part of the explanation for why Google often <a href="https://twitter.com/killedbygoogle">kills its services</a> when Amazon maintains them. Although I think Amazon&rsquo;s customer obsession is crucial too.</p>
+</section>
+<section id="Is-radicality-needed-to-solve-Big-Problems">
+<h2>Is radicality needed to solve Big Problems?</h2>
+<p>I have been re-reading some older articles by Philippe Silberzahn (in French) and <a href="https://philippesilberzahn.com/2021/11/15/transformation-face-aux-grands-problemes-faut-il-etre-radical/">this one deserves a mention</a>.</p>
+<p>He describes how many people have a view that &ldquo;Big Problems&rdquo; such as climate change can only be solved with radical actions. He posits that it stems from at least six mental models:</p>
+<ol>
+<li>
+A Big Problem requires a Big Solution
+</li>
+<li>
+There is no doubt about the existence of the Big Problem
+</li>
+<li>
+The end justifies the means
+</li>
+<li>
+There is a simple solution to a complex problem
+</li>
+<li>
+There are no adverse effects
+</li>
+<li>
+The resolution of the problem does not require compromise
+</li>
+</ol>
+<p>His view is that Big Problems often have a large social component, and that the large change required to solve them does not usually come from radicality but from small actions carried out by people with alternative mental models.</p>
+</section>
+<section id="Statically-typing-dynamic-languages">
+<h2>Statically typing dynamic languages</h2>
+<p>Note: I am expanding on something I <a href="https://bsky.app/profile/catwell.info/post/3kp7hvmyl6n22">posted elsewhere</a> here.</p>
+<p>I think I finally understood a problem I have with many type systems added on top of dynamic languages. In practice, they work against <a href="https://en.wikipedia.org/wiki/SOLID">the I and D of SOLID</a>. You can make Interface Segregation work, but you need granular interfaces and intersection types. As for Dependency Inversion, typing makes boundary code very verbose, and using Dependency Inversion reduces the advantages of using typed libraries anyway, since if you do it well library types should not leak from the boundary into client code.</p>
+<p>It is also interesting to note that AI appears to be bad at writing code with inverted control. It shows it &ldquo;reasons bottom-up&rdquo;, which makes sense when you know how it works. So the end result of typing + copilot is that I write code that is less flexible and that requires larger diffs to change. It is not necessarily <strong>harder</strong> to change, because the tooling helps.</p>
+<p>I have a feeling it is not always good or bad, it probably depends on the kind of code I write. SOLID is not absolute. But it is annoying me that things that I still view as &ldquo;mere tools&rdquo; introduce so much friction to achieve patterns that I consider elegant and useful.</p>
+<p>On a related note, Armin Ronacher — who mostly switched to Rust nowadays — has <a href="https://lucumr.pocoo.org/2023/12/1/the-python-that-was/">an interesting blog post about his view of typed Python</a> too.</p>
+</section>
+<section id="Soft-skills-posts">
+<h2>Soft skills posts</h2>
+<p>Daniel Mangum thinks <a href="https://danielmangum.com/posts/most-important-skill-startup-engineering-leadership/">the most important skill in startup engineering leadership</a> is pacing. I agree wholeheartedly. Pacing in startups is hard to get right: it depends on many forces, it is often a tradeoff, and getting it wrong can be disastrous.</p>
+<p>Phil Eaton — who recently changed jobs — wrote <a href="https://notes.eatonphil.com/2024-03-11-first-month-on-a-database-team.html">a very good post</a> about what to do when you join a new company or team in a senior position. He also mentions internal blogs, which is something I rarely see but always thought was worth doing since I read about it in <a href="https://scottberkun.com/yearwithoutpants/">The Year Without Pants</a>.</p>
+<p>In <a href="https://vickiboykis.com/2024/03/13/both-pyramids-are-white/">Both pyramids are white</a>, Vicki Boykis talks about a specific kind of groupthink. Unlike the pyramids, it is not black or white, there is a tradeoff between dissenting when necessary and <strong>not</strong> dissenting when not. We all have a natural tendency for one or the other, that we need to acknowledge and fight to find the right balance.</p>
+</section>
+<section id="More-technical-posts">
+<h2>More technical posts</h2>
+<p>Dave Paola explains <a href="https://thedailydeveloper.substack.com/p/why-are-non-dry-specs-more-maintainable">why non-DRY specs are more maintainable</a>. There was no need to convince me on this. He quotes Richard Gabriel:</p>
+<blockquote>
+<p>The primary feature for easy maintenance is locality. Locality is that characteristic of source code that enables a programmer to understand that source by looking at only a small portion of it.</p>
+</blockquote>
+<p>Speaking of Richard Gabriel, I have read a few articles about <a href="https://gregoryszorc.com/blog/2021/04/13/rust-is-for-professionals/">Rust</a> and <a href="https://notes.eatonphil.com/2024-03-15-zig-rust-and-other-languages.html">Zig</a> recently. The more I do the more I think it may be a Worse is Better situation in modern systems software. It has <a href="https://www.dreamsongs.com/WorseIsBetter.html">never been clear</a> if one is actually better. The Better (Rust) side seems to be winning market share for now, but personally I am more drawn to Zig.</p>
+<p>Tom Tunguz thinks <a href="https://tomtunguz.com/why-databases-wont-charge-storage/">databases won&rsquo;t charge for storage in the future</a>. The pendulum keeps swinging between colocating compute with data and separating them. Both have advantages and drawbacks. I have successfully argued for colocation in several cases (&ldquo;bringing compute to the data&rdquo;), but it is true that for some categories of systems they tend to be decoupling successfully today. <a href="https://quickwit.io">Quickwit</a> is a great example.</p>
+<p>Finally, Justin Jaffrey points to cases <a href="https://buttondown.email/jaffray/archive/when-compositionality-fails/">where compositionality fails</a>. We love clean abstractions that do not leak, but when you get into the nitty-gritty details of some kinds of software, you cannot realistically have them. Justin mentions distributed systems and query planners, and this also makes me think about compilation stacks. You might <strong>think</strong> there is a nice layered model, but when you look at the details it is often far from being the case.</p>
+</section>
+
+    </div>
+    <div id="footer">
+      [ <a href="index.html">home</a> ]
+    </div>
+    
+    <script
+      data-goatcounter="https://separateconcerns.goatcounter.com/count"
+      async src="//gc.zgo.at/count.js"></script>
+  </body>
+</html>

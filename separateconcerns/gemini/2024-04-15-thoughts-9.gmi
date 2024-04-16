@@ -1,0 +1,91 @@
+# Thoughts 9 — Google vs Amazon, Radicality, Typing
+published 2024-04-15
+
+> "Thoughts" are posts about what has been on my mind. Sometimes practical, sometimes not; often just things I read recently. Less thought out than regular posts.
+
+## Differences between Google and Amazon
+
+It is always interesting to compare those two companies. They differ in their fundamental principles and goals, the way they operate, their technical stacks...
+
+The mother of all comparisons is Steve Yegge's famous rant [1]. More recently, I have also really enjoyed posts by Carlos Arguelles [2] who went from Amazon to Google and (very recently) back.
+
+In the disaggregated write-ahead log [3], Shikhar Bhushan highlights an important difference between the two giants' architectures. At Google the distributed filesystem (Colossus, formerly GFS) is a fundamental building block. It is not global but zonal, and replication is built on top of it. At AWS the globally distributed log — which is not exposed as a public service  —  is a fundamental primitive, and S3 is built on top of it. Shikhar is now building that service [4].
+
+Jaana Dogan also recently tweeted [5] about another difference:
+
+> At Google, a lot of time is spent on rewriting infra or migrating to new infra. AWS rarely kills its services, hence if there are no new hard problems due to  growing scale or something, it's fairly cheap to keep the lights on.
+
+That would be part of the explanation for why Google often kills its services [6] when Amazon maintains them. Although I think Amazon's customer obsession is crucial too.
+
+=> http://files.catwell.info/misc/mirror/steve-yegge-google-amazon.txt 1: http://files.catwell.info/misc/mirror/steve-yegge-google-amazon.txt
+=> https://carloarg02.medium.com 2: https://carloarg02.medium.com
+=> https://blog.schmizz.net/disaggregated-wal 3: https://blog.schmizz.net/disaggregated-wal
+=> https://s2.dev 4: https://s2.dev
+=> https://twitter.com/rakyll/status/1775957427755917363 5: https://twitter.com/rakyll/status/1775957427755917363
+=> https://twitter.com/killedbygoogle 6: https://twitter.com/killedbygoogle
+
+## Is radicality needed to solve Big Problems?
+
+I have been re-reading some older articles by Philippe Silberzahn (in French) and this one deserves a mention [7].
+
+He describes how many people have a view that "Big Problems" such as climate change can only be solved with radical actions. He posits that it stems from at least six mental models:
+
+* A Big Problem requires a Big Solution
+* There is no doubt about the existence of the Big Problem
+* The end justifies the means
+* There is a simple solution to a complex problem
+* There are no adverse effects
+* The resolution of the problem does not require compromise
+
+His view is that Big Problems often have a large social component, and that the large change required to solve them does not usually come from radicality but from small actions carried out by people with alternative mental models.
+
+=> https://philippesilberzahn.com/2021/11/15/transformation-face-aux-grands-problemes-faut-il-etre-radical/ 7: https://philippesilberzahn.com/2021/11/15/transformation-face-aux-grands-problemes-faut-il-etre-radical/
+
+## Statically typing dynamic languages
+
+Note: I am expanding on something I posted elsewhere [8] here.
+
+I think I finally understood a problem I have with many type systems added on top of dynamic languages. In practice, they work against the I and D of SOLID [9]. You can make Interface Segregation work, but you need granular interfaces and intersection types. As for Dependency Inversion, typing makes boundary code very verbose, and using Dependency Inversion reduces the advantages of using typed libraries anyway, since if you do it well library types should not leak from the boundary into client code.
+
+It is also interesting to note that AI appears to be bad at writing code with inverted control. It shows it "reasons bottom-up", which makes sense when you know how it works. So the end result of typing + copilot is that I write code that is less flexible and that requires larger diffs to change. It is not necessarily harder to change, because the tooling helps.
+
+I have a feeling it is not always good or bad, it probably depends on the kind of code I write. SOLID is not absolute. But it is annoying me that things that I still view as "mere tools" introduce so much friction to achieve patterns that I consider elegant and useful.
+
+On a related note, Armin Ronacher — who mostly switched to Rust nowadays — has an interesting blog post about his view of typed Python [10] too.
+
+=> https://bsky.app/profile/catwell.info/post/3kp7hvmyl6n22 8: https://bsky.app/profile/catwell.info/post/3kp7hvmyl6n22
+=> https://en.wikipedia.org/wiki/SOLID 9: https://en.wikipedia.org/wiki/SOLID
+=> https://lucumr.pocoo.org/2023/12/1/the-python-that-was/ 10: https://lucumr.pocoo.org/2023/12/1/the-python-that-was/
+
+## Soft skills posts
+
+Daniel Mangum thinks the most important skill in startup engineering leadership [11] is pacing. I agree wholeheartedly. Pacing in startups is hard to get right: it depends on many forces, it is often a tradeoff, and getting it wrong can be disastrous.
+
+Phil Eaton — who recently changed jobs — wrote a very good post [12] about what to do when you join a new company or team in a senior position. He also mentions internal blogs, which is something I rarely see but always thought was worth doing since I read about it in The Year Without Pants [13].
+
+In Both pyramids are white [14], Vicki Boykis talks about a specific kind of groupthink. Unlike the pyramids, it is not black or white, there is a tradeoff between dissenting when necessary and not dissenting when not. We all have a natural tendency for one or the other, that we need to acknowledge and fight to find the right balance.
+
+=> https://danielmangum.com/posts/most-important-skill-startup-engineering-leadership/ 11: https://danielmangum.com/posts/most-important-skill-startup-engineering-leadership/
+=> https://notes.eatonphil.com/2024-03-11-first-month-on-a-database-team.html 12: https://notes.eatonphil.com/2024-03-11-first-month-on-a-database-team.html
+=> https://scottberkun.com/yearwithoutpants/ 13: https://scottberkun.com/yearwithoutpants/
+=> https://vickiboykis.com/2024/03/13/both-pyramids-are-white/ 14: https://vickiboykis.com/2024/03/13/both-pyramids-are-white/
+
+## More technical posts
+
+Dave Paola explains why non-DRY specs are more maintainable [15]. There was no need to convince me on this. He quotes Richard Gabriel:
+
+> The primary feature for easy maintenance is locality. Locality is that characteristic of source code that enables a programmer to understand that source by looking at only a small portion of it.
+
+Speaking of Richard Gabriel, I have read a few articles about Rust [16] and Zig [17] recently. The more I do the more I think it may be a Worse is Better situation in modern systems software. It has never been clear [18] if one is actually better. The Better (Rust) side seems to be winning market share for now, but personally I am more drawn to Zig.
+
+Tom Tunguz thinks databases won't charge for storage in the future [19]. The pendulum keeps swinging between colocating compute with data and separating them. Both have advantages and drawbacks. I have successfully argued for colocation in several cases ("bringing compute to the data"), but it is true that for some categories of systems they tend to be decoupling successfully today. Quickwit [20] is a great example.
+
+Finally, Justin Jaffrey points to cases where compositionality fails [21]. We love clean abstractions that do not leak, but when you get into the nitty-gritty details of some kinds of software, you cannot realistically have them. Justin mentions distributed systems and query planners, and this also makes me think about compilation stacks. You might think there is a nice layered model, but when you look at the details it is often far from being the case.
+
+=> https://thedailydeveloper.substack.com/p/why-are-non-dry-specs-more-maintainable 15: https://thedailydeveloper.substack.com/p/why-are-non-dry-specs-more-maintainable
+=> https://gregoryszorc.com/blog/2021/04/13/rust-is-for-professionals/ 16: https://gregoryszorc.com/blog/2021/04/13/rust-is-for-professionals/
+=> https://notes.eatonphil.com/2024-03-15-zig-rust-and-other-languages.html 17: https://notes.eatonphil.com/2024-03-15-zig-rust-and-other-languages.html
+=> https://www.dreamsongs.com/WorseIsBetter.html 18: https://www.dreamsongs.com/WorseIsBetter.html
+=> https://tomtunguz.com/why-databases-wont-charge-storage/ 19: https://tomtunguz.com/why-databases-wont-charge-storage/
+=> https://quickwit.io 20: https://quickwit.io
+=> https://buttondown.email/jaffray/archive/when-compositionality-fails/ 21: https://buttondown.email/jaffray/archive/when-compositionality-fails/

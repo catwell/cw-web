@@ -125,6 +125,11 @@ ul {
   margin-bottom: 1rem;
 }
 
+ol:not(.index) {
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+}
+
 ol.index {
   list-style-type: none;
 }
