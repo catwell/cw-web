@@ -9,9 +9,9 @@ description = [[
 
 I have long been thinking that there is something wrong with modern product design thinking. I see designs that trade off almost all power, flexibility and composability for a smoother learning curve. I see designs that remove explicit controls and replace them by magic, choosing to hide essential complexity instead of reducing accidental complexity. I see designs optimized for new users and prospects instead of regular users, and designers who apparently consider documentation as something evil.
 
-I do not like that trend. Learning from a community where [RTFM](http://en.wikipedia.org/wiki/RTFM) was often the right answer has been very beneficial to me when I was a child. I am also a proponent of simplicity and [complexity without complication](https://wiki.archlinux.org/index.php/The_Arch_Way#Simplicity), as should be obvious from [the quotes](http://files.catwell.info/notes/quotes.txt) I have been collecting over the last years.
+I do not like that trend. Learning from a community where [RTFM](http://en.wikipedia.org/wiki/RTFM) was often the right answer has been very beneficial to me when I was a child. I am also a proponent of simplicity and [complexity without complication](https://web.archive.org/web/20140519002633/https://wiki.archlinux.org/index.php/The_Arch_Way#Simplicity), as should be obvious from [the quotes](http://files.catwell.info/notes/quotes.txt) I have been collecting over the last years.
 
-The name of Alan Kay can be found a few times in this file, and so I was very pleased to find out that he recently gave a talk where [he puts words](https://www.youtube.com/watch?feature=player_detailpage&v=gTAghAJcO1o#t=765) on that hard-to-describe feeling: that this design school, which postulates that educating users is a bad idea and that everything should be natural, is hindering progress.
+The name of Alan Kay can be found a few times in this file, and so I was very pleased to find out that he recently gave a talk where [he puts words](https://www.youtube.com/watch?v=gTAghAJcO1o&t=765s) on that hard-to-describe feeling: that this design school, which postulates that educating users is a bad idea and that everything should be natural, is hindering progress.
 
 I found it so spot on that I decided to transcribe part of it below. I encourage you to read, and then watch the whole video if you can!
 

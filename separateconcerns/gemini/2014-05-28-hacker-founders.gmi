@@ -18,6 +18,6 @@ Anyway, the question was: "What is the relationship in startups between programm
 => https://gist.github.com/catwell/5387617 1: https://gist.github.com/catwell/5387617
 => http://sush.io 2: http://sush.io
 => http://humantalks.com/talks/131-developpeurs-montez-votre-boite 3: http://humantalks.com/talks/131-developpeurs-montez-votre-boite
-=> http://www.youtube.com/watch?v=0nxDKTJ5Ovc#t=641s 4: http://www.youtube.com/watch?v=0nxDKTJ5Ovc#t=641s
-=> http://www.youtube.com/watch?v=0nxDKTJ5Ovc#t=439s 5: http://www.youtube.com/watch?v=0nxDKTJ5Ovc#t=439s
-=> http://www.youtube.com/watch?v=BDA0t49AaZ4#t=1383s 6: http://www.youtube.com/watch?v=BDA0t49AaZ4#t=1383s
+=> http://www.youtube.com/watch?v=0nxDKTJ5Ovc&t=641s 4: http://www.youtube.com/watch?v=0nxDKTJ5Ovc&t=641s
+=> https://www.youtube.com/watch?v=0nxDKTJ5Ovc&t=439s 5: https://www.youtube.com/watch?v=0nxDKTJ5Ovc&t=439s
+=> https://www.youtube.com/watch?v=BDA0t49AaZ4&t=1383s 6: https://www.youtube.com/watch?v=BDA0t49AaZ4&t=1383s
