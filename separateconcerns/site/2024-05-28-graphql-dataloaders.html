@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta name="description" content="GraphQL is flexible but sometimes hard to optimize. This article shows how to avoid a typical performance issue.">
+    <link rel="canonical" href="https://blog.separateconcerns.com/2024-05-28-graphql-dataloaders.html">
+    <link href="css/theme.css?cache=2" rel="stylesheet" type="text/css">
+    <link
+      rel="alternate" type="application/atom+xml"
+      href="https://blog.separateconcerns.com/feed.atom"
+    />
+    <title>Avoiding N+1 queries in Strawberry GraphQL with DataLoaders</title>
+  </head>
+  <body>
+    <div id="container">
+    <header>
+      <h1>Avoiding N+1 queries in Strawberry GraphQL with DataLoaders</h1>
+      <h4>
+        published 2024-05-28
+        [ <a href="index.html">home</a> ]
+      </h4>
+    </header>
+    <blockquote>
+<p>The code for this article is in <a href="https://gist.github.com/catwell/e47e70b47550ba2fb07d04a41bb8baf0">a gist</a>, because it is rather long and Rainbow.js apparently does not like recent Python syntax. Follow the links!</p>
+</blockquote>
+<p>GraphQL is great because it lets consumers define the schema of their requests, however that makes it somehow harder to optimize than typical REST requests. If you implement GraphQL navively, you will quickly get the infamous N+1 issue. Let me demonstrate the issue with an example project using <a href="https://quart.palletsprojects.com/">Quart</a>, <a href="https://quart-db.readthedocs.io/">Quart-DB</a>, <a href="https://www.postgresql.org">PostgreSQL</a> and <a href="https://strawberry.rocks">Strawberry</a>.</p>
+<p>Let us start by defining a simple schema for a music collection and <a href="https://gist.github.com/catwell/e47e70b47550ba2fb07d04a41bb8baf0#file-migration-py">populating the database with a migration</a>.</p>
+<p>We expose bands, albums and songs; now let us <a href="https://gist.github.com/catwell/e47e70b47550ba2fb07d04a41bb8baf0#file-naive-py">build a GraphQL interface to query them the naive way</a>.</p>
+<p>We can try it with GraphiQL, to check that it works:</p>
+<p><img alt="music collection request in GraphiQL" src="img/strawberry-song-collection.png"/></p>
+<p>It does, but if we look at the logs we see this:</p>
+<p><img alt="N+1 issue in the logs" src="img/strawberry-n-plus-one.png"/></p>
+<p>It does too many requests: first it gets all the artists, then for each artist it gets the albums, then for each album it gets the songs&hellip; That is the N+1 problem.</p>
+<p>If you look it up online, you will quickly find out that a popular solution is dataloaders. However, a lot of examples you will find do not correspond exactly to that problem, because they only demonstrate how to use dataloaders on primary keys, whereas here we want to load on a foreign key. This is the case of <a href="https://strawberry.rocks/docs/guides/dataloaders">the official Strawberry documentation</a>, which you should still read too if you use that library.</p>
+<p>The important thing to understand with dataloaders is that they take a list of keys and return a list of answers of the same size, correponding to those keys. So you cannot, for instance, have a dataloader that takes a list of album IDs and returns a list of all the songs in those albums. However, the trick is that you <strong>can</strong> have a dataloader that returns a list of <strong>lists</strong> of songs corresponding to each album!</p>
+<p>Now <a href="https://gist.github.com/catwell/e47e70b47550ba2fb07d04a41bb8baf0#file-app-py">let us rewrite our example with that pattern</a>. The request for the whole collection still works, but now if we look at the logs we can see this:</p>
+<p><img alt="N+1 issue fixed by dataloaders" src="img/strawberry-with-dataloaders.png"/></p>
+<p>No more N+1, our job is done here.</p>
+
+    </div>
+    <div id="footer">
+      [ <a href="index.html">home</a> ]
+    </div>
+    
+    <script
+      data-goatcounter="https://separateconcerns.goatcounter.com/count"
+      async src="//gc.zgo.at/count.js"></script>
+  </body>
+</html>

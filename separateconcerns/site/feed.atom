@@ -10,11 +10,42 @@
     rel="alternate" type="application/xhtml+xml"
   />
   <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
-  <updated>2024-04-16T19:14:07Z</updated>
+  <updated>2024-05-28T17:37:57Z</updated>
   <author>
     <name>Pierre 'catwell' Chapuis</name>
     <uri>https://catwell.info/</uri>
   </author>
+  <entry>
+    <title>Avoiding N+1 queries in Strawberry GraphQL with DataLoaders</title>
+    <link
+      rel="alternate" type="text/html"
+      href="https://blog.separateconcerns.com/2024-05-28-graphql-dataloaders.html"
+    />
+    <id>tag:blog.separateconcerns.com,2024-05-28:graphql-dataloaders</id>
+    <published>2024-05-28T19:40:00Z</published>
+    <updated>2024-05-28T19:40:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <blockquote>
+<p>The code for this article is in <a href="https://gist.github.com/catwell/e47e70b47550ba2fb07d04a41bb8baf0">a gist</a>, because it is rather long and Rainbow.js apparently does not like recent Python syntax. Follow the links!</p>
+</blockquote>
+<p>GraphQL is great because it lets consumers define the schema of their requests, however that makes it somehow harder to optimize than typical REST requests. If you implement GraphQL navively, you will quickly get the infamous N+1 issue. Let me demonstrate the issue with an example project using <a href="https://quart.palletsprojects.com/">Quart</a>, <a href="https://quart-db.readthedocs.io/">Quart-DB</a>, <a href="https://www.postgresql.org">PostgreSQL</a> and <a href="https://strawberry.rocks">Strawberry</a>.</p>
+<p>Let us start by defining a simple schema for a music collection and <a href="https://gist.github.com/catwell/e47e70b47550ba2fb07d04a41bb8baf0#file-migration-py">populating the database with a migration</a>.</p>
+<p>We expose bands, albums and songs; now let us <a href="https://gist.github.com/catwell/e47e70b47550ba2fb07d04a41bb8baf0#file-naive-py">build a GraphQL interface to query them the naive way</a>.</p>
+<p>We can try it with GraphiQL, to check that it works:</p>
+<p><img alt="music collection request in GraphiQL" src="img/strawberry-song-collection.png"/></p>
+<p>It does, but if we look at the logs we see this:</p>
+<p><img alt="N+1 issue in the logs" src="img/strawberry-n-plus-one.png"/></p>
+<p>It does too many requests: first it gets all the artists, then for each artist it gets the albums, then for each album it gets the songs&#8230; That is the N+1 problem.</p>
+<p>If you look it up online, you will quickly find out that a popular solution is dataloaders. However, a lot of examples you will find do not correspond exactly to that problem, because they only demonstrate how to use dataloaders on primary keys, whereas here we want to load on a foreign key. This is the case of <a href="https://strawberry.rocks/docs/guides/dataloaders">the official Strawberry documentation</a>, which you should still read too if you use that library.</p>
+<p>The important thing to understand with dataloaders is that they take a list of keys and return a list of answers of the same size, correponding to those keys. So you cannot, for instance, have a dataloader that takes a list of album IDs and returns a list of all the songs in those albums. However, the trick is that you <strong>can</strong> have a dataloader that returns a list of <strong>lists</strong> of songs corresponding to each album!</p>
+<p>Now <a href="https://gist.github.com/catwell/e47e70b47550ba2fb07d04a41bb8baf0#file-app-py">let us rewrite our example with that pattern</a>. The request for the whole collection still works, but now if we look at the logs we can see this:</p>
+<p><img alt="N+1 issue fixed by dataloaders" src="img/strawberry-with-dataloaders.png"/></p>
+<p>No more N+1, our job is done here.</p>
+
+      </div>
+    </content>
+  </entry>
   <entry>
     <title>Thoughts 9 — Google vs Amazon, Radicality, Typing</title>
     <link

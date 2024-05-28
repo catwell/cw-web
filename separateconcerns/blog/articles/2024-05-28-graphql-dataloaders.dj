@@ -1,0 +1,36 @@
+```=lua-meta
+title = "Avoiding N+1 queries in Strawberry GraphQL with DataLoaders"
+published = "2024-05-28 19:40:00"
+description = [[
+    GraphQL is flexible but sometimes hard to optimize.
+    This article shows how to avoid a typical performance issue.
+]]
+```
+
+> The code for this article is in [a gist](https://gist.github.com/catwell/e47e70b47550ba2fb07d04a41bb8baf0), because it is rather long and Rainbow.js apparently does not like recent Python syntax. Follow the links!
+
+GraphQL is great because it lets consumers define the schema of their requests, however that makes it somehow harder to optimize than typical REST requests. If you implement GraphQL navively, you will quickly get the infamous N+1 issue. Let me demonstrate the issue with an example project using [Quart](https://quart.palletsprojects.com/), [Quart-DB](https://quart-db.readthedocs.io/), [PostgreSQL](https://www.postgresql.org) and [Strawberry](https://strawberry.rocks).
+
+Let us start by defining a simple schema for a music collection and [populating the database with a migration](https://gist.github.com/catwell/e47e70b47550ba2fb07d04a41bb8baf0#file-migration-py).
+
+We expose bands, albums and songs; now let us [build a GraphQL interface to query them the naive way](https://gist.github.com/catwell/e47e70b47550ba2fb07d04a41bb8baf0#file-naive-py).
+
+We can try it with GraphiQL, to check that it works:
+
+![music collection request in GraphiQL](img/strawberry-song-collection.png)
+
+It does, but if we look at the logs we see this:
+
+![N+1 issue in the logs](img/strawberry-n-plus-one.png)
+
+It does too many requests: first it gets all the artists, then for each artist it gets the albums, then for each album it gets the songs... That is the N+1 problem.
+
+If you look it up online, you will quickly find out that a popular solution is dataloaders. However, a lot of examples you will find do not correspond exactly to that problem, because they only demonstrate how to use dataloaders on primary keys, whereas here we want to load on a foreign key. This is the case of [the official Strawberry documentation](https://strawberry.rocks/docs/guides/dataloaders), which you should still read too if you use that library.
+
+The important thing to understand with dataloaders is that they take a list of keys and return a list of answers of the same size, correponding to those keys. So you cannot, for instance, have a dataloader that takes a list of album IDs and returns a list of all the songs in those albums. However, the trick is that you *can* have a dataloader that returns a list of *lists* of songs corresponding to each album!
+
+Now [let us rewrite our example with that pattern](https://gist.github.com/catwell/e47e70b47550ba2fb07d04a41bb8baf0#file-app-py). The request for the whole collection still works, but now if we look at the logs we can see this:
+
+![N+1 issue fixed by dataloaders](img/strawberry-with-dataloaders.png)
+
+No more N+1, our job is done here.
