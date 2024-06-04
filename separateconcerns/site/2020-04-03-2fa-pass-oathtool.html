@@ -6,7 +6,7 @@
     <meta name="description" content="How to use pass and oathtool to generate 2FA codes easily.">
     <link rel="canonical" href="https://blog.separateconcerns.com/2020-04-03-2fa-pass-oathtool.html">
     <link href="css/theme.css?cache=2" rel="stylesheet" type="text/css">
-      <link href="css/rainbow-github.css" rel="stylesheet" type="text/css">
+      <link href="css/prism.css" rel="stylesheet" type="text/css">
     <link
       rel="alternate" type="application/atom+xml"
       href="https://blog.separateconcerns.com/feed.atom"
@@ -25,7 +25,7 @@
     </header>
     <p>If you&rsquo;re like me, you don&rsquo;t want to depend on your phone to log into a website, and you wish <a href="https://www.passwordstore.org">your favorite password manager</a> would support 2FA. Well, it can.</p>
 <p>When asked to setup 2FA on a website, get a text code for TOTP. If the website doesn&rsquo;t give you that option, just use <a href="http://zbar.sourceforge.net">zbar</a>. For instance, with the QR code from the <a href="https://help.github.com/en/github/authenticating-to-github/configuring-two-factor-authentication">GitHub documentation</a>:</p>
-<pre><code>$ zbarimg totp-click-enter-code.png
+<pre><code class="language-text">$ zbarimg totp-click-enter-code.png
 QR-Code:otpauth://totp/GitHub:LyaLya?secret=qmli3dwqm53vl7fy&amp;issuer=GitHub
 scanned 1 barcode symbols from 1 images in 0.03 seconds
 </code></pre>
@@ -34,7 +34,7 @@ scanned 1 barcode symbols from 1 images in 0.03 seconds
 <pre><code class="language-shell">2fa () { oathtool --totp --base32 $(pass 2fa/"$1" | head -n 1) ; }
 </code></pre>
 <p>You can now get your 2FA codes like this:</p>
-<pre><code>$ 2fa github
+<pre><code class="language-text">$ 2fa github
 795864
 </code></pre>
 <p>Finally, you can get Bash completion with this simple script, that you must put in <code>/usr/share/bash-completion/completions/2fa</code>:</p>
@@ -59,7 +59,7 @@ complete -W "$l" 2fa
     <div id="footer">
       [ <a href="index.html">home</a> ]
     </div>
-    <script src="js/rainbow.min.js"></script>
+    <script src="js/prism.js"></script>
     <script
       data-goatcounter="https://separateconcerns.goatcounter.com/count"
       async src="//gc.zgo.at/count.js"></script>

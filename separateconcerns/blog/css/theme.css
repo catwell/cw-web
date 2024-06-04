@@ -141,6 +141,16 @@ ol.index li a {
 
 pre {
   overflow-x: auto;
+  font-size: 16px !important; /* overload prism */
+}
+
+:not(pre) > code { /* inline */
+  color: #333;
+  background: #f8f8f8;
+  padding: 2px 3px;
+  border: 1px solid #eaeaea;
+  border-radius: 3px;
+  font-size: 18px;
 }
 
 span.daydate {

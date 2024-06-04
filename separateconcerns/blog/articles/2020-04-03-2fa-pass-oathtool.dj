@@ -9,7 +9,7 @@ If you're like me, you don't want to depend on your phone to log into a website,
 
 When asked to setup 2FA on a website, get a text code for TOTP. If the website doesn't give you that option, just use [zbar](http://zbar.sourceforge.net). For instance, with the QR code from the [GitHub documentation](https://help.github.com/en/github/authenticating-to-github/configuring-two-factor-authentication):
 
-```
+```text
 $ zbarimg totp-click-enter-code.png
 QR-Code:otpauth://totp/GitHub:LyaLya?secret=qmli3dwqm53vl7fy&issuer=GitHub
 scanned 1 barcode symbols from 1 images in 0.03 seconds
@@ -25,7 +25,7 @@ Finally, add this to your `.bashrc` (or the equivalent for whatever shell you us
 
 You can now get your 2FA codes like this:
 
-```
+```text
 $ 2fa github
 795864
 ```

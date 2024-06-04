@@ -17,7 +17,7 @@ The historical way to do this is editing `sshd_config` and setting the `Port` va
 
 The reason is that SSH is configured with systemd socket activation. So what you need to do is run `sudo systemctl edit sshd.socket` and set the contents of the file to:
 
-```
+```toml
 [Socket]
 ListenStream=MY_PORT
 Accept=yes

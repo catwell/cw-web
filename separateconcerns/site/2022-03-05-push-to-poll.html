@@ -6,7 +6,7 @@
     <meta name="description" content="A pattern to send a feed of messages or events from a server to a client.">
     <link rel="canonical" href="https://blog.separateconcerns.com/2022-03-05-push-to-poll.html">
     <link href="css/theme.css?cache=2" rel="stylesheet" type="text/css">
-      <link href="css/rainbow-github.css" rel="stylesheet" type="text/css">
+      <link href="css/prism.css" rel="stylesheet" type="text/css">
     <link
       rel="alternate" type="application/atom+xml"
       href="https://blog.separateconcerns.com/feed.atom"
@@ -32,7 +32,7 @@
 <p>EDIT (2022-04-04): I was made aware <a href="https://news.ycombinator.com/item?id=30904220">through HN</a> of a spec called <a href="https://www.http-feeds.org">HTTP Feeds</a> which looks like a very good format for those feeds. Something like Atom can still work too.</p>
 </blockquote>
 <p>The client can then just process the feed in a loop, in pseudocode:</p>
-<pre><code>cursor = INCEPTION
+<pre><code class="language-text">cursor = INCEPTION
 
 loop do
     messages, new_cursor = fetch_messages_since(cursor)
@@ -51,7 +51,7 @@ end
 <h2>Server Push</h2>
 <p>If we want message reception to be realtime, we may use a push-based design instead. In that model, the client starts by registering with the server. The server will then send the messages to the client as they arrive.</p>
 <p>In practice you might not really want to send each message on its own so you will send message batches instead and client code looks like that:</p>
-<pre><code>def messages_handler(messages)
+<pre><code class="language-text">def messages_handler(messages)
     for message in messages do
         process(message)
     end
@@ -68,7 +68,7 @@ register_with_server(messages_handler)
 <h2>Push-to-poll</h2>
 <p>The push-to-poll pattern combines the best of both worlds. The idea is simple: start with the same feed as polling, but instead of using a delayed loop to decide when to fetch it let the server tell you like with the push pattern.</p>
 <p>It looks like this:</p>
-<pre><code>cursor = INCEPTION
+<pre><code class="language-text">cursor = INCEPTION
 
 def poll_now()
     messages, new_cursor = fetch_messages_since(cursor)
@@ -95,7 +95,7 @@ register_with_server(poll_now)
     <div id="footer">
       [ <a href="index.html">home</a> ]
     </div>
-    <script src="js/rainbow.min.js"></script>
+    <script src="js/prism.js"></script>
     <script
       data-goatcounter="https://separateconcerns.goatcounter.com/count"
       async src="//gc.zgo.at/count.js"></script>

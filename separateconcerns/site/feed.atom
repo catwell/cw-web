@@ -10,7 +10,7 @@
     rel="alternate" type="application/xhtml+xml"
   />
   <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
-  <updated>2024-05-28T17:37:57Z</updated>
+  <updated>2024-06-04T20:32:10Z</updated>
   <author>
     <name>Pierre 'catwell' Chapuis</name>
     <uri>https://catwell.info/</uri>
@@ -27,11 +27,168 @@
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <blockquote>
-<p>The code for this article is in <a href="https://gist.github.com/catwell/e47e70b47550ba2fb07d04a41bb8baf0">a gist</a>, because it is rather long and Rainbow.js apparently does not like recent Python syntax. Follow the links!</p>
+<p>If you prefer, the code for this article is also available in <a href="https://gist.github.com/catwell/e47e70b47550ba2fb07d04a41bb8baf0">a gist</a>.</p>
 </blockquote>
 <p>GraphQL is great because it lets consumers define the schema of their requests, however that makes it somehow harder to optimize than typical REST requests. If you implement GraphQL navively, you will quickly get the infamous N+1 issue. Let me demonstrate the issue with an example project using <a href="https://quart.palletsprojects.com/">Quart</a>, <a href="https://quart-db.readthedocs.io/">Quart-DB</a>, <a href="https://www.postgresql.org">PostgreSQL</a> and <a href="https://strawberry.rocks">Strawberry</a>.</p>
-<p>Let us start by defining a simple schema for a music collection and <a href="https://gist.github.com/catwell/e47e70b47550ba2fb07d04a41bb8baf0#file-migration-py">populating the database with a migration</a>.</p>
-<p>We expose bands, albums and songs; now let us <a href="https://gist.github.com/catwell/e47e70b47550ba2fb07d04a41bb8baf0#file-naive-py">build a GraphQL interface to query them the naive way</a>.</p>
+<p>Let us start by defining a simple schema for a music collection and populating the database with a migration:</p>
+<pre><code class="language-python">from quart_db import Connection
+
+
+async def create_schema(cnx: Connection) -&gt; None:
+    await cnx.execute(
+        """
+            CREATE TABLE bands (
+                id bigint PRIMARY KEY,
+                name text NOT NULL
+            );
+            CREATE TABLE albums (
+                id bigint PRIMARY KEY,
+                name text NOT NULL,
+                band_id bigint REFERENCES bands(id)
+            );
+            CREATE TABLE songs (
+                id bigint GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+                name text NOT NULL,
+                album_id bigint REFERENCES albums(id)
+            );
+        """
+    )
+
+
+async def populate(cnx: Connection) -&gt; None:
+    await cnx.execute(
+        """
+            INSERT INTO bands (id, name) VALUES
+                (1, 'Dark Tranquillity'),
+                (2, 'Pineapple Thief'),
+                (3, 'Wintersun');
+
+            INSERT INTO albums (id, name, band_id) VALUES
+                (1, 'Haven', 1),
+                (2, 'Fiction', 1),
+                (3, 'Atoma', 1),
+                (4, 'Time I', 3),
+                (5, 'Your Wilderness', 2),
+                (6, 'Versions of the Truth', 2);
+
+            INSERT INTO songs (name, album_id) VALUES
+                ('The Wonders at Your Feet', 1),
+                ('Not Built to Last', 1),
+                ('Indifferent Suns', 1),
+                ('At Loss for Words', 1),
+                ('Terminus', 2),
+                ('Inside the Particle Storm', 2),
+                ('Focus Shift', 2),
+                ('Forward Momentum', 3),
+                ('Caves and Embers', 3),
+                ('When Mountains Fall', 4),
+                ('Sons of Winter and Stars', 4),
+                ('Land of Snow and Sorrow', 4),
+                ('Time', 4),
+                ('The Final Thing on My Mind', 5),
+                ('Tear You Up', 5);
+        """
+    )
+
+
+async def migrate(cnx: Connection) -&gt; None:
+    await create_schema(cnx)
+    await populate(cnx)
+</code></pre>
+<p>We expose bands, albums and songs; now let us build a GraphQL interface to query them the naive way:</p>
+<pre><code class="language-python">import logging
+from typing import Any
+
+import strawberry
+from quart_cors import cors
+from quart_db import QuartDB
+from strawberry.quart.views import GraphQLView as QuartGraphQLView
+
+from quart import Quart, Request, Response
+
+app = Quart("sfdl")
+app.logger.setLevel(logging.INFO)
+
+app.config["QUART_DB_DATABASE_URL"] = "postgresql://postgres@localhost/cwl_sfdl"
+app.config["QUART_DB_AUTO_REQUEST_CONNECTION"] = False
+db = QuartDB(app)
+
+cors(app, allow_origin="*", allow_methods=["GET", "POST"])
+
+
+@strawberry.type
+class Song:
+    id: int
+    name: str
+    album_id: int
+
+
+@strawberry.type
+class Album:
+    id: int
+    name: str
+    band_id: int
+
+    @strawberry.field
+    async def songs(self) -&gt; list[Song]:
+        query = """
+            SELECT id, name, album_id
+            FROM songs
+            WHERE album_id = :album_id
+        """
+        async with db.connection() as cnx:
+            result = await cnx.fetch_all(query, {"album_id": self.id})
+        songs = [Song(**row) for row in result]
+        app.logger.info(f"Got {len(songs)} songs.")
+        return songs
+
+
+@strawberry.type
+class Band:
+    id: int
+    name: str
+
+    @strawberry.field
+    async def albums(self) -&gt; list[Album]:
+        query = """
+            SELECT id, name, band_id
+            FROM albums
+            WHERE band_id = :band_id
+        """
+        async with db.connection() as cnx:
+            result = await cnx.fetch_all(query, {"band_id": self.id})
+        albums = [Album(**row) for row in result]
+        app.logger.info(f"Got {len(albums)} albums.")
+        return albums
+
+
+@strawberry.type
+class Query:
+    @strawberry.field
+    async def bands(self) -&gt; list[Band]:
+        query = """
+            SELECT id, name
+            FROM bands
+        """
+        async with db.connection() as cnx:
+            result = await cnx.fetch_all(query)
+        bands = [Band(**row) for row in result]
+        app.logger.info(f"Got {len(bands)} bands.")
+        return bands
+
+
+class GraphQLView(QuartGraphQLView):
+    async def get_context(self, request: Request, response: Response) -&gt; dict[str, Any]:
+        return {"request": request, "response": response}
+
+
+view = GraphQLView.as_view(
+    "graphql_view",
+    schema=strawberry.Schema(query=Query),
+    graphql_ide="graphiql",
+)
+app.add_url_rule("/", view_func=view)
+</code></pre>
 <p>We can try it with GraphiQL, to check that it works:</p>
 <p><img alt="music collection request in GraphiQL" src="img/strawberry-song-collection.png"/></p>
 <p>It does, but if we look at the logs we see this:</p>
@@ -39,7 +196,131 @@
 <p>It does too many requests: first it gets all the artists, then for each artist it gets the albums, then for each album it gets the songs&#8230; That is the N+1 problem.</p>
 <p>If you look it up online, you will quickly find out that a popular solution is dataloaders. However, a lot of examples you will find do not correspond exactly to that problem, because they only demonstrate how to use dataloaders on primary keys, whereas here we want to load on a foreign key. This is the case of <a href="https://strawberry.rocks/docs/guides/dataloaders">the official Strawberry documentation</a>, which you should still read too if you use that library.</p>
 <p>The important thing to understand with dataloaders is that they take a list of keys and return a list of answers of the same size, correponding to those keys. So you cannot, for instance, have a dataloader that takes a list of album IDs and returns a list of all the songs in those albums. However, the trick is that you <strong>can</strong> have a dataloader that returns a list of <strong>lists</strong> of songs corresponding to each album!</p>
-<p>Now <a href="https://gist.github.com/catwell/e47e70b47550ba2fb07d04a41bb8baf0#file-app-py">let us rewrite our example with that pattern</a>. The request for the whole collection still works, but now if we look at the logs we can see this:</p>
+<p>Now let us rewrite our example with that pattern:</p>
+<pre><code class="language-python">import logging
+from collections import defaultdict
+from functools import cached_property
+from typing import Any
+
+import strawberry
+from quart_cors import cors
+from quart_db import QuartDB
+from strawberry.dataloader import DataLoader
+from strawberry.quart.views import GraphQLView as QuartGraphQLView
+from strawberry.types import Info
+
+from quart import Quart, Request, Response
+
+app = Quart("sfdl")
+app.logger.setLevel(logging.INFO)
+
+app.config["QUART_DB_DATABASE_URL"] = "postgresql://postgres@localhost/cwl_sfdl"
+app.config["QUART_DB_AUTO_REQUEST_CONNECTION"] = False
+db = QuartDB(app)
+
+cors(app, allow_origin="*", allow_methods=["GET", "POST"])
+
+
+@strawberry.type
+class Song:
+    id: int
+    name: str
+    album_id: int
+
+
+@strawberry.type
+class Album:
+    id: int
+    name: str
+    band_id: int
+
+    @strawberry.field
+    async def songs(self, info: Info) -&gt; list[Song]:
+        dl = info.context["dataloaders"].songs_for_albums
+        return await dl.load(self.id)
+
+
+@strawberry.type
+class Band:
+    id: int
+    name: str
+
+    @strawberry.field
+    async def albums(self, info: Info) -&gt; list[Album]:
+        dl = info.context["dataloaders"].albums_for_bands
+        return await dl.load(self.id)
+
+
+@strawberry.type
+class Query:
+    @strawberry.field
+    async def bands(self) -&gt; list[Band]:
+        query = """
+            SELECT id, name
+            FROM bands
+        """
+        async with db.connection() as cnx:
+            result = await cnx.fetch_all(query)
+        bands = [Band(**row) for row in result]
+        app.logger.info(f"Got {len(bands)} bands.")
+        return bands
+
+
+class DataLoaders:
+    @staticmethod
+    async def load_songs_for_albums(keys: list[int]) -&gt; list[list[Song]]:
+        query = """
+            SELECT id, name, album_id
+            FROM songs
+            WHERE album_id = ANY(:keys)
+        """
+        async with db.connection() as cnx:
+            result = await cnx.fetch_all(query, {"keys": keys})
+        songs = [Song(**row) for row in result]
+        app.logger.info(f"Got {len(songs)} songs.")
+        by_key: defaultdict[int, list[Song]] = defaultdict(list)
+        for song in songs:
+            by_key[song.album_id].append(song)
+        return [by_key[k] for k in keys]
+
+    @staticmethod
+    async def load_albums_for_bands(keys: list[int]) -&gt; list[list[Album]]:
+        query = """
+            SELECT id, name, band_id
+            FROM albums
+            WHERE band_id = ANY(:keys)
+        """
+        async with db.connection() as cnx:
+            result = await cnx.fetch_all(query, {"keys": keys})
+        albums = [Album(**row) for row in result]
+        app.logger.info(f"Got {len(albums)} albums.")
+        by_key: defaultdict[int, list[Album]] = defaultdict(list)
+        for album in albums:
+            by_key[album.band_id].append(album)
+        return [by_key[k] for k in keys]
+
+    @cached_property
+    def songs_for_albums(self) -&gt; DataLoader[int, list[Song]]:
+        return DataLoader(self.load_songs_for_albums)
+
+    @cached_property
+    def albums_for_bands(self) -&gt; DataLoader[int, list[Album]]:
+        return DataLoader(self.load_albums_for_bands)
+
+
+class GraphQLView(QuartGraphQLView):
+    async def get_context(self, request: Request, response: Response) -&gt; dict[str, Any]:
+        return {"request": request, "response": response, "dataloaders": DataLoaders()}
+
+
+view = GraphQLView.as_view(
+    "graphql_view",
+    schema=strawberry.Schema(query=Query),
+    graphql_ide="graphiql",
+)
+app.add_url_rule("/", view_func=view)
+</code></pre>
+<p>The request for the whole collection still works, but now if we look at the logs we can see this:</p>
 <p><img alt="N+1 issue fixed by dataloaders" src="img/strawberry-with-dataloaders.png"/></p>
 <p>No more N+1, our job is done here.</p>
 
@@ -1295,7 +1576,7 @@ o:as_json()
 <p>EDIT (2022-04-04): I was made aware <a href="https://news.ycombinator.com/item?id=30904220">through HN</a> of a spec called <a href="https://www.http-feeds.org">HTTP Feeds</a> which looks like a very good format for those feeds. Something like Atom can still work too.</p>
 </blockquote>
 <p>The client can then just process the feed in a loop, in pseudocode:</p>
-<pre><code>cursor = INCEPTION
+<pre><code class="language-text">cursor = INCEPTION
 
 loop do
     messages, new_cursor = fetch_messages_since(cursor)
@@ -1314,7 +1595,7 @@ end
 <h2>Server Push</h2>
 <p>If we want message reception to be realtime, we may use a push-based design instead. In that model, the client starts by registering with the server. The server will then send the messages to the client as they arrive.</p>
 <p>In practice you might not really want to send each message on its own so you will send message batches instead and client code looks like that:</p>
-<pre><code>def messages_handler(messages)
+<pre><code class="language-text">def messages_handler(messages)
     for message in messages do
         process(message)
     end
@@ -1331,7 +1612,7 @@ register_with_server(messages_handler)
 <h2>Push-to-poll</h2>
 <p>The push-to-poll pattern combines the best of both worlds. The idea is simple: start with the same feed as polling, but instead of using a delayed loop to decide when to fetch it let the server tell you like with the push pattern.</p>
 <p>It looks like this:</p>
-<pre><code>cursor = INCEPTION
+<pre><code class="language-text">cursor = INCEPTION
 
 def poll_now()
     messages, new_cursor = fetch_messages_since(cursor)
@@ -1841,7 +2122,7 @@ useful but it is important not to abuse it. Simple code is better :)</p>
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>If you&#8217;re like me, you don&#8217;t want to depend on your phone to log into a website, and you wish <a href="https://www.passwordstore.org">your favorite password manager</a> would support 2FA. Well, it can.</p>
 <p>When asked to setup 2FA on a website, get a text code for TOTP. If the website doesn&#8217;t give you that option, just use <a href="http://zbar.sourceforge.net">zbar</a>. For instance, with the QR code from the <a href="https://help.github.com/en/github/authenticating-to-github/configuring-two-factor-authentication">GitHub documentation</a>:</p>
-<pre><code>$ zbarimg totp-click-enter-code.png
+<pre><code class="language-text">$ zbarimg totp-click-enter-code.png
 QR-Code:otpauth://totp/GitHub:LyaLya?secret=qmli3dwqm53vl7fy&amp;issuer=GitHub
 scanned 1 barcode symbols from 1 images in 0.03 seconds
 </code></pre>
@@ -1850,7 +2131,7 @@ scanned 1 barcode symbols from 1 images in 0.03 seconds
 <pre><code class="language-shell">2fa () { oathtool --totp --base32 $(pass 2fa/"$1" | head -n 1) ; }
 </code></pre>
 <p>You can now get your 2FA codes like this:</p>
-<pre><code>$ 2fa github
+<pre><code class="language-text">$ 2fa github
 795864
 </code></pre>
 <p>Finally, you can get Bash completion with this simple script, that you must put in <code>/usr/share/bash-completion/completions/2fa</code>:</p>
@@ -2305,7 +2586,7 @@ git branch -D tmp-alembic
 <p>I often change the default SSH port from 22 to something else on servers I run. It kind of is a dangerous operation, especially when the only way you have to connect to that server <strong>is</strong> SSH.</p>
 <p>The historical way to do this is editing <code>sshd_config</code> and setting the <code>Port</code> variable, but with recent versions of Arch Linux and the default configuration, this will <strong>not</strong> work.</p>
 <p>The reason is that SSH is configured with systemd socket activation. So what you need to do is run <code>sudo systemctl edit sshd.socket</code> and set the contents of the file to:</p>
-<pre><code>[Socket]
+<pre><code class="language-toml">[Socket]
 ListenStream=MY_PORT
 Accept=yes
 </code></pre>
@@ -2474,7 +2755,7 @@ Accept=yes
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>If you are like me, maybe you have recently updated your Linux laptop and found out that right click had stopped working on the touchpad. It took me half an hour to figure out why. I was looking at low-level stuff until I realized <code>libinput debug-events</code> saw the right thing:</p>
-<pre><code>event11  POINTER_BUTTON    +3.35s
+<pre><code class="language-text">event11  POINTER_BUTTON    +3.35s
     BTN_RIGHT (273) pressed, seat count: 1
 event11  POINTER_BUTTON    +3.49s
     BTN_RIGHT (273) released, seat count:
@@ -3363,7 +3644,7 @@ virt-manager on Arch Linux&#8230; Thankfully you can tell git not to use it:</p>
 <p>The second one, in my case, was <a href="http://www.passwordstore.org/">pass</a>.
 If you try to use it in Gnome, the keyring hijacks the GPG agent
 and you get that message (plus a graphical prompt):</p>
-<pre><code>gpg: WARNING: The GNOME keyring manager hijacked the GnuPG agent.
+<pre><code class="language-text">gpg: WARNING: The GNOME keyring manager hijacked the GnuPG agent.
 gpg: WARNING: GnuPG will not work properly - please configure
 that tool to not interfere with the GnuPG system!
 </code></pre>

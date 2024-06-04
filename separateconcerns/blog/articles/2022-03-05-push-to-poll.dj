@@ -17,7 +17,7 @@ A simple solution is to provide some kind of feed: the client authenticates and 
 
 The client can then just process the feed in a loop, in pseudocode:
 
-```
+```text
 cursor = INCEPTION
 
 loop do
@@ -40,7 +40,7 @@ If we want message reception to be realtime, we may use a push-based design inst
 
 In practice you might not really want to send each message on its own so you will send message batches instead and client code looks like that:
 
-```
+```text
 def messages_handler(messages)
     for message in messages do
         process(message)
@@ -64,7 +64,7 @@ The push-to-poll pattern combines the best of both worlds. The idea is simple: s
 
 It looks like this:
 
-```
+```text
 cursor = INCEPTION
 
 def poll_now()

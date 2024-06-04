@@ -10,7 +10,7 @@ TPL.html_post = [[
     <link rel="canonical" href="https://blog.separateconcerns.com/{{url}}">
     <link href="css/theme.css?cache=2" rel="stylesheet" type="text/css">
     {{#has_code}}
-      <link href="css/rainbow-github.css" rel="stylesheet" type="text/css">
+      <link href="css/prism.css" rel="stylesheet" type="text/css">
     {{/has_code}}
     <link
       rel="alternate" type="application/atom+xml"
@@ -33,7 +33,7 @@ TPL.html_post = [[
     <div id="footer">
       [ <a href="index.html">home</a> ]
     </div>
-    {{#has_code}}<script src="js/rainbow.min.js"></script>{{/has_code}}
+    {{#has_code}}<script src="js/prism.js"></script>{{/has_code}}
     <script
       data-goatcounter="https://separateconcerns.goatcounter.com/count"
       async src="//gc.zgo.at/count.js"></script>
