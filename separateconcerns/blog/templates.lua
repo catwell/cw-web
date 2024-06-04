@@ -8,10 +8,10 @@ TPL.html_post = [[
     <meta content="width=device-width, initial-scale=1" name="viewport">
     {{#description}}<meta name="description" content="{{description}}">{{/description}}
     <link rel="canonical" href="https://blog.separateconcerns.com/{{url}}">
-    <link href="css/theme.css?cache=3" rel="stylesheet" type="text/css">
     {{#has_code}}
       <link href="css/prism.css" rel="stylesheet" type="text/css">
     {{/has_code}}
+    <link href="css/theme.css?cache=4" rel="stylesheet" type="text/css">
     <link
       rel="alternate" type="application/atom+xml"
       href="https://blog.separateconcerns.com/feed.atom"

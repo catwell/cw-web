@@ -139,9 +139,10 @@ ol.index li a {
   overflow: hidden;
 }
 
-pre {
+pre[class*=language-] {
   overflow-x: auto;
   font-size: 16px !important; /* overload prism */
+  margin-bottom: 1rem;
 }
 
 :not(pre) > code { /* inline */

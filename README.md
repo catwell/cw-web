@@ -8,7 +8,7 @@ Most of it [was written in January 2013](https://blog.separateconcerns.com/2013-
 
 ## Copyright
 
-Copyright (c) 2013-2023 Pierre Chapuis
+Copyright (c) Pierre Chapuis
 
 Lua source code available under the MIT license, content under CC BY-ND 4.0.
 See LICENSE.txt for the details.

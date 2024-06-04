@@ -178,7 +178,20 @@ We can try it with GraphiQL, to check that it works:
 
 It does, but if we look at the logs we see this:
 
-=> img/strawberry-n-plus-one.png N+1 issue in the logs
+```
+INFO in __init__: Got 3 bands.
+INFO in __init__: Got 2 albums.
+INFO in __init__: Got 1 albums.
+INFO in __init__: Got 3 albums.
+INFO in __init__: Got 2 songs.
+INFO in __init__: Got 4 songs.
+INFO in __init__: Got 0 songs.
+INFO in __init__: Got 4 songs.
+INFO in __init__: Got 2 songs.
+INFO in __init__: Got 3 songs.
+[59520] [INFO] 127.0.0.1:52944 POST / 1.1 200 806 5311
+
+```
 
 It does too many requests: first it gets all the artists, then for each artist it gets the albums, then for each album it gets the songs... That is the N+1 problem.
 
@@ -316,7 +329,13 @@ app.add_url_rule("/", view_func=view)
 
 The request for the whole collection still works, but now if we look at the logs we can see this:
 
-=> img/strawberry-with-dataloaders.png N+1 issue fixed by dataloaders
+```
+INFO in __init__: Got 3 bands.
+INFO in __init__: Got 6 albums.
+INFO in __init__: Got 15 songs.
+[59520] [INFO] 127.0.0.1:60244 POST / 1.1 200 806 4509
+
+```
 
 No more N+1, our job is done here.
 
