@@ -1,0 +1,73 @@
+# Thoughts 10 - Tolerance, Mental Health, Having Fun
+published 2024-08-30
+
+> "Thoughts" are posts about what has been on my mind. Sometimes practical, sometimes not; often just things I read recently. Less thought out than regular posts.
+
+I have not made a "Thoughts" post in 4.5 months so I had a lot of topics in store. I have decided to focus on "soft" topics only this time, so if you are only looking for technical content you can skip this post.
+
+## Tolerance
+
+In 1959, Bertrand Russell [1] was asked on BBC [2] what would be worth telling later generations.
+
+His answer was divided into two parts, intellectual and moral. The latter, I think, may be of some use today.
+
+> Love is wise, hatred is foolish.
+> 
+> In this world, which is getting more and more closely interconnected, we have to learn to tolerate each other. We have to learn to put up with the fact that some people say things that we don’t like.
+> 
+> We can only live together in that way. And if we are to live together and not die together, we must learn a kind of charity and a kind of tolerance which is absolutely vital to the continuation of human life on this planet.
+
+We tend not to do that. We take sides arbitrarily, probably more easily online than offline. We create fractures that make participation in any community more tiring than it should be. Albert Wenger puts it like this [3]:
+
+> The world is continuing to descend back into tribalism. [...] Words have been rendered devoid of meaning and reduced to pledges of allegiance to a tribe. [...]
+> 
+> I don’t belong to any of the tribes nor would I want to. But the effort required to maintain internally consistent and intellectually honest positions in such an environment is daunting. And it often seems futile.
+
+=> https://en.wikipedia.org/wiki/Bertrand_Russell 1: https://en.wikipedia.org/wiki/Bertrand_Russell
+=> https://www.youtube.com/watch?v=BupO0oOAyBw&t=1600s 2: https://www.youtube.com/watch?v=BupO0oOAyBw&t=1600s
+=> https://continuations.com/post/751642413712523264/i-miss-writing-here 3: https://continuations.com/post/751642413712523264/i-miss-writing-here
+
+## Mental health
+
+I generally avoid that topic online, but I will make an exception.
+
+Brain chemistry is complicated, and mental health is a multi-dimensional spectrum. We vaguely mark regions of that spectrum and give them disorder names; it is a necessarily simplified model. The frontiers of those regions are blurry and differ between cultures and over time. Two decades ago, for instance, behavior considered normal for kids in France would often have resulted in medication for ADHD in the US.
+
+Today the number of diagnoses and self-diagnoses is clearly exploding. Part of the reason is that influencers, sometimes paid by medical companies, have made neurodivergence "trendy": people feel like having a disorder makes them belong to a community. It is even worse for kids, with parents "diagnosing" them and managing to find medical professionals to confirm those diagnoses.
+
+The problem is that studies have shown that believing that you have a mental disorder when you do not can make you exhibit the same symptoms. However they do not come from the same causes, so medication will not work beyond the placebo effect, but it will mess with your brain chemistry.
+
+A psychiatrist once told me: "If we can avoid treating something like a disease, we should." I think this is the right approach. We must go back to considering more zones of the spectrum "normal".
+
+Note that I am not saying you should not go to therapy! If anything learning CBT [4] basics could benefit everyone. But we should normalize therapy instead of labeling everyone with a mental disorder.
+
+Although I have been thinking about this topic for a long time, posting about it here was prompted first by a post by DHH [5], and more recently by a video in French [6] where I learned about the influence of medical companies like Done and Cerebral. I also have a book [7] about how the American approach to mental health impacts the rest of the world on my reading list.
+
+=> https://en.wikipedia.org/wiki/Cognitive_behavioral_therapy 4: https://en.wikipedia.org/wiki/Cognitive_behavioral_therapy
+=> https://world.hey.com/dhh/the-endangered-state-of-normality-d632a7fe 5: https://world.hey.com/dhh/the-endangered-state-of-normality-d632a7fe
+=> https://www.youtube.com/watch?v=3a_as1UDDwU 6: https://www.youtube.com/watch?v=3a_as1UDDwU
+=> https://www.amazon.com/Crazy-Like-Us-Globalization-American/dp/1416587098 7: https://www.amazon.com/Crazy-Like-Us-Globalization-American/dp/1416587098
+
+## Have fun
+
+DHH (again) explains very well [8] why I do not use languages like Rust or C++.
+
+> There is no universal set of trade-offs that'll make something objectively "work best". Half the programming conundrum lies in connecting to an enduring source of motivation. I wouldn't be a happy camper if I had to spend my days programming Rust (but I LOVE so many of the tools coming out of that community by people who DO enjoy just that).
+
+I work mostly with Python nowadays, it is not my favorite language but I tolerate it. Tools written in Rust [9] are making my life much better, yet I would not pick Rust if I had to write such tools, even if it may be the best tool for that job [10].
+
+Beginners often ask me what programming language or algorithms they should learn, and I tell them it does not matter at this stage: they should learn what motivates them the most. The older I get, the more I think this remains somewhat true your whole career.
+
+Programmers need slack and fun projects, or their output degrades real fast. Young people with no kids can compensate for boring work with side projects, but as you get older you must make sure you find some fun at work. Jason Cohen talks about procrastinating for success [11].
+
+> Finally, sometimes you’ve got to let yourself do fun stuff at the expense of priorities. Most of what you do in a little company isn’t what you enjoy doing; it’s easy to become frustrated and burned-out. So sometimes you need to allow yourself to recover with plain fun. Whatever the cost of putting off duties, burn-out is even more costly.
+
+I would add a little nuance to this: it is perfectly possible that, at some point in your life, your work will motivate you so much that you won't want to do anything else. And that is perfectly fine, you just have to recognize when that is no longer the case.
+
+Anyway, happy people become successful, not the other way around. There is a book [12] about this. We are all different, so figure out what you need to be happy now, and go get it.
+
+=> https://world.hey.com/dhh/why-i-retired-from-the-tech-crusades-107a51ea 8: https://world.hey.com/dhh/why-i-retired-from-the-tech-crusades-107a51ea
+=> https://astral.sh 9: https://astral.sh
+=> https://x.com/awesomekling/status/1822241531501162806 10: https://x.com/awesomekling/status/1822241531501162806
+=> https://longform.asmartbear.com/procrastinate/ 11: https://longform.asmartbear.com/procrastinate/
+=> https://www.amazon.com/Happiness-Advantage-Positive-Brain-Success/dp/0307591557/ 12: https://www.amazon.com/Happiness-Advantage-Positive-Brain-Success/dp/0307591557/

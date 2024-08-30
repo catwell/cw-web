@@ -10,11 +10,70 @@
     rel="alternate" type="application/xhtml+xml"
   />
   <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
-  <updated>2024-06-04T20:46:06Z</updated>
+  <updated>2024-08-30T06:40:54Z</updated>
   <author>
     <name>Pierre 'catwell' Chapuis</name>
     <uri>https://catwell.info/</uri>
   </author>
+  <entry>
+    <title>Thoughts 10 - Tolerance, Mental Health, Having Fun</title>
+    <link
+      rel="alternate" type="text/html"
+      href="https://blog.separateconcerns.com/2024-08-30-thoughts-10.html"
+    />
+    <id>tag:blog.separateconcerns.com,2024-08-30:thoughts-10</id>
+    <published>2024-08-30T08:40:00Z</published>
+    <updated>2024-08-30T08:40:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <blockquote>
+<p>&#8220;Thoughts&#8221; are posts about what has been on my mind. Sometimes practical, sometimes not; often just things I read recently. Less thought out than regular posts.</p>
+</blockquote>
+<p>I have not made a &#8220;Thoughts&#8221; post in 4.5 months so I had a lot of topics in store. I have decided to focus on &#8220;soft&#8221; topics only this time, so if you are only looking for technical content you can skip this post.</p>
+<section id="Tolerance">
+<h2>Tolerance</h2>
+<p>In 1959, <a href="https://en.wikipedia.org/wiki/Bertrand_Russell">Bertrand Russell</a> was <a href="https://www.youtube.com/watch?v=BupO0oOAyBw&amp;t=1600s">asked on BBC</a> what would be worth telling later generations.</p>
+<p>His answer was divided into two parts, intellectual and moral. The latter, I think, may be of some use today.</p>
+<blockquote>
+<p>Love is wise, hatred is foolish.</p>
+<p>In this world, which is getting more and more closely interconnected, we have to learn to tolerate each other. We have to learn to put up with the fact that some people say things that we don’t like.</p>
+<p>We can only live together in that way. And if we are to live together and not die together, we must learn a kind of charity and a kind of tolerance which is absolutely vital to the continuation of human life on this planet.</p>
+</blockquote>
+<p>We tend not to do that. We take sides arbitrarily, probably more easily online than offline. We create fractures that make participation in any community more tiring than it should be. <a href="https://continuations.com/post/751642413712523264/i-miss-writing-here">Albert Wenger puts it like this</a>:</p>
+<blockquote>
+<p>The world is continuing to descend back into tribalism. [&#8230;] Words have been rendered devoid of meaning and reduced to pledges of allegiance to a tribe. [&#8230;]</p>
+<p>I don’t belong to any of the tribes nor would I want to. But the effort required to maintain internally consistent and intellectually honest positions in such an environment is daunting. And it often seems futile.</p>
+</blockquote>
+</section>
+<section id="Mental-health">
+<h2>Mental health</h2>
+<p>I generally avoid that topic online, but I will make an exception.</p>
+<p>Brain chemistry is complicated, and mental health is a multi-dimensional spectrum. We vaguely mark regions of that spectrum and give them disorder names; it is a necessarily simplified model. The frontiers of those regions are blurry and differ between cultures and over time. Two decades ago, for instance, behavior considered normal for kids in France would often have resulted in medication for ADHD in the US.</p>
+<p>Today the number of diagnoses and self-diagnoses is clearly exploding. Part of the reason is that influencers, sometimes paid by medical companies, have made neurodivergence &#8220;trendy&#8221;: people feel like having a disorder makes them belong to a community. It is even worse for kids, with parents &#8220;diagnosing&#8221; them and managing to find medical professionals to confirm those diagnoses.</p>
+<p>The problem is that studies have shown that believing that you have a mental disorder when you do not can make you exhibit the same symptoms. However they do not come from the same causes, so medication will not work beyond the placebo effect, but it will mess with your brain chemistry.</p>
+<p>A psychiatrist once told me: &#8220;If we can avoid treating something like a disease, we should.&#8221; I think this is the right approach. We must go back to considering more zones of the spectrum &#8220;normal&#8221;.</p>
+<p>Note that I am not saying you should not go to therapy! If anything learning <a href="https://en.wikipedia.org/wiki/Cognitive_behavioral_therapy">CBT</a> basics could benefit everyone. But we should <strong>normalize</strong> therapy instead of labeling everyone with a mental disorder.</p>
+<p>Although I have been thinking about this topic for a long time, posting about it here was prompted first by <a href="https://world.hey.com/dhh/the-endangered-state-of-normality-d632a7fe">a post by DHH</a>, and more recently by <a href="https://www.youtube.com/watch?v=3a_as1UDDwU">a video in French</a> where I learned about the influence of medical companies like Done and Cerebral. I also have <a href="https://www.amazon.com/Crazy-Like-Us-Globalization-American/dp/1416587098">a book</a> about how the American approach to mental health impacts the rest of the world on my reading list.</p>
+</section>
+<section id="Have-fun">
+<h2>Have fun</h2>
+<p>DHH (again) <a href="https://world.hey.com/dhh/why-i-retired-from-the-tech-crusades-107a51ea">explains very well</a> why I do not use languages like Rust or C++.</p>
+<blockquote>
+<p>There is no universal set of trade-offs that&#8217;ll make something objectively &#8220;work best&#8221;. Half the programming conundrum lies in connecting to an enduring source of motivation. I wouldn&#8217;t be a happy camper if I had to spend my days programming Rust (but I LOVE so many of the tools coming out of that community by people who DO enjoy just that).</p>
+</blockquote>
+<p>I work mostly with Python nowadays, it is not my favorite language but I tolerate it. <a href="https://astral.sh">Tools written in Rust</a> are making my life <strong>much</strong> better, yet I would not pick Rust if <strong>I</strong> had to write such tools, even if <a href="https://x.com/awesomekling/status/1822241531501162806">it may be the best tool for that job</a>.</p>
+<p>Beginners often ask me what programming language or algorithms they should learn, and I tell them it does not matter at this stage: they should learn what motivates them the most. The older I get, the more I think this remains somewhat true your whole career.</p>
+<p>Programmers <strong>need</strong> slack and fun projects, or their output degrades real fast. Young people with no kids can compensate for boring work with side projects, but as you get older you must make sure you find some fun at work. Jason Cohen talks about <a href="https://longform.asmartbear.com/procrastinate/">procrastinating for success</a>.</p>
+<blockquote>
+<p>Finally, sometimes you’ve got to let yourself do fun stuff at the expense of priorities. Most of what you do in a little company isn’t what you enjoy doing; it’s easy to become frustrated and burned-out. So sometimes you need to allow yourself to recover with plain fun. Whatever the cost of putting off duties, burn-out is even more costly.</p>
+</blockquote>
+<p>I would add a little nuance to this: it is perfectly possible that, at some point in your life, your work will motivate you so much that you won&#8217;t want to do anything else. And that is perfectly fine, you just have to recognize when that is no longer the case.</p>
+<p>Anyway, happy people become successful, not the other way around. There is <a href="https://www.amazon.com/Happiness-Advantage-Positive-Brain-Success/dp/0307591557/">a book</a> about this. We are all different, so figure out what <strong>you</strong> need to be happy now, and go get it.</p>
+</section>
+
+      </div>
+    </content>
+  </entry>
   <entry>
     <title>Avoiding N+1 queries in Strawberry GraphQL with DataLoaders</title>
     <link
