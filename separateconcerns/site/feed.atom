@@ -10,7 +10,7 @@
     rel="alternate" type="application/xhtml+xml"
   />
   <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
-  <updated>2024-08-30T06:40:54Z</updated>
+  <updated>2024-10-08T15:15:30Z</updated>
   <author>
     <name>Pierre 'catwell' Chapuis</name>
     <uri>https://catwell.info/</uri>
@@ -23,7 +23,7 @@
     />
     <id>tag:blog.separateconcerns.com,2024-08-30:thoughts-10</id>
     <published>2024-08-30T08:40:00Z</published>
-    <updated>2024-08-30T08:40:00Z</updated>
+    <updated>2024-10-08T17:15:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <blockquote>
@@ -57,7 +57,7 @@
 </section>
 <section id="Have-fun">
 <h2>Have fun</h2>
-<p>DHH (again) <a href="https://world.hey.com/dhh/why-i-retired-from-the-tech-crusades-107a51ea">explains very well</a> why I do not use languages like Rust or C++.</p>
+<p>DHH (again) <a href="https://world.hey.com/dhh/why-i-retired-from-the-tech-crusades-107a51ea">explains very well</a> why I do not use languages like Rust or C++. (*)</p>
 <blockquote>
 <p>There is no universal set of trade-offs that&#8217;ll make something objectively &#8220;work best&#8221;. Half the programming conundrum lies in connecting to an enduring source of motivation. I wouldn&#8217;t be a happy camper if I had to spend my days programming Rust (but I LOVE so many of the tools coming out of that community by people who DO enjoy just that).</p>
 </blockquote>
@@ -69,6 +69,7 @@
 </blockquote>
 <p>I would add a little nuance to this: it is perfectly possible that, at some point in your life, your work will motivate you so much that you won&#8217;t want to do anything else. And that is perfectly fine, you just have to recognize when that is no longer the case.</p>
 <p>Anyway, happy people become successful, not the other way around. There is <a href="https://www.amazon.com/Happiness-Advantage-Positive-Brain-Success/dp/0307591557/">a book</a> about this. We are all different, so figure out what <strong>you</strong> need to be happy now, and go get it.</p>
+<p><em>(*) The reason I do not like C++ or Rust is not because they are efficient, statically-typed programming languages, it is the complexity. I did write a lot of C and I am enthusiastic about Zig, for instance.</em></p>
 </section>
 
       </div>

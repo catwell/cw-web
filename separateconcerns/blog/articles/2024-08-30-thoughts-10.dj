@@ -2,6 +2,7 @@
 title = "Thoughts 10 - Tolerance, Mental Health, Having Fun"
 published = "2024-08-30 08:40:00"
 description = "Thoughts on soft topics only for once: tolerance, mental health and having fun."
+updated = "2024-10-08 17:15:00"
 ```
 
 > "Thoughts" are posts about what has been on my mind. Sometimes practical, sometimes not; often just things I read recently. Less thought out than regular posts.
@@ -44,7 +45,7 @@ Although I have been thinking about this topic for a long time, posting about it
 
 ## Have fun
 
-DHH (again) [explains very well](https://world.hey.com/dhh/why-i-retired-from-the-tech-crusades-107a51ea) why I do not use languages like Rust or C++.
+DHH (again) [explains very well](https://world.hey.com/dhh/why-i-retired-from-the-tech-crusades-107a51ea) why I do not use languages like Rust or C++. (*)
 
 > There is no universal set of trade-offs that'll make something objectively "work best". Half the programming conundrum lies in connecting to an enduring source of motivation. I wouldn't be a happy camper if I had to spend my days programming Rust (but I LOVE so many of the tools coming out of that community by people who DO enjoy just that).
 
@@ -59,3 +60,5 @@ Programmers *need* slack and fun projects, or their output degrades real fast. Y
 I would add a little nuance to this: it is perfectly possible that, at some point in your life, your work will motivate you so much that you won't want to do anything else. And that is perfectly fine, you just have to recognize when that is no longer the case.
 
 Anyway, happy people become successful, not the other way around. There is [a book](https://www.amazon.com/Happiness-Advantage-Positive-Brain-Success/dp/0307591557/) about this. We are all different, so figure out what *you* need to be happy now, and go get it.
+
+{_(*) The reason I do not like C++ or Rust is not because they are efficient, statically-typed programming languages, it is the complexity. I did write a lot of C and I am enthusiastic about Zig, for instance._}
