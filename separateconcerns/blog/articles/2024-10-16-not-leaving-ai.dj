@@ -1,0 +1,19 @@
+```=lua-meta
+title = "I am not leaving AI"
+published = "2024-10-16 08:00:00"
+description = "I am back to the AI field and do not intend to leave it."
+```
+
+I started my professional career almost 15 years ago [working for a Machine Learning / Computer Vision company](https://blog.separateconcerns.com/2013-06-20-three-years-proprietary-projects.html) that did image recognition on mobile. At the end of 2013, I chose to leave it for [Lima](https://blog.separateconcerns.com/2018-01-06-four-years.html), in part because even at Moodstocks I was always more of a Distributed Systems / Algorithms person than a Deep Learning person.
+
+Now, after 10 years away from the field, [I am back working on AI for images](https://blog.separateconcerns.com/2023-03-31-joining-finegrain.html), this time more specifically on [automated and realistic image edition](https://finegrain.ai), with a part of the old Moodstocks team who spent years at Google after the acquisition.
+
+I did not make that choice lightly, I spent some time pondering it, because I knew it would require a significant time investment. AI is a complex, fast-moving field where not everything you learned elsewhere applies. Now that I am back, it is unlikely that I will leave it anytime soon.
+
+I got several interesting job offers recently, for Staff+ roles at great companies with classical distributed systems problems that would have appealed to me a few years ago. But it is likely that the real dist.sys fun in the next few years will be in AI, both [for training](https://www.semianalysis.com/p/multi-datacenter-training-openais) and inference. The field has grown fast, and the tooling and practices could not keep up so there is a lot to build.
+
+Those who know me may also remember I always had a problem with the issue of interpretability / explainability of deep learning models, but in recent years I feel we have collectively improved on that, although there is still much to be done.
+
+In addition to that, I do not intend to leave Finegrain specifically either! We have a great team and we approach problems differently from most AI companies. We have products starting to ship, and a lot to do to improve them. I don't think I should be anywhere else.
+
+Anyway, I am taking the end of the week off to attend and help with the [dotAI conference](https://www.dotai.io), and I will be back to work next Monday. In the meantime, [try the Finegrain Editor](https://editor.finegrain.ai/signup) if you haven't already :)

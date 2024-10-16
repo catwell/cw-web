@@ -10,11 +10,33 @@
     rel="alternate" type="application/xhtml+xml"
   />
   <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
-  <updated>2024-10-08T15:15:30Z</updated>
+  <updated>2024-10-16T08:05:42Z</updated>
   <author>
     <name>Pierre 'catwell' Chapuis</name>
     <uri>https://catwell.info/</uri>
   </author>
+  <entry>
+    <title>I am not leaving AI</title>
+    <link
+      rel="alternate" type="text/html"
+      href="https://blog.separateconcerns.com/2024-10-16-not-leaving-ai.html"
+    />
+    <id>tag:blog.separateconcerns.com,2024-10-16:not-leaving-ai</id>
+    <published>2024-10-16T08:00:00Z</published>
+    <updated>2024-10-16T08:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>I started my professional career almost 15 years ago <a href="https://blog.separateconcerns.com/2013-06-20-three-years-proprietary-projects.html">working for a Machine Learning / Computer Vision company</a> that did image recognition on mobile. At the end of 2013, I chose to leave it for <a href="https://blog.separateconcerns.com/2018-01-06-four-years.html">Lima</a>, in part because even at Moodstocks I was always more of a Distributed Systems / Algorithms person than a Deep Learning person.</p>
+<p>Now, after 10 years away from the field, <a href="https://blog.separateconcerns.com/2023-03-31-joining-finegrain.html">I am back working on AI for images</a>, this time more specifically on <a href="https://finegrain.ai">automated and realistic image edition</a>, with a part of the old Moodstocks team who spent years at Google after the acquisition.</p>
+<p>I did not make that choice lightly, I spent some time pondering it, because I knew it would require a significant time investment. AI is a complex, fast-moving field where not everything you learned elsewhere applies. Now that I am back, it is unlikely that I will leave it anytime soon.</p>
+<p>I got several interesting job offers recently, for Staff+ roles at great companies with classical distributed systems problems that would have appealed to me a few years ago. But it is likely that the real dist.sys fun in the next few years will be in AI, both <a href="https://www.semianalysis.com/p/multi-datacenter-training-openais">for training</a> and inference. The field has grown fast, and the tooling and practices could not keep up so there is a lot to build.</p>
+<p>Those who know me may also remember I always had a problem with the issue of interpretability / explainability of deep learning models, but in recent years I feel we have collectively improved on that, although there is still much to be done.</p>
+<p>In addition to that, I do not intend to leave Finegrain specifically either! We have a great team and we approach problems differently from most AI companies. We have products starting to ship, and a lot to do to improve them. I don&#8217;t think I should be anywhere else.</p>
+<p>Anyway, I am taking the end of the week off to attend and help with the <a href="https://www.dotai.io">dotAI conference</a>, and I will be back to work next Monday. In the meantime, <a href="https://editor.finegrain.ai/signup">try the Finegrain Editor</a> if you haven&#8217;t already :)</p>
+
+      </div>
+    </content>
+  </entry>
   <entry>
     <title>Thoughts 10 - Tolerance, Mental Health, Having Fun</title>
     <link

@@ -1,0 +1,24 @@
+# I am not leaving AI
+published 2024-10-16
+
+I started my professional career almost 15 years ago working for a Machine Learning / Computer Vision company [1] that did image recognition on mobile. At the end of 2013, I chose to leave it for Lima [2], in part because even at Moodstocks I was always more of a Distributed Systems / Algorithms person than a Deep Learning person.
+
+Now, after 10 years away from the field, I am back working on AI for images [3], this time more specifically on automated and realistic image edition [4], with a part of the old Moodstocks team who spent years at Google after the acquisition.
+
+I did not make that choice lightly, I spent some time pondering it, because I knew it would require a significant time investment. AI is a complex, fast-moving field where not everything you learned elsewhere applies. Now that I am back, it is unlikely that I will leave it anytime soon.
+
+I got several interesting job offers recently, for Staff+ roles at great companies with classical distributed systems problems that would have appealed to me a few years ago. But it is likely that the real dist.sys fun in the next few years will be in AI, both for training [5] and inference. The field has grown fast, and the tooling and practices could not keep up so there is a lot to build.
+
+Those who know me may also remember I always had a problem with the issue of interpretability / explainability of deep learning models, but in recent years I feel we have collectively improved on that, although there is still much to be done.
+
+In addition to that, I do not intend to leave Finegrain specifically either! We have a great team and we approach problems differently from most AI companies. We have products starting to ship, and a lot to do to improve them. I don't think I should be anywhere else.
+
+Anyway, I am taking the end of the week off to attend and help with the dotAI conference [6], and I will be back to work next Monday. In the meantime, try the Finegrain Editor [7] if you haven't already :)
+
+=> https://blog.separateconcerns.com/2013-06-20-three-years-proprietary-projects.html 1: https://blog.separateconcerns.com/2013-06-20-three-years-proprietary-projects.html
+=> https://blog.separateconcerns.com/2018-01-06-four-years.html 2: https://blog.separateconcerns.com/2018-01-06-four-years.html
+=> https://blog.separateconcerns.com/2023-03-31-joining-finegrain.html 3: https://blog.separateconcerns.com/2023-03-31-joining-finegrain.html
+=> https://finegrain.ai 4: https://finegrain.ai
+=> https://www.semianalysis.com/p/multi-datacenter-training-openais 5: https://www.semianalysis.com/p/multi-datacenter-training-openais
+=> https://www.dotai.io 6: https://www.dotai.io
+=> https://editor.finegrain.ai/signup 7: https://editor.finegrain.ai/signup
