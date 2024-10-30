@@ -10,7 +10,7 @@
     rel="alternate" type="application/xhtml+xml"
   />
   <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
-  <updated>2024-10-16T08:05:42Z</updated>
+  <updated>2024-10-30T10:01:05Z</updated>
   <author>
     <name>Pierre 'catwell' Chapuis</name>
     <uri>https://catwell.info/</uri>
@@ -3413,11 +3413,8 @@ style that favors performance to readability).</p>
         <p>It is that time of the year where my RSS feed fills with book recommendations,
 so I decided I would try my hand at the exercise this year and write a short
 paragraph about five books I read in 2015 that left me with a good impression.</p>
-<p>Disclaimer: links, as those on my <a href="https://catwell.info/booklist/">reading list</a>,
-are Amazon Affiliate links, which means I may earn a little money if you buy
-books after clicking on them.</p>
 <section id="The-Year-Without-Pants---Scott-Berkun">
-<h2><a href="http://amzn.to/1NuJ5AR">The Year Without Pants - Scott Berkun</a></h2>
+<h2><a href="https://www.amazon.com/gp/product/1118660633/">The Year Without Pants - Scott Berkun</a></h2>
 <p>Scott Berkun was a management writer and consultant when he was hired by
 WordPress. Before that, he had been a UX designer and team lead at Microsoft,
 on the Internet Explorer project. When he joined WordPress, the company had
@@ -3434,7 +3431,7 @@ is what makes the book interesting. I would say it is a must read for
 anybody considering starting or leading a team at a small software company.</p>
 </section>
 <section id="The-Open-Organization---Jim-Whitehurst">
-<h2><a href="http://amzn.to/1NktPAS">The Open Organization - Jim Whitehurst</a></h2>
+<h2><a href="https://www.amazon.com/gp/product/1625275277/">The Open Organization - Jim Whitehurst</a></h2>
 <p>This book is somehow similar to the one above, but on a larger scale.
 Jim Whitehurst is the current CEO of Red Hat, a company with over $1.5B in
 yearly revenue, over 8000 employees, and a culture firmly rooted in Open
@@ -3450,7 +3447,7 @@ Open Source projects are organized can be successfully adopted by a large
 company.</p>
 </section>
 <section id="The-Systems-Bible-Systemantics---John-Gall">
-<h2><a href="http://amzn.to/1NuKgQO">The Systems Bible (Systemantics) - John Gall</a></h2>
+<h2><a href="https://www.amazon.com/gp/product/0961825170/">The Systems Bible (Systemantics) - John Gall</a></h2>
 <p>A 1975 classic. Gall is a (retired) pediatrician, but he is well-known in
 software engineering circles for this book which contains, among other things,
 what is now known as Gall&#8217;s Law:</p>
@@ -3494,9 +3491,9 @@ imperfection.</p>
 But read it anyway!</p>
 </section>
 <section id="The-Four-Steps-to-the-Epiphany---Steve-Blank">
-<h2><a href="http://amzn.to/1Himm61">The Four Steps to the Epiphany - Steve Blank</a></h2>
-<p>I have read <a href="http://amzn.to/132XE3z">several</a> <a href="http://amzn.to/1HikaeJ">other</a>
-<a href="http://amzn.to/1eXLEJF">books</a> <a href="http://amzn.to/18xfzCx">about</a> Lean Startup,
+<h2><a href="https://www.amazon.com/gp/product/0989200507/">The Four Steps to the Epiphany - Steve Blank</a></h2>
+<p>I have read <a href="https://www.amazon.com/gp/product/B004J4XGN6/">several</a> <a href="https://www.amazon.com/gp/product/1492180742/">other</a>
+<a href="https://www.amazon.com/gp/product/111829534X/">books</a> <a href="https://www.amazon.com/gp/product/B006UKFFE0/">about</a> Lean Startup,
 but this is the one I would recommend now, especially if you already have
 some experience with startups.</p>
 <p>It exposes the Customer Development model, composed of four steps:
@@ -3507,7 +3504,7 @@ the ones that occur before Product / Market Fit.</p>
 about, and offer it to your friends who want to start their own business.</p>
 </section>
 <section id="Flash-Boys:-Not-So-Fast---Peter-Kovac">
-<h2><a href="http://amzn.to/1Pwcp90">Flash Boys: Not So Fast - Peter Kovac</a></h2>
+<h2><a href="https://www.amazon.com/gp/product/0692336907/">Flash Boys: Not So Fast - Peter Kovac</a></h2>
 <p>This book is an answer to Michael Lewis&#8217; Flash Boys and a defence of
 High-Frequency Trading.</p>
 <p>I have long thought that the financial world used HFT as a scapegoat
@@ -3637,7 +3634,7 @@ came to learn about systems like Helios and Belenios in the first place.</p>
 <p>Knowing software also implies using it, so Minix3 and Lua became my main OS and language for several months. To be honest, I was running Minix3 in a VM due to the lack of drivers for my hardware. I started to study their code, with the help of <a href="http://www.minix3.org/doc/#book">the book</a> for Minix3 and resources found online for Lua. I learnt a lot during that period.</p>
 <p>Eventually, I went back to Linux for practical reasons, but I had been charmed by the down-to-Earth elegance of Lua. It became my favorite programming language. I was still a student though, so I mostly wrote small utilities, Web pages and game prototypes with it. Coursework was Java, Python and C, and for &#8220;serious&#8221; stuff at <a href="http://resel.fr/">ResEl</a> I used Perl, Python or Bash.</p>
 <p>Then in 2010 I went to <a href="https://moodstocks.com/">Moodstocks</a> for my MSc Thesis. We were a very tiny startup then, just the founders and a couple of interns. They were a Ruby and C++ shop, so I learnt Ruby, but I didn&#8217;t like it: too much magic, and the object-oriented interface to write bindings was a mess compared to the very clean Lua C API.</p>
-<p>Eventually, Moodstocks hired me and I worked for them for over three years. I ended up writing most of their server-side code, I already gave <a href="http://blog.separateconcerns.com/2013-06-20-three-years-proprietary-projects.html">details here</a>. A lot of that code leveraged LuaJIT. It was the perfect tool for the job: as flexible and dynamic as Ruby so it worked well as a scripting language, about as fast as C++ so it could be used to implement Computer Vision algorithms, and the FFI made it very easy to call into our existing C / C++ libraries.</p>
+<p>Eventually, Moodstocks hired me and I worked for them for over three years. I ended up writing most of their server-side code, I already gave <a href="https://blog.separateconcerns.com/2013-06-20-three-years-proprietary-projects.html">details here</a>. A lot of that code leveraged LuaJIT. It was the perfect tool for the job: as flexible and dynamic as Ruby so it worked well as a scripting language, about as fast as C++ so it could be used to implement Computer Vision algorithms, and the FFI made it very easy to call into our existing C / C++ libraries.</p>
 <p>Those are the features that make LuaJIT so attractive: its blazing speed and the FFI. They are why I could write Lua professionally for several years, and I could never thank Mike Pall enough for this. Moreover, LuaJIT has been playing a huge role in the growing popularity of Lua those last few years.</p>
 <p>However, paradoxically, LuaJIT negates the very reason that made me pick Lua in the first place. And by that I mean: I do not deeply understand how LuaJIT works. I have tried, and I will certainly try again, but it is one or two orders of magnitude more complicated than PUC Lua.</p>
 <p>Beyond the purist ideal of understanding the whole stack, this has practical implications. When you find a bug in LuaJIT, understanding it and fixing it is terribly complicated. The best I can do is usually to try to produce a small test case that reproduces the bug (even that is not always easy) and hope Mike Pall finds a fix. With PUC Lua I could probably fix it myself - but of course PUC Lua is so simple that I have never found a bug in it!</p>
@@ -3685,7 +3682,7 @@ came to learn about systems like Helios and Belenios in the first place.</p>
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>It is not a secret that I don&#8217;t like Web technology. I prefer XHTML to HTML5, I think JavaScript is a terrible language, and don&#8217;t get me started on microformats (let&#8217;s just say that SoC &gt; DRY&#8230;). I&#8217;d rather see this mess replaced by something much simpler that <strong>only</strong> deals with linked documents and feeds, and maybe a separate platform for portable applications.</p>
 <p>However, the Web is here to last, and given its importance, its centralization is concerning. This is why I am interested in the <a href="http://indiewebcamp.com/">Indie Web</a> movement, which I see as part of the larger effort to decentralize Internet. By the way, if you are into this and live in Paris, check out <a href="http://www.meetup.com/Paris-Meetup-pour-la-decentralisation-dInternet/">this meetup</a> which is held every six weeks at Mozilla&#8217;s office. I have been there every time since its inception and it is well worth it.</p>
-<p>Anyway, I have seen today via my feed reader that <a href="http://tantek.com/2014/357/b1/2015-indieweb-site-launch-commitment">some people had made commitments for 2015-01-01</a>. I am a bit late, but I decided to follow suit by adding <a href="http://indiewebcamp.com/Why_web_sign-in">Web sign-in</a> and <a href="http://indiewebcamp.com/h-card">a h-card</a> to <a href="http://catwell.info">my home page</a>. I will probably add <a href="http://indiewebcamp.com/h-entry">h-entry</a> markup to this blog later this week, too.</p>
+<p>Anyway, I have seen today via my feed reader that <a href="http://tantek.com/2014/357/b1/2015-indieweb-site-launch-commitment">some people had made commitments for 2015-01-01</a>. I am a bit late, but I decided to follow suit by adding <a href="http://indiewebcamp.com/Why_web_sign-in">Web sign-in</a> and <a href="http://indiewebcamp.com/h-card">a h-card</a> to <a href="https://catwell.info">my home page</a>. I will probably add <a href="http://indiewebcamp.com/h-entry">h-entry</a> markup to this blog later this week, too.</p>
 <p>If you want to do the same, you can use <a href="http://indiewebify.me/">this handy tool</a> to check everything is working.</p>
 
       </div>
@@ -3772,7 +3769,7 @@ terminal, create the file <code>~/.gnupg/gpg-agent.conf</code> with the followin
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>Several people have asked me what I think about microservices. The tl;dr is: I like small services, but I don&#8217;t like what some call microservices, which is isolating every single feature within its own service and aiming at services at small as possible (I heard about a target of &#8220;a few hundred lines of code&#8221; per service and a hard limit at 5000 LOC).</p>
-<p>I <a href="http://blog.separateconcerns.com/2013-01-02-startups-soa.html">see SOA</a> (and modularization in general) as a technique to design a system so that it scales with the number of people on a team. The way it works is by dividing complexity between people. The following will be terribly simplified, but bear with me.</p>
+<p>I <a href="https://blog.separateconcerns.com/2013-01-02-startups-soa.html">see SOA</a> (and modularization in general) as a technique to design a system so that it scales with the number of people on a team. The way it works is by dividing complexity between people. The following will be terribly simplified, but bear with me.</p>
 <p>Imagine a team working on a monolithic application. It is becoming too large and complicated to understand, so they split it into three parts, A, B and C. A third of the team will be responsible for each part. Each team is tasked with exposing an interface to the others, so that team A only has to worry about the internals of A and the interfaces of B and C. For each team, complexity has gone from the complexity of the monolithic application to a third of that complexity plus the complexity of communicating with the other parts of the system, or at least just knowing they exist, so given <code>N</code> the number of parts in the system and <code>M</code> the total complexity of the system, complexity seen from a service is: <code>M/N + k*N</code>.</p>
 <p>Now assuming the complexity of the system increases linearly with team size <code>S</code> (it probably increases faster in practice but let&#8217;s approximate), complexity seen from a service is <code>l*S/N + k*N</code>. With everything else constant, the function <code>N(S)</code> to minimize that looks like a square root.</p>
 <p>In practice, this is not entirely true: as the system grows, not every service talks to other services and not every developer needs to know about every service. But because system architects and, more importantly, operations people do, my argument still holds.</p>
@@ -4441,7 +4438,7 @@ return {new = new}
     <updated>2014-01-02T22:10:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        <p>Thanks to my <a href="http://blog.separateconcerns.com/2013-12-12-infinity-beyond.html">new job</a> I will have the opportunity to write a lot more C than in the last three years. To prepare for this, I decided to read some old C89 books again and see what I remembered. Here are some of the quirks I had forgotten (or never known about).</p>
+        <p>Thanks to my <a href="https://blog.separateconcerns.com/2013-12-12-infinity-beyond.html">new job</a> I will have the opportunity to write a lot more C than in the last three years. To prepare for this, I decided to read some old C89 books again and see what I remembered. Here are some of the quirks I had forgotten (or never known about).</p>
 <ul>
 <li>
 <p>Declarations cannot be interleaved with other statements in ANSI C. They have to happen at the beginning of a bloc.</p>
@@ -4501,7 +4498,7 @@ typedef const struct stuff_s stuff_t;
 <h2>Goodbye Moodstocks</h2>
 <p>Friday 20th will be my last day at Moodstocks. I am leaving a company where, after three years and a half, I was the most senior employee. As you may imagine, it was not an easy decision.</p>
 <p>Moodstocks has grown up since I joined it. After several pivots, the founders have assembled a <a href="https://moodstocks.com/humans.txt">great team</a> I will miss, and together I dare say we have advanced the state of mobile image recognition. Recently, we have also been looking at other technologies related to mobile.</p>
-<p>We have released two new products. The first one is what <a href="http://blog.separateconcerns.com/2013-06-20-three-years-proprietary-projects.html">was known as Physalis</a> and took the commercial name <a href="https://winch.io/">Winch</a>. This is what I have been mostly involved with for the last few months. I believe it has the potential to become the reference solution to write native mobile applications that react quickly and work offline.</p>
+<p>We have released two new products. The first one is what <a href="https://blog.separateconcerns.com/2013-06-20-three-years-proprietary-projects.html">was known as Physalis</a> and took the commercial name <a href="https://winch.io/">Winch</a>. This is what I have been mostly involved with for the last few months. I believe it has the potential to become the reference solution to write native mobile applications that react quickly and work offline.</p>
 <p>The second product is Overlay, a mobile application that lets you buy products from paper catalogs online. Years after Pikadeo and Notes, it is finally time for a real application available in the stores, leveraging Moodstocks&#8217; <a href="https://moodstocks.com/">image recognition SDK</a> and Winch, showcasing the best of both technologies. But beyond pure tech, it is also a demonstration of Augmented Reality as we like it: fast, predictable, purposeful. No need for 3D models.</p>
 <p>With those two products in the pipes, choosing to leave was incredibly difficult. But I did nevertheless, because of an opportunity I could not turn down.</p>
 </section>
@@ -4586,7 +4583,7 @@ typedef const struct stuff_s stuff_t;
 <section id="Moodstocks-API-v2">
 <h2>Moodstocks API v2</h2>
 <p>As I said, Notes was written to help us design our API. Using its feedback and that from the few users of our v1 API, which was more some kind of beta, I set out to write version two.</p>
-<p>I will not expand too much on all its aspects here, REST-ish API design being well covered in the literature and online (start <a href="http://amzn.to/17nHJmF">here</a>).</p>
+<p>I will not expand too much on all its aspects here, REST-ish API design being well covered in the literature and online (start <a href="https://www.amazon.com/gp/product/0596801688/">here</a>).</p>
 <p>The main differences with API v1 were the use of JSON instead of XML, and the ability to index a single image by uploading it to the API using multipart post. Previously, users would upload a XML list of image URLs and associated IDs; we would download them and tell you when indexing was over. Now users index single images and changes are taken into account instantly. The necessity for that was a lesson from Notes and user feedback, and it was made possible by Acorn.</p>
 <p>Another interesting choice was the authentication method, HTTP Digest, which we kept from version one. Theoretically, it had all the right properties and was a standard, so it was the best choice. What we had not realized is how many <a href="http://devblog.avdi.org/2013/02/04/the-trouble-with-http-digest-authentication/">implementations were broken</a> or incomplete (i.e. not supporting nonce reuse, which is a necessity on mobile to reduce the number of HTTP requests). I ended up having to submit patches to a lot of them, and I am not even mentioning .NET land&#8230; If I had to do it again today I would probably go with Basic Auth and SSL.</p>
 </section>
@@ -4740,7 +4737,7 @@ reconciliation scripts to fix them.
     <updated>2013-03-24T19:30:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        <p>I found a talk by Werner Vogels, the CTO of Amazon <a href="http://blog.separateconcerns.com/2013-01-02-startups-soa.html">who is a role model of mine</a>, on <a href="http://skillsmatter.com/podcast/design-architecture/21st-century-application-architectures">21st century application architectures</a>.</p>
+        <p>I found a talk by Werner Vogels, the CTO of Amazon <a href="https://blog.separateconcerns.com/2013-01-02-startups-soa.html">who is a role model of mine</a>, on <a href="http://skillsmatter.com/podcast/design-architecture/21st-century-application-architectures">21st century application architectures</a>.</p>
 <p>After his presentation, someone from the audience asks him what skills he is looking for to run these services. His answer (starting at about 40:45 in the video) is so interesting that I thought it would be worth it to write it down. Here it is:</p>
 <blockquote>
 <p>What kind of skillset am I looking for for people to build these [infrastructure services] and manage them? I think I&#8217;m looking for a set of standard things that we look for in every Amazonian PM, which is&#8230;</p>
@@ -5076,7 +5073,7 @@ data move around? Inside the computer, data mostly circulates in buses. Between 
     <updated>2013-01-02T14:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        <p><a href="http://catwell.info">I</a> have not had a blog for over two years. The main reason for that is that writing is hard, so I went shopping on Twitter instead.</p>
+        <p><a href="https://catwell.info">I</a> have not had a blog for over two years. The main reason for that is that writing is hard, so I went shopping on Twitter instead.</p>
 <p>This was a bit hypocrite since I am an advocate for the Open Web and a huge consumer of information feeds, with several hundreds of them in my news reader. So for this New Year I have decided to put an end to this situation, thrown together a few lines of Lua code that act as a static blog generator (because reinventing the wheel is fun), and here it is: my new online journal.</p>
 <p>I do not know with what frequency I will publish but expect articles about working at startups, distributed systems, programming in Lua, dealing with mobile networks, and whatever I happen to read and find interesting. Oh, and also the occasional rant, I guess.</p>
 <p>Now here&#8217;s to the tradition:</p>
@@ -5201,9 +5198,9 @@ risquent pas d&#8217;être d&#8217;accord.</p>
     <updated>2009-12-04T12:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        <p>J&#8217;ai l&#8217;impression que <a href="http://blog.separateconcerns.com/2009-11-16-fr-gen-y.html">mon article</a> sur les habitudes consommatrices de temps en ligne avait intéressé quelques personnes. Je vais revenir brièvement sur ce qui est arrivé depuis et en tirer un rapide bilan.</p>
+        <p>J&#8217;ai l&#8217;impression que <a href="https://blog.separateconcerns.com/2009-11-16-fr-gen-y.html">mon article</a> sur les habitudes consommatrices de temps en ligne avait intéressé quelques personnes. Je vais revenir brièvement sur ce qui est arrivé depuis et en tirer un rapide bilan.</p>
 <p>Dans l&#8217;ensemble, j&#8217;ai fait ce que j&#8217;avais prévu : je ne suis plus le forum d&#8217;archlinux.org ni Tuxmachines et j&#8217;ai arrêté les jeux Motion Twin. Ça m&#8217;arrive encore pas mal de cliquer sur des liens par pure curiosité mais j&#8217;imagine que c&#8217;est une habitude difficile à perdre.</p>
-<p>En plus de ça, je consulte beaucoup moins Facebook pour lequel j&#8217;ai perdu de l&#8217;intérêt, j&#8217;ai encore écrémé un peu mes inscriptions aux <strong>mailing-lists</strong>, je relève ma messagerie moins fréquemment, j&#8217;ai quitté certains canaux IRC, et je me suis mis à utiliser <a href="http://surf.suckless.org/">surf</a> beaucoup plus que Firefox, ce qui limite la tentation de faire plusieurs choses à la fois (onglets) ou de remettre des choses triviales à plus tard (marque-pages).</p>
+<p>En plus de ça, je consulte beaucoup moins Facebook pour lequel j&#8217;ai perdu de l&#8217;intérêt, j&#8217;ai encore écrémé un peu mes inscriptions aux <strong>mailing-lists</strong>, je relève ma messagerie moins fréquemment, j&#8217;ai quitté certains canaux IRC, et je me suis mis à utiliser <a href="https://surf.suckless.org">surf</a> beaucoup plus que Firefox, ce qui limite la tentation de faire plusieurs choses à la fois (onglets) ou de remettre des choses triviales à plus tard (marque-pages).</p>
 <p>J&#8217;ai l&#8217;impression que ces quelques changements n&#8217;ont pas trop mal fonctionné, et j&#8217;apprécie de m&#8217;être dégagé un peu de temps pour faire des choses plus enrichissantes. Je suis aussi content de ne pas avoir eu à recourir à mes idées plus radicales. Je pense que le plus important était surtout de prendre conscience du problème et de commencer à me demander de temps en temps, avant d&#8217;ouvrir une page web : &#8220;n&#8217;ai-je pas mieux à faire ?&#8221;.</p>
 
       </div>

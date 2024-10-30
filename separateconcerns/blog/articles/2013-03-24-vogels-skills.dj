@@ -7,7 +7,7 @@ description = [[
 ]]
 ```
 
-I found a talk by Werner Vogels, the CTO of Amazon [who is a role model of mine](http://blog.separateconcerns.com/2013-01-02-startups-soa.html), on [21st century application architectures](http://skillsmatter.com/podcast/design-architecture/21st-century-application-architectures).
+I found a talk by Werner Vogels, the CTO of Amazon [who is a role model of mine](https://blog.separateconcerns.com/2013-01-02-startups-soa.html), on [21st century application architectures](http://skillsmatter.com/podcast/design-architecture/21st-century-application-architectures).
 
 After his presentation, someone from the audience asks him what skills he is looking for to run these services. His answer (starting at about 40:45 in the video) is so interesting that I thought it would be worth it to write it down. Here it is:
 

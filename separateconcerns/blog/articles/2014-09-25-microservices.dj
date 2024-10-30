@@ -9,7 +9,7 @@ description = [[
 
 Several people have asked me what I think about microservices. The tl;dr is: I like small services, but I don't like what some call microservices, which is isolating every single feature within its own service and aiming at services at small as possible (I heard about a target of "a few hundred lines of code" per service and a hard limit at 5000 LOC).
 
-I [see SOA](http://blog.separateconcerns.com/2013-01-02-startups-soa.html) (and modularization in general) as a technique to design a system so that it scales with the number of people on a team. The way it works is by dividing complexity between people. The following will be terribly simplified, but bear with me.
+I [see SOA](https://blog.separateconcerns.com/2013-01-02-startups-soa.html) (and modularization in general) as a technique to design a system so that it scales with the number of people on a team. The way it works is by dividing complexity between people. The following will be terribly simplified, but bear with me.
 
 Imagine a team working on a monolithic application. It is becoming too large and complicated to understand, so they split it into three parts, A, B and C. A third of the team will be responsible for each part. Each team is tasked with exposing an interface to the others, so that team A only has to worry about the internals of A and the interfaces of B and C. For each team, complexity has gone from the complexity of the monolithic application to a third of that complexity plus the complexity of communicating with the other parts of the system, or at least just knowing they exist, so given `N` the number of parts in the system and `M` the total complexity of the system, complexity seen from a service is: `M/N + k*N`.
 

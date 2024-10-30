@@ -32,7 +32,7 @@ Oh, and by the way, with this whole systemd thing, I am semi-seriously consideri
 => http://www.minix3.org/doc/#book 1: http://www.minix3.org/doc/#book
 => http://resel.fr/ 2: http://resel.fr/
 => https://moodstocks.com/ 3: https://moodstocks.com/
-=> http://blog.separateconcerns.com/2013-06-20-three-years-proprietary-projects.html 4: http://blog.separateconcerns.com/2013-06-20-three-years-proprietary-projects.html
+=> https://blog.separateconcerns.com/2013-06-20-three-years-proprietary-projects.html 4: https://blog.separateconcerns.com/2013-06-20-three-years-proprietary-projects.html
 => https://github.com/keplerproject/lua-compat-5.3 5: https://github.com/keplerproject/lua-compat-5.3
 => https://github.com/catwell/luajit-msgpack-pure 6: https://github.com/catwell/luajit-msgpack-pure
 => https://blog.separateconcerns.com/2019-02-15-goodbye-lima.html 7: https://blog.separateconcerns.com/2019-02-15-goodbye-lima.html

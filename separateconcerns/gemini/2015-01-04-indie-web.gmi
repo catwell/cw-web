@@ -14,6 +14,6 @@ If you want to do the same, you can use this handy tool [8] to check everything 
 => http://tantek.com/2014/357/b1/2015-indieweb-site-launch-commitment 3: http://tantek.com/2014/357/b1/2015-indieweb-site-launch-commitment
 => http://indiewebcamp.com/Why_web_sign-in 4: http://indiewebcamp.com/Why_web_sign-in
 => http://indiewebcamp.com/h-card 5: http://indiewebcamp.com/h-card
-=> http://catwell.info 6: http://catwell.info
+=> https://catwell.info 6: https://catwell.info
 => http://indiewebcamp.com/h-entry 7: http://indiewebcamp.com/h-entry
 => http://indiewebify.me/ 8: http://indiewebify.me/

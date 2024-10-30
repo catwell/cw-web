@@ -3,12 +3,8 @@ published 2016-01-03
 
 It is that time of the year where my RSS feed fills with book recommendations, so I decided I would try my hand at the exercise this year and write a short paragraph about five books I read in 2015 that left me with a good impression.
 
-Disclaimer: links, as those on my reading list [1], are Amazon Affiliate links, which means I may earn a little money if you buy books after clicking on them.
-
-=> https://catwell.info/booklist/ 1: https://catwell.info/booklist/
-
 ## The Year Without Pants - Scott Berkun
-=> http://amzn.to/1NuJ5AR
+=> https://www.amazon.com/gp/product/1118660633/
 
 Scott Berkun was a management writer and consultant when he was hired by WordPress. Before that, he had been a UX designer and team lead at Microsoft, on the Internet Explorer project. When he joined WordPress, the company had over 50 employees, it was completely flat and had a culture of remote work. The founder wanted to experiment with a team-based structure, and Scott was to be the first team lead.
 
@@ -17,7 +13,7 @@ The book is not a story about how WordPress was a doomed company, and how Scott 
 That culture, rooted in Open Source and documented by Berkun, an outsider, is what makes the book interesting. I would say it is a must read for anybody considering starting or leading a team at a small software company.
 
 ## The Open Organization - Jim Whitehurst
-=> http://amzn.to/1NktPAS
+=> https://www.amazon.com/gp/product/1625275277/
 
 This book is somehow similar to the one above, but on a larger scale. Jim Whitehurst is the current CEO of Red Hat, a company with over $1.5B in yearly revenue, over 8000 employees, and a culture firmly rooted in Open Source (I started using Linux with their distribution, Red Hat 6.2, in 2000).
 
@@ -26,7 +22,7 @@ Before joining Red Hat, Whitehurst was COO of Delta Airlines. When he arrived at
 The book is both analytical and prescriptive, and it shows how the way Open Source projects are organized can be successfully adopted by a large company.
 
 ## The Systems Bible (Systemantics) - John Gall
-=> http://amzn.to/1NuKgQO
+=> https://www.amazon.com/gp/product/0961825170/
 
 A 1975 classic. Gall is a (retired) pediatrician, but he is well-known in software engineering circles for this book which contains, among other things, what is now known as Gall's Law:
 
@@ -53,24 +49,24 @@ The book is a curious mix of humor and philosophy, written in faux-scientific st
 Remember: this book is originally not about computer systems. Not at all. But read it anyway!
 
 ## The Four Steps to the Epiphany - Steve Blank
-=> http://amzn.to/1Himm61
+=> https://www.amazon.com/gp/product/0989200507/
 
-I have read several [2] other [3] books [4] about [5] Lean Startup, but this is the one I would recommend now, especially if you already have some experience with startups.
+I have read several [1] other [2] books [3] about [4] Lean Startup, but this is the one I would recommend now, especially if you already have some experience with startups.
 
 It exposes the Customer Development model, composed of four steps: Customer Discovery, Customer Validation, Customer Creation and Company Building. The most interesting ones, in my opinion, are the first two, the ones that occur before Product / Market Fit.
 
 Read this book if you want to understand what this Lean Startup thing is about, and offer it to your friends who want to start their own business.
 
-=> http://amzn.to/132XE3z 2: http://amzn.to/132XE3z
-=> http://amzn.to/1HikaeJ 3: http://amzn.to/1HikaeJ
-=> http://amzn.to/1eXLEJF 4: http://amzn.to/1eXLEJF
-=> http://amzn.to/18xfzCx 5: http://amzn.to/18xfzCx
+=> https://www.amazon.com/gp/product/B004J4XGN6/ 1: https://www.amazon.com/gp/product/B004J4XGN6/
+=> https://www.amazon.com/gp/product/1492180742/ 2: https://www.amazon.com/gp/product/1492180742/
+=> https://www.amazon.com/gp/product/111829534X/ 3: https://www.amazon.com/gp/product/111829534X/
+=> https://www.amazon.com/gp/product/B006UKFFE0/ 4: https://www.amazon.com/gp/product/B006UKFFE0/
 
 ## Flash Boys: Not So Fast - Peter Kovac
-=> http://amzn.to/1Pwcp90
+=> https://www.amazon.com/gp/product/0692336907/
 
 This book is an answer to Michael Lewis' Flash Boys and a defence of High-Frequency Trading.
 
-I have long thought that the financial world used HFT as a scapegoat (especially since I read Chris Stucchio's blog [6]). Flash Boys: Not So Fast follows the structure of Lewis' book; it provides a nice overview of what HFT is and why it may not be as evil as you think it is.
+I have long thought that the financial world used HFT as a scapegoat (especially since I read Chris Stucchio's blog [5]). Flash Boys: Not So Fast follows the structure of Lewis' book; it provides a nice overview of what HFT is and why it may not be as evil as you think it is.
 
-=> https://www.chrisstucchio.com/blog/2012/hft_apology.html 6: https://www.chrisstucchio.com/blog/2012/hft_apology.html
+=> https://www.chrisstucchio.com/blog/2012/hft_apology.html 5: https://www.chrisstucchio.com/blog/2012/hft_apology.html

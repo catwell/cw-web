@@ -24,4 +24,4 @@ THE SOFTWARE.
 License for the content
 =======================
 
-CC BY-ND 4.0 (see http://creativecommons.org/licenses/by-nd/4.0/)
+CC BY-ND 4.0 (see https://creativecommons.org/licenses/by-nd/4.0/)

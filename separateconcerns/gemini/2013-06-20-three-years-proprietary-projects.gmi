@@ -83,7 +83,7 @@ The main differences with API v1 were the use of JSON instead of XML, and the ab
 
 Another interesting choice was the authentication method, HTTP Digest, which we kept from version one. Theoretically, it had all the right properties and was a standard, so it was the best choice. What we had not realized is how many implementations were broken [16] or incomplete (i.e. not supporting nonce reuse, which is a necessity on mobile to reduce the number of HTTP requests). I ended up having to submit patches to a lot of them, and I am not even mentioning .NET land... If I had to do it again today I would probably go with Basic Auth and SSL.
 
-=> http://amzn.to/17nHJmF 15: http://amzn.to/17nHJmF
+=> https://www.amazon.com/gp/product/0596801688/ 15: https://www.amazon.com/gp/product/0596801688/
 => http://devblog.avdi.org/2013/02/04/the-trouble-with-http-digest-authentication/ 16: http://devblog.avdi.org/2013/02/04/the-trouble-with-http-digest-authentication/
 
 ## Acorn Quantizer

@@ -14,7 +14,7 @@ The second product is Overlay, a mobile application that lets you buy products f
 With those two products in the pipes, choosing to leave was incredibly difficult. But I did nevertheless, because of an opportunity I could not turn down.
 
 => https://moodstocks.com/humans.txt 1: https://moodstocks.com/humans.txt
-=> http://blog.separateconcerns.com/2013-06-20-three-years-proprietary-projects.html 2: http://blog.separateconcerns.com/2013-06-20-three-years-proprietary-projects.html
+=> https://blog.separateconcerns.com/2013-06-20-three-years-proprietary-projects.html 2: https://blog.separateconcerns.com/2013-06-20-three-years-proprietary-projects.html
 => https://winch.io/ 3: https://winch.io/
 => https://moodstocks.com/ 4: https://moodstocks.com/
 

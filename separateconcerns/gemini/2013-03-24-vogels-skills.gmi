@@ -25,5 +25,5 @@ After his presentation, someone from the audience asks him what skills he is loo
 > 
 > These are the first few things that come to mind.
 
-=> http://blog.separateconcerns.com/2013-01-02-startups-soa.html 1: http://blog.separateconcerns.com/2013-01-02-startups-soa.html
+=> https://blog.separateconcerns.com/2013-01-02-startups-soa.html 1: https://blog.separateconcerns.com/2013-01-02-startups-soa.html
 => http://skillsmatter.com/podcast/design-architecture/21st-century-application-architectures 2: http://skillsmatter.com/podcast/design-architecture/21st-century-application-architectures
