@@ -5,11 +5,15 @@ description = [[
   A short introduction to Interval Tree Clocks, a causality tracking
   mechanism, based on a lightening talk I gave at dotScale 2017.
 ]]
-updated = "2017-09-07 21:15:00"
+updated = "2024-11-24 07:00:00"
 ```
 
 > This post is a rough transcription of [a lightning talk I gave at dotScale
 2017](http://files.catwell.info/presentations/2017-04-dotscale-itc/).
+
+> EDIT (2024-11-24): this post is [on HN](https://news.ycombinator.com/item?id=42212543) today.
+> For people finding this now, [Lima has shut down](https://blog.separateconcerns.com/2019-02-15-goodbye-lima.html) since then.
+
 
 ```=html
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/PgCziibErvU?rel=0" frameborder="0" allowfullscreen="true"></iframe>
@@ -94,12 +98,11 @@ on the overall number of nodes which have touched it since inception.
 ![results](img/itc-results.png)
 
 If you want to know more, I encourage you to read
-[the 2008 paper](http://haslab.uminho.pt/cbm/files/itc.pdf) by Paulo Sérgio
+[the 2008 paper](https://gsd.di.uminho.pt/members/cbm/ps/itc2008.pdf) by Paulo Sérgio
 Almeida, Carlos Baquero and Victor Fonte; it is one of the best I know on the
 topic of causality. You can also check out [my Lua implementation of
-ITC](https://github.com/catwell/itc.lua) or one of the other implementations
+ITC](https://github.com/catwell/cw-lua/tree/master/itc.lua) or one of the other implementations
 linked in the README.
 
-> If this kind of thing interests you and you live in - or would like to
-> relocate to - Paris (France), there may be a place for you on my team at Lima.
-> Don't hesitate to [get in touch](https://catwell.info).
+EDIT (2024-11-24): other interesting resources are [this slide deck by Carlos Baquero](https://cbaquero.github.io/web/pdf/SDLtime2021.pdf)
+and [those](https://ferd.ca/interval-tree-clocks.html) [posts](https://ferd.ca/a-bridge-over-a-river-never-crossed.html) by Fred Hebert.

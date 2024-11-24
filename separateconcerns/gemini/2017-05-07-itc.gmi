@@ -1,11 +1,13 @@
 # A short introduction to Interval Tree Clocks
-published 2017-05-07,updated 2017-09-07
+published 2017-05-07,updated 2024-11-24
 
 > This post is a rough transcription of a lightning talk I gave at dotScale 2017 [1].
 
-One of the things I work on at Lima [2] is master-master filesystem replication. In this kind of system, we need to track causality [3]. In a nutshell, given two events modifying a given piece of data and originating from different nodes in the system, we want to know if one of those events could have influenced the other one, or in other words if one of those events "happened before" [4] the other one.
+> EDIT (2024-11-24): this post is on HN [2] today. For people finding this now, Lima has shut down [3] since then.
 
-To do that, we use constructs such as Version vectors [5]. The idea is that we give each node in the system a globally unique identifier, and we associate it to a counter.
+One of the things I work on at Lima [4] is master-master filesystem replication. In this kind of system, we need to track causality [5]. In a nutshell, given two events modifying a given piece of data and originating from different nodes in the system, we want to know if one of those events could have influenced the other one, or in other words if one of those events "happened before" [6] the other one.
+
+To do that, we use constructs such as Version vectors [7]. The idea is that we give each node in the system a globally unique identifier, and we associate it to a counter.
 
 => img/itc-vv.png Version Vector
 
@@ -43,15 +45,19 @@ If we choose how we increase the height of the curve when an event occurs in a c
 
 => img/itc-results.png results
 
-If you want to know more, I encourage you to read the 2008 paper [6] by Paulo Sérgio Almeida, Carlos Baquero and Victor Fonte; it is one of the best I know on the topic of causality. You can also check out my Lua implementation of ITC [7] or one of the other implementations linked in the README.
+If you want to know more, I encourage you to read the 2008 paper [8] by Paulo Sérgio Almeida, Carlos Baquero and Victor Fonte; it is one of the best I know on the topic of causality. You can also check out my Lua implementation of ITC [9] or one of the other implementations linked in the README.
 
-> If this kind of thing interests you and you live in - or would like to relocate to - Paris (France), there may be a place for you on my team at Lima. Don't hesitate to get in touch [8].
+EDIT (2024-11-24): other interesting resources are this slide deck by Carlos Baquero [10] and those [11] posts [12] by Fred Hebert.
 
 => http://files.catwell.info/presentations/2017-04-dotscale-itc/ 1: http://files.catwell.info/presentations/2017-04-dotscale-itc/
-=> https://blog.separateconcerns.com/2019-02-15-goodbye-lima.html 2: https://blog.separateconcerns.com/2019-02-15-goodbye-lima.html
-=> http://queue.acm.org/detail.cfm?id=2917756 3: http://queue.acm.org/detail.cfm?id=2917756
-=> https://en.wikipedia.org/wiki/Happened-before 4: https://en.wikipedia.org/wiki/Happened-before
-=> https://en.wikipedia.org/wiki/Version_vector 5: https://en.wikipedia.org/wiki/Version_vector
-=> http://haslab.uminho.pt/cbm/files/itc.pdf 6: http://haslab.uminho.pt/cbm/files/itc.pdf
-=> https://github.com/catwell/itc.lua 7: https://github.com/catwell/itc.lua
-=> https://catwell.info 8: https://catwell.info
+=> https://news.ycombinator.com/item?id=42212543 2: https://news.ycombinator.com/item?id=42212543
+=> https://blog.separateconcerns.com/2019-02-15-goodbye-lima.html 3: https://blog.separateconcerns.com/2019-02-15-goodbye-lima.html
+=> https://blog.separateconcerns.com/2019-02-15-goodbye-lima.html 4: https://blog.separateconcerns.com/2019-02-15-goodbye-lima.html
+=> http://queue.acm.org/detail.cfm?id=2917756 5: http://queue.acm.org/detail.cfm?id=2917756
+=> https://en.wikipedia.org/wiki/Happened-before 6: https://en.wikipedia.org/wiki/Happened-before
+=> https://en.wikipedia.org/wiki/Version_vector 7: https://en.wikipedia.org/wiki/Version_vector
+=> https://gsd.di.uminho.pt/members/cbm/ps/itc2008.pdf 8: https://gsd.di.uminho.pt/members/cbm/ps/itc2008.pdf
+=> https://github.com/catwell/cw-lua/tree/master/itc.lua 9: https://github.com/catwell/cw-lua/tree/master/itc.lua
+=> https://cbaquero.github.io/web/pdf/SDLtime2021.pdf 10: https://cbaquero.github.io/web/pdf/SDLtime2021.pdf
+=> https://ferd.ca/interval-tree-clocks.html 11: https://ferd.ca/interval-tree-clocks.html
+=> https://ferd.ca/a-bridge-over-a-river-never-crossed.html 12: https://ferd.ca/a-bridge-over-a-river-never-crossed.html
