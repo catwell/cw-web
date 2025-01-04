@@ -1,0 +1,66 @@
+# How I use the Teal LSP with Sublime Text
+published 2025-01-04
+
+This is just a short post to describe how I use the Teal language server [1]. My setup is a bit specific: I use Sublime Text [2] on Arch Linux and I often run development branches of Teal so I run the LSP from source. I will assume you put it in `/.../git`.
+
+I also use localua [3] to manage all my Lua / Teal environments and I have `.lua/bin` in my `PATH` (which means that `luarocks`, `lua` and `tl` point to the local versions in my shell).
+
+=> https://github.com/teal-language/teal-language-server 1: https://github.com/teal-language/teal-language-server
+=> https://www.sublimetext.com 2: https://www.sublimetext.com
+=> https://loadk.com 3: https://loadk.com
+
+## Setup the LSP
+
+Install `tree-sitter-cli` which is a system dependency, clone the repository somewhere, initialize a local Lua environment and install the dependencies with LuaRocks:
+
+```
+sudo pacman -S tree-sitter-cli
+cd /.../git
+git clone git@github.com:teal-language/teal-language-server.git
+curl https://loadk.com/localua.sh -O
+sh localua.sh .lua
+luarocks make
+luarocks install tlcheck
+
+```
+
+Run `teal-language-server --help` to check it works.
+
+## Setup Sublime Text
+
+Open the LSP settings (`Preferences > Package Settings > LSP > Settings`) and configure Teal like this:
+
+```
+{
+    "clients": {
+        "teal": {
+            "enabled": true,
+            "command": [
+                "/.../git/teal-language-server/.lua/bin/teal-language-server"
+            ],
+            "selector": "source.teal"
+        }
+    }
+}
+
+```
+
+## Add a `tlconfig.lua` file to your project
+
+If you do not use this step, the LSP will only lookup dependencies in its own Lua environment. You want it to look in your project instead.
+
+The contents of `tlconfig.lua` can look like this:
+
+```
+return {
+  source_dir = ".",
+  include_dir = { ".", ".lua/share/lua/5.4" },
+  gen_compat = "off",
+  gen_target = "5.3",
+}
+
+```
+
+The important part is `.lua/share/lua/5.4` in `include_dir`. For the rest, settings depend on your project.
+
+Note that even if you use Lua 5.4 `gen_target` must be `5.3`, otherwise the LSP will not work currently even if you specify `gen_compat = "off"`.

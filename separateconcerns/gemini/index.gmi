@@ -5,6 +5,7 @@
 => https://blog.separateconcerns.com Visit on the Web
 => gemini://catwell.info catwell.info
 
+=> 2025-01-04-teal-lsp-sublime.gmi 2025-01-04 - How I use the Teal LSP with Sublime Text
 => 2024-10-16-not-leaving-ai.gmi 2024-10-16 - I am not leaving AI
 => 2024-08-30-thoughts-10.gmi 2024-08-30 - Thoughts 10 - Tolerance, Mental Health, Having Fun
 => 2024-05-28-graphql-dataloaders.gmi 2024-05-28 - Avoiding N+1 queries in Strawberry GraphQL with DataLoaders
