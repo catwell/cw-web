@@ -1,3 +1,4 @@
 all icons from https://simpleicons.org and https://www.svgrepo.com, except:
 
 - [BlueSky](https://github.com/FortAwesome/Font-Awesome/issues/19810)
+- Finegrain: made by me
