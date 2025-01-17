@@ -1,0 +1,31 @@
+<svg
+  version="1.1"
+  width="200" height="200" viewBox="0 0 132 132"
+  xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+    <pattern id="diag1" patternUnits="userSpaceOnUse" width="10" height="14" patternTransform="rotate(50)">
+      <path d="M 0 0 V 14" style="stroke:black; stroke-width:8" />
+    </pattern>
+    <pattern id="diag2" patternUnits="userSpaceOnUse" width="10" height="14" patternTransform="rotate(-40)">
+      <path d="M 0 0 V 14" style="stroke:black; stroke-width:8" />
+    </pattern>
+  </defs>
+
+  <circle cx="22" cy="110" r="20" fill="transparent" stroke="black" stroke-width="4" />
+
+  <circle cx="66" cy="110" r="20" fill="url(#diag1)" stroke="black" stroke-width="4" />
+  <circle cx="110" cy="110" r="20" fill="url(#diag1)" stroke="black" stroke-width="4" />
+  <circle cx="22" cy="66" r="20" fill="url(#diag1)" stroke="black" stroke-width="4" />
+  <circle cx="66" cy="66" r="20" fill="url(#diag1)" stroke="black" stroke-width="4" />
+
+  <circle cx="66" cy="110" r="20" fill="url(#diag2)" stroke="black" stroke-width="4" />
+  <circle cx="110" cy="110" r="20" fill="url(#diag2)" stroke="black" stroke-width="4" />
+  <circle cx="22" cy="66" r="20" fill="url(#diag2)" stroke="black" stroke-width="4" />
+  <circle cx="66" cy="66" r="20" fill="url(#diag2)" stroke="black" stroke-width="4" />
+
+  <circle cx="110" cy="66" r="20" fill="url(#diag1)" stroke="black" stroke-width="4" />
+  <circle cx="22" cy="22" r="20" fill="url(#diag1)" stroke="black" stroke-width="4" />
+  <circle cx="66" cy="22" r="20" fill="url(#diag1)" stroke="black" stroke-width="4" />
+  <circle cx="110" cy="22" r="20" fill="url(#diag1)" stroke="black" stroke-width="4" />
+</svg>
