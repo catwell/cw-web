@@ -10,11 +10,62 @@
     rel="alternate" type="application/xhtml+xml"
   />
   <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
-  <updated>2025-01-04T15:43:40Z</updated>
+  <updated>2025-02-02T09:20:15Z</updated>
   <author>
     <name>Pierre 'catwell' Chapuis</name>
     <uri>https://catwell.info/</uri>
   </author>
+  <entry>
+    <title>FOSDEM 2025</title>
+    <link
+      rel="alternate" type="text/html"
+      href="https://blog.separateconcerns.com/2025-02-02-fosdem-2025.html"
+    />
+    <id>tag:blog.separateconcerns.com,2025-02-02:fosdem-2025</id>
+    <published>2025-02-02T10:20:00Z</published>
+    <updated>2025-02-02T10:20:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>I am attending FOSDEM in Brussels for the 13th time physically. This is an event I anticipate every year, where I get to meet old friends and new people, watch interesting talks, and drink some Belgian beer.</p>
+<p>This year I spent some time with <a href="https://github.com/gawen">Gawen</a>, <a href="https://blog.zwindler.fr">Denis</a>, <a href="https://hisham.hm">Hisham</a>, my brother François, and a few other current and former colleagues.</p>
+<p>Here is a list of talks I saw or intend to see (will be updated after the event):</p>
+<ul>
+<li>
+<a href="https://fosdem.org/2025/schedule/event/fosdem-2025-5094-open-cloud-mesh/">Open Cloud Mesh</a> — Michiel de Jong
+</li>
+<li>
+<a href="https://fosdem.org/2025/schedule/event/fosdem-2025-5867-why-don-t-we-have-libsync-yet-/">Why don&#8217;t we have libsync yet?</a> — Victor Grishchenko
+</li>
+<li>
+<a href="https://fosdem.org/2025/schedule/event/fosdem-2025-4132-ladybird-a-new-independent-browser-written-from-scratch/">Ladybird — a new independent browser written from scratch</a> — Jelle Raaijmakers
+</li>
+<li>
+<a href="https://fosdem.org/2025/schedule/event/fosdem-2025-4635-explore-large-image-datasets-with-panoptic/">Explore large image datasets with Panoptic</a> — Félix Alié, David Godicke &amp; Edouard Bouté
+</li>
+<li>
+<a href="https://fosdem.org/2025/schedule/event/fosdem-2025-6648-14-years-of-systemd/">14 Years of systemd</a> — Lennart Poettering
+</li>
+<li>
+<a href="https://fosdem.org/2025/schedule/event/fosdem-2025-4494-introduction-to-serverless-workflow-dsl/">Introduction to Serverless Workflow DSL</a> — Charles d&#8217;Avernas, Jean-Baptiste Bianchi &amp; Ricardo Zanini Fernandes
+</li>
+<li>
+<a href="https://fosdem.org/2025/schedule/event/fosdem-2025-4506-porting-luarocks-to-teal-exploring-the-benefits-of-statically-typed-code-in-lua/">Porting LuaRocks to Teal: Exploring the Benefits of Statically Typed Code in Lua</a> — Victor Ilchev
+</li>
+<li>
+<a href="https://fosdem.org/2025/schedule/event/fosdem-2025-5923-zml-a-high-performance-ai-inference-stack-built-for-production-and-multi-accelerator-deployment/">ZML: A High-Performance AI Inference Stack Built for Production and Multi-Accelerator Deployment</a> — Rene Schallner &amp; Guillaume Wenzek
+</li>
+<li>
+<a href="https://fosdem.org/2025/schedule/event/fosdem-2025-5991-history-and-advances-of-quantization-in-llama-cpp/">History and advances of quantization in llama.cpp</a> — Tanya Dadasheva &amp; Iwan Kawrakow
+</li>
+<li>
+<a href="https://fosdem.org/2025/schedule/event/fosdem-2025-6147-what-should-teal-be-musings-on-foss-project-directions/">What should Teal be? — musings on FOSS project directions</a> — Hisham Muhammad
+</li>
+</ul>
+<p>I also sometimes use the opportunity to write a little code, this year I <a href="https://github.com/aio-libs/aiomonitor/issues/418">fiddled with aiomonitor and async generators in Python</a>.</p>
+
+      </div>
+    </content>
+  </entry>
   <entry>
     <title>How I use the Teal LSP with Sublime Text</title>
     <link

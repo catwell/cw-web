@@ -1,0 +1,24 @@
+```=lua-meta
+title = "FOSDEM 2025"
+published = "2025-02-02 10:20:00"
+description = "Went to FOSDEM 2025, saw talks, met people, drank beer."
+```
+
+I am attending FOSDEM in Brussels for the 13th time physically. This is an event I anticipate every year, where I get to meet old friends and new people, watch interesting talks, and drink some Belgian beer.
+
+This year I spent some time with [Gawen](https://github.com/gawen), [Denis](https://blog.zwindler.fr), [Hisham](https://hisham.hm), my brother François, and a few other current and former colleagues.
+
+Here is a list of talks I saw or intend to see (will be updated after the event):
+
+- [Open Cloud Mesh](https://fosdem.org/2025/schedule/event/fosdem-2025-5094-open-cloud-mesh/) — Michiel de Jong
+- [Why don't we have libsync yet?](https://fosdem.org/2025/schedule/event/fosdem-2025-5867-why-don-t-we-have-libsync-yet-/) — Victor Grishchenko
+- [Ladybird — a new independent browser written from scratch](https://fosdem.org/2025/schedule/event/fosdem-2025-4132-ladybird-a-new-independent-browser-written-from-scratch/) — Jelle Raaijmakers
+- [Explore large image datasets with Panoptic](https://fosdem.org/2025/schedule/event/fosdem-2025-4635-explore-large-image-datasets-with-panoptic/) — Félix Alié, David Godicke & Edouard Bouté
+- [14 Years of systemd](https://fosdem.org/2025/schedule/event/fosdem-2025-6648-14-years-of-systemd/) — Lennart Poettering
+- [Introduction to Serverless Workflow DSL](https://fosdem.org/2025/schedule/event/fosdem-2025-4494-introduction-to-serverless-workflow-dsl/) — Charles d'Avernas, Jean-Baptiste Bianchi & Ricardo Zanini Fernandes
+- [Porting LuaRocks to Teal: Exploring the Benefits of Statically Typed Code in Lua](https://fosdem.org/2025/schedule/event/fosdem-2025-4506-porting-luarocks-to-teal-exploring-the-benefits-of-statically-typed-code-in-lua/) — Victor Ilchev
+- [ZML: A High-Performance AI Inference Stack Built for Production and Multi-Accelerator Deployment](https://fosdem.org/2025/schedule/event/fosdem-2025-5923-zml-a-high-performance-ai-inference-stack-built-for-production-and-multi-accelerator-deployment/) — Rene Schallner & Guillaume Wenzek
+- [History and advances of quantization in llama.cpp](https://fosdem.org/2025/schedule/event/fosdem-2025-5991-history-and-advances-of-quantization-in-llama-cpp/) — Tanya Dadasheva & Iwan Kawrakow
+- [What should Teal be? — musings on FOSS project directions](https://fosdem.org/2025/schedule/event/fosdem-2025-6147-what-should-teal-be-musings-on-foss-project-directions/) — Hisham Muhammad
+
+I also sometimes use the opportunity to write a little code, this year I [fiddled with aiomonitor and async generators in Python](https://github.com/aio-libs/aiomonitor/issues/418).

@@ -1,0 +1,36 @@
+# FOSDEM 2025
+published 2025-02-02
+
+I am attending FOSDEM in Brussels for the 13th time physically. This is an event I anticipate every year, where I get to meet old friends and new people, watch interesting talks, and drink some Belgian beer.
+
+This year I spent some time with Gawen [1], Denis [2], Hisham [3], my brother François, and a few other current and former colleagues.
+
+Here is a list of talks I saw or intend to see (will be updated after the event):
+
+* Open Cloud Mesh [4] — Michiel de Jong
+* Why don't we have libsync yet? [5] — Victor Grishchenko
+* Ladybird — a new independent browser written from scratch [6] — Jelle Raaijmakers
+* Explore large image datasets with Panoptic [7] — Félix Alié, David Godicke & Edouard Bouté
+* 14 Years of systemd [8] — Lennart Poettering
+* Introduction to Serverless Workflow DSL [9] — Charles d'Avernas, Jean-Baptiste Bianchi & Ricardo Zanini Fernandes
+* Porting LuaRocks to Teal: Exploring the Benefits of Statically Typed Code in Lua [10] — Victor Ilchev
+* ZML: A High-Performance AI Inference Stack Built for Production and Multi-Accelerator Deployment [11] — Rene Schallner & Guillaume Wenzek
+* History and advances of quantization in llama.cpp [12] — Tanya Dadasheva & Iwan Kawrakow
+* What should Teal be? — musings on FOSS project directions [13] — Hisham Muhammad
+
+I also sometimes use the opportunity to write a little code, this year I fiddled with aiomonitor and async generators in Python [14].
+
+=> https://github.com/gawen 1: https://github.com/gawen
+=> https://blog.zwindler.fr 2: https://blog.zwindler.fr
+=> https://hisham.hm 3: https://hisham.hm
+=> https://fosdem.org/2025/schedule/event/fosdem-2025-5094-open-cloud-mesh/ 4: https://fosdem.org/2025/schedule/event/fosdem-2025-5094-open-cloud-mesh/
+=> https://fosdem.org/2025/schedule/event/fosdem-2025-5867-why-don-t-we-have-libsync-yet-/ 5: https://fosdem.org/2025/schedule/event/fosdem-2025-5867-why-don-t-we-have-libsync-yet-/
+=> https://fosdem.org/2025/schedule/event/fosdem-2025-4132-ladybird-a-new-independent-browser-written-from-scratch/ 6: https://fosdem.org/2025/schedule/event/fosdem-2025-4132-ladybird-a-new-independent-browser-written-from-scratch/
+=> https://fosdem.org/2025/schedule/event/fosdem-2025-4635-explore-large-image-datasets-with-panoptic/ 7: https://fosdem.org/2025/schedule/event/fosdem-2025-4635-explore-large-image-datasets-with-panoptic/
+=> https://fosdem.org/2025/schedule/event/fosdem-2025-6648-14-years-of-systemd/ 8: https://fosdem.org/2025/schedule/event/fosdem-2025-6648-14-years-of-systemd/
+=> https://fosdem.org/2025/schedule/event/fosdem-2025-4494-introduction-to-serverless-workflow-dsl/ 9: https://fosdem.org/2025/schedule/event/fosdem-2025-4494-introduction-to-serverless-workflow-dsl/
+=> https://fosdem.org/2025/schedule/event/fosdem-2025-4506-porting-luarocks-to-teal-exploring-the-benefits-of-statically-typed-code-in-lua/ 10: https://fosdem.org/2025/schedule/event/fosdem-2025-4506-porting-luarocks-to-teal-exploring-the-benefits-of-statically-typed-code-in-lua/
+=> https://fosdem.org/2025/schedule/event/fosdem-2025-5923-zml-a-high-performance-ai-inference-stack-built-for-production-and-multi-accelerator-deployment/ 11: https://fosdem.org/2025/schedule/event/fosdem-2025-5923-zml-a-high-performance-ai-inference-stack-built-for-production-and-multi-accelerator-deployment/
+=> https://fosdem.org/2025/schedule/event/fosdem-2025-5991-history-and-advances-of-quantization-in-llama-cpp/ 12: https://fosdem.org/2025/schedule/event/fosdem-2025-5991-history-and-advances-of-quantization-in-llama-cpp/
+=> https://fosdem.org/2025/schedule/event/fosdem-2025-6147-what-should-teal-be-musings-on-foss-project-directions/ 13: https://fosdem.org/2025/schedule/event/fosdem-2025-6147-what-should-teal-be-musings-on-foss-project-directions/
+=> https://github.com/aio-libs/aiomonitor/issues/418 14: https://github.com/aio-libs/aiomonitor/issues/418
