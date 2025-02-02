@@ -10,11 +10,46 @@
     rel="alternate" type="application/xhtml+xml"
   />
   <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
-  <updated>2025-02-02T18:03:06Z</updated>
+  <updated>2025-02-02T18:50:42Z</updated>
   <author>
     <name>Pierre 'catwell' Chapuis</name>
     <uri>https://catwell.info/</uri>
   </author>
+  <entry>
+    <title>Found in Translation</title>
+    <link
+      rel="alternate" type="text/html"
+      href="https://blog.separateconcerns.com/2025-02-02-found-in-translation.html"
+    />
+    <id>tag:blog.separateconcerns.com,2025-02-02:found-in-translation</id>
+    <published>2025-02-02T19:45:00Z</published>
+    <updated>2025-02-02T19:45:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>There is an <a href="https://en.wikipedia.org/wiki/Ivan_Illich">Ivan Illich</a> quote that I often see in French, for instance in <a href="https://www.linkedin.com/in/pierrepezziardi/">Pierre Pezziardi&#8217;s LinkedIn banner</a>:</p>
+<blockquote>
+<p>L’outil simple, pauvre, transparent est un humble serviteur ; l’outil élaboré, complexe, secret est un maître arrogant.</p>
+</blockquote>
+<p>Here is how I would translate it into English:</p>
+<blockquote>
+<p>Simple, plain, transparent tools are but humble servants. Elaborate, complex, secret tools are arrogant masters.</p>
+</blockquote>
+<p>But this quote comes from La Convivialité, the French translation of Tools for Conviviality, so why translate when we can find the original?</p>
+<p>In the French book, the quote is the last sentence of the Overprogramming chapter, which ends like this:</p>
+<blockquote>
+<p>Au fur et à mesure que des outils post-industriels rationnels se répandront, les tabous du spécialiste suivront l’outillage industriel dans sa chute, comme ils l’avaient accompagné dans sa gloire. L’outil simple, pauvre, transparent est un humble serviteur ; l’outil élaboré, complexe, secret est un maître arrogant.</p>
+</blockquote>
+<p>The original English version, however, is this:</p>
+<blockquote>
+<p>Professional taboos and industrial tools stand and fall together once truly rational, postindustrial tools are available. Only the convergent use of convivial tools in all significant areas of need-satisfaction can render their use in each sector truly effective. Only among convivially structured tools can people learn to use the new levels of power that modern technology can incorporate in them.</p>
+</blockquote>
+<p>This is completely different! Which means this quote was probably from Luce Giard et Vincent Bardet, who helped Illich with the French version of his book.</p>
+<p>I have known about this for a while but I decided to blog about it because of a discussion I had at <a href="https://blog.separateconcerns.com/2025-02-02-fosdem-2025.html">FOSDEM</a> about LLMs replacing human translators. And indeed for most content LLMs do a good job, but it is unlikely that an LLM would do something like this. This is not what they are trained to do. There is an opinionated, artistic component to the job of literary translation.</p>
+<p>Note: Karl Dubost also frequently <a href="https://www.la-grange.net/2025/01/20/savoir">blogs about</a> <a href="https://www.la-grange.net/2025/01/25/traduire">this topic</a>.</p>
+
+      </div>
+    </content>
+  </entry>
   <entry>
     <title>FOSDEM 2025</title>
     <link

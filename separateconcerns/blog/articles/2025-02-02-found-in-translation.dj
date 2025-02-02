@@ -1,0 +1,29 @@
+```=lua-meta
+title = "Found in Translation"
+published = "2025-02-02 19:45:00"
+description = "About an Ivan Illich quote that is not an Ivan Illich quote."
+```
+
+There is an [Ivan Illich](https://en.wikipedia.org/wiki/Ivan_Illich) quote that I often see in French, for instance in [Pierre Pezziardi's LinkedIn banner](https://www.linkedin.com/in/pierrepezziardi/):
+
+> L’outil simple, pauvre, transparent est un humble serviteur ; l’outil élaboré, complexe, secret est un maître arrogant.
+
+Here is how I would translate it into English:
+
+> Simple, plain, transparent tools are but humble servants. Elaborate, complex, secret tools are arrogant masters.
+
+But this quote comes from La Convivialité, the French translation of Tools for Conviviality, so why translate when we can find the original?
+
+In the French book, the quote is the last sentence of the Overprogramming chapter, which ends like this:
+
+> Au fur et à mesure que des outils post-industriels rationnels se répandront, les tabous du spécialiste suivront l’outillage industriel dans sa chute, comme ils l’avaient accompagné dans sa gloire. L’outil simple, pauvre, transparent est un humble serviteur ; l’outil élaboré, complexe, secret est un maître arrogant.
+
+The original English version, however, is this:
+
+> Professional taboos and industrial tools stand and fall together once truly rational, postindustrial tools are available. Only the convergent use of convivial tools in all significant areas of need-satisfaction can render their use in each sector truly effective. Only among convivially structured tools can people learn to use the new levels of power that modern technology can incorporate in them.
+
+This is completely different! Which means this quote was probably from Luce Giard et Vincent Bardet, who helped Illich with the French version of his book.
+
+I have known about this for a while but I decided to blog about it because of a discussion I had at [FOSDEM](https://blog.separateconcerns.com/2025-02-02-fosdem-2025.html) about LLMs replacing human translators. And indeed for most content LLMs do a good job, but it is unlikely that an LLM would do something like this. This is not what they are trained to do. There is an opinionated, artistic component to the job of literary translation.
+
+Note: Karl Dubost also frequently [blogs about](https://www.la-grange.net/2025/01/20/savoir) [this topic](https://www.la-grange.net/2025/01/25/traduire).
