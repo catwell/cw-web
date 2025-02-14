@@ -1,23 +1,31 @@
 @font-face {
-  font-family: "PublicSans";
-  src: url("../fonts/PublicSans-Regular.woff2") format("woff2"),
-       url("../fonts/PublicSans-Regular.woff") format("woff");
+  font-family: "IBMPlexSans";
+  src: url("../fonts/IBMPlexSans-Regular.woff2") format("woff2"),
+       url("../fonts/IBMPlexSans-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "PublicSansLight";
-  src: url("../fonts/PublicSans-Light.woff2") format("woff2"),
-       url("../fonts/PublicSans-Light.woff") format("woff");
+  font-family: "IBMPlexSansLight";
+  src: url("../fonts/IBMPlexSans-Light.woff2") format("woff2"),
+       url("../fonts/IBMPlexSans-Light.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "PublicSansItalic";
-  src: url("../fonts/PublicSans-LightItalic.woff2") format("woff2"),
-       url("../fonts/PublicSans-LightItalic.woff") format("woff");
+  font-family: "IBMPlexSansItalic";
+  src: url("../fonts/IBMPlexSans-LightItalic.woff2") format("woff2"),
+       url("../fonts/IBMPlexSans-LightItalic.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "IntelOneMono";
+  src: url("../fonts/IntelOneMono-Regular.woff2") format("woff2"),
+       url("../fonts/IntelOneMono-Rehular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -31,7 +39,7 @@ html {
 }
 
 body {
-  font-family: "PublicSans", "Helvetica", serif;
+  font-family: "IBMPlexSans", "Helvetica", serif;
   line-height: 1.5rem;
   background-color: #ffffff;
 }
@@ -60,7 +68,7 @@ h3 {
 }
 
 h4 { /* subtitles only */
-  font-family: "PublicSansLight", "Helvetica", serif;
+  font-family: "IBMPlexSansLight", "Helvetica", serif;
   margin-bottom: 2rem;
   color: #333333;
   font-size: 0.9rem;
@@ -96,13 +104,13 @@ a:hover {
 }
 
 blockquote {
-  font-family: "PublicSansItalic", "Helvetica", serif;
+  font-family: "IBMPlexSansItalic", "Helvetica", serif;
   font-style: italic;
   color: #841;
 }
 
 strong {
-  font-family: "PublicSansItalic", "Helvetica", serif;
+  font-family: "IBMPlexSansItalic", "Helvetica", serif;
 }
 
 #container {
@@ -139,6 +147,10 @@ ol.index li a {
   overflow: hidden;
 }
 
+pre, code {
+  font-family: IntelOneMono, monospace !important; /* overload prism */
+}
+
 pre[class*=language-] {
   overflow-x: auto;
   font-size: 16px !important; /* overload prism */
@@ -148,10 +160,10 @@ pre[class*=language-] {
 :not(pre) > code { /* inline */
   color: #333;
   background: #f8f8f8;
-  padding: 2px 3px;
+  padding: 1px 3px;
   border: 1px solid #eaeaea;
   border-radius: 3px;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 span.daydate {

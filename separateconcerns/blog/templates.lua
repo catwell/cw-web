@@ -11,7 +11,7 @@ TPL.html_post = [[
     {{#has_code}}
       <link href="css/prism.css" rel="stylesheet" type="text/css">
     {{/has_code}}
-    <link href="css/theme.css?cache=4" rel="stylesheet" type="text/css">
+    <link href="css/theme.css?cache=5" rel="stylesheet" type="text/css">
     <link
       rel="alternate" type="application/atom+xml"
       href="https://blog.separateconcerns.com/feed.atom"
