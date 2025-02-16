@@ -1,4 +1,4 @@
-# Disagreeing with &quot;best practices&quot;
+# Disagreeing with "best practices"
 published 2023-08-06
 
 When I interview software developers, I usually ask some variation of the following questions:

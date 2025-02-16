@@ -5,7 +5,7 @@
 => https://blog.separateconcerns.com Visit on the Web
 => gemini://catwell.info catwell.info
 
-=> 2025-02-16-thoughts-11.gmi 2025-02-16 - Thoughts &amp; Links 11
+=> 2025-02-16-thoughts-11.gmi 2025-02-16 - Thoughts & Links 11
 => 2025-02-02-found-in-translation.gmi 2025-02-02 - Found in Translation
 => 2025-02-02-fosdem-2025.gmi 2025-02-02 - FOSDEM 2025
 => 2025-01-04-teal-lsp-sublime.gmi 2025-01-04 - How I use the Teal LSP with Sublime Text
@@ -82,7 +82,7 @@
 => 2013-05-28-coherence-checks.gmi 2013-05-28 - Coherence checks in SOA
 => 2013-03-24-vogels-skills.gmi 2013-03-24 - Werner Vogels on Skills
 => 2013-03-03-viterbi-algorithm.gmi 2013-03-03 - Viterbi, my favorite algorithm
-=> 2013-01-28-algorithms-data-structures-protocols.gmi 2013-01-28 - Algorithms, Data Structures &amp; Protocols
+=> 2013-01-28-algorithms-data-structures-protocols.gmi 2013-01-28 - Algorithms, Data Structures & Protocols
 => 2013-01-02-startups-soa.gmi 2013-01-02 - Startups, think about SOA
 => 2013-01-02-hello-world.gmi 2013-01-02 - Hello again, World!
 => 2012-01-09-ubiquitous.gmi 2012-01-09 - The Future of Computing: Ubiquity

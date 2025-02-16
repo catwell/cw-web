@@ -1,4 +1,4 @@
-# Algorithms, Data Structures &amp;amp; Protocols
+# Algorithms, Data Structures & Protocols
 published 2013-01-28
 
 ## Algorithms & Data Structures

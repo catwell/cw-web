@@ -108,7 +108,6 @@ local function parse_entry(fname)
     local md = assert(file_read(fname))
     local html, metadata = article_to_html_chunk(md)
     local gemtext = article_to_gemtext(md)
-    metadata.title = metadata.title:gsub("&", "&amp;")
     metadata.description = metadata.description:
         gsub("%s+"," "):gsub("^ ",""):gsub(" $","")
     return {
@@ -152,7 +151,8 @@ local function process_file(path)
     local fragment = fnpart:sub(12)
     assert(fmt("%s-%s", sdate, fragment) == fnpart)
     local entry = {
-        title = metadata.title,
+        title = metadata.title:gsub("&", "&amp;"),
+        raw_title = metadata.title,
         url = url,
         content = parsed_entry.html,
         gemtext = parsed_entry.gemtext,

@@ -130,7 +130,7 @@ TPL.atom_feed = [[
 ]]
 
 TPL.gemini_post = [[
-# {{title}}
+# {{{raw_title}}}
 published {{shortdate}}{{#updated}},updated {{updated}}{{/updated}}
 
 {{{gemtext}}}
@@ -145,7 +145,7 @@ TPL.gemini_index = [[
 => gemini://catwell.info catwell.info
 
 {{#entries}}
-=> {{fnpart}}.gmi {{shortdate}} - {{{title}}}
+=> {{fnpart}}.gmi {{shortdate}} - {{{raw_title}}}
 {{/entries}}
 ]]
 
