@@ -1,0 +1,118 @@
+```=lua-meta
+title = "Thoughts & Links 11"
+published = "2025-02-16 14:15:00"
+description = "Missing FAKEGRIMLOCK and links on various topics."
+```
+
+> "Thoughts & Links" are posts mixing topics on my mind and interesting things I have read recently. Less thought out than regular posts.
+
+Mostly links today. I have renamed the post series "Thoughts & Links" since this is what they are.
+
+## I miss FAKEGRIMLOCK
+
+If you know, you know. If you don't, picture this: it's the second tech boom (early 2010s), most people did not experience the dot-com bubble and are figuring this stuff out, and some of the best advice you can find online comes from a robot dinosaur that writes in all caps. You can find some of its content online, for instance [on Fred Wilson's blog](https://avc.com/2011/09/minimum-viable-personality/).
+
+## [Paul Graham on Yahoo (2010)](https://paulgraham.com/yahoo.html)
+
+> In technology, once you have bad programmers, you're doomed. I can't think of an instance where a company has sunk into technical mediocrity and recovered.
+
+> In the early days Facebook made a point of hiring programmers even for jobs that would not ordinarily consist of programming, like HR and marketing.
+
+> Hacker culture often seems kind of irresponsible. That's why people proposing to destroy it use phrases like "adult supervision." [...] But there are worse things than seeming irresponsible. Losing, for example.
+
+## [Quentin Adam on EU tech](https://www.latribune.fr/opinions/l-ia-un-test-pour-la-politique-industrielle-europeenne-1018022.html)
+
+This is a tribune by [Quentin Adam](https://www.waxzce.org) on AI and industrial policy in the EU. Excerpt translated from French:
+
+> We need companies led by technology leaders, trained engineers who deeply understand the challenges of the sector. [...] It is time to stop only investing in managers and to fund those who know how to build.
+
+## [Two bitter lessons from the rebuild of Notre Dame](https://philippesilberzahn.com/2024/12/02/restauration-de-notre-dame-derriere-l-exploit-deux-ameres-lecons-sur-l-excellence-francaise/)
+
+Philippe Silberzahn writes on how France can do great things, but 1) to preserve the past and not build the future and 2) only by circumventing legislation.
+
+Translated from French (there is a pun in the original I could't [find a good translation](https://blog.separateconcerns.com/2025-02-02-found-in-translation.html) for):
+
+> I meet a lot of [public and private sector leaders], they all have the same lament: we are suffocating under millimetric regulations. The country belongs to inspectors who spun out of control. Excellence has become impossible.
+
+## ["More human" management is meaningless](https://philippesilberzahn.com/2025/02/10/un-management-plus-humain-ca-ne-veut-rien-dire/)
+
+Philippe Silberzahn again, translated from French again.
+
+> Management without exigence is inhuman. How many talented engineers [...] languish in companies where nothing ever happens except for a continuous flow of bureaucratic events? [...] Accepting the mediocrity of an employee is disrespectful. They are invisibilized: "You are doing a bad job but I won't tell you, and even less demand you improve." It means you're not worth it, I won't help you produce work you can be proud of. [...] And collectively, we will make crap, or even better: we will make nothing at all. And we will die slowly.
+
+## [Upspin is shutting down](https://groups.google.com/g/upspin/c/Whma_O-iexM/m/6loeUgKYDwAJ)
+
+> Upspin, like Unix and Plan 9, was intended to foster communities of sharing, but has been less successful at that than we hoped. As a consequence, with regret, we have decided to turn down the central infrastructure such as the keyserver over the coming months.
+
+## AI hardware
+
+Last December I bookmarked [this](https://semianalysis.com/2024/12/25/nvidias-christmas-present-gb300-b300-reasoning-inference-amazon-memory-supply-chain/):
+
+> Nvidia’s not the only one that can increase memory capacity of course. ASICs can do this and in fact AMD may be well positioned due to their higher memory capacity versus Nvidia [...] Well except Santa Huang has a Red-Nosed Reindeer called NVLink. No other accelerator in the world has all-to-all switched connectivity. No other accelerator in the world can do all reduce through a switch.
+
+Then DeepSeek proved this was not the moat we thought it was. Meanwhile Mistral is doing over 1000 tokens per second on a 123B model by leveraging Cerebras for inference, and Tenstorrent is shipping... fun times!
+
+## George Hotz - [The Soul](https://geohot.github.io/blog/jekyll/update/2024/12/01/the-soul.html)
+
+> You are a machine learning algorithm. You have some priors in your DNA. You learn on data, RL style because your actions affect the next data you see; the dataset depends on the model. [...] How much of [Christianity's decline] is people starting to figure this out?
+
+## Carson Gross - [Coding  Dirty](https://htmx.org/essays/codin-dirty/)
+
+The author of htmx on some "dirty" code practices he considers good:
+
+> - (Some) big functions are good, actually
+> - Prefer integration tests to unit tests
+> - Keep your class/interface/concept count down
+
+## Engineers know
+
+Avery Pennarun, founder of Tailscale, [on X](https://x.com/apenwarr/status/1855998935292121307):
+
+> Engineers (who aren't kept isolated in a back room) are pretty good at knowing what's important to work on. They just don't think they are. And they especially don't think other engineers are.
+
+I answered:
+
+> And French engineers are probably even worse... You have no idea how many think you need a business degree to understand a customer, or anything remotely related to strategy.
+
+He answered:
+
+> I keep sensing the "people live up (or down) to the expectations you put on them" effect. If you expect people to have bad ideas, they won't be careful. If you tell people they get to choose what's important, there's no safety net, they'll live up to what's needed.
+
+Insightful.
+
+## [Reflections on Palantir](https://nabeelqu.co/reflections-on-palantir)
+
+A long article by Nabeel S. Qureshi on his experience at Palantir. The most interesting part for me is how Palantir uses Forward-Deployed Engineers differently from most companies.
+
+> [FDEs] gain intricate knowledge of business processes in difficult industries (manufacturing, healthcare, intel, aerospace, etc.) and then use that knowledge to design software that actually solves the problem. [Product Development] engineers then "productize" what the FDEs build, and — more generally — build software that provides leverage for the FDEs to do their work better and faster.
+
+## The One Developer Framework
+
+I like how DHH increasingly focuses on single-developer teams. [On X](https://x.com/dhh/status/1796229972488749062):
+
+> I view everything I work on through that One Developer Framework lens. Not interested in tooling, approaches, or concepts that demand a team of thinly-sliced specialists to tick. One developer must be able to understand/use it all. From Hello World to IPO! Let's go, nerds :)
+
+## Stop trying to make everyhting too easy
+
+Howard Chu [on Mastodon](https://mastodon.social/@hyc/112844972710932126):
+
+> A lot of user interactions these days are *too* user friendly, and when deployed in the real world you discover that you really need a bit of friction, to prevent things from being too easy. Child-proof packaging on medicines is one example where you purposefully raise difficulty. [...] Stop trying to make everything "so easy a child can do it." Some things need to have a higher barrier to entry. Focus on educating people to be smart enough and responsible enough to clear the hurdles.
+
+## Scott Chacon - [Why GitHub Actually Won](https://blog.gitbutler.com/why-github-actually-won/)
+
+> We won because we started at the right time and we had taste. We were there when a new paradigm was being born and we approached the problem of helping people embrace that new paradigm with a developer experience centric approach that nobody else had the capacity for or interest in.
+
+## Hugo Lassiège — The role of Staff+ software engineers
+
+[On YouTube](https://youtu.be/O_e1mN_YTt4?t=525), translated from French:
+
+> As you progress, you must be able to analyze a situation more and more remote from pure technology, and it is interesting to do so because you will also need to understand marketing, sales, finance, and so on. No company that does not have technical people involved with business strategy can have a tech or product approach anyway. All those companies I hear complain like: "We do not innovate enough! We hired the best developers but can't see a significant impact..." Systematically, we notice no tech person is working on strategy. There is no tech person at product meetings, no tech person at executive committees, etc.
+
+## Hugo Lassiège — Security at Startups
+
+[On YouTube](https://youtu.be/nIYE1HQVIVw?t=190), translated from French:
+
+> At a startup, what I call "human capital" is rare and limited. You cannot hire armies of people, so you need rare birds able to do several things well, or at least people with the potential to become them.
+
+The literal translation of what he says in French is "you need five-legged sheep", I couldn't find a good translation in English.
+
