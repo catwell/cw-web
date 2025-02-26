@@ -10,7 +10,7 @@
     rel="alternate" type="application/xhtml+xml"
   />
   <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
-  <updated>2025-02-26T13:30:43Z</updated>
+  <updated>2025-02-26T14:35:05Z</updated>
   <author>
     <name>Pierre 'catwell' Chapuis</name>
     <uri>https://catwell.info/</uri>
@@ -26,7 +26,7 @@
     <updated>2025-02-26T14:30:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        <p>The rapid evolution of AI makes me change my mind often regarding its future evolution. However, since the beginning of the deep learning era, I hold a belief that in the long run the distinction between &#8220;training&#8221; and &#8220;inference&#8221; will fade and AI will learn online.</p>
+        <p>The rapid evolution of AI makes me change my mind often regarding its future evolution. However, since the beginning of the deep learning era, I hold a belief that in the long run the distinction between &#8220;training&#8221; and &#8220;inference&#8221; will fade and AI will learn <a href="https://en.wikipedia.org/wiki/Online_algorithm">online</a>.</p>
 <p>I think economics make it unlikely that the current practice of collecting data then training a model on it and doing it all over again for the next iteration will subside. I find it more likely that at some point all of the following will happen:</p>
 <ul>
 <li>
