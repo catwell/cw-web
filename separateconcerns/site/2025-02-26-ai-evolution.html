@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta name="description" content="I believe the era of datasets will end, and the difference between training and inference will fade away.">
+    <link rel="canonical" href="https://blog.separateconcerns.com/2025-02-26-ai-evolution.html">
+    <link href="css/theme.css?cache=5" rel="stylesheet" type="text/css">
+    <link
+      rel="alternate" type="application/atom+xml"
+      href="https://blog.separateconcerns.com/feed.atom"
+    />
+    <title>Evolution of AI</title>
+  </head>
+  <body>
+    <div id="container">
+    <header>
+      <h1>Evolution of AI</h1>
+      <h4>
+        published 2025-02-26
+        [ <a href="index.html">home</a> ]
+      </h4>
+    </header>
+    <p>The rapid evolution of AI makes me change my mind often regarding its future evolution. However, since the beginning of the deep learning era, I hold a belief that in the long run the distinction between &ldquo;training&rdquo; and &ldquo;inference&rdquo; will fade and AI will learn online.</p>
+<p>I think economics make it unlikely that the current practice of collecting data then training a model on it and doing it all over again for the next iteration will subside. I find it more likely that at some point all of the following will happen:</p>
+<ul>
+<li>
+AI systems will no longer be pure deep learning models but more complex systems including memory. This is <a href="https://research.ibm.com/blog/memory-augmented-LLMs">already happening</a>, and I expect it to continue. Parameter count will continue to increase and require sparsity at inference, similar to <a href="https://huggingface.co/blog/moe">MoE</a>.
+</li>
+<li>
+Large-scale systems will keep a context per user or entity they interact with. It will be possible to access several of those contexts at runtime. I am not entirely sure of the shape this will take but there are already various options to save context in LLMs, <a href="https://arxiv.org/abs/2311.03285">serve concurrent LoRAs</a>, and <a href="https://arxiv.org/abs/2209.07663">more exotic approaches</a>.
+</li>
+<li>
+New model generations will not be trained from scratch. We will develop approaches to transfer knowledge from one generation to the next, even if they have radically different architectures. This could include things like <a href="https://sakana.ai/evolutionary-model-merge/">merging</a> and knowledge distillation as pre-training. There could be several teachers, i.e. a generalist model could be fine-tuned to learn from a smaller specialist teacher.
+</li>
+<li>
+With usage increasing, user interactions will become an essential — maybe eventually the primary — source of training data. It will be integrated into the model in &ldquo;soft real-time&rdquo; through <a href="https://medium.com/@bavalpreetsinghh/rlhf-ppo-vs-dpo-26b1438cf22b">some form of online RLHF</a>. This pairs nicely with the previous point, which means this online learning can be transferred.
+</li>
+<li>
+Much smaller task-specific models will be distilled from those large generalist models for embedded use in applications and on-device.
+</li>
+</ul>
+<p>This vision is largely coherent with Google&rsquo;s <a href="https://blog.google/technology/ai/introducing-pathways-next-generation-ai-architecture/">Pathways</a>, and I suppose other large players are seeing the same thing.</p>
+
+    </div>
+    <div id="footer">
+      [ <a href="index.html">home</a> ]
+    </div>
+    
+    <script
+      data-goatcounter="https://separateconcerns.goatcounter.com/count"
+      async src="//gc.zgo.at/count.js"></script>
+  </body>
+</html>
