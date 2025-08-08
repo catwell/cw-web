@@ -10,11 +10,63 @@
     rel="alternate" type="application/xhtml+xml"
   />
   <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
-  <updated>2025-02-26T14:35:05Z</updated>
+  <updated>2025-08-08T19:55:41Z</updated>
   <author>
     <name>Pierre 'catwell' Chapuis</name>
     <uri>https://catwell.info/</uri>
   </author>
+  <entry>
+    <title>How I use AI coding tools (in summer 2025)</title>
+    <link
+      rel="alternate" type="text/html"
+      href="https://blog.separateconcerns.com/2025-08-08-ai-tools.html"
+    />
+    <id>tag:blog.separateconcerns.com,2025-08-08:ai-tools</id>
+    <published>2025-08-08T21:55:00Z</published>
+    <updated>2025-08-08T21:55:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <blockquote>
+<p>Note: Yes I use em-dashes when I write, and no this is not AI. When I blog I typically only use <a href="https://writewithharper.com">Harper</a> to check for spelling and syntax.</p>
+</blockquote>
+<p>I have talked about my use of AI to write code <a href="https://blog.separateconcerns.com/2023-10-21-automating-job.html">here</a>, but that was almost two years ago. Things have changed since then and I wanted to talk briefly about how.</p>
+<section id="Claude-Code">
+<h2>Claude Code</h2>
+<p>The most important change is that I now use <a href="https://www.anthropic.com/claude-code">Claude Code</a>. I don&#8217;t use it all the time, but here are a few ways I do:</p>
+<ul>
+<li>
+When I implement features in a codebase I know well, I write a detailed prompt describing how I want the feature implemented and give it to Claude.
+</li>
+<li>
+When I need to kickstart a project quickly with technology I do not know well, I ask Claude and it typically does a better job than me — and most importantly faster.
+</li>
+<li>
+When I get an error message I cannot immediately understand I paste it into Claude Code, and more often than not it finds how to fix it.
+</li>
+</ul>
+<p>Here is one way I do <strong>not</strong> use Claude: when I work on hard problems where I do not know the solution. I use code as a thinking tool, and using an LLM disturbs that process.</p>
+<p>In general, I see Claude as a junior but very fast pair programmer. It won&#8217;t help with hard things but it will gain you a lot of time for the simple ones if you guide it well and check its work.</p>
+</section>
+<section id="Lovable">
+<h2>Lovable</h2>
+<p>Another tool that I used a lot is <a href="https://lovable.dev">Lovable</a>, and I have a complicated relationship with it. The way I used it was, someone else vibe-coded an app and I stepped in when things became too complex for Lovable.</p>
+<p>At first I was very impressed. In a few prompts anyone can get a usable application prototype, all in the browser. This makes most no-code frontend development tools irrelevant.</p>
+<p>The more I used it, though, the more I saw its limits. The recently released agent mode makes it better, but it still has flaws such as writing spaghetti code and not cleaning up dead code. As time progresses, its context becomes polluted by the messy codebase and it gets lost. I think the stack they chose (React and Radix) does not help with that.</p>
+<p>The way to fix it is what I did: clone the repository, refactor by hand or with the help of Claude Code, and put things back in a state where the model will start making the right decisions again.</p>
+<p>But the main issue with Lovable is not the model, it is everything around it. It uses Supabase as its only backend, which is very limited. Most importantly there is no proper way to have separate environments, not even a development environment separate from production. They need to fix that and understand that if they want to have successful applications in production they must consider the fact that they will be worked on by teams.</p>
+</section>
+<section id="Others">
+<h2>Others</h2>
+<p>I still use GitHub Copilot for autocomplete. It is just better than the default, especially in Sublime Text.</p>
+<p>I also use <a href="https://chat.mistral.ai/">Mistral&#8217;s Le Chat</a> for random things, like most people use ChatGPT.</p>
+<p>I have not yet tried alternatives to Claude Code except for <a href="https://aider.chat">Aider</a> which I used earlier. I am most interested in <a href="https://sourcegraph.com/amp">Amp</a> for looking well-made, <a href="https://opencode.ai">opencode</a> for being Open Source and <a href="https://github.com/google-gemini/gemini-cli">gemini-cli</a> for being basically free (as in beer).</p>
+<p>I think in a few months to years more asynchronous tools such as Devin, OpenAI&#8217;s Codex or Google&#8217;s Jules may become interesting, but they are not for me just now.</p>
+<p>If you are looking for content elsewhere to make up your mind, I think <a href="https://simonwillison.net/2025/Jun/18/coding-agents/">this post by Simon Willison</a> is very relevant, and I like what <a href="https://www.youtube.com/@zeeg99">David</a> and <a href="https://www.youtube.com/@ArminRonacher">Armin</a> post.</p>
+</section>
+
+      </div>
+    </content>
+  </entry>
   <entry>
     <title>Evolution of AI</title>
     <link

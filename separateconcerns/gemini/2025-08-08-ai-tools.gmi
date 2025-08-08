@@ -1,0 +1,58 @@
+# How I use AI coding tools (in summer 2025)
+published 2025-08-08
+
+> Note: Yes I use em-dashes when I write, and no this is not AI. When I blog I typically only use Harper [1] to check for spelling and syntax.
+
+I have talked about my use of AI to write code here [2], but that was almost two years ago. Things have changed since then and I wanted to talk briefly about how.
+
+=> https://writewithharper.com 1: https://writewithharper.com
+=> https://blog.separateconcerns.com/2023-10-21-automating-job.html 2: https://blog.separateconcerns.com/2023-10-21-automating-job.html
+
+## Claude Code
+
+The most important change is that I now use Claude Code [3]. I don't use it all the time, but here are a few ways I do:
+
+* When I implement features in a codebase I know well, I write a detailed prompt describing how I want the feature implemented and give it to Claude.
+* When I need to kickstart a project quickly with technology I do not know well, I ask Claude and it typically does a better job than me — and most importantly faster.
+* When I get an error message I cannot immediately understand I paste it into Claude Code, and more often than not it finds how to fix it.
+
+Here is one way I do not use Claude: when I work on hard problems where I do not know the solution. I use code as a thinking tool, and using an LLM disturbs that process.
+
+In general, I see Claude as a junior but very fast pair programmer. It won't help with hard things but it will gain you a lot of time for the simple ones if you guide it well and check its work.
+
+=> https://www.anthropic.com/claude-code 3: https://www.anthropic.com/claude-code
+
+## Lovable
+
+Another tool that I used a lot is Lovable [4], and I have a complicated relationship with it. The way I used it was, someone else vibe-coded an app and I stepped in when things became too complex for Lovable.
+
+At first I was very impressed. In a few prompts anyone can get a usable application prototype, all in the browser. This makes most no-code frontend development tools irrelevant.
+
+The more I used it, though, the more I saw its limits. The recently released agent mode makes it better, but it still has flaws such as writing spaghetti code and not cleaning up dead code. As time progresses, its context becomes polluted by the messy codebase and it gets lost. I think the stack they chose (React and Radix) does not help with that.
+
+The way to fix it is what I did: clone the repository, refactor by hand or with the help of Claude Code, and put things back in a state where the model will start making the right decisions again.
+
+But the main issue with Lovable is not the model, it is everything around it. It uses Supabase as its only backend, which is very limited. Most importantly there is no proper way to have separate environments, not even a development environment separate from production. They need to fix that and understand that if they want to have successful applications in production they must consider the fact that they will be worked on by teams.
+
+=> https://lovable.dev 4: https://lovable.dev
+
+## Others
+
+I still use GitHub Copilot for autocomplete. It is just better than the default, especially in Sublime Text.
+
+I also use Mistral's Le Chat [5] for random things, like most people use ChatGPT.
+
+I have not yet tried alternatives to Claude Code except for Aider [6] which I used earlier. I am most interested in Amp [7] for looking well-made, opencode [8] for being Open Source and gemini-cli [9] for being basically free (as in beer).
+
+I think in a few months to years more asynchronous tools such as Devin, OpenAI's Codex or Google's Jules may become interesting, but they are not for me just now.
+
+If you are looking for content elsewhere to make up your mind, I think this post by Simon Willison [10] is very relevant, and I like what David [11] and Armin [12] post.
+
+=> https://chat.mistral.ai/ 5: https://chat.mistral.ai/
+=> https://aider.chat 6: https://aider.chat
+=> https://sourcegraph.com/amp 7: https://sourcegraph.com/amp
+=> https://opencode.ai 8: https://opencode.ai
+=> https://github.com/google-gemini/gemini-cli 9: https://github.com/google-gemini/gemini-cli
+=> https://simonwillison.net/2025/Jun/18/coding-agents/ 10: https://simonwillison.net/2025/Jun/18/coding-agents/
+=> https://www.youtube.com/@zeeg99 11: https://www.youtube.com/@zeeg99
+=> https://www.youtube.com/@ArminRonacher 12: https://www.youtube.com/@ArminRonacher

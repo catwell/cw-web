@@ -1,0 +1,47 @@
+```=lua-meta
+title = "How I use AI coding tools (in summer 2025)"
+published = "2025-08-08 21:55:00"
+description = [[
+    I use Copilot for completion, Claude Code, and I try to avoid Lovable.
+]]
+```
+
+> Note: Yes I use em-dashes when I write, and no this is not AI. When I blog I typically only use [Harper](https://writewithharper.com) to check for spelling and syntax.
+
+I have talked about my use of AI to write code [here](https://blog.separateconcerns.com/2023-10-21-automating-job.html), but that was almost two years ago. Things have changed since then and I wanted to talk briefly about how.
+
+## Claude Code
+
+The most important change is that I now use [Claude Code](https://www.anthropic.com/claude-code). I don't use it all the time, but here are a few ways I do:
+
+- When I implement features in a codebase I know well, I write a detailed prompt describing how I want the feature implemented and give it to Claude.
+- When I need to kickstart a project quickly with technology I do not know well, I ask Claude and it typically does a better job than me — and most importantly faster.
+- When I get an error message I cannot immediately understand I paste it into Claude Code, and more often than not it finds how to fix it.
+
+Here is one way I do *not* use Claude: when I work on hard problems where I do not know the solution. I use code as a thinking tool, and using an LLM disturbs that process.
+
+In general, I see Claude as a junior but very fast pair programmer. It won't help with hard things but it will gain you a lot of time for the simple ones if you guide it well and check its work.
+
+## Lovable
+
+Another tool that I used a lot is [Lovable](https://lovable.dev), and I have a complicated relationship with it. The way I used it was, someone else vibe-coded an app and I stepped in when things became too complex for Lovable.
+
+At first I was very impressed. In a few prompts anyone can get a usable application prototype, all in the browser. This makes most no-code frontend development tools irrelevant.
+
+The more I used it, though, the more I saw its limits. The recently released agent mode makes it better, but it still has flaws such as writing spaghetti code and not cleaning up dead code. As time progresses, its context becomes polluted by the messy codebase and it gets lost. I think the stack they chose (React and Radix) does not help with that.
+
+The way to fix it is what I did: clone the repository, refactor by hand or with the help of Claude Code, and put things back in a state where the model will start making the right decisions again.
+
+But the main issue with Lovable is not the model, it is everything around it. It uses Supabase as its only backend, which is very limited. Most importantly there is no proper way to have separate environments, not even a development environment separate from production. They need to fix that and understand that if they want to have successful applications in production they must consider the fact that they will be worked on by teams.
+
+## Others
+
+I still use GitHub Copilot for autocomplete. It is just better than the default, especially in Sublime Text.
+
+I also use [Mistral's Le Chat](https://chat.mistral.ai/) for random things, like most people use ChatGPT.
+
+I have not yet tried alternatives to Claude Code except for [Aider](https://aider.chat) which I used earlier. I am most interested in [Amp](https://sourcegraph.com/amp) for looking well-made, [opencode](https://opencode.ai) for being Open Source and [gemini-cli](https://github.com/google-gemini/gemini-cli) for being basically free (as in beer).
+
+I think in a few months to years more asynchronous tools such as Devin, OpenAI's Codex or Google's Jules may become interesting, but they are not for me just now.
+
+If you are looking for content elsewhere to make up your mind, I think [this post by Simon Willison](https://simonwillison.net/2025/Jun/18/coding-agents/) is very relevant, and I like what [David](https://www.youtube.com/@zeeg99) and [Armin](https://www.youtube.com/@ArminRonacher) post.
