@@ -1,6 +1,7 @@
 ```=lua-meta
 title = "Software Architecture Principles"
 published = "2019-02-15 10:20:00"
+updated = "2025-08-21 17:00:00"
 description = "My guiding principles regarding software architecture and design."
 ```
 
@@ -21,3 +22,5 @@ Without further ado, the principles are:
 - Think about debuggability in production. There is nothing worse than having your software break and not being able to figure out why. Do not automate things you do not understand.
 
 - [Write code that is easy to delete, not easy to extend.](https://programmingisterrible.com/post/139222674273/write-code-that-is-easy-to-delete-not-easy-to)
+
+- [Shorten feedback loops.](https://lobste.rs/s/a1njck/what_trick_trade_took_you_too_long_learn#c_ml21et) (added on 2025-08-21)

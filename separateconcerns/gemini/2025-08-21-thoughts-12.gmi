@@ -1,0 +1,147 @@
+# Thoughts & Links 12
+published 2025-08-21
+
+> "Thoughts & Links" are posts mixing topics on my mind and interesting things I have read recently. Less thought out than regular posts.
+
+## A trade ending or evolving
+=> https://n.survol.fr/n/fin-ou-transformation-dun-metier
+
+A post about our job by Éric, from last February (in French). He shares a lot of my thoughts on the topic. Here is a (translated) selection.
+
+> I fear a real crisis in our trade in a few years. Some — many — will be left on the sidelines.
+
+> If you are very tech-minded, you should do math, data manipulation, statistics and generally AI. It will be harder and require more advanced competencies than being a developer, but there will be jobs. If you want to create, for me the future lies in product-related roles, product management with a technical emphasis and interest. It means caring about the business, market, customers, etc.
+
+> For those of you still mostly writing code, I would switch to LLMs ASAP. I know you don't feel the need, that those tools make mistakes you don't, that today it slows you down. [...] There will be room for older code experts for a long time, in maintenance and large companies that are several generations behind. We still need COBOL developers today. But is it really the position you aspire to?
+
+## Breaking rules
+=> https://www.seangoedecke.com/breaking-rules/
+
+A post by Sean Goedecke about how strong engineers break rules and get away with it. (On a side note, I am impressed by how Sean manages to publish interesting content so frequently.)
+
+Like I said on Bluesky [1] it is a very important point to learn mid-career. The caveat is that most people will take it too far at some point. You should do it anyway — you need to learn exactly the right balance and nobody will teach you.
+
+=> https://bsky.app/profile/catwell.info/post/3lmgzjmono22m 1: https://bsky.app/profile/catwell.info/post/3lmgzjmono22m
+
+## What kind of work
+=> https://www.seangoedecke.com/my-engineering-values-2025/
+
+Sean (again!) has written a post about what kind of work he wants. Actually, he did it twice; this is an update from his first post back in 2021. I think this is a very interesting exercise and I should do it sometime. (It is hard for me because I have conflicting interests so I keep oscillating between technically exciting, product-focused roles and ones that are more business- and customer-facing.)
+
+## Fallacies of code generation
+=> https://olano.dev/blog/fallacies-of-code-generation/
+
+My favorites:
+
+> * Writing code is the hardest part of software development
+> * A system can be maintained without being understood
+
+Some I am not sure about:
+
+> * LLMs will become reliable decision makers
+> * Users will tolerate bad quality
+
+For the first one, I do not think anyone on Earth is competent to guess what LLMs or whatever will replace them will be able to do or not in a few years. People who say they will never be able to do something typically have either a very shallow understanding or a restrictive (and irrelevant) definition of LLMs.
+
+For the second one, I sadly know from experience that users do tolerate bad quality. Not all users, but often enough for the worse alternative to win.
+
+## Happy Ears
+=> https://x.com/gwenshap/status/1905426007949279251
+
+A long-form post on X (that should be a blog post...) about something every engineer involved in a sales process — or talking to customers in any capacity — needs to learn.
+
+Interacting with customers as an engineer is very different and sometimes contradicts what an engineer working on a product does. I love doing both — and I think it is important that some people do both — but it is always going to be hard and feel a bit schizophrenic.
+
+## Policy of transience
+=> https://www.chiark.greenend.org.uk/~sgtatham/quasiblog/transience/
+
+A post by Simon Tatham. His policy is:
+
+> Things should either be deliberately permanent in an organized way, or strictly temporary.
+
+I do the same. The first thing I do when I log onto a new machine is disable persistent shell history, I turn my computer off every night and configure my browser not to remember tabs.
+
+I really liked that post because I have been doing this forever — and I know most people do not — but I never really thought about why or formalized it. In my case it was initially because I used a lot of different and often shared machines, but now I just prefer it that way. I guess it is somewhat similar to how some cooks are obsessed with clearing the worktop as soon as they can.
+
+## BitTorrent generation
+=> https://www.la-grange.net/2025/05/19/rouge
+
+A (sub)post by Karl Dubost about copyright and that message posted by someone else on Bluesky:
+
+> 20 years ago we were suing teenagers for millions of dollars because they were torrenting a single Metallica album and now billionaires are demanding the free right to every work in history, so they can re-sell it. The law only ever serves capital.
+
+Karl writes (translated from French):
+
+> Sam Altman was born on 22 April 1985, so he is 40. BitTorrent came out in 2001, 24 years ago. [...] Sam Altman was 16. So he's only doing now what he was doing when he was a teenager. My answer: teenagers from that era have grown up and some became CEOs. There's no mystery.
+
+2001 was the year I really went online and started getting involved with the F/OSS movement. I am from the same generation as Altman, the BitTorrent (and Napster) generation, the Aaron Swartz generation, and I will always be against policies that prevent copying and sharing digital content.
+
+On the same topic, Karl also wrote here [2]:
+
+> I am a creator. I constantly steal others' work. It is the nature of creation. We do not live in a vacuum. We imitate life around us. Babies, kids do that. We keep doing that our whole life. We do not ask consent from all those who have created something before us to create ourselves. We train on everything we see. Stealing is not the problem. [...] Consent is not the problem. The main problem is ownership and the ability of certain actors to capture that ownership and prevent others from enjoying it.
+
+(On a side note: I do not enjoy translating Karl. I really enjoy his style in French; I always feel like I do not do him justice.)
+
+=> https://www.la-grange.net/2025/06/04/creation 2: https://www.la-grange.net/2025/06/04/creation
+
+## Go is a good language for agents
+
+Armin Ronacher writes [3]:
+
+> Rob Pike famously described Go as suitable for developers who aren't equipped to handle a complex language. Substitute "developers" with "agents" and it perfectly captures why Go's simplicity benefits agentic coding.
+
+But I think the most important part is the structural typing:
+
+> Interfaces in Go are structural. If a type has the methods an interface expects, then it conforms. This is incredibly easy for LLMs to "understand". There is very little surprise for the agent.
+
+Other important points are speed (both of execution and compilation) and low ecosystem churn.
+
+=> https://lucumr.pocoo.org/2025/6/12/agentic-coding/ 3: https://lucumr.pocoo.org/2025/6/12/agentic-coding/
+
+## Breaking the Spell
+=> https://phrack.org/issues/71/1
+
+A year ago, this text came out in Phrack. It is about how we need hackers more than ever to keep understanding the complex and ever-changing systems AI unleashes on us. (Go read it now and code back!)
+
+A big reason I left the AI field and the end of 2013 is I did not like deep learning. I was a proponent of simple, sharp tools in the Unix tradition. I wanted to understand things entirely despite the complexity, like I did with distributed systems. I said "I am a physicist, not a biologist".
+
+I came back in 2022 because AI is there to stay. It will run the world, and we will need hackers to poke at both its physics and biology. A lot has changed since 2013; interpretability research is a thing now, and we have had tools to build something we understand from something we do not understand for a long time [4].
+
+So I am here to stay [5] and understand as much of it all as my feeble human brain lets me.
+
+On a related note, I liked that on Henry Ko's About page [6]:
+
+> I am interested in ideas that share a theme of "doing more with less".
+
+He is talking about less energy, less data... and I would add less architectural complexity. That's how we hackers can help.
+
+=> https://blog.separateconcerns.com/2013-03-03-viterbi-algorithm.html 4: https://blog.separateconcerns.com/2013-03-03-viterbi-algorithm.html
+=> https://blog.separateconcerns.com/2024-10-16-not-leaving-ai.html 5: https://blog.separateconcerns.com/2024-10-16-not-leaving-ai.html
+=> https://henryhmko.github.io/about/about.html 6: https://henryhmko.github.io/about/about.html
+
+## Code is scaffolding
+=> https://devpoga.org/code-as-evolving-scaffolding/
+
+> Every program is just scaffolding for your next understanding. [...] The code isn't just temporary because we'll rewrite it. It's temporary because our understanding keeps evolving. [...] Your current understanding is probably wrong. Build simple scaffolding that lets you discover why.
+
+One way to understand why AI-assisted coding is so powerful is to see it as an aerial lift. Sometimes you can get to a better understanding in seconds without bothering with all the scaffolding.
+
+## Robotics
+
+There has been movement in the field, including in France, from Hugging Face's LeRobot [7] to the founding of Genesis AI [8].
+
+That is something I am really excited about. I mean come on, we can live in Star Wars! More seriously, automating physical jobs and tasks is still one of the top things that could change our lives. It will disrupt them too, sure, but I am optimistic about the end result on this one.
+
+=> https://huggingface.co/docs/lerobot/index 7: https://huggingface.co/docs/lerobot/index
+=> https://genesis-ai.company 8: https://genesis-ai.company
+
+## Shorten your feedback loop
+
+When asked "What trick of the trade took you too long to learn?", Hillel Wayne answered [9]:
+
+> Shorten your feedback loop. No, shorter than that.
+
+This is such a good answer, and one that I have agreed with forever (I mean, I have been using Lua for 20 years...) that I have added it to my core principles [10].
+
+=> https://lobste.rs/s/a1njck/what_trick_trade_took_you_too_long_learn#c_ml21et 9: https://lobste.rs/s/a1njck/what_trick_trade_took_you_too_long_learn#c_ml21et
+=> https://blog.separateconcerns.com/2019-02-15-architecture-principles.html 10: https://blog.separateconcerns.com/2019-02-15-architecture-principles.html

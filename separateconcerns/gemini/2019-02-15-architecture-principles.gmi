@@ -1,5 +1,5 @@
 # Software Architecture Principles
-published 2019-02-15
+published 2019-02-15,updated 2025-08-21
 
 This is just a short post to share what I now consider, after 10 years in the industry (and almost twice as many writing code), my core software architecture principles.
 
@@ -13,9 +13,11 @@ Without further ado, the principles are:
 * When writing code or designing, stop and think "consequences". What will be the impact of what you are doing on the rest of the systems? Could there be adverse side-effects?
 * Think about debuggability in production. There is nothing worse than having your software break and not being able to figure out why. Do not automate things you do not understand.
 * Write code that is easy to delete, not easy to extend. [5]
+* Shorten feedback loops. [6] (added on 2025-08-21)
 
 => https://en.wikipedia.org/wiki/Separation_of_concerns 1: https://en.wikipedia.org/wiki/Separation_of_concerns
 => https://en.wikipedia.org/wiki/Don%27t_repeat_yourself 2: https://en.wikipedia.org/wiki/Don%27t_repeat_yourself
 => https://en.wikipedia.org/wiki/John_Gall_(author)#Gall%27s_law 3: https://en.wikipedia.org/wiki/John_Gall_(author)#Gall%27s_law
 => https://en.wikipedia.org/wiki/Conway%27s_law 4: https://en.wikipedia.org/wiki/Conway%27s_law
 => https://programmingisterrible.com/post/139222674273/write-code-that-is-easy-to-delete-not-easy-to 5: https://programmingisterrible.com/post/139222674273/write-code-that-is-easy-to-delete-not-easy-to
+=> https://lobste.rs/s/a1njck/what_trick_trade_took_you_too_long_learn#c_ml21et 6: https://lobste.rs/s/a1njck/what_trick_trade_took_you_too_long_learn#c_ml21et
