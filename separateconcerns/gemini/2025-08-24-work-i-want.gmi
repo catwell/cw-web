@@ -1,0 +1,53 @@
+# What kind of work I want
+published 2025-08-24
+
+> This post is inspired by a similar post by Sean Goedecke [1]. I said [2] I should do the same; here it is.
+
+> Note that the fact that this page exists does not mean I am looking for a job! Also note that all of this is true at some point in time and subject to change — I may update the post.
+
+=> https://www.seangoedecke.com/my-engineering-values-2025/ 1: https://www.seangoedecke.com/my-engineering-values-2025/
+=> file:///dcs/cwl/git/cw-web/separateconcerns/site/2025-08-21-thoughts-12.html#What-kind-of-work 2: file:///dcs/cwl/git/cw-web/separateconcerns/site/2025-08-21-thoughts-12.html#What-kind-of-work
+
+## I want to work on core product
+
+This means I want to work directly on the product my employer is selling or something that makes it possible. Support functions matter and I have huge respect for them but they are not for me.
+
+My sweet spot is working on B2B products and interacting directly with customers.
+
+## I want to work on AI
+
+Historically, my specialty is Distributed Systems, but I happened to work on AI (for Computer Vision) "before it was cool." I left the field, re-joined it, and I intend to stay in it [3] for now.
+
+Note that for me working "on AI" does not just mean using LLMs through APIs. Typically, it means training and operating models.
+
+=> https://blog.separateconcerns.com/2024-10-16-not-leaving-ai.html 3: https://blog.separateconcerns.com/2024-10-16-not-leaving-ai.html
+
+## I want to work hybrid-remote in Paris
+
+I believe close-knit teams that meet regularly learn to work better together. I know some people believe this can be achieved fully remotely but I do not. However, I also believe working from home part of the time has benefits including cutting down on commute and better focus.
+
+This is not a hard red line, I could go with full remote or full in-office under some conditions. My location is though: my life is in Paris, France and I am not considering relocating anywhere.
+
+## Fields I avoid / favor
+
+I do not want to work in finance-related fields, including banking and crypto. I would also like to avoid working for HR / recruiting companies.
+
+Fields that specifically interest me include energy and robotics.
+
+## Management
+
+I am highly autonomous and self-directed. All my direct managers so far have been the company founders. I can deal with some politics, but not much.
+
+In most cases I prefer being an IC with a Staff+ [4] role. I am fine with having a few skilled IC reports; I do not manage managers.
+
+=> https://blog.separateconcerns.com/2023-02-03-staff-engineer-inch.html 4: https://blog.separateconcerns.com/2023-02-03-staff-engineer-inch.html
+
+## Culture
+
+I recognize the necessity of process, but I highly dislike its abuse.
+
+I think small teams with real ownership work best.
+
+I think people who care [5] can — sometimes should — disagree and argue passionately, and still remain friends.
+
+=> https://blog.separateconcerns.com/2025-08-24-beliefs.html 5: https://blog.separateconcerns.com/2025-08-24-beliefs.html

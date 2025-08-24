@@ -10,11 +10,63 @@
     rel="alternate" type="application/xhtml+xml"
   />
   <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
-  <updated>2025-08-24T13:28:39Z</updated>
+  <updated>2025-08-24T14:05:58Z</updated>
   <author>
     <name>Pierre 'catwell' Chapuis</name>
     <uri>https://catwell.info/</uri>
   </author>
+  <entry>
+    <title>What kind of work I want</title>
+    <link
+      rel="alternate" type="text/html"
+      href="https://blog.separateconcerns.com/2025-08-24-work-i-want.html"
+    />
+    <id>tag:blog.separateconcerns.com,2025-08-24:work-i-want</id>
+    <published>2025-08-24T16:30:00Z</published>
+    <updated>2025-08-24T16:30:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <blockquote>
+<p>This post is inspired by <a href="https://www.seangoedecke.com/my-engineering-values-2025/">a similar post by Sean Goedecke</a>. I <a href="file:///dcs/cwl/git/cw-web/separateconcerns/site/2025-08-21-thoughts-12.html#What-kind-of-work">said</a> I should do the same; here it is.</p>
+</blockquote>
+<blockquote>
+<p>Note that the fact that this page exists <strong>does not</strong> mean I am looking for a job! Also note that all of this is true at some point in time and subject to change — I may update the post.</p>
+</blockquote>
+<section id="I-want-to-work-on-core-product">
+<h2>I want to work on core product</h2>
+<p>This means I want to work directly on the product my employer is selling or something that makes it possible. Support functions matter and I have huge respect for them but they are not for me.</p>
+<p>My sweet spot is working on B2B products and interacting directly with customers.</p>
+</section>
+<section id="I-want-to-work-on-AI">
+<h2>I want to work on AI</h2>
+<p>Historically, my specialty is Distributed Systems, but I happened to work on AI (for Computer Vision) &#8220;before it was cool.&#8221; I left the field, re-joined it, and I <a href="https://blog.separateconcerns.com/2024-10-16-not-leaving-ai.html">intend to stay in it</a> for now.</p>
+<p>Note that for me working &#8220;on AI&#8221; does not just mean using LLMs through APIs. Typically, it means training and operating models.</p>
+</section>
+<section id="I-want-to-work-hybrid-remote-in-Paris">
+<h2>I want to work hybrid-remote in Paris</h2>
+<p>I believe close-knit teams that meet regularly learn to work better together. I know some people believe this can be achieved fully remotely but I do not. However, I also believe working from home part of the time has benefits including cutting down on commute and better focus.</p>
+<p>This is not a hard red line, I could go with full remote or full in-office under some conditions. My location is though: my life is in Paris, France and I am not considering relocating anywhere.</p>
+</section>
+<section id="Fields-I-avoid-favor">
+<h2>Fields I avoid / favor</h2>
+<p>I <strong>do not</strong> want to work in finance-related fields, including banking and crypto. I would also like to avoid working for HR / recruiting companies.</p>
+<p>Fields that specifically interest me include energy and robotics.</p>
+</section>
+<section id="Management">
+<h2>Management</h2>
+<p>I am highly autonomous and self-directed. <strong>All</strong> my direct managers so far have been the company founders. I can deal with <strong>some</strong> politics, but not much.</p>
+<p>In most cases I prefer being an IC with a <a href="https://blog.separateconcerns.com/2023-02-03-staff-engineer-inch.html">Staff+</a> role. I am fine with having a few skilled IC reports; I do not manage managers.</p>
+</section>
+<section id="Culture">
+<h2>Culture</h2>
+<p>I recognize the necessity of process, but I highly dislike its abuse.</p>
+<p>I think small teams with real ownership work best.</p>
+<p>I think people who <a href="https://blog.separateconcerns.com/2025-08-24-beliefs.html">care</a> can — sometimes should — disagree and argue passionately, and still remain friends.</p>
+</section>
+
+      </div>
+    </content>
+  </entry>
   <entry>
     <title>Beliefs</title>
     <link
