@@ -1,0 +1,17 @@
+# Beliefs
+published 2025-08-24
+
+Since 2017 I have maintained a short list in a file called `BELIEFS.md`. It is somewhat similar to my Software Architecture Principles [1] but for things not directly related to programming. I have decided to move it here.
+
+Because opinions should be (somewhat) weakly held [2] I have updated it from time to time, and I intend to do the same here.
+
+* Caring about one's work over time is the most important thing [3] to be good at your job.
+* Why did the robot do that? [4] will be a very important question in the years to come.
+* Transformative innovations typically come from technologists. They are often introduced against the will of people in positions of power. Their authors initially do not understand the scale of what they are doing.
+* In B2B, knowing the product (its metrics, its users...) and the market has significantly more value than the product itself. (added in 2020)
+* AI will reach its potential when it is embodied. AGI is not necessary for an AI revolution if we get affordable versatile robotics. (added in 2025)
+
+=> https://blog.separateconcerns.com/2019-02-15-architecture-principles.html 1: https://blog.separateconcerns.com/2019-02-15-architecture-principles.html
+=> https://blog.separateconcerns.com/2019-10-19-opinions.html 2: https://blog.separateconcerns.com/2019-10-19-opinions.html
+=> https://twitter.com/Nick_Craver/status/778205276184928256 3: https://twitter.com/Nick_Craver/status/778205276184928256
+=> https://twitter.com/pchapuis/status/806075078274404353 4: https://twitter.com/pchapuis/status/806075078274404353

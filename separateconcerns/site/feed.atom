@@ -10,11 +10,45 @@
     rel="alternate" type="application/xhtml+xml"
   />
   <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
-  <updated>2025-08-21T15:31:20Z</updated>
+  <updated>2025-08-24T13:28:39Z</updated>
   <author>
     <name>Pierre 'catwell' Chapuis</name>
     <uri>https://catwell.info/</uri>
   </author>
+  <entry>
+    <title>Beliefs</title>
+    <link
+      rel="alternate" type="text/html"
+      href="https://blog.separateconcerns.com/2025-08-24-beliefs.html"
+    />
+    <id>tag:blog.separateconcerns.com,2025-08-24:beliefs</id>
+    <published>2025-08-24T15:30:00Z</published>
+    <updated>2025-08-24T15:30:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>Since 2017 I have maintained a short list in a file called <code>BELIEFS.md</code>. It is somewhat similar to my <a href="https://blog.separateconcerns.com/2019-02-15-architecture-principles.html">Software Architecture Principles</a> but for things not directly related to programming. I have decided to move it here.</p>
+<p>Because <a href="https://blog.separateconcerns.com/2019-10-19-opinions.html">opinions should be (somewhat) weakly held</a> I have updated it from time to time, and I intend to do the same here.</p>
+<ul>
+<li>
+<p>Caring about one&#8217;s work over time is <a href="https://twitter.com/Nick_Craver/status/778205276184928256">the most important thing</a> to be good at your job.</p>
+</li>
+<li>
+<p><a href="https://twitter.com/pchapuis/status/806075078274404353">Why did the robot do that?</a> will be a very important question in the years to come.</p>
+</li>
+<li>
+<p>Transformative innovations typically come from technologists. They are often introduced against the will of people in positions of power. Their authors initially do not understand the scale of what they are doing.</p>
+</li>
+<li>
+<p>In B2B, knowing the product (its metrics, its users&#8230;) and the market has significantly more value than the product itself. (added in 2020)</p>
+</li>
+<li>
+<p>AI will reach its potential when it is embodied. AGI is not necessary for an AI revolution if we get affordable versatile robotics. (added in 2025)</p>
+</li>
+</ul>
+
+      </div>
+    </content>
+  </entry>
   <entry>
     <title>Thoughts &amp; Links 12</title>
     <link
