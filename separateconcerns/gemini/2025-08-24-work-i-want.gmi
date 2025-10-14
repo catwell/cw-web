@@ -14,11 +14,11 @@ This means I want to work directly on the product my employer is selling or some
 
 My sweet spot is working on B2B products and interacting directly with customers.
 
-## I want to work on AI
+## I want to work on AI R&D
 
 Historically, my specialty is Distributed Systems, but I happened to work on AI (for Computer Vision) "before it was cool." I left the field, re-joined it, and I intend to stay in it [3] for now.
 
-Note that for me working "on AI" does not just mean using LLMs through APIs. Typically, it means training and operating models.
+Note that this does not just mean using LLMs through APIs. It means training, operating and/or optimizing models. If reading and implementing research papers is not part of the job description, I am not interested.
 
 => https://blog.separateconcerns.com/2024-10-16-not-leaving-ai.html 3: https://blog.separateconcerns.com/2024-10-16-not-leaving-ai.html
 
@@ -32,7 +32,7 @@ This is not a hard red line, I could go with full remote or full in-office under
 
 I do not want to work in finance-related fields, including banking and crypto. I would also like to avoid working for HR / recruiting companies.
 
-Fields that specifically interest me include energy and robotics.
+Fields that specifically interest me include energy and physical automation / robotics. More generally, industrial fields involving non-standard modalities.
 
 ## Management
 
