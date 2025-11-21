@@ -5,7 +5,7 @@ I live in France, I work on AI, and I am worried.
 
 I believe that technical progress is inexorable in a globalized world. If a scientist makes a discovery and does not disclose it, another will make the same one within a few years. If a company forgoes a major innovation it will be disrupted by competitors that adopt it.
 
-This makes research and innovation a zero-sum game. You do not have the option of stopping the flow of progress, you can only decide to be an innovator, an early adopter or a laggard.
+This makes research and innovation a game — in the game theory sense — in which not participating is not an option. You cannot stop the flow of progress, you can only decide to be an innovator, an early adopter or a laggard. You either lead or you endure.
 
 Whether you like it or not the current AI wave will cause seismic changes. It is time to revisit 1970s science fiction because we are about to live in those worlds. And by their nature, some of these advances are likely to be winner-take-all.
 
