@@ -10,11 +10,34 @@
     rel="alternate" type="application/xhtml+xml"
   />
   <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
-  <updated>2025-08-24T14:05:58Z</updated>
+  <updated>2025-11-21T08:50:26Z</updated>
   <author>
     <name>Pierre 'catwell' Chapuis</name>
     <uri>https://catwell.info/</uri>
   </author>
+  <entry>
+    <title>Inexorable Progress</title>
+    <link
+      rel="alternate" type="text/html"
+      href="https://blog.separateconcerns.com/2025-11-21-inexorable-progress.html"
+    />
+    <id>tag:blog.separateconcerns.com,2025-11-21:inexorable-progress</id>
+    <published>2025-11-21T09:40:00Z</published>
+    <updated>2025-11-21T09:40:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>I live in France, I work on AI, and I am worried.</p>
+<p>I believe that technical progress is inexorable in a globalized world. If a scientist makes a discovery and does not disclose it, another will make the same one within a few years. If a company forgoes a major innovation it will be disrupted by competitors that adopt it.</p>
+<p>This makes research and innovation a zero-sum game. You do not have the option of stopping the flow of progress, you can only decide to be an innovator, an early adopter or a laggard.</p>
+<p>Whether you like it or not the current AI wave will cause seismic changes. It is time to revisit 1970s science fiction because we are about to live in those worlds. And by their nature, some of these advances are likely to be winner-take-all.</p>
+<p>Dropping out of the race for ethical or social reasons is short-sighted. It is very likely that <strong>whether the end result is good or not</strong> the first to reach these milestones will benefit immensely and strengthen their ability to influence the future. If you slow down, you are simply letting those who do not care about these issues in the first place win.</p>
+<p>The French political leadership and that of Europe have a well-known track record of hindering innovation through regulation. We are the poster child for the precautionary principle. In addition to that, we currently face political unrest and our public opinion is easily swayed against anything new or successful.</p>
+<p>The EU Commission has apparently noticed the problem. They are <a href="https://ec.europa.eu/commission/presscorner/detail/en/ip_25_2718">doing things</a>, but it is too little too late. At the current pace, the goal should not be to let our industry do the things the US and China were doing five years ago.</p>
+<p>I live in France, I work on AI, and I am worried. Maybe you should be too.</p>
+
+      </div>
+    </content>
+  </entry>
   <entry>
     <title>What kind of work I want</title>
     <link
