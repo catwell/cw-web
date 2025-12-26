@@ -149,7 +149,7 @@ local function process_file(path)
         udate:toUTC()
     end
     local fragment = fnpart:sub(12)
-    assert(fmt("%s-%s", sdate, fragment) == fnpart)
+    assert(fmt("%s-%s", sdate, fragment) == fnpart, "mismatching dates")
     local entry = {
         title = metadata.title:gsub("&", "&amp;"),
         raw_title = metadata.title,

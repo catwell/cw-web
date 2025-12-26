@@ -10,11 +10,82 @@
     rel="alternate" type="application/xhtml+xml"
   />
   <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
-  <updated>2025-12-26T11:26:03Z</updated>
+  <updated>2025-12-26T14:21:20Z</updated>
   <author>
     <name>Pierre 'catwell' Chapuis</name>
     <uri>https://catwell.info/</uri>
   </author>
+  <entry>
+    <title>Thoughts &amp; Links 13</title>
+    <link
+      rel="alternate" type="text/html"
+      href="https://blog.separateconcerns.com/2025-12-26-thoughts-13.html"
+    />
+    <id>tag:blog.separateconcerns.com,2025-12-26:thoughts-13</id>
+    <published>2025-12-26T15:20:00Z</published>
+    <updated>2025-12-26T15:20:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <blockquote>
+<p>&#8220;Thoughts &amp; Links&#8221; are posts mixing topics on my mind and interesting things I have read recently. Less thought out than regular posts.</p>
+</blockquote>
+<section id="Examples-are-the-best-documentation">
+<h2><a href="https://rakhim.exotext.com/examples-are-the-best-documentation">Examples are the best documentation</a></h2>
+<p>This was true before, and this is even more true for the coding agents era.</p>
+</section>
+<section id="AI-coding-agents-rely-too-much-on-fallbacks">
+<h2><a href="https://www.seangoedecke.com/agents-and-fallbacks/">AI coding agents rely too much on fallbacks</a></h2>
+<p>I think agents are improving on that front, and Claude does it less than the others, but I still instruct them to fail early and loud and pay attention to this in reviews.</p>
+</section>
+<section id="Start-Small-Scale-Smart:-The-Real-Value-of-Incremental-Architecture">
+<h2><a href="https://newsletter.optimistengineer.com/p/incremental-architecture-what-you">Start Small, Scale Smart: The Real Value of Incremental Architecture</a></h2>
+<p>Some things in this post match my <a href="https://blog.separateconcerns.com/2019-02-15-architecture-principles.html">architecture principles</a>.</p>
+<p>To scale efficiently, you need cross-functional, independent teams with <a href="https://blog.separateconcerns.com/2013-03-24-vogels-skills.html">ownership</a>. This is applied Gall&#8217;s Law.</p>
+<p>Shorten feedback loops.</p>
+<blockquote>
+<p>Instead of asking: &#8220;how long will this take?&#8221;, ask: &#8220;Can we make this smaller?&#8221;</p>
+</blockquote>
+</section>
+<section id="Werner-Vogel's-predictions-for-2026-and-beyond">
+<h2><a href="https://www.allthingsdistributed.com/2025/11/tech-predictions-for-2026-and-beyond.html">Werner Vogel&#8217;s predictions for 2026 and beyond</a></h2>
+<blockquote>
+<p>For adults, AI is a tool. For Generation Alpha, it’s an extension of thinking. They’ve deleted “impossible” from their operating system and replaced it with “not yet.”</p>
+</blockquote>
+</section>
+<section id="Tarek-Ziade-on-Two-Years-of-Building-AI-in-Firefox">
+<h2><a href="https://blog.ziade.org/2025/12/05/two-years-of-ai-at-mozilla/">Tarek Ziade on Two Years of Building AI in Firefox</a></h2>
+<p>Mozilla is still doing some interesting things. I will follow this with attention, especially the <a href="https://www.w3.org/TR/webnn/">WebNN</a> part which is relevant to <a href="https://finegrain.ai">my work</a>. I only work on native on-device AI for now, but we will probably tackle the browser as well at some point.</p>
+</section>
+<section id="Geoffrey-Litt's-articles">
+<h2><a href="https://www.geoffreylitt.com/#writing">Geoffrey Litt&#8217;s articles</a></h2>
+<p>Found through <a href="https://pierrezemb.fr/posts/2025-year-in-review/">Pierre&#8217;s 2025 recap</a>. I don&#8217;t know how I did not follow his feed until now, I follow most current &amp; former <a href="https://www.inkandswitch.com">Ink &amp; Switch</a> people. Catching up with three articles.</p>
+<section id="The-Nightmare-Bicycle">
+<h3><a href="https://www.geoffreylitt.com/2025/03/03/the-nightmare-bicycle.html">The Nightmare Bicycle</a></h3>
+<blockquote>
+<p>Good designs expose systematic structure; they lean on their users’ ability to understand this structure and apply it to new situations. We were born for this.
+Bad designs paper over the structure with superficial labels that hide the underlying system, inhibiting their users’ ability to actually build a clear model in their heads.</p>
+</blockquote>
+<p>This is a twist on <a href="https://blog.separateconcerns.com/2014-04-25-design-alan-kay.html">that idea by Alan Kay</a> that I have long supported. I like that way to present it. I think it plagues many modern products. AI could change this for better or worse; I hope for better but fear we&#8217;ll get worse&#8230;</p>
+</section>
+<section id="AI-as-teleportation">
+<h3><a href="https://www.geoffreylitt.com/2025/09/10/ai-as-teleportation.html">AI as teleportation</a></h3>
+<blockquote>
+<p>As AI makes a lot of things easier, it’ll be interesting to ponder what kinds of new frictions we’ll want to intentionally add to our lives.</p>
+</blockquote>
+<p>A thought experiment about the effects AI will have on society. I ponder this often these days, regarding robots as well. I like that Geoffrey does not frame that as &#8220;progress will have bad side effects so we should stop it at all costs&#8221;, but instead more as &#8220;progress will happen, it will be better in a lot of ways, but we should think about how to offset the parts that will be worse.&#8221;</p>
+</section>
+<section id="Code-like-a-surgeon">
+<h3><a href="https://www.geoffreylitt.com/2025/10/24/code-like-a-surgeon.html">Code like a surgeon</a></h3>
+<blockquote>
+<p>My current goal with AI coding tools is to spend 100% of my time doing stuff that matters. [&#8230;] When I sit down for a work session, I want to feel like a surgeon walking into a prepped operating room. Everything is ready for me to do what I’m good at.</p>
+</blockquote>
+<p>A good metaphor for one approach to using coding agents efficiently, which is the one I am aiming for as well.</p>
+</section>
+</section>
+
+      </div>
+    </content>
+  </entry>
   <entry>
     <title>How I use AI coding tools (in winter 2025)</title>
     <link

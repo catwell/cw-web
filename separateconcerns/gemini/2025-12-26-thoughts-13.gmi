@@ -1,0 +1,72 @@
+# Thoughts & Links 13
+published 2025-12-26
+
+> "Thoughts & Links" are posts mixing topics on my mind and interesting things I have read recently. Less thought out than regular posts.
+
+## Examples are the best documentation
+=> https://rakhim.exotext.com/examples-are-the-best-documentation
+
+This was true before, and this is even more true for the coding agents era.
+
+## AI coding agents rely too much on fallbacks
+=> https://www.seangoedecke.com/agents-and-fallbacks/
+
+I think agents are improving on that front, and Claude does it less than the others, but I still instruct them to fail early and loud and pay attention to this in reviews.
+
+## Start Small, Scale Smart: The Real Value of Incremental Architecture
+=> https://newsletter.optimistengineer.com/p/incremental-architecture-what-you
+
+Some things in this post match my architecture principles [1].
+
+To scale efficiently, you need cross-functional, independent teams with ownership [2]. This is applied Gall's Law.
+
+Shorten feedback loops.
+
+> Instead of asking: "how long will this take?", ask: "Can we make this smaller?"
+
+=> https://blog.separateconcerns.com/2019-02-15-architecture-principles.html 1: https://blog.separateconcerns.com/2019-02-15-architecture-principles.html
+=> https://blog.separateconcerns.com/2013-03-24-vogels-skills.html 2: https://blog.separateconcerns.com/2013-03-24-vogels-skills.html
+
+## Werner Vogel's predictions for 2026 and beyond
+=> https://www.allthingsdistributed.com/2025/11/tech-predictions-for-2026-and-beyond.html
+
+> For adults, AI is a tool. For Generation Alpha, it’s an extension of thinking. They’ve deleted “impossible” from their operating system and replaced it with “not yet.”
+
+## Tarek Ziade on Two Years of Building AI in Firefox
+=> https://blog.ziade.org/2025/12/05/two-years-of-ai-at-mozilla/
+
+Mozilla is still doing some interesting things. I will follow this with attention, especially the WebNN [3] part which is relevant to my work [4]. I only work on native on-device AI for now, but we will probably tackle the browser as well at some point.
+
+=> https://www.w3.org/TR/webnn/ 3: https://www.w3.org/TR/webnn/
+=> https://finegrain.ai 4: https://finegrain.ai
+
+## Geoffrey Litt's articles
+=> https://www.geoffreylitt.com/#writing
+
+Found through Pierre's 2025 recap [5]. I don't know how I did not follow his feed until now, I follow most current & former Ink & Switch [6] people. Catching up with three articles.
+
+=> https://pierrezemb.fr/posts/2025-year-in-review/ 5: https://pierrezemb.fr/posts/2025-year-in-review/
+=> https://www.inkandswitch.com 6: https://www.inkandswitch.com
+
+### The Nightmare Bicycle
+=> https://www.geoffreylitt.com/2025/03/03/the-nightmare-bicycle.html
+
+> Good designs expose systematic structure; they lean on their users’ ability to understand this structure and apply it to new situations. We were born for this. Bad designs paper over the structure with superficial labels that hide the underlying system, inhibiting their users’ ability to actually build a clear model in their heads.
+
+This is a twist on that idea by Alan Kay [7] that I have long supported. I like that way to present it. I think it plagues many modern products. AI could change this for better or worse; I hope for better but fear we'll get worse...
+
+=> https://blog.separateconcerns.com/2014-04-25-design-alan-kay.html 7: https://blog.separateconcerns.com/2014-04-25-design-alan-kay.html
+
+### AI as teleportation
+=> https://www.geoffreylitt.com/2025/09/10/ai-as-teleportation.html
+
+> As AI makes a lot of things easier, it’ll be interesting to ponder what kinds of new frictions we’ll want to intentionally add to our lives.
+
+A thought experiment about the effects AI will have on society. I ponder this often these days, regarding robots as well. I like that Geoffrey does not frame that as "progress will have bad side effects so we should stop it at all costs", but instead more as "progress will happen, it will be better in a lot of ways, but we should think about how to offset the parts that will be worse."
+
+### Code like a surgeon
+=> https://www.geoffreylitt.com/2025/10/24/code-like-a-surgeon.html
+
+> My current goal with AI coding tools is to spend 100% of my time doing stuff that matters. [...] When I sit down for a work session, I want to feel like a surgeon walking into a prepped operating room. Everything is ready for me to do what I’m good at.
+
+A good metaphor for one approach to using coding agents efficiently, which is the one I am aiming for as well.
