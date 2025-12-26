@@ -10,11 +10,31 @@
     rel="alternate" type="application/xhtml+xml"
   />
   <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
-  <updated>2025-11-21T11:08:42Z</updated>
+  <updated>2025-12-26T11:26:03Z</updated>
   <author>
     <name>Pierre 'catwell' Chapuis</name>
     <uri>https://catwell.info/</uri>
   </author>
+  <entry>
+    <title>How I use AI coding tools (in winter 2025)</title>
+    <link
+      rel="alternate" type="text/html"
+      href="https://blog.separateconcerns.com/2025-12-26-ai-tools-winter-2025.html"
+    />
+    <id>tag:blog.separateconcerns.com,2025-12-26:ai-tools-winter-2025</id>
+    <published>2025-12-26T12:25:00Z</published>
+    <updated>2025-12-26T12:25:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>Yes, I have <a href="https://blog.separateconcerns.com/2025-08-08-ai-tools.html">written about this</a> recently, but it has changed so much that it warrants an update.</p>
+<p>In the meantime we have tried Codex (5.1) for a few months at work. I did not like it, mostly because it is much slower than Claude. We finally went back to Claude Code and Opus 4.5 last month, and this is night and day. I am doing <strong>almost everything</strong> in Claude Code; there are days I don&#8217;t even write a single line in my text editor.</p>
+<p>This configuration is basically as good as a mid-level developer, except it does what would take said developer hours in minutes. This means you can give it a task and immediately verify the outcome, then tell it what to improve without switching context and losing your mental model. Once you have figured out how to prompt it efficiently, it becomes a productivity monster. Its usefulness still depends on the task, but I have done things in half a day that I would have estimated to take at least a week without an agent.</p>
+<p>For personal projects, I use <a href="https://ampcode.com/free">Amp Free</a> — which is excellent as well — but I still write most code myself due to the nature of the projects themselves.</p>
+<p>I am very happy with Claude Code and do not intend to test other coding agents, except maybe Gemini if we get access to it on our plans. I am also curious how good <a href="https://z.ai/blog/glm-4.7">GLM 4.7 in Claude Code</a> would be if I needed a cheaper option. But for now, spending up to $200 / month for such a productivity boost is clearly a no-brainer. Finally, I will probably give <a href="https://github.com/steveyegge/beads">beads</a> a try one of those days, I can certainly see how it could help Claude with some tasks.</p>
+
+      </div>
+    </content>
+  </entry>
   <entry>
     <title>Inexorable Progress</title>
     <link

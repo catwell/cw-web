@@ -1,0 +1,15 @@
+```=lua-meta
+title = "How I use AI coding tools (in winter 2025)"
+published = "2025-12-26 12:25:00"
+description = "Claude Code all the things."
+```
+
+Yes, I have [written about this](https://blog.separateconcerns.com/2025-08-08-ai-tools.html) recently, but it has changed so much that it warrants an update.
+
+In the meantime we have tried Codex (5.1) for a few months at work. I did not like it, mostly because it is much slower than Claude. We finally went back to Claude Code and Opus 4.5 last month, and this is night and day. I am doing *almost everything* in Claude Code; there are days I don't even write a single line in my text editor.
+
+This configuration is basically as good as a mid-level developer, except it does what would take said developer hours in minutes. This means you can give it a task and immediately verify the outcome, then tell it what to improve without switching context and losing your mental model. Once you have figured out how to prompt it efficiently, it becomes a productivity monster. Its usefulness still depends on the task, but I have done things in half a day that I would have estimated to take at least a week without an agent.
+
+For personal projects, I use [Amp Free](https://ampcode.com/free) — which is excellent as well — but I still write most code myself due to the nature of the projects themselves.
+
+I am very happy with Claude Code and do not intend to test other coding agents, except maybe Gemini if we get access to it on our plans. I am also curious how good [GLM 4.7 in Claude Code](https://z.ai/blog/glm-4.7) would be if I needed a cheaper option. But for now, spending up to $200 / month for such a productivity boost is clearly a no-brainer. Finally, I will probably give [beads](https://github.com/steveyegge/beads) a try one of those days, I can certainly see how it could help Claude with some tasks.
