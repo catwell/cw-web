@@ -8,4 +8,4 @@ sh localua.sh .lua
 ./.lua/bin/luarocks install djot
 ./.lua/bin/luarocks install lustache
 ./.lua/bin/luarocks install penlight
-
+./.lua/bin/luarocks install tl

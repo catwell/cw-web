@@ -1,3 +1,8 @@
+local type Node = require("djot").Node
+local type HtmlRenderer = require("djot.html").Renderer
+
+local type HtmlRenderMethod = function(HtmlRenderer, Node)
+
 local djot = require "cwdjot"
 local lustache = require "lustache"
 local pathx = require "pl.path"
@@ -13,7 +18,7 @@ local TMP_DIR = ".."
 
 local fmt = string.format
 
-local function file_read(fn)
+local function file_read(fn: string): string
     local f = io.open(fn, "rb")
     if not f then return nil end
     local data = f:read("*all")
@@ -21,53 +26,63 @@ local function file_read(fn)
     return data
 end
 
-local function file_write(fn, data)
+local function file_write(fn: string, data: string)
     local f = assert(io.open(fn, "wb"))
     f:write(data)
     f:close()
 end
 
-local function parse_date(s)
+local function parse_date(s: string): Date
     return Date.Format("yyyy-mm-dd HH:MM:SS"):parse(s)
 end
 
-local function date_to_atom(date)
+local function date_to_atom(date: Date): string
     return Date.Format("yyyy-mm-ddTHH:MM:SSZ"):tostring(date) .. "Z"
 end
 
 ---
 
-local function article_to_html_chunk(md)
+local record Metadata
+    title: string
+    description: string
+    published: string
+    updated: string
+    has_code: boolean
+    links: {string}
+    skip: boolean
+end
+
+local function article_to_html_chunk(md: string): string, Metadata
     local input = djot.parse(md)
     local handle = djot.StringHandle.new()
-    local renderer = djot.html.Renderer:new()
-    local metadata = {links = {}}
+    local renderer: HtmlRenderer = djot.html.Renderer:new()
+    local metadata: Metadata = {links = {}}
 
     djot.override_renderer_method(
-        renderer, "raw_block", function(self, node, old)
+        renderer, "raw_block", function(self: HtmlRenderer, node: Node, old: HtmlRenderMethod)
             if node.format == "lua-meta" then
-                load(node.s, nil, "t", metadata)()
+                load(node.s, nil, "t", metadata as table)()
             end
             old(self, node)
         end
     )
 
     djot.override_renderer_method(
-        renderer, "verbatim", function(self, node, old)
+        renderer, "verbatim", function(self: HtmlRenderer, node: Node, old: HtmlRenderMethod)
             metadata.has_code = true
             old(self, node)
         end
     )
 
     djot.override_renderer_method(
-        renderer, "code_block", function(self, node, old)
+        renderer, "code_block", function(self: HtmlRenderer, node: Node, old: HtmlRenderMethod)
             metadata.has_code = true
             old(self, node)
         end
     )
 
     djot.override_renderer_method(
-        renderer, "link", function(self, node, old)
+        renderer, "link", function(self: HtmlRenderer, node: Node, old: HtmlRenderMethod)
             if node.destination then
                 table.insert(metadata.links, node.destination)
             end
@@ -78,7 +93,7 @@ local function article_to_html_chunk(md)
     -- Hacks to close tags for Atom validity
 
     djot.override_renderer_method(
-        renderer, "image", function(self, node, old)
+        renderer, "image", function(self: HtmlRenderer, node: Node, old: HtmlRenderMethod)
             old(self, node)
             assert(handle:pop() == ">")
             self.out("/>")
@@ -86,7 +101,7 @@ local function article_to_html_chunk(md)
     )
 
     djot.override_renderer_method(
-        renderer, "thematic_break", function(self, node, old)
+        renderer, "thematic_break", function(self: HtmlRenderer, _node: Node, _old: HtmlRenderMethod)
             self.out("<hr/>\n")
         end
     )
@@ -96,15 +111,21 @@ local function article_to_html_chunk(md)
     return html, metadata
 end
 
-local function article_to_gemtext(md)
+local function article_to_gemtext(md: string): string
     local input = djot.parse(md)
     local handle = djot.StringHandle.new()
-    local renderer = djot.gemini.Renderer:new()
+    local renderer = djot.gemini.Renderer.new()
     renderer:render(input, handle)
     return handle:flush()
 end
 
-local function parse_entry(fname)
+local record ParsedEntry
+    html: string
+    gemtext: string
+    metadata: Metadata
+end
+
+local function parse_entry(fname: string): ParsedEntry
     local md = assert(file_read(fname))
     local html, metadata = article_to_html_chunk(md)
     local gemtext = article_to_gemtext(md)
@@ -117,8 +138,8 @@ local function parse_entry(fname)
     }
 end
 
-local function clean_for_atom(s)
-    local subst = {
+local function clean_for_atom(s: string): string
+    local subst: {string: string} = {
         ["&ldquo;"] = "&#8220;",
         ["&rdquo;"] = "&#8221;",
         ["&lsquo;"] = "&#8216;",
@@ -133,7 +154,29 @@ local function clean_for_atom(s)
     return s
 end
 
-local function process_file(path)
+local record AtomData
+    published: string
+    updated: string
+    fragment: string
+    content: string
+end
+
+local record Entry
+    title: string
+    raw_title: string
+    url: string
+    content: string
+    gemtext: string
+    shortdate: string
+    updated: string
+    has_code: boolean
+    description: string
+    fnpart: string
+    links: {string}
+    atom: AtomData
+end
+
+local function process_file(path: string): Entry
     local fnpart = pathx.splitext(pathx.basename(path))
     print(fnpart)
     local fname = fmt("articles/%s.dj", fnpart)
@@ -150,7 +193,7 @@ local function process_file(path)
     end
     local fragment = fnpart:sub(12)
     assert(fmt("%s-%s", sdate, fragment) == fnpart, "mismatching dates")
-    local entry = {
+    local entry: Entry = {
         title = metadata.title:gsub("&", "&amp;"),
         raw_title = metadata.title,
         url = url,
@@ -179,10 +222,15 @@ local function process_file(path)
     end
 end
 
+local record FeedData
+    updated: string
+    entries: {Entry}
+end
+
 local function process_all()
     local files = dirx.getallfiles("articles", "*.dj")
-    table.sort(files, function(x, y) return x > y end) -- newest first
-    local entries = {}
+    table.sort(files, function(x: string, y: string): boolean return x > y end) -- newest first
+    local entries: {Entry} = {}
     for i = 1, #files do
         local entry = process_file(files[i])
         if entry then table.insert(entries, entry) end
@@ -194,25 +242,21 @@ local function process_all()
         file_write(fmt("%s/%s.html", SITE_DIR, entry.fnpart), html)
         file_write(fmt("%s/%s.gmi", GEMINI_DIR, entry.fnpart), gemini)
     end
-    local atom = lustache:render(TPL.atom_feed, {
+    local feed_data: FeedData = {
         updated = os.date("!%Y-%m-%dT%H:%M:%SZ", os.time()),
         entries = entries,
-    })
+    }
+    local atom = lustache:render(TPL.atom_feed, feed_data)
     file_write(fmt("%s/feed.atom", SITE_DIR), atom)
 
-    local index = lustache:render(TPL.html_index, {
-        updated = os.date("!%Y-%m-%dT%H:%M:%SZ", os.time()),
-        entries = entries,
-    })
+    local index = lustache:render(TPL.html_index, feed_data)
     file_write(fmt("%s/index.html", SITE_DIR), index)
 
-    local gemini_index = lustache:render(TPL.gemini_index, {
-        updated = os.date("!%Y-%m-%dT%H:%M:%SZ", os.time()),
-        entries = entries,
-    })
+    local gemini_index = lustache:render(TPL.gemini_index, feed_data)
     file_write(fmt("%s/index.gmi", GEMINI_DIR), gemini_index)
 
-    local links_index = lustache:render(TPL.links_index, {entries = entries})
+    local links_data: FeedData = {entries = entries}
+    local links_index = lustache:render(TPL.links_index, links_data)
     file_write(fmt("%s/links.html", TMP_DIR), links_index)
 end
 

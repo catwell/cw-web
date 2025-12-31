@@ -1,4 +1,13 @@
-local TPL = {}
+local record Templates
+    html_post: string
+    html_index: string
+    atom_feed: string
+    gemini_post: string
+    gemini_index: string
+    links_index: string
+end
+
+local TPL: Templates = {}
 
 TPL.html_post = [[
 <!DOCTYPE html>
