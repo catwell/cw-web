@@ -1,24 +1,52 @@
+local type djot = require "djot"
+local type Node = djot.Node
+local type IHandle = djot.IHandle
+local type IRenderer = djot.IRenderer
+
 local fmt = string.format
 
-local function is_deep(node)
+local function is_deep(node: Node): boolean
     return (node.c and #node.c > 0)
 end
 
-local Renderer = {}
-Renderer.__index = Renderer
-
-function Renderer.new()
-    local state = {
-        newlines = nil,
-        quote_context = false,
-        links = { ref = 0 },
-    }
-    setmetatable(state, Renderer)
-    return state
+local record Link
+    label: string
+    url: string
+    written: boolean
+    ref: integer
 end
 
-function Renderer:adjust_newlines(n)
-    if self.newlines == nil then
+local record Links
+    {Link}
+    ref: integer
+end
+
+local record M
+    record Renderer is IRenderer
+        newlines: integer
+        quote_context: boolean
+        links: Links
+
+        new: function(): Renderer
+        adjust_newlines: function(Renderer, integer)
+        render_children: function(Renderer, Node)
+        as_text: function(Renderer, Node): string
+        dump_links: function(Renderer)
+    end
+end
+
+local Renderer = M.Renderer
+local Renderer_mt: metatable<Renderer> = { __index = Renderer }
+
+function Renderer.new(): Renderer
+    return setmetatable({
+        quote_context = false,
+        links = { ref = 0 },
+    }, Renderer_mt)
+end
+
+function Renderer:adjust_newlines(n: integer)
+    if not self.newlines then
         return -- start of document, special case
     end
 
@@ -35,9 +63,9 @@ function Renderer:adjust_newlines(n)
     end
 end
 
-function Renderer:render(doc, handle)
+function Renderer:render(doc: Node, handle: IHandle)
     assert(handle)
-    self.out = function(s)
+    self.out = function(s: string)
         if s:sub(-1) == "\n" then
             for i = #s, 1, -1 do
                 if s:sub(i) ~= "\n" then break end
@@ -48,16 +76,18 @@ function Renderer:render(doc, handle)
         end
         handle:write(s)
     end
-    self[doc.t](self, doc)
+    local method = assert(self[doc.t], fmt("Gemini renderer does not support %s", doc.t))
+    method(self, doc)
 end
 
 
-function Renderer:render_children(node)
+function Renderer:render_children(node: Node)
     if is_deep(node) then
         for i = 1 , #node.c do
             local subnode = node.c[i]
-            if self[subnode.t] then
-                self[subnode.t](self, node.c[i])
+            local render_method = self[subnode.t]
+            if render_method then
+                render_method(self, node.c[i])
             elseif subnode.c and #subnode.c > 0 then
                 self:render_children(subnode)
             else
@@ -67,10 +97,11 @@ function Renderer:render_children(node)
     end
 end
 
-function Renderer:as_text(node)
+function Renderer:as_text(node: Node): string
     if not is_deep(node) then return node.s end
-    local old_out, accum = self.out, {}
-    self.out = function(s) table.insert(accum, s) end
+    local old_out = self.out
+    local accum: {string} = {}
+    self.out = function(s: string) table.insert(accum, s) end
     self:render_children(node)
     self.out = old_out
     return table.concat(accum)
@@ -91,21 +122,21 @@ function Renderer:dump_links()
     end
 end
 
-function Renderer:doc(node)
+function Renderer:doc(node: Node)
     self:render_children(node)
     self:dump_links() -- also called in heading
 end
 
-function Renderer:raw_block()
-    assert(self) -- skip
+function Renderer:raw_block(_node: Node)
+    -- skip
 end
 
-function Renderer:para(node)
+function Renderer:para(node: Node)
     self:adjust_newlines(2)
     self:render_children(node)
 end
 
-function Renderer:blockquote(node)
+function Renderer:blockquote(node: Node)
     -- We rely on newline handling to add the angle brackets.
     self:adjust_newlines(2)
     self.out("> ")
@@ -115,12 +146,13 @@ function Renderer:blockquote(node)
     self.quote_context = false
 end
 
-function Renderer:heading(node)
+function Renderer:heading(node: Node)
     self:adjust_newlines(2)
     self:dump_links()
     self:adjust_newlines(2)
 
-    local label, link
+    local label: string
+    local link: string
     if is_deep(node) then
         for _, subnode in ipairs(node.c) do
             if subnode.t == "link" then
@@ -129,7 +161,7 @@ function Renderer:heading(node)
             end
         end
         if link then
-            local label_t = {}
+            local label_t: {string} = {}
             for i = 1, #node.c do
                 label_t[i] = self:as_text(node.c[i])
             end
@@ -148,18 +180,18 @@ function Renderer:heading(node)
     end
 end
 
-function Renderer:thematic_break()
+function Renderer:thematic_break(_node: Node)
     self:adjust_newlines(3)
 end
 
-function Renderer:code_block(node)
+function Renderer:code_block(node: Node)
     self:adjust_newlines(2)
     self.out("```\n")
     self.out(node.s)
     self.out("\n```")
 end
 
-function Renderer:list(node)
+function Renderer:list(node: Node)
     assert(is_deep(node))
     self:adjust_newlines(2)
     for i = 1, #node.c do
@@ -172,25 +204,25 @@ function Renderer:list(node)
     end
 end
 
-function Renderer:softbreak()
+function Renderer:softbreak(_node: Node)
     self.out(" ")
 end
 
-function Renderer:hardbreak()
+function Renderer:hardbreak(_node: Node)
     self.out("\n")
 end
 
-function Renderer:nbsp()
+function Renderer:nbsp(_node: Node)
     self.out("\160")
 end
 
-function Renderer:verbatim(node)
+function Renderer:verbatim(node: Node)
     self.out("`")
     self.out(node.s)
     self.out("`")
 end
 
-function Renderer:link(node)
+function Renderer:link(node: Node)
     assert(node.destination)
     local label = self:as_text(node)
     local link_id = #self.links + 1
@@ -202,22 +234,22 @@ function Renderer:link(node)
     self.out("]")
 end
 
-function Renderer:image(node)
+function Renderer:image(node: Node)
     assert(node.destination)
     local label = self:as_text(node)
     self.out(fmt("=> %s %s", node.destination, label))
 end
 
-function Renderer:double_quoted(node)
+function Renderer:double_quoted(node: Node)
     self.out('"')
     self:render_children(node)
     self.out('"')
 end
 
-function Renderer:single_quoted(node)
+function Renderer:single_quoted(node: Node)
     self.out("'")
     self:render_children(node)
     self.out("'")
 end
 
-return { Renderer = Renderer }
+return M

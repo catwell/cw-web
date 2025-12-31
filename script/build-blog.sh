@@ -2,8 +2,8 @@
 
 cd "$(dirname "$0")/.."
 
-_lua="$(pwd)/.lua/bin/lua"
+_tl="$(pwd)/.lua/bin/tl"
 
 pushd "separateconcerns/blog"
-    "$_lua" generate.lua
+    "$_tl" run generate.tl
 popd
