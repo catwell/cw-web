@@ -91,7 +91,12 @@ TPL.html_index = [[
       </li>
       {{/entries}}
     </ol>
-    {{{content}}}
+    <div class="legal">
+      <p>
+        Published by <a href="https://catwell.info">Pierre Chapuis</a>, hosted by <a href="https://www.vultr.com/">Vultr</a>.
+        <a href="https://www.goatcounter.com">GoatCounter</a> for privacy-aware analytics; no other third-party.
+      </p>
+    </div>
     </div>
     <script
       data-goatcounter="https://separateconcerns.goatcounter.com/count"

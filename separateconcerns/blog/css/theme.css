@@ -128,6 +128,17 @@ strong {
   padding-top: 1rem;
 }
 
+.legal {
+  color: #d3d3d3;
+  font-size: 0.9rem;
+  font-weight: normal;
+  margin-top: 2rem;
+}
+
+.legal a {
+    color: #a9a9a9;
+}
+
 ul {
   padding-left: 1rem;
   margin-bottom: 1rem;

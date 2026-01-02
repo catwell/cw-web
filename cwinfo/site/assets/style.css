@@ -28,6 +28,14 @@ h1 {
   margin-bottom: 1rem;
 }
 
+h2 {
+  font-family: Helvetica, sans-serif;
+  color: #333333;
+  font-size: 1.3rem;
+  font-weight: normal;
+  margin-bottom: 1rem;
+}
+
 p {
   margin-bottom: 1rem;
 }
