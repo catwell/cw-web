@@ -5,6 +5,7 @@
 => https://blog.separateconcerns.com Visit on the Web
 => gemini://catwell.info catwell.info
 
+=> 2026-02-05-fosdem-2026.gmi 2026-02-05 - FOSDEM 2026
 => 2025-12-26-thoughts-13.gmi 2025-12-26 - Thoughts & Links 13
 => 2025-12-26-ai-tools-winter-2025.gmi 2025-12-26 - How I use AI coding tools (in winter 2025)
 => 2025-11-21-inexorable-progress.gmi 2025-11-21 - Inexorable Progress

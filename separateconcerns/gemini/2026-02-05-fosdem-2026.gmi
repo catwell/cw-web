@@ -1,0 +1,65 @@
+# FOSDEM 2026
+published 2026-02-05
+
+It's been that time of the year, again [1]. No Denis [2] and no Hisham [3] this time, but I still got to spend time with other FOSDEM regulars Gawen [4], Benoît [5], and Thijs [6]. I also met Corentin [7], Sylvain [8] and Mehdi [9], and got introduced to Hugo [10].
+
+Here is a list of talks I saw:
+
+* Evolving Git for the next decade [11] - Patrick Steinhardt
+* Bringing up bare metal ExecuTorch on RISC-V [12] - 4 speakers
+* WebNN and WebLLM on RISC-V with RVV and Tenstorrent [13] - Yuning Liang, Petr Penzin
+* Messages: how a French government agency broke free of IMAP [14] - Sylvain Zimmer
+* A practical introduction to the ET platform. [15] - Gianluca Guida
+* Zero to matmul with the ET-SoC-1 [16] - Peter Cawley
+* Zero-sysroot hermetic LLVM cross-compilation using Bazel [17] - Corentin Kerisit, David Zbarsky
+* Crystal: A language for humans and computers [18] - Johannes Müller
+* Building a minimal cross-platform terminal UI library [19] - Thijs Schreijer
+* Relying on more transparent & trustworthy sources for Arch Linux packages [20] - Robin Candau
+* Ty: Adventures of type-checking Python in Rust [21] - Shaygan Hooshyari
+* Lightning lightning talks 2 [22]
+* Open Source Security in spite of AI [23] - Daniel Stenberg
+
+=> https://blog.separateconcerns.com/2025-02-02-fosdem-2025.html 1: https://blog.separateconcerns.com/2025-02-02-fosdem-2025.html
+=> https://blog.zwindler.fr 2: https://blog.zwindler.fr
+=> https://hisham.hm 3: https://hisham.hm
+=> https://github.com/gawen 4: https://github.com/gawen
+=> https://github.com/benoitc 5: https://github.com/benoitc
+=> https://github.com/tieske 6: https://github.com/tieske
+=> https://www.linkedin.com/in/corentinkerisit/ 7: https://www.linkedin.com/in/corentinkerisit/
+=> https://sylvainzimmer.com 8: https://sylvainzimmer.com
+=> https://www.linkedin.com/in/mehdimedjaoui/ 9: https://www.linkedin.com/in/mehdimedjaoui/
+=> https://www.linkedin.com/in/hugo-le-picard-phd-693b4117a/ 10: https://www.linkedin.com/in/hugo-le-picard-phd-693b4117a/
+=> https://fosdem.org/2026/schedule/event/HTJK33-evolving_git_for_the_next_decade/ 11: https://fosdem.org/2026/schedule/event/HTJK33-evolving_git_for_the_next_decade/
+=> https://fosdem.org/2026/schedule/event/Z3TEMS-executorch-for-bare-metal-microcontrollers/ 12: https://fosdem.org/2026/schedule/event/Z3TEMS-executorch-for-bare-metal-microcontrollers/
+=> https://fosdem.org/2026/schedule/event/E7WQQX-webnn_and_webllm_on_risc-v_closing_the_ai_acceleration_gap_with_rvv_and_tenstorr/ 13: https://fosdem.org/2026/schedule/event/E7WQQX-webnn_and_webllm_on_risc-v_closing_the_ai_acceleration_gap_with_rvv_and_tenstorr/
+=> https://fosdem.org/2026/schedule/event/CNMT8K-messages_how_a_french_government_agency_broke_free_of_imap/ 14: https://fosdem.org/2026/schedule/event/CNMT8K-messages_how_a_french_government_agency_broke_free_of_imap/
+=> https://fosdem.org/2026/schedule/event/J9B9TR-et-platform-intro/ 15: https://fosdem.org/2026/schedule/event/J9B9TR-et-platform-intro/
+=> https://fosdem.org/2026/schedule/event/T3PSFN-zero_to_matmul_with_the_et-soc-1/ 16: https://fosdem.org/2026/schedule/event/T3PSFN-zero_to_matmul_with_the_et-soc-1/
+=> https://fosdem.org/2026/schedule/event/F8SDAA-zero-sysroot_hermetic_llvm_cross-compilation_using_bazel/ 17: https://fosdem.org/2026/schedule/event/F8SDAA-zero-sysroot_hermetic_llvm_cross-compilation_using_bazel/
+=> https://fosdem.org/2026/schedule/event/N3AFSF-crystal/ 18: https://fosdem.org/2026/schedule/event/N3AFSF-crystal/
+=> https://fosdem.org/2026/schedule/event/ZPFNKB-lua-ui/ 19: https://fosdem.org/2026/schedule/event/ZPFNKB-lua-ui/
+=> https://fosdem.org/2026/schedule/event/FFWA7E-transparent-sources-for-arch-linux-packages/ 20: https://fosdem.org/2026/schedule/event/FFWA7E-transparent-sources-for-arch-linux-packages/
+=> https://fosdem.org/2026/schedule/event/GWRDNT-rust-type-checking-python/ 21: https://fosdem.org/2026/schedule/event/GWRDNT-rust-type-checking-python/
+=> https://fosdem.org/2026/schedule/event/G3ZWYU-lightning_lightning_talks_2/ 22: https://fosdem.org/2026/schedule/event/G3ZWYU-lightning_lightning_talks_2/
+=> https://fosdem.org/2026/schedule/event/B7YKQ7-oss-in-spite-of-ai/ 23: https://fosdem.org/2026/schedule/event/B7YKQ7-oss-in-spite-of-ai/
+
+## A digression about agents
+
+This year I didn't write the list above by hand. I gave the URLs to an agent [24] and the format I wanted and told it to make it. It's a detail, but I do things like this many times a day now.
+
+I also had agents work for me over the FOSDEM weekend. They ported a personal web application I have from a Lua Web server [25] to another Lua Web server [26], from a CSS framework [27] to another CSS framework [28], and added end-to-end tests with Playwright [29]. Oh, and the application is in Teal [30] so they wrote the definition files for mote too. All I had to do was describe the task and nudge the agents in the right direction in between talks. If I did not have those agents, I would just never have done all this.
+
+At work, I'm back to training models this week, after a long time working solely on inference. Going from zero to GPUs going brr with nontrivial things like adversarial learning and brand new, (almost) working experiment tracking [31] (because OpenAI is killing the old one [32]) took me roughly a day.
+
+And that was with the old agents. I can't wait to see how well my new minions [33] do tomorrow.
+
+=> https://ampcode.com 24: https://ampcode.com
+=> https://redbean.dev 25: https://redbean.dev
+=> https://github.com/luanvil/mote 26: https://github.com/luanvil/mote
+=> https://picocss.com 27: https://picocss.com
+=> https://picturepan2.github.io/spectre/ 28: https://picturepan2.github.io/spectre/
+=> https://playwright.dev/python/ 29: https://playwright.dev/python/
+=> https://teal-language.org 30: https://teal-language.org
+=> https://github.com/gradio-app/trackio 31: https://github.com/gradio-app/trackio
+=> https://neptune.ai/blog/we-are-joining-openai 32: https://neptune.ai/blog/we-are-joining-openai
+=> https://www.anthropic.com/news/claude-opus-4-6 33: https://www.anthropic.com/news/claude-opus-4-6

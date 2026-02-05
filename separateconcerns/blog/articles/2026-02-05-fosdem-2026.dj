@@ -1,0 +1,46 @@
+```=lua-meta
+title = "FOSDEM 2026"
+published = "2026-02-05 11:35:00"
+description = "Went to FOSDEM 2025, saw talks, met people, drank beer. Again."
+```
+
+It's been that time of the year, [again](https://blog.separateconcerns.com/2025-02-02-fosdem-2025.html). No [Denis](https://blog.zwindler.fr) and no [Hisham](https://hisham.hm) this time, but I still got to spend time with other FOSDEM regulars [Gawen](https://github.com/gawen), [Benoît](https://github.com/benoitc), and [Thijs](https://github.com/tieske). I also met [Corentin](https://www.linkedin.com/in/corentinkerisit/), [Sylvain](https://sylvainzimmer.com) and [Mehdi](https://www.linkedin.com/in/mehdimedjaoui/), and got introduced to [Hugo](https://www.linkedin.com/in/hugo-le-picard-phd-693b4117a/).
+
+Here is a list of talks I saw:
+
+- [Evolving Git for the next decade](https://fosdem.org/2026/schedule/event/HTJK33-evolving_git_for_the_next_decade/) - Patrick Steinhardt
+- [Bringing up bare metal ExecuTorch on
+RISC-V](https://fosdem.org/2026/schedule/event/Z3TEMS-executorch-for-bare-metal-microcontrollers/) - 4 speakers
+- [WebNN and WebLLM on RISC-V with RVV and Tenstorrent](https://fosdem.org/2026/sched
+ule/event/E7WQQX-webnn_and_webllm_on_risc-v_closing_the_ai_acceleration_gap_with_rvv_and_tenstorr/) - Yuning Liang,
+Petr Penzin
+- [Messages: how a French government agency broke free of
+IMAP](https://fosdem.org/2026/schedule/event/CNMT8K-messages_how_a_french_government_agency_broke_free_of_imap/) -
+Sylvain Zimmer
+- [A practical introduction to the ET platform.](https://fosdem.org/2026/schedule/event/J9B9TR-et-platform-intro/) -
+Gianluca Guida
+- [Zero to matmul with the ET-SoC-1](https://fosdem.org/2026/schedule/event/T3PSFN-zero_to_matmul_with_the_et-soc-1/) - Peter Cawley
+- [Zero-sysroot hermetic LLVM cross-compilation using
+Bazel](https://fosdem.org/2026/schedule/event/F8SDAA-zero-sysroot_hermetic_llvm_cross-compilation_using_bazel/) -
+Corentin Kerisit, David Zbarsky
+- [Crystal: A language for humans and computers](https://fosdem.org/2026/schedule/event/N3AFSF-crystal/) - Johannes
+Müller
+- [Building a minimal cross-platform terminal UI library](https://fosdem.org/2026/schedule/event/ZPFNKB-lua-ui/) -
+Thijs Schreijer
+- [Relying on more transparent & trustworthy sources for Arch Linux
+packages](https://fosdem.org/2026/schedule/event/FFWA7E-transparent-sources-for-arch-linux-packages/) - Robin Candau
+- [Ty: Adventures of type-checking Python in
+Rust](https://fosdem.org/2026/schedule/event/GWRDNT-rust-type-checking-python/) - Shaygan Hooshyari
+- [Lightning lightning talks 2](https://fosdem.org/2026/schedule/event/G3ZWYU-lightning_lightning_talks_2/)
+- [Open Source Security in spite of AI](https://fosdem.org/2026/schedule/event/B7YKQ7-oss-in-spite-of-ai/) - Daniel
+Stenberg
+
+## A digression about agents
+
+This year I didn't write the list above by hand. I gave the URLs to [an agent](https://ampcode.com) and the format I wanted and told it to make it. It's a detail, but I do things like this many times a day now.
+
+I also had agents work for me over the FOSDEM weekend. They ported a personal web application I have from [a Lua Web server](https://redbean.dev) to [another Lua Web server](https://github.com/luanvil/mote), from [a CSS framework](https://picocss.com) to [another CSS framework](https://picturepan2.github.io/spectre/), and added end-to-end tests with [Playwright](https://playwright.dev/python/). Oh, and the application is in [Teal](https://teal-language.org) so they wrote the definition files for mote too. All I had to do was describe the task and nudge the agents in the right direction in between talks. If I did not have those agents, I would just never have done all this.
+
+At work, I'm back to training models this week, after a long time working solely on inference. Going from zero to GPUs going brr with nontrivial things like adversarial learning and brand new, (almost) working [experiment tracking](https://github.com/gradio-app/trackio) (because [OpenAI is killing the old one](https://neptune.ai/blog/we-are-joining-openai)) took me roughly a day.
+
+And that was with the *old* agents. I can't wait to see how well [my new minions](https://www.anthropic.com/news/claude-opus-4-6) do tomorrow.

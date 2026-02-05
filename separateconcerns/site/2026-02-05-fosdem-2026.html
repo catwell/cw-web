@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta name="description" content="Went to FOSDEM 2025, saw talks, met people, drank beer. Again.">
+    <link rel="canonical" href="https://blog.separateconcerns.com/2026-02-05-fosdem-2026.html">
+    <link href="css/theme.css?cache=5" rel="stylesheet" type="text/css">
+    <link
+      rel="alternate" type="application/atom+xml"
+      href="https://blog.separateconcerns.com/feed.atom"
+    />
+    <title>FOSDEM 2026</title>
+  </head>
+  <body>
+    <div id="container">
+    <header>
+      <h1>FOSDEM 2026</h1>
+      <h4>
+        published 2026-02-05
+        [ <a href="index.html">home</a> ]
+      </h4>
+    </header>
+    <p>It&rsquo;s been that time of the year, <a href="https://blog.separateconcerns.com/2025-02-02-fosdem-2025.html">again</a>. No <a href="https://blog.zwindler.fr">Denis</a> and no <a href="https://hisham.hm">Hisham</a> this time, but I still got to spend time with other FOSDEM regulars <a href="https://github.com/gawen">Gawen</a>, <a href="https://github.com/benoitc">Benoît</a>, and <a href="https://github.com/tieske">Thijs</a>. I also met <a href="https://www.linkedin.com/in/corentinkerisit/">Corentin</a>, <a href="https://sylvainzimmer.com">Sylvain</a> and <a href="https://www.linkedin.com/in/mehdimedjaoui/">Mehdi</a>, and got introduced to <a href="https://www.linkedin.com/in/hugo-le-picard-phd-693b4117a/">Hugo</a>.</p>
+<p>Here is a list of talks I saw:</p>
+<ul>
+<li>
+<a href="https://fosdem.org/2026/schedule/event/HTJK33-evolving_git_for_the_next_decade/">Evolving Git for the next decade</a> - Patrick Steinhardt
+</li>
+<li>
+<a href="https://fosdem.org/2026/schedule/event/Z3TEMS-executorch-for-bare-metal-microcontrollers/">Bringing up bare metal ExecuTorch on
+RISC-V</a> - 4 speakers
+</li>
+<li>
+<a href="https://fosdem.org/2026/schedule/event/E7WQQX-webnn_and_webllm_on_risc-v_closing_the_ai_acceleration_gap_with_rvv_and_tenstorr/">WebNN and WebLLM on RISC-V with RVV and Tenstorrent</a> - Yuning Liang,
+Petr Penzin
+</li>
+<li>
+<a href="https://fosdem.org/2026/schedule/event/CNMT8K-messages_how_a_french_government_agency_broke_free_of_imap/">Messages: how a French government agency broke free of
+IMAP</a> -
+Sylvain Zimmer
+</li>
+<li>
+<a href="https://fosdem.org/2026/schedule/event/J9B9TR-et-platform-intro/">A practical introduction to the ET platform.</a> -
+Gianluca Guida
+</li>
+<li>
+<a href="https://fosdem.org/2026/schedule/event/T3PSFN-zero_to_matmul_with_the_et-soc-1/">Zero to matmul with the ET-SoC-1</a> - Peter Cawley
+</li>
+<li>
+<a href="https://fosdem.org/2026/schedule/event/F8SDAA-zero-sysroot_hermetic_llvm_cross-compilation_using_bazel/">Zero-sysroot hermetic LLVM cross-compilation using
+Bazel</a> -
+Corentin Kerisit, David Zbarsky
+</li>
+<li>
+<a href="https://fosdem.org/2026/schedule/event/N3AFSF-crystal/">Crystal: A language for humans and computers</a> - Johannes
+Müller
+</li>
+<li>
+<a href="https://fosdem.org/2026/schedule/event/ZPFNKB-lua-ui/">Building a minimal cross-platform terminal UI library</a> -
+Thijs Schreijer
+</li>
+<li>
+<a href="https://fosdem.org/2026/schedule/event/FFWA7E-transparent-sources-for-arch-linux-packages/">Relying on more transparent &amp; trustworthy sources for Arch Linux
+packages</a> - Robin Candau
+</li>
+<li>
+<a href="https://fosdem.org/2026/schedule/event/GWRDNT-rust-type-checking-python/">Ty: Adventures of type-checking Python in
+Rust</a> - Shaygan Hooshyari
+</li>
+<li>
+<a href="https://fosdem.org/2026/schedule/event/G3ZWYU-lightning_lightning_talks_2/">Lightning lightning talks 2</a>
+</li>
+<li>
+<a href="https://fosdem.org/2026/schedule/event/B7YKQ7-oss-in-spite-of-ai/">Open Source Security in spite of AI</a> - Daniel
+Stenberg
+</li>
+</ul>
+<section id="A-digression-about-agents">
+<h2>A digression about agents</h2>
+<p>This year I didn&rsquo;t write the list above by hand. I gave the URLs to <a href="https://ampcode.com">an agent</a> and the format I wanted and told it to make it. It&rsquo;s a detail, but I do things like this many times a day now.</p>
+<p>I also had agents work for me over the FOSDEM weekend. They ported a personal web application I have from <a href="https://redbean.dev">a Lua Web server</a> to <a href="https://github.com/luanvil/mote">another Lua Web server</a>, from <a href="https://picocss.com">a CSS framework</a> to <a href="https://picturepan2.github.io/spectre/">another CSS framework</a>, and added end-to-end tests with <a href="https://playwright.dev/python/">Playwright</a>. Oh, and the application is in <a href="https://teal-language.org">Teal</a> so they wrote the definition files for mote too. All I had to do was describe the task and nudge the agents in the right direction in between talks. If I did not have those agents, I would just never have done all this.</p>
+<p>At work, I&rsquo;m back to training models this week, after a long time working solely on inference. Going from zero to GPUs going brr with nontrivial things like adversarial learning and brand new, (almost) working <a href="https://github.com/gradio-app/trackio">experiment tracking</a> (because <a href="https://neptune.ai/blog/we-are-joining-openai">OpenAI is killing the old one</a>) took me roughly a day.</p>
+<p>And that was with the <strong>old</strong> agents. I can&rsquo;t wait to see how well <a href="https://www.anthropic.com/news/claude-opus-4-6">my new minions</a> do tomorrow.</p>
+</section>
+
+    </div>
+    <div id="footer">
+      [ <a href="index.html">home</a> ]
+    </div>
+    
+    <script
+      data-goatcounter="https://separateconcerns.goatcounter.com/count"
+      async src="//gc.zgo.at/count.js"></script>
+  </body>
+</html>
