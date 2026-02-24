@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta name="description" content="Assorted thoughts, early 2026.">
+    <link rel="canonical" href="https://blog.separateconcerns.com/2026-02-24-thoughts-14.html">
+    <link href="css/theme.css?cache=5" rel="stylesheet" type="text/css">
+    <link
+      rel="alternate" type="application/atom+xml"
+      href="https://blog.separateconcerns.com/feed.atom"
+    />
+    <title>Thoughts &amp; Links 14</title>
+  </head>
+  <body>
+    <div id="container">
+    <header>
+      <h1>Thoughts &amp; Links 14</h1>
+      <h4>
+        published 2026-02-24
+        [ <a href="index.html">home</a> ]
+      </h4>
+    </header>
+    <blockquote>
+<p>&ldquo;Thoughts &amp; Links&rdquo; are posts mixing topics on my mind and interesting things I have read recently. Less thought out than regular posts.</p>
+</blockquote>
+<section id="My-current-agentic-coding-setup">
+<h2>My current agentic coding setup</h2>
+<p>This changes so fast I think I&rsquo;ll include an update in most Thoughts posts. The previous update is <a href="https://blog.separateconcerns.com/2025-12-26-ai-tools-winter-2025.html">here</a>.</p>
+<p>At work, I use Claude Code exclusively. My editor is now almost read-only, I even do most of my single-line changes through the agent so it has them in its context. I mostly use Opus 4.6 but sometimes reduce effort to improve latency.</p>
+<p>My current &ldquo;free and personal&rdquo; setup is <a href="https://z.ai/blog/glm-5">GLM 5</a> in <a href="https://shittycodingagent.ai">pi</a> through <a href="https://opencode.ai/docs/zen/#pricing">OpenCode Zen</a>. It is slower but mostly as good as Claude. I have tried the other two free models available (Kimi K2.5 and MiniMax M2.5), and I much prefer GLM 5. I still use Amp Free sometimes but the credits don&rsquo;t last long.</p>
+</section>
+<section id="End-of-Productivity-Theater---Murat-Demirbas">
+<h2><a href="https://muratbuffalo.blogspot.com/2026/02/end-of-productivity-theater.html">End of Productivity Theater</a> - Murat Demirbas</h2>
+<blockquote>
+<p>If AI absorbs all the shallow work, the only things left that genuinely require a human are the core parts that demand genuine creativity, judgment, taste, and the type of thinking that can&rsquo;t be prompted away. [&hellip;] That kind of deep creative work is best done away from the glowing rectangle.</p>
+</blockquote>
+</section>
+<section id="I-aspire-to-get-bored-in-the-new-year---Murat-Demirbas">
+<h2><a href="https://muratbuffalo.blogspot.com/2025/12/randomer-things.html">I aspire to get bored in the new year</a> - Murat Demirbas</h2>
+<blockquote>
+<p>The problem is that I no longer get bored. That is bad. I need to get bored so I can start to imagine, daydream, think, self-reflect, plan, or even get mentally prepared for things (like the Stoics talked about). I badly need that empty space back.</p>
+</blockquote>
+</section>
+<section id="The-AI-Vampire---Steve-Yegge">
+<h2><a href="https://steve-yegge.medium.com/the-ai-vampire-eda6e4f07163">The AI Vampire</a> - Steve Yegge</h2>
+<blockquote>
+<p>AI does actually make you 10x more productive, once you learn how. [&hellip;] But who actually gets to keep that value?</p>
+</blockquote>
+<blockquote>
+<p>It would seem that we are addicted to a new drug, and we don’t understand all of its effects yet. But one of them is massive fatigue, every day. [&hellip;] We’re all setting unrealistic standards for everyone else. [&hellip;] That’s a race that ends, in my opinion, with everyone collapsing in exhaustion without actually winning the race.</p>
+</blockquote>
+<p>Steve&rsquo;s argument is that if AI makes you 10x more productive and you don&rsquo;t change your salary or working hours your employer captures 100% of that value, whereas if you work 10x less you capture 100% of the value.</p>
+<blockquote>
+<p>It’s not even remotely sustainable for companies to capture 100% of the value from AI. And when employees capture 100% of the value, it will be temporary at best: that company gets beat by someone who’s got the dial turned higher. [&hellip;]  The right setting is in the middle somewhere. Companies will try to drag it higher. You need to fight to drag it lower. [&hellip;] The new workday should be three to four hours. For everyone. It may involve 8 hours of hanging out with people. But not doing this crazy vampire thing the whole time. That will kill people.</p>
+</blockquote>
+</section>
+<section id="I-am-the-bottleneck-now---Thorsten-Ball">
+<h2><a href="https://x.com/thorstenball/status/2022310010391302259">I am the bottleneck now</a> - Thorsten Ball</h2>
+<p>This and watching the Claude Code team take feature requests on X and implement them the same day make me consider one way software development team balance should probably change in the short term for user-facing products: support should become much more skilled and important.</p>
+<p>Years ago a French startup called Capitaine Train (since acquired by Trainline) was famous for having skilled product people work support and use the feedback to improve the product. I have long admired this and pushed for similar approaches (e.g. having developers participate in support rotation to fill their pipelines).</p>
+<p>But now if we can eliminate the developers bottleneck for simple bug fixes, this changes the game. We are close to a point where fixing a bug reported by a customer and confirmed could be a simple button click in Intercom. That would be huge for complex products such as <a href="https://inch.fr">Inch</a>.</p>
+</section>
+<section id="Single-customer-frontends">
+<h2>Single-customer frontends</h2>
+<p>In the section above I described a short-term solution to improve products that are complex because of <a href="https://www.joelonsoftware.com/2001/03/23/strategy-letter-iv-bloatware-and-the-8020-myth/">the 80/20 myth</a>. But on a slightly longer timescale I think we can just fix that problem entirely, at least on the frontend. I wrote <a href="https://www.linkedin.com/feed/update/urn:li:activity:7427985631039119361?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7427985631039119361%2C7428002198778863617%29&amp;dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287428002198778863617%2Curn%3Ali%3Aactivity%3A7427985631039119361%29">a LinkedIn comment in French</a> about this.</p>
+<p>The complexity comes from customers using a different subset of the product. But if the cost of creating an interface becomes close to zero, customers could just create their own. SaaS products would then just become APIs that customers could query and integrate exactly how they want using agents.</p>
+<p>I know it works because I do this for myself. I have a vibecoded personal Web application that is a kind of dashboard where I integrate features from several SaaS as I need them. Note that when I say vibecoded I still read the code to some degree, this is not accessible to non-developers yet. But to a small company with a single developer, I think it is.</p>
+</section>
+<section id="John-Nunemaker-on-skills-transferring-to-AI-assisted-work">
+<h2><a href="https://www.johnnunemaker.com/rooted-reaching-podcast-interview/">John Nunemaker on skills transferring to AI-assisted work</a></h2>
+<blockquote>
+<p>I&rsquo;m not worried about AI taking over. I&rsquo;m obsessed with it. [&hellip;] The fundamentals I learned the hard way? They translate perfectly to telling Claude or ChatGPT exactly what I need. The key is knowing what to ask for. Twenty years of programming principles don&rsquo;t disappear, they become the foundation for working with AI effectively.</p>
+</blockquote>
+</section>
+<section id="Brex’s-AI-Hail-Mary">
+<h2><a href="https://www.latent.space/p/brex">Brex’s AI Hail Mary</a></h2>
+<blockquote>
+<p>Brex realized that speed and execution shouldn’t come at the cost of increasing headcount.</p>
+</blockquote>
+<p>Honestly, that has long been true and I have defended that point of view my whole career. My about page has been saying this for ages:</p>
+<blockquote>
+<p>I believe small teams can achieve a lot. Do not ask me to manage the 10x growth of your engineering team, ask me to find ways to prevent that from happening in the first place.</p>
+</blockquote>
+<p>If AI helps companies realize this more easily, all the better.</p>
+</section>
+<section id="Why-I-Stopped-Using-nbdev---Hamel-Husain">
+<h2><a href="https://hamel.dev/blog/posts/ai-stack/">Why I Stopped Using nbdev</a> - Hamel Husain</h2>
+<blockquote>
+<p>Joy is a valid reason to choose a language, even with less AI support. It’s just not my focus right now. My joy resides in solving problems, and I want tools that maximize my leverage. For that, conventional wins.</p>
+</blockquote>
+<p>Agreed on all counts, except that I think agents are actually reasonably good at using exotic software. For instance, the personal web app I mentioned earlier is written in <a href="https://github.com/teal-language/tl">Teal</a> using <a href="https://github.com/luanvil/mote">mote</a>. In my experience the worst is stacks that are somewhat popular but with unstable APIs (e.g. Zig).</p>
+<p>In any case, a lot of people are left wondering if code was just a tool or something more, and about the role of fun (<a href="https://n.survol.fr/n/lartisan-et-lusine">David in French</a>, <a href="https://orib.dev/nofun.html">Ori Bernstein</a>, <a href="https://davidcel.is/articles/writing-code-is-fun">David Cells</a>&hellip;).</p>
+<p>Personally, I already touched it <a href="https://blog.separateconcerns.com/2023-10-21-automating-job.html">here</a>: it is both. I have always needed both a goal <strong>and</strong> some enjoyment. I don&rsquo;t think the agentic switch will necessarily change that.</p>
+</section>
+<section id="Romain-Guy-on-pushing-projects-at-companies">
+<h2><a href="https://www.youtube.com/watch?v=aEXeMO3bHQc">Romain Guy on pushing projects at companies</a></h2>
+<blockquote>
+<p>Many times, you try to make a project take off that by definition nobody asked for. You are convinced that if you do it people will go &ldquo;Oh great! I can do something awesome with this!&rdquo;, but nobody will ask for it until it exists. And the problem is at a large company you&rsquo;ll be asked &ldquo;can you show me figures that prove it is what we should do?&rdquo; and you go &ldquo;Well, no. I have to do it first.&rdquo; And that&rsquo;s scary for large organizations because it&rsquo;s a jump into the unknown, [&hellip;] even at a small scale.</p>
+</blockquote>
+<p>Typical. When it can be tested in a short timeframe the solution is &ldquo;ask forgiveness not permission&rdquo;. As soon as you mention it you get into arguments that will take you more time than actually prototyping.</p>
+<p>For things that take more time it is not always possible, and that&rsquo;s when you need to play politics to get buy-in. But when you can, (vibe)code and ask later. Remember Claude Code was a side project.</p>
+</section>
+<section id="The-culture-war-that-we-won---Daniel-Lemire">
+<h2><a href="https://lemire.me/blog/2025/12/31/the-culture-war-that-we-won/">The culture war that we won</a> - Daniel Lemire</h2>
+<blockquote>
+<p>In some sense, building software that can do financial, political and legal analysis is the latest weapon in the arsenal of the computer people. Many despair about what AI might do to software developers: I recommend looking at it in the context of the hacker culture war.</p>
+</blockquote>
+</section>
+<section id="Returning-to-Stanford">
+<h2><a href="https://masonjwang.com/writing/returning-to-stanford">Returning to Stanford</a></h2>
+<p>A beautiful post about the true value of college. Few students appreciate it in the moment. I think I did, but not as much as I do now. The author has founded two startups in the meantime, it clearly gave him the necessary hindsight.</p>
+<p>I often wonder how we can realistically emulate parts of this later in life. <a href="https://www.recurse.com">Recurse Center</a> is a step in that direction.</p>
+</section>
+<section id="From-craftsman-to-wage-worker---Karl-Dubost">
+<h2><a href="https://www.la-grange.net/2025/12/07/artisan-proletaire">From craftsman to wage-worker</a> - Karl Dubost</h2>
+<p>Extract translated from French (original title: De l&rsquo;artisan au prolétaire).</p>
+<p>Note that Karl writes extremely well and I am not fluent enough to translate how it feels. If you can read him in the original French, do it.</p>
+<blockquote>
+<p>Mastering tools is not merely a level of attainment. It is also a trajectory, especially in an accelerated world.</p>
+<p>We do not turn into wage-workers when we delegate our expertise to the machine. It happens when we give up (or are forced to) our desire for expertise. When we give up on discovering and mastering new tools while enslaving ourselves to a political program [including capitalism]. I will not name the specific tool, it is a distraction. It prevents us from thinking globally about what is happening under these circumstances.</p>
+</blockquote>
+</section>
+<section id="How-AI-helps-break-the-cost-barrier-to-COBOL-modernization---Anthropic">
+<h2><a href="https://claude.com/blog/how-ai-helps-break-cost-barrier-cobol-modernization">How AI helps break the cost barrier to COBOL modernization</a> - Anthropic</h2>
+<p>Yesterday, Anthropic posted this and IBM stock instantly lost 10%.</p>
+<p>I have no doubt that agentic programming will be a game-changer to escape legacy systems.</p>
+<p>What the Anthropic post describes is the way professionals already deal with legacy systems:</p>
+<ul>
+<li>
+start by understanding and documenting it;
+</li>
+<li>
+define the target architecture and rules;
+</li>
+<li>
+write extensive tests to ensure the outputs of the system stay the same;
+</li>
+<li>
+replace component after component while ensuring tests keep passing.
+</li>
+</ul>
+<p>This is called the <a href="https://blog.thecodewhisperer.com/permalink/surviving-legacy-code-with-golden-master-and-sampling">Golden Master pattern</a>.</p>
+<p>The challenge, however, will be to give human stakeholders high-level indicators and tools to understand the progress and ensure everything is going well. And then a way to identify and fix the defects that <strong>will</strong> slip through the net and end up in production.</p>
+<p>I have no doubt that AI, used by capable people, can help with all this. And this is not only about COBOL; I have recently met the founder of a (still stealth) startup tackling a similar problem with a different stack. The total market for legacy software migration is unfathomable.</p>
+<p>Maybe Anthropic is still undervalued after all!</p>
+</section>
+
+    </div>
+    <div id="footer">
+      [ <a href="index.html">home</a> ]
+    </div>
+    
+    <script
+      data-goatcounter="https://separateconcerns.goatcounter.com/count"
+      async src="//gc.zgo.at/count.js"></script>
+  </body>
+</html>
