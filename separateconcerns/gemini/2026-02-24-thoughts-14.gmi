@@ -1,5 +1,5 @@
 # Thoughts & Links 14
-published 2026-02-24
+published 2026-02-24,updated 2026-02-26
 
 > "Thoughts & Links" are posts mixing topics on my mind and interesting things I have read recently. Less thought out than regular posts.
 
@@ -11,10 +11,29 @@ At work, I use Claude Code exclusively. My editor is now almost read-only, I eve
 
 My current "free and personal" setup is GLM 5 [2] in pi [3] through OpenCode Zen [4]. It is slower but mostly as good as Claude. I have tried the other two free models available (Kimi K2.5 and MiniMax M2.5), and I much prefer GLM 5. I still use Amp Free sometimes but the credits don't last long.
 
+> EDIT (2026-02-26) — GLM-5 is no longer free on OpenCode Zen (they introduced an OpenCode Go plan for $10 / month). It is still free on Modal until the end of April [5]. To use it with Pi, go here [6] to obtain a token and put this in `~/.pi/agent/models.json`:
+
+```
+{
+  "providers": {
+    "modal": {
+      "baseUrl": "https://api.us-west-2.modal.direct/v1",
+      "api": "openai-completions",
+      "apiKey": "modalresearch_YourToken123",
+      "authHeader": true,
+      "models": [{ "id": "zai-org/GLM-5-FP8" }]
+    }
+  }
+}
+
+```
+
 => https://blog.separateconcerns.com/2025-12-26-ai-tools-winter-2025.html 1: https://blog.separateconcerns.com/2025-12-26-ai-tools-winter-2025.html
 => https://z.ai/blog/glm-5 2: https://z.ai/blog/glm-5
-=> https://shittycodingagent.ai 3: https://shittycodingagent.ai
+=> https://pi.dev 3: https://pi.dev
 => https://opencode.ai/docs/zen/#pricing 4: https://opencode.ai/docs/zen/#pricing
+=> https://modal.com/blog/try-glm-5 5: https://modal.com/blog/try-glm-5
+=> https://modal.com/glm-5-endpoint 6: https://modal.com/glm-5-endpoint
 
 ## End of Productivity Theater - Murat Demirbas
 => https://muratbuffalo.blogspot.com/2026/02/end-of-productivity-theater.html
@@ -44,20 +63,20 @@ This and watching the Claude Code team take feature requests on X and implement 
 
 Years ago a French startup called Capitaine Train (since acquired by Trainline) was famous for having skilled product people work support and use the feedback to improve the product. I have long admired this and pushed for similar approaches (e.g. having developers participate in support rotation to fill their pipelines).
 
-But now if we can eliminate the developers bottleneck for simple bug fixes, this changes the game. We are close to a point where fixing a bug reported by a customer and confirmed could be a simple button click in Intercom. That would be huge for complex products such as Inch [5].
+But now if we can eliminate the developers bottleneck for simple bug fixes, this changes the game. We are close to a point where fixing a bug reported by a customer and confirmed could be a simple button click in Intercom. That would be huge for complex products such as Inch [7].
 
-=> https://inch.fr 5: https://inch.fr
+=> https://inch.fr 7: https://inch.fr
 
 ## Single-customer frontends
 
-In the section above I described a short-term solution to improve products that are complex because of the 80/20 myth [6]. But on a slightly longer timescale I think we can just fix that problem entirely, at least on the frontend. I wrote a LinkedIn comment in French [7] about this.
+In the section above I described a short-term solution to improve products that are complex because of the 80/20 myth [8]. But on a slightly longer timescale I think we can just fix that problem entirely, at least on the frontend. I wrote a LinkedIn comment in French [9] about this.
 
 The complexity comes from customers using a different subset of the product. But if the cost of creating an interface becomes close to zero, customers could just create their own. SaaS products would then just become APIs that customers could query and integrate exactly how they want using agents.
 
 I know it works because I do this for myself. I have a vibecoded personal Web application that is a kind of dashboard where I integrate features from several SaaS as I need them. Note that when I say vibecoded I still read the code to some degree, this is not accessible to non-developers yet. But to a small company with a single developer, I think it is.
 
-=> https://www.joelonsoftware.com/2001/03/23/strategy-letter-iv-bloatware-and-the-8020-myth/ 6: https://www.joelonsoftware.com/2001/03/23/strategy-letter-iv-bloatware-and-the-8020-myth/
-=> https://www.linkedin.com/feed/update/urn:li:activity:7427985631039119361?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7427985631039119361%2C7428002198778863617%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287428002198778863617%2Curn%3Ali%3Aactivity%3A7427985631039119361%29 7: https://www.linkedin.com/feed/update/urn:li:activity:7427985631039119361?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7427985631039119361%2C7428002198778863617%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287428002198778863617%2Curn%3Ali%3Aactivity%3A7427985631039119361%29
+=> https://www.joelonsoftware.com/2001/03/23/strategy-letter-iv-bloatware-and-the-8020-myth/ 8: https://www.joelonsoftware.com/2001/03/23/strategy-letter-iv-bloatware-and-the-8020-myth/
+=> https://www.linkedin.com/feed/update/urn:li:activity:7427985631039119361?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7427985631039119361%2C7428002198778863617%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287428002198778863617%2Curn%3Ali%3Aactivity%3A7427985631039119361%29 9: https://www.linkedin.com/feed/update/urn:li:activity:7427985631039119361?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7427985631039119361%2C7428002198778863617%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287428002198778863617%2Curn%3Ali%3Aactivity%3A7427985631039119361%29
 
 ## John Nunemaker on skills transferring to AI-assisted work
 => https://www.johnnunemaker.com/rooted-reaching-podcast-interview/
@@ -80,18 +99,18 @@ If AI helps companies realize this more easily, all the better.
 
 > Joy is a valid reason to choose a language, even with less AI support. It’s just not my focus right now. My joy resides in solving problems, and I want tools that maximize my leverage. For that, conventional wins.
 
-Agreed on all counts, except that I think agents are actually reasonably good at using exotic software. For instance, the personal web app I mentioned earlier is written in Teal [8] using mote [9]. In my experience the worst is stacks that are somewhat popular but with unstable APIs (e.g. Zig).
+Agreed on all counts, except that I think agents are actually reasonably good at using exotic software. For instance, the personal web app I mentioned earlier is written in Teal [10] using mote [11]. In my experience the worst is stacks that are somewhat popular but with unstable APIs (e.g. Zig).
 
-In any case, a lot of people are left wondering if code was just a tool or something more, and about the role of fun (David in French [10], Ori Bernstein [11], David Cells [12]...).
+In any case, a lot of people are left wondering if code was just a tool or something more, and about the role of fun (David in French [12], Ori Bernstein [13], David Cells [14]...).
 
-Personally, I already touched it here [13]: it is both. I have always needed both a goal and some enjoyment. I don't think the agentic switch will necessarily change that.
+Personally, I already touched it here [15]: it is both. I have always needed both a goal and some enjoyment. I don't think the agentic switch will necessarily change that.
 
-=> https://github.com/teal-language/tl 8: https://github.com/teal-language/tl
-=> https://github.com/luanvil/mote 9: https://github.com/luanvil/mote
-=> https://n.survol.fr/n/lartisan-et-lusine 10: https://n.survol.fr/n/lartisan-et-lusine
-=> https://orib.dev/nofun.html 11: https://orib.dev/nofun.html
-=> https://davidcel.is/articles/writing-code-is-fun 12: https://davidcel.is/articles/writing-code-is-fun
-=> https://blog.separateconcerns.com/2023-10-21-automating-job.html 13: https://blog.separateconcerns.com/2023-10-21-automating-job.html
+=> https://github.com/teal-language/tl 10: https://github.com/teal-language/tl
+=> https://github.com/luanvil/mote 11: https://github.com/luanvil/mote
+=> https://n.survol.fr/n/lartisan-et-lusine 12: https://n.survol.fr/n/lartisan-et-lusine
+=> https://orib.dev/nofun.html 13: https://orib.dev/nofun.html
+=> https://davidcel.is/articles/writing-code-is-fun 14: https://davidcel.is/articles/writing-code-is-fun
+=> https://blog.separateconcerns.com/2023-10-21-automating-job.html 15: https://blog.separateconcerns.com/2023-10-21-automating-job.html
 
 ## Romain Guy on pushing projects at companies
 => https://www.youtube.com/watch?v=aEXeMO3bHQc
@@ -112,9 +131,9 @@ For things that take more time it is not always possible, and that's when you ne
 
 A beautiful post about the true value of college. Few students appreciate it in the moment. I think I did, but not as much as I do now. The author has founded two startups in the meantime, it clearly gave him the necessary hindsight.
 
-I often wonder how we can realistically emulate parts of this later in life. Recurse Center [14] is a step in that direction.
+I often wonder how we can realistically emulate parts of this later in life. Recurse Center [16] is a step in that direction.
 
-=> https://www.recurse.com 14: https://www.recurse.com
+=> https://www.recurse.com 16: https://www.recurse.com
 
 ## From craftsman to wage-worker - Karl Dubost
 => https://www.la-grange.net/2025/12/07/artisan-proletaire
@@ -141,7 +160,7 @@ What the Anthropic post describes is the way professionals already deal with leg
 * write extensive tests to ensure the outputs of the system stay the same;
 * replace component after component while ensuring tests keep passing.
 
-This is called the Golden Master pattern [15].
+This is called the Golden Master pattern [17].
 
 The challenge, however, will be to give human stakeholders high-level indicators and tools to understand the progress and ensure everything is going well. And then a way to identify and fix the defects that will slip through the net and end up in production.
 
@@ -149,4 +168,4 @@ I have no doubt that AI, used by capable people, can help with all this. And thi
 
 Maybe Anthropic is still undervalued after all!
 
-=> https://blog.thecodewhisperer.com/permalink/surviving-legacy-code-with-golden-master-and-sampling 15: https://blog.thecodewhisperer.com/permalink/surviving-legacy-code-with-golden-master-and-sampling
+=> https://blog.thecodewhisperer.com/permalink/surviving-legacy-code-with-golden-master-and-sampling 17: https://blog.thecodewhisperer.com/permalink/surviving-legacy-code-with-golden-master-and-sampling

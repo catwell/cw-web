@@ -5,6 +5,7 @@
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta name="description" content="Assorted thoughts, early 2026.">
     <link rel="canonical" href="https://blog.separateconcerns.com/2026-02-24-thoughts-14.html">
+      <link href="css/prism.css" rel="stylesheet" type="text/css">
     <link href="css/theme.css?cache=5" rel="stylesheet" type="text/css">
     <link
       rel="alternate" type="application/atom+xml"
@@ -17,7 +18,8 @@
     <header>
       <h1>Thoughts &amp; Links 14</h1>
       <h4>
-        published 2026-02-24
+        published 2026-02-24,
+        updated 2026-02-26
         [ <a href="index.html">home</a> ]
       </h4>
     </header>
@@ -28,7 +30,22 @@
 <h2>My current agentic coding setup</h2>
 <p>This changes so fast I think I&rsquo;ll include an update in most Thoughts posts. The previous update is <a href="https://blog.separateconcerns.com/2025-12-26-ai-tools-winter-2025.html">here</a>.</p>
 <p>At work, I use Claude Code exclusively. My editor is now almost read-only, I even do most of my single-line changes through the agent so it has them in its context. I mostly use Opus 4.6 but sometimes reduce effort to improve latency.</p>
-<p>My current &ldquo;free and personal&rdquo; setup is <a href="https://z.ai/blog/glm-5">GLM 5</a> in <a href="https://shittycodingagent.ai">pi</a> through <a href="https://opencode.ai/docs/zen/#pricing">OpenCode Zen</a>. It is slower but mostly as good as Claude. I have tried the other two free models available (Kimi K2.5 and MiniMax M2.5), and I much prefer GLM 5. I still use Amp Free sometimes but the credits don&rsquo;t last long.</p>
+<p>My current &ldquo;free and personal&rdquo; setup is <a href="https://z.ai/blog/glm-5">GLM 5</a> in <a href="https://pi.dev">pi</a> through <a href="https://opencode.ai/docs/zen/#pricing">OpenCode Zen</a>. It is slower but mostly as good as Claude. I have tried the other two free models available (Kimi K2.5 and MiniMax M2.5), and I much prefer GLM 5. I still use Amp Free sometimes but the credits don&rsquo;t last long.</p>
+<blockquote>
+<p>EDIT (2026-02-26) — GLM-5 is no longer free on OpenCode Zen (they introduced an OpenCode Go plan for $10 / month). It is still <a href="https://modal.com/blog/try-glm-5">free on Modal until the end of April</a>. To use it with Pi, go <a href="https://modal.com/glm-5-endpoint">here</a> to obtain a token and put this in <code>~/.pi/agent/models.json</code>:</p>
+</blockquote>
+<pre><code class="language-json">{
+  "providers": {
+    "modal": {
+      "baseUrl": "https://api.us-west-2.modal.direct/v1",
+      "api": "openai-completions",
+      "apiKey": "modalresearch_YourToken123",
+      "authHeader": true,
+      "models": [{ "id": "zai-org/GLM-5-FP8" }]
+    }
+  }
+}
+</code></pre>
 </section>
 <section id="End-of-Productivity-Theater---Murat-Demirbas">
 <h2><a href="https://muratbuffalo.blogspot.com/2026/02/end-of-productivity-theater.html">End of Productivity Theater</a> - Murat Demirbas</h2>
@@ -150,7 +167,7 @@ replace component after component while ensuring tests keep passing.
     <div id="footer">
       [ <a href="index.html">home</a> ]
     </div>
-    
+    <script src="js/prism.js"></script>
     <script
       data-goatcounter="https://separateconcerns.goatcounter.com/count"
       async src="//gc.zgo.at/count.js"></script>

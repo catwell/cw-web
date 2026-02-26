@@ -2,6 +2,7 @@
 title = "Thoughts & Links 14"
 published = "2026-02-24 09:00:00"
 description = "Assorted thoughts, early 2026."
+updated = "2026-02-26 10:40:00"
 ```
 
 > "Thoughts & Links" are posts mixing topics on my mind and interesting things I have read recently. Less thought out than regular posts.
@@ -12,7 +13,23 @@ This changes so fast I think I'll include an update in most Thoughts posts. The 
 
 At work, I use Claude Code exclusively. My editor is now almost read-only, I even do most of my single-line changes through the agent so it has them in its context. I mostly use Opus 4.6 but sometimes reduce effort to improve latency.
 
-My current "free and personal" setup is [GLM 5](https://z.ai/blog/glm-5) in [pi](https://shittycodingagent.ai) through [OpenCode Zen](https://opencode.ai/docs/zen/#pricing). It is slower but mostly as good as Claude. I have tried the other two free models available (Kimi K2.5 and MiniMax M2.5), and I much prefer GLM 5. I still use Amp Free sometimes but the credits don't last long.
+My current "free and personal" setup is [GLM 5](https://z.ai/blog/glm-5) in [pi](https://pi.dev) through [OpenCode Zen](https://opencode.ai/docs/zen/#pricing). It is slower but mostly as good as Claude. I have tried the other two free models available (Kimi K2.5 and MiniMax M2.5), and I much prefer GLM 5. I still use Amp Free sometimes but the credits don't last long.
+
+> EDIT (2026-02-26) — GLM-5 is no longer free on OpenCode Zen (they introduced an OpenCode Go plan for $10 / month). It is still [free on Modal until the end of April](https://modal.com/blog/try-glm-5). To use it with Pi, go [here](https://modal.com/glm-5-endpoint) to obtain a token and put this in `~/.pi/agent/models.json`:
+
+```json
+{
+  "providers": {
+    "modal": {
+      "baseUrl": "https://api.us-west-2.modal.direct/v1",
+      "api": "openai-completions",
+      "apiKey": "modalresearch_YourToken123",
+      "authHeader": true,
+      "models": [{ "id": "zai-org/GLM-5-FP8" }]
+    }
+  }
+}
+```
 
 ## [End of Productivity Theater](https://muratbuffalo.blogspot.com/2026/02/end-of-productivity-theater.html) - Murat Demirbas
 
