@@ -1966,7 +1966,7 @@ but I currently have no idea how.</p>
 <p>In addition, here are some of my other answers to that second question:</p>
 <ul>
 <li>
-<p>Putting a limit on function sizes, and systematic <a href="https://refactoring.guru/extract-method">method / function extraction</a>. This appears to make code superficially more readable, but in reality it makes it less linear and harder to debug. Other posts sharing that opinion: <a href="https://250bpm.com/blog:36/">Martin Sústrik</a>, <a href="https://loup-vaillant.fr/articles/physics-of-readability">Loup Vaillant</a>.</p>
+<p>Putting a limit on function sizes, and systematic <a href="https://refactoring.guru/extract-method">method / function extraction</a>. This appears to make code superficially more readable, but in reality it makes it less linear and harder to debug. Other posts sharing that opinion: <a href="https://files.catwell.info/misc/mirror/2013-03-25-sustrik-defense-spaghetti.md">Martin Sústrik</a>, <a href="https://loup-vaillant.fr/articles/source-of-readability">Loup Vaillant</a>.</p>
 </li>
 <li>
 <p>Systematic <a href="https://en.wikipedia.org/wiki/Test-driven_development">Test-driven development</a>. TDD is very useful when the problem is well-defined and the implementation error-prone, for instance when implementing precise specs or an RFC. It is harmful when you do exploratory programming. In some code bases, I go as far as having no unit tests — only end-to-end and regression ones, in addition to plenty of inline assertions in the code.</p>

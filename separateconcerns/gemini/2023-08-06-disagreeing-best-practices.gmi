@@ -25,8 +25,8 @@ To end this post with something related, Brett Slatkin [9] is hosting a podcast 
 => https://blog.separateconcerns.com/2019-02-15-architecture-principles.html 1: https://blog.separateconcerns.com/2019-02-15-architecture-principles.html
 => https://en.wikipedia.org/wiki/Don%27t_repeat_yourself 2: https://en.wikipedia.org/wiki/Don%27t_repeat_yourself
 => https://refactoring.guru/extract-method 3: https://refactoring.guru/extract-method
-=> https://250bpm.com/blog:36/ 4: https://250bpm.com/blog:36/
-=> https://loup-vaillant.fr/articles/physics-of-readability 5: https://loup-vaillant.fr/articles/physics-of-readability
+=> https://files.catwell.info/misc/mirror/2013-03-25-sustrik-defense-spaghetti.md 4: https://files.catwell.info/misc/mirror/2013-03-25-sustrik-defense-spaghetti.md
+=> https://loup-vaillant.fr/articles/source-of-readability 5: https://loup-vaillant.fr/articles/source-of-readability
 => https://en.wikipedia.org/wiki/Test-driven_development 6: https://en.wikipedia.org/wiki/Test-driven_development
 => https://www.typescriptlang.org/docs/handbook/type-compatibility.html#a-note-on-soundness 7: https://www.typescriptlang.org/docs/handbook/type-compatibility.html#a-note-on-soundness
 => https://blog.separateconcerns.com/2014-05-27-magic.html 8: https://blog.separateconcerns.com/2014-05-27-magic.html

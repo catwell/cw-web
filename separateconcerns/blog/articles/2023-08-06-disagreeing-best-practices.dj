@@ -18,7 +18,7 @@ I have already posted some of my answers to the first question [here](https://bl
 
 In addition, here are some of my other answers to that second question:
 
-- Putting a limit on function sizes, and systematic [method / function extraction](https://refactoring.guru/extract-method). This appears to make code superficially more readable, but in reality it makes it less linear and harder to debug. Other posts sharing that opinion: [Martin Sústrik](https://250bpm.com/blog:36/), [Loup Vaillant](https://loup-vaillant.fr/articles/physics-of-readability).
+- Putting a limit on function sizes, and systematic [method / function extraction](https://refactoring.guru/extract-method). This appears to make code superficially more readable, but in reality it makes it less linear and harder to debug. Other posts sharing that opinion: [Martin Sústrik](https://files.catwell.info/misc/mirror/2013-03-25-sustrik-defense-spaghetti.md), [Loup Vaillant](https://loup-vaillant.fr/articles/source-of-readability).
 
 - Systematic [Test-driven development](https://en.wikipedia.org/wiki/Test-driven_development). TDD is very useful when the problem is well-defined and the implementation error-prone, for instance when implementing precise specs or an RFC. It is harmful when you do exploratory programming. In some code bases, I go as far as having no unit tests — only end-to-end and regression ones, in addition to plenty of inline assertions in the code.
 
