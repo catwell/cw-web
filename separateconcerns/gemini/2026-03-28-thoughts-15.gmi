@@ -1,0 +1,126 @@
+# Thoughts & Links 15
+published 2026-03-28
+
+> "Thoughts & Links" are posts mixing topics on my mind and interesting things I have read recently. Less thought out than regular posts.
+
+## Redis Patterns for Coding Agents
+=> https://redis.antirez.com
+
+Agent-first documentation, with humans as an afterthought. But like the mobile-first web, it may actually be an improvement for humans as well in the end.
+
+## I made a code review tool - Shaygan Hooshyari
+=> https://glyphack.com/dv-7/
+
+Towelie is a code review tool for code written by agents. I have been using it for large changesets. It gives you a code review UI and spits out a prompt to paste into the agent CLI. A simple tool that does one thing well.
+
+## The Factory’s Real Problem Isn’t on the Shop Floor - Renan Devillieres
+=> https://renan-devillieres.medium.com/the-factorys-real-problem-isn-t-on-the-shop-floor-5884c8b2ea88
+
+Renan is the CEO of OSS Ventures [1], a startup studio for industrial B2B software.
+
+He posits that what hinders reshoring is labor cost, but not that of blue-collar workers. Today the white-to-blue-collar ratio excluding R&D is above 1, and white-collar labor is more expensive. The way to make factories competitive is to lower that ratio significantly thanks to modern tools.
+
+=> https://www.oss.ventures 1: https://www.oss.ventures
+
+## I don't know if my job will still exist in ten years - Sean Goedecke
+=> https://www.seangoedecke.com/will-my-job-still-exist/
+
+Nobody knows. If you think you do, you are delusional.
+
+Personally I bet that I will still have a job, but it will be very different from the one I have now.
+
+## 2026 is the year of AI infrastructure
+=> https://x.com/Zai_org/status/2028457036308947393
+
+A tweet by Z.ai [2], which is one of my favorite labs currently.
+
+I think they are right, as recently demonstrated by Anthropic tightening its limits [3]. Infrastructure is becoming crucial for resilience and cost-efficiency.
+
+Lou of Z.ai has also posted her personal view [4] that OpenAI is investing in infra whereas Anthropic outsources. I do not completely agree, Anthropic did order a million TPUs from Qualcomm, after all.
+
+=> https://z.ai 2: https://z.ai
+=> https://x.com/trq212/status/2037254607001559305 3: https://x.com/trq212/status/2037254607001559305
+=> https://x.com/louszbd/status/2037367591015239779 4: https://x.com/louszbd/status/2037367591015239779
+
+## "Flow" is gone
+
+Several people have posted similar things on that topic, including Stanislas Polu [5]:
+
+> They've deprived us from the state of "flow" that many of us were thriving for. [...] Coding with agents is an interruption management game. [...] The excitement remains "building" shit, and more of it.
+
+... and Julien Danjou [6]:
+
+> I chose throughput over depth, and I keep choosing it every morning.
+
+> A generation of developers is about to start their careers with AI from day one. [...] If you’ve never held the full system in your head, you don’t know which questions to ask, and you won’t catch the bugs that live in the gaps between modules. [...] I chose the trade anyway, because the leverage is real, even if the loss is too.
+
+=> https://spolu.sh/notes/20260311_no_flow_is_the_new_flow.html 5: https://spolu.sh/notes/20260311_no_flow_is_the_new_flow.html
+=> https://julien.danjou.info/blog/the-flow-is-gone/ 6: https://julien.danjou.info/blog/the-flow-is-gone/
+
+## A fighting retreat - Will Wilson
+=> https://antithesis.com/blog/2026/carcinization/
+
+The CEO of Antithesis with one of the best posts about company culture, how all organizations lose what makes them different as they grow, and how to slow it down.
+
+(No, despite the URL, this is not about Rust.)
+
+I know this all too well, I have known it even before I started working because it happened to communities I was a member of as well. This is part of why I have only worked at small companies.
+
+In any case if you have to grow, read that post, it is full of insight. But maybe you don't have to? See next link.
+
+## The Org Chart Math Behind AI-Native Speed - Tomasz Tunguz
+=> https://tomtunguz.com/communication-tax-small-orgs/
+
+AI solves communication in large organizations... by removing large organizations.
+
+> This is one reason AI-native startups are pulling ahead, and why building AI companies feels fun. The advantage comes from organizational structure. Fewer humans, fewer channels, faster iteration, compounding speed.
+
+## Working on products people hate - Sean Goedecke
+=> https://www.seangoedecke.com/working-on-products-people-hate/
+
+> Sometimes a product is funded just well enough to exist, but not well enough to be loved (like many enterprise-grade box-ticking features) and there’s nothing the engineers involved can do about it.
+
+## Where the Horses Went - Chris Paxton
+=> https://itcanthink.substack.com/p/where-the-horses-went
+
+> When a technology finally clicks, the changes spread faster than anyone expects and have far more serious implications for society. I want to lay out a case here for robotics finally “clicking” within the next few years, and what that could look like for everyone. [...] The level of investment and growth in robotics and AI is reaching a fever pitch, well beyond what I expected 1-2 years ago. And, perhaps more importantly, most of what I have believed are substantial blockers to robotics deployments now seem solvable on a technical level.
+
+## Avery Pennarun on code reviews
+=> https://apenwarr.ca/log/20260316
+
+> Every layer of review [or process approval] makes you 10x slower. [...] AI can’t fix this. [...] The only way to sustainably go faster is fewer reviews. [...] But you can’t just not review things!
+
+> Review pipelines — layers of QA — don’t work. Instead, they make you slower while hiding root causes. [...] But, the call of AI coding is strong. That first, fast step in the pipeline is so fast! It really does feel like having super powers. I want more super powers. What are we going to do about it? [...] I think the optimists have half of the right idea. Reducing review stages, even to an uncomfortable degree.
+
+> Imagine an old-school U.S. auto manufacturer buying parts from Japanese suppliers; wow, these parts are so well made! Now I can start removing QA steps elsewhere because I can just assume the parts are going to work, and my job of "assemble a bigger widget from the parts" has a ton of its complexity removed. I like this view. I’ve always liked small beautiful things, that’s my own bias. But, you can assemble big beautiful things from small beautiful things. It’s a lot easier to build those individual beautiful things in small teams that trust each other, that know what quality looks like to them.
+
+This is why good teams right now are a few real seniors augmented with AI. Because a defining trait of seniority is knowing exactly where and when you can cut corners and when you need extra confidence. And if the whole team is senior then you can trust your colleagues with that. Of course this is not very sustainable...
+
+Maybe tooling, including software verification, can help with this too (see next link).
+
+## When AI Writes the World's Software, Who Verifies It? - Leonardo de Moura
+=> https://leodemoura.github.io/blog/2026/02/28/when-ai-writes-the-worlds-software.html
+
+> The problem is not that everything is broken. It is that AI is changing the scale and speed of software production faster than our ability to verify it. What works at human pace may not survive AI pace.
+
+> The productivity gap is widening: teams with the best tools are pulling further ahead while others stagnate. Verification will be a decisive advantage.
+
+Mistral also shipped a coding agent designed for Lean [7].
+
+=> https://mistral.ai/news/leanstral 7: https://mistral.ai/news/leanstral
+
+## My heuristics are wrong. What now? - Marc Brooker
+=> https://brooker.co.za/blog/2026/03/20/ic-leadership.html
+
+> Many of the heuristics that we’ve developed over our careers as software engineers are no longer correct. [...] What it means for a system to be maintainable. How much it costs to write code versus integrate libraries versus take service dependencies. What it means for an API to be well designed, or ergonomic, or usable. What it means to understand code. Where service boundaries should be. Where security and data integrity should be enforced. What’s easy. What’s hard.
+
+> Your taste, your high standards, your understanding of your business and customers and the deep technical trade-offs in your area are more valuable than ever before. This is like that fantasy that people have of going back to middle school knowing all the things they know now. You’re ahead of the pack in many ways. But you also need to really deeply question the things you know, and the things you assume. Before you share one of your rules of thumb, you need to deeply examine whether it’s still right.
+
+> Over the next couple of years, the most valuable people to have on a software team are going to be experienced folks who’re actively working to keep their heuristics fresh. Who can combine curiosity with experience. Among the least valuable people to have on a software team are experienced folks who aren’t willing to change their thinking.
+
+## The Structure of Engineering Revolutions - John Allsopp
+=> https://webdirections.org/blog/the-structure-of-engineering-revolutions/
+
+> The resistance to AI-assisted software development among experienced software engineers isn’t random or capricious–it follows the pattern Thomas Kuhn identified in scientific revolutions sixty years ago.
+
+> The paradigm is shifting. The evidence is in. The question is not whether the shift will happen, but whether the people who built remarkable things within the old paradigm can find their place in the new one. Kuhn would say probably not. Planck would say wait for the funerals. But the compressed timeline of this particular revolution, the example of the likes of Armin Ronacher, means there’s still a choice available.
