@@ -124,3 +124,16 @@ Mistral also shipped a coding agent designed for Lean [7].
 > The resistance to AI-assisted software development among experienced software engineers isn’t random or capricious–it follows the pattern Thomas Kuhn identified in scientific revolutions sixty years ago.
 
 > The paradigm is shifting. The evidence is in. The question is not whether the shift will happen, but whether the people who built remarkable things within the old paradigm can find their place in the new one. Kuhn would say probably not. Planck would say wait for the funerals. But the compressed timeline of this particular revolution, the example of the likes of Armin Ronacher, means there’s still a choice available.
+
+## Engineering as optimization
+
+Almost 20 years ago, when I was still an engineering student, a retired network engineer from the ITU told me:
+
+> An engineer does what a technician can do, but 30% more efficiently and for 50% of the cost.
+
+I always liked that definition of engineering, but only today did I figure out — thanks to Marc Brooker [8] — its likely origin. It is a quote from Arthur Wellington [9]:
+
+> It would be well if engineering were less generally thought of, and even defined, as the art of constructing. In a certain important sense it is rather the art of not constructing: or, to define it rudely, but not inaptly, it is the art of doing well with one dollar, which any bungler can do with two after a fashion.
+
+=> https://brooker.co.za/blog/2026/03/25/ic-junior.html 8: https://brooker.co.za/blog/2026/03/25/ic-junior.html
+=> https://vanderburg.org/etc/quotes/wellington-bungler/ 9: https://vanderburg.org/etc/quotes/wellington-bungler/

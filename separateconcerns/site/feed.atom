@@ -10,7 +10,7 @@
     rel="alternate" type="application/xhtml+xml"
   />
   <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
-  <updated>2026-03-28T14:43:04Z</updated>
+  <updated>2026-03-28T15:00:35Z</updated>
   <author>
     <name>Pierre 'catwell' Chapuis</name>
     <uri>https://catwell.info/</uri>
@@ -23,7 +23,7 @@
     />
     <id>tag:blog.separateconcerns.com,2026-03-28:thoughts-15</id>
     <published>2026-03-28T15:45:00Z</published>
-    <updated>2026-03-28T15:45:00Z</updated>
+    <updated>2026-03-28T16:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <blockquote>
@@ -136,6 +136,17 @@
 </blockquote>
 <blockquote>
 <p>The paradigm is shifting. The evidence is in. The question is not whether the shift will happen, but whether the people who built remarkable things within the old paradigm can find their place in the new one. Kuhn would say probably not. Planck would say wait for the funerals. But the compressed timeline of this particular revolution, the example of the likes of Armin Ronacher, means there’s still a choice available.</p>
+</blockquote>
+</section>
+<section id="Engineering-as-optimization">
+<h2>Engineering as optimization</h2>
+<p>Almost 20 years ago, when I was still an engineering student, a retired network engineer from the ITU told me:</p>
+<blockquote>
+<p>An engineer does what a technician can do, but 30% more efficiently and for 50% of the cost.</p>
+</blockquote>
+<p>I always liked that definition of engineering, but only today did I figure out — <a href="https://brooker.co.za/blog/2026/03/25/ic-junior.html">thanks to Marc Brooker</a> — its likely origin. It is <a href="https://vanderburg.org/etc/quotes/wellington-bungler/">a quote from Arthur Wellington</a>:</p>
+<blockquote>
+<p>It would be well if engineering were less generally thought of, and even defined, as the art of constructing. In a certain important sense it is rather the art of not constructing: or, to define it rudely, but not inaptly, it is the art of doing well with one dollar, which any bungler can do with two after a fashion.</p>
 </blockquote>
 </section>
 
