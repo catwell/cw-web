@@ -1,0 +1,35 @@
+# Am I scared for my job?
+published 2026-04-17
+
+## How do you scale yourself?
+
+Let's start with a tangentially related preamble. I answered this Quora question [1] in September 2012 with:
+
+> * Optimize: automate. Replace (part of) yourself with very small shell scripts [2].
+> * Scale vertically: become more efficient. Experience and training can help you perform the same tasks faster.
+> * Scale horizontally for writes: shard. You can either delegate subtasks to others (divide and conquer / master-worker style) or just split your work between people at the same hierarchical level (my favorite solution, but remember collaboration is hard - graphs are inherently more complex than trees).
+> * Scale horizontally for reads: add redundancy. Teach others how to do your job. This also increases availability and tolerance to failure by augmenting your bus factor.
+
+Some of those things may or may not change with AI, but the point is: as long as I have been working, my worry has not been having nothing to do; it has always been dealing with too much.
+
+=> https://www.quora.com/How-do-you-scale-yourself 1: https://www.quora.com/How-do-you-scale-yourself
+=> https://www.youtube.com/watch?v=l2btv0yUPNQ 2: https://www.youtube.com/watch?v=l2btv0yUPNQ
+
+## Am I worried Claude will come for my job?
+
+Several people have asked me that question recently. Some are programmers, some are not.
+
+They ask this because they do not understand my job. At its core, it is about reducing workloads through optimization and automation.
+
+Sure, I work on AI now [3], but that is not the important part. In that respect, AI is just the updated version of a very small shell script.
+
+So let me answer that question. Yes, maybe someday robots will take my job. But if that happens, it means they will have taken yours too, because otherwise my job will be to make it happen.
+
+Not everybody agrees, but personally, I am enthusiastic about the end state where nobody has to work. Sure, this is a turning point in the history of mankind and we will have to adapt to the state of abundance, but we will still be much better off than we are now.
+
+So, do I worry about my job? Absolutely not. What worries me is the transition period when I have a job and you don't.
+
+(Seriously, go read Manna [4] now if you haven't yet.)
+
+=> https://blog.separateconcerns.com/2024-10-16-not-leaving-ai.html 3: https://blog.separateconcerns.com/2024-10-16-not-leaving-ai.html
+=> https://marshallbrain.com/manna 4: https://marshallbrain.com/manna

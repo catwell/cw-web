@@ -10,11 +10,57 @@
     rel="alternate" type="application/xhtml+xml"
   />
   <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
-  <updated>2026-04-06T16:20:26Z</updated>
+  <updated>2026-04-17T17:04:57Z</updated>
   <author>
     <name>Pierre 'catwell' Chapuis</name>
     <uri>https://catwell.info/</uri>
   </author>
+  <entry>
+    <title>Am I scared for my job?</title>
+    <link
+      rel="alternate" type="text/html"
+      href="https://blog.separateconcerns.com/2026-04-17-automate.html"
+    />
+    <id>tag:blog.separateconcerns.com,2026-04-17:automate</id>
+    <published>2026-04-17T19:00:00Z</published>
+    <updated>2026-04-17T19:00:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <section id="How-do-you-scale-yourself">
+<h2>How do you scale yourself?</h2>
+<p>Let&#8217;s start with a tangentially related preamble. I answered <a href="https://www.quora.com/How-do-you-scale-yourself">this Quora question</a> in September 2012 with:</p>
+<blockquote>
+<ol>
+<li>
+<p>Optimize: automate. Replace (part of) yourself <a href="https://www.youtube.com/watch?v=l2btv0yUPNQ">with very small shell scripts</a>.</p>
+</li>
+<li>
+<p>Scale vertically: become more efficient. Experience and training can help you perform the same tasks faster.</p>
+</li>
+<li>
+<p>Scale horizontally for writes: shard. You can either delegate subtasks to others (divide and conquer / master-worker style) or just split your work between people at the same hierarchical level (my favorite solution, but remember collaboration is hard - graphs are inherently more complex than trees).</p>
+</li>
+<li>
+<p>Scale horizontally for reads: add redundancy. Teach others how to do your job. This also increases availability and tolerance to failure by augmenting your bus factor.</p>
+</li>
+</ol>
+</blockquote>
+<p>Some of those things may or may not change with AI, but the point is: as long as I have been working, my worry has not been having nothing to do; it has always been dealing with too much.</p>
+</section>
+<section id="Am-I-worried-Claude-will-come-for-my-job">
+<h2>Am I worried Claude will come for my job?</h2>
+<p>Several people have asked me that question recently. Some are programmers, some are not.</p>
+<p>They ask this because they do not understand my job. At its core, it is about reducing workloads through optimization and automation.</p>
+<p>Sure, <a href="https://blog.separateconcerns.com/2024-10-16-not-leaving-ai.html">I work on AI now</a>, but that is not the important part. In that respect, AI is just the updated version of a <strong>very small shell script</strong>.</p>
+<p>So let me answer that question. Yes, maybe someday robots will take my job. But if that happens, it means they will have taken yours too, because otherwise my job will be to make it happen.</p>
+<p>Not everybody agrees, but personally, I am enthusiastic about the end state where nobody has to work. Sure, this is a turning point in the history of mankind and we will have to adapt to the state of abundance, but we will still be much better off than we are now.</p>
+<p>So, do I worry about my job? Absolutely not. What worries me is the transition period when I have a job and <strong>you</strong> don&#8217;t.</p>
+<p>(Seriously, go read <a href="https://marshallbrain.com/manna">Manna</a> now if you haven&#8217;t yet.)</p>
+</section>
+
+      </div>
+    </content>
+  </entry>
   <entry>
     <title>When we have droids</title>
     <link
