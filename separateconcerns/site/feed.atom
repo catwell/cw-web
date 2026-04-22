@@ -10,7 +10,7 @@
     rel="alternate" type="application/xhtml+xml"
   />
   <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
-  <updated>2026-04-17T17:19:26Z</updated>
+  <updated>2026-04-22T13:00:00Z</updated>
   <author>
     <name>Pierre 'catwell' Chapuis</name>
     <uri>https://catwell.info/</uri>
@@ -1799,7 +1799,7 @@ The resolution of the problem does not require compromise
 <h2>Easy vs Simple</h2>
 <p>The tension between Simple and Easy has always been an important point for me. Hajime Hoshi <a href="https://twitter.com/hajimehoshi/status/1740250213712044198">gives an interesting definition</a>:</p>
 <blockquote>
-<p>Easy: how quickly you can achieve what you want<br>
+<p>Easy: how quickly you can achieve what you want<br/>
 Simple: how quickly you can understand the model</p>
 </blockquote>
 <p>Easy is nice to have, Simple is crucial. The effect of &#8220;easy&#8221; is linear whereas the effect of &#8220;simple&#8221; is exponential. Never trade the latter for the former.</p>

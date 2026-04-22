@@ -106,6 +106,12 @@ local function article_to_html_chunk(md: string): string, Metadata
         end
     )
 
+    djot.override_renderer_method(
+        renderer, "hardbreak", function(self: HtmlRenderer, _node: Node, _old: HtmlRenderMethod)
+            self.out("<br/>\n")
+        end
+    )
+
     renderer:render(input, handle)
     local html = handle:flush()
     return html, metadata
