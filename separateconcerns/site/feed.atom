@@ -10,7 +10,7 @@
     rel="alternate" type="application/xhtml+xml"
   />
   <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
-  <updated>2026-06-04T20:05:46Z</updated>
+  <updated>2026-06-04T21:58:16Z</updated>
   <author>
     <name>Pierre 'catwell' Chapuis</name>
     <uri>https://catwell.info/</uri>
@@ -22,8 +22,8 @@
       href="https://blog.separateconcerns.com/2026-04-17-automate.html"
     />
     <id>tag:blog.separateconcerns.com,2026-04-17:automate</id>
-    <published>2026-04-17T19:00:00Z</published>
-    <updated>2026-04-17T19:20:00Z</updated>
+    <published>2026-04-17T17:00:00Z</published>
+    <updated>2026-04-17T17:20:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <section id="How-do-you-scale-yourself">
@@ -70,8 +70,8 @@
       href="https://blog.separateconcerns.com/2026-04-06-droids.html"
     />
     <id>tag:blog.separateconcerns.com,2026-04-06:droids</id>
-    <published>2026-04-06T18:20:00Z</published>
-    <updated>2026-04-06T18:20:00Z</updated>
+    <published>2026-04-06T16:20:00Z</published>
+    <updated>2026-04-06T16:20:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>I believe that most homes in the developed world will have a domestic multipurpose — probably humanoid — robot in 10 years. This is not the consensus in the field; I often meet people who hold the opposite position, but debating that is not the point of this post. Instead, let us assume it will happen and consider what it will change.</p>
@@ -108,8 +108,8 @@
       href="https://blog.separateconcerns.com/2026-03-28-thoughts-15.html"
     />
     <id>tag:blog.separateconcerns.com,2026-03-28:thoughts-15</id>
-    <published>2026-03-28T15:45:00Z</published>
-    <updated>2026-03-28T16:00:00Z</updated>
+    <published>2026-03-28T14:45:00Z</published>
+    <updated>2026-03-28T15:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <blockquote>
@@ -246,8 +246,8 @@
       href="https://blog.separateconcerns.com/2026-02-24-thoughts-14.html"
     />
     <id>tag:blog.separateconcerns.com,2026-02-24:thoughts-14</id>
-    <published>2026-02-24T09:00:00Z</published>
-    <updated>2026-02-26T10:40:00Z</updated>
+    <published>2026-02-24T08:00:00Z</published>
+    <updated>2026-02-26T09:40:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <blockquote>
@@ -400,8 +400,8 @@ replace component after component while ensuring tests keep passing.
       href="https://blog.separateconcerns.com/2026-02-07-finegrain.html"
     />
     <id>tag:blog.separateconcerns.com,2026-02-07:finegrain</id>
-    <published>2026-02-07T15:10:00Z</published>
-    <updated>2026-06-04T22:05:00Z</updated>
+    <published>2026-02-07T14:10:00Z</published>
+    <updated>2026-06-04T20:05:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <blockquote>
@@ -462,8 +462,8 @@ replace component after component while ensuring tests keep passing.
       href="https://blog.separateconcerns.com/2026-02-05-fosdem-2026.html"
     />
     <id>tag:blog.separateconcerns.com,2026-02-05:fosdem-2026</id>
-    <published>2026-02-05T11:35:00Z</published>
-    <updated>2026-02-05T11:35:00Z</updated>
+    <published>2026-02-05T10:35:00Z</published>
+    <updated>2026-02-05T10:35:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>It&#8217;s been that time of the year, <a href="https://blog.separateconcerns.com/2025-02-02-fosdem-2025.html">again</a>. No <a href="https://blog.zwindler.fr">Denis</a> and no <a href="https://hisham.hm">Hisham</a> this time, but I still got to spend time with other FOSDEM regulars <a href="https://github.com/gawen">Gawen</a>, <a href="https://github.com/benoitc">Benoît</a>, and <a href="https://github.com/tieske">Thijs</a>. I also met <a href="https://www.linkedin.com/in/corentinkerisit/">Corentin</a>, <a href="https://sylvainzimmer.com">Sylvain</a> and <a href="https://www.linkedin.com/in/mehdimedjaoui/">Mehdi</a>, and got introduced to <a href="https://www.linkedin.com/in/hugo-le-picard-phd-693b4117a/">Hugo</a>.</p>
@@ -539,8 +539,8 @@ Stenberg
       href="https://blog.separateconcerns.com/2025-12-26-thoughts-13.html"
     />
     <id>tag:blog.separateconcerns.com,2025-12-26:thoughts-13</id>
-    <published>2025-12-26T15:20:00Z</published>
-    <updated>2025-12-26T15:20:00Z</updated>
+    <published>2025-12-26T14:20:00Z</published>
+    <updated>2025-12-26T14:20:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <blockquote>
@@ -610,8 +610,8 @@ Bad designs paper over the structure with superficial labels that hide the under
       href="https://blog.separateconcerns.com/2025-12-26-ai-tools-winter-2025.html"
     />
     <id>tag:blog.separateconcerns.com,2025-12-26:ai-tools-winter-2025</id>
-    <published>2025-12-26T12:25:00Z</published>
-    <updated>2025-12-26T12:25:00Z</updated>
+    <published>2025-12-26T11:25:00Z</published>
+    <updated>2025-12-26T11:25:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>Yes, I have <a href="https://blog.separateconcerns.com/2025-08-08-ai-tools.html">written about this</a> recently, but it has changed so much that it warrants an update.</p>
@@ -630,8 +630,8 @@ Bad designs paper over the structure with superficial labels that hide the under
       href="https://blog.separateconcerns.com/2025-11-21-inexorable-progress.html"
     />
     <id>tag:blog.separateconcerns.com,2025-11-21:inexorable-progress</id>
-    <published>2025-11-21T09:40:00Z</published>
-    <updated>2025-11-21T09:40:00Z</updated>
+    <published>2025-11-21T08:40:00Z</published>
+    <updated>2025-11-21T08:40:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>I live in France, I work on AI, and I am worried.</p>
@@ -653,8 +653,8 @@ Bad designs paper over the structure with superficial labels that hide the under
       href="https://blog.separateconcerns.com/2025-08-24-work-i-want.html"
     />
     <id>tag:blog.separateconcerns.com,2025-08-24:work-i-want</id>
-    <published>2025-08-24T16:30:00Z</published>
-    <updated>2025-08-24T16:30:00Z</updated>
+    <published>2025-08-24T14:30:00Z</published>
+    <updated>2025-08-24T14:30:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <blockquote>
@@ -705,8 +705,8 @@ Bad designs paper over the structure with superficial labels that hide the under
       href="https://blog.separateconcerns.com/2025-08-24-beliefs.html"
     />
     <id>tag:blog.separateconcerns.com,2025-08-24:beliefs</id>
-    <published>2025-08-24T15:30:00Z</published>
-    <updated>2025-08-24T15:30:00Z</updated>
+    <published>2025-08-24T13:30:00Z</published>
+    <updated>2025-08-24T13:30:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>Since 2017 I have maintained a short list in a file called <code>BELIEFS.md</code>. It is somewhat similar to my <a href="https://blog.separateconcerns.com/2019-02-15-architecture-principles.html">Software Architecture Principles</a> but for things not directly related to programming. I have decided to move it here.</p>
@@ -739,8 +739,8 @@ Bad designs paper over the structure with superficial labels that hide the under
       href="https://blog.separateconcerns.com/2025-08-21-thoughts-12.html"
     />
     <id>tag:blog.separateconcerns.com,2025-08-21:thoughts-12</id>
-    <published>2025-08-21T17:00:00Z</published>
-    <updated>2025-08-21T17:00:00Z</updated>
+    <published>2025-08-21T15:00:00Z</published>
+    <updated>2025-08-21T15:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <blockquote>
@@ -884,8 +884,8 @@ Stealing is not the problem. [&#8230;] Consent is not the problem. The main prob
       href="https://blog.separateconcerns.com/2025-08-08-ai-tools.html"
     />
     <id>tag:blog.separateconcerns.com,2025-08-08:ai-tools</id>
-    <published>2025-08-08T21:55:00Z</published>
-    <updated>2025-08-08T21:55:00Z</updated>
+    <published>2025-08-08T19:55:00Z</published>
+    <updated>2025-08-08T19:55:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <blockquote>
@@ -936,8 +936,8 @@ When I get an error message I cannot immediately understand I paste it into Clau
       href="https://blog.separateconcerns.com/2025-02-26-ai-evolution.html"
     />
     <id>tag:blog.separateconcerns.com,2025-02-26:ai-evolution</id>
-    <published>2025-02-26T14:30:00Z</published>
-    <updated>2025-02-26T14:30:00Z</updated>
+    <published>2025-02-26T13:30:00Z</published>
+    <updated>2025-02-26T13:30:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>The rapid evolution of AI makes me change my mind often regarding its future evolution. However, since the beginning of the deep learning era, I hold a belief that in the long run the distinction between &#8220;training&#8221; and &#8220;inference&#8221; will fade and AI will learn <a href="https://en.wikipedia.org/wiki/Online_algorithm">online</a>.</p>
@@ -971,8 +971,8 @@ Much smaller task-specific models will be distilled from those large generalist 
       href="https://blog.separateconcerns.com/2025-02-16-thoughts-11.html"
     />
     <id>tag:blog.separateconcerns.com,2025-02-16:thoughts-11</id>
-    <published>2025-02-16T14:15:00Z</published>
-    <updated>2025-02-16T14:15:00Z</updated>
+    <published>2025-02-16T13:15:00Z</published>
+    <updated>2025-02-16T13:15:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <blockquote>
@@ -1123,8 +1123,8 @@ Keep your class/interface/concept count down
       href="https://blog.separateconcerns.com/2025-02-02-found-in-translation.html"
     />
     <id>tag:blog.separateconcerns.com,2025-02-02:found-in-translation</id>
-    <published>2025-02-02T19:45:00Z</published>
-    <updated>2025-02-02T19:45:00Z</updated>
+    <published>2025-02-02T18:45:00Z</published>
+    <updated>2025-02-02T18:45:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>There is an <a href="https://en.wikipedia.org/wiki/Ivan_Illich">Ivan Illich</a> quote that I often see in French, for instance in <a href="https://www.linkedin.com/in/pierrepezziardi/">Pierre Pezziardi&#8217;s LinkedIn banner</a>:</p>
@@ -1158,8 +1158,8 @@ Keep your class/interface/concept count down
       href="https://blog.separateconcerns.com/2025-02-02-fosdem-2025.html"
     />
     <id>tag:blog.separateconcerns.com,2025-02-02:fosdem-2025</id>
-    <published>2025-02-02T10:20:00Z</published>
-    <updated>2025-02-02T19:00:00Z</updated>
+    <published>2025-02-02T09:20:00Z</published>
+    <updated>2025-02-02T18:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>I am attending FOSDEM in Brussels for the 13th time physically. This is an event I anticipate every year, where I get to meet old friends and new people, watch interesting talks, and drink some Belgian beer.</p>
@@ -1221,8 +1221,8 @@ Keep your class/interface/concept count down
       href="https://blog.separateconcerns.com/2025-01-04-teal-lsp-sublime.html"
     />
     <id>tag:blog.separateconcerns.com,2025-01-04:teal-lsp-sublime</id>
-    <published>2025-01-04T16:45:00Z</published>
-    <updated>2025-01-04T16:45:00Z</updated>
+    <published>2025-01-04T15:45:00Z</published>
+    <updated>2025-01-04T15:45:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>This is just a short post to describe how I use the <a href="https://github.com/teal-language/teal-language-server">Teal language server</a>. My setup is a bit specific: I use <a href="https://www.sublimetext.com">Sublime Text</a> on Arch Linux and I often run development branches of Teal so I run the LSP from source. I will assume you put it in <code>/.../git</code>.</p>
@@ -1281,8 +1281,8 @@ luarocks install tlcheck
       href="https://blog.separateconcerns.com/2024-10-16-not-leaving-ai.html"
     />
     <id>tag:blog.separateconcerns.com,2024-10-16:not-leaving-ai</id>
-    <published>2024-10-16T08:00:00Z</published>
-    <updated>2024-10-16T08:00:00Z</updated>
+    <published>2024-10-16T06:00:00Z</published>
+    <updated>2024-10-16T06:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>I started my professional career almost 15 years ago <a href="https://blog.separateconcerns.com/2013-06-20-three-years-proprietary-projects.html">working for a Machine Learning / Computer Vision company</a> that did image recognition on mobile. At the end of 2013, I chose to leave it for <a href="https://blog.separateconcerns.com/2018-01-06-four-years.html">Lima</a>, in part because even at Moodstocks I was always more of a Distributed Systems / Algorithms person than a Deep Learning person.</p>
@@ -1303,8 +1303,8 @@ luarocks install tlcheck
       href="https://blog.separateconcerns.com/2024-08-30-thoughts-10.html"
     />
     <id>tag:blog.separateconcerns.com,2024-08-30:thoughts-10</id>
-    <published>2024-08-30T08:40:00Z</published>
-    <updated>2024-10-08T17:15:00Z</updated>
+    <published>2024-08-30T06:40:00Z</published>
+    <updated>2024-10-08T15:15:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <blockquote>
@@ -1363,8 +1363,8 @@ luarocks install tlcheck
       href="https://blog.separateconcerns.com/2024-05-28-graphql-dataloaders.html"
     />
     <id>tag:blog.separateconcerns.com,2024-05-28:graphql-dataloaders</id>
-    <published>2024-05-28T19:40:00Z</published>
-    <updated>2024-05-28T19:40:00Z</updated>
+    <published>2024-05-28T17:40:00Z</published>
+    <updated>2024-05-28T17:40:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <blockquote>
@@ -1690,8 +1690,8 @@ INFO in __init__: Got 15 songs.
       href="https://blog.separateconcerns.com/2024-04-15-thoughts-9.html"
     />
     <id>tag:blog.separateconcerns.com,2024-04-15:thoughts-9</id>
-    <published>2024-04-15T21:15:00Z</published>
-    <updated>2024-04-15T21:15:00Z</updated>
+    <published>2024-04-15T19:15:00Z</published>
+    <updated>2024-04-15T19:15:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <blockquote>
@@ -1769,8 +1769,8 @@ The resolution of the problem does not require compromise
       href="https://blog.separateconcerns.com/2024-02-11-thoughts-8.html"
     />
     <id>tag:blog.separateconcerns.com,2024-02-11:thoughts-8</id>
-    <published>2024-02-11T14:40:00Z</published>
-    <updated>2024-02-11T14:40:00Z</updated>
+    <published>2024-02-11T13:40:00Z</published>
+    <updated>2024-02-11T13:40:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <blockquote>
@@ -1861,8 +1861,8 @@ Simple: how quickly you can understand the model</p>
       href="https://blog.separateconcerns.com/2024-02-07-fosdem.html"
     />
     <id>tag:blog.separateconcerns.com,2024-02-07:fosdem</id>
-    <published>2024-02-07T23:10:00Z</published>
-    <updated>2024-02-07T23:10:00Z</updated>
+    <published>2024-02-07T22:10:00Z</published>
+    <updated>2024-02-07T22:10:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>Last weekend I attended my 12th <a href="https://fosdem.org/2024/">FOSDEM</a>, not counting the two years of &#8220;remote FOSDEM&#8221; due to COVID.</p>
@@ -1942,8 +1942,8 @@ Simple: how quickly you can understand the model</p>
       href="https://blog.separateconcerns.com/2024-01-06-talos.html"
     />
     <id>tag:blog.separateconcerns.com,2024-01-06:talos</id>
-    <published>2024-01-06T10:45:00Z</published>
-    <updated>2024-01-06T10:45:00Z</updated>
+    <published>2024-01-06T09:45:00Z</published>
+    <updated>2024-01-06T09:45:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <blockquote>
@@ -1978,8 +1978,8 @@ Simple: how quickly you can understand the model</p>
       href="https://blog.separateconcerns.com/2023-10-21-automating-job.html"
     />
     <id>tag:blog.separateconcerns.com,2023-10-21:automating-job</id>
-    <published>2023-10-21T14:20:00Z</published>
-    <updated>2023-10-21T14:20:00Z</updated>
+    <published>2023-10-21T12:20:00Z</published>
+    <updated>2023-10-21T12:20:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>Since I&#8217;m <a href="https://blog.separateconcerns.com/2023-03-31-joining-finegrain.html">back in AI</a>, a recurring question has been whether we are collectively automating ourselves — software engineers and other kinds of tech people — out of our jobs. So, are we? And if so, how long will it take until that becomes a problem, and is this ultimately bad? I don&#8217;t have all the answers, but here is some insight.</p>
@@ -2013,8 +2013,8 @@ Simple: how quickly you can understand the model</p>
       href="https://blog.separateconcerns.com/2023-09-11-linear-code.html"
     />
     <id>tag:blog.separateconcerns.com,2023-09-11:linear-code</id>
-    <published>2023-09-11T22:35:00Z</published>
-    <updated>2023-09-11T22:35:00Z</updated>
+    <published>2023-09-11T20:35:00Z</published>
+    <updated>2023-09-11T20:35:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>You can only claim to be contrarian if people actually defend the opposite viewpoint. Well, one of the &#8220;best practices&#8221; I <a href="https://blog.separateconcerns.com/2023-08-06-disagreeing-best-practices.html">disagree with</a> was recently <a href="https://testing.googleblog.com/2023/09/use-abstraction-to-improve-function.html">featured in the Google Testing Blog</a> — usually a very good resource, there is a reason that post appeared in my newsreader!</p>
@@ -2085,8 +2085,8 @@ Simple: how quickly you can understand the model</p>
       href="https://blog.separateconcerns.com/2023-08-12-thoughts-7.html"
     />
     <id>tag:blog.separateconcerns.com,2023-08-12:thoughts-7</id>
-    <published>2023-08-12T16:30:00Z</published>
-    <updated>2023-08-12T16:30:00Z</updated>
+    <published>2023-08-12T14:30:00Z</published>
+    <updated>2023-08-12T14:30:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <blockquote>
@@ -2145,8 +2145,8 @@ but I currently have no idea how.</p>
       href="https://blog.separateconcerns.com/2023-08-09-three-little-pigs.html"
     />
     <id>tag:blog.separateconcerns.com,2023-08-09:three-little-pigs</id>
-    <published>2023-08-09T14:10:00Z</published>
-    <updated>2023-08-09T14:10:00Z</updated>
+    <published>2023-08-09T12:10:00Z</published>
+    <updated>2023-08-09T12:10:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>The Three Little Pigs is a popular bedtime story, but it strikes me as unrealistic and not teaching the right lesson. So I decided to revisit it.</p>
@@ -2177,8 +2177,8 @@ but I currently have no idea how.</p>
       href="https://blog.separateconcerns.com/2023-08-06-disagreeing-best-practices.html"
     />
     <id>tag:blog.separateconcerns.com,2023-08-06:disagreeing-best-practices</id>
-    <published>2023-08-06T16:35:00Z</published>
-    <updated>2023-08-06T16:35:00Z</updated>
+    <published>2023-08-06T14:35:00Z</published>
+    <updated>2023-08-06T14:35:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>When I interview software developers, I usually ask some variation of the following questions:</p>
@@ -2225,8 +2225,8 @@ but I currently have no idea how.</p>
       href="https://blog.separateconcerns.com/2023-07-25-bye-luafr.html"
     />
     <id>tag:blog.separateconcerns.com,2023-07-25:bye-luafr</id>
-    <published>2023-07-25T21:30:00Z</published>
-    <updated>2023-07-25T21:30:00Z</updated>
+    <published>2023-07-25T19:30:00Z</published>
+    <updated>2023-07-25T19:30:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>Ten years ago, I started a French-speaking mailing list about Lua. It was somehow active for around two years, but there was never really enough of an active community for it to keep going. To accompany that mailing list, I bought the domain <a href="https://luafr.org">luafr.org</a> and set up a small static webpage with a few links about Lua in French.</p>
@@ -2244,8 +2244,8 @@ but I currently have no idea how.</p>
       href="https://blog.separateconcerns.com/2023-04-15-gcp-firewall.html"
     />
     <id>tag:blog.separateconcerns.com,2023-04-15:gcp-firewall</id>
-    <published>2023-04-15T15:45:00Z</published>
-    <updated>2023-04-15T15:45:00Z</updated>
+    <published>2023-04-15T13:45:00Z</published>
+    <updated>2023-04-15T13:45:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>I have done that three times now, so it is time to make a quick blog post about it.</p>
@@ -2273,8 +2273,8 @@ but I currently have no idea how.</p>
       href="https://blog.separateconcerns.com/2023-04-10-thoughts-6.html"
     />
     <id>tag:blog.separateconcerns.com,2023-04-10:thoughts-6</id>
-    <published>2023-04-10T17:20:00Z</published>
-    <updated>2023-04-10T17:20:00Z</updated>
+    <published>2023-04-10T15:20:00Z</published>
+    <updated>2023-04-10T15:20:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <blockquote>
@@ -2315,8 +2315,8 @@ but I currently have no idea how.</p>
       href="https://blog.separateconcerns.com/2023-04-09-djot.html"
     />
     <id>tag:blog.separateconcerns.com,2023-04-09:djot</id>
-    <published>2023-04-09T11:20:00Z</published>
-    <updated>2023-04-09T11:20:00Z</updated>
+    <published>2023-04-09T09:20:00Z</published>
+    <updated>2023-04-09T09:20:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p><a href="https://blog.separateconcerns.com/2013-01-02-hello-world.html">Over 10 years ago</a>, I created this blog and wrote the static generator that powers it. I used Markdown for the articles and <a href="https://github.com/jgm/lunamark">lunamark</a>, a library written by John MacFarlane of <a href="https://commonmark.org">CommonMark</a> and <a href="https://pandoc.org">Pandoc</a> fame.</p>
@@ -2349,8 +2349,8 @@ done
       href="https://blog.separateconcerns.com/2023-03-31-joining-finegrain.html"
     />
     <id>tag:blog.separateconcerns.com,2023-03-31:joining-finegrain</id>
-    <published>2023-03-31T22:15:00Z</published>
-    <updated>2023-03-31T22:15:00Z</updated>
+    <published>2023-03-31T20:15:00Z</published>
+    <updated>2023-03-31T20:15:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>It&#8217;s been a week since I <a href="https://blog.separateconcerns.com/2023-03-11-leaving-inch.html">left Inch</a>, and now it is time to disclose what I am up to.</p>
@@ -2369,8 +2369,8 @@ done
       href="https://blog.separateconcerns.com/2023-03-11-leaving-inch.html"
     />
     <id>tag:blog.separateconcerns.com,2023-03-11:leaving-inch</id>
-    <published>2023-03-11T11:55:00Z</published>
-    <updated>2023-03-11T11:55:00Z</updated>
+    <published>2023-03-11T10:55:00Z</published>
+    <updated>2023-03-11T10:55:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>In two weeks, I will no longer be an <a href="https://inch.fr">Inch</a> employee. I <a href="https://blog.separateconcerns.com/2020-12-16-personal-news.html#joining-inch">joined the company</a> a bit over three years ago, but it feels like much longer. Back then I had no child, and the first thing the word &#8220;Pandemic&#8221; brought to mind was a good board game.</p>
@@ -2388,8 +2388,8 @@ done
       href="https://blog.separateconcerns.com/2023-03-02-thoughts-5.html"
     />
     <id>tag:blog.separateconcerns.com,2023-03-02:thoughts-5</id>
-    <published>2023-03-02T11:45:00Z</published>
-    <updated>2023-03-02T11:45:00Z</updated>
+    <published>2023-03-02T10:45:00Z</published>
+    <updated>2023-03-02T10:45:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <blockquote>
@@ -2457,8 +2457,8 @@ done
       href="https://blog.separateconcerns.com/2023-02-03-staff-engineer-inch.html"
     />
     <id>tag:blog.separateconcerns.com,2023-02-03:staff-engineer-inch</id>
-    <published>2023-02-03T12:20:00Z</published>
-    <updated>2023-02-03T12:20:00Z</updated>
+    <published>2023-02-03T11:20:00Z</published>
+    <updated>2023-02-03T11:20:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>When I was <a href="https://blog.separateconcerns.com/2021-05-01-inch.html">hired at Inch</a> my &#8220;official&#8221; position quickly became an issue. For various reasons neither the title they wanted to give me initially (Engineering Manager) nor the one I would be given externally (CTO) nor the obvious Senior Software Engineer worked. So I proposed to help them define the next position on the technical ladder.</p>
@@ -2706,8 +2706,8 @@ StaffEng (Will Larson) - <a href="https://staffeng.com/">the website</a> and <a 
       href="https://blog.separateconcerns.com/2022-12-11-thoughts-4-sso-tax.html"
     />
     <id>tag:blog.separateconcerns.com,2022-12-11:thoughts-4-sso-tax</id>
-    <published>2022-12-11T18:20:00Z</published>
-    <updated>2022-12-11T18:20:00Z</updated>
+    <published>2022-12-11T17:20:00Z</published>
+    <updated>2022-12-11T17:20:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <blockquote>
@@ -2756,8 +2756,8 @@ charging extra for SAML support is fair.
       href="https://blog.separateconcerns.com/2022-11-18-thoughts-3-twitter.html"
     />
     <id>tag:blog.separateconcerns.com,2022-11-18:thoughts-3-twitter</id>
-    <published>2022-11-18T22:45:00Z</published>
-    <updated>2022-11-18T22:45:00Z</updated>
+    <published>2022-11-18T21:45:00Z</published>
+    <updated>2022-11-18T21:45:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <blockquote>
@@ -2780,8 +2780,8 @@ charging extra for SAML support is fair.
       href="https://blog.separateconcerns.com/2022-10-10-localua-pallene.html"
     />
     <id>tag:blog.separateconcerns.com,2022-10-10:localua-pallene</id>
-    <published>2022-10-10T17:50:00Z</published>
-    <updated>2022-10-10T17:50:00Z</updated>
+    <published>2022-10-10T15:50:00Z</published>
+    <updated>2022-10-10T15:50:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>Today I attended Lua Workshop, and Roberto Ierusalimschy&#8217;s keynote was about <a href="https://github.com/pallene-lang/pallene">Pallene</a>, a language designed as a system counterpart to Lua in a scripting architecture. The language is a typed subset of Lua and can be used to replace C or as an interface between Lua and C. It is still a work in progress, there is no stable release yet.</p>
@@ -2806,8 +2806,8 @@ CFLAGS="-I $(pwd)/.lua/include -O2" ./.lua/bin/pallenec fibonacci.pln
       href="https://blog.separateconcerns.com/2022-08-15-dependency-injection.html"
     />
     <id>tag:blog.separateconcerns.com,2022-08-15:dependency-injection</id>
-    <published>2022-08-15T21:20:00Z</published>
-    <updated>2022-08-15T21:20:00Z</updated>
+    <published>2022-08-15T19:20:00Z</published>
+    <updated>2022-08-15T19:20:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>In the list of application architecture patterns I like to use, <a href="https://en.wikipedia.org/wiki/Dependency_injection">Dependency Injection</a> comes rather high. Here is how and why I use it.</p>
@@ -2919,8 +2919,8 @@ o:as_json()
       href="https://blog.separateconcerns.com/2022-03-05-push-to-poll.html"
     />
     <id>tag:blog.separateconcerns.com,2022-03-05:push-to-poll</id>
-    <published>2022-03-05T13:00:00Z</published>
-    <updated>2022-04-04T09:45:00Z</updated>
+    <published>2022-03-05T12:00:00Z</published>
+    <updated>2022-04-04T07:45:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>Here I want to discuss a system design pattern that I call &#8220;push-to-poll&#8221;; if it has another name I am not aware of it. I have applied that pattern successfully a few times, and used systems that did not but should have way too often.</p>
@@ -3001,8 +3001,8 @@ register_with_server(poll_now)
       href="https://blog.separateconcerns.com/2022-02-05-gemini.html"
     />
     <id>tag:blog.separateconcerns.com,2022-02-05:gemini</id>
-    <published>2022-02-05T19:45:00Z</published>
-    <updated>2022-02-05T19:45:00Z</updated>
+    <published>2022-02-05T18:45:00Z</published>
+    <updated>2022-02-05T18:45:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>I have wanted to play with <a href="https://gemini.circumlunar.space">Gemini</a> for while now, so today being <a href="https://fosdem.org/2022/">the first day of FOSDEM</a> I decided to do what I would have done if I was in Brussels and hack on something between two talks.</p>
@@ -3020,8 +3020,8 @@ register_with_server(poll_now)
       href="https://blog.separateconcerns.com/2021-10-31-blog-posts-founders.html"
     />
     <id>tag:blog.separateconcerns.com,2021-10-31:blog-posts-founders</id>
-    <published>2021-10-31T15:45:00Z</published>
-    <updated>2021-10-31T15:45:00Z</updated>
+    <published>2021-10-31T14:45:00Z</published>
+    <updated>2021-10-31T14:45:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>Over the years, I have accumulated links to blog posts I intend to re-read every time find myself in a position to influence the early stage of a company.</p>
@@ -3156,8 +3156,8 @@ small teams are easier to build (hiring good people is hard).
       href="https://blog.separateconcerns.com/2021-05-01-inch.html"
     />
     <id>tag:blog.separateconcerns.com,2021-05-01:inch</id>
-    <published>2021-05-01T18:00:00Z</published>
-    <updated>2021-05-01T18:00:00Z</updated>
+    <published>2021-05-01T16:00:00Z</published>
+    <updated>2021-05-01T16:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>I have been working at <a href="https://inch.fr">Inch</a> for about a year and a half now, so I thought it was a good time to write a bit about what I do there.</p>
@@ -3204,8 +3204,8 @@ small teams are easier to build (hiring good people is hard).
       href="https://blog.separateconcerns.com/2021-03-27-archlinux-boot-xps-511.html"
     />
     <id>tag:blog.separateconcerns.com,2021-03-27:archlinux-boot-xps-511</id>
-    <published>2021-03-27T20:15:00Z</published>
-    <updated>2021-03-27T20:15:00Z</updated>
+    <published>2021-03-27T19:15:00Z</published>
+    <updated>2021-03-27T19:15:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>When I updated my Linux kernel to 5.11 I had the bad surprise to end up with a blinking underscore on reboot. It had been many years since an update had broken my system like that. I fixed it rather easily by booting in rescue mode and downgrading the kernel. I had no time to investigate so I just added <code>linux</code> to <code>IgnorePkg</code> at the time, But I don&#8217;t use Arch to run old kernels so today I took the time to fix it &#8220;properly&#8221;.</p>
@@ -3222,8 +3222,8 @@ small teams are easier to build (hiring good people is hard).
       href="https://blog.separateconcerns.com/2020-12-16-personal-news.html"
     />
     <id>tag:blog.separateconcerns.com,2020-12-16:personal-news</id>
-    <published>2020-12-16T13:50:00Z</published>
-    <updated>2020-12-16T13:50:00Z</updated>
+    <published>2020-12-16T12:50:00Z</published>
+    <updated>2020-12-16T12:50:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>I haven&#8217;t posted anything here for 6 months so I thought it would be a good idea to post a personal news update before the end of 2020.</p>
@@ -3254,8 +3254,8 @@ small teams are easier to build (hiring good people is hard).
       href="https://blog.separateconcerns.com/2020-06-19-quora-transparency-distributed.html"
     />
     <id>tag:blog.separateconcerns.com,2020-06-19:quora-transparency-distributed</id>
-    <published>2020-06-19T18:52:00Z</published>
-    <updated>2020-06-19T18:52:00Z</updated>
+    <published>2020-06-19T16:52:00Z</published>
+    <updated>2020-06-19T16:52:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>Yet another <a href="https://blog.separateconcerns.com/2020-04-09-quora-lua-call.html">Quora answer</a>, this time to with <a href="https://www.quora.com/Why-is-Transparency-a-major-issue-in-distributed-databases">this question</a> which I answered on August 24, 2016:</p>
@@ -3281,8 +3281,8 @@ small teams are easier to build (hiring good people is hard).
       href="https://blog.separateconcerns.com/2020-04-11-quora-class-concept.html"
     />
     <id>tag:blog.separateconcerns.com,2020-04-11:quora-class-concept</id>
-    <published>2020-04-11T13:00:00Z</published>
-    <updated>2020-04-11T13:00:00Z</updated>
+    <published>2020-04-11T11:00:00Z</published>
+    <updated>2020-04-11T11:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>Continuing my <a href="https://blog.separateconcerns.com/2020-04-09-quora-lua-call.html">Quora answers series</a> with <a href="https://www.quora.com/How-would-you-explain-the-concept-of-a-class-in-Python-to-a-10-year-old">this question</a> which I answered on June 26, 2012:</p>
@@ -3372,8 +3372,8 @@ sam.purr()
       href="https://blog.separateconcerns.com/2020-04-09-quora-lua-call.html"
     />
     <id>tag:blog.separateconcerns.com,2020-04-09:quora-lua-call</id>
-    <published>2020-04-09T08:40:00Z</published>
-    <updated>2020-04-09T08:40:00Z</updated>
+    <published>2020-04-09T06:40:00Z</published>
+    <updated>2020-04-09T06:40:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>From 2011 to 2014, I used to post answers on <a href="https://www.quora.com/">Quora</a>. I don&#8217;t anymore, because I don&#8217;t really like what the website has become. I have a copy of some of my answers <a href="http://files.catwell.info/misc/mirror/quora-answers/">here</a> but someone <a href="https://www.quora.com/What-is-the-__call-metamethod-in-Lua-and-what-are-some-of-its-uses-and-basic-examples/all_comments/Pierre-Chapuis?__nsrc__=4&amp;__snid3__=7556751152&amp;comment_id=135057589&amp;comment_type=2">commented</a> on one of my answers that it should be available more prominently on the Web, so I decided to repost a few of my answers here, starting with this one.</p>
@@ -3472,8 +3472,8 @@ useful but it is important not to abuse it. Simple code is better :)</p>
       href="https://blog.separateconcerns.com/2020-04-03-2fa-pass-oathtool.html"
     />
     <id>tag:blog.separateconcerns.com,2020-04-03:2fa-pass-oathtool</id>
-    <published>2020-04-03T09:05:00Z</published>
-    <updated>2024-02-10T21:30:00Z</updated>
+    <published>2020-04-03T07:05:00Z</published>
+    <updated>2024-02-10T20:30:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>If you&#8217;re like me, you don&#8217;t want to depend on your phone to log into a website, and you wish <a href="https://www.passwordstore.org">your favorite password manager</a> would support 2FA. Well, it can.</p>
@@ -3518,8 +3518,8 @@ complete -W "$l" 2fa
       href="https://blog.separateconcerns.com/2020-03-01-tools.html"
     />
     <id>tag:blog.separateconcerns.com,2020-03-01:tools</id>
-    <published>2020-03-01T18:00:00Z</published>
-    <updated>2023-05-01T12:00:00Z</updated>
+    <published>2020-03-01T17:00:00Z</published>
+    <updated>2023-05-01T10:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>A few days ago I read <a href="https://medium.com/@kunaljasty/how-a-2-person-startup-already-uses-26-other-tools-318da014cf38">this article</a> which made me want to list some of the tools used at the four startups I have worked at so far.</p>
@@ -3833,8 +3833,8 @@ Flowdock then <a href="https://slack.com">Slack</a> - Chat
       href="https://blog.separateconcerns.com/2019-10-19-opinions.html"
     />
     <id>tag:blog.separateconcerns.com,2019-10-19:opinions</id>
-    <published>2019-10-19T15:30:00Z</published>
-    <updated>2019-10-19T15:30:00Z</updated>
+    <published>2019-10-19T13:30:00Z</published>
+    <updated>2019-10-19T13:30:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>You know how some discussions can make you pause and introspect for a while after they happen? Well, I have had such a discussion recently about how strong my opinions are nowadays, and I decided to write something about it.</p>
@@ -3890,8 +3890,8 @@ Flowdock then <a href="https://slack.com">Slack</a> - Chat
       href="https://blog.separateconcerns.com/2019-06-01-truncating-alembic.html"
     />
     <id>tag:blog.separateconcerns.com,2019-06-01:truncating-alembic</id>
-    <published>2019-06-01T19:00:00Z</published>
-    <updated>2019-06-01T19:00:00Z</updated>
+    <published>2019-06-01T17:00:00Z</published>
+    <updated>2019-06-01T17:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>In projects that use SQLAlchemy and <a href="https://alembic.sqlalchemy.org">Alembic</a> via <a href="https://flask-migrate.readthedocs.io">Flask-Migrate</a>, you may want to truncate the migrations history. By that I mean: rewrite all the migrations up to some point as a single initial migration, to avoid replaying them every single time you create a new database instance. Of course, you only want to do that if you have already migrated all your database instances at least up to that point.</p>
@@ -3929,8 +3929,8 @@ git branch -D tmp-alembic
       href="https://blog.separateconcerns.com/2019-05-04-ssh-port.html"
     />
     <id>tag:blog.separateconcerns.com,2019-05-04:ssh-port</id>
-    <published>2019-05-04T18:00:00Z</published>
-    <updated>2020-04-07T10:40:00Z</updated>
+    <published>2019-05-04T16:00:00Z</published>
+    <updated>2020-04-07T08:40:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <section id="April-2020-update">
@@ -3960,8 +3960,8 @@ Accept=yes
       href="https://blog.separateconcerns.com/2019-04-23-spicing-things-up.html"
     />
     <id>tag:blog.separateconcerns.com,2019-04-23:spicing-things-up</id>
-    <published>2019-04-23T21:45:00Z</published>
-    <updated>2019-04-23T21:45:00Z</updated>
+    <published>2019-04-23T19:45:00Z</published>
+    <updated>2019-04-23T19:45:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>In my last post I <a href="https://blog.separateconcerns.com/2019-02-15-goodbye-lima.html#what-are-you-going-to-do-next">told you</a> I had plans that I was not ready to talk about yet. Well, the time has come. I am happy to announce that I am now the CTO and co-founder of a startup called <a href="https://hellochilli.com">Chilli</a>.</p>
@@ -3981,8 +3981,8 @@ Accept=yes
       href="https://blog.separateconcerns.com/2019-02-15-goodbye-lima.html"
     />
     <id>tag:blog.separateconcerns.com,2019-02-15:goodbye-lima</id>
-    <published>2019-02-15T19:40:00Z</published>
-    <updated>2019-02-15T19:40:00Z</updated>
+    <published>2019-02-15T18:40:00Z</published>
+    <updated>2019-02-15T18:40:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>You may have heard it already: five years after I <a href="https://blog.separateconcerns.com/2013-12-12-infinity-beyond.html">joined Lima</a>, the company <a href="https://medium.com/@MeetLima/this-time-its-goodbye-5573a97be7d4">is shutting down</a>.</p>
@@ -4068,8 +4068,8 @@ Accept=yes
       href="https://blog.separateconcerns.com/2019-02-15-architecture-principles.html"
     />
     <id>tag:blog.separateconcerns.com,2019-02-15:architecture-principles</id>
-    <published>2019-02-15T10:20:00Z</published>
-    <updated>2025-08-21T17:00:00Z</updated>
+    <published>2019-02-15T09:20:00Z</published>
+    <updated>2025-08-21T15:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>This is just a short post to share what I now consider, after 10 years in the industry (and almost twice as many writing code), my core software architecture principles.</p>
@@ -4109,8 +4109,8 @@ Accept=yes
       href="https://blog.separateconcerns.com/2018-03-30-gnome-touchpad.html"
     />
     <id>tag:blog.separateconcerns.com,2018-03-30:gnome-touchpad</id>
-    <published>2018-03-30T19:00:00Z</published>
-    <updated>2018-03-30T19:00:00Z</updated>
+    <published>2018-03-30T17:00:00Z</published>
+    <updated>2018-03-30T17:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>If you are like me, maybe you have recently updated your Linux laptop and found out that right click had stopped working on the touchpad. It took me half an hour to figure out why. I was looking at low-level stuff until I realized <code>libinput debug-events</code> saw the right thing:</p>
@@ -4140,8 +4140,8 @@ event11  POINTER_BUTTON    +3.49s
       href="https://blog.separateconcerns.com/2018-01-06-four-years.html"
     />
     <id>tag:blog.separateconcerns.com,2018-01-06:four-years</id>
-    <published>2018-01-06T14:10:00Z</published>
-    <updated>2018-01-06T14:10:00Z</updated>
+    <published>2018-01-06T13:10:00Z</published>
+    <updated>2018-01-06T13:10:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>Today marks the fourth birthday of <a href="https://blog.separateconcerns.com/2013-12-12-infinity-beyond.html">my joining Lima</a>, and it is a good occasion to talk a bit about some of the things I have been doing there.</p>
@@ -4193,8 +4193,8 @@ our Lua scripting layer, which I didn&#8217;t implement initially but maintain n
       href="https://blog.separateconcerns.com/2017-06-11-knetstat.html"
     />
     <id>tag:blog.separateconcerns.com,2017-06-11:knetstat</id>
-    <published>2017-06-11T19:10:00Z</published>
-    <updated>2017-06-11T19:10:00Z</updated>
+    <published>2017-06-11T17:10:00Z</published>
+    <updated>2017-06-11T17:10:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>A few weeks ago I was debugging network code, and I needed to check if some
@@ -4221,8 +4221,8 @@ situations, including when you need to check options like <code>SO_{RCV,SND}BUF<
       href="https://blog.separateconcerns.com/2017-05-07-itc.html"
     />
     <id>tag:blog.separateconcerns.com,2017-05-07:itc</id>
-    <published>2017-05-07T14:30:00Z</published>
-    <updated>2024-11-24T07:00:00Z</updated>
+    <published>2017-05-07T12:30:00Z</published>
+    <updated>2024-11-24T06:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <blockquote>
@@ -4311,8 +4311,8 @@ and <a href="https://ferd.ca/interval-tree-clocks.html">those</a> <a href="https
       href="https://blog.separateconcerns.com/2016-12-22-goodbye-lua-toolbox.html"
     />
     <id>tag:blog.separateconcerns.com,2016-12-22:goodbye-lua-toolbox</id>
-    <published>2016-12-22T08:00:00Z</published>
-    <updated>2016-12-22T08:00:00Z</updated>
+    <published>2016-12-22T07:00:00Z</published>
+    <updated>2016-12-22T07:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>In November 2013, I gave
@@ -4357,8 +4357,8 @@ a time where plain Lua support was not official).</p>
       href="https://blog.separateconcerns.com/2016-12-07-thoughts-2.html"
     />
     <id>tag:blog.separateconcerns.com,2016-12-07:thoughts-2</id>
-    <published>2016-12-07T22:35:00Z</published>
-    <updated>2016-12-07T22:35:00Z</updated>
+    <published>2016-12-07T21:35:00Z</published>
+    <updated>2016-12-07T21:35:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <section id="On-Call">
@@ -4427,8 +4427,8 @@ and find a way to make it take off.</p>
       href="https://blog.separateconcerns.com/2016-09-16-thoughts-1.html"
     />
     <id>tag:blog.separateconcerns.com,2016-09-16:thoughts-1</id>
-    <published>2016-09-16T17:00:00Z</published>
-    <updated>2016-09-16T17:00:00Z</updated>
+    <published>2016-09-16T15:00:00Z</published>
+    <updated>2016-09-16T15:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <section id="Thoughts">
@@ -4549,8 +4549,8 @@ scheduling (like Lua)&#8230;</p>
       href="https://blog.separateconcerns.com/2016-04-03-lmdb-format.html"
     />
     <id>tag:blog.separateconcerns.com,2016-04-03:lmdb-format</id>
-    <published>2016-04-03T23:00:00Z</published>
-    <updated>2016-04-03T23:00:00Z</updated>
+    <published>2016-04-03T21:00:00Z</published>
+    <updated>2016-04-03T21:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>At <a href="https://blog.separateconcerns.com/2019-02-15-goodbye-lima.html">Lima</a>, we use
@@ -4669,8 +4669,8 @@ style that favors performance to readability).</p>
       href="https://blog.separateconcerns.com/2016-01-03-five-books-2015.html"
     />
     <id>tag:blog.separateconcerns.com,2016-01-03:five-books-2015</id>
-    <published>2016-01-03T11:40:00Z</published>
-    <updated>2016-01-03T11:40:00Z</updated>
+    <published>2016-01-03T10:40:00Z</published>
+    <updated>2016-01-03T10:40:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>It is that time of the year where my RSS feed fills with book recommendations,
@@ -4787,8 +4787,8 @@ nice overview of what HFT is and why it may not be as evil as you think it is.</
       href="https://blog.separateconcerns.com/2015-11-06-e-voting.html"
     />
     <id>tag:blog.separateconcerns.com,2015-11-06:e-voting</id>
-    <published>2015-11-06T23:20:00Z</published>
-    <updated>2015-11-06T23:20:00Z</updated>
+    <published>2015-11-06T22:20:00Z</published>
+    <updated>2015-11-06T22:20:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>French politician Axelle Lemaire
@@ -4841,8 +4841,8 @@ came to learn about systems like Helios and Belenios in the first place.</p>
       href="https://blog.separateconcerns.com/2015-07-07-four-easy-reads-distsys.html"
     />
     <id>tag:blog.separateconcerns.com,2015-07-07:four-easy-reads-distsys</id>
-    <published>2015-07-07T09:00:00Z</published>
-    <updated>2016-05-16T17:20:00Z</updated>
+    <published>2015-07-07T07:00:00Z</published>
+    <updated>2016-05-16T15:20:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>Even among software people, those of us who work with distributed systems and algorithms are sometimes seen as mad scientists. We use words like like consistency, causality, consensus, commutativity, idempotence, immutability and &#8220;impossibility theorems&#8221;. How come we have to read papers and tear our hair out just to make software run correctly on a few machines? Are we all failed academics incapable of pragmatism?</p>
@@ -4885,8 +4885,8 @@ came to learn about systems like Helios and Belenios in the first place.</p>
       href="https://blog.separateconcerns.com/2015-06-18-love-hate-luajit.html"
     />
     <id>tag:blog.separateconcerns.com,2015-06-18:love-hate-luajit</id>
-    <published>2015-06-18T02:00:00Z</published>
-    <updated>2015-06-18T02:00:00Z</updated>
+    <published>2015-06-18T00:00:00Z</published>
+    <updated>2015-06-18T00:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <blockquote>
@@ -4916,8 +4916,8 @@ came to learn about systems like Helios and Belenios in the first place.</p>
       href="https://blog.separateconcerns.com/2015-03-08-travis-lua.html"
     />
     <id>tag:blog.separateconcerns.com,2015-03-08:travis-lua</id>
-    <published>2015-03-08T12:00:00Z</published>
-    <updated>2015-10-16T16:30:00Z</updated>
+    <published>2015-03-08T11:00:00Z</published>
+    <updated>2015-10-16T14:30:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p><a href="https://travis-ci.org">Travis</a> is a Continuous Integration service which is free for Open Source projects and has very good GitHub integration. We will see how to use it for your Lua projects.</p>
@@ -4939,8 +4939,8 @@ came to learn about systems like Helios and Belenios in the first place.</p>
       href="https://blog.separateconcerns.com/2015-01-04-indie-web.html"
     />
     <id>tag:blog.separateconcerns.com,2015-01-04:indie-web</id>
-    <published>2015-01-04T20:10:00Z</published>
-    <updated>2015-01-04T20:10:00Z</updated>
+    <published>2015-01-04T19:10:00Z</published>
+    <updated>2015-01-04T19:10:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>It is not a secret that I don&#8217;t like Web technology. I prefer XHTML to HTML5, I think JavaScript is a terrible language, and don&#8217;t get me started on microformats (let&#8217;s just say that SoC &gt; DRY&#8230;). I&#8217;d rather see this mess replaced by something much simpler that <strong>only</strong> deals with linked documents and feeds, and maybe a separate platform for portable applications.</p>
@@ -4958,8 +4958,8 @@ came to learn about systems like Helios and Belenios in the first place.</p>
       href="https://blog.separateconcerns.com/2014-11-23-lean-tools.html"
     />
     <id>tag:blog.separateconcerns.com,2014-11-23:lean-tools</id>
-    <published>2014-11-23T21:45:00Z</published>
-    <updated>2014-11-23T21:45:00Z</updated>
+    <published>2014-11-23T20:45:00Z</published>
+    <updated>2014-11-23T20:45:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>Two people I respect a lot, <a href="https://avdi.codes/about/">Avdi Grimm</a> and <a href="http://soveran.com/">Michel Martens</a>, are having <a href="http://devblog.avdi.org/2014/11/21/in-defense-of-fat-tools/">an interesting debate</a> about the complexity of programming tools and libraries.</p>
@@ -4986,8 +4986,8 @@ came to learn about systems like Helios and Belenios in the first place.</p>
       href="https://blog.separateconcerns.com/2014-10-24-cli-passwords.html"
     />
     <id>tag:blog.separateconcerns.com,2014-10-24:cli-passwords</id>
-    <published>2014-10-24T21:30:00Z</published>
-    <updated>2015-08-31T21:30:00Z</updated>
+    <published>2014-10-24T19:30:00Z</published>
+    <updated>2015-08-31T19:30:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>These days Linux systems tend to open graphical password prompts when a CLI
@@ -5027,8 +5027,8 @@ terminal, create the file <code>~/.gnupg/gpg-agent.conf</code> with the followin
       href="https://blog.separateconcerns.com/2014-09-25-microservices.html"
     />
     <id>tag:blog.separateconcerns.com,2014-09-25:microservices</id>
-    <published>2014-09-25T23:00:00Z</published>
-    <updated>2014-09-25T23:00:00Z</updated>
+    <published>2014-09-25T21:00:00Z</published>
+    <updated>2014-09-25T21:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>Several people have asked me what I think about microservices. The tl;dr is: I like small services, but I don&#8217;t like what some call microservices, which is isolating every single feature within its own service and aiming at services at small as possible (I heard about a target of &#8220;a few hundred lines of code&#8221; per service and a hard limit at 5000 LOC).</p>
@@ -5055,8 +5055,8 @@ terminal, create the file <code>~/.gnupg/gpg-agent.conf</code> with the followin
       href="https://blog.separateconcerns.com/2014-09-20-iris.html"
     />
     <id>tag:blog.separateconcerns.com,2014-09-20:iris</id>
-    <published>2014-09-20T15:00:00Z</published>
-    <updated>2014-09-20T15:00:00Z</updated>
+    <published>2014-09-20T13:00:00Z</published>
+    <updated>2014-09-20T13:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p><a href="https://github.com/project-iris/iris">Iris</a> is a &#8220;decentralized Cloud messaging&#8221; middleware that I have really started looking into with the recent release of version 0.3.0. It had struck me as interesting when I first heard of it <a href="https://www.youtube.com/watch?v=WTRORimPvHE">at FOSDEM 2014</a>. The reason for that, beyond the great presentation skills of its author, is that it implements principles I think are sound to build SOA upon.</p>
@@ -5254,8 +5254,8 @@ c:teardown()
       href="https://blog.separateconcerns.com/2014-05-28-hacker-founders.html"
     />
     <id>tag:blog.separateconcerns.com,2014-05-28:hacker-founders</id>
-    <published>2014-05-28T00:00:01Z</published>
-    <updated>2014-05-28T00:00:01Z</updated>
+    <published>2014-05-27T22:00:01Z</published>
+    <updated>2014-05-27T22:00:01Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>Note: I posted what follows <a href="https://gist.github.com/catwell/5387617">as a Gist</a> over a year ago. Recently I was looking for it and couldn&#8217;t find it, so I am re-posting it here for the next time.</p>
@@ -5297,8 +5297,8 @@ guys.</p>
       href="https://blog.separateconcerns.com/2014-05-27-magic.html"
     />
     <id>tag:blog.separateconcerns.com,2014-05-27:magic</id>
-    <published>2014-05-27T23:30:00Z</published>
-    <updated>2014-05-27T23:30:00Z</updated>
+    <published>2014-05-27T21:30:00Z</published>
+    <updated>2014-05-27T21:30:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>I have just watched a small <a href="https://www.youtube.com/watch?v=Ia55clAtdMs">TEDx talk by Simon Peyton Jones</a> (of Haskell fame) on CS education. Something he said struck me as relevant to what I was saying in <a href="https://blog.separateconcerns.com/2014-04-25-design-alan-kay.html">my last post</a>:</p>
@@ -5318,8 +5318,8 @@ guys.</p>
       href="https://blog.separateconcerns.com/2014-04-25-design-alan-kay.html"
     />
     <id>tag:blog.separateconcerns.com,2014-04-25:design-alan-kay</id>
-    <published>2014-04-25T00:30:00Z</published>
-    <updated>2014-04-25T00:30:00Z</updated>
+    <published>2014-04-24T22:30:00Z</published>
+    <updated>2014-04-24T22:30:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>I have long been thinking that there is something wrong with modern product design thinking. I see designs that trade off almost all power, flexibility and composability for a smoother learning curve. I see designs that remove explicit controls and replace them by magic, choosing to hide essential complexity instead of reducing accidental complexity. I see designs optimized for new users and prospects instead of regular users, and designers who apparently consider documentation as something evil.</p>
@@ -5368,8 +5368,8 @@ guys.</p>
       href="https://blog.separateconcerns.com/2014-04-22-learning-small.html"
     />
     <id>tag:blog.separateconcerns.com,2014-04-22:learning-small</id>
-    <published>2014-04-22T23:59:00Z</published>
-    <updated>2014-04-22T23:59:00Z</updated>
+    <published>2014-04-22T21:59:00Z</published>
+    <updated>2014-04-22T21:59:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <section id="Writing-a-Lisp">
@@ -5399,8 +5399,8 @@ guys.</p>
       href="https://blog.separateconcerns.com/2014-03-03-sublime-packages.html"
     />
     <id>tag:blog.separateconcerns.com,2014-03-03:sublime-packages</id>
-    <published>2014-03-03T21:30:00Z</published>
-    <updated>2014-03-03T21:30:00Z</updated>
+    <published>2014-03-03T20:30:00Z</published>
+    <updated>2014-03-03T20:30:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>I have finally decided to configure Sublime Text 2 to have it autocomplete
@@ -5453,8 +5453,8 @@ end]]&gt;&lt;/content&gt;
       href="https://blog.separateconcerns.com/2014-02-09-fosdem-2014.html"
     />
     <id>tag:blog.separateconcerns.com,2014-02-09:fosdem-2014</id>
-    <published>2014-02-09T19:30:00Z</published>
-    <updated>2014-02-09T19:30:00Z</updated>
+    <published>2014-02-09T18:30:00Z</published>
+    <updated>2014-02-09T18:30:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>Last weekend I attended <a href="https://fosdem.org/2014/">FOSDEM</a>, the largest Open Source conference in Europe that takes place every year in Brussels. This was my fourth year in a row. Not much Lua this year, although I saw some <a href="https://github.com/ladc">familiar</a> <a href="http://specfun.inria.fr/tassi/">faces</a>. But I did listen to lots of interesting talks which I will try to summarize briefly.</p>
@@ -5530,8 +5530,8 @@ end]]&gt;&lt;/content&gt;
       href="https://blog.separateconcerns.com/2014-01-03-lua-module-policy.html"
     />
     <id>tag:blog.separateconcerns.com,2014-01-03:lua-module-policy</id>
-    <published>2014-01-03T00:00:01Z</published>
-    <updated>2014-01-03T00:00:01Z</updated>
+    <published>2014-01-02T23:00:01Z</published>
+    <updated>2014-01-02T23:00:01Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>Hisham just published an article about his personal <a href="http://hisham.hm/2014/01/02/how-to-write-lua-modules-in-a-post-module-world/">guidelines for writing Lua modules</a>. Interestingly, I do a lot of things differently. Let us see how.</p>
@@ -5697,8 +5697,8 @@ return {new = new}
       href="https://blog.separateconcerns.com/2014-01-02-clang-forgotten.html"
     />
     <id>tag:blog.separateconcerns.com,2014-01-02:clang-forgotten</id>
-    <published>2014-01-02T22:10:00Z</published>
-    <updated>2014-01-02T22:10:00Z</updated>
+    <published>2014-01-02T21:10:00Z</published>
+    <updated>2014-01-02T21:10:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>Thanks to my <a href="https://blog.separateconcerns.com/2013-12-12-infinity-beyond.html">new job</a> I will have the opportunity to write a lot more C than in the last three years. To prepare for this, I decided to read some old C89 books again and see what I remembered. Here are some of the quirks I had forgotten (or never known about).</p>
@@ -5753,8 +5753,8 @@ typedef const struct stuff_s stuff_t;
       href="https://blog.separateconcerns.com/2013-12-12-infinity-beyond.html"
     />
     <id>tag:blog.separateconcerns.com,2013-12-12:infinity-beyond</id>
-    <published>2013-12-12T21:30:00Z</published>
-    <updated>2013-12-12T21:30:00Z</updated>
+    <published>2013-12-12T20:30:00Z</published>
+    <updated>2013-12-12T20:30:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <section id="Goodbye-Moodstocks">
@@ -5784,8 +5784,8 @@ typedef const struct stuff_s stuff_t;
       href="https://blog.separateconcerns.com/2013-09-01-lapis.html"
     />
     <id>tag:blog.separateconcerns.com,2013-09-01:lapis</id>
-    <published>2013-09-01T16:00:00Z</published>
-    <updated>2013-09-01T16:00:00Z</updated>
+    <published>2013-09-01T14:00:00Z</published>
+    <updated>2013-09-01T14:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>I use different programming languages for different tasks, but the one I prefer is <a href="http://www.lua.org/">Lua</a>. I have always wanted to use it for the Web, and in a way I already do: this blog is a static website generated by a custom Lua program. I have also written several services that can speak HTTP+JSON in Lua. For larger, HTML-based Web applications however, I have never found the framework I wanted. I have tried <a href="http://keplerproject.github.io/orbit/">several</a> <a href="https://github.com/zedshaw/Tir">of</a> <a href="https://github.com/nrk/mercury">them</a>, but kept coming back to <a href="http://flask.pocoo.org/">more dependable platforms</a>.</p>
@@ -5806,8 +5806,8 @@ typedef const struct stuff_s stuff_t;
       href="https://blog.separateconcerns.com/2013-06-20-three-years-proprietary-projects.html"
     />
     <id>tag:blog.separateconcerns.com,2013-06-20:three-years-proprietary-projects</id>
-    <published>2013-06-20T00:40:00Z</published>
-    <updated>2015-11-11T21:15:00Z</updated>
+    <published>2013-06-19T22:40:00Z</published>
+    <updated>2015-11-11T20:15:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>Some of the code I write is Open Source, but these days most of it is closed source and property of <a href="http://www.moodstocks.com/">Moodstocks</a>, the startup I work for. For the last three years I have had the chance to work on a lot of really interesting projects, the most significant of which I will talk about now. If you are still a student, maybe that can inspire you to join a startup. Maybe you will even decide to join us in our quest to advance mobile image recognition and applications in general.</p>
@@ -5936,8 +5936,8 @@ when you succeed it makes your applications a <strong>lot</strong> better.
       href="https://blog.separateconcerns.com/2013-05-28-coherence-checks.html"
     />
     <id>tag:blog.separateconcerns.com,2013-05-28:coherence-checks</id>
-    <published>2013-05-28T23:10:00Z</published>
-    <updated>2013-05-28T23:10:00Z</updated>
+    <published>2013-05-28T21:10:00Z</published>
+    <updated>2013-05-28T21:10:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>Recently I found a rare, ugly bug in a piece of software that had been in production at Moodstocks for 6 months. The bug itself is not that interesting, but the way I found and fixed it is.</p>
@@ -5996,8 +5996,8 @@ reconciliation scripts to fix them.
       href="https://blog.separateconcerns.com/2013-03-24-vogels-skills.html"
     />
     <id>tag:blog.separateconcerns.com,2013-03-24:vogels-skills</id>
-    <published>2013-03-24T19:30:00Z</published>
-    <updated>2013-03-24T19:30:00Z</updated>
+    <published>2013-03-24T18:30:00Z</published>
+    <updated>2013-03-24T18:30:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>I found a talk by Werner Vogels, the CTO of Amazon <a href="https://blog.separateconcerns.com/2013-01-02-startups-soa.html">who is a role model of mine</a>, on <a href="http://skillsmatter.com/podcast/design-architecture/21st-century-application-architectures">21st century application architectures</a>.</p>
@@ -6025,8 +6025,8 @@ reconciliation scripts to fix them.
       href="https://blog.separateconcerns.com/2013-03-03-viterbi-algorithm.html"
     />
     <id>tag:blog.separateconcerns.com,2013-03-03:viterbi-algorithm</id>
-    <published>2013-03-03T18:00:01Z</published>
-    <updated>2013-03-03T18:00:01Z</updated>
+    <published>2013-03-03T17:00:01Z</published>
+    <updated>2013-03-03T17:00:01Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <section id="The-State-Machine">
@@ -6242,8 +6242,8 @@ print(100*ok/L)
       href="https://blog.separateconcerns.com/2013-01-28-algorithms-data-structures-protocols.html"
     />
     <id>tag:blog.separateconcerns.com,2013-01-28:algorithms-data-structures-protocols</id>
-    <published>2013-01-28T22:00:00Z</published>
-    <updated>2013-01-28T22:00:00Z</updated>
+    <published>2013-01-28T21:00:00Z</published>
+    <updated>2013-01-28T21:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <section id="Algorithms-Data-Structures">
@@ -6274,8 +6274,8 @@ data move around? Inside the computer, data mostly circulates in buses. Between 
       href="https://blog.separateconcerns.com/2013-01-02-startups-soa.html"
     />
     <id>tag:blog.separateconcerns.com,2013-01-02:startups-soa</id>
-    <published>2013-01-02T14:00:01Z</published>
-    <updated>2013-01-02T14:00:01Z</updated>
+    <published>2013-01-02T13:00:01Z</published>
+    <updated>2013-01-02T13:00:01Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <section id="What-is-SOA">
@@ -6332,8 +6332,8 @@ data move around? Inside the computer, data mostly circulates in buses. Between 
       href="https://blog.separateconcerns.com/2013-01-02-hello-world.html"
     />
     <id>tag:blog.separateconcerns.com,2013-01-02:hello-world</id>
-    <published>2013-01-02T14:00:00Z</published>
-    <updated>2013-01-02T14:00:00Z</updated>
+    <published>2013-01-02T13:00:00Z</published>
+    <updated>2013-01-02T13:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p><a href="https://catwell.info">I</a> have not had a blog for over two years. The main reason for that is that writing is hard, so I went shopping on Twitter instead.</p>
@@ -6357,8 +6357,8 @@ greet("World")
       href="https://blog.separateconcerns.com/2012-01-09-ubiquitous.html"
     />
     <id>tag:blog.separateconcerns.com,2012-01-09:ubiquitous</id>
-    <published>2012-01-09T12:00:00Z</published>
-    <updated>2012-01-09T12:00:00Z</updated>
+    <published>2012-01-09T11:00:00Z</published>
+    <updated>2012-01-09T11:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>I used to enjoy predicting how computing technology would evolve; it was like a game for me, and I was not too bad at it. But for a few years I have felt like I could not predict anything anymore. Things went too fast, and that bothered me.</p>
@@ -6377,8 +6377,8 @@ to the tablets of the attendees. Computation jumping from my desktop computer at
       href="https://blog.separateconcerns.com/2010-02-04-fr-neutralite-du-net.html"
     />
     <id>tag:blog.separateconcerns.com,2010-02-04:fr-neutralite-du-net</id>
-    <published>2010-02-04T12:00:00Z</published>
-    <updated>2010-02-04T12:00:00Z</updated>
+    <published>2010-02-04T11:00:00Z</published>
+    <updated>2010-02-04T11:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>Tout le monde parle de neutralité du Net en ce moment. J&#8217;ai pensé que ça pourrait être une bonne idée de faire un point là-dessus, parce que j&#8217;entends et je lis tout et n&#8217;importe quoi, en particulier dans la presse française.</p>
@@ -6408,8 +6408,8 @@ risquent pas d&#8217;être d&#8217;accord.</p>
       href="https://blog.separateconcerns.com/2010-01-30-fr-raleries.html"
     />
     <id>tag:blog.separateconcerns.com,2010-01-30:fr-raleries</id>
-    <published>2010-01-30T12:00:00Z</published>
-    <updated>2010-01-30T12:00:00Z</updated>
+    <published>2010-01-30T11:00:00Z</published>
+    <updated>2010-01-30T11:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>Ceux qui me connaissent savent que râler, je sais faire. J&#8217;essaie d&#8217;éviter autant que possible, mais parfois c&#8217;est nécessaire.</p>
@@ -6457,8 +6457,8 @@ risquent pas d&#8217;être d&#8217;accord.</p>
       href="https://blog.separateconcerns.com/2009-12-04-fr-gtd-roi.html"
     />
     <id>tag:blog.separateconcerns.com,2009-12-04:fr-gtd-roi</id>
-    <published>2009-12-04T12:00:00Z</published>
-    <updated>2009-12-04T12:00:00Z</updated>
+    <published>2009-12-04T11:00:00Z</published>
+    <updated>2009-12-04T11:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>J&#8217;ai l&#8217;impression que <a href="https://blog.separateconcerns.com/2009-11-16-fr-gen-y.html">mon article</a> sur les habitudes consommatrices de temps en ligne avait intéressé quelques personnes. Je vais revenir brièvement sur ce qui est arrivé depuis et en tirer un rapide bilan.</p>
@@ -6476,8 +6476,8 @@ risquent pas d&#8217;être d&#8217;accord.</p>
       href="https://blog.separateconcerns.com/2009-12-04-fr-chrome-os.html"
     />
     <id>tag:blog.separateconcerns.com,2009-12-04:fr-chrome-os</id>
-    <published>2009-12-04T12:00:00Z</published>
-    <updated>2009-12-04T12:00:00Z</updated>
+    <published>2009-12-04T11:00:00Z</published>
+    <updated>2009-12-04T11:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>J&#8217;avais promis que j&#8217;en parlerais : comme tout le monde (ou pas), j&#8217;ai regardé <a href="http://www.chromium.org/chromium-os">les vidéos</a> diffusées par Google sur Chrome OS et je me suis fait ma petite idée.</p>
@@ -6498,8 +6498,8 @@ risquent pas d&#8217;être d&#8217;accord.</p>
       href="https://blog.separateconcerns.com/2009-11-24-fr-websites-that-should-not-exist.html"
     />
     <id>tag:blog.separateconcerns.com,2009-11-24:fr-websites-that-should-not-exist</id>
-    <published>2009-11-24T12:00:00Z</published>
-    <updated>2009-11-24T12:00:00Z</updated>
+    <published>2009-11-24T11:00:00Z</published>
+    <updated>2009-11-24T11:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>Regarder le <a href="http://www.alexa.com/topsites">top 10 d&#8217;Alexa</a> peut faire peur quand on connait un peu ce qu&#8217;est Internet. Ce classement par trafic est assez représentatif de l&#8217;évolution du web ces quelques années. On y trouve évidemment beaucoup de moteurs de recherche : google.com (1er), yahoo.com (3e), live.com (5e), baidu.com (8e) et yahoo.jp (10e). msn.com, le portail de Microsoft, arrive en 9e position, pourquoi pas. Le problème, c&#8217;est les quatre autres. Prenons-les dans le désordre.</p>
@@ -6550,8 +6550,8 @@ risquent pas d&#8217;être d&#8217;accord.</p>
       href="https://blog.separateconcerns.com/2009-11-16-fr-gen-y.html"
     />
     <id>tag:blog.separateconcerns.com,2009-11-16:fr-gen-y</id>
-    <published>2009-11-16T12:00:00Z</published>
-    <updated>2009-11-16T12:00:00Z</updated>
+    <published>2009-11-16T11:00:00Z</published>
+    <updated>2009-11-16T11:00:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>Hier soir, j&#8217;ai joué à <a href="http://www.bigbluecup.com/yabb/index.php?topic=39327.0">Featherweight</a>, un bon petit jeu d&#8217;aventure indépendant qui se finit en quelques minutes. J&#8217;ai beaucoup apprécié, et ça m&#8217;a fait réaliser que ça faisait longtemps que je n&#8217;avais pas fait quelque chose du genre. La raison ? Je suis atteint d&#8217;un syndrome qui touche beaucoup de gens de ma génération : je passe la plupart de mon temps libre à faire des choses inintéressantes sur mon PC. Du coup, je ne fais plus un certain nombre de choses que je faisais avant et qui me plaisaient beaucoup, comme jouer à des jeux vidéos ou coder pour moi, et ça me manque. C&#8217;est grave docteur, ça se soigne ? À mon avis oui, mais il va falloir reprendre les choses en main et supprimer un certain nombre de distractions.</p>

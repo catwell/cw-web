@@ -37,7 +37,7 @@ local function parse_date(s: string): Date
 end
 
 local function date_to_atom(date: Date): string
-    return Date.Format("yyyy-mm-ddTHH:MM:SSZ"):tostring(date) .. "Z"
+    return Date.Format("yyyy-mm-ddTHH:MM:SS"):tostring(date:toUTC()) .. "Z"
 end
 
 ---
@@ -191,11 +191,9 @@ local function process_file(path: string): Entry
     local metadata = parsed_entry.metadata
     local pdate = assert(parse_date(metadata.published))
     local sdate = Date.Format("yyyy-mm-dd"):tostring(pdate)
-    pdate:toUTC()
     local udate = pdate
     if metadata.updated then
-        udate = parse_date(metadata.updated)
-        udate:toUTC()
+        udate = assert(parse_date(metadata.updated))
     end
     local fragment = fnpart:sub(12)
     assert(fmt("%s-%s", sdate, fragment) == fnpart, "mismatching dates")
