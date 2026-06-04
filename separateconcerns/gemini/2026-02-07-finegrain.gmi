@@ -1,9 +1,9 @@
 # What I do at Finegrain
-published 2026-02-07
+published 2026-02-07,updated 2026-06-04
 
 > Note: Yes, I use em-dashes when I write, and no, this is not AI. As always I only use "AI" for spellchecking.
 
-I have been at Finegrain [1] for three years [2] so it is time for the next [3] article in [4] this series [5] where I share a bit about what I’m doing at work.
+I have been at Finegrain [1] for three years [2], so it is time for the next [3] article in [4] this series [5] where I share a bit about what I’m doing at work.
 
 => https://finegrain.ai 1: https://finegrain.ai
 => https://blog.separateconcerns.com/2023-03-31-joining-finegrain.html 2: https://blog.separateconcerns.com/2023-03-31-joining-finegrain.html
@@ -13,7 +13,7 @@ I have been at Finegrain [1] for three years [2] so it is time for the next [3] 
 
 ## What Finegrain does
 
-I am going to skip things we have done in the early days [6] that have become irrelevant and focus on what we are doing now.
+I am going to skip things we did in the early days [6] that have become irrelevant and focus on what we are doing now.
 
 So first, we make image editing models. We train them, we evaluate them, and we ship them in a format customers can integrate. We have always focused on keeping the models small and efficient, initially so we could have a fast and cheap API, and now so they can run entirely on edge devices such as mobile phones.
 
@@ -60,27 +60,40 @@ The stack is nothing too fancy; I picked technologies I had previous experience 
 
 ## The iOS SDK
 
-For some time now, the main focus of Finegrain is running all our models on mobile devices directly. This means we had to port our inference code to run on iOS (for now) using Apple's Neural Engine (ANE) [20].
+For some time now, the main focus of Finegrain is running all our models on mobile devices directly. This means we had to port our inference code to run on iOS (for now) using Apple's Neural Engine (ANE) [20] and/or the GPU.
 
 This involves, among other things, compiling and quantizing the model using Apple's Core ML Tools [21]. This is not a straightforward step; most models cannot be compiled out of the box and require architectural changes first. As for quantization, obtaining high average quantization ratios while retaining precision is a craft that would deserve its own blog post.
 
-Once you have that model, you need the equivalent of PHX's processors, but for the mobile device. I use PHX as the reference codebase, but porting to Swift on iOS is not as straightforward as one may think. On mobile anything can quickly become a bottleneck, and if you are not careful you end up spending more time doing pre- and post-processing than running the model. We use Apple's Accelerate framework [22] extensively to speed up those parts.
+Once you have that model, you need the equivalent of PHX's processors, but for the mobile device. I use PHX as the reference codebase, but porting to Swift on iOS is not as straightforward as one may think. On mobile, anything can quickly become a bottleneck, and if you are not careful you end up spending more time doing pre- and post-processing than running the model. We use Apple's Accelerate framework [22] extensively to speed up those parts.
+
+Another notable thing I have implemented is the ability to swap the capabilities (skills) of the CoreML model. Core ML has Multifunction Models [23], but in theory they are built by compiling each function and merging them once on a Mac. With the tooling I have designed, we can create new functions for a given backbone in pure PyTorch, and add / remove / swap functions in the model almost instantly on any machine including an iPhone. This makes it possible, for instance, to update a single function in an application without re-downloading the whole model and without waiting for device specialization.
 
 => https://en.wikipedia.org/wiki/Neural_Engine 20: https://en.wikipedia.org/wiki/Neural_Engine
 => https://apple.github.io/coremltools/docs-guides/ 21: https://apple.github.io/coremltools/docs-guides/
 => https://developer.apple.com/documentation/accelerate 22: https://developer.apple.com/documentation/accelerate
+=> https://apple.github.io/coremltools/docs-guides/source/multifunction-models.html 23: https://apple.github.io/coremltools/docs-guides/source/multifunction-models.html
 
 ## Science and hacks
 
-All of this is advanced but straightforward engineering, but if you want to be good in this field you need to go beyond that and implement cutting-edge research or innovate.
+All I have mentioned so far is important but straightforward engineering, but if you want to be notable in this field you need to go beyond that and implement cutting-edge research or innovate.
 
-A large part of it is in model training and the datasets we use, of course. I am hardly the person who trains the most models at the company — I do a little, mostly focusing on performance-related things. We all read papers in the domain and discuss approaches to try all the time though. Personally, I have been studying the things "around" the main model a lot, including solvers, NFE (Number of Function Evaluations) reduction techniques, and recently auto-encoders.
+Nobody in the current Finegrain core team is really a pure software engineer or a pure "AI researcher". We all read papers in our field and discuss approaches to solve our problems. We each have our affinities, of course. Personally, I have been studying the things "around" the main model a lot, including solvers, NFE (Number of Function Evaluations) reduction methods and auto-encoders.
 
-In addition to that, there are a few ideas I have had and implemented that make a difference. The most important one is the set of techniques we use to edit high-resolution images with a model backbone that works at much lower resolution. We call them "fixes" and let's just say having a background in signal processing and classical computer vision as well as a good understanding of latent spaces helps a lot there. I have spent — and still spend — a lot of time on this, and it is a crucial part of what we do, so if you were to ask me what I am most proud of so far, that would be it.
+One thing I worked on that made a difference is the set of techniques we use to edit high-resolution images with a model backbone that works at a lower intrinsic resolution, that we call "fixes". Having a background in signal processing and classical computer vision as well as a good understanding of latent spaces helps a lot there.
 
-Another notable thing I have implemented recently is the ability to swap the capabilities (skills) of the CoreML model. Core ML has Multifunction Models [23], but in theory they are built by compiling each function and merging them once on a Mac. With the tooling I have designed, we can create new functions for a given backbone in pure PyTorch, and add / remove / swap functions in the model almost instantly on any machine including an iPhone. This makes it possible, for instance, to update a single function in an application without re-downloading the whole model.
+## Training models
 
-As always, I haven't talked about everything I do. We are a small company and I am still a jack of all trades kind of guy, so I always write tooling and fix bugs here and there. That should give you a decent idea of what my day-to-day is about. As always, if something piqued your interest, feel free to get in touch [24].
+For the first two years I spent at Finegrain I used to say I did a bit of everything except training models. But ultimately my goal is to solve problems, and sometimes it does involve training. I am still by no means the person who trains the most on the team, but I do a little, mostly focusing on performance-related things.
 
-=> https://apple.github.io/coremltools/docs-guides/source/multifunction-models.html 23: https://apple.github.io/coremltools/docs-guides/source/multifunction-models.html
-=> https://catwell.info 24: https://catwell.info
+For confidentiality reasons, I won't get into details about that work, but I can say that we use (non-exclusively) Modal [24] for serverless training and Trackio [25] for experiment tracking. I wrote and open-sourced two tools to help with this: trackio-tool [26] to merge and synchronize runs across remote machines and Modal environments, and multimodal [27] to simply track the progress of several Modal jobs on the CLI. They're vibe-coded, but I use them almost every day.
+
+=> https://modal.com 24: https://modal.com
+=> https://github.com/gradio-app/trackio 25: https://github.com/gradio-app/trackio
+=> https://github.com/finegrain-ai/trackio-tool 26: https://github.com/finegrain-ai/trackio-tool
+=> https://github.com/catwell/multimodal 27: https://github.com/catwell/multimodal
+
+## Coda
+
+As always, I haven't talked about everything I do. We are a small company and I am still a jack-of-all-trades kind of guy, so I always write tooling and fix bugs here and there. That should give you a decent idea of what my day-to-day is about. As always, if something piqued your interest, feel free to get in touch [28].
+
+=> https://catwell.info 28: https://catwell.info
