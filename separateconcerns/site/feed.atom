@@ -10,11 +10,33 @@
     rel="alternate" type="application/xhtml+xml"
   />
   <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
-  <updated>2026-07-04T09:57:55Z</updated>
+  <updated>2026-08-04T19:37:37Z</updated>
   <author>
     <name>Pierre 'catwell' Chapuis</name>
     <uri>https://catwell.info/</uri>
   </author>
+  <entry>
+    <title>Thoughts &amp; Links 16</title>
+    <link
+      rel="alternate" type="text/html"
+      href="https://blog.separateconcerns.com/2026-08-04-thoughts-16.html"
+    />
+    <id>tag:blog.separateconcerns.com,2026-08-04:thoughts-16</id>
+    <published>2026-08-04T19:35:00Z</published>
+    <updated>2026-08-04T19:35:00Z</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <blockquote>
+<p>&#8220;Thoughts &amp; Links&#8221; are posts mixing topics on my mind and interesting things I have read recently. Less thought-out than regular posts. This one is a bit different from usual, because there&#8217;s mostly one thing on my mind so I&#8217;m trying a different format.</p>
+</blockquote>
+<p>I don&#8217;t think most people have realized what automatic coding means yet. Before, if we needed a tool, we had a choice between settling for the closest thing off-the-shelf and spending hours implementing it. Now we can just wish it into existence. Over the last few months, I have done that several times. Some I shared publicly (<a href="https://github.com/finegrain-ai/trackio-tool">trackio-tool</a>, <a href="https://github.com/catwell/multimodal">multimodal</a>), some just with colleagues, and some are purely <a href="https://danilafe.com/blog/llm_personal_software/">personal software</a>.</p>
+<p>This is just the early signs of the coming world where <a href="https://itcanthink.substack.com/p/what-would-you-do-if-labor-was-free">labor is almost free</a>. In this world, all we know about work becomes obsolete. <a href="https://medium.com/oss-ventures/ai-era-field-notes-leading-through-fog-of-war-548ebd29eedc">Kaizen becomes the wrong tool</a>. Disruption comes from <a href="https://medium.com/oss-ventures/chocolate-covered-broccoli-or-why-most-genai-entreprise-transformations-fail-4b21b280f626">technical outsiders</a> with enough <a href="https://www.seangoedecke.com/llms-reward-expertise/">domain knowledge</a>. Even <a href="https://www.allthingsdistributed.com/2026/06/return-to-two-pizza-culture.html">Amazon is adapting</a>. &#8220;Prototype first, ask later&#8221; was a powerful but costly approach; it will become the norm.</p>
+<p>We must be careful, though. It took us some time to notice how doomscrolling affected us; this could be much worse. Perhaps the same machines that <a href="https://glyphack.com/attention/">kill our attention</a> and <a href="https://ergosphere.blog/posts/the-machines-are-fine/">threaten our education</a> can be <a href="https://zserge.com/posts/socreates/">used in creative ways</a> to fix it.</p>
+<p>Some of you probably still think I&#8217;ve gone off the deep end, that all of this will just die out and we&#8217;ll go back to our normal lives. I&#8217;ll just stop trying to convince you — <strong>you&#8217;re absolutely right</strong>; after all, <a href="https://maxleiter.com/blog/weights">they&#8217;re just made out of weights</a>.</p>
+
+      </div>
+    </content>
+  </entry>
   <entry>
     <title>Three kinds of startups</title>
     <link

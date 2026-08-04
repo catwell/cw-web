@@ -1,0 +1,15 @@
+```=lua-meta
+title = "Thoughts & Links 16"
+published = "2026-08-04 21:35:00"
+description = "Thoughts, August 2026."
+```
+
+> "Thoughts & Links" are posts mixing topics on my mind and interesting things I have read recently. Less thought-out than regular posts. This one is a bit different from usual, because there's mostly one thing on my mind so I'm trying a different format.
+
+I don't think most people have realized what automatic coding means yet. Before, if we needed a tool, we had a choice between settling for the closest thing off-the-shelf and spending hours implementing it. Now we can just wish it into existence. Over the last few months, I have done that several times. Some I shared publicly ([trackio-tool](https://github.com/finegrain-ai/trackio-tool), [multimodal](https://github.com/catwell/multimodal)), some just with colleagues, and some are purely [personal software](https://danilafe.com/blog/llm_personal_software/).
+
+This is just the early signs of the coming world where [labor is almost free](https://itcanthink.substack.com/p/what-would-you-do-if-labor-was-free). In this world, all we know about work becomes obsolete. [Kaizen becomes the wrong tool](https://medium.com/oss-ventures/ai-era-field-notes-leading-through-fog-of-war-548ebd29eedc). Disruption comes from [technical outsiders](https://medium.com/oss-ventures/chocolate-covered-broccoli-or-why-most-genai-entreprise-transformations-fail-4b21b280f626) with enough [domain knowledge](https://www.seangoedecke.com/llms-reward-expertise/). Even [Amazon is adapting](https://www.allthingsdistributed.com/2026/06/return-to-two-pizza-culture.html). "Prototype first, ask later" was a powerful but costly approach; it will become the norm.
+
+We must be careful, though. It took us some time to notice how doomscrolling affected us; this could be much worse. Perhaps the same machines that [kill our attention](https://glyphack.com/attention/) and [threaten our education](https://ergosphere.blog/posts/the-machines-are-fine/) can be [used in creative ways](https://zserge.com/posts/socreates/) to fix it.
+
+Some of you probably still think I've gone off the deep end, that all of this will just die out and we'll go back to our normal lives. I'll just stop trying to convince you — *you're absolutely right*; after all, [they're just made out of weights](https://maxleiter.com/blog/weights).

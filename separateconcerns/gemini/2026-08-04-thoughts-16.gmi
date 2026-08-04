@@ -1,0 +1,25 @@
+# Thoughts & Links 16
+published 2026-08-04
+
+> "Thoughts & Links" are posts mixing topics on my mind and interesting things I have read recently. Less thought-out than regular posts. This one is a bit different from usual, because there's mostly one thing on my mind so I'm trying a different format.
+
+I don't think most people have realized what automatic coding means yet. Before, if we needed a tool, we had a choice between settling for the closest thing off-the-shelf and spending hours implementing it. Now we can just wish it into existence. Over the last few months, I have done that several times. Some I shared publicly (trackio-tool [1], multimodal [2]), some just with colleagues, and some are purely personal software [3].
+
+This is just the early signs of the coming world where labor is almost free [4]. In this world, all we know about work becomes obsolete. Kaizen becomes the wrong tool [5]. Disruption comes from technical outsiders [6] with enough domain knowledge [7]. Even Amazon is adapting [8]. "Prototype first, ask later" was a powerful but costly approach; it will become the norm.
+
+We must be careful, though. It took us some time to notice how doomscrolling affected us; this could be much worse. Perhaps the same machines that kill our attention [9] and threaten our education [10] can be used in creative ways [11] to fix it.
+
+Some of you probably still think I've gone off the deep end, that all of this will just die out and we'll go back to our normal lives. I'll just stop trying to convince you — you're absolutely right; after all, they're just made out of weights [12].
+
+=> https://github.com/finegrain-ai/trackio-tool 1: https://github.com/finegrain-ai/trackio-tool
+=> https://github.com/catwell/multimodal 2: https://github.com/catwell/multimodal
+=> https://danilafe.com/blog/llm_personal_software/ 3: https://danilafe.com/blog/llm_personal_software/
+=> https://itcanthink.substack.com/p/what-would-you-do-if-labor-was-free 4: https://itcanthink.substack.com/p/what-would-you-do-if-labor-was-free
+=> https://medium.com/oss-ventures/ai-era-field-notes-leading-through-fog-of-war-548ebd29eedc 5: https://medium.com/oss-ventures/ai-era-field-notes-leading-through-fog-of-war-548ebd29eedc
+=> https://medium.com/oss-ventures/chocolate-covered-broccoli-or-why-most-genai-entreprise-transformations-fail-4b21b280f626 6: https://medium.com/oss-ventures/chocolate-covered-broccoli-or-why-most-genai-entreprise-transformations-fail-4b21b280f626
+=> https://www.seangoedecke.com/llms-reward-expertise/ 7: https://www.seangoedecke.com/llms-reward-expertise/
+=> https://www.allthingsdistributed.com/2026/06/return-to-two-pizza-culture.html 8: https://www.allthingsdistributed.com/2026/06/return-to-two-pizza-culture.html
+=> https://glyphack.com/attention/ 9: https://glyphack.com/attention/
+=> https://ergosphere.blog/posts/the-machines-are-fine/ 10: https://ergosphere.blog/posts/the-machines-are-fine/
+=> https://zserge.com/posts/socreates/ 11: https://zserge.com/posts/socreates/
+=> https://maxleiter.com/blog/weights 12: https://maxleiter.com/blog/weights
