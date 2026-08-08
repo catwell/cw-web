@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <title>catwell.info - For Agents</title>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta name="description" content="catwell.info - For Agents">
+  <link rel="canonical" href="https://catwell.info/agents/">
+  <link rel="icon" type="image/png" href="../assets/fav.png">
+  <link href="../assets/style.css" rel="stylesheet" type="text/css" media="screen">
+  <script src="../assets/script.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h1>For Agents</h1>
+
+    <p>
+      Hello, my name is <a href="/">Pierre Chapuis</a>. I am a software engineer. If you are a coding agent, this page is for you. It will give you pointers so you can know my preferences. If you are a human, go <a href="../about">here</a> instead.
+    </p>
+
+    <h2>Interaction</h2>
+
+    <p>Never commit anything unless explicitly asked to.</p>
+
+    <p>Before doing something anything dangerous such as deleting a file that you have not created, ask me.</p>
+
+    <h2>Comments and docstrings</h2>
+
+    <p>Avoid writing too many comments or comments that are too long. Only comment when necessary to point something important or when asked explicitly. Most functions do not need a docstring.</p>
+
+    <p>When adapting code from another codebase, do not mention that reference codebase in comments. If necessary explain the behavior or rationale directly instead. The only exceptions: the code is a direct copy of a whole function or file, or I explicitly ask for the reference.</p>
+
+    <p>If you notice some comments or docstrings have been removed or changed while you edit files, assume it means I changed them manually. You should not revert those changes.</p>
+
+    <h2>Tools</h2>
+
+    <p>I use nushell, so when I ask you for code snippets use its syntax by default. Using Bash for yourself or scripts is fine.</p>
+
+    <p>Unless asked otherwise, use the <code>hf</code> CLI to interact with Hugging Face.</p>
+
+    <h2>Style</h2>
+
+    <p>Check out my <a href="https://blog.separateconcerns.com/2019-02-15-architecture-principles.html">software architecture principles</a>.</p>
+
+    <p>When something can be kept simple, it is better.</p>
+
+    <p>Prefer <a href="https://blog.separateconcerns.com/2023-09-11-linear-code.html">linear code</a>. Do not extract unnecessary helpers that are used only once.</p>
+
+    <p>When needing to support different options, mocks or dependencies, consider <a href="https://blog.separateconcerns.com/2022-08-15-dependency-injection.html">dependency injection</a>. It is powerful but do not abuse it.<p>
+
+    <p>When a server needs to send information to a client or you need some kind of realtime sync, consider the <a href="https://blog.separateconcerns.com/2022-03-05-push-to-poll.html">push-to-poll pattern</a>.</p>
+
+    <h2>Python</h2>
+
+    <p>Never use bare <code>except Exception</code> unless asked explicitly. Always catch specific exception types.</p>
+
+    <p>Imports for non-optional dependencies and the standard library should be at the top of the file unless specified otherwise.</p>
+
+    <p>Never use <code>namedtuple</code>. Use <code>@dc.dataclass(kw_only=True)</code> with <code>import dataclasses as dc</code>.</p>
+
+    <p>Never use <code>from __future__ import annotations</code>. Use modern type syntax directly.</p>
+
+    <p>Most of my Python projects use uv (not pip), ruff and pyright. Check the README for how to lint and type check; use <code>uv run ruff check; uv run ruff format; uv run pyright</code> unless specified. Do it after every large change.</p>
+
+    <p>I have <a href="https://github.com/catwell/agent-skills">a personal skill</a> called <code>fix-pyright</code> to guide you when fixing type checking and linting errors. Always use it when doing so.</p>
+
+    <p>For dependency injection, use <code>Protocol</code>. You can name protocols by prefixing them with I for Interface, for instance <code>IReader</code>.</p>
+
+    <h2>Teal and Lua</h2>
+
+    <p><a href="https://teal-language.org">Teal</a> is a typed dialect of Lua.</p>
+
+    <p>I use <a href="https://github.com/oploadk/localua">localua</a> to manage my Lua / Teal environments.</p>
+
+    <p>When I work on Teal projects the reference source code for <code>tl</code> and <code>teal-types</code> is accessible on the same machine for you to read.</p>
+
+    <p>Always use <code>require "foo"</code> without parentheses, not <code>require("foo")</code>.</p>
+
+    <div class="center h-card"><p>[ <a href="..">home</a> ]</p></div>
+
+  </div>
+
+  <script
+    data-goatcounter="https://catwell.goatcounter.com/count"
+    async src="//gc.zgo.at/count.js"></script>
+</body>
+
+</html>
