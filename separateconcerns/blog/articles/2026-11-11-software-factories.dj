@@ -1,0 +1,22 @@
+```=lua-meta
+title = "We never needed software factories"
+published = "2026-11-11 13:30:00"
+description = [[
+Software is not like hardware: it is free to replicate.
+What we need is better collaboration in design, between humans and with machines.
+]]
+```
+
+I have made up my mind about software factories: we don't need them.
+
+A factory is designed to mass-produce identical items. The manufacturing process is optimized by defining separate, isolated tasks, performed efficiently by employees who do not need an end-to-end vision. We never needed that with software in the first place. The beauty of software is that replicating it — even with some personalization — costs virtually nothing.
+
+Sure, we can set up an automated system to resolve bug reports, but that is not a factory. We are not producing copies of the same item, we are modifying a shared asset. The analogy breaks down; this is closer to maintenance work.
+
+For R&D and feature work, very few of us even come close to fully leveraging what straightforward coding agents allow. Let us not put the cart before the horses with a different paradigm we probably do not need. What we got was a better workshop, with better tools; CNC machines instead of chisels. It was what we needed.
+
+Maybe you think you need a factory because your codebase is too large and unwieldy to do otherwise. I think you have it backwards. You designed an incredibly complicated product because end-user customization was not possible before agents. Your design is complex because you needed many developers, so your organization became complex and Conway's Law crept in. You need to fix this, not a factory.
+
+I am a lot more enthusiastic about multiplayer interfaces like [Amp](https://ampcode.com/docs/collaborate/multiplayer) or [Delta](https://zed.dev/blog/introducing-delta) than factories. They tackle a real problem: collaboration in human-agentic teams. They are reminiscent of mob programming, which is the *opposite* of a factory: everyone works on the same thing at the same time.
+
+The original incarnation of mob programming traded off implementation efficiency for design efficiency, optimizing for communication and coordination instead of sequential, independent work. It was an interesting idea but in practice it was rarely optimal because independent work *was* costly. Now agents compress that sequential part down to a fraction of what it was, collaboration — with both humans and agents — becomes more compelling.
