@@ -1,0 +1,27 @@
+# Mobile AI is different
+published 2026-11-11
+
+I work [1] on AI models that run on mobile devices. There are few people or companies working on this, even in my circle. When I talk with other engineers working on model or inference performance, I realize that we share some concerns, but not all of them.
+
+Here are a few important concerns for models that run on-device:
+
+* Raw performance (single-request latency), of course. Paradoxically users are even less willing to wait on mobile form factors so you need lower execution times.
+* Weights size. Unless you are a manufacturer or an OEM, end users will need to download your model to their phone. If it is too large adoption will plummet.
+* Memory usage. RAM is expensive, so the amount of memory available in phones is going down, e.g. the Pixel 11 Pro has less RAM than the Pixel 10 Pro. Moreover, even if a phone has 8 GB of RAM, you cannot use more than e.g. 2 GB reliably. If you use too much, you will stress the system and end up getting killed.
+* Heterogeneous hardware. Of course Android is notoriously the worst, but even on a single iPhone you will want to run different models or model parts on the CPU, the GPU or the NPU (ANE).
+* Specialization time. Because of heterogeneity mobile inference frameworks (e.g. CoreML and LiteRT) generate inference code (kernels etc.) directly on the device. For large models or when using some specific operations, that can take an extremely long time, sometimes over a minute when targeting the ANE.
+* Model performance is not all you have to worry about. Things around the model such as pre- and postprocessing, allocations, and data copies can quickly become extremely costly and need to be optimized as well.
+
+This results in a few core differences in how we approach optimization work.
+
+* Because specialization happens on-device we almost never work at kernel level. We typically intervene on the model or graph IR. This doesn't mean we do not read some kernels, but we almost never write any. Also, kernels are not CUDA, of course. For LiteRT they are typically OpenCL.
+* Batching is rarely used: we are almost always single-user and memory-constrained. In fact, we do the opposite: we rewrite operations such as attention so heads can run sequentially instead of in parallel.
+* Quantization is even more important than on GPU, and we tend to quantize activations in addition to weights on models that use a lot of memory there.
+* Rewriting parts of the model in a mathematically equivalent but functionally different way is a frequent optimization. Examples include replacing linears with convolutions on NPUs like the ANE, replacing linears with matmuls to make some parameters dynamic, merging models or reordering operations to allow tensor reuse, avoiding broadcasting…
+* We also frequently modify models to cache, precompute, prune, shrink layers using block distillation… Sometimes we have to write a new model from scratch with a mobile-friendly architecture and distill the whole model.
+
+Since this is a relatively niche topic, the relevant subset of the AI community is small. If you work on this and want to share, don't hesitate to get in touch [2]. I will also be at FOSDEM [3] like most years and probably spend some time in the AI Plumbers developer room.
+
+=> https://blog.separateconcerns.com/2026-02-07-finegrain.html#the-ios-sdk 1: https://blog.separateconcerns.com/2026-02-07-finegrain.html#the-ios-sdk
+=> https://catwell.info 2: https://catwell.info
+=> https://fosdem.org/2027/ 3: https://fosdem.org/2027/
