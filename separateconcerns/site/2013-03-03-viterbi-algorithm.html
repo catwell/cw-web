@@ -22,12 +22,12 @@
         [ <a href="index.html">home</a> ]
       </h4>
     </header>
-    <section id="The-State-Machine">
+    <section id="the-state-machine">
 <h2>The State Machine</h2>
 <p>Let us consider a system that can take a finite number of states <code>S[1]</code> to <code>S[n]</code> over time.</p>
 <p>We can represent the system as a N-node directed graph, where nodes are the states. An arc exists between node <code>S[i]</code> and <code>S[j]</code> if the system can transition from <code>S[i]</code> to <code>S[j]</code>. You probably already know that.</p>
 </section>
-<section id="In-Chains">
+<section id="in-chains">
 <h2>In Chains</h2>
 <p>We will now observe the evolution of the system over time. We will model time discretely. That does not mean that time itself is discrete, but we will observe the system at fixed-interval &ldquo;ticks&rdquo;. We call <code>S(t)</code> the state of the system at tick <code>t</code>.</p>
 <p>If the system is known to be in <code>S[i]</code> at tick <code>t</code> (i.e. <code>S(t) = S[i]</code>) we call <code>P(i-&gt;j)</code> the probability that it will be in <code>S[j]</code> at tick <code>t+1</code>. Here is a definition for the mathematically inclined: <code>P(i-&gt;j) = P(S(t+1) = S[j] | S(t) = S[i])</code>.</p>
@@ -45,7 +45,7 @@ the sum of outbound probabilities is 1: <code>∀i, ∑[j=1,N]{P(i-&gt;j)} = 1</
 </ul>
 <p>By the way, this is called a Markov Chain.</p>
 </section>
-<section id="Blurry-Sights">
+<section id="blurry-sights">
 <h2>Blurry Sights</h2>
 <p>Now let&rsquo;s complicate things a little by introducing a separate system that can take states <code>V[1]</code> to <code>V[M]</code>. This second system <code>V</code> is tied to <code>S</code>: at every tick <code>t</code>, the probability distribution of <code>V(t)</code> only depends on <code>S(t)</code>. We will note: <code>O(i,j) = P(V[j] | S[i])</code>.</p>
 <p>You can think of <code>V</code> as something that observes <code>S</code> and reports on its state in an incomplete and probabilistic manner.</p>
@@ -53,13 +53,13 @@ the sum of outbound probabilities is 1: <code>∀i, ∑[j=1,N]{P(i-&gt;j)} = 1</
 <p>If you have not, let&rsquo;s take a really simple example with <code>N = M = 2</code>. You can imagine that both <code>S</code> and <code>V</code> are lights that can be either red or blue. The relationship between <code>S</code> and <code>V</code> can be expressed by something like this: &ldquo;If light <code>S</code> is red, then there is 90% chance that <code>V</code> is red too. If light <code>S</code> is blue, then there is only 40% chance that <code>V</code> is red.&rdquo;</p>
 <p>Now, add more possible colors to <code>S</code> and <code>V</code>, not necessarily the same number for both, to generalize the system.</p>
 </section>
-<section id="The-Black-Box">
+<section id="the-black-box">
 <h2>The Black Box</h2>
 <p>Now, here is our problem: imagine that you know how system <code>S</code> works (the probabilities of transition between the states) but that it is hidden in a black box such that you cannot observe it. What you <strong>can</strong> observe is system <code>V</code>. Is there any way to guess what system <code>S</code> is doing at any time in this setting? If yes, how?</p>
 <p>The answer to the first question is: &ldquo;sometimes, yes&rdquo;. &ldquo;Sometimes&rdquo; means &ldquo;if the probability distributions help us&rdquo;.</p>
 <p>The second question is the one my favorite algorithm, the Viterbi algorithm, answers. Let&rsquo;s see how it works.</p>
 </section>
-<section id="Make-it-Code">
+<section id="make-it-code">
 <h2>Make it Code</h2>
 <p>First we need to represent the problem in a way that can be understood by a computer. I will use the Lua programming language for that.</p>
 <p>We start by defining a few parameters. We will choose <code>N = 3</code> and <code>M = 2</code> for simplicity. We will observe the system over 1000 ticks.</p>
@@ -98,7 +98,7 @@ end
 <p><img alt="graph" src="img/viterbi.png"/></p>
 <p>The green part is the Markov chain itself, the blue part corresponds to the observation device. Arcs are labeled with probabilities of transition or observation.</p>
 </section>
-<section id="Stepping-Forward">
+<section id="stepping-forward">
 <h2>Stepping Forward</h2>
 <p>Now we can simulate the behavior of the system.</p>
 <pre><code class="language-lua">local proba_pick = function(v)
@@ -134,7 +134,7 @@ end
 </code></pre>
 <p>This code is slightly more complicated, but what you should understand is that, at the end of it, <code>S</code> is a vector of <code>L</code> states of the system and <code>V</code> is the corresponding vector of observations. The initial state <code>S[1]</code> is chosen randomly with uniform probabilities.</p>
 </section>
-<section id="Seeing-Through-the-Box">
+<section id="seeing-through-the-box">
 <h2>Seeing Through the Box</h2>
 <p>Now, let us proceed to guess what happens inside the black box. We do so iteratively: at each tick <code>t</code>, we calculate the most plausible sequence of events that could have led to each possible state of the system, given the observation at <code>t</code> and the results for <code>t-1</code>.</p>
 <pre><code class="language-lua">local trellis = {{}}
@@ -204,7 +204,7 @@ end
 local bestpath = getpath(best_node(trellis[L]))
 </code></pre>
 </section>
-<section id="Does-this-thing-really-work">
+<section id="does-this-thing-really-work">
 <h2>Does this thing really work?</h2>
 <p>To check if this work, let&rsquo;s take the actual system out of the box and calculate how much it looks like our estimate:</p>
 <pre><code class="language-lua">local ok = 0
@@ -218,7 +218,7 @@ print(100*ok/L)
 </code></pre>
 <p>The result I got with those parameters is 72% accuracy, to compare to what a naive random process would get (33%).</p>
 </section>
-<section id="Why-I-love-it">
+<section id="why-i-love-it">
 <h2>Why I love it</h2>
 <p>Let&rsquo;s go back to the title of this post: now that you know what it does, <strong>why</strong> is Viterbi&rsquo;s algorithm my favorite?</p>
 <p>I admit that the elegance of the representation of the problem as a trellis is part of the reason, but mainly it&rsquo;s because of its implications. Think about it: fundamentally it is an algorithm that allows a machine to <strong>explain what it observes</strong>. Isn&rsquo;t that crazy?</p>

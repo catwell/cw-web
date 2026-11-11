@@ -24,7 +24,7 @@
     </header>
     <p>This is just a short post to describe how I use the <a href="https://github.com/teal-language/teal-language-server">Teal language server</a>. My setup is a bit specific: I use <a href="https://www.sublimetext.com">Sublime Text</a> on Arch Linux and I often run development branches of Teal so I run the LSP from source. I will assume you put it in <code>/.../git</code>.</p>
 <p>I also use <a href="https://loadk.com">localua</a> to manage all my Lua / Teal environments and I have <code>.lua/bin</code> in my <code>PATH</code> (which means that <code>luarocks</code>, <code>lua</code> and <code>tl</code> point to the local versions in my shell).</p>
-<section id="Setup-the-LSP">
+<section id="setup-the-lsp">
 <h2>Setup the LSP</h2>
 <p>Install <code>tree-sitter-cli</code> which is a system dependency, clone the repository somewhere, initialize a local Lua environment and install the dependencies with LuaRocks:</p>
 <pre><code class="language-bash">sudo pacman -S tree-sitter-cli
@@ -37,7 +37,7 @@ luarocks install tlcheck
 </code></pre>
 <p>Run <code>teal-language-server --help</code> to check it works.</p>
 </section>
-<section id="Setup-Sublime-Text">
+<section id="setup-sublime-text">
 <h2>Setup Sublime Text</h2>
 <p>Open the LSP settings (<code>Preferences &gt; Package Settings &gt; LSP &gt; Settings</code>) and configure Teal like this:</p>
 <pre><code class="language-json">{
@@ -53,7 +53,7 @@ luarocks install tlcheck
 }
 </code></pre>
 </section>
-<section id="Add-a-tlconfiglua-file-to-your-project">
+<section id="add-a-tlconfiglua-file-to-your-project">
 <h2>Add a <code>tlconfig.lua</code> file to your project</h2>
 <p>If you do not use this step, the LSP will only lookup dependencies in its own Lua environment. You want it to look in your project instead.</p>
 <p>The contents of <code>tlconfig.lua</code> can look like this:</p>

@@ -58,6 +58,8 @@ local record M
         format: string -- for raw_block, e.g., "lua-meta"
         destination: string -- for links and images
         level: integer -- for headings
+        attr: {string: string} -- attributes, e.g. id
+        references: {string: Node} -- for doc, reference nodes by label
     end
 
     interface IHandle

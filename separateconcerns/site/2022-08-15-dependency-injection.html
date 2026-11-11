@@ -23,7 +23,7 @@
       </h4>
     </header>
     <p>In the list of application architecture patterns I like to use, <a href="https://en.wikipedia.org/wiki/Dependency_injection">Dependency Injection</a> comes rather high. Here is how and why I use it.</p>
-<section id="How-I-use-Dependency-Injection">
+<section id="how-i-use-dependency-injection">
 <h2>How I use Dependency Injection</h2>
 <p>If you have already seen dependency injection used in practice, you may believe it requires the use of a framework such as <a href="https://dagger.dev">Dagger</a>. Although I did use such frameworks - especially in Angular where <a href="https://angular.io/guide/dependency-injection">it is native</a> - most of the time I use a simpler form of DI where I just pass dependencies to functions or constructors.</p>
 <p>For instance, in Lua object-oriented code, instead of writing this:</p>
@@ -101,20 +101,20 @@ o:as_json()
 </code></pre>
 <p>Now let us see a few use cases for this.</p>
 </section>
-<section id="Testing-IO">
+<section id="testing-io">
 <h2>Testing I/O</h2>
 <p>Probably the most well-known use case for DI is simplifying testing of code that does I/O, for instance code that makes network requests or interacts with a database. It makes it easy to replace the problematic part with a mock. You can mock just what you need or the entire dependency, for instance you can replace Redis with <a href="https://luarocks.org/modules/catwell/fakeredis">fakeredis</a>.</p>
 </section>
-<section id="Supporting-different-implementations-of-dependencies">
+<section id="supporting-different-implementations-of-dependencies">
 <h2>Supporting different implementations of dependencies</h2>
 <p>This is a less well-known but very good use-case, especially in Lua. Let us consider my JSON example above. Users of this code may want to use <a href="https://luarocks.org/modules/dhkolf/dkjson">dkjson</a>, but maybe they want to use a faster, pure C module, or maybe they are running in OpenResty and have <a href="https://openresty.org/en/lua-cjson-library.html">cjson</a> available. With dependency injection, it&rsquo;s easy to just use it.</p>
 </section>
-<section id="Eliminating-randomness">
+<section id="eliminating-randomness">
 <h2>Eliminating randomness</h2>
 <p>This is in fact the use case that prompted me to write this blog post. I was writing some algorithmic code in Teal for which I had a reference in Python, and I wanted to apply <a href="https://blog.separateconcerns.com/2013-06-20-three-years-proprietary-projects.html#seed">the dual-implementation comparison technique I like</a>. However, this was AI code that had random parts.</p>
 <p>What I did was that I refactored the code in both languages so that all sources of randomness were injected, and then I injected deterministic pseudo-random values instead, which meant I could now compare the state of both implementations at all times and easily debug things such as numerical problems.</p>
 </section>
-<section id="When-not-to-use-DI">
+<section id="when-not-to-use-di">
 <h2>When not to use DI</h2>
 <p>DI is a great tool, but it tends to make code a bit more complicated, so for instance I do not use it to inject pure functions or libraries from the same codebase.</p>
 <p>If you have used Angular with <a href="https://storybook.js.org">Storybook</a>, you may know what abuse of DI looks like. It can be super verbose because sometimes you need to inject a lot of things you do not really care about for it to work.</p>

@@ -25,7 +25,7 @@
 <p>Note: Yes I use em-dashes when I write, and no this is not AI. When I blog I typically only use <a href="https://writewithharper.com">Harper</a> to check for spelling and syntax.</p>
 </blockquote>
 <p>I have talked about my use of AI to write code <a href="https://blog.separateconcerns.com/2023-10-21-automating-job.html">here</a>, but that was almost two years ago. Things have changed since then and I wanted to talk briefly about how.</p>
-<section id="Claude-Code">
+<section id="claude-code">
 <h2>Claude Code</h2>
 <p>The most important change is that I now use <a href="https://www.anthropic.com/claude-code">Claude Code</a>. I don&rsquo;t use it all the time, but here are a few ways I do:</p>
 <ul>
@@ -42,7 +42,7 @@ When I get an error message I cannot immediately understand I paste it into Clau
 <p>Here is one way I do <strong>not</strong> use Claude: when I work on hard problems where I do not know the solution. I use code as a thinking tool, and using an LLM disturbs that process.</p>
 <p>In general, I see Claude as a junior but very fast pair programmer. It won&rsquo;t help with hard things but it will gain you a lot of time for the simple ones if you guide it well and check its work.</p>
 </section>
-<section id="Lovable">
+<section id="lovable">
 <h2>Lovable</h2>
 <p>Another tool that I used a lot is <a href="https://lovable.dev">Lovable</a>, and I have a complicated relationship with it. The way I used it was, someone else vibe-coded an app and I stepped in when things became too complex for Lovable.</p>
 <p>At first I was very impressed. In a few prompts anyone can get a usable application prototype, all in the browser. This makes most no-code frontend development tools irrelevant.</p>
@@ -50,7 +50,7 @@ When I get an error message I cannot immediately understand I paste it into Clau
 <p>The way to fix it is what I did: clone the repository, refactor by hand or with the help of Claude Code, and put things back in a state where the model will start making the right decisions again.</p>
 <p>But the main issue with Lovable is not the model, it is everything around it. It uses Supabase as its only backend, which is very limited. Most importantly there is no proper way to have separate environments, not even a development environment separate from production. They need to fix that and understand that if they want to have successful applications in production they must consider the fact that they will be worked on by teams.</p>
 </section>
-<section id="Others">
+<section id="others">
 <h2>Others</h2>
 <p>I still use GitHub Copilot for autocomplete. It is just better than the default, especially in Sublime Text.</p>
 <p>I also use <a href="https://chat.mistral.ai/">Mistral&rsquo;s Le Chat</a> for random things, like most people use ChatGPT.</p>

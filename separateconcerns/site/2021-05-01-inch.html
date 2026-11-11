@@ -25,14 +25,14 @@
 <p>First, a bit of context: Inch is SaaS software for property managers that operates in the French (and Belgian) market. Many of our customers are <a href="https://fr.wikipedia.org/wiki/Syndic_de_copropriété">co-ownership trustees</a>, which is a much bigger deal in France than in most countries, but we also serve other professionals such as rental managers and social housing landlords.</p>
 <p>The software can be seen as a mix between a CRM and a ticketing solution. The code base dates back to 2013. The backend is a Rails monolith and the frontend is a React application. There were two other developers on the team when I joined, now we are five, of which I am the most senior. We all directly report to the founder responsible for product, but I am sometimes presented as the CTO to customers because from their point of view I act as such (more on that later).</p>
 <p>Now, what do I do there in practice? As you may guess if you know me, a few different things.</p>
-<section id="Dealing-with-integrations">
+<section id="dealing-with-integrations">
 <h2>Dealing with integrations</h2>
 <p>That is my main role, and the reason I was hired in the first place. See, our software is used by our customers to manage the relationship with their own customers and suppliers, but they invariably already have pre-existing sotware with overlapping data: their accounting software or ERPs. Some have built them in-house, but most picked from a very fragmented market of industry-specific software which we have to integrate with. So I maintain somewhere between 20 and 30 different integrations with those pieces of software you have probably never heard about.</p>
 <p>You may not understand the complexity until you realize that none of those integrations looks the same, because the software itself doesn&rsquo;t. Some is cloud-based, some is on-prem. In some cases they provide APIs or flat-file data export mechanisms, but sometimes we have to go get the data directly in their database. Of course, we almost never have technical documentation for their data model, and the databases themselves are all different. I have code for over 10 different major DBMS, not all of them using SQL, and not all of them running on typical OSs (hello AS400, hello SCO&hellip;).</p>
 <p>Add to that integration with a few APIs we use, the maintenance of our own APIs so others can integrate with <strong>us</strong> and a few custom features for large customers, and you will have an idea of the scope. It is a role that requires domain knowledge, technical insight about many systems and the ability to understand new ones quickly. And maybe most importantly, I have to model our own software and systems so that they can support all of this. If you think about it it&rsquo;s all about synchronizing data between systems, so I am not all that far from my specialty after all. :)</p>
 <p>This role means that when we talk to large customers or prospects I am often the person representing the technical side of the company (hence the CTO thing).</p>
 </section>
-<section id="Operations-and-security">
+<section id="operations-and-security">
 <h2>Operations and security</h2>
 <p>You know the pattern now: I arrive at a startup with a small team of developers where nobody has significant operations experience and I end up becoming responsible for them. It never bothered me, quite the opposite actually: I have been doing systems administration for 20 years and I have always liked it.</p>
 <p>In this case, there had been some people who knew what they were doing on the team before, so it was not that bad. For instance, they had a reasonable backup strategy already (yay!).</p>
@@ -41,13 +41,13 @@
 <p>At small companies like this, operations also come with a lot of security-related responsibilities. Security is pretty important for Inch, which deals with a lot of personal data. So far, I have worked on improving our operational practices, added a team password manager, rationalized internal auth{n,z} around the GCP tools, and written some documentation. I have also upgraded several important software components and reviewed / fixed all the usual configuration (systems, TLS, CORS, CSP&hellip;). I have also started working on the Web application security itself, I have less experience in that space - especially regarding the frontend - than in systems security but I am learning and we have a few experienced Web developers on the team to help.</p>
 <p>As usual, nothing is ever done in that space and I still have a lot of work coming up, but at least I believe we&rsquo;ve significantly improved since I joined.</p>
 </section>
-<section id="Fullstack-Web-development">
+<section id="fullstack-web-development">
 <h2>Fullstack Web development</h2>
 <p>Finally, the third leg of my role is the same as every developer at Inch: working on the product.</p>
 <p>I know the &ldquo;fullstack&rdquo; wording makes some people cringe. Of course we all have our favorite part of the stack but I think its is extremely important, especially on small teams, that everyone be able to write or at least understand a feature in its entirety.</p>
 <p>With the other two roles taking much of my time, I don&rsquo;t do as much feature work as the rest of the team but I still try to implement features myself regularly. I had never done frontend stuff seriously before Chilli and it was a different stack so I learn a lot about React and its ecosystem. I do my share of performance and bug fixes too. On the backend especially, I also do quite a lot of architecture and code reviews.</p>
 </section>
-<section id="Other-things">
+<section id="other-things">
 <h2>Other things</h2>
 <p>Besides those three main parts of my role, there are of course other things I take part in. Inch encourages its employees to participate in many cross-cutting activities.</p>
 <p>An important one is that we all do support in rotation, which means the whole team ends up knowing the customers and identifying the parts of the product that need improvement. This also means everyone can, and does, participate in product decisions.</p>

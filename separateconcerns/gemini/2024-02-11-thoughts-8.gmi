@@ -113,7 +113,7 @@ I am using Beanstalk in a Quart [13] application with aiostalk [14], but I still
 => https://beanstalkd.github.io 9: https://beanstalkd.github.io
 => https://finegrain.ai 10: https://finegrain.ai
 => https://blog.separateconcerns.com/2013-06-20-three-years-proprietary-projects.html 11: https://blog.separateconcerns.com/2013-06-20-three-years-proprietary-projects.html
-=> #Easy-vs-Simple 12: #Easy-vs-Simple
+=> #easy-vs-simple 12: #easy-vs-simple
 => https://quart.palletsprojects.com 13: https://quart.palletsprojects.com
 => https://github.com/koodaamo/aiostalk 14: https://github.com/koodaamo/aiostalk
 => https://github.com/catwell/haricot 15: https://github.com/catwell/haricot

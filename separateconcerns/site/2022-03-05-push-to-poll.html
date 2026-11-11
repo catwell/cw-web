@@ -24,7 +24,7 @@
       </h4>
     </header>
     <p>Here I want to discuss a system design pattern that I call &ldquo;push-to-poll&rdquo;; if it has another name I am not aware of it. I have applied that pattern successfully a few times, and used systems that did not but should have way too often.</p>
-<section id="Polling">
+<section id="polling">
 <h2>Polling</h2>
 <p>Suppose you are responsible for a &ldquo;server&rdquo; system. That system generates events (messages), and authenticated &ldquo;clients&rdquo; need to receive those messages.</p>
 <p>A simple solution is to provide some kind of feed: the client authenticates and provides a small piece of state (a timestamp or a cursor) which allows the server to return the messages they haven&rsquo;t processed yet. Ideally individual messages also have properties which allow the client to process them in an idempotent way, e.g. skip messages it has already processed.</p>
@@ -47,7 +47,7 @@ end
 </code></pre>
 <p>This solution is called polling, but the main problem with it is the <code>DELAY</code> variable. If it is set too low, both the server and the client will keep doing work and exchanging data for nothing, but if it is too high messages won&rsquo;t be received by the client in a timely fashion.</p>
 </section>
-<section id="Server-Push">
+<section id="server-push">
 <h2>Server Push</h2>
 <p>If we want message reception to be realtime, we may use a push-based design instead. In that model, the client starts by registering with the server. The server will then send the messages to the client as they arrive.</p>
 <p>In practice you might not really want to send each message on its own so you will send message batches instead and client code looks like that:</p>
@@ -64,7 +64,7 @@ register_with_server(messages_handler)
 <p>Even if you don&rsquo;t need to bootstrap, what should the server do when it tries to send a message to the client and it doesn&rsquo;t work? It could be that the client has gone down, or it could just be a network issue. In some systems the server keeps the failed messages for a while and retries, but that complexifies the design because it means the server needs to keep per-client state.</p>
 <p>Finally, in practice, authentication is often more complicated that way. The server needs to authenticate the client, of course, but the client also needs a way to make sure the data it receives comes from the server. Here we might need to take a few real-life examples: the client could be a single-page app, in which case the push channel would be something like SSE or websockets; it could also be two HTTP servers communicating in which case we are talking webhooks and might need some ad hoc <a href="https://docs.github.com/en/developers/webhooks-and-events/webhooks/securing-your-webhooks">signature scheme</a>. And by the way, the GitHub scheme does not have any form of protection against replay attacks, which might or might not be a problem for your use case&hellip;</p>
 </section>
-<section id="Push-to-poll">
+<section id="push-to-poll">
 <h2>Push-to-poll</h2>
 <p>The push-to-poll pattern combines the best of both worlds. The idea is simple: start with the same feed as polling, but instead of using a delayed loop to decide when to fetch it let the server tell you like with the push pattern.</p>
 <p>It looks like this:</p>

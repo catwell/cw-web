@@ -33,7 +33,7 @@ which I published under the Open Source MIT license.</p>
 Note that I will sometimes skip over some things and operate under the
 assumption that you are running on a little-endian platform with 4 kB pages,
 etc.</p>
-<section id="Portability">
+<section id="portability">
 <h2>Portability</h2>
 <p>The first thing to know is that the data.mdb format is platform-specific,
 which means that you cannot necessarily open a database created on a machine
@@ -44,7 +44,7 @@ the <code>mdb_dump</code> utility compiled in 32 bits and reimporting it with a 
 <code>mdb_load</code>. With lua-mdb, you can read a 32 bits database directly by passing
 the <code>bits</code> option to the constructor.</p>
 </section>
-<section id="Pages">
+<section id="pages">
 <h2>Pages</h2>
 <p>A data.mdb file is made to be mapped into memory, and as such is organized into
 a set pages of 4 kB. All pages start with a header which contains the page
@@ -52,7 +52,7 @@ number and some flags which determine the type of the page. For all page types
 except overflow pages, the header also includes the bounds of the free space
 in the page.</p>
 </section>
-<section id="Meta-pages">
+<section id="meta-pages">
 <h2>Meta pages</h2>
 <p>The first two pages (page numbers 0 and 1) are called meta pages. Meta pages
 start with a magic number (<code>0xBEEFC0DE</code>), a version (currently 1), and the
@@ -72,7 +72,7 @@ read page <code>N % 2 + 1</code>, providing readers - writer isolation. This mea
 when opening a .mdb file, the latest data can be found in the databases pointed
 to by the meta page with the highest transaction ID.</p>
 </section>
-<section id="Databases">
+<section id="databases">
 <h2>Databases</h2>
 <p>As we saw, a meta page contains two structures describing databases. Databases
 in LMDB are technically B+ trees. The structures contain some environment flags
@@ -84,7 +84,7 @@ and overflow pages. There are two other types (<code>BRANCH2</code> and <code>SU
 only used with specific DB options (<code>MDB_DUPFIXED</code> and <code>MDB_DUPSORT</code>) and that
 we will ignore.</p>
 </section>
-<section id="Branch-pages">
+<section id="branch-pages">
 <h2>Branch pages</h2>
 <p>Branch pages represent internal nodes of the tree. After the header, they
 contain an array of &ldquo;pointers&rdquo; (technically, 16 bit indices within the page)
@@ -98,7 +98,7 @@ number indicates the page which should be visited to look up keys between the
 key of the node (included) and the key of the next node. That page can be a
 branch or a leaf.</p>
 </section>
-<section id="Leaf-pages">
+<section id="leaf-pages">
 <h2>Leaf pages</h2>
 <p>Like branch pages, leaf pages start with a number of pointers to leaf nodes.
 Leaves store the actual keys and values contained into the DB. Small values
@@ -110,7 +110,7 @@ and the key which corresponds to the node. For small values, they contain the
 value itself, and for larger values they contain the page number of the
 corresponding overflow page.</p>
 </section>
-<section id="Overflow-pages">
+<section id="overflow-pages">
 <h2>Overflow pages</h2>
 <p>Large values are stored in so-called overflow pages. Those pages are pretty
 simple: after the header, they contain the raw value (not prefixed by its size).
@@ -118,7 +118,7 @@ This value can be larger than the size of a page, which explains the name:
 they overflow on later pages. Note that this means those later pages do not
 start by the usual header.</p>
 </section>
-<section id="Learning-more">
+<section id="learning-more">
 <h2>Learning more</h2>
 <p>I have explained the basics of the data.mdb file format. Should you have to
 debug broken databases, it will help you get started. If you need more, read

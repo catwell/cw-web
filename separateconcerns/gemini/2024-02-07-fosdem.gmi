@@ -49,7 +49,7 @@ The Linux Kernel Functional Testing [6] project runs the same CI tests on many m
 My friend Loïc presented his Open Source project Azimutt [9], a tool to explore large database schema and data, specifically tailored to very large databases. I had not looked at Azimutt in a long time but it has become super nice. The UI looks great and there are tons of useful features to go beyond exploration and actually document the database. If you ever have to deal with a large database or explore undocumented databases like I did at Inch [10], you should certainly have a look at it.
 
 => https://azimutt.app 9: https://azimutt.app
-=> https://blog.separateconcerns.com/2021-05-01-inch.html#Dealing-with-integrations 10: https://blog.separateconcerns.com/2021-05-01-inch.html#Dealing-with-integrations
+=> https://blog.separateconcerns.com/2021-05-01-inch.html#dealing-with-integrations 10: https://blog.separateconcerns.com/2021-05-01-inch.html#dealing-with-integrations
 
 ### Passbolt — Open source password manager for teams (Remy Bertot)
 => https://fosdem.org/2024/schedule/event/fosdem-2024-2181-passbolt-open-source-password-manager-for-teams/

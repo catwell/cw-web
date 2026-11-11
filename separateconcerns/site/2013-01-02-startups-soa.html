@@ -21,7 +21,7 @@
         [ <a href="index.html">home</a> ]
       </h4>
     </header>
-    <section id="What-is-SOA">
+    <section id="what-is-soa">
 <h2>What is SOA?</h2>
 <p>When people say SOA (Service Oriented Architecture) they often mean different things. My personal definition of SOA is rather loose and, like all the quotes in this article, <a href="http://queue.acm.org/detail.cfm?id=1142065">comes from Werner Vogels</a>, the CTO of Amazon:</p>
 <blockquote>
@@ -42,7 +42,7 @@
 </li>
 </ul>
 </section>
-<section id="Advantages-of-SOA">
+<section id="advantages-of-soa">
 <h2>Advantages of SOA</h2>
 <p>One of the most obvious benefits of SOA is that services are easier to scale than monolithic applications. Maybe you want to migrate user authentication data to Redis and keep other data in whatever DB you already have? SOA makes it trivial. Maybe some part of your product would benefit from running on an AWS instance that has lots of RAM while another one is CPU-intensive? Just deploy the corresponding services where they run best.</p>
 <p>SOA will also help you achieve resilience. You can program user-facing or aggregate services defensively so that they detect the unavailability of backend services and degrade gracefully. You can even use a <a href="https://blog.codinghorror.com/working-with-the-chaos-monkey/">chaos monkey</a> to ensure this.</p>
@@ -59,7 +59,7 @@
 <p>SOA also gives you language agnosticism almost for free. Not much prevents different services from being written in different programming languages. Why would you want to do that? Well, beyond the fact that different problems are better solved in Python, Haskell or C, there is lot of talent out there not using Ruby, Python, PHP, Scala, JavaScript or whatever language you have chosen for your monolithic application. Some of those Scheme, Io, Factor, Lua or F# hackers can be real assets for those clever enough to give them a job.</p>
 <p>Finally, I can see a (perhaps more abstract) last advantage to SOA which is related to the rise of the Programmable Web. After all, there is little difference between a Web API and a service, except that you wrote the latter and not the former. Embracing SOA will prepare you to work with external APIs, and more importantly to publish your own. For instance, lots of AWS services have started their life as internal services at Amazon.</p>
 </section>
-<section id="Conclusion">
+<section id="conclusion">
 <h2>Conclusion</h2>
 <p>I am not saying SOA <strong>only</strong> has advantages. Such an architecture can be fragile if you do not code with service unavailability in mind. Testing complex operations involving lots of services can be hard, and debugging them even harder. Correctly defining the boundaries and interfaces of services requires a significant amount of reflection and may not be a good idea when you do not know what exactly you are building.</p>
 <p>That being said I still think more technological and/or Web startups should consider SOA instead of the &ldquo;everything within the Framework&rdquo; approach, not really for future scalability reasons, but because they risk limiting their flexibility, speed of iteration and capacity to hire short term if it is not already the case.</p>

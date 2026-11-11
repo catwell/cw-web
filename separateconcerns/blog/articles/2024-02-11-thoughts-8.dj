@@ -89,6 +89,6 @@ Culture and values are not something you write on a document and mandate top-dow
 
 ## Still using Beanstalk
 
-This is not new, but I am using [Beanstalk](https://beanstalkd.github.io) for [Finegrain](https://finegrain.ai). I was already using it [at Moodstocks](https://blog.separateconcerns.com/2013-06-20-three-years-proprietary-projects.html) over a decade ago. In the meantime, I have used several other queues, but Beanstalk is still my favorite. It works well and it is [simple](#Easy-vs-Simple). I love tools like that.
+This is not new, but I am using [Beanstalk](https://beanstalkd.github.io) for [Finegrain](https://finegrain.ai). I was already using it [at Moodstocks](https://blog.separateconcerns.com/2013-06-20-three-years-proprietary-projects.html) over a decade ago. In the meantime, I have used several other queues, but Beanstalk is still my favorite. It works well and it is [simple](#easy-vs-simple). I love tools like that.
 
 I am using Beanstalk in a [Quart](https://quart.palletsprojects.com) application with [aiostalk](https://github.com/koodaamo/aiostalk), but I still maintain my [Lua client](https://github.com/catwell/haricot) so maybe this will be how I sneak some Lua at yet another company this time... :)

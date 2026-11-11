@@ -14,8 +14,8 @@ Still, some strategies are better than others. One is having several ways to suc
 Go read the whole post when you have 30 minutes, it has other motivated advice seen elsewhere such as betting on things that don't change [2], looking at what customers do [3], and keeping things simple. It also features an interesting history of Flickr and Slack.
 
 => https://longform.asmartbear.com/predict-the-future/ 1: https://longform.asmartbear.com/predict-the-future/
-=> https://blog.separateconcerns.com/2023-03-02-thoughts-5.html#Invest-in-things-that-don't-change 2: https://blog.separateconcerns.com/2023-03-02-thoughts-5.html#Invest-in-things-that-don't-change
-=> https://blog.separateconcerns.com/2016-01-03-five-books-2015.html#The-Four-Steps-to-the-Epiphany---Steve-Blank 3: https://blog.separateconcerns.com/2016-01-03-five-books-2015.html#The-Four-Steps-to-the-Epiphany---Steve-Blank
+=> https://blog.separateconcerns.com/2023-03-02-thoughts-5.html#invest-in-things-that-don-t-change 2: https://blog.separateconcerns.com/2023-03-02-thoughts-5.html#invest-in-things-that-don-t-change
+=> https://blog.separateconcerns.com/2016-01-03-five-books-2015.html#the-four-steps-to-the-epiphany-steve-blank 3: https://blog.separateconcerns.com/2016-01-03-five-books-2015.html#the-four-steps-to-the-epiphany-steve-blank
 
 ## Growth of AI Through a Cloud Lens
 

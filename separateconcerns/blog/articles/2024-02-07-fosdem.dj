@@ -32,7 +32,7 @@ The [Linux Kernel Functional Testing](https://lkft.linaro.org) project runs the 
 
 ### [Reinventing database exploration with Azimutt](https://fosdem.org/2024/schedule/event/fosdem-2024-3669-reinventing-database-exploration-with-azimutt/) (Loïc Knuchel)
 
-My friend Loïc presented his Open Source project [Azimutt](https://azimutt.app), a tool to explore large database schema and data, specifically tailored to very large databases. I had not looked at Azimutt in a long time but it has become super nice. The UI looks great and there are tons of useful features to go beyond exploration and actually document the database. If you ever have to deal with a large database or explore undocumented databases [like I did at Inch](https://blog.separateconcerns.com/2021-05-01-inch.html#Dealing-with-integrations), you should certainly have a look at it.
+My friend Loïc presented his Open Source project [Azimutt](https://azimutt.app), a tool to explore large database schema and data, specifically tailored to very large databases. I had not looked at Azimutt in a long time but it has become super nice. The UI looks great and there are tons of useful features to go beyond exploration and actually document the database. If you ever have to deal with a large database or explore undocumented databases [like I did at Inch](https://blog.separateconcerns.com/2021-05-01-inch.html#dealing-with-integrations), you should certainly have a look at it.
 
 ### [Passbolt — Open source password manager for teams](https://fosdem.org/2024/schedule/event/fosdem-2024-2181-passbolt-open-source-password-manager-for-teams/) (Remy Bertot)
 

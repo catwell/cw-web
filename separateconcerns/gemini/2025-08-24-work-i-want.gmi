@@ -6,7 +6,7 @@ published 2025-08-24
 > Note that the fact that this page exists does not mean I am looking for a job! Also note that all of this is true at some point in time and subject to change — I may update the post.
 
 => https://www.seangoedecke.com/my-engineering-values-2025/ 1: https://www.seangoedecke.com/my-engineering-values-2025/
-=> file:///dcs/cwl/git/cw-web/separateconcerns/site/2025-08-21-thoughts-12.html#What-kind-of-work 2: file:///dcs/cwl/git/cw-web/separateconcerns/site/2025-08-21-thoughts-12.html#What-kind-of-work
+=> https://blog.separateconcerns.com/2025-08-21-thoughts-12.html#what-kind-of-work 2: https://blog.separateconcerns.com/2025-08-21-thoughts-12.html#what-kind-of-work
 
 ## I want to work on core product
 
