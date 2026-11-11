@@ -239,6 +239,13 @@ local function process_all()
         local entry = process_file(files[i])
         if entry then table.insert(entries, entry) end
     end
+    -- newest first, using the full publication time to order same-day posts
+    table.sort(entries, function(x: Entry, y: Entry): boolean
+        if x.atom.published ~= y.atom.published then
+            return x.atom.published > y.atom.published
+        end
+        return x.fnpart > y.fnpart
+    end)
     for i = 1, #entries do
         local entry = entries[i]
         local html = lustache:render(TPL.html_post, entry)
