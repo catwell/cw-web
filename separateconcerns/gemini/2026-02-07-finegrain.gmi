@@ -1,5 +1,5 @@
 # What I do at Finegrain
-published 2026-02-07,updated 2026-06-04
+published 2026-02-07,updated 2026-11-11
 
 > Note: Yes, I use em-dashes when I write, and no, this is not AI. As always I only use "AI" for spellchecking.
 
@@ -46,11 +46,11 @@ In our inference stack, which is called PHX (a reference to the Phénix airplane
 
 ## Disciple, the Web backend
 
-PHX is not exposed to customers or applications directly. We provide a Web API that is easier to call, asynchronous (because although our inference is fast it is still slower than a typical Web request), and deals with authentication and payment.
+PHX is not exposed to customers or applications directly. We provide a Web API that is easier to call and deals with authentication and payment.
 
 In addition to this API, we have a Web backend for customers, a bit of admin and monitoring... All of this lives in a modular monolith called Disciple, a reference to a character of the comic strip Léonard [15] whose most famous line is "I serve science, and that is my joy."
 
-The stack is nothing too fancy; I picked technologies I had previous experience with and knew to be reliable. We use Quart [16] with Blueprints and PostgreSQL. For asynchrony we use Nchan [17] for SSE and Beanstalk [18] for background jobs. For efficient image processing we rely on VIPS [19].
+The stack is nothing too fancy; I picked technologies I had previous experience with and knew to be reliable. We use Quart [16] with Blueprints and PostgreSQL. We use Nchan [17] for SSE and Beanstalk [18] for background jobs. For efficient image processing we rely on VIPS [19].
 
 => https://en.wikipedia.org/wiki/L%C3%A9onard_(comics) 15: https://en.wikipedia.org/wiki/L%C3%A9onard_(comics)
 => https://quart.palletsprojects.com/ 16: https://quart.palletsprojects.com/
@@ -60,7 +60,7 @@ The stack is nothing too fancy; I picked technologies I had previous experience 
 
 ## The iOS SDK
 
-For some time now, the main focus of Finegrain is running all our models on mobile devices directly. This means we had to port our inference code to run on iOS (for now) using Apple's Neural Engine (ANE) [20] and/or the GPU.
+For some time now, the main focus of Finegrain is running all our models on mobile devices directly. This means we had to port our inference code to run on iOS using Apple's Neural Engine (ANE) [20] and/or the GPU.
 
 This involves, among other things, compiling and quantizing the model using Apple's Core ML Tools [21]. This is not a straightforward step; most models cannot be compiled out of the box and require architectural changes first. As for quantization, obtaining high average quantization ratios while retaining precision is a craft that would deserve its own blog post.
 
@@ -72,6 +72,19 @@ Another notable thing I have implemented is the ability to swap the capabilities
 => https://apple.github.io/coremltools/docs-guides/ 21: https://apple.github.io/coremltools/docs-guides/
 => https://developer.apple.com/documentation/accelerate 22: https://developer.apple.com/documentation/accelerate
 => https://apple.github.io/coremltools/docs-guides/source/multifunction-models.html 23: https://apple.github.io/coremltools/docs-guides/source/multifunction-models.html
+
+## The Android SDK
+
+> Section added in Nov. 2026
+
+After iOS, I have started working on porting the SDK to Android. I also maintain an Android port of our application as a testbed.
+
+On Android, we use LiteRT [24]. Coming from CoreML, it presents a different set of challenges. Some features are completely missing and others are buggy, although Google's team appears to be making steady progress. When I started using it I was hindered by the fact that the GPU delegate ML Drift wasn't open source, but now it is [25]. Key features are still missing, preventing us from making it publicly available for now, but that should change sooner rather than later.
+
+Another common problem with Android is hardware fragmentation. The optimal approach to run edge AI on Google's Pixel and Samsung flagships using Qualcomm's Snapdragon or Samsung's own Exynos (EU variants) varies significantly.
+
+=> https://developers.google.com/edge/litert 24: https://developers.google.com/edge/litert
+=> https://developers.googleblog.com/ml-drift-next-gen-gpu-aiml-inference-at-the-edge/ 25: https://developers.googleblog.com/ml-drift-next-gen-gpu-aiml-inference-at-the-edge/
 
 ## Science and hacks
 
@@ -85,15 +98,15 @@ One thing I worked on that made a difference is the set of techniques we use to 
 
 For the first two years I spent at Finegrain I used to say I did a bit of everything except training models. But ultimately my goal is to solve problems, and sometimes it does involve training. I am still by no means the person who trains the most on the team, but I do a little, mostly focusing on performance-related things.
 
-For confidentiality reasons, I won't get into details about that work, but I can say that we use (non-exclusively) Modal [24] for serverless training and Trackio [25] for experiment tracking. I wrote and open-sourced two tools to help with this: trackio-tool [26] to merge and synchronize runs across remote machines and Modal environments, and multimodal [27] to simply track the progress of several Modal jobs on the CLI. They're vibe-coded, but I use them almost every day.
+For confidentiality reasons, I won't get into details about that work, but I can say that we use (non-exclusively) Modal [26] for serverless training and Trackio [27] for experiment tracking. I wrote and open-sourced two tools to help with this: trackio-tool [28] to merge and synchronize runs across remote machines and Modal environments, and multimodal [29] to simply track the progress of several Modal jobs on the CLI. They're vibe-coded, but I use them almost every day.
 
-=> https://modal.com 24: https://modal.com
-=> https://github.com/gradio-app/trackio 25: https://github.com/gradio-app/trackio
-=> https://github.com/finegrain-ai/trackio-tool 26: https://github.com/finegrain-ai/trackio-tool
-=> https://github.com/catwell/multimodal 27: https://github.com/catwell/multimodal
+=> https://modal.com 26: https://modal.com
+=> https://github.com/gradio-app/trackio 27: https://github.com/gradio-app/trackio
+=> https://github.com/finegrain-ai/trackio-tool 28: https://github.com/finegrain-ai/trackio-tool
+=> https://github.com/catwell/multimodal 29: https://github.com/catwell/multimodal
 
 ## Coda
 
-As always, I haven't talked about everything I do. We are a small company and I am still a jack-of-all-trades kind of guy, so I always write tooling and fix bugs here and there. That should give you a decent idea of what my day-to-day is about. As always, if something piqued your interest, feel free to get in touch [28].
+As always, I haven't talked about everything I do. We are a small company and I am still a jack-of-all-trades kind of guy, so I always write tooling and fix bugs here and there. That should give you a decent idea of what my day-to-day is about. As always, if something piqued your interest, feel free to get in touch [30].
 
-=> https://catwell.info 28: https://catwell.info
+=> https://catwell.info 30: https://catwell.info

@@ -1,7 +1,7 @@
 ```=lua-meta
 title = "What I do at Finegrain"
 published = "2026-02-07 15:10:00"
-updated = "2026-06-04 22:05:00"
+updated = "2026-11-11 14:05:00"
 description = "What making lightweight image editing models that run on edge devices entails."
 ```
 
@@ -34,21 +34,31 @@ In our inference stack, which is called PHX (a reference to [the Phénix airplan
 
 ## Disciple, the Web backend
 
-PHX is not exposed to customers or applications directly. We provide a Web API that is easier to call, asynchronous (because although our inference is fast it is still slower than a typical Web request), and deals with authentication and payment.
+PHX is not exposed to customers or applications directly. We provide a Web API that is easier to call and deals with authentication and payment.
 
 In addition to this API, we have a Web backend for customers, a bit of admin and monitoring... All of this lives in a modular monolith called Disciple, a reference to a character of [the comic strip Léonard](https://en.wikipedia.org/wiki/L%C3%A9onard_(comics)) whose most famous line is "I serve science, and that is my joy."
 
-The stack is nothing too fancy; I picked technologies I had previous experience with and knew to be reliable. We use [Quart](https://quart.palletsprojects.com/) with Blueprints and PostgreSQL. For asynchrony we use [Nchan](https://nchan.io) for SSE and [Beanstalk](https://beanstalkd.github.io) for background jobs. For efficient image processing we rely on [VIPS](https://libvips.github.io/pyvips/).
+The stack is nothing too fancy; I picked technologies I had previous experience with and knew to be reliable. We use [Quart](https://quart.palletsprojects.com/) with Blueprints and PostgreSQL. We use [Nchan](https://nchan.io) for SSE and [Beanstalk](https://beanstalkd.github.io) for background jobs. For efficient image processing we rely on [VIPS](https://libvips.github.io/pyvips/).
 
 ## The iOS SDK
 
-For some time now, the main focus of Finegrain is running all our models on mobile devices directly. This means we had to port our inference code to run on iOS (for now) using [Apple's Neural Engine (ANE)](https://en.wikipedia.org/wiki/Neural_Engine) and/or the GPU.
+For some time now, the main focus of Finegrain is running all our models on mobile devices directly. This means we had to port our inference code to run on iOS using [Apple's Neural Engine (ANE)](https://en.wikipedia.org/wiki/Neural_Engine) and/or the GPU.
 
 This involves, among other things, compiling and quantizing the model using Apple's [Core ML Tools](https://apple.github.io/coremltools/docs-guides/). This is not a straightforward step; most models cannot be compiled out of the box and require architectural changes first. As for quantization, obtaining high average quantization ratios while retaining precision is a craft that would deserve its own blog post.
 
 Once you have that model, you need the equivalent of PHX's processors, but for the mobile device. I use PHX as the reference codebase, but porting to Swift on iOS is not as straightforward as one may think. On mobile, anything can quickly become a bottleneck, and if you are not careful you end up spending more time doing pre- and post-processing than running the model. We use [Apple's Accelerate framework](https://developer.apple.com/documentation/accelerate) extensively to speed up those parts.
 
 Another notable thing I have implemented is the ability to swap the capabilities (skills) of the CoreML model. Core ML has [Multifunction Models](https://apple.github.io/coremltools/docs-guides/source/multifunction-models.html), but in theory they are built by compiling each function and merging them once on a Mac. With the tooling I have designed, we can create new functions for a given backbone in pure PyTorch, and add / remove / swap functions in the model almost instantly on any machine including an iPhone. This makes it possible, for instance, to update a single function in an application without re-downloading the whole model and without waiting for device specialization.
+
+## The Android SDK
+
+> Section added in Nov. 2026
+
+After iOS, I have started working on porting the SDK to Android. I also maintain an Android port of our application as a testbed.
+
+On Android, we use [LiteRT](https://developers.google.com/edge/litert). Coming from CoreML, it presents a different set of challenges. Some features are completely missing and others are buggy, although Google's team appears to be making steady progress. When I started using it I was hindered by the fact that the GPU delegate ML Drift wasn't open source, but [now it is](https://developers.googleblog.com/ml-drift-next-gen-gpu-aiml-inference-at-the-edge/). Key features are still missing, preventing us from making it publicly available for now, but that should change sooner rather than later.
+
+Another common problem with Android is hardware fragmentation. The optimal approach to run edge AI on Google's Pixel and Samsung flagships using Qualcomm's Snapdragon or Samsung's own Exynos (EU variants) varies significantly.
 
 ## Science and hacks
 

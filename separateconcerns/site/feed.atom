@@ -10,7 +10,7 @@
     rel="alternate" type="application/xhtml+xml"
   />
   <id>tag:blog.separateconcerns.com,2012-12-13:atomfeed</id>
-  <updated>2026-11-11T12:38:21Z</updated>
+  <updated>2026-11-11T13:11:12Z</updated>
   <author>
     <name>Pierre 'catwell' Chapuis</name>
     <uri>https://catwell.info/</uri>
@@ -472,7 +472,7 @@ replace component after component while ensuring tests keep passing.
     />
     <id>tag:blog.separateconcerns.com,2026-02-07:finegrain</id>
     <published>2026-02-07T14:10:00Z</published>
-    <updated>2026-06-04T20:05:00Z</updated>
+    <updated>2026-11-11T13:05:00Z</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <blockquote>
@@ -496,16 +496,25 @@ replace component after component while ensuring tests keep passing.
 </section>
 <section id="Disciple-the-Web-backend">
 <h2>Disciple, the Web backend</h2>
-<p>PHX is not exposed to customers or applications directly. We provide a Web API that is easier to call, asynchronous (because although our inference is fast it is still slower than a typical Web request), and deals with authentication and payment.</p>
+<p>PHX is not exposed to customers or applications directly. We provide a Web API that is easier to call and deals with authentication and payment.</p>
 <p>In addition to this API, we have a Web backend for customers, a bit of admin and monitoring&#8230; All of this lives in a modular monolith called Disciple, a reference to a character of <a href="https://en.wikipedia.org/wiki/L%C3%A9onard_(comics)">the comic strip Léonard</a> whose most famous line is &#8220;I serve science, and that is my joy.&#8221;</p>
-<p>The stack is nothing too fancy; I picked technologies I had previous experience with and knew to be reliable. We use <a href="https://quart.palletsprojects.com/">Quart</a> with Blueprints and PostgreSQL. For asynchrony we use <a href="https://nchan.io">Nchan</a> for SSE and <a href="https://beanstalkd.github.io">Beanstalk</a> for background jobs. For efficient image processing we rely on <a href="https://libvips.github.io/pyvips/">VIPS</a>.</p>
+<p>The stack is nothing too fancy; I picked technologies I had previous experience with and knew to be reliable. We use <a href="https://quart.palletsprojects.com/">Quart</a> with Blueprints and PostgreSQL. We use <a href="https://nchan.io">Nchan</a> for SSE and <a href="https://beanstalkd.github.io">Beanstalk</a> for background jobs. For efficient image processing we rely on <a href="https://libvips.github.io/pyvips/">VIPS</a>.</p>
 </section>
 <section id="The-iOS-SDK">
 <h2>The iOS SDK</h2>
-<p>For some time now, the main focus of Finegrain is running all our models on mobile devices directly. This means we had to port our inference code to run on iOS (for now) using <a href="https://en.wikipedia.org/wiki/Neural_Engine">Apple&#8217;s Neural Engine (ANE)</a> and/or the GPU.</p>
+<p>For some time now, the main focus of Finegrain is running all our models on mobile devices directly. This means we had to port our inference code to run on iOS using <a href="https://en.wikipedia.org/wiki/Neural_Engine">Apple&#8217;s Neural Engine (ANE)</a> and/or the GPU.</p>
 <p>This involves, among other things, compiling and quantizing the model using Apple&#8217;s <a href="https://apple.github.io/coremltools/docs-guides/">Core ML Tools</a>. This is not a straightforward step; most models cannot be compiled out of the box and require architectural changes first. As for quantization, obtaining high average quantization ratios while retaining precision is a craft that would deserve its own blog post.</p>
 <p>Once you have that model, you need the equivalent of PHX&#8217;s processors, but for the mobile device. I use PHX as the reference codebase, but porting to Swift on iOS is not as straightforward as one may think. On mobile, anything can quickly become a bottleneck, and if you are not careful you end up spending more time doing pre- and post-processing than running the model. We use <a href="https://developer.apple.com/documentation/accelerate">Apple&#8217;s Accelerate framework</a> extensively to speed up those parts.</p>
 <p>Another notable thing I have implemented is the ability to swap the capabilities (skills) of the CoreML model. Core ML has <a href="https://apple.github.io/coremltools/docs-guides/source/multifunction-models.html">Multifunction Models</a>, but in theory they are built by compiling each function and merging them once on a Mac. With the tooling I have designed, we can create new functions for a given backbone in pure PyTorch, and add / remove / swap functions in the model almost instantly on any machine including an iPhone. This makes it possible, for instance, to update a single function in an application without re-downloading the whole model and without waiting for device specialization.</p>
+</section>
+<section id="The-Android-SDK">
+<h2>The Android SDK</h2>
+<blockquote>
+<p>Section added in Nov. 2026</p>
+</blockquote>
+<p>After iOS, I have started working on porting the SDK to Android. I also maintain an Android port of our application as a testbed.</p>
+<p>On Android, we use <a href="https://developers.google.com/edge/litert">LiteRT</a>. Coming from CoreML, it presents a different set of challenges. Some features are completely missing and others are buggy, although Google&#8217;s team appears to be making steady progress. When I started using it I was hindered by the fact that the GPU delegate ML Drift wasn&#8217;t open source, but <a href="https://developers.googleblog.com/ml-drift-next-gen-gpu-aiml-inference-at-the-edge/">now it is</a>. Key features are still missing, preventing us from making it publicly available for now, but that should change sooner rather than later.</p>
+<p>Another common problem with Android is hardware fragmentation. The optimal approach to run edge AI on Google&#8217;s Pixel and Samsung flagships using Qualcomm&#8217;s Snapdragon or Samsung&#8217;s own Exynos (EU variants) varies significantly.</p>
 </section>
 <section id="Science-and-hacks">
 <h2>Science and hacks</h2>
