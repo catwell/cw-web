@@ -17,7 +17,8 @@
     <header>
       <h1>We never needed software factories</h1>
       <h4>
-        published 2026-11-11
+        published 2026-11-11,
+        updated 2026-11-17
         [ <a href="index.html">home</a> ]
       </h4>
     </header>
@@ -28,6 +29,19 @@
 <p>Maybe you think you need a factory because your codebase is too large and unwieldy to do otherwise. I think you have it backwards. You designed an incredibly complicated product because end-user customization was not possible before agents. Your design is complex because you needed many developers, so your organization became complex and Conway&rsquo;s Law crept in. You need to fix this, not a factory.</p>
 <p>I am a lot more enthusiastic about multiplayer interfaces like <a href="https://ampcode.com/docs/collaborate/multiplayer">Amp</a> or <a href="https://zed.dev/blog/introducing-delta">Delta</a> than factories. They tackle a real problem: collaboration in human-agentic teams. They are reminiscent of mob programming, which is the <strong>opposite</strong> of a factory: everyone works on the same thing at the same time.</p>
 <p>The original incarnation of mob programming traded off implementation efficiency for design efficiency, optimizing for communication and coordination instead of sequential, independent work. It was an interesting idea but in practice it was rarely optimal because independent work <strong>was</strong> costly. Now agents compress that sequential part down to a fraction of what it was, collaboration — with both humans and agents — becomes more compelling.</p>
+<section id="edit-2026-11-17-steve-yegge-s-tweet">
+<h2>EDIT (2026-11-17) - Steve Yegge&rsquo;s tweet</h2>
+<p>When I shared that article I <a href="https://bsky.app/profile/catwell.info/post/3mzzxuyhk722i">mentioned Steve Yegge</a>. A few days later Steve himself posted <a href="https://x.com/Steve_Yegge/status/2121671447810888185">a long tweet</a> on the topic. Chosen extracts:</p>
+<blockquote>
+<p>I tell everyone to slow down. [&hellip;] Engineering still moves at engineering speeds, and business moves even slower. [&hellip;] If you don&rsquo;t pace your AI to human speeds, everything starts breaking around you.</p>
+</blockquote>
+<blockquote>
+<p>Should you buy a software factory? Do you even need one? No. You probably don&rsquo;t need one. Factories take an extraordinary amount of upkeep. [&hellip;] So I&rsquo;m not out there advocating for software factories or swarms just yet. If you do want one, be aware that it is a significant commitment of both money and human leadership to keep one running.</p>
+</blockquote>
+<blockquote>
+<p>Build, don&rsquo;t Buy. [M]y experience is that software factories grow to be highly bespoke to your domain. [T]he factory is not just building my product, it&rsquo;s supporting it too. It&rsquo;s a company in a box. And they&rsquo;re easy for Claude to build for you.</p>
+</blockquote>
+</section>
 
     </div>
     <div id="footer">

@@ -1,5 +1,5 @@
 # We never needed software factories
-published 2026-11-11
+published 2026-11-11,updated 2026-11-17
 
 I have made up my mind about software factories: we don't need them.
 
@@ -17,3 +17,16 @@ The original incarnation of mob programming traded off implementation efficiency
 
 => https://ampcode.com/docs/collaborate/multiplayer 1: https://ampcode.com/docs/collaborate/multiplayer
 => https://zed.dev/blog/introducing-delta 2: https://zed.dev/blog/introducing-delta
+
+## EDIT (2026-11-17) - Steve Yegge's tweet
+
+When I shared that article I mentioned Steve Yegge [3]. A few days later Steve himself posted a long tweet [4] on the topic. Chosen extracts:
+
+> I tell everyone to slow down. [...] Engineering still moves at engineering speeds, and business moves even slower. [...] If you don't pace your AI to human speeds, everything starts breaking around you.
+
+> Should you buy a software factory? Do you even need one? No. You probably don't need one. Factories take an extraordinary amount of upkeep. [...] So I'm not out there advocating for software factories or swarms just yet. If you do want one, be aware that it is a significant commitment of both money and human leadership to keep one running.
+
+> Build, don't Buy. [M]y experience is that software factories grow to be highly bespoke to your domain. [T]he factory is not just building my product, it's supporting it too. It's a company in a box. And they're easy for Claude to build for you.
+
+=> https://bsky.app/profile/catwell.info/post/3mzzxuyhk722i 3: https://bsky.app/profile/catwell.info/post/3mzzxuyhk722i
+=> https://x.com/Steve_Yegge/status/2121671447810888185 4: https://x.com/Steve_Yegge/status/2121671447810888185

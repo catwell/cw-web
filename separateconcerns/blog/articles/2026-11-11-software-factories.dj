@@ -1,6 +1,7 @@
 ```=lua-meta
 title = "We never needed software factories"
 published = "2026-11-11 13:30:00"
+updated = "2026-11-17 16:30:00"
 description = [[
 Software is not like hardware: it is free to replicate.
 What we need is better collaboration in design, between humans and with machines.
@@ -20,3 +21,14 @@ Maybe you think you need a factory because your codebase is too large and unwiel
 I am a lot more enthusiastic about multiplayer interfaces like [Amp](https://ampcode.com/docs/collaborate/multiplayer) or [Delta](https://zed.dev/blog/introducing-delta) than factories. They tackle a real problem: collaboration in human-agentic teams. They are reminiscent of mob programming, which is the *opposite* of a factory: everyone works on the same thing at the same time.
 
 The original incarnation of mob programming traded off implementation efficiency for design efficiency, optimizing for communication and coordination instead of sequential, independent work. It was an interesting idea but in practice it was rarely optimal because independent work *was* costly. Now agents compress that sequential part down to a fraction of what it was, collaboration — with both humans and agents — becomes more compelling.
+
+## EDIT (2026-11-17) - Steve Yegge's tweet
+
+When I shared that article I [mentioned Steve Yegge](https://bsky.app/profile/catwell.info/post/3mzzxuyhk722i). A few days later Steve himself posted [a long tweet](https://x.com/Steve_Yegge/status/2121671447810888185) on the topic. Chosen extracts:
+
+> I tell everyone to slow down. [...] Engineering still moves at engineering speeds, and business moves even slower. [...] If you don't pace your AI to human speeds, everything starts breaking around you.
+
+> Should you buy a software factory? Do you even need one? No. You probably don't need one. Factories take an extraordinary amount of upkeep. [...] So I'm not out there advocating for software factories or swarms just yet. If you do want one, be aware that it is a significant commitment of both money and human leadership to keep one running.
+
+> Build, don't Buy. [M]y experience is that software factories grow to be highly bespoke to your domain. [T]he factory is not just building my product, it's supporting it too. It's a company in a box. And they're easy for Claude to build for you.
+
